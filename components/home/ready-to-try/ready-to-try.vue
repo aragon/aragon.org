@@ -24,16 +24,20 @@
 <style scoped>
   @import '../../../toolkit/src/shared-styles.css';
   .ready-to-try {
-    padding-top: 50px;
     background-color: var(--aragonAlt);
-    background-image: linear-gradient(
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-image: url(./assets/background-lines.svg),
+    linear-gradient(
       130deg,
       var(--turquoise100),
       var(--aragonAlt)
-    );
+    ); 
+    border-bottom: 1px solid var(--turquoise100);
   }
   .in {
     display: flex;
+    padding-top: 50px;
   }
   .content {
     align-self: center;
@@ -41,6 +45,7 @@
   }
   .title {
     @apply --text-xlarge;
+    margin-bottom: 20px;
     color: var(--black);
   }
   .subtitle {
