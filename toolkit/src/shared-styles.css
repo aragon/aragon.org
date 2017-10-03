@@ -1,15 +1,38 @@
 :root {
+  /* Colors */
+
   --white: #ffffff;
   --black: #000000;
   --aragon: #00cae4;
   --aragonAlt: #00efe2;
-  --turquoise: #18bfdd;
-  --grey900: #000000;
-  --grey600: #838383;
+  --turquoise100: #eef7f8;
+  --turquoise500: #18bfdd;
+
   --grey500: #717171;
+  --grey600: #838383;
+  --grey800: #0b0b0a;
+  --grey900: #000000;
 
   /* Grid columns: 12 cols / 68px width / 30px gutter */
 
   --cols10: 950px;
   --cols12: 1146px;
+
+  --text-normal: {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  --text-large: {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  --text-xxlarge: {
+    font-weight: 600;
+    font-size: 58px;
+    line-height: 1.5;
+  }
 }

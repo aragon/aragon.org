@@ -1,14 +1,17 @@
 <template>
   <div class="header">
-    <div class="header__in">
+    <div class="header-in">
       <div>
-        <a href="/" class="header__logo">
-          <img alt="Aragon" src="./assets/logo.svg" v-once />
+        <a href="/" class="logo">
+          <img alt="Aragon" src="./assets/logo.svg" width="158" height="50" v-once />
         </a>
-        <nav class="header__nav">
+        <nav class="nav">
           <ul>
             <li v-for="item in menuItems">
-              <a :href="item[0]" :class='{active: item[2]}'>
+              <a
+                :href="item[0]"
+                :class="{active: item[2]}"
+              >
                 {{item[1]}}
               </a>
             </li>
@@ -16,8 +19,8 @@
         </nav>
       </div>
       <div>
-        <agn-button>Try web version</agn-button>
-        <agn-button strong>Download Aragon</agn-button>
+        <ag-button>Try web version</ag-button>
+        <ag-button strong>Download Aragon</ag-button>
       </div>
     </div>
   </div>
@@ -25,10 +28,9 @@
 
 <script>
   import button from '../button/button'
-
   export default {
     components: {
-      'agn-button': button
+      'ag-button': button
     },
     props: {
       menuItems: Array
@@ -36,7 +38,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   @import '../../shared-styles.css';
   .header {
     background: var(--white);
@@ -44,7 +46,7 @@
       margin-left: 10px;
     }
   }
-  .header__in {
+  .header-in {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -52,21 +54,18 @@
     max-width: 1140px;
     margin: 0 auto;
   }
-  .header__in > div {
+  .header-in > div {
     display: flex;
     align-items: center;
   }
-  .header__in > div:first-child {
+  .header-in > div:first-child {
     align-items: stretch;
   }
-  .header__logo {
+  .logo {
     display: flex;
     align-items: center;
   }
-  .header__logo img {
-    height: 50px;
-  }
-  .header__nav {
+  .nav {
     display: flex;
     align-items: stretch;
     & ul {
@@ -87,7 +86,7 @@
       font-size: 15px;
       color: var(--grey500);
       &.active {
-        color: var(--turquoise);
+        color: var(--turquoise500);
       }
     }
   }

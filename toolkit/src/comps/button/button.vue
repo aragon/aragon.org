@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :class="{'button--strong': strong}">
+  <button class="button" :class="{ strong }">
     <slot />
   </button>
 </template>
@@ -33,7 +33,7 @@
       opacity: 0.2;
       border-radius: 3px;
     }
-    &.button--strong {
+    &.strong {
       color: var(--white);
       font-weight: 600;
       background-image: linear-gradient(

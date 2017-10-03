@@ -7,6 +7,7 @@
 </script>
 
 <style>
+  @import url('../../shared-styles.css');
   @font-face {
     font-family: 'overpass';
     src: url('assets/overpass/overpass-thin.woff2') format('woff2'),
@@ -33,12 +34,6 @@
   *:after {
     box-sizing: border-box;
   }
-  :root {
-    --mainColor: red;
-  }
-  body {
-    background: #eef7f8;
-  }
   body,
   button,
   select,
@@ -48,11 +43,17 @@
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  a {
     font-family: overpass, sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+    @apply --text-normal;
+  }
+  body,
+  a,
+  button,
+  select,
+  input {
+    color: var(--grey600);
   }
   strong,
   b {
@@ -69,5 +70,8 @@
   h6 {
     margin: 0;
     padding: 0;
+  }
+  body {
+    background: #eef7f8;
   }
 </style>

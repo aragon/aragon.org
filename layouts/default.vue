@@ -1,7 +1,7 @@
 <template>
   <div>
     <base-styles />
-    <agn-header :menuItems="menuItems" />
+    <ag-header :menuItems="menuItems" />
     <nuxt />
   </div>
 </template>
@@ -21,7 +21,7 @@
       }
     },
     components: {
-      'agn-header': header,
+      'ag-header': header,
       'base-styles': baseStyles
     }
   }
