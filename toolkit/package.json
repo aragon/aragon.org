@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "vue-styled-components": "^1.2.1"
+  },
+  "name": "aragon-website-toolkit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
