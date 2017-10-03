@@ -2,6 +2,7 @@
   <div>
     <unstoppable-organizations />
     <disintermediating />
+    <logos-bar />
     <death-to-paperwork />
     <ready-to-try />
     <aragon-network />
@@ -10,19 +11,21 @@
 
 <script>
   import {
-    unstoppableOrganizations,
-    disintermediating,
-    deathToPaperwork,
     aragonNetwork,
-    readyToTry
+    deathToPaperwork,
+    disintermediating,
+    logosBar,
+    readyToTry,
+    unstoppableOrganizations
   } from '~/components/home'
   export default {
     components: {
-      unstoppableOrganizations,
-      disintermediating,
-      deathToPaperwork,
       aragonNetwork,
-      readyToTry
+      deathToPaperwork,
+      disintermediating,
+      logosBar,
+      readyToTry,
+      unstoppableOrganizations
     }
   }
 </script>
