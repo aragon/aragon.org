@@ -13,9 +13,10 @@
       return {
         menuItems: [
           ['/core', 'Core'],
+          ['/network', 'Network'],
+          ['/foundation', 'Foundation'],
           ['/about', 'About'],
-          ['/faq', 'Faq’s'],
-          ['/more', 'More']
+          ['/faq', 'FAQs'],
         ].map(item => [...item, item[0] === this.$route.path])
       }
     },
