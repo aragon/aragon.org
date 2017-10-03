@@ -26,15 +26,13 @@
 </template>
 
 <script>
-  import { section } from '~/toolkit'
+  import agSection from '../section/section'
   export default {
     props: {
       dark: Boolean,
       illustrationBefore: Boolean
     },
-    components: {
-      'ag-section': section
-    }
+    components: { agSection }
   }
 </script>
 
@@ -83,7 +81,7 @@
   .content {
     font-size: 18px;
   }
-  .content >>> p {
-      margin-bottom: 1em;
-    }
+  .content>>>p {
+    margin-bottom: 1em;
+  }
 </style>

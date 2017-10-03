@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :class="{ strong }">
+  <button class="button" :class="{ outline, strong }">
     <slot />
   </button>
 </template>
@@ -7,7 +7,8 @@
 <script>
   export default {
     props: {
-      strong: Boolean
+      strong: Boolean,
+      outline: Boolean,
     }
   }
 </script>
@@ -15,23 +16,14 @@
 <style>
   @import '../../shared-styles.css';
   .button {
-    position: relative;
     padding: 12px 25px;
-    border-radius: 3px;
     color: var(--grey500);
-    background: none;
-    border: 0;
+    background: var(--white);
     cursor: pointer;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      border: 1px solid var(--grey500);
-      opacity: 0.2;
-      border-radius: 3px;
+    border: 0;
+    border-radius: 3px;
+    &.outline {
+      border: 1px solid rgba(var(--grey500-rgb), 0.2);
     }
     &.strong {
       color: var(--white);
@@ -41,9 +33,6 @@
         var(--aragon),
         var(--aragonAlt)
       );
-      &:after {
-        display: none;
-      }
     }
   }
 </style>

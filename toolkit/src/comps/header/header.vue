@@ -19,7 +19,7 @@
         </nav>
       </div>
       <div>
-        <ag-button>Try web version</ag-button>
+        <ag-button outline>Try web version</ag-button>
         <ag-button strong>Download Aragon</ag-button>
       </div>
     </div>
