@@ -7,4 +7,9 @@
   --grey900: #000000;
   --grey600: #838383;
   --grey500: #717171;
+
+  /* Grid columns: 12 cols / 68px width / 30px gutter */
+
+  --cols10: 950px;
+  --cols12: 1146px;
 }
