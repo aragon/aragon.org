@@ -3,11 +3,13 @@
     <base-styles />
     <ag-header :menuItems="menuItems" />
     <nuxt />
+    <pre-footer />
   </div>
 </template>
 
 <script>
-  import { header, baseStyles } from '~/toolkit'
+  import { header as agHeader, baseStyles } from '~/toolkit'
+  import preFooter from '~/components/pre-footer/pre-footer'
   export default {
     data() {
       return {
@@ -21,8 +23,7 @@
       }
     },
     components: {
-      'ag-header': header,
-      'base-styles': baseStyles
+      agHeader, baseStyles, preFooter
     }
   }
 </script>

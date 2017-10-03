@@ -43,8 +43,7 @@
   h3,
   h4,
   h5,
-  h6,
-  a {
+  h6 {
     font-family: overpass, sans-serif;
     @apply --text-normal;
   }
