@@ -3,7 +3,7 @@
     <unstoppable-organizations />
     <disintermediating />
     <death-to-paperwork />
-    <digital-juridiction />
+    <aragon-network />
   </div>
 </template>
 
@@ -11,13 +11,13 @@
   import unstoppableOrganizations from '~/components/home/unstoppable-organizations'
   import disintermediating from '~/components/home/disintermediating'
   import deathToPaperwork from '~/components/home/death-to-paperwork'
-  import digitalJuridiction from '~/components/home/digital-juridiction'
+  import aragonNetwork from '~/components/home/aragon-network'
   export default {
     components: {
       unstoppableOrganizations,
       disintermediating,
       deathToPaperwork,
-      digitalJuridiction
+      aragonNetwork
     }
   }
 </script>

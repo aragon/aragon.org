@@ -49,7 +49,7 @@
   }
   .illustration {
     width: 450px;
-    margin-left: 60px;
+    margin-left: 50px;
   }
   .illustration:first-child {
     margin-left: 0;
@@ -83,4 +83,7 @@
   .content {
     font-size: 18px;
   }
+  .content >>> p {
+      margin-bottom: 1em;
+    }
 </style>

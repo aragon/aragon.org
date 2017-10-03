@@ -7,6 +7,7 @@
         class="app"
         src="./assets/app-screen.svg"
         width="1140"
+        height="508"
         alt="Aragon App"
       />
     </div>
@@ -51,5 +52,6 @@
     margin-left: 50%;
     transform: translateX(-50%);
     flex-shrink: 0;
+    text-align: center;
   }
 </style>
