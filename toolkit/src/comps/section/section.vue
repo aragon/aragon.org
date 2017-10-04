@@ -4,8 +4,10 @@
     :class="{ large }"
     class="section"
   >
-    <div class="content">
-      <slot />
+    <div class="wrapper">
+      <div class="content">
+        <slot />
+      </div>
     </div>
   </component>
 </template>
@@ -23,6 +25,7 @@
   @import '../../shared-styles.css';
   .content {
     margin: 0 auto;
+    width: 100%;
     max-width: var(--cols10);
   }
   .large .content {

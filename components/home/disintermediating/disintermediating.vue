@@ -31,7 +31,13 @@
   .disintermediating {
     position: relative;
     z-index: 1;
-    margin-top: -110px;
-    background: var(--grey800) url('./assets/background.svg') no-repeat 50% 0;
+    background: var(--grey800);
+  }
+  .disintermediating >>> .wrapper {
+    margin-top: calc(-235px - 200px);
+    padding-top: 235px;
+    margin-bottom: -140px;
+    padding-bottom: 140px;
+    background: url('./assets/background.svg') no-repeat 50% 0;
   }
 </style>
