@@ -32,7 +32,7 @@
   .pre-footer {
     width: 100%;
     padding: 140px 0;
-    background: url(./assets/background.svg) no-repeat 50% 50%;
+    background: var(--grey700) url(./assets/background.svg) no-repeat 50% 50%;
   }
   .pre-footer .main {
     display: flex;
