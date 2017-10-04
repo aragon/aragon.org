@@ -4,12 +4,14 @@
     <ag-header :menuItems="menuItems" />
     <nuxt />
     <pre-footer />
+    <ag-footer />
   </div>
 </template>
 
 <script>
   import { header as agHeader, baseStyles } from '~/toolkit'
   import preFooter from '~/components/pre-footer/pre-footer'
+  import agFooter from '~/components/footer/footer'
   export default {
     data() {
       return {
@@ -23,7 +25,7 @@
       }
     },
     components: {
-      agHeader, baseStyles, preFooter
+      agHeader, baseStyles, preFooter, agFooter
     }
   }
 </script>
