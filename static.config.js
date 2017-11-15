@@ -10,18 +10,12 @@ export default {
       'https://jsonplaceholder.typicode.com/posts'
     )
     return [
-      {
-        path: '/',
-        component: 'src/pages/Home',
-      },
-      {
-        path: '/about',
-        component: 'src/pages/About',
-      },
-      {
-        is404: true,
-        component: 'src/pages/404',
-      },
+      { path: '/', component: 'src/pages/Home' },
+      { path: '/core', component: 'src/pages/Core' },
+      { path: '/about', component: 'src/pages/About' },
+      { path: '/faq', component: 'src/pages/Faq' },
+      { path: '/join', component: 'src/pages/Join' },
+      { is404: true, component: 'src/pages/NotFound' },
     ]
   },
   webpack: (conf, { stage, loaders = {} }) => {
