@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { IllustratedSection } from '@aragon/ui'
+import { IllustratedSection, theme } from '@aragon/ui'
 import illustration from './assets/illustration.svg'
 
 const { Illustration, Title, Subtitle, Emphasis, Content } = IllustratedSection
 
 const Main = styled(IllustratedSection)`
   background: #fff;
+  border-top: 1px solid ${theme.contentBackgroundActive};
 `
 
 const DeathToPaperwork = () => (

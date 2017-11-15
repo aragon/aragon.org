@@ -8,7 +8,7 @@ const menuItems = [
   ['/network', 'Network'],
   ['/foundation', 'Foundation'],
   ['/about', 'About'],
-  ['/faq', 'FAQs'],
+  ['https://wiki.aragon.one', 'Wiki'],
 ]
 
 export default () => (
