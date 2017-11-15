@@ -43,6 +43,11 @@ const Main = styled(Section)`
   .columns > p:nth-child(2) {
     padding-left: 7.5px;
   }
+
+  p {
+    font-size: 18px;
+    color: ${theme.textSecondary};
+  }
 `
 
 const Vision = () => (

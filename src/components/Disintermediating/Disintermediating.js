@@ -28,15 +28,14 @@ const Disintermediating = () => (
     <Main>
       <div>
         <Title>
-          <h1>Disintermediating human trade  and business</h1>
+          <h1>Disintermediating human trade  and business business and transactions between humans</h1>
         </Title>
         <Subtitle dark>
           <p>It’s the first step towards a more fair, efficient world.</p>
         </Subtitle>
         <Emphasis dark>
           <p>
-            We believe decentralized organizations can solve the world’s worst
-            problems. That's why we are building Aragon.
+            We are building Aragon because we believe decentralized organizations can solve the world’s worst problems.
           </p>
         </Emphasis>
         <Content dark>
