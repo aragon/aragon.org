@@ -31,6 +31,10 @@ const Main = styled(IllustratedSection)`
   }
 `
 
+const MainWithLessMargin = styled(Main)`
+  padding-top: 100px;
+`
+
 const Finance = () => (
   <div>
     <Main>
@@ -61,7 +65,7 @@ const Finance = () => (
         </Content>
       </div>
     </Main>
-    <Main>
+    <MainWithLessMargin>
       <div>
         <Title>
           <h1>Payments</h1>
@@ -81,7 +85,7 @@ const Finance = () => (
       <Illustration>
         <img src={payment} alt="" />
       </Illustration>
-    </Main>
+    </MainWithLessMargin>
   </div>
 )
 
