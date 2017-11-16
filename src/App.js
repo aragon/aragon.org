@@ -23,14 +23,13 @@ const Content = styled.div`
 
 export default () => (
   <Router>
-    <div>
-      <BaseStyles />
+    <AragonApp>
       <Header menuItems={menuItems} renderMenuItemLink={renderMenuItemLink} />
       <Content>
         <Routes />
       </Content>
       <PreFooter />
       <Footer />
-    </div>
+    </AragonApp>
   </Router>
 )
