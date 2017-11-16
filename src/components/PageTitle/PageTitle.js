@@ -6,7 +6,6 @@ import background from './assets/background.svg'
 
 const StyledContainer = styled(Section)`
   padding-top: 100px;
-  padding-bottom: 256px;
   text-align: center;
   background: url(${background}) no-repeat 50% -60px;
   .title {
@@ -18,19 +17,29 @@ const StyledContainer = styled(Section)`
     margin-bottom: 15px;
     color: ${theme.textSecondary};
   }
+
+  button {
+    margin: 25px 5px;
+    margin-bottom: 164px;
+  }
+
+  span {
+    display: block;
+    padding-bottom: 256px;
+  }
 `
 
-const PageTitle = ({ title, subtitle }) => {
-  return (
-    <StyledContainer>
-      <div>
-        <h2 className="title">{title}</h2>
-        <Text size="xlarge" className="subtitle">
-          {subtitle}
-        </Text>
-      </div>
-    </StyledContainer>
-  )
-}
+const PageTitle = ({ title, subtitle, children }) => (
+  <StyledContainer>
+    <div>
+      <h2 className="title">{title}</h2>
+      <Text size="xlarge" className="subtitle">
+        {subtitle}
+      </Text>
+      {children}
+      {!children ? <span /> : null}
+    </div>
+  </StyledContainer>
+)
 
 export default PageTitle

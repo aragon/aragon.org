@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Section, theme } from '@aragon/ui'
+import { Section, Button, theme } from '@aragon/ui'
 
 import SectionTitle from '../../SectionTitle.js'
 
@@ -39,6 +39,15 @@ const Main = styled(Section)`
     font-size: 16px;
     color: ${theme.textSecondary};
   }
+
+  .cta {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .cta button {
+    margin: 0 5px;
+  }
 `
 
 const Value = () => (
@@ -63,6 +72,10 @@ hours-driven.</p>
           <p>We value what you can do and your attitude doing it, not where/whether you went to school or college.
 </p>
         </div>
+      </div>
+      <div className="cta">
+        <Button mode="outline">View open positions</Button>
+        <Button mode="strong">Apply now</Button>
       </div>
     </div>
   </Main>
