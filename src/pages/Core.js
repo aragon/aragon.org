@@ -7,6 +7,9 @@ import {
 import {
   Tokens,
   Transfer,
+  Customize,
+  Vote,
+  Finance,
 } from '../components/Core'
 
 const Core = () => (
@@ -14,20 +17,10 @@ const Core = () => (
     <PageTitle title="Aragon Core" subtitle="The decentralized app to run blockchain organizations" />
     <Tokens />
     <Transfer />
+    <Customize />
+    <Vote />
+    <Finance />
   </div>
 )
-
-/*
-
-Transfer,
-  Customize,
-  Finance,
-
-<Tokens />
-    <Transfer />
-    <Customize />
-    <Finance />
-
-    */
 
 export default Core

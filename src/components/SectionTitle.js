@@ -11,9 +11,9 @@ const StyledSectionTitle = styled.div`
   }
 `
 
-const SectionTitle = ({ title }) => (
+const SectionTitle = ({ title, className }) => (
   <StyledSectionTitle>
-    <Text heading={1} smallcaps color={theme.accent}>
+    <Text heading={1} smallcaps color={theme.accent} className={className}>
       {title}
     </Text>
   </StyledSectionTitle>

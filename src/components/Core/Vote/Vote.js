@@ -2,15 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { Section, Text, theme } from '@aragon/ui'
 
-import SectionTitle from '../../SectionTitle.js'
-
-import transfer from './assets/transfer.png'
-import raise from './assets/raise.png'
+import vote from './assets/vote.png'
+import sign from './assets/sign.png'
 
 const Main = styled(Section)`
   padding-top: 128px;
   padding-bottom: 128px;
-  background: #fff;
 
   img {
     max-width: 100%;
@@ -49,33 +46,27 @@ const Main = styled(Section)`
   .columns > div:nth-child(2) .title {
     text-align: right;
   }
-
-  .title h1 {
-    text-align: left;
-  }
 `
 
-const Transfer = () => (
+const Vote = () => (
   <Main>
     <div className="columns">
       <div>
-        <SectionTitle title="Transfer tokens" className="title" />
-        <Text heading="2">Own and transfer your tokens freely.</Text>
+        <Text heading="2">Vote every decision.</Text>
         <Text color={theme.textSecondary}>
-          Tokens are liquid by default. You can transfer them, sell them, and truly own them. You can easily configure what the tokens let their owners do.
+        Votes are secure, transparent and impossible to forge. No corrupt or malicious entity can tamper with them.
         </Text>
-        <img src={transfer} alt="" />
+        <img src={vote} alt="" />
       </div>
       <div>
-        <SectionTitle title="Fundraise" className="title" />
-        <Text heading="2">Raise capital from anyone in the world, in seconds.</Text>
+        <Text heading="2">New governance models.</Text>
         <Text color={theme.textSecondary}>
-          You shouldn’t have to fly over Silicon Valley and fight for a visa in order to get capital for your projects. With Aragon, you can just raise from anyone in the world.
+        You can get as creative as you want. Experiment with new models as it wasn't possible ever before.
         </Text>
-        <img src={raise} alt="" />
+        <img src={sign} alt="" />
       </div>
     </div>
   </Main>
 )
 
-export default Transfer
+export default Vote
