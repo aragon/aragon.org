@@ -1,9 +1,33 @@
 import React from 'react'
 
-class Core extends React.Component {
-  render() {
-    return <div>Core</div>
-  }
-}
+import {
+  PageTitle,
+} from '../components'
+
+import {
+  Tokens,
+  Transfer,
+} from '../components/Core'
+
+const Core = () => (
+  <div>
+    <PageTitle title="Aragon Core" subtitle="The decentralized app to run blockchain organizations" />
+    <Tokens />
+    <Transfer />
+  </div>
+)
+
+/*
+
+Transfer,
+  Customize,
+  Finance,
+
+<Tokens />
+    <Transfer />
+    <Customize />
+    <Finance />
+
+    */
 
 export default Core
