@@ -14,11 +14,11 @@ const Wrapper = styled.div`
 `
 
 const Main = styled(IllustratedSection)`
-  margin-top: calc(-200px - 235px);
+  margin-top: -500px;
   padding-top: 235px;
   padding-bottom: 140px;
   background-image: url(${background});
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
 `
