@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="234px" height="125px" viewBox="0 0 234 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Illustration_Joinus_Build_ecosystem@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="14.9580793%" y1="0%" x2="116.400528%" y2="127.872527%" id="linearGradient-1">
+            <stop stop-color="#E9F2F4" offset="0%"></stop>
+            <stop stop-color="#F7F8F9" offset="100%"></stop>
+            <stop stop-color="#00EFE2" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="11.3552517%" y1="113.983154%" x2="92.1006944%" y2="-28.2725016%" id="linearGradient-2">
+            <stop stop-color="#0B0B0A" offset="0%"></stop>
+            <stop stop-color="#363C3D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="96.9726562%" id="linearGradient-3">
+            <stop stop-color="#868484" offset="0%"></stop>
+            <stop stop-color="#00E7E2" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="14.9580793%" y1="0%" x2="116.400528%" y2="127.872527%" id="linearGradient-4">
+            <stop stop-color="#00C7E4" offset="0%"></stop>
+            <stop stop-color="#00EFE2" offset="100%"></stop>
+            <stop stop-color="#00EFE2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Join_us--Desktop-1170px" transform="translate(-265.000000, -1088.000000)">
+            <g id="//Content">
+                <g id="Some-insights-of-how-we-work:">
+                    <g id="Biuld-ecoystem" transform="translate(247.000000, 1089.000000)">
+                        <g id="Build_ecosystem_illustration" transform="translate(19.000000, 0.000000)">
+                            <g id="Blockchain-icon">
+                                <polyline id="Path-3" stroke="url(#linearGradient-1)" points="13.2109375 113.471418 13.2109375 62.5919189 183.062371 62.5919189"></polyline>
+                                <path d="M109.757813,12.4335938 L109.757813,62.0259152" id="Path-5" stroke="url(#linearGradient-1)"></path>
+                                <polyline id="Path-4" stroke="url(#linearGradient-1)" points="61.0333252 14.1085205 61.0333252 109.443079 13.8722017 109.443079"></polyline>
+                                <rect id="Rectangle-2" stroke="url(#linearGradient-3)" fill="url(#linearGradient-2)" x="47.5" y="47.5" width="28.5" height="28.5"></rect>
+                                <rect id="Rectangle-2" stroke="url(#linearGradient-3)" fill="url(#linearGradient-2)" x="48" y="95" width="28.5" height="28.5"></rect>
+                                <rect id="Rectangle-2" stroke="url(#linearGradient-3)" fill="url(#linearGradient-2)" x="95" y="48" width="28.5" height="28.5"></rect>
+                                <rect id="Rectangle-2" fill="url(#linearGradient-4)" opacity="0.200000003" x="201" y="48" width="31.5" height="28.5"></rect>
+                                <rect id="Rectangle-2" fill="url(#linearGradient-4)" opacity="0.300000012" x="193" y="48" width="28.5" height="28.5"></rect>
+                                <rect id="Rectangle-2" fill="url(#linearGradient-4)" opacity="0.300000012" x="183" y="48" width="28.5" height="28.5"></rect>
+                                <rect id="Rectangle-2" fill="url(#linearGradient-4)" x="173" y="48" width="28.5" height="28.5"></rect>
+                                <path d="M181.708331,70.030971 C179.453098,68.294012 178,65.5667007 178,62.5 C178,57.2532949 182.253295,53 187.5,53 C192.746705,53 197,57.2532949 197,62.5 C197,65.7846163 195.333054,68.6798966 192.79899,70.3860136 L189.757113,64.9198233 C190.404389,64.3158101 190.809082,63.4551656 190.809082,62.5 C190.809082,60.6724445 189.327556,59.190918 187.5,59.190918 C185.672444,59.190918 184.190918,60.6724445 184.190918,62.5 C184.190918,63.2703409 184.454147,63.9792013 184.895566,64.5415412 L181.708331,70.030971 Z" id="Combined-Shape" stroke="#FFFFFF"></path>
+                                <rect id="Rectangle-2" stroke="url(#linearGradient-3)" fill="url(#linearGradient-2)" x="95" y="0" width="28.5" height="28.5"></rect>
+                                <rect id="Rectangle-2" stroke="url(#linearGradient-3)" fill="url(#linearGradient-2)" x="0" y="95" width="28.5" height="28.5"></rect>
+                                <rect id="Rectangle-2" stroke="url(#linearGradient-3)" fill="url(#linearGradient-2)" x="0" y="47.5" width="28.5" height="28.5"></rect>
+                                <rect id="Rectangle-2" stroke="url(#linearGradient-3)" fill="url(#linearGradient-2)" x="48" y="0" width="28.5" height="28.5"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

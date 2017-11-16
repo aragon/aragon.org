@@ -1,19 +1,20 @@
 import React from 'react'
 
+import { PageTitle } from '../components'
+
 import {
-  PageTitle,
   WhyAragon,
   Vision,
-} from '../components'
+  Team,
+} from '../components/About'
 
-const About = () => {
-  return (
-    <div>
-      <PageTitle title="About us" subtitle="Taking back the freedom for humans to organize" />
-      <WhyAragon />
-      <Vision />
-    </div>
-  )
-}
+const About = () => (
+  <div>
+    <PageTitle title="About us" subtitle="Taking back the freedom for humans to organize" />
+    <WhyAragon />
+    <Vision />
+    <Team />
+  </div>
+)
 
 export default About

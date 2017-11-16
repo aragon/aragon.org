@@ -6,10 +6,11 @@ import styled from 'styled-components'
 
 const menuItems = [
   ['/core', 'Core'],
+  ['/network', 'Network'],
+  ['/foundation', 'Foundation'],
   ['/about', 'About'],
-  ['https://wiki.aragon.one', 'Wiki'],
-  ['/faq', 'FAQs'],
   ['/join', 'Join us'],
+  ['https://wiki.aragon.one', 'Wiki'],
 ]
 
 const renderMenuItemLink = ({ url, children }) => (

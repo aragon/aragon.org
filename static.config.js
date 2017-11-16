@@ -12,8 +12,9 @@ export default {
     return [
       { path: '/', component: 'src/pages/Home' },
       { path: '/core', component: 'src/pages/Core' },
+      { path: '/network', component: 'src/pages/Network' },
+      { path: '/foundation', component: 'src/pages/Foundation' },
       { path: '/about', component: 'src/pages/About' },
-      { path: '/faq', component: 'src/pages/Faq' },
       { path: '/join', component: 'src/pages/Join' },
       { is404: true, component: 'src/pages/NotFound' },
     ]

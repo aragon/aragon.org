@@ -1,9 +1,20 @@
 import React from 'react'
 
-class Join extends React.Component {
-  render() {
-    return <div>Join Us</div>
-  }
-}
+import {
+  PageTitle,
+} from '../components'
+
+import {
+  Culture,
+  Value,
+} from '../components/Join'
+
+const Join = () => (
+  <div>
+    <PageTitle title="Join us" subtitle="We are democratizing governance" />
+    <Culture />
+    <Value />
+  </div>
+)
 
 export default Join

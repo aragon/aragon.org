@@ -23,26 +23,30 @@ const Main = styled(IllustratedSection)`
   background-size: cover;
 `
 
-const WhyAragon = () => (
+const Disintermediating = () => (
   <Wrapper>
     <Main>
       <div>
+        <Title>
+          <h1>Disintermediating business and transactions between humans</h1>
+        </Title>
         <Subtitle dark>
-          <p>Why Aragon?</p>
+          <p>It’s the first step towards a more fair, efficient world.</p>
         </Subtitle>
-        <Content dark>
-          <p>
-          Organizations and companies exist in order to create value by using resources to create products or provide services.
-          </p>
-          <p>
-          However, intermediaries and third parties such as governments decrease the output of those organizations by imposing restrictions and creating complex regulatory frameworks.          
-          </p>
-        </Content>
         <Emphasis dark>
           <p>
-            Aragon was born to disintermediate the creation and maintenance of companies and other organizational structures.
+            We are building Aragon because we believe decentralized organizations can solve the world’s worst problems.
           </p>
         </Emphasis>
+        <Content dark>
+          <p>
+            Aragon lets you manage entire organizations using the blockchain.
+            This makes Aragon organizations more efficient than their
+            traditional counterparties. By making it possible for everyone in
+            the world to organize, we are enabling the borderless,
+            permissionless creation of value.
+          </p>
+        </Content>
       </div>
       <Illustration>
         <img src={illustration} alt="" />
@@ -51,4 +55,4 @@ const WhyAragon = () => (
   </Wrapper>
 )
 
-export default WhyAragon
+export default Disintermediating

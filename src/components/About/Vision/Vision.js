@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Section, theme } from '@aragon/ui'
 
-import SectionTitle from '../SectionTitle.js'
+import SectionTitle from '../../SectionTitle.js'
 
 import drawing0 from './assets/0.jpg'
 import drawing1 from './assets/1.jpg'
