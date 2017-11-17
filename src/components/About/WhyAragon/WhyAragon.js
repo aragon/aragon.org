@@ -26,24 +26,22 @@ const Main = styled(IllustratedSection)`
 const WhyAragon = () => (
   <Wrapper>
     <Main>
-      <div>
-        <Subtitle dark>
-          <p>Why Aragon?</p>
-        </Subtitle>
-        <Content dark>
-          <p>
-          Organizations and companies exist in order to create value by using resources to create products or provide services.
-          </p>
-          <p>
-          However, intermediaries and third parties such as governments decrease the output of those organizations by imposing restrictions and creating complex regulatory frameworks.          
-          </p>
-        </Content>
-        <Emphasis dark>
-          <p>
-            Aragon was born to disintermediate the creation and maintenance of companies and other organizational structures.
-          </p>
-        </Emphasis>
-      </div>
+      <Subtitle dark>
+        <p>Why Aragon?</p>
+      </Subtitle>
+      <Content dark>
+        <p>
+        Organizations and companies exist in order to create value by using resources to create products or provide services.
+        </p>
+        <p>
+        However, intermediaries and third parties such as governments decrease the output of those organizations by imposing restrictions and creating complex regulatory frameworks.
+        </p>
+      </Content>
+      <Emphasis dark>
+        <p>
+          Aragon was born to disintermediate the creation and maintenance of companies and other organizational structures.
+        </p>
+      </Emphasis>
       <Illustration>
         <img src={illustration} alt="" />
       </Illustration>

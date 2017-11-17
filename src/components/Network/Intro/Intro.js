@@ -26,24 +26,22 @@ const Main = styled(IllustratedSection)`
 const Intro = () => (
   <Wrapper>
     <Main>
-      <div>
-        <Subtitle dark>
-          <p>Goal: to make itself useless</p>
-        </Subtitle>
-        <Content dark>
-          <p>
-          An Estonian non-profit was created in order to nurture the project and help in its governance.
-          </p>
-          <p>
-          However, in our mission to disintermediate governance, we want to disintermediate Aragon's own governance.
-          </p>
-        </Content>
-        <Emphasis dark>
-          <p>
-            The <a href="/network">Aragon Network</a> will eventually take the governance of the project, making any central entity irrelevant for the project.
-          </p>
-        </Emphasis>
-      </div>
+      <Subtitle dark>
+        <p>Goal: to make itself useless</p>
+      </Subtitle>
+      <Content dark>
+        <p>
+        An Estonian non-profit was created in order to nurture the project and help in its governance.
+        </p>
+        <p>
+        However, in our mission to disintermediate governance, we want to disintermediate Aragon's own governance.
+        </p>
+      </Content>
+      <Emphasis dark>
+        <p>
+          The <a href="/network">Aragon Network</a> will eventually take the governance of the project, making any central entity irrelevant for the project.
+        </p>
+      </Emphasis>
       <Illustration>
         <img src={illustration} alt="" />
       </Illustration>
