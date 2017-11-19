@@ -1,9 +1,13 @@
 import React from 'react'
+import { PageTitle, Page } from '../components'
 
-class NotFound extends React.Component {
-  render() {
-    return <div>About</div>
-  }
-}
+const NotFound = () => (
+  <Page>
+    <PageTitle
+      title="Not Found"
+      subtitle="The page you are trying to access could not be found."
+    />
+  </Page>
+)
 
 export default NotFound
