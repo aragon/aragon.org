@@ -1,26 +1,19 @@
 import React from 'react'
-
-import {
-  PageTitle,
-} from '../components'
-
-import {
-  Tokens,
-  Transfer,
-  Customize,
-  Vote,
-  Finance,
-} from '../components/Core'
+import { PageTitle, Page } from '../components'
+import { Tokens, Transfer, Customize, Vote, Finance } from '../components/Core'
 
 const Core = () => (
-  <div>
-    <PageTitle title="Aragon Core" subtitle="The decentralized app to run blockchain organizations" />
+  <Page path="/core">
+    <PageTitle
+      title="Aragon Core"
+      subtitle="The decentralized app to run blockchain organizations"
+    />
     <Tokens />
     <Transfer />
     <Customize />
     <Vote />
     <Finance />
-  </div>
+  </Page>
 )
 
 export default Core
