@@ -13,9 +13,14 @@ const menuItems = [
   ['https://wiki.aragon.one', 'Wiki'],
 ]
 
-const renderMenuItemLink = ({ url, children }) => (
-  <Link to={url}>{children}</Link>
-)
+const renderMenuItemLink = ({ url, children }) =>
+  url.startsWith('/') ? (
+    <Link to={url}>{children}</Link>
+  ) : (
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  )
 
 const Content = styled.div`
   min-height: 200px;
