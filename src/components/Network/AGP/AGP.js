@@ -62,19 +62,19 @@ const Main = styled(Section)`
 const AGP = () => (
   <Main>
     <div>
-      <SectionTitle title="AGP: Aragon Governance Proposals" />
-      <h1 className="title">Make your voice heard and enhance Aragon</h1>
+      <SectionTitle title="Aragon Governance Proposals" />
+      <h1 className="title">Join us in creating an even better Aragon by making your voice heard</h1>
       <div className="columns">
         <p>
-          Let's create the best tooling for the decentralized web, together. Let's create the best tooling for the decentralized web, together.
+          Aragon Governance Proposals is a system for community members to join the discussion and create proposals affecting Aragon
         </p>
         <p>
-          Let's create the best tooling for the decentralized web, together. Let's create the best tooling for the decentralized web, together.
+          Everyone is welcome to join in and aid in forging the future of how Aragon will shape out to be. Together we can build the exciting future which we want
         </p>
       </div>
       <div className="image"><img src={repos} alt="" /></div>
       <div className="cta">
-        <Button mode="strong">Read governance proposals</Button>
+        <Button mode="strong">Dive into governance proposals</Button>
       </div>
     </div>
   </Main>

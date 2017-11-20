@@ -6,7 +6,7 @@ const Network = () => (
   <Page path="/network">
     <PageTitle
       title="Aragon Network"
-      subtitle="Raising the project so it can fly alone"
+      subtitle="Ensuring the evolution of the ecosystem"
     />
     <Intro />
     <AragonNetwork />

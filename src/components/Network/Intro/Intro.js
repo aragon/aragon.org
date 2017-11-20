@@ -27,19 +27,19 @@ const Intro = () => (
   <Wrapper>
     <Main>
       <Subtitle dark>
-        <p>Goal: to make itself useless</p>
+        <p>Giving the power back into the hands of the users</p>
       </Subtitle>
       <Content dark>
         <p>
-        An Estonian non-profit was created in order to nurture the project and help in its governance.
+        Aragon Network will establish additional services for the organizations taking advantage of what Aragon Core provides
         </p>
         <p>
-        However, in our mission to disintermediate governance, we want to disintermediate Aragon's own governance.
+        Our mission is to make the Aragon Network an autonomous organization itself, which is only managed by the people using it for their mutual prosperity
         </p>
       </Content>
       <Emphasis dark>
         <p>
-          The <a href="/network">Aragon Network</a> will eventually take the governance of the project, making any central entity irrelevant for the project.
+          The Aragon Network will decentralize its governance by gradually handing over the conrol of the project to the users
         </p>
       </Emphasis>
       <Illustration>
