@@ -32,7 +32,7 @@ const Main = styled(IllustratedSection)`
 `
 
 const MainWithLessMargin = styled(Main)`
-  padding-top: 100px;
+  padding-top: 0px;
 `
 
 const Finance = () => (

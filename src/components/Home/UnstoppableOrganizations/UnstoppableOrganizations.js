@@ -25,7 +25,7 @@ const StyledContainer = styled(Section)`
   .title {
     color: ${theme.textPrimary};
     margin-bottom: 15px;
-    font-size: 30px;
+    font-size: 62px;
     line-height: 1.2;
     ${medium(`
       margin-bottom: 25px;
@@ -67,36 +67,34 @@ const StyledContainer = styled(Section)`
   }
 `
 
-const UnstoppableOrganizations = () => {
-  return (
-    <StyledContainer>
-      <div>
-        <h1 className="title">Unstoppable organizations</h1>
-        <Text size="large" className="subtitle">
-          Create value without borders or intermediaries
-        </Text>
-        <BreakPoint to="medium">
-          <div className="buttons">
-            <div className="button">
-              <Button mode="outline">Try the web version</Button>
-            </div>
-            <div className="button">
-              <Button mode="strong">Download Aragon Core</Button>
-            </div>
+const UnstoppableOrganizations = () => (
+  <StyledContainer>
+    <div>
+      <h1 className="title">Unstoppable organizations</h1>
+      <Text size="large" className="subtitle">
+        Create value without borders or intermediaries
+      </Text>
+      <BreakPoint to="medium">
+        <div className="buttons">
+          <div className="button">
+            <Button mode="outline">Try the web version</Button>
           </div>
-        </BreakPoint>
-        <div className="app-wrapper">
-          <img
-            className="app-img"
-            src={appScreen}
-            width="1140"
-            height="508"
-            alt="Aragon App"
-          />
+          <div className="button">
+            <Button mode="strong">Download Aragon Core</Button>
+          </div>
         </div>
+      </BreakPoint>
+      <div className="app-wrapper">
+        <img
+          className="app-img"
+          src={appScreen}
+          width="1140"
+          height="508"
+          alt="Aragon App"
+        />
       </div>
-    </StyledContainer>
-  )
-}
+    </div>
+  </StyledContainer>
+)
 
 export default UnstoppableOrganizations

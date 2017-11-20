@@ -27,7 +27,7 @@ const Disintermediating = () => (
   <Wrapper>
     <Main>
       <Title>
-        <h1>Disintermediating business and transactions between humans</h1>
+        <h1>Disintermediating business and transactions between humans</h1>
       </Title>
       <Subtitle dark>
         <p>The first step towards a more fair, efficient world</p>
@@ -45,7 +45,7 @@ const Disintermediating = () => (
           technology. We want to empower people across the world to easily and
           securely manage their organizations. We provide the tools for anyone
           to become an entrepreneur and run their own organization, to take
-          control of their own lives.
+          control of their own lives
         </p>
         <p>
           By making it possible for everyone in the world to organize, we are
