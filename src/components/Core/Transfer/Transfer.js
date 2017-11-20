@@ -60,17 +60,17 @@ const Transfer = () => (
     <div className="columns">
       <div>
         <SectionTitle title="Transfer tokens" className="title" />
-        <Text heading="2">Own and transfer your tokens freely.</Text>
+        <Text heading="2">Appoint and actuate your assets freely</Text>
         <Text color={theme.textSecondary}>
-          Tokens are liquid by default. You can transfer them, sell them, and truly own them. You can easily configure what the tokens let their owners do.
+          You are in control of the flow of your funds. Transfer and assign them according to your personal needs
         </Text>
         <img src={transfer} alt="" />
       </div>
       <div>
-        <SectionTitle title="Fundraise" className="title" />
-        <Text heading="2">Raise capital from anyone in the world, in seconds.</Text>
+        <SectionTitle title="Fundraising" className="title" />
+        <Text heading="2">Grasp the potential of crowdfunding</Text>
         <Text color={theme.textSecondary}>
-          You shouldn’t have to fly over Silicon Valley and fight for a visa in order to get capital for your projects. With Aragon, you can just raise from anyone in the world.
+          Having access to capital that is necessary for you to build your organization should be simple. Utilize the power of the crowd and raise funds globally, in private or publicly. Using Aragon let’s you focus on what matters the most: building your product or service
         </Text>
         <img src={raise} alt="" />
       </div>

@@ -25,7 +25,7 @@ const Main = styled(IllustratedSection)`
     border: 1px solid #DBEBEA;
     border-radius: 5px;
   }
-  
+
   section {
     padding: none;
   }
@@ -45,20 +45,20 @@ const Finance = () => (
         <h1>Accounting</h1>
       </Title>
       <Subtitle>
-        <p>Rock-solid, automatic accounting.</p>
+        <p>Tamper-proof, effective accounting</p>
       </Subtitle>
       <Emphasis>
         <p>
-          Every transaction that involves currency is registered forever.
+          Every transaction is recorded and can be certified on the blockchain at any given time
         </p>
       </Emphasis>
       <Content>
         <ul>
           <li>
-            Running Aragon on a public blockchain, this creates an unprecedented level of transparency.
+            Unprecedented level of transparency can be gained through the use of a public blockchain to engrave every entry permanently on the ledger
           </li>
           <li>
-            Budgeting each quarter and dividend sharing with stockholders happens automatically, following pre-established rules.
+            Pre-established rules can automatically define your quarterly spending and budgeting
           </li>
         </ul>
       </Content>
@@ -68,15 +68,15 @@ const Finance = () => (
         <h1>Payments</h1>
       </Title>
       <Subtitle>
-        <p>Pay anyone in the world with just 2 clicks.</p>
+        <p>Send a payment to anyone with a few simple clicks</p>
       </Subtitle>
       <Emphasis>
         <p>
-        Money arrives in less than a minute.
+        Your payment will be delivered in under a minute to anywhere in the world
         </p>
       </Emphasis>
       <Content>
-        <p>Adding a new employee to your payroll is as easy as creating a recurring payment.</p>
+        <p>Adding an employee to your payroll is as easy as creating a new recurring payment</p>
       </Content>
       <Illustration>
         <img src={payment} alt="" />
