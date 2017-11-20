@@ -57,15 +57,15 @@ const Customize = () => (
     <div className="columns">
       <div>
         <img src={settings} alt="" />
-        <p>Aragon organizations are fully customizable, powered by AragonOS.</p>
+        <p>Aragon organizations are fully customizable, powered by AragonOS</p>
       </div>
       <div>
         <img src={path} alt="" />
-        <p>You can modify all the permissions to trigger different actions.</p>
+        <p>You can modify all the permissions to trigger different actions</p>
       </div>
       <div>
         <img src={code} alt="" />
-        <p>And if you are a developer, you can even create apps that run on your organization.</p>
+        <p>And if you are a developer, you can even create apps that run on your organization</p>
       </div>
     </div>
   </Main>
