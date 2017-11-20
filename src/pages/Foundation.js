@@ -6,7 +6,7 @@ const Foundation = () => (
   <Page path="/foundation">
     <PageTitle
       title="Foundation"
-      subtitle="Raising the project so it can fly alone"
+      subtitle="Cornerstone for architecting the project"
     />
     <Intro />
     <Grants />
