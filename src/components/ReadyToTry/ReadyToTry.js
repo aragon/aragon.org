@@ -45,10 +45,10 @@ const ReadyToTry = () => (
     <div className="in">
       <div className="content">
         <h1 className="title">Ready to try Aragon?</h1>
-        <p className="subtitle">Download Aragon Alpha for macOS</p>
+        <p className="subtitle">Download Aragon Core alpha v0.4 for macOS</p>
         <div className="buttons">
-          <Button>Try web version</Button>
-          <Button mode="strong">Download Aragon</Button>
+          <Button>Try the Web version</Button>
+          <Button mode="strong">Download Aragon Core</Button>
         </div>
       </div>
       <img className="illustration" src={illustration} alt="" />
