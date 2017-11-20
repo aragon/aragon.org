@@ -31,15 +31,15 @@ const WhyAragon = () => (
       </Subtitle>
       <Content dark>
         <p>
-        Organizations and companies exist in order to create value by using resources to create products or provide services.
+        Organizations like companies exist to create value to their owners and users. They use the resources available to them in order to provide services and to create products
         </p>
         <p>
-        However, intermediaries and third parties such as governments decrease the output of those organizations by imposing restrictions and creating complex regulatory frameworks.
+        Their ability to do this efficiently is hindered by factors outside of their influence. By removing unnecessary intermediaries and third parties that impose artificial restrictions and unnecessarily complex regulations, can we modernize the way organizations are run
         </p>
       </Content>
       <Emphasis dark>
         <p>
-          Aragon was born to disintermediate the creation and maintenance of companies and other organizational structures.
+          Aragon was born to bring transparency and independent governance to the forefront of managing an organization. We want to give the users the liberty they deserve to run their lives
         </p>
       </Emphasis>
       <Illustration>

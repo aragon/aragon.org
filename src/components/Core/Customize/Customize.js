@@ -51,21 +51,21 @@ const Main = styled(Section)`
 const Customize = () => (
   <Main>
     <div>
-      <Text heading="1" color={theme.gradientText}>Extensible to the infinite and beyond. Powered by AragonOS</Text>
+      <Text heading="1" color={theme.gradientText}>It's your organization. You should be in control</Text>
     </div>
     <img src={permission} alt="" />
     <div className="columns">
       <div>
         <img src={settings} alt="" />
-        <p>Aragon organizations are fully customizable, powered by AragonOS</p>
+        <p>Aragon organizations are powered by the AragonOS and fully customizable to fit your needs</p>
       </div>
       <div>
         <img src={path} alt="" />
-        <p>You can modify all the permissions to trigger different actions</p>
+        <p>You set the rules of how and when actions are prompted and enacted </p>
       </div>
       <div>
         <img src={code} alt="" />
-        <p>And if you are a developer, you can even create apps that run on your organization</p>
+        <p>Code is open source. As a developer you can even modify it to match your specific use case</p>
       </div>
     </div>
   </Main>

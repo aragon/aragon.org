@@ -6,7 +6,7 @@ const Core = () => (
   <Page path="/core">
     <PageTitle
       title="Aragon Core"
-      subtitle="The decentralized app to run blockchain organizations"
+      subtitle="Decentralized application to run your organization"
     />
     <Tokens />
     <Transfer />

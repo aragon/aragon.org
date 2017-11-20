@@ -54,7 +54,7 @@ const Vision = () => (
   <Main>
     <div>
       <SectionTitle title="Our vision" />
-      <h1 className="title">New governance models we cannot even dream about will emerge</h1>
+      <h1 className="title">Evolution of the Internet and Blockchain technology are changing the ways we interact with each other</h1>
       <div className="columns">
         <img src={drawing0} alt="" />
         <img src={drawing1} alt="" />
@@ -62,10 +62,10 @@ const Vision = () => (
       </div>
       <div className="columns">
         <p>
-          We were very inspired by Nobel prize Ronald Coase and his paper The Nature of the Firm and Yochai Benkler's Linux and the Nature of the Firm. Both explore the concept of why organizations exist.
+          We believe that the progression of modern technology solutions such as the invention of blockchain technology are changing the incentives for people to interact between each other. We are building the tools for the next generation of organizations to take advantage of this technological revolution
         </p>
         <p>
-          Trying out new governance models has been a very risky endeavour during previous iterations of society. Now, for the first time in history, we can let a thounsand governance models emerge from the comfort of out laptops. We can democratize free human organization.
+          The inception of Aragon was influenced by the work that Nobel Prize winner Ronald Coase and Yochai Benkler had put forth in their papers Nature of the Firm and Coase’s Penguin. Inspired by their efforts we came to the realization that virtual organizations are the path toward a brighter future
         </p>
       </div>
     </div>

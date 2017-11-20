@@ -52,16 +52,16 @@ const Vote = () => (
   <Main>
     <div className="columns">
       <div>
-        <Text heading="2">Vote every decision.</Text>
+        <Text heading="2">Decision-making by voting</Text>
         <Text color={theme.textSecondary}>
-        Votes are secure, transparent and impossible to forge. No corrupt or malicious entity can tamper with them.
+        Use voting for more effective results. Votes are a secure, transparent and unforgeable way to come to a decision on major issues
         </Text>
         <img src={vote} alt="" />
       </div>
       <div>
-        <Text heading="2">New governance models.</Text>
+        <Text heading="2">Assign roles</Text>
         <Text color={theme.textSecondary}>
-        You can get as creative as you want. Experiment with new models as it wasn't possible ever before.
+        By assigning different roles you can leave the mundane decisions of day-to-day activity to designated people
         </Text>
         <img src={sign} alt="" />
       </div>
