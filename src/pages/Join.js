@@ -5,7 +5,7 @@ import { Culture, Value } from '../components/Join'
 
 const Join = () => (
   <Page path="/join">
-    <PageTitle title="Join us" subtitle="We are democratizing governance">
+    <PageTitle title="Join us" subtitle="We are building the future of organizations">
       <Button mode="outline">View open positions</Button>
       <Button mode="strong">Apply now</Button>
     </PageTitle>

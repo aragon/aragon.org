@@ -58,19 +58,19 @@ const Value = () => (
         <div>
           <img src={focus} alt="" />
           <h1>Focus-driven work</h1>
-          <p>Focus-driven work,  not 
-hours-driven.</p>
+          <p>We don't necessarily work 9-5, getting the work done, meeting goals and milestones is more important. You can work however it suits your personal schedule as long as you're focused on delivering quality work
+          </p>
         </div>
         <div>
           <img src={proactive} alt="" />
           <h1>Proactive attitude</h1>
-          <p>Autonomous workers with a proactive attitude and a love for time self-management.</p>
+          <p>Working remotely and autonomously, having a positive and proactive attitude with a love for time self-management is essential to our day-to-day operations</p>
         </div>
         <div>
           <img src={heart} alt="" />
-          <h1>Your value</h1>
-          <p>We value what you can do and your attitude doing it, not where/whether you went to school or college.
-</p>
+          <h1>The value that you bring</h1>
+          <p>Every person has a unique set of skills that bring meaning to what we are doing. We value what you can do and your attitude in doing it. Our goal is to enable you to realize the value which you can bring, no matter where/whether you went to school or college
+          </p>
         </div>
       </div>
       <div className="cta">
