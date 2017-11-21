@@ -8,7 +8,7 @@ import {
   BreakPoint,
   Button,
 } from '@aragon/ui'
-
+import AppScreenshot from '../../AppScreenshot/AppScreenshot'
 import background from './assets/background.svg'
 import appScreen from './assets/app-screen.svg'
 
@@ -45,15 +45,9 @@ const StyledContainer = styled(Section)`
     align-items: center;
   }
   .app-img {
-    display: block;
     margin-left: 50%;
-    max-width: 100%;
-    height: auto;
     transform: translateX(-50%);
     flex-shrink: 0;
-    text-align: center;
-    border-radius: 3px 3px 0 0;
-    box-shadow: 0 4px 64px rgba(149, 149, 149, 0.2);
     margin-top: 40px;
     ${medium('margin-top: 75px')};
   }
@@ -85,13 +79,7 @@ const UnstoppableOrganizations = () => (
         </div>
       </BreakPoint>
       <div className="app-wrapper">
-        <img
-          className="app-img"
-          src={appScreen}
-          width="1140"
-          height="508"
-          alt="Aragon App"
-        />
+        <AppScreenshot className="app-img" />
       </div>
     </div>
   </StyledContainer>
