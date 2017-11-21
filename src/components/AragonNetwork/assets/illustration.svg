@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="378px" height="481px" viewBox="0 0 378 481" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Illustration_Home_network@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="14.9580793%" y1="0%" x2="116.400528%" y2="127.872527%" id="linearGradient-1">
+            <stop stop-color="#E9F2F4" offset="0%"></stop>
+            <stop stop-color="#F7F8F9" offset="100%"></stop>
+            <stop stop-color="#00EFE2" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="108.4331%" y1="24.1169976%" x2="3.15108105%" y2="123.123355%" id="linearGradient-2">
+            <stop stop-color="#E9F2F4" offset="0%"></stop>
+            <stop stop-color="#E7EFEE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="14.9580793%" y1="0%" x2="100%" y2="68.0408418%" id="linearGradient-3">
+            <stop stop-color="#00C7E4" offset="0%"></stop>
+            <stop stop-color="#00EFE2" offset="100%"></stop>
+            <stop stop-color="#00EFE2" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="14.9580793%" y1="0%" x2="116.400528%" y2="127.872527%" id="linearGradient-4">
+            <stop stop-color="#00C7E4" offset="0%"></stop>
+            <stop stop-color="#00EFE2" offset="100%"></stop>
+            <stop stop-color="#00EFE2" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="11.3552517%" y1="113.983154%" x2="92.1006944%" y2="-28.2725016%" id="linearGradient-5">
+            <stop stop-color="#0B0B0A" offset="0%"></stop>
+            <stop stop-color="#464F51" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Network--Desktop-1170px" transform="translate(-242.000000, -815.000000)">
+            <g id="Illustration_Home_network" transform="translate(243.000000, 815.000000)">
+                <g id="Glass-1-Copy" transform="translate(0.000000, 234.987226)" fill-rule="nonzero">
+                    <polygon id="Shape-Copy" fill="url(#linearGradient-1)" points="375.775251 108.766963 375.735619 116.370028 188.480646 225.139192 0 116.371495 0.039632546 108.76843 187.294605 0"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-2)" points="375.775251 108.838735 375.735619 116.4418 188.480646 225.210964 188.519545 217.607899"></polygon>
+                    <polygon id="Shape" fill-opacity="0.123188406" fill="#000000" points="188.519545 217.607899 188.480646 225.210964 0 116.443267 0.039632546 108.840202"></polygon>
+                </g>
+                <g id="Group-6" transform="translate(0.000000, 169.317765)" fill-rule="nonzero">
+                    <g id="Group-7-Copy">
+                        <polygon id="Shape" fill="url(#linearGradient-3)" opacity="0.347146739" points="375.775251 108.766963 375.735619 116.370028 188.480646 225.139192 0 116.371495 0.039632546 108.76843 187.294605 0"></polygon>
+                        <polygon id="Shape" fill="url(#linearGradient-4)" opacity="0.430366848" points="376.094307 108.537027 376.054674 116.140091 188.799702 224.909255 188.8386 217.30619"></polygon>
+                        <polygon id="Shape" fill="url(#linearGradient-4)" points="188.519545 217.607899 188.480646 225.210964 0 116.443267 0.039632546 108.840202"></polygon>
+                    </g>
+                </g>
+                <g id="Glass-1" transform="translate(0.000000, 100.000000)" fill-rule="nonzero">
+                    <g id="Group-47">
+                        <polygon id="Shape-Copy" fill-opacity="0.170000002" fill="#DCDCDC" points="375.775251 108.766963 375.735619 116.370028 188.480646 225.139192 0 116.371495 0.039632546 108.76843 187.294605 0"></polygon>
+                        <polygon id="Shape" fill-opacity="0.123188406" fill="#666666" points="375.775251 108.838735 375.735619 116.4418 188.480646 225.210964 188.519545 217.607899"></polygon>
+                        <polygon id="Shape" fill-opacity="0.123188406" fill="#000000" points="188.519545 217.607899 188.480646 225.210964 0 116.443267 0.039632546 108.840202"></polygon>
+                    </g>
+                </g>
+                <g id="Group-6" transform="translate(0.000000, 31.317765)" fill-rule="nonzero">
+                    <g id="Group-7-Copy">
+                        <polygon id="Shape" stroke="url(#linearGradient-5)" opacity="0.310000002" points="375.775251 108.766963 375.735619 116.370028 188.480646 225.139192 0 116.371495 0.039632546 108.76843 187.294605 0"></polygon>
+                        <polygon id="Shape" stroke="#717171" fill="url(#linearGradient-1)" opacity="0.220674819" points="376.094307 108.537027 376.054674 116.140091 188.799702 224.909255 188.8386 217.30619"></polygon>
+                        <polygon id="Shape" stroke="#717171" fill="url(#linearGradient-1)" opacity="0.220674819" points="188.519545 217.607899 188.480646 225.210964 0 116.443267 0.039632546 108.840202"></polygon>
+                    </g>
+                </g>
+                <path d="M187.901641,148.394994 L187.901641,460.132953" id="Path-5" stroke="#000000" opacity="0.104562953"></path>
+                <path d="M187.901641,459.605469 L187.901641,480.132953" id="Path-5" stroke="#000000" opacity="0.5"></path>
+                <path d="M187.901641,0.394994427 L187.901641,144.132953" id="Path-5" stroke="#000000" opacity="0.5"></path>
+                <circle id="Oval-5-Copy" fill="url(#linearGradient-5)" cx="188.09" cy="144.09" r="2.08999991"></circle>
+                <circle id="Oval-5-Copy" fill="url(#linearGradient-5)" opacity="0.194519928" cx="188.09" cy="212.09" r="2.08999991"></circle>
+                <circle id="Oval-5-Copy" fill="url(#linearGradient-5)" opacity="0.194519928" cx="188.09" cy="282.09" r="2.08999991"></circle>
+                <circle id="Oval-5-Copy" fill="url(#linearGradient-5)" opacity="0.194519928" cx="188.09" cy="347.09" r="2.08999991"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
