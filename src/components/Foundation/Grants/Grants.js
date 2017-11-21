@@ -58,14 +58,14 @@ const Grants = () => (
   <Main>
     <div>
       <SectionTitle title="Grants program" />
-      <h1 className="title">Let's create the best tooling for the decentralized web, together</h1>
+      <h1 className="title">Let's build the best tools for the future, together</h1>
       <img src={repos} alt="" />
       <div className="columns">
         <p>
-          Let's create the best tooling for the decentralized web, together. Let's create the best tooling for the decentralized web, together.
+          Aragon's Grants Program is intended to encourage and incentivize people outside of the Core Team to engage in the development of the Aragon ecosystem
         </p>
         <p>
-          Let's create the best tooling for the decentralized web, together. Let's create the best tooling for the decentralized web, together.
+          The Foundation will introduce multiple distinct events upon which participants can join to submit their concepts for deliberation and be accepted into the Grants Program
         </p>
       </div>
       <div className="cta">

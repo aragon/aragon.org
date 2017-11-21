@@ -27,19 +27,19 @@ const WhyAragon = () => (
   <Wrapper>
     <Main>
       <Subtitle dark>
-        <p>Goal: to make itself useless</p>
+        <p>Heart of the early development</p>
       </Subtitle>
       <Content dark>
         <p>
-        An Estonian non-profit was created in order to nurture the project and help in its governance.
+        Aragon Foundation is a non-profit organization which was created to nurture the project in it's early phases
         </p>
         <p>
-        However, in our mission to disintermediate governance, we want to disintermediate Aragon's own governance.
+        Developing the platform and project towards maturity is the main duty of the Foundation. Other affairs include motivating external developers to build more functionality and applications on Aragon to boost adoption of the technology
         </p>
       </Content>
       <Emphasis dark>
         <p>
-          The <a href="/network">Aragon Network</a> will eventually take the governance of the project, making any central entity irrelevant for the project.
+          Aragon Foundation is laying down the first bricks on the road to what will become
         </p>
       </Emphasis>
       <Illustration>

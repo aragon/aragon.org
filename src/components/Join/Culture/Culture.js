@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   position: relative;
   z-index: 1;
   margin-top: 200px;
+  pointer-events: none;
 `
 
 const Main = styled.div`

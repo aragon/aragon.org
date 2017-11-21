@@ -18,14 +18,19 @@ const StyledContainer = styled(Section)`
     color: ${theme.textSecondary};
   }
 
-  button {
-    margin: 25px 5px;
-    margin-bottom: 164px;
+  .children {
+    padding-bottom: 164px;
+    margin: 25px 0;
+  }
+
+  button, a {
+    margin: 0 5px;
+    text-decoration: none;
   }
 
   span {
     display: block;
-    padding-bottom: 256px;
+    padding-bottom: 192px;
   }
 `
 
@@ -36,8 +41,11 @@ const PageTitle = ({ title, subtitle, children }) => (
       <Text size="xlarge" className="subtitle">
         {subtitle}
       </Text>
-      {children}
-      {!children ? <span /> : null}
+      {children ?
+        <div className="children">
+          {children}
+        </div> :
+        <span />}
     </div>
   </StyledContainer>
 )
