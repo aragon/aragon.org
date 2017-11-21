@@ -77,10 +77,10 @@ const UnstoppableOrganizations = () => (
       <BreakPoint to="medium">
         <div className="buttons">
           <div className="button">
-            <Button mode="outline">Try the web version</Button>
+            <Button mode="outline">Web version</Button>
           </div>
           <div className="button">
-            <Button mode="strong">Download Aragon Core</Button>
+            <Button mode="strong">Aragon Core</Button>
           </div>
         </div>
       </BreakPoint>
