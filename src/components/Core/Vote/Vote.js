@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import { styled } from '@aragon/ui'
 import { Section, Text, theme } from '@aragon/ui'
 
 import vote from './assets/vote.png'

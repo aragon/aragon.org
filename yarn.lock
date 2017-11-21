@@ -5171,9 +5171,9 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
-react-static@^4.1.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/react-static/-/react-static-4.3.0.tgz#2420f033ea4097c1eb3b9b107a28aaa85475542b"
+react-static@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/react-static/-/react-static-4.3.1.tgz#1a739a76b285f8185f38e20bcde25f9c31d919c7"
   dependencies:
     "@types/react" "^16.0.18"
     "@types/react-helmet" "^5.0.3"
@@ -5225,7 +5225,7 @@ react-static@^4.1.0:
     webpack-dev-server "^2.8.2"
     webpack-node-externals "^1.6.0"
 
-react@^16, react@^16.0.0:
+react@^16, react@^16.1.1:
   version "16.1.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.1.1.tgz#d5c4ef795507e3012282dd51261ff9c0e824fe1f"
   dependencies:
@@ -5992,7 +5992,7 @@ style-loader@^0.19.0:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
 
-styled-components@^2.2.1, styled-components@^2.2.3:
+styled-components@^2.2.1:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.3.tgz#154575c269880c840f903f580287dab155cf684c"
   dependencies:

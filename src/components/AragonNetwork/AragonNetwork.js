@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import { styled } from '@aragon/ui'
 import { IllustratedSection } from '@aragon/ui'
 import illustration from './assets/illustration.svg'
 

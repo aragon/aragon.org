@@ -1,7 +1,7 @@
 import React from 'react'
 import { Router, Link, getRouteProps } from 'react-static'
 import Routes from 'react-static-routes'
-import styled from 'styled-components'
+import { styled } from '@aragon/ui'
 import { AragonApp, Header, PreFooter, Footer } from '@aragon/ui'
 
 const menuItems = [

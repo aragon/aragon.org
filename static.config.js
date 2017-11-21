@@ -2,7 +2,7 @@ import fs from 'fs-extra'
 import path from 'path'
 import chalk from 'chalk'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
-import { ServerStyleSheet } from 'styled-components'
+import { styledServerStyleSheet as ServerStyleSheet } from '@aragon/ui'
 import React from 'react'
 
 const REACT_STATIC_PATHS = {
@@ -31,7 +31,7 @@ export default {
   webpack: conf => {
     conf.resolve = Object.assign({}, conf.resolve || {}, {
       // Needed when @aragon/ui is linked (development)
-      modules: (conf.modules || []).concat([
+      modules: (conf.resolve && conf.resolve.modules || []).concat([
         path.join(__dirname, 'node_modules'),
         path.join(__dirname, REACT_STATIC_PATHS.dist),
       ]),

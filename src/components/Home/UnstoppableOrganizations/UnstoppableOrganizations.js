@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import { styled, styledCss as css } from '@aragon/ui'
 import {
   Section,
   Text,

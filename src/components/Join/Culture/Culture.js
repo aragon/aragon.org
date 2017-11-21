@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import { styled } from '@aragon/ui'
 
 import background from './assets/background.svg'
 

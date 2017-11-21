@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import { styled } from '@aragon/ui'
 import { Section, Button, theme } from '@aragon/ui'
 
 import illustration from './assets/app-screen.svg'
