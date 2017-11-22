@@ -1,37 +1,47 @@
 import React from 'react'
-import { styled } from '@aragon/ui'
-import { Section, Text, theme } from '@aragon/ui'
+import { styled, styledCss as css } from '@aragon/ui'
+import { Section, Text, theme, breakpoint } from '@aragon/ui'
 
 import background from './assets/background.svg'
 
+const medium = css => breakpoint('medium', css)
+
 const StyledContainer = styled(Section)`
-  padding-top: 100px;
+  padding: 40px 15px 0;
   text-align: center;
   background: url(${background}) no-repeat 50% -60px;
   .title {
     margin-bottom: 25px;
-    font-size: 58px;
+    font-size: 30px;
     color: ${theme.textPrimary};
   }
   .subtitle {
     margin-bottom: 15px;
     color: ${theme.textSecondary};
+    font-size: 20px;
   }
-
   .children {
     padding-bottom: 164px;
     margin: 25px 0;
   }
-
-  button, a {
+  button,
+  a {
     margin: 0 5px;
     text-decoration: none;
   }
-
   span {
     display: block;
     padding-bottom: 192px;
   }
+  ${medium(css`
+    padding-top: 100px;
+    .title {
+      font-size: 44px;
+    }
+    .subtitle {
+      font-size: 24px;
+    }
+  `)};
 `
 
 const PageTitle = ({ title, subtitle, children }) => (
@@ -41,11 +51,7 @@ const PageTitle = ({ title, subtitle, children }) => (
       <Text size="xlarge" className="subtitle">
         {subtitle}
       </Text>
-      {children ?
-        <div className="children">
-          {children}
-        </div> :
-        <span />}
+      {children ? <div className="children">{children}</div> : <span />}
     </div>
   </StyledContainer>
 )

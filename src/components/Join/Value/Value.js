@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@aragon/ui'
-import { Section, Button, theme } from '@aragon/ui'
+import { Section, Button, theme, breakpoint } from '@aragon/ui'
 
 import SectionTitle from '../../SectionTitle.js'
 
@@ -8,46 +8,58 @@ import focus from './assets/focus.svg'
 import proactive from './assets/proactive.svg'
 import heart from './assets/heart.svg'
 
-const Main = styled(Section)`
-  padding-top: 128px;
-  padding-bottom: 128px;
-  background: white;
+const medium = css => breakpoint('medium', css)
 
-  h1 {
-    font-size: 26px;
-    margin: 12px 0;
-  }
+const Main = styled(Section)`
+  padding: 50px 15px;
+  background: white;
 
   .columns {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin: 50px 0;
+    flex-direction: column;
+    align-items: center;
   }
-  .columns > div {
-    width: 33%;
-    padding: 0 25px;
+  .item {
+    margin-top: 20px;
+    max-width: 400px;
   }
-  .columns > div:nth-child(1) {
-    padding-left: 0;
+  h2 {
+    font-size: 26px;
+    margin: 12px 0;
   }
-  .columns > div:nth-child(3) {
-    padding-right: 0;
-  }
-
   p {
     font-size: 16px;
     color: ${theme.textSecondary};
   }
-
   .cta {
     text-align: center;
     margin-top: 50px;
   }
-
   .cta button {
     margin: 0 5px;
   }
+
+  ${medium(`
+    padding-top: 128px;
+    padding-bottom: 128px;
+    .columns {
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 70px 0;
+    }
+    .item {
+      width: 33%;
+      margin-top: 0;
+      padding: 0 25px;
+    }
+    .item:nth-child(1) {
+      padding-left: 0;
+    }
+    .item:nth-child(3) {
+      padding-right: 0;
+    }
+  `)};
 `
 
 const Value = () => (
@@ -55,21 +67,33 @@ const Value = () => (
     <div>
       <SectionTitle title="Things we value in people" />
       <div className="columns">
-        <div>
+        <div class="item">
           <img src={focus} alt="" />
-          <h1>Focus-driven work</h1>
-          <p>We don't necessarily work 9-5, getting the work done, meeting goals and milestones is more important. You can work however it suits your personal schedule as long as you're focused on delivering quality work
+          <h2>Focus-driven work</h2>
+          <p>
+            We don't necessarily work 9-5, getting the work done, meeting goals
+            and milestones is more important. You can work however it suits your
+            personal schedule as long as you're focused on delivering quality
+            work
           </p>
         </div>
-        <div>
+        <div class="item">
           <img src={proactive} alt="" />
-          <h1>Proactive attitude</h1>
-          <p>Working remotely and autonomously, having a positive and proactive attitude with a love for time self-management is essential to our day-to-day operations</p>
+          <h2>Proactive attitude</h2>
+          <p>
+            Working remotely and autonomously, having a positive and proactive
+            attitude with a love for time self-management is essential to our
+            day-to-day operations
+          </p>
         </div>
-        <div>
+        <div class="item">
           <img src={heart} alt="" />
-          <h1>The value that you bring</h1>
-          <p>Every person has a unique set of skills that bring meaning to what we are doing. We value what you can do and your attitude in doing it. Our goal is to enable you to realize the value which you can bring, no matter where/whether you went to school or college
+          <h2>The value that you bring</h2>
+          <p>
+            Every person has a unique set of skills that bring meaning to what
+            we are doing. We value what you can do and your attitude in doing
+            it. Our goal is to enable you to realize the value which you can
+            bring, no matter where/whether you went to school or college
           </p>
         </div>
       </div>
