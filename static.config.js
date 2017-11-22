@@ -43,7 +43,7 @@ export default {
     conf.plugins = (conf.plugins || []).concat([
       new CopyWebpackPlugin([
         {
-          from: path.join(ARAGON_UI_ASSETS),
+          from: ARAGON_UI_ASSETS,
           to: path.resolve(
             path.join(__dirname, REACT_STATIC_PATHS.dist, 'aragon-ui')
           ),
