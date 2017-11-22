@@ -1,9 +1,10 @@
 import React from 'react'
-import { LogosBar, ReadyToTry, AragonNetwork, Page } from '../components'
+import { ReadyToTry, AragonNetwork, Page } from '../components'
 import {
   UnstoppableOrganizations,
   Disintermediating,
   DeathToPaperwork,
+  LogosBar,
 } from '../components/Home'
 
 const Home = () => (
