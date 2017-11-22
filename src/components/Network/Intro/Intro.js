@@ -27,21 +27,21 @@ const Intro = () => (
   <Wrapper>
     <Main>
       <Subtitle dark>
-        <p>Giving the power back into the hands of the users</p>
+        <p>Putting the power back into the hands of the users</p>
       </Subtitle>
-      <Content dark>
-        <p>
-        Aragon Network will establish additional services for the organizations taking advantage of what Aragon Core provides
-        </p>
-        <p>
-        Our mission is to make the Aragon Network an autonomous organization itself, which is only managed by the people using it for their mutual prosperity
-        </p>
-      </Content>
       <Emphasis dark>
         <p>
-          The Aragon Network will decentralize its governance by gradually handing over the conrol of the project to the users
+          The Aragon Network will decentralize its governance by gradually handing over control of the project to the users
         </p>
       </Emphasis>
+      <Content dark>
+        <p>
+          The Aragon Network will establish additional services for the organizations taking advantage of what Aragon Core provides
+        </p>
+        <p>
+          Our mission is to make the Aragon Network an autonomous organization itself, which is managed by the people using it for their mutual prosperity
+        </p>
+      </Content>
       <Illustration>
         <img src={illustration} alt="" />
       </Illustration>

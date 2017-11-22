@@ -62,10 +62,10 @@ const Vision = () => (
       </div>
       <div className="columns">
         <p>
-          We believe that the progression of modern technology solutions such as the invention of blockchain technology are changing the incentives for people to interact between each other. We are building the tools for the next generation of organizations to take advantage of this technological revolution
+          We believe that the progression of modern technology solutions such as the invention of the blockchain are changing the incentives for people to interact with each other. We are building the tools for the next generation of organizations to take advantage of this revolution
         </p>
         <p>
-          The inception of Aragon was influenced by the work that Nobel Prize winner Ronald Coase and Yochai Benkler had put forth in their papers Nature of the Firm and Coase’s Penguin. Inspired by their efforts we came to the realization that virtual organizations are the path toward a brighter future
+          Trying out new governance models has been a very risky endeavour during previous iterations of society. Now, for the first time in history, we can let a thounsand governance models emerge from the comfort of our laptops
         </p>
       </div>
     </div>

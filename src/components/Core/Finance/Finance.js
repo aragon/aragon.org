@@ -54,7 +54,7 @@ const Finance = () => (
         <h1>Fine-grained permissions</h1>
       </Title>
       <Subtitle>
-        <p>Blabla</p>
+        <p>TODO</p>
       </Subtitle>
       <Emphasis>
         <p>

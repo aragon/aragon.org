@@ -65,7 +65,7 @@ const Grants = () => (
           Aragon's Grants Program is intended to encourage and incentivize people outside of the Core Team to engage in the development of the Aragon ecosystem
         </p>
         <p>
-          The Foundation will introduce multiple distinct events upon which participants can join to submit their concepts for deliberation and be accepted into the Grants Program
+          The Aragon Foundation will introduce multiple distinct events upon which participants can join to submit their concepts for deliberation and be accepted into the Grants Program
         </p>
       </div>
       <div className="cta">

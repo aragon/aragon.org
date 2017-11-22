@@ -58,7 +58,7 @@ const Value = () => (
         <div>
           <img src={focus} alt="" />
           <h1>Focus-driven work</h1>
-          <p>We don't necessarily work 9-5, getting the work done, meeting goals and milestones is more important. You can work however it suits your personal schedule as long as you're focused on delivering quality work
+          <p>We don't necessarily work 9-5; getting the work done, meeting goals and milestones is more important. You can work however it suits your personal schedule as long as you're focused on delivering quality work
           </p>
         </div>
         <div>
@@ -69,13 +69,12 @@ const Value = () => (
         <div>
           <img src={heart} alt="" />
           <h1>The value that you bring</h1>
-          <p>Every person has a unique set of skills that bring meaning to what we are doing. We value what you can do and your attitude in doing it. Our goal is to enable you to realize the value which you can bring, no matter where/whether you went to school or college
+          <p>Every person has a unique set of skills that bring meaning to what we are doing. We value what you can do and your attitude in doing it. Our goal is to enable you to realize the value which you can bring, no matter where/whether you went to college
           </p>
         </div>
       </div>
       <div className="cta">
-        <Button mode="outline">View open positions</Button>
-        <Button mode="strong">Apply now</Button>
+        <Button mode="strong">View open positions</Button>
       </div>
     </div>
   </Main>

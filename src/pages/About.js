@@ -6,7 +6,7 @@ const About = () => (
   <Page path="/about">
     <PageTitle
       title="About us"
-      subtitle="Restoring the freedom to organize"
+      subtitle="Fighting for the freedom to organize"
     />
     <WhyAragon />
     <Vision />
