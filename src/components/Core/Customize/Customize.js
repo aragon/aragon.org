@@ -51,7 +51,7 @@ const Main = styled(Section)`
 const Customize = () => (
   <Main>
     <div>
-      <Text heading="1" color={theme.gradientText}>It's your organization. You should be in control</Text>
+      <Text heading="1" color={theme.gradientText}>It's your organization. Make it work for you</Text>
     </div>
     <img src={permission} alt="" />
     <div className="columns">

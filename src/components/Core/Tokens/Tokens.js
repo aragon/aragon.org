@@ -36,7 +36,7 @@ const Tokens = () => (
   <Wrapper>
     <Main>
       <div>
-        <Text heading="1" color={theme.gradientText}>Managing your organization has never been more secure</Text>
+        <Text heading="1" color={theme.gradientText}>Managing your organization has never been easier</Text>
       </div>
       <img src={tokens} alt="" />
     </Main>
