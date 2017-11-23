@@ -70,8 +70,8 @@ const Main = styled(Section)`
   `)};
 `
 
-const SideBySide = ({ items }) => (
-  <Main>
+const SideBySide = ({ className, items }) => (
+  <Main className={className}>
     <div className="columns">
       {items.slice(0, 2).map(({ title, subtitle, textContent, image }, i) => (
         <div className="item" key={i}>

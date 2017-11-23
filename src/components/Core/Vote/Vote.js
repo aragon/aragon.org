@@ -1,11 +1,20 @@
 import React from 'react'
 import SideBySide from '../../SideBySide/SideBySide'
+import { styled, theme } from '@aragon/ui'
 
 import vote from './assets/vote.png'
 import payment from './assets/payment.png'
 
+const StyledSideBySide = styled(SideBySide)`
+  background: linear-gradient(
+    130deg,
+    ${theme.mainBgGradientStart},
+    ${theme.mainBgGradientEnd}
+  );
+`
+
 const Vote = () => (
-  <SideBySide
+  <StyledSideBySide
     items={[
       {
         subtitle: 'Decision-making by voting',
