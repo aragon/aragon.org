@@ -56,9 +56,6 @@ const PARTS = [
 const medium = css => breakpoint('medium', css)
 const large = css => breakpoint('large', css)
 
-const StyledOverlapBackground = styled(OverlapBackground)`
-`
-
 const Main = styled(Section)`
   max-width: 400px;
   margin: 0 auto;
@@ -155,7 +152,7 @@ const wrapEvery = (children, every = 2) => {
 }
 
 const Culture = () => (
-  <StyledOverlapBackground>
+  <OverlapBackground>
     <Main>
       <h1>{TITLE}</h1>
       <Content>
@@ -164,7 +161,7 @@ const Culture = () => (
         )}
       </Content>
     </Main>
-  </StyledOverlapBackground>
+  </OverlapBackground>
 )
 
 export default Culture
