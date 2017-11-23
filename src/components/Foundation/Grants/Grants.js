@@ -10,19 +10,15 @@ const medium = css => breakpoint('medium', css)
 const large = css => breakpoint('large', css)
 
 const Main = styled(Section)`
-  padding: 128px 15px;
+  padding: 50px 15px;
   background: #fff;
   .title {
+    margin-top: 10px;
     margin-bottom: 25px;
     font-size: 25px;
     color: ${theme.textPrimary};
     text-align: center;
     padding: 0 10%;
-  }
-  .subtitle {
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: ${theme.textSecondary};
   }
   .columns {
     display: flex;
@@ -34,7 +30,7 @@ const Main = styled(Section)`
     max-width: 400px;
   }
   img {
-    max-width: 100%;
+    max-width: calc(100% - 30px);
   }
   p {
     font-size: 18px;
@@ -46,8 +42,9 @@ const Main = styled(Section)`
   }
 
   ${medium(`
+    padding: 120px 15px;
     .columns {
-      display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       align-items: flex-start;
       margin: 50px 0;
@@ -64,7 +61,9 @@ const Main = styled(Section)`
   `)};
 
   ${large(`
-    font-size: 37px;
+    .title {
+      font-size: 37px;
+    }
   `)};
 `
 

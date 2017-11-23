@@ -16,7 +16,7 @@ const OverlapBackground = styled.div`
   padding: ${OVERLAP_HEIGHT + 80}px 15px 50px;
   ${large(`
     padding-top: ${OVERLAP_HEIGHT + 120}px;
-    &:before {
+    &:after {
       background-size: cover;
     }
   `)};
