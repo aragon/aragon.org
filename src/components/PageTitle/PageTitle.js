@@ -21,17 +21,13 @@ const StyledContainer = styled(Section)`
     font-size: 20px;
   }
   .children {
-    padding-bottom: 164px;
-    margin: 25px 0;
+    padding-bottom: 120px;
+    margin: 25px 0 0;
   }
   button,
   a {
     margin: 0 5px;
     text-decoration: none;
-  }
-  span {
-    display: block;
-    padding-bottom: 192px;
   }
   ${medium(css`
     padding-top: 100px;
@@ -51,7 +47,7 @@ const PageTitle = ({ title, subtitle, children }) => (
       <Text size="xlarge" className="subtitle">
         {subtitle}
       </Text>
-      {children ? <div className="children">{children}</div> : <span />}
+      <div className="children">{children}</div>
     </div>
   </StyledContainer>
 )

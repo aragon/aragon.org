@@ -18,9 +18,9 @@ const large = css => breakpoint('large', css)
 const StyledContainer = styled(Section)`
   text-align: center;
   background: url(${background}) no-repeat 50% -60px;
-  padding: 40px 15px 0;
-  ${medium('padding-top: 120px')};
-  ${large('padding-top: 160px')};
+  padding: 40px 15px 10%;
+  ${medium('padding: 120px 15px 0')};
+  ${large('padding: 160px 15px 0')};
 
   .title {
     color: ${theme.textPrimary};

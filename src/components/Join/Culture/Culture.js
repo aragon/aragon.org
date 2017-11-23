@@ -7,6 +7,7 @@ import {
   themeDark,
   breakpoint,
 } from '@aragon/ui'
+import OverlapBackground from '../../OverlapBackground/OverlapBackground'
 
 import background from './assets/background.svg'
 import logo from './assets/logo.svg'
@@ -55,24 +56,12 @@ const PARTS = [
 const medium = css => breakpoint('medium', css)
 const large = css => breakpoint('large', css)
 
-const Wrapper = styled(Section)`
-  position: relative;
-  z-index: 1;
-  pointer-events: none;
-  margin-top: calc(-400px + 5%);
-  background-image: url(${background});
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-  ${medium(css`
-    margin-top: calc(-340px + 5%);
-  `)};
+const StyledOverlapBackground = styled(OverlapBackground)`
 `
 
-const Main = styled.div`
+const Main = styled(Section)`
   max-width: 400px;
   margin: 0 auto;
-  padding: calc(340px - 5%) 15px 50px;
   text-align: center;
   h1 {
     padding: 30px 0 0;
@@ -166,18 +155,16 @@ const wrapEvery = (children, every = 2) => {
 }
 
 const Culture = () => (
-  <Wrapper>
+  <StyledOverlapBackground>
     <Main>
-      <h1>
-          {TITLE}
-      </h1>
+      <h1>{TITLE}</h1>
       <Content>
         {wrapEvery(PARTS.map(part => <Part key={part.title} {...part} />)).map(
           (children, i) => <Row key={i}>{children}</Row>
         )}
       </Content>
     </Main>
-  </Wrapper>
+  </StyledOverlapBackground>
 )
 
 export default Culture
