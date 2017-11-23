@@ -60,9 +60,11 @@ const Transfer = () => (
     <div className="columns">
       <div>
         <SectionTitle title="Transfer tokens" className="title" />
-        <Text heading="2">Appoint and actuate your assets freely</Text>
+        <Text heading="2">Appoint and actuate your assets freely (TODO)</Text>
         <Text color={theme.textSecondary}>
-          You are in control of the flow of your funds. Transfer and assign them according to your personal needs
+          You are in control of the flow of your funds.
+          Your organization is in control of its funds (TODO).
+          Transfer and assign them according to your personal needs
         </Text>
         <img src={transfer} alt="" />
       </div>
@@ -70,7 +72,7 @@ const Transfer = () => (
         <SectionTitle title="Fundraising" className="title" />
         <Text heading="2">Grasp the potential of crowdfunding</Text>
         <Text color={theme.textSecondary}>
-          Having access to capital that is necessary for you to build your organization should be simple. Utilize the power of the crowd and raise funds globally, in private or publicly. Using Aragon let’s you focus on what matters the most: building your product or service
+          Utilize the power of the crowd and raise funds globally, in private or publicly, without relying on banks or financial gatekeepers
         </Text>
         <img src={raise} alt="" />
       </div>

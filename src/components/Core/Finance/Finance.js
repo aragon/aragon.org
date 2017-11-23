@@ -3,26 +3,14 @@ import { styled } from '@aragon/ui'
 import { IllustratedSection, theme } from '@aragon/ui'
 
 import finance from './assets/finance.png'
-import payment from './assets/payment.png'
-import check from './assets/check.svg'
+import sign from './assets/sign.png'
 
 const { Illustration, Title, Subtitle, Emphasis, Content } = IllustratedSection
 
 const Main = styled(IllustratedSection)`
   background: #fff;
-
-  ul {
-    list-style-image: url(${check});
-    padding-left: 25px;
-  }
-
-  li {
-    color: ${theme.textSecondary};
-    margin-bottom: 10px;
-  }
-
   img {
-    border: 1px solid #DBEBEA;
+    border: 1px solid #DBEBEA;1
     border-radius: 5px;
   }
 
@@ -49,37 +37,35 @@ const Finance = () => (
       </Subtitle>
       <Emphasis>
         <p>
-          Every transaction is recorded and can be certified on the blockchain at any given time
+          Every transaction is recorded and can be verified on the blockchain at any given time
         </p>
       </Emphasis>
       <Content>
-        <ul>
-          <li>
-            Unprecedented level of transparency can be gained through the use of a public blockchain to engrave every entry permanently on the ledger
-          </li>
-          <li>
-            Pre-established rules can automatically define your quarterly spending and budgeting
-          </li>
-        </ul>
+        <p>
+          Unprecedented level of transparency can be gained through the use of a public blockchain to engrave every entry permanently on the ledger
+        </p>
+        <p>
+          Pre-established rules can automatically define your quarterly spending and budgeting
+        </p>
       </Content>
     </Main>
     <MainWithLessMargin>
       <Title>
-        <h1>Payments</h1>
+        <h1>Fine-grained permissions</h1>
       </Title>
       <Subtitle>
-        <p>Send a payment to anyone with a few simple clicks</p>
+        <p>TODO</p>
       </Subtitle>
       <Emphasis>
         <p>
-        Your payment will be delivered in under a minute to anywhere in the world
+        Bla
         </p>
       </Emphasis>
       <Content>
-        <p>Adding an employee to your payroll is as easy as creating a new recurring payment</p>
+        <p>By assigning different roles you can leave the mundane decisions of day-to-day activity to designated people</p>
       </Content>
       <Illustration>
-        <img src={payment} alt="" />
+        <img src={sign} alt="" />
       </Illustration>
     </MainWithLessMargin>
   </div>

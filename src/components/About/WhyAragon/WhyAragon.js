@@ -31,15 +31,18 @@ const WhyAragon = () => (
       </Subtitle>
       <Content dark>
         <p>
-        Organizations like companies exist to create value to their owners and users. They use the resources available to them in order to provide services and to create products
+        Organizations like companies exist to create value for their owners and users.
+        They use the resources available to them in order to provide services and to create products
         </p>
         <p>
-        Their ability to do this efficiently is hindered by factors outside of their influence. By removing unnecessary intermediaries and third parties that impose artificial restrictions and unnecessarily complex regulations, can we modernize the way organizations are run
+        Their ability to do this efficiently is hindered by factors outside of their influence.
+        By removing unnecessary intermediaries and third parties that impose artificial restrictions and unnecessarily complex regulations, we can modernize the way organizations are run
         </p>
       </Content>
       <Emphasis dark>
         <p>
-          Aragon was born to bring transparency and independent governance to the forefront of managing an organization. We want to give the users the liberty they deserve to run their lives
+          Aragon was born to bring transparency and independent governance to the forefront of managing an organization.
+          We want to give the users the freedom they deserve to run their lives
         </p>
       </Emphasis>
       <Illustration>

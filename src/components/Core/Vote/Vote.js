@@ -3,7 +3,7 @@ import { styled } from '@aragon/ui'
 import { Section, Text, theme } from '@aragon/ui'
 
 import vote from './assets/vote.png'
-import sign from './assets/sign.png'
+import payment from './assets/payment.png'
 
 const Main = styled(Section)`
   padding-top: 128px;
@@ -54,16 +54,18 @@ const Vote = () => (
       <div>
         <Text heading="2">Decision-making by voting</Text>
         <Text color={theme.textSecondary}>
-        Use voting for more effective results. Votes are a secure, transparent and unforgeable way to come to a decision on major issues
+          Use voting for more effective results.
+          Votes are a secure, transparent and unforgeable way to come to a decision on major issues
         </Text>
         <img src={vote} alt="" />
       </div>
       <div>
-        <Text heading="2">Assign roles</Text>
+        <Text heading="2">Instant payments in a few clicks</Text>
         <Text color={theme.textSecondary}>
-        By assigning different roles you can leave the mundane decisions of day-to-day activity to designated people
+          Payments are delivered in under a minute to anywhere in the world.
+          Adding an employee to your payroll is as easy as creating a new recurring payment (TODO)
         </Text>
-        <img src={sign} alt="" />
+        <img src={payment} alt="" />
       </div>
     </div>
   </Main>

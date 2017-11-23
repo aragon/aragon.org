@@ -31,15 +31,15 @@ const WhyAragon = () => (
       </Subtitle>
       <Content dark>
         <p>
-        Aragon Foundation is a non-profit organization which was created to nurture the project in it's early phases
+          The Aragon Foundation is a non-profit organization which was created to nurture the project in it's early phases
         </p>
         <p>
-        Developing the platform and project towards maturity is the main duty of the Foundation. Other affairs include motivating external developers to build more functionality and applications on Aragon to boost adoption of the technology
+          Developing the platform and project towards maturity is the main duty of the Foundation. Other activities include motivating external developers to build more functionality and applications on Aragon to boost adoption of the technology
         </p>
       </Content>
       <Emphasis dark>
         <p>
-          Aragon Foundation is laying down the first bricks on the road to what will become
+          The Aragon Foundation is laying down the first bricks on the road to what will become
         </p>
       </Emphasis>
       <Illustration>
