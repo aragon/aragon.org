@@ -11,7 +11,7 @@ const large = css => breakpoint('large', css)
 const OverlapBackground = styled.div`
   position: relative;
   z-index: 1;
-  /*pointer-events: none;*/
+  pointer-events: none;
   margin-top: -${OVERLAP_HEIGHT}px;
   padding: ${OVERLAP_HEIGHT + 80}px 15px 50px;
   ${large(`
