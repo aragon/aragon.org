@@ -58,7 +58,7 @@ const large = css => breakpoint('large', css)
 const Wrapper = styled(Section)`
   position: relative;
   z-index: 1;
-  /*pointer-events: none;*/
+  pointer-events: none;
   margin-top: calc(-400px + 5%);
   background-image: url(${background});
   background-repeat: no-repeat;
