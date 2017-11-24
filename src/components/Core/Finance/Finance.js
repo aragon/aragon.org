@@ -51,18 +51,19 @@ const Finance = () => (
     </Main>
     <MainWithLessMargin>
       <Title>
-        <h1>Fine-grained permissions</h1>
+        <h1>Permissions</h1>
       </Title>
       <Subtitle>
-        <p>TODO</p>
+        <p>Flexible and resilient privilege escalation</p>
       </Subtitle>
       <Emphasis>
         <p>
-        Bla
+        Fine-grained permissions deliver the freedom for you to create an organization that will work for you
         </p>
       </Emphasis>
       <Content>
-        <p>By assigning different roles you can leave the mundane decisions of day-to-day activity to designated people</p>
+        <p>Permissions can be granular and assigned in fine detail. You can choose to give people a certain degree of control over the organization and the privileges can be escalated easily if the person isn't allowed to perform a desired action</p>
+        <p>By assigning different permissions to people, you can create the kind of organizational structure that is best suited for your needs</p>
       </Content>
       <Illustration>
         <img src={sign} alt="" />

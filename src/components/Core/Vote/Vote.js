@@ -28,9 +28,7 @@ const Vote = () => (
       {
         subtitle: 'Instant payments in a few clicks',
         textContent: `
-          Payments are delivered in under a minute to anywhere in the world.
-          Adding an employee to your payroll is as easy as creating a new
-          recurring payment (TODO)
+          Adding a new employee to your organization and payroll is as easy as creating a new recurring payment
         `,
         image: payment,
       },
