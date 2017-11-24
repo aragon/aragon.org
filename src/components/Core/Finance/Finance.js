@@ -65,7 +65,7 @@ const Finance = () => (
       </Subtitle>
       <Emphasis>
         <p>
-          Fine-grained permissions deliver the freedom for you to create an
+          Fine-grained permissions deliver the freedom to create an
           organization that will work for you
         </p>
       </Emphasis>

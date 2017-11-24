@@ -81,7 +81,7 @@ const Customize = () => (
     <Content>
       <div>
         <Text heading="1" color={themeDark.textPrimary}>
-          It's your organization. Make it work for you.
+          It's your organization. Make it work for you
         </Text>
       </div>
       <img className="screen" src={permission} alt="" />
@@ -90,20 +90,20 @@ const Customize = () => (
           <img src={settings} alt="" />
           <p>
             Aragon organizations are powered by the AragonOS and fully
-            customizable to fit your needs.
+            customizable to fit your needs
           </p>
         </div>
         <div className="item">
           <img src={path} alt="" />
           <p>
-            You set the rules of how and when actions are prompted and enacted.
+            You set the rules of how and when actions are prompted and enacted
           </p>
         </div>
         <div className="item">
           <img src={code} alt="" />
           <p>
             Code is open source. As a developer you can even modify it to match
-            your specific use case.
+            your specific use case
           </p>
         </div>
       </div>
