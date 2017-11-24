@@ -86,7 +86,7 @@ const ReadyToTry = () => (
     <div className="in">
       <div className="content">
         <h1 className="title">Ready to try Aragon?</h1>
-        <p className="subtitle">Download Aragon Core alpha v0.4 for macOS</p>
+        <p className="subtitle">Download Aragon Core alpha v0.3 for macOS</p>
         <BreakPoint to="medium">
           <div className="buttons">
             <Button>Web version</Button>

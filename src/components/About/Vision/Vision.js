@@ -90,7 +90,7 @@ const Vision = () => (
         <p className="item">
           Trying out new governance models has been a very risky endeavour
           during previous iterations of society. Now, for the first time in
-          history, we can let a thounsand governance models emerge from the
+          history, we can let a thousand governance models emerge from the
           comfort of our laptops
         </p>
       </div>
