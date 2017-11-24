@@ -11,14 +11,14 @@ const Main = styled(Section)`
   font-size: 18px;
   background: #fff;
 
-  .item {
+  .item + .item {
     margin-top: 50px;
   }
   img {
     display: block;
     max-width: 100%;
     border: 1px solid #dbebea;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-top: 50px;
   }
   h1 {
@@ -49,6 +49,7 @@ const Main = styled(Section)`
       display: flex;
       flex-direction: column;
       width: 50%;
+      margin-top: 50px;
       flex-wrap: nowrap;
     }
     .item .image {
