@@ -62,8 +62,7 @@ const Vote = () => (
       <div>
         <Text heading="2">Instant payments in a few clicks</Text>
         <Text color={theme.textSecondary}>
-          Payments are delivered in under a minute to anywhere in the world.
-          Adding an employee to your payroll is as easy as creating a new recurring payment (TODO)
+          Adding a new employee to your organization and payroll is as easy as creating a new recurring payment
         </Text>
         <img src={payment} alt="" />
       </div>
