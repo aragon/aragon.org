@@ -25,11 +25,13 @@ const StyledContainer = styled(Section)`
   .title {
     color: ${theme.textPrimary};
     margin-bottom: 15px;
-    font-size: 58px;
+    font-size: 30px;
+    font-weight: 600;
     line-height: 1.2;
+
     ${medium(`
       margin-bottom: 25px;
-      font-size: 58px
+      font-size: 58px;
       line-height: 1.5;
     `)};
   }

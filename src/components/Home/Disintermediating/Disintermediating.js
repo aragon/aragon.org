@@ -1,30 +1,19 @@
 import React from 'react'
 import { styled } from '@aragon/ui'
 import { IllustratedSection, themeDark } from '@aragon/ui'
+import OverlapBackground from '../../OverlapBackground/OverlapBackground'
 
 import illustration from './assets/illustration.svg'
-import background from './assets/background.svg'
 
 const { Illustration, Title, Subtitle, Emphasis, Content } = IllustratedSection
 
-const Wrapper = styled.div`
-  position: relative;
-  z-index: 1;
-  margin-top: 200px;
-`
-
 const Main = styled(IllustratedSection)`
-  margin-top: -500px;
-  padding-top: 235px;
+  padding-top: 0;
   padding-bottom: 140px;
-  background-image: url(${background});
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
 `
 
 const Disintermediating = () => (
-  <Wrapper>
+  <OverlapBackground>
     <Main>
       <Title>
         <h1>Democratizing governance</h1>
@@ -34,8 +23,14 @@ const Disintermediating = () => (
       </Subtitle>
       <Emphasis dark>
         <p>
-          We are building Aragon because we believe <a href="https://blog.aragon.one/decentralized-organizations-can-solve-the-worlds-worst-problems-840db6255d12" target="_blank" rel="noopener noreferrer">decentralized organizations
-          can solve the world’s worst problems</a>
+          We are building Aragon because we believe{' '}
+          <a
+            href="https://blog.aragon.one/decentralized-organizations-can-solve-the-worlds-worst-problems-840db6255d12"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            decentralized organizations can solve the world’s worst problems
+          </a>
         </p>
       </Emphasis>
       <Content dark>
@@ -57,7 +52,7 @@ const Disintermediating = () => (
         <img src={illustration} alt="" />
       </Illustration>
     </Main>
-  </Wrapper>
+  </OverlapBackground>
 )
 
 export default Disintermediating
