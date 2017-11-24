@@ -33,10 +33,10 @@ const PARTS = [
     `,
   },
   {
-    title: 'Building the ecosystem',
+    title: 'Ecosystem-focused',
     img: buildEcosystem,
     content: `
-      Our team members are encouraged to spend a chunk of their paid work time on other blockchain based open source projects to aid the growth of the ecosystem
+      Team members are encouraged to spend a chunk of their paid work time on other blockchain based open source projects to aid the growth of the ecosystem
     `,
   },
   {
