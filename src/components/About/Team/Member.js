@@ -14,6 +14,7 @@ const Main = styled(Section)`
     height: 128px;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
+    border-radius: 50%;
   }
   &:hover .picture {
     transform: translateY(-5px);

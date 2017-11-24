@@ -1,8 +1,8 @@
 import React from 'react'
 import { styled } from '@aragon/ui'
-import { Section, Button, theme, breakpoint } from '@aragon/ui'
+import { Section, theme, breakpoint } from '@aragon/ui'
 
-import SectionTitle from '../../SectionTitle.js'
+import { SectionTitle, Anchor } from '../../'
 
 import focus from './assets/focus.svg'
 import proactive from './assets/proactive.svg'
@@ -69,7 +69,7 @@ const Value = () => (
       <div className="columns">
         <div className="item">
           <img src={focus} alt="" />
-          <h1>Focus-driven work</h1>
+          <h2>Focus-driven work</h2>
           <p>We don't necessarily work 9-5; getting the work done, meeting goals and milestones is more important. You can work however it suits your personal schedule as long as you're focused on delivering quality work
           </p>
         </div>
@@ -84,13 +84,13 @@ const Value = () => (
         </div>
         <div className="item">
           <img src={heart} alt="" />
-          <h1>The value that you bring</h1>
+          <h2>The value that you bring</h2>
           <p>Every person has a unique set of skills that bring meaning to what we are doing. We value what you can do and your attitude in doing it. Our goal is to enable you to realize the value which you can bring, no matter where/whether you went to college
           </p>
         </div>
       </div>
       <div className="cta">
-        <Button mode="strong">View open positions</Button>
+        <Anchor mode="strong" href="https://wiki.aragon.one/jobs">View open positions</Anchor>
       </div>
     </div>
   </Main>

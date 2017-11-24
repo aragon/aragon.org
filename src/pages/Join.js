@@ -1,13 +1,6 @@
 import React from 'react'
-import { Button, styled } from '@aragon/ui'
-import { PageTitle, Page } from '../components'
+import { PageTitle, Page, Anchor } from '../components'
 import { Culture, Value } from '../components/Join'
-
-const Anchor = ({ href, ...props }) => (
-  <a href={href}>
-    <Button {...props} />
-  </a>
-)
 
 const Join = () => (
   <Page path="/join">

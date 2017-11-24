@@ -10,6 +10,7 @@ const StyledContainer = styled(Section)`
   padding: 40px 15px 0;
   text-align: center;
   background: url(${background}) no-repeat 50% -60px;
+  padding-bottom: 120px;
   .title {
     margin-bottom: 25px;
     font-size: 30px;
@@ -21,7 +22,6 @@ const StyledContainer = styled(Section)`
     font-size: 20px;
   }
   .children {
-    padding-bottom: 120px;
     margin: 25px 0 0;
   }
   button,

@@ -2,7 +2,7 @@ import React from 'react'
 import { styled } from '@aragon/ui'
 import { Section, Button, theme } from '@aragon/ui'
 
-import SectionTitle from '../../SectionTitle.js'
+import { SectionTitle, Anchor } from '../../'
 
 import repos from './assets/agp.png'
 
@@ -74,7 +74,7 @@ const AGP = () => (
       </div>
       <div className="image"><img src={repos} alt="" /></div>
       <div className="cta">
-        <Button mode="strong">Dive into governance proposals</Button>
+        <Anchor mode="strong" href="https://github.com/aragon/governance/issues">Dive into governance proposals</Anchor>
       </div>
     </div>
   </Main>
