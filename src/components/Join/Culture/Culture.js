@@ -16,39 +16,34 @@ import deepWorkSessions from './assets/deep-work-sessions.svg'
 import fullyDistributed from './assets/fully-distributed.svg'
 import technologyCompany from './assets/technology-company.svg'
 
-const TITLE = 'Some insights of how we work'
+const TITLE = 'Some insights into how we work'
 const PARTS = [
   {
     title: 'Fully distributed',
     img: fullyDistributed,
     content: `
-      We are fully distributed company – we don’t think talent is
-      geographically centralized.
+      We all work remotely – we don't believe talent is geographically centralized
     `,
   },
   {
     title: 'Deep work sessions',
     img: deepWorkSessions,
     content: `
-      We do focused deep work sessions 4 days a week, leaving Friday for all
-      meetings, calls, thinking time and side projects.
+      We do focused deep work sessions 4 days a week, leaving Monday for meetings and calls
     `,
   },
   {
-    title: 'Build ecosystem',
+    title: 'Ecosystem-focused',
     img: buildEcosystem,
     content: `
-      We encourage team members to spend a substantial part of their paid work
-      time on unrelated blockchain open source projects to speed up the development
-      of the ecosystem.
+      Team members are encouraged to spend a chunk of their paid work time on other blockchain based open source projects to aid the growth of the ecosystem
     `,
   },
   {
-    title: 'Technology company',
+    title: 'Product first',
     img: technologyCompany,
     content: `
-      We are open source only and we are a technology company. Our focus is
-      product first.
+      We are a technology-oriented project that is open source only. Our position is product first, we place innovation and user experience above all else
     `,
   },
 ]
