@@ -1,4 +1,5 @@
 import React from 'react'
+import { styled } from '@aragon/ui'
 import { ReadyToTry, AragonNetwork, Page } from '../components'
 import {
   UnstoppableOrganizations,
@@ -7,9 +8,15 @@ import {
   LogosBar,
 } from '../components/Home'
 
+const FirstSection = styled.div`
+  margin-bottom: calc(-200px - 10%);
+`
+
 const Home = () => (
   <Page path="/">
-    <UnstoppableOrganizations />
+    <FirstSection>
+      <UnstoppableOrganizations />
+    </FirstSection>
     <Disintermediating />
     <LogosBar />
     <DeathToPaperwork />
