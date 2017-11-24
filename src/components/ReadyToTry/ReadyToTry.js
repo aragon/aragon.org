@@ -100,7 +100,9 @@ const ReadyToTry = () => (
           </div>
         </BreakPoint>
       </div>
-      <AppScreenshot className="app-img" />
+      <div className="app-img">
+        <AppScreenshot />
+      </div>
     </div>
   </Main>
 )
