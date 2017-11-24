@@ -57,7 +57,7 @@ const Core = () => (
         <StyledMember
           picture="Maria.png"
           name="Maria Gomez"
-          title="Strategy Lead"
+          title="Strategy & Operations Lead"
           twitter="MyPaoG"
           medium="MyPaoG"
           github="mariapao"
@@ -81,7 +81,7 @@ const Core = () => (
         <StyledMember
           picture="Oliver.png"
           name="Oliver Nordbjerg"
-          title="Glue"
+          title="Web3 Engineer"
           twitter="ONordbjerg"
           github="onbjerg"
         />

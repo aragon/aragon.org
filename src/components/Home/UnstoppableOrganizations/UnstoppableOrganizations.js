@@ -10,7 +10,6 @@ import {
 } from '@aragon/ui'
 import AppScreenshot from '../../AppScreenshot/AppScreenshot'
 import background from './assets/background.svg'
-import appScreen from './assets/app-screen.svg'
 
 const medium = css => breakpoint('medium', css)
 const large = css => breakpoint('large', css)
