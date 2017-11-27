@@ -2,7 +2,7 @@ import React from 'react'
 import { Router, Link, getRouteProps } from 'react-static'
 import Routes from 'react-static-routes'
 import { styled } from '@aragon/ui'
-import { AragonApp, Header, PreFooter, Footer } from '@aragon/ui'
+import { AragonApp, Header, PreFooter, Footer, Button } from '@aragon/ui'
 
 const menuItems = [
   ['/core', 'Core'],
@@ -26,7 +26,76 @@ const Content = styled.div`
   min-height: 200px;
 `
 
+const EmailFormWrapper = styled.div`
+  .email-field {
+    display: flex;
+    width: 100%;
+  }
+  input[type='email'] {
+    width: 100%;
+    margin-right: 15px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: 0;
+    background: #fff;
+  }
+  .button {
+    flex-shrink: 0;
+  }
+`
+
 class Page extends React.Component {
+  renderEmailForm() {
+    return (
+      <EmailFormWrapper>
+        <form
+          action="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&amp;id=e81a44c4bd"
+          method="post"
+          name="mc-embedded-subscribe-form"
+          target="_blank"
+          novalidate
+        >
+          <h1 className="title">Aragon Newsletter</h1>
+          <p className="desc">
+            <label for="mce-EMAIL">
+              Follow the progress of Aragon by subscribing to our monthly
+              newsletter
+            </label>
+          </p>
+          <div className="email-field">
+            <input
+              type="email"
+              name="EMAIL"
+              placeholder="Enter your email"
+              className="required email"
+              id="mce-EMAIL"
+            />
+            <div
+              style={{ position: 'absolute', left: '-5000px' }}
+              aria-hidden="true"
+            >
+              <input
+                type="text"
+                name="b_a590aa3843a54b079d48e6e18_e81a44c4bd"
+                tabindex="-1"
+                value=""
+              />
+            </div>
+            <Button
+              type="submit"
+              name="subscribe"
+              id="mc-embedded-subscribe"
+              className="button"
+              mode="strong"
+            >
+              Subscribe
+            </Button>
+          </div>
+        </form>
+      </EmailFormWrapper>
+    )
+  }
+
   render() {
     const { children, path } = this.props
     const items = menuItems.map(item => [...item, item[0] === path])
@@ -34,7 +103,7 @@ class Page extends React.Component {
       <AragonApp publicUrl="/aragon-ui/">
         <Header menuItems={items} renderMenuItemLink={renderMenuItemLink} />
         <Content>{children}</Content>
-        <PreFooter />
+        <PreFooter emailForm={this.renderEmailForm()} />
         <Footer />
       </AragonApp>
     )
