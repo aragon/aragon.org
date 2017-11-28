@@ -63,10 +63,14 @@ const Right = styled.div`
   background: url(${rightRepeat}) repeat-x 0 0;
 `
 
+const Content = styled.div`
+  pointer-events: auto;
+`
+
 const OverlapBackground = ({ children, ...props }) => (
   <Main {...props}>
     <Left />
-    <div>{children}</div>
+    <Content>{children}</Content>
     <Right />
   </Main>
 )
