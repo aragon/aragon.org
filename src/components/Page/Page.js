@@ -32,7 +32,9 @@ const EmailFormWrapper = styled.div`
     width: 100%;
   }
   input[type='email'] {
+    flex-shrink: 1;
     width: 100%;
+    min-width: 0;
     margin-right: 15px;
     padding: 10px 15px;
     border-radius: 3px;
