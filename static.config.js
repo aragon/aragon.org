@@ -15,6 +15,7 @@ const REACT_STATIC_PATHS = {
 const ARAGON_UI_ASSETS = path.dirname(require.resolve('@aragon/ui'))
 
 export default {
+  siteRoot: process.env.SITE_ROOT || '',
   getSiteProps: () => ({
     title: 'Aragon',
   }),
@@ -31,7 +32,7 @@ export default {
   webpack: conf => {
     conf.resolve = Object.assign({}, conf.resolve || {}, {
       // Needed when @aragon/ui is linked (development)
-      modules: (conf.resolve && conf.resolve.modules || []).concat([
+      modules: ((conf.resolve && conf.resolve.modules) || []).concat([
         path.join(__dirname, 'node_modules'),
         path.join(__dirname, REACT_STATIC_PATHS.dist),
       ]),
