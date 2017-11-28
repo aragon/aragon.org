@@ -1,7 +1,5 @@
 import React from 'react'
-import { styled } from '@aragon/ui'
-
-import { Text, theme } from '@aragon/ui'
+import { styled, Text, theme } from '@aragon/ui'
 
 const StyledSectionTitle = styled.div`
   h1 {
