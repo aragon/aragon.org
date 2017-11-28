@@ -6,7 +6,13 @@ import illustration from './assets/illustration.svg'
 const { Illustration, Title, Subtitle, Emphasis, Content } = IllustratedSection
 
 const Main = styled(IllustratedSection)`
+  padding-top: 50px;
+  padding-bottom: 50px;
   background: #fff;
+
+  h1 {
+    margin-bottom: 10px;
+  }
 `
 
 const AragonNetwork = () => (

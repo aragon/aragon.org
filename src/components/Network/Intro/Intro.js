@@ -10,6 +10,7 @@ const medium = css => breakpoint('medium', css)
 
 const StyledIllustratedSection = styled(IllustratedSection)`
   padding-top: 0;
+  padding-bottom: 0;
 `
 
 const Intro = () => (

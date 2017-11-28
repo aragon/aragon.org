@@ -33,8 +33,8 @@ const Main = styled(Section)`
   }
 
   ${medium(`
-    padding-top: 128px;
-    padding-bottom: 128px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     text-align: left;
     h1 {
       text-align: left;

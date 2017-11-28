@@ -7,7 +7,7 @@ const StyledSectionTitle = styled.div`
   h1 {
     font-size: 18px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 600;
   }
 `
 
