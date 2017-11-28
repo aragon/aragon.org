@@ -129,7 +129,9 @@ const StyledPart = styled.div`
 const Part = ({ img, title, content }) => (
   <StyledPart>
     <div className="image">
-      <img src={img} alt="" />
+      <span>
+        <img src={img} alt="" />
+      </span>
     </div>
     <h2>{title}</h2>
     <p>{content}</p>
