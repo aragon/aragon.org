@@ -22,28 +22,34 @@ const PARTS = [
     title: 'Fully distributed',
     img: fullyDistributed,
     content: `
-      We all work remotely – we don't believe talent is geographically centralized
+      We all work remotely – we don't believe talent is geographically
+      centralized
     `,
   },
   {
     title: 'Deep work sessions',
     img: deepWorkSessions,
     content: `
-      We do focused deep work sessions 4 days a week, leaving Monday for meetings and calls
+      We do focused deep work sessions 4 days a week, leaving Monday for
+      meetings and calls
     `,
   },
   {
     title: 'Ecosystem-focused',
     img: buildEcosystem,
     content: `
-      Team members are encouraged to spend a chunk of their paid work time on other blockchain based open source projects to aid the growth of the ecosystem
+      Team members are encouraged to spend a chunk of their paid work time on
+      other blockchain based open source projects to aid the growth of the
+      ecosystem
     `,
   },
   {
     title: 'Product first',
     img: technologyCompany,
     content: `
-      We are a technology-oriented project that is open source only. Our position is product first, we place innovation and user experience above all else
+      We are a technology-oriented project that is open source only. Our
+      position is product first, we place innovation and user experience above
+      all else
     `,
   },
 ]
