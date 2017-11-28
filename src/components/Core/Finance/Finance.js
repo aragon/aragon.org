@@ -73,8 +73,9 @@ const Finance = () => (
         <p>
           Permissions can be granular and assigned in fine detail. You can
           choose to give people a certain degree of control over the
-          organization and the privileges can be escalated easily if the person
-          isn't allowed to perform a desired action
+          organization and privileges can be escalated easily through
+          a voting or different mechanisms if the person isn't allowed to directly 
+          perform a desired action
         </p>
         <p>
           By assigning different permissions to people, you can create the kind
