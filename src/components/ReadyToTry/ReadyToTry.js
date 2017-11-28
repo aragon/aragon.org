@@ -2,12 +2,13 @@ import React from 'react'
 import { styled } from '@aragon/ui'
 import {
   Section,
-  Button,
   BreakPoint,
   font,
   theme,
   breakpoint,
 } from '@aragon/ui'
+
+import { Anchor } from '../'
 import AppScreenshot from '../AppScreenshot/AppScreenshot'
 
 import lines from './assets/background-lines.svg'
@@ -86,17 +87,17 @@ const ReadyToTry = () => (
     <div className="in">
       <div className="content">
         <h1 className="title">Ready to try Aragon?</h1>
-        <p className="subtitle">Download Aragon Core alpha v0.3 for macOS</p>
+        <p className="subtitle">Download Aragon Core Alpha 0.3</p>
         <BreakPoint to="medium">
           <div className="buttons">
-            <Button>Web version</Button>
-            <Button mode="strong">Aragon Core</Button>
+            <Anchor href="https://alpha.aragon.one" target="_blank">Web version</Anchor>
+            <Anchor mode="strong" href="https://github.com/aragon/aragon/releases" target="_blank">Aragon Core</Anchor>
           </div>
         </BreakPoint>
         <BreakPoint from="medium">
           <div className="buttons">
-            <Button>Try the Web version</Button>
-            <Button mode="strong">Download Aragon Core</Button>
+            <Anchor href="https://alpha.aragon.one" target="_blank">Try the Web version</Anchor>
+            <Anchor mode="strong" href="https://github.com/aragon/aragon/releases" target="_blank">Download Aragon Core</Anchor>
           </div>
         </BreakPoint>
       </div>

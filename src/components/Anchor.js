@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button } from '@aragon/ui'
 
-const Anchor = ({ href, ...props }) => (
-  <a href={href}>
+const Anchor = ({ href, target, ...props }) => (
+  <a href={href} target={target}>
     <Button {...props} />
   </a>
 )
