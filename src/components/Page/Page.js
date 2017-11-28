@@ -53,11 +53,11 @@ class Page extends React.Component {
           method="post"
           name="mc-embedded-subscribe-form"
           target="_blank"
-          novalidate
+          noValidate
         >
           <h1 className="title">Aragon Newsletter</h1>
           <p className="desc">
-            <label for="mce-EMAIL">
+            <label htmlFor="mce-EMAIL">
               Follow the progress of Aragon by subscribing to our monthly
               newsletter
             </label>
@@ -77,7 +77,7 @@ class Page extends React.Component {
               <input
                 type="text"
                 name="b_a590aa3843a54b079d48e6e18_e81a44c4bd"
-                tabindex="-1"
+                tabIndex="-1"
                 value=""
               />
             </div>
