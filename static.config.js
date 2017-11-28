@@ -61,15 +61,30 @@ export default {
   },
   Document: class CustomHtml extends React.Component {
     render() {
-      const { Html, Head, Body, children, renderMeta } = this.props
+      const { Html, Head, Body, siteProps, children, renderMeta } = this.props
       return (
         <Html>
           <Head>
             <meta charSet="UTF-8" />
+            <title>{siteProps.title}</title>
             <meta
               name="viewport"
               content="width=device-width, initial-scale=1"
             />
+            <link rel="apple-touch-icon-precomposed" href="/favicon-152.png" />
+            <meta name="msapplication-TileColor" content="#FFFFFF" />
+            <meta name="msapplication-TileImage" content="/favicon-144.png" />
+            <link rel="icon" href="/favicon-32.png" sizes="32x32" />
+            <link rel="icon" href="/favicon-57.png" sizes="57x57" />
+            <link rel="icon" href="/favicon-72.png" sizes="72x72" />
+            <link rel="icon" href="/favicon-96.png" sizes="96x96" />
+            <link rel="icon" href="/favicon-120.png" sizes="120x120" />
+            <link rel="icon" href="/favicon-128.png" sizes="128x128" />
+            <link rel="icon" href="/favicon-144.png" sizes="144x144" />
+            <link rel="icon" href="/favicon-152.png" sizes="152x152" />
+            <link rel="icon" href="/favicon-195.png" sizes="195x195" />
+            <link rel="icon" href="/favicon-228.png" sizes="228x228" />
+
             {renderMeta.styleTags}
           </Head>
           <Body>{children}</Body>
