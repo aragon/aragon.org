@@ -48,7 +48,7 @@ const PARTS = [
     img: technologyCompany,
     content: `
       We are a technology-oriented project that is open source only. Our
-      position is product first, we place innovation and user experience above
+      position is product first — we place innovation and user experience above
       all else
     `,
   },

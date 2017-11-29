@@ -79,13 +79,13 @@ const Value = () => (
           <p>
             Working remotely and autonomously, having a positive and proactive
             attitude with a love for time self-management is essential to our
-            day-to-day operations
+            day-to-day operations. Own your work and be proud of what you do
           </p>
         </div>
         <div className="item">
           <img src={heart} alt="" />
           <h2>The value that you bring</h2>
-          <p>Every person has a unique set of skills that bring meaning to what we are doing. We value what you can do and your attitude in doing it. Our goal is to enable you to realize the value which you can bring, no matter where/whether you went to college
+          <p>Every person has a unique set of skills that bring meaning to what we are doing. We value what you can do and your attitude in doing it. Our goal is to enable you to realize the value which you can bring to the project
           </p>
         </div>
       </div>
