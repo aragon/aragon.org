@@ -619,7 +619,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  margin-bottom: 200px;\n'], ['\n  margin-bottom: 200px;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  margin-bottom: calc(-200px - 10%);\n'], ['\n  margin-bottom: calc(-200px - 10%);\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3938,4 +3938,4 @@ exports.default = NotFound;
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=app.static.28abae6e.js.map
+//# sourceMappingURL=app.static.8fff6e62.js.map
