@@ -68,13 +68,13 @@ const Value = () => (
       <SectionTitle title="Things we value in people" />
       <div className="columns">
         <div className="item">
-          <img src={focus} alt="" />
+          <img src={focus} alt="" width="32" height="32" />
           <h2>Focus-driven work</h2>
           <p>We don't necessarily work 9-5; getting the work done, meeting goals and milestones is more important. You can work however it suits your personal schedule as long as you're focused on delivering quality work
           </p>
         </div>
         <div className="item">
-          <img src={proactive} alt="" />
+          <img src={proactive} alt="" width="32" height="32" />
           <h2>Proactive attitude</h2>
           <p>
             Working remotely and autonomously, having a positive and proactive
@@ -83,7 +83,7 @@ const Value = () => (
           </p>
         </div>
         <div className="item">
-          <img src={heart} alt="" />
+          <img src={heart} alt="" width="32" height="32" />
           <h2>The value that you bring</h2>
           <p>Every person has a unique set of skills that bring meaning to what we are doing. We value what you can do and your attitude in doing it. Our goal is to enable you to realize the value which you can bring to the project
           </p>
