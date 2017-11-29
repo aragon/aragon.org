@@ -1106,7 +1106,7 @@ exports.default = ReadyToTry;
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/app-screen.aefb22f6.svg";
+module.exports = __webpack_require__.p + "static/aefb22f6-app-screen.svg";
 
 /***/ }),
 /* 22 */
@@ -1550,7 +1550,7 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSI3OTIi
 /* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/illustration.de050bc3.svg";
+module.exports = __webpack_require__.p + "static/de050bc3-illustration.svg";
 
 /***/ }),
 /* 36 */
@@ -1679,7 +1679,7 @@ exports.default = LogosBar;
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/logos.2b6349ec.png";
+module.exports = __webpack_require__.p + "static/2b6349ec-logos.png";
 
 /***/ }),
 /* 38 */
@@ -1697,7 +1697,7 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5v
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/forbes.c5062b1e.svg";
+module.exports = __webpack_require__.p + "static/c5062b1e-forbes.svg";
 
 /***/ }),
 /* 41 */
@@ -1715,7 +1715,7 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0
 /* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/reuters.3694543d.svg";
+module.exports = __webpack_require__.p + "static/3694543d-reuters.svg";
 
 /***/ }),
 /* 44 */
@@ -1878,7 +1878,7 @@ exports.default = Tokens;
 /* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/tokens.e9877bf2.png";
+module.exports = __webpack_require__.p + "static/e9877bf2-tokens.png";
 
 /***/ }),
 /* 48 */
@@ -1931,13 +1931,13 @@ exports.default = Transfer;
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/transfer.fe23e890.png";
+module.exports = __webpack_require__.p + "static/fe23e890-transfer.png";
 
 /***/ }),
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/raise.0b72a5f0.png";
+module.exports = __webpack_require__.p + "static/0b72a5f0-raise.png";
 
 /***/ }),
 /* 51 */
@@ -2051,7 +2051,7 @@ exports.default = Customize;
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/permission.eb67d9f2.png";
+module.exports = __webpack_require__.p + "static/eb67d9f2-permission.png";
 
 /***/ }),
 /* 53 */
@@ -2128,13 +2128,13 @@ exports.default = Vote;
 /* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/vote.f140c192.png";
+module.exports = __webpack_require__.p + "static/f140c192-vote.png";
 
 /***/ }),
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/payment.c774ed2d.png";
+module.exports = __webpack_require__.p + "static/c774ed2d-payment.png";
 
 /***/ }),
 /* 59 */
@@ -2292,13 +2292,13 @@ exports.default = Finance;
 /* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/finance.928feb03.png";
+module.exports = __webpack_require__.p + "static/928feb03-finance.png";
 
 /***/ }),
 /* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/sign.2129db04.png";
+module.exports = __webpack_require__.p + "static/2129db04-sign.png";
 
 /***/ }),
 /* 62 */
@@ -2559,7 +2559,7 @@ exports.default = AGP;
 /* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/agp.e6a524f6.png";
+module.exports = __webpack_require__.p + "static/e6a524f6-agp.png";
 
 /***/ }),
 /* 68 */
@@ -2812,7 +2812,7 @@ exports.default = Grants;
 /* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/repos.4632a716.png";
+module.exports = __webpack_require__.p + "static/4632a716-repos.png";
 
 /***/ }),
 /* 74 */
@@ -3078,19 +3078,19 @@ exports.default = Vision;
 /* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/0.e9965467.jpg";
+module.exports = __webpack_require__.p + "static/e9965467-0.jpg";
 
 /***/ }),
 /* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/1.400bd8d8.jpg";
+module.exports = __webpack_require__.p + "static/400bd8d8-1.jpg";
 
 /***/ }),
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/2.9f8285bd.jpg";
+module.exports = __webpack_require__.p + "static/9f8285bd-2.jpg";
 
 /***/ }),
 /* 82 */
@@ -3429,13 +3429,13 @@ webpackContext.id = 87;
 /* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/Brayton.7f8e1fb7.jpg";
+module.exports = __webpack_require__.p + "static/7f8e1fb7-Brayton.jpg";
 
 /***/ }),
 /* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/Brett.13f42124.png";
+module.exports = __webpack_require__.p + "static/13f42124-Brett.png";
 
 /***/ }),
 /* 90 */
@@ -3447,55 +3447,55 @@ module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQABLAEsAAD/4QCMRXhpZgA
 /* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/Jorge.3bb0efc9.png";
+module.exports = __webpack_require__.p + "static/3bb0efc9-Jorge.png";
 
 /***/ }),
 /* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/Kenny.73adc9f3.jpg";
+module.exports = __webpack_require__.p + "static/73adc9f3-Kenny.jpg";
 
 /***/ }),
 /* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/Luis.fa649d7f.png";
+module.exports = __webpack_require__.p + "static/fa649d7f-Luis.png";
 
 /***/ }),
 /* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/Luke.45d8619a.png";
+module.exports = __webpack_require__.p + "static/45d8619a-Luke.png";
 
 /***/ }),
 /* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/Maria.718178fb.png";
+module.exports = __webpack_require__.p + "static/718178fb-Maria.png";
 
 /***/ }),
 /* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/Mihai.582035cc.jpg";
+module.exports = __webpack_require__.p + "static/582035cc-Mihai.jpg";
 
 /***/ }),
 /* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/Oliver.0f1f07f5.png";
+module.exports = __webpack_require__.p + "static/0f1f07f5-Oliver.png";
 
 /***/ }),
 /* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/Pierre.90109361.png";
+module.exports = __webpack_require__.p + "static/90109361-Pierre.png";
 
 /***/ }),
 /* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/Tatu.db166b10.png";
+module.exports = __webpack_require__.p + "static/db166b10-Tatu.png";
 
 /***/ }),
 /* 100 */
@@ -3938,4 +3938,4 @@ exports.default = NotFound;
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=app.static.8fff6e62.js.map
+//# sourceMappingURL=app.static.e8979ef7.js.map
