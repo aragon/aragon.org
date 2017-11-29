@@ -29,7 +29,7 @@ export default {
     { is404: true, component: 'src/pages/NotFound' },
   ],
   paths: REACT_STATIC_PATHS,
-  webpack: conf => {
+  webpack: (conf, { defaultLoaders }) => {
     conf.resolve = Object.assign({}, conf.resolve || {}, {
       // Needed when @aragon/ui is linked (development)
       modules: ((conf.resolve && conf.resolve.modules) || []).concat([
@@ -51,6 +51,14 @@ export default {
         },
       ]),
     ])
+
+    const fileLoader = defaultLoaders.fileLoader
+    fileLoader.query.name = 'static/[hash:8]-[name].[ext]'
+    conf.module.rules = [
+      {
+        oneOf: [defaultLoaders.jsLoader, defaultLoaders.cssLoader, fileLoader],
+      },
+    ]
 
     return conf
   },
