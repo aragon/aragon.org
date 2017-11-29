@@ -83,6 +83,7 @@ const Core = () => (
           name="Oliver Nordbjerg"
           title="Web3 Engineer"
           twitter="ONordbjerg"
+          medium="notbjerg"
           github="onbjerg"
         />
         <StyledMember
