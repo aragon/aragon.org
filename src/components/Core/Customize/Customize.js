@@ -87,20 +87,20 @@ const Customize = () => (
       <img className="screen" src={permission} alt="" />
       <div className="columns">
         <div className="item">
-          <img src={settings} alt="" />
+          <img src={settings} alt="" width="32" height="32" />
           <p>
             Aragon organizations are powered by AragonOS and fully
             customizable to fit your needs
           </p>
         </div>
         <div className="item">
-          <img src={path} alt="" />
+          <img src={path} alt="" width="32" height="32" />
           <p>
             You set the rules of how and when actions are prompted and enacted
           </p>
         </div>
         <div className="item">
-          <img src={code} alt="" />
+          <img src={code} alt="" width="32" height="32" />
           <p>
             Code is open source. As a developer you can modify it to match
             your specific use case
