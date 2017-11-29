@@ -22,7 +22,7 @@ const Intro = () => (
       <Emphasis dark>
         <p>
           The Aragon Network will decentralize its governance by gradually
-          handing over control of the project to the users
+          handing over control of the project to its users
         </p>
       </Emphasis>
       <Content dark>
