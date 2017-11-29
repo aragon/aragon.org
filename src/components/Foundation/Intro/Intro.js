@@ -26,7 +26,7 @@ const Intro = () => (
       <Content dark>
         <p>
           The Aragon Foundation is a non-profit organization which was created
-          to nurture the project in it's early phases
+          to nurture the project in its early phases
         </p>
         <p>
           Developing the platform and project towards maturity is the main duty
