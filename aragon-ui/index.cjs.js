@@ -1592,15 +1592,6 @@ var stylis$1 = createCommonjsModule(function (module, exports) {
 }));
 });
 
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
 function makeEmptyFunction(arg) {
   return function () {
     return arg;
@@ -1635,17 +1626,6 @@ var emptyFunction_1 = emptyFunction;
  *
  */
 
-/**
- * Use invariant() to assert state which your program assumes to be true.
- *
- * Provide sprintf-style format (only %s is supported) and arguments
- * to provide information about what broke and what you were
- * expecting.
- *
- * The invariant message will be stripped in production, but the invariant
- * will remain to ensure logic does not differ in production.
- */
-
 var validateFormat = function validateFormat(format) {};
 
 if (process.env.NODE_ENV !== 'production') {
@@ -1678,13 +1658,6 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 var invariant_1 = invariant;
-
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
 
 var warning = emptyFunction_1;
 
@@ -1736,7 +1709,6 @@ object-assign
 @license MIT
 */
 
-/* eslint-disable no-unused-vars */
 var getOwnPropertySymbols = Object.getOwnPropertySymbols;
 var hasOwnProperty$1 = Object.prototype.hasOwnProperty;
 var propIsEnumerable = Object.prototype.propertyIsEnumerable;
@@ -2549,17 +2521,6 @@ var hoistNonReactStatics = function hoistNonReactStatics(targetComponent, source
 
     return targetComponent;
 };
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @typechecks
- */
 
 var _uppercasePattern = /([A-Z])/g;
 
@@ -5112,393 +5073,82 @@ var theme = _groups.theme;
 var brand = _groups.brand;
 var colors = _groups.colors;
 
-var reactResponsive = createCommonjsModule(function (module, exports) {
-(function webpackUniversalModuleDefinition(root, factory) {
-	module.exports = factory(React__default);
-})(commonjsGlobal, function(__WEBPACK_EXTERNAL_MODULE_8__) {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-{
-  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
-    Symbol.for &&
-    Symbol.for('react.element')) ||
-    0xeac7;
-
-  var isValidElement = function(object) {
-    return typeof object === 'object' &&
-      object !== null &&
-      object.$$typeof === REACT_ELEMENT_TYPE;
-  };
-
-  // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
-  var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(9)(isValidElement, throwOnDirectAccess);
-}
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-function makeEmptyFunction(arg) {
-  return function () {
-    return arg;
-  };
-}
-
-/**
- * This function accepts and discards inputs; it has no side effects. This is
- * primarily useful idiomatically for overridable function endpoints which
- * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
- */
-var emptyFunction = function emptyFunction() {};
-
-emptyFunction.thatReturns = makeEmptyFunction;
-emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-emptyFunction.thatReturnsThis = function () {
-  return this;
-};
-emptyFunction.thatReturnsArgument = function (arg) {
-  return arg;
+var camel2hyphen = function (str) {
+  return str
+          .replace(/[A-Z]/g, function (match) {
+            return '-' + match.toLowerCase();
+          })
+          .toLowerCase();
 };
 
-module.exports = emptyFunction;
+var camel2hyphen_1 = camel2hyphen;
 
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+var isDimension = function (feature) {
+  var re = /[height|width]$/;
+  return re.test(feature);
+};
 
-var validateFormat = function validateFormat(format) {};
-
-{
-  validateFormat = function validateFormat(format) {
-    if (format === undefined) {
-      throw new Error('invariant requires an error message argument');
+var obj2mq = function (obj) {
+  var mq = '';
+  var features = Object.keys(obj);
+  features.forEach(function (feature, index) {
+    var value = obj[feature];
+    feature = camel2hyphen_1(feature);
+    // Add px to dimension features
+    if (isDimension(feature) && typeof value === 'number') {
+      value = value + 'px';
     }
-  };
-}
-
-function invariant(condition, format, a, b, c, d, e, f) {
-  validateFormat(format);
-
-  if (!condition) {
-    var error;
-    if (format === undefined) {
-      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
+    if (value === true) {
+      mq += feature;
+    } else if (value === false) {
+      mq += 'not ' + feature;
     } else {
-      var args = [a, b, c, d, e, f];
-      var argIndex = 0;
-      error = new Error(format.replace(/%s/g, function () {
-        return args[argIndex++];
-      }));
-      error.name = 'Invariant Violation';
+      mq += '(' + feature + ': ' + value + ')';
     }
+    if (index < features.length-1) {
+      mq += ' and ';
+    }
+  });
+  return mq;
+};
 
-    error.framesToPop = 1; // we don't care about invariant's own frame
-    throw error;
+var json2mq = function (query) {
+  var mq = '';
+  if (typeof query === 'string') {
+    return query;
   }
-}
-
-module.exports = invariant;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var emptyFunction = __webpack_require__(1);
-
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var warning = emptyFunction;
-
-{
-  var printWarning = function printWarning(format) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    var argIndex = 0;
-    var message = 'Warning: ' + format.replace(/%s/g, function () {
-      return args[argIndex++];
-    });
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-
-  warning = function warning(condition, format) {
-    if (format === undefined) {
-      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-    }
-
-    if (format.indexOf('Failed Composite propType: ') === 0) {
-      return; // Ignore CompositeComponent proptype check.
-    }
-
-    if (!condition) {
-      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-        args[_key2 - 2] = arguments[_key2];
+  // Handling array of media queries
+  if (query instanceof Array) {
+    query.forEach(function (q, index) {
+      mq += obj2mq(q);
+      if (index < query.length-1) {
+        mq += ', ';
       }
-
-      printWarning.apply(undefined, [format].concat(args));
-    }
-  };
-}
-
-module.exports = warning;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var uppercasePattern = /[A-Z]/g;
-var msPattern = /^ms-/;
-var cache = {};
-
-function hyphenateStyleName(string) {
-    return string in cache
-    ? cache[string]
-    : cache[string] = string
-      .replace(uppercasePattern, '-$&')
-      .toLowerCase()
-      .replace(msPattern, '-ms-');
-}
-
-module.exports = hyphenateStyleName;
-
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _propTypes = __webpack_require__(0);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var stringOrNumber = _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]);
-
-// properties that match media queries
-var matchers = {
-  orientation: _propTypes2.default.oneOf(['portrait', 'landscape']),
-
-  scan: _propTypes2.default.oneOf(['progressive', 'interlace']),
-
-  aspectRatio: _propTypes2.default.string,
-  deviceAspectRatio: _propTypes2.default.string,
-
-  height: stringOrNumber,
-  deviceHeight: stringOrNumber,
-
-  width: stringOrNumber,
-  deviceWidth: stringOrNumber,
-
-  color: _propTypes2.default.bool,
-
-  colorIndex: _propTypes2.default.bool,
-
-  monochrome: _propTypes2.default.bool,
-  resolution: stringOrNumber
-
-  // media features
-};var features = _extends({
-  minAspectRatio: _propTypes2.default.string,
-  maxAspectRatio: _propTypes2.default.string,
-  minDeviceAspectRatio: _propTypes2.default.string,
-  maxDeviceAspectRatio: _propTypes2.default.string,
-
-  minHeight: stringOrNumber,
-  maxHeight: stringOrNumber,
-  minDeviceHeight: stringOrNumber,
-  maxDeviceHeight: stringOrNumber,
-
-  minWidth: stringOrNumber,
-  maxWidth: stringOrNumber,
-  minDeviceWidth: stringOrNumber,
-  maxDeviceWidth: stringOrNumber,
-
-  minColor: _propTypes2.default.number,
-  maxColor: _propTypes2.default.number,
-
-  minColorIndex: _propTypes2.default.number,
-  maxColorIndex: _propTypes2.default.number,
-
-  minMonochrome: _propTypes2.default.number,
-  maxMonochrome: _propTypes2.default.number,
-
-  minResolution: stringOrNumber,
-  maxResolution: stringOrNumber
-
-}, matchers);
-
-// media types
-var types = {
-  all: _propTypes2.default.bool,
-  grid: _propTypes2.default.bool,
-  aural: _propTypes2.default.bool,
-  braille: _propTypes2.default.bool,
-  handheld: _propTypes2.default.bool,
-  print: _propTypes2.default.bool,
-  projection: _propTypes2.default.bool,
-  screen: _propTypes2.default.bool,
-  tty: _propTypes2.default.bool,
-  tv: _propTypes2.default.bool,
-  embossed: _propTypes2.default.bool
+    });
+    return mq;
+  }
+  // Handling single media query
+  return obj2mq(query);
 };
 
-var all = _extends({}, types, features);
+var json2mq_1 = json2mq;
 
-// add the type property
-matchers.type = Object.keys(types);
+var Media_1 = createCommonjsModule(function (module, exports) {
+exports.__esModule = true;
 
-exports.default = {
-  all: all,
-  types: types,
-  matchers: matchers,
-  features: features
-};
-module.exports = exports['default'];
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.toQuery = exports.default = undefined;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _react2 = _interopRequireDefault(React__default);
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _react = __webpack_require__(8);
 
-var _react2 = _interopRequireDefault(_react);
+var _propTypes2 = _interopRequireDefault(propTypes);
 
-var _propTypes = __webpack_require__(0);
 
-var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _matchmediaquery = __webpack_require__(12);
-
-var _matchmediaquery2 = _interopRequireDefault(_matchmediaquery);
-
-var _hyphenateStyleName = __webpack_require__(5);
-
-var _hyphenateStyleName2 = _interopRequireDefault(_hyphenateStyleName);
-
-var _mediaQuery = __webpack_require__(6);
-
-var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
-
-var _toQuery = __webpack_require__(14);
-
-var _toQuery2 = _interopRequireDefault(_toQuery);
+var _json2mq2 = _interopRequireDefault(json2mq_1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5508,1110 +5158,86 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var defaultTypes = {
-  component: _propTypes2.default.node,
-  query: _propTypes2.default.string,
-  values: _propTypes2.default.shape(_mediaQuery2.default.matchers),
-  children: _propTypes2.default.oneOfType([_propTypes2.default.node, _propTypes2.default.func]),
-  onChange: _propTypes2.default.func,
-  onBeforeChange: _propTypes2.default.func
-};
-var mediaKeys = Object.keys(_mediaQuery2.default.all);
-var excludedQueryKeys = Object.keys(defaultTypes);
-var excludedPropKeys = excludedQueryKeys.concat(mediaKeys);
+/**
+ * Conditionally renders based on whether or not a media query matches.
+ */
+var Media = function (_React$Component) {
+  _inherits(Media, _React$Component);
 
-function omit(object, keys) {
-  var newObject = _extends({}, object);
-  keys.forEach(function (key) {
-    return delete newObject[key];
-  });
-  return newObject;
-}
-
-var MediaQuery = function (_React$Component) {
-  _inherits(MediaQuery, _React$Component);
-
-  function MediaQuery() {
-    var _ref;
-
+  function Media() {
     var _temp, _this, _ret;
 
-    _classCallCheck(this, MediaQuery);
+    _classCallCheck(this, Media);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MediaQuery.__proto__ || Object.getPrototypeOf(MediaQuery)).call.apply(_ref, [this].concat(args))), _this), _this.state = { matches: false }, _this.updateMatches = function () {
-      if (_this._mql.matches === _this.state.matches) {
-        return;
-      }
-      _this.setState({
-        matches: _this._mql.matches
-      });
-    }, _this.removeMql = function () {
-      if (_this._mql) {
-        _this._mql.removeListener(_this.updateMatches);
-        _this._mql.dispose();
-      }
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = {
+      matches: _this.props.defaultMatches
+    }, _this.updateMatches = function () {
+      return _this.setState({ matches: _this.mediaQueryList.matches });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(MediaQuery, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      this.updateQuery(this.props);
-    }
-  }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
-      this.updateQuery(nextProps);
-    }
-  }, {
-    key: 'updateQuery',
-    value: function updateQuery(props) {
-      var values = void 0;
-      if (props.query) {
-        this.query = props.query;
-      } else {
-        this.query = (0, _toQuery2.default)(omit(props, excludedQueryKeys));
-      }
+  Media.prototype.componentWillMount = function componentWillMount() {
+    if ((typeof window === 'undefined' ? 'undefined' : _typeof(window)) !== 'object') return;
 
-      if (!this.query) {
-        throw new Error('Invalid or missing MediaQuery!');
-      }
+    var query = this.props.query;
 
-      if (props.values) {
-        values = Object.keys(props.values).reduce(function (result, key) {
-          result[(0, _hyphenateStyleName2.default)(key)] = props.values[key];
-          return result;
-        }, {});
-      }
 
-      this.removeMql();
+    if (typeof query !== 'string') query = (0, _json2mq2.default)(query);
 
-      this._mql = (0, _matchmediaquery2.default)(this.query, values);
-      this._mql.addListener(this.updateMatches);
-      this.updateMatches();
-    }
-  }, {
-    key: 'componentWillUpdate',
-    value: function componentWillUpdate(_, nextState) {
-      if (this.props.onBeforeChange && this.state.matches !== nextState.matches) {
-        this.props.onBeforeChange(this.state.matches);
-      }
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate(_, prevState) {
-      if (this.props.onChange && prevState.matches !== this.state.matches) {
-        this.props.onChange(this.state.matches);
-      }
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      this.removeMql();
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      if (typeof this.props.children === 'function') {
-        return this.props.children(this.state.matches);
-      }
-
-      if (this.state.matches === false) {
-        return null;
-      }
-      var props = omit(this.props, excludedPropKeys);
-      var hasMergeProps = Object.keys(props).length > 0;
-      var childrenCount = _react2.default.Children.count(this.props.children);
-      var wrapChildren = this.props.component || childrenCount > 1 || typeof this.props.children === 'string' || Array.isArray(this.props.children) && childrenCount == 1 || this.props.children === undefined;
-      if (wrapChildren) {
-        return _react2.default.createElement(this.props.component || 'div', props, this.props.children);
-      } else if (hasMergeProps) {
-        return _react2.default.cloneElement(this.props.children, props);
-      } else if (childrenCount) {
-        return this.props.children;
-      } else {
-        return null;
-      }
-    }
-  }]);
-
-  return MediaQuery;
-}(_react2.default.Component);
-
-MediaQuery.displayName = 'MediaQuery';
-MediaQuery.defaultProps = {
-  values: {}
-};
-exports.default = MediaQuery;
-exports.toQuery = _toQuery2.default;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_8__;
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var emptyFunction = __webpack_require__(1);
-var invariant = __webpack_require__(2);
-var warning = __webpack_require__(3);
-var assign = __webpack_require__(10);
-
-var ReactPropTypesSecret = __webpack_require__(4);
-var checkPropTypes = __webpack_require__(11);
-
-module.exports = function(isValidElement, throwOnDirectAccess) {
-  /* global Symbol */
-  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
-  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
-
-  /**
-   * Returns the iterator method function contained on the iterable object.
-   *
-   * Be sure to invoke the function with the iterable as context:
-   *
-   *     var iteratorFn = getIteratorFn(myIterable);
-   *     if (iteratorFn) {
-   *       var iterator = iteratorFn.call(myIterable);
-   *       ...
-   *     }
-   *
-   * @param {?object} maybeIterable
-   * @return {?function}
-   */
-  function getIteratorFn(maybeIterable) {
-    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
-    if (typeof iteratorFn === 'function') {
-      return iteratorFn;
-    }
-  }
-
-  /**
-   * Collection of methods that allow declaration and validation of props that are
-   * supplied to React components. Example usage:
-   *
-   *   var Props = require('ReactPropTypes');
-   *   var MyArticle = React.createClass({
-   *     propTypes: {
-   *       // An optional string prop named "description".
-   *       description: Props.string,
-   *
-   *       // A required enum prop named "category".
-   *       category: Props.oneOf(['News','Photos']).isRequired,
-   *
-   *       // A prop named "dialog" that requires an instance of Dialog.
-   *       dialog: Props.instanceOf(Dialog).isRequired
-   *     },
-   *     render: function() { ... }
-   *   });
-   *
-   * A more formal specification of how these methods are used:
-   *
-   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
-   *   decl := ReactPropTypes.{type}(.isRequired)?
-   *
-   * Each and every declaration produces a function with the same signature. This
-   * allows the creation of custom validation functions. For example:
-   *
-   *  var MyLink = React.createClass({
-   *    propTypes: {
-   *      // An optional string or URI prop named "href".
-   *      href: function(props, propName, componentName) {
-   *        var propValue = props[propName];
-   *        if (propValue != null && typeof propValue !== 'string' &&
-   *            !(propValue instanceof URI)) {
-   *          return new Error(
-   *            'Expected a string or an URI for ' + propName + ' in ' +
-   *            componentName
-   *          );
-   *        }
-   *      }
-   *    },
-   *    render: function() {...}
-   *  });
-   *
-   * @internal
-   */
-
-  var ANONYMOUS = '<<anonymous>>';
-
-  // Important!
-  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
-  var ReactPropTypes = {
-    array: createPrimitiveTypeChecker('array'),
-    bool: createPrimitiveTypeChecker('boolean'),
-    func: createPrimitiveTypeChecker('function'),
-    number: createPrimitiveTypeChecker('number'),
-    object: createPrimitiveTypeChecker('object'),
-    string: createPrimitiveTypeChecker('string'),
-    symbol: createPrimitiveTypeChecker('symbol'),
-
-    any: createAnyTypeChecker(),
-    arrayOf: createArrayOfTypeChecker,
-    element: createElementTypeChecker(),
-    instanceOf: createInstanceTypeChecker,
-    node: createNodeChecker(),
-    objectOf: createObjectOfTypeChecker,
-    oneOf: createEnumTypeChecker,
-    oneOfType: createUnionTypeChecker,
-    shape: createShapeTypeChecker,
-    exact: createStrictShapeTypeChecker,
+    this.mediaQueryList = window.matchMedia(query);
+    this.mediaQueryList.addListener(this.updateMatches);
+    this.updateMatches();
   };
 
-  /**
-   * inlined Object.is polyfill to avoid requiring consumers ship their own
-   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-   */
-  /*eslint-disable no-self-compare*/
-  function is(x, y) {
-    // SameValue algorithm
-    if (x === y) {
-      // Steps 1-5, 7-10
-      // Steps 6.b-6.e: +0 != -0
-      return x !== 0 || 1 / x === 1 / y;
-    } else {
-      // Step 6.a: NaN == NaN
-      return x !== x && y !== y;
-    }
-  }
-  /*eslint-enable no-self-compare*/
+  Media.prototype.componentWillUnmount = function componentWillUnmount() {
+    this.mediaQueryList.removeListener(this.updateMatches);
+  };
 
-  /**
-   * We use an Error-like object for backward compatibility as people may call
-   * PropTypes directly and inspect their output. However, we don't use real
-   * Errors anymore. We don't inspect their stack anyway, and creating them
-   * is prohibitively expensive if they are created too often, such as what
-   * happens in oneOfType() for any type before the one that matched.
-   */
-  function PropTypeError(message) {
-    this.message = message;
-    this.stack = '';
-  }
-  // Make `instanceof Error` still work for returned errors.
-  PropTypeError.prototype = Error.prototype;
+  Media.prototype.render = function render() {
+    var _props = this.props,
+        children = _props.children,
+        render = _props.render;
+    var matches = this.state.matches;
 
-  function createChainableTypeChecker(validate) {
-    {
-      var manualPropTypeCallCache = {};
-      var manualPropTypeWarningCount = 0;
-    }
-    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
-      componentName = componentName || ANONYMOUS;
-      propFullName = propFullName || propName;
 
-      if (secret !== ReactPropTypesSecret) {
-        if (throwOnDirectAccess) {
-          // New behavior only for users of `prop-types` package
-          invariant(
-            false,
-            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-            'Use `PropTypes.checkPropTypes()` to call them. ' +
-            'Read more at http://fb.me/use-check-prop-types'
-          );
-        } else if ("development" !== 'production' && typeof console !== 'undefined') {
-          // Old behavior for people using React.PropTypes
-          var cacheKey = componentName + ':' + propName;
-          if (
-            !manualPropTypeCallCache[cacheKey] &&
-            // Avoid spamming the console because they are often not actionable except for lib authors
-            manualPropTypeWarningCount < 3
-          ) {
-            warning(
-              false,
-              'You are manually calling a React.PropTypes validation ' +
-              'function for the `%s` prop on `%s`. This is deprecated ' +
-              'and will throw in the standalone `prop-types` package. ' +
-              'You may be seeing this warning due to a third-party PropTypes ' +
-              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.',
-              propFullName,
-              componentName
-            );
-            manualPropTypeCallCache[cacheKey] = true;
-            manualPropTypeWarningCount++;
-          }
-        }
-      }
-      if (props[propName] == null) {
-        if (isRequired) {
-          if (props[propName] === null) {
-            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
-          }
-          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
-        }
-        return null;
-      } else {
-        return validate(props, propName, componentName, location, propFullName);
-      }
-    }
+    return render ? matches ? render() : null : children ? typeof children === 'function' ? children(matches) : !Array.isArray(children) || children.length ? // Preact defaults to empty children array
+    matches ? _react2.default.Children.only(children) : null : null : null;
+  };
 
-    var chainedCheckType = checkType.bind(null, false);
-    chainedCheckType.isRequired = checkType.bind(null, true);
+  return Media;
+}(_react2.default.Component);
 
-    return chainedCheckType;
-  }
-
-  function createPrimitiveTypeChecker(expectedType) {
-    function validate(props, propName, componentName, location, propFullName, secret) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== expectedType) {
-        // `propValue` being instance of, say, date/regexp, pass the 'object'
-        // check, but we can offer a more precise error message here rather than
-        // 'of type `object`'.
-        var preciseType = getPreciseType(propValue);
-
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createAnyTypeChecker() {
-    return createChainableTypeChecker(emptyFunction.thatReturnsNull);
-  }
-
-  function createArrayOfTypeChecker(typeChecker) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (typeof typeChecker !== 'function') {
-        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
-      }
-      var propValue = props[propName];
-      if (!Array.isArray(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
-      }
-      for (var i = 0; i < propValue.length; i++) {
-        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
-        if (error instanceof Error) {
-          return error;
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createElementTypeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      if (!isValidElement(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createInstanceTypeChecker(expectedClass) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (!(props[propName] instanceof expectedClass)) {
-        var expectedClassName = expectedClass.name || ANONYMOUS;
-        var actualClassName = getClassName(props[propName]);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createEnumTypeChecker(expectedValues) {
-    if (!Array.isArray(expectedValues)) {
-       warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.');
-      return emptyFunction.thatReturnsNull;
-    }
-
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      for (var i = 0; i < expectedValues.length; i++) {
-        if (is(propValue, expectedValues[i])) {
-          return null;
-        }
-      }
-
-      var valuesString = JSON.stringify(expectedValues);
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createObjectOfTypeChecker(typeChecker) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (typeof typeChecker !== 'function') {
-        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
-      }
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
-      }
-      for (var key in propValue) {
-        if (propValue.hasOwnProperty(key)) {
-          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-          if (error instanceof Error) {
-            return error;
-          }
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createUnionTypeChecker(arrayOfTypeCheckers) {
-    if (!Array.isArray(arrayOfTypeCheckers)) {
-       warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.');
-      return emptyFunction.thatReturnsNull;
-    }
-
-    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
-      var checker = arrayOfTypeCheckers[i];
-      if (typeof checker !== 'function') {
-        warning(
-          false,
-          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
-          'received %s at index %s.',
-          getPostfixForTypeWarning(checker),
-          i
-        );
-        return emptyFunction.thatReturnsNull;
-      }
-    }
-
-    function validate(props, propName, componentName, location, propFullName) {
-      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
-        var checker = arrayOfTypeCheckers[i];
-        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
-          return null;
-        }
-      }
-
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createNodeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (!isNode(props[propName])) {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createShapeTypeChecker(shapeTypes) {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-      }
-      for (var key in shapeTypes) {
-        var checker = shapeTypes[key];
-        if (!checker) {
-          continue;
-        }
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-        if (error) {
-          return error;
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createStrictShapeTypeChecker(shapeTypes) {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-      }
-      // We need to check all keys in case some are required but missing from
-      // props.
-      var allKeys = assign({}, props[propName], shapeTypes);
-      for (var key in allKeys) {
-        var checker = shapeTypes[key];
-        if (!checker) {
-          return new PropTypeError(
-            'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
-            '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
-            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
-          );
-        }
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-        if (error) {
-          return error;
-        }
-      }
-      return null;
-    }
-
-    return createChainableTypeChecker(validate);
-  }
-
-  function isNode(propValue) {
-    switch (typeof propValue) {
-      case 'number':
-      case 'string':
-      case 'undefined':
-        return true;
-      case 'boolean':
-        return !propValue;
-      case 'object':
-        if (Array.isArray(propValue)) {
-          return propValue.every(isNode);
-        }
-        if (propValue === null || isValidElement(propValue)) {
-          return true;
-        }
-
-        var iteratorFn = getIteratorFn(propValue);
-        if (iteratorFn) {
-          var iterator = iteratorFn.call(propValue);
-          var step;
-          if (iteratorFn !== propValue.entries) {
-            while (!(step = iterator.next()).done) {
-              if (!isNode(step.value)) {
-                return false;
-              }
-            }
-          } else {
-            // Iterator will provide entry [k,v] tuples rather than values.
-            while (!(step = iterator.next()).done) {
-              var entry = step.value;
-              if (entry) {
-                if (!isNode(entry[1])) {
-                  return false;
-                }
-              }
-            }
-          }
-        } else {
-          return false;
-        }
-
-        return true;
-      default:
-        return false;
-    }
-  }
-
-  function isSymbol(propType, propValue) {
-    // Native Symbol.
-    if (propType === 'symbol') {
-      return true;
-    }
-
-    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
-    if (propValue['@@toStringTag'] === 'Symbol') {
-      return true;
-    }
-
-    // Fallback for non-spec compliant Symbols which are polyfilled.
-    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
-      return true;
-    }
-
-    return false;
-  }
-
-  // Equivalent of `typeof` but with special handling for array and regexp.
-  function getPropType(propValue) {
-    var propType = typeof propValue;
-    if (Array.isArray(propValue)) {
-      return 'array';
-    }
-    if (propValue instanceof RegExp) {
-      // Old webkits (at least until Android 4.0) return 'function' rather than
-      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
-      // passes PropTypes.object.
-      return 'object';
-    }
-    if (isSymbol(propType, propValue)) {
-      return 'symbol';
-    }
-    return propType;
-  }
-
-  // This handles more types than `getPropType`. Only used for error messages.
-  // See `createPrimitiveTypeChecker`.
-  function getPreciseType(propValue) {
-    if (typeof propValue === 'undefined' || propValue === null) {
-      return '' + propValue;
-    }
-    var propType = getPropType(propValue);
-    if (propType === 'object') {
-      if (propValue instanceof Date) {
-        return 'date';
-      } else if (propValue instanceof RegExp) {
-        return 'regexp';
-      }
-    }
-    return propType;
-  }
-
-  // Returns a string that is postfixed to a warning about an invalid type.
-  // For example, "undefined" or "of type array"
-  function getPostfixForTypeWarning(value) {
-    var type = getPreciseType(value);
-    switch (type) {
-      case 'array':
-      case 'object':
-        return 'an ' + type;
-      case 'boolean':
-      case 'date':
-      case 'regexp':
-        return 'a ' + type;
-      default:
-        return type;
-    }
-  }
-
-  // Returns class name of the object, if any.
-  function getClassName(propValue) {
-    if (!propValue.constructor || !propValue.constructor.name) {
-      return ANONYMOUS;
-    }
-    return propValue.constructor.name;
-  }
-
-  ReactPropTypes.checkPropTypes = checkPropTypes;
-  ReactPropTypes.PropTypes = ReactPropTypes;
-
-  return ReactPropTypes;
+Media.propTypes = {
+  defaultMatches: _propTypes2.default.bool,
+  query: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object, _propTypes2.default.arrayOf(_propTypes2.default.object.isRequired)]).isRequired,
+  render: _propTypes2.default.func,
+  children: _propTypes2.default.oneOfType([_propTypes2.default.node, _propTypes2.default.func])
 };
-
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
-}
-
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
-
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (err) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (getOwnPropertySymbols) {
-			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
+Media.defaultProps = {
+  defaultMatches: true
 };
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-{
-  var invariant = __webpack_require__(2);
-  var warning = __webpack_require__(3);
-  var ReactPropTypesSecret = __webpack_require__(4);
-  var loggedTypeFailures = {};
-}
-
-/**
- * Assert that the values match with the type specs.
- * Error messages are memorized and will only be shown once.
- *
- * @param {object} typeSpecs Map of name to a ReactPropType
- * @param {object} values Runtime values that need to be type-checked
- * @param {string} location e.g. "prop", "context", "child context"
- * @param {string} componentName Name of the component for error messages.
- * @param {?Function} getStack Returns the component stack.
- * @private
- */
-function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  {
-    for (var typeSpecName in typeSpecs) {
-      if (typeSpecs.hasOwnProperty(typeSpecName)) {
-        var error;
-        // Prop type validation may throw. In case they do, we don't want to
-        // fail the render phase where it didn't fail before. So we log it.
-        // After these have been cleaned up, we'll let them throw.
-        try {
-          // This is intentionally an invariant that gets caught. It's the same
-          // behavior as without this statement except with a better message.
-          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'the `prop-types` package, but received `%s`.', componentName || 'React class', location, typeSpecName, typeof typeSpecs[typeSpecName]);
-          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
-        } catch (ex) {
-          error = ex;
-        }
-        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error);
-        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-          // Only monitor this failure once because there tends to be a lot of the
-          // same error.
-          loggedTypeFailures[error.message] = true;
-
-          var stack = getStack ? getStack() : '';
-
-          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
-        }
-      }
-    }
-  }
-}
-
-module.exports = checkPropTypes;
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var staticMatch = __webpack_require__(13).match;
-var dynamicMatch = typeof window !== 'undefined' ? window.matchMedia : null;
-
-// our fake MediaQueryList
-function Mql(query, values){
-  var self = this;
-  if(dynamicMatch){
-    var mql = dynamicMatch.call(window, query);
-    this.matches = mql.matches;
-    this.media = mql.media;
-    // TODO: is there a time it makes sense to remove this listener?
-    mql.addListener(update);
-  } else {
-    this.matches = staticMatch(query, values);
-    this.media = query;
-  }
-
-  this.addListener = addListener;
-  this.removeListener = removeListener;
-  this.dispose = dispose;
-
-  function addListener(listener){
-    if(mql){
-      mql.addListener(listener);
-    }
-  }
-
-  function removeListener(listener){
-    if(mql){
-      mql.removeListener(listener);
-    }
-  }
-
-  // update ourselves!
-  function update(evt){
-    self.matches = evt.matches;
-    self.media = evt.media;
-  }
-
-  function dispose(){
-    if(mql){
-      mql.removeListener(update);
-    }
-  }
-}
-
-function matchMedia(query, values){
-  return new Mql(query, values);
-}
-
-module.exports = matchMedia;
-
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports.match = matchQuery;
-exports.parse = parseQuery;
-
-// -----------------------------------------------------------------------------
-
-var RE_MEDIA_QUERY     = /(?:(only|not)?\s*([^\s\(\)]+)(?:\s*and)?\s*)?(.+)?/i,
-    RE_MQ_EXPRESSION   = /\(\s*([^\s\:\)]+)\s*(?:\:\s*([^\s\)]+))?\s*\)/,
-    RE_MQ_FEATURE      = /^(?:(min|max)-)?(.+)/,
-    RE_LENGTH_UNIT     = /(em|rem|px|cm|mm|in|pt|pc)?$/,
-    RE_RESOLUTION_UNIT = /(dpi|dpcm|dppx)?$/;
-
-function matchQuery(mediaQuery, values) {
-    return parseQuery(mediaQuery).some(function (query) {
-        var inverse = query.inverse;
-
-        // Either the parsed or specified `type` is "all", or the types must be
-        // equal for a match.
-        var typeMatch = query.type === 'all' || values.type === query.type;
-
-        // Quit early when `type` doesn't match, but take "not" into account.
-        if ((typeMatch && inverse) || !(typeMatch || inverse)) {
-            return false;
-        }
-
-        var expressionsMatch = query.expressions.every(function (expression) {
-            var feature  = expression.feature,
-                modifier = expression.modifier,
-                expValue = expression.value,
-                value    = values[feature];
-
-            // Missing or falsy values don't match.
-            if (!value) { return false; }
-
-            switch (feature) {
-                case 'orientation':
-                case 'scan':
-                    return value.toLowerCase() === expValue.toLowerCase();
-
-                case 'width':
-                case 'height':
-                case 'device-width':
-                case 'device-height':
-                    expValue = toPx(expValue);
-                    value    = toPx(value);
-                    break;
-
-                case 'resolution':
-                    expValue = toDpi(expValue);
-                    value    = toDpi(value);
-                    break;
-
-                case 'aspect-ratio':
-                case 'device-aspect-ratio':
-                case /* Deprecated */ 'device-pixel-ratio':
-                    expValue = toDecimal(expValue);
-                    value    = toDecimal(value);
-                    break;
-
-                case 'grid':
-                case 'color':
-                case 'color-index':
-                case 'monochrome':
-                    expValue = parseInt(expValue, 10) || 1;
-                    value    = parseInt(value, 10) || 0;
-                    break;
-            }
-
-            switch (modifier) {
-                case 'min': return value >= expValue;
-                case 'max': return value <= expValue;
-                default   : return value === expValue;
-            }
-        });
-
-        return (expressionsMatch && !inverse) || (!expressionsMatch && inverse);
-    });
-}
-
-function parseQuery(mediaQuery) {
-    return mediaQuery.split(',').map(function (query) {
-        query = query.trim();
-
-        var captures    = query.match(RE_MEDIA_QUERY),
-            modifier    = captures[1],
-            type        = captures[2],
-            expressions = captures[3] || '',
-            parsed      = {};
-
-        parsed.inverse = !!modifier && modifier.toLowerCase() === 'not';
-        parsed.type    = type ? type.toLowerCase() : 'all';
-
-        // Split expressions into a list.
-        expressions = expressions.match(/\([^\)]+\)/g) || [];
-
-        parsed.expressions = expressions.map(function (expression) {
-            var captures = expression.match(RE_MQ_EXPRESSION),
-                feature  = captures[1].toLowerCase().match(RE_MQ_FEATURE);
-
-            return {
-                modifier: feature[1],
-                feature : feature[2],
-                value   : captures[2]
-            };
-        });
-
-        return parsed;
-    });
-}
-
-// -- Utilities ----------------------------------------------------------------
-
-function toDecimal(ratio) {
-    var decimal = Number(ratio),
-        numbers;
-
-    if (!decimal) {
-        numbers = ratio.match(/^(\d+)\s*\/\s*(\d+)$/);
-        decimal = numbers[1] / numbers[2];
-    }
-
-    return decimal;
-}
-
-function toDpi(resolution) {
-    var value = parseFloat(resolution),
-        units = String(resolution).match(RE_RESOLUTION_UNIT)[1];
-
-    switch (units) {
-        case 'dpcm': return value / 2.54;
-        case 'dppx': return value * 96;
-        default    : return value;
-    }
-}
-
-function toPx(length) {
-    var value = parseFloat(length),
-        units = String(length).match(RE_LENGTH_UNIT)[1];
-
-    switch (units) {
-        case 'em' : return value * 16;
-        case 'rem': return value * 16;
-        case 'cm' : return value * 96 / 2.54;
-        case 'mm' : return value * 96 / 2.54 / 10;
-        case 'in' : return value * 96;
-        case 'pt' : return value * 72;
-        case 'pc' : return value * 72 / 12;
-        default   : return value;
-    }
-}
-
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
+exports.default = Media;
 });
 
-exports.default = function (obj) {
-  var rules = [];
-  Object.keys(_mediaQuery2.default.all).forEach(function (k) {
-    var v = obj[k];
-    if (v != null) {
-      rules.push(keyVal(k, v));
-    }
-  });
-  return join(rules);
-};
+unwrapExports(Media_1);
 
-var _hyphenateStyleName = __webpack_require__(5);
-
-var _hyphenateStyleName2 = _interopRequireDefault(_hyphenateStyleName);
-
-var _mediaQuery = __webpack_require__(6);
-
-var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
+var reactMedia = createCommonjsModule(function (module) {
+var _Media2 = _interopRequireDefault(Media_1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var negate = function negate(cond) {
-  return 'not ' + cond;
-};
+// TODO: Remove in the next major release.
+_Media2.default.Media = _Media2.default; /* eslint-env node */
 
-function keyVal(k, v) {
-  var realKey = (0, _hyphenateStyleName2.default)(k);
 
-  // px shorthand
-  if (typeof v === 'number') {
-    v = v + 'px';
-  }
-  if (v === true) {
-    return k;
-  }
-  if (v === false) {
-    return negate(k);
-  }
-  return '(' + realKey + ': ' + v + ')';
-}
-
-function join(conds) {
-  return conds.join(' and ');
-}
-
-module.exports = exports['default'];
-
-/***/ })
-/******/ ]);
+module.exports = _Media2.default;
 });
 
-});
-
-var Responsive = unwrapExports(reactResponsive);
+var Media = unwrapExports(reactMedia);
 
 var FONT_SIZES = {
   xsmall: '12px',
@@ -6674,18 +5300,31 @@ var breakpoint = function breakpoint(name, styles) {
 var BreakPoint = function BreakPoint(_ref2) {
   var from = _ref2.from,
       to = _ref2.to,
-      props = objectWithoutProperties$1(_ref2, ['from', 'to']);
-  return React__default.createElement(Responsive, _extends$1({}, props, {
-    minWidth: BREAKPOINTS[from],
-    maxWidth: BREAKPOINTS[to] && BREAKPOINTS[to] - 1
-  }));
+      children = _ref2.children,
+      props = objectWithoutProperties$1(_ref2, ['from', 'to', 'children']);
+
+  var query = {};
+  if (BREAKPOINTS[from]) {
+    query.minWidth = BREAKPOINTS[from];
+  }
+  if (BREAKPOINTS[to]) {
+    query.maxWidth = BREAKPOINTS[to] - 1;
+  }
+  return React__default.createElement(
+    Media,
+    _extends$1({ query: query, defaultMatches: false }, props),
+    function (ok) {
+      return ok ? children : null;
+    }
+  );
 };
 
 var unselectable = function unselectable() {
   return '\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n';
 };
 
-// High order component wrapper
+// TODO: deprecate the previous names
+
 var getPublicUrl = function getPublicUrl(Component$$1) {
   var highOrderComponent = function highOrderComponent(baseProps, context) {
     var _context$publicUrl = context.publicUrl,
@@ -6807,7 +5446,7 @@ var StyledIllustratedSection = styled(Section)(['padding:120px 15px 120px;.main{
 
 var StyledIllustration = styled.div(['margin-top:40px;img{display:block;margin:0 auto;max-width:calc(100% - 30px);}', ';'], large('\n    flex-shrink: 0;\n    width: calc(40% + 150px);\n    margin-left: 50px;\n    margin-right: -100px;\n    margin-top: 0;\n    padding: 0 70px;\n    &:first-child {\n      margin-left: -100px;\n      margin-right: 50px;\n    }\n    img {\n      width: 100%;\n      margin: 0;\n    }\n  '));
 
-var StyledTitle = styled.div(['margin-bottom:10px;font-size:15px;text-align:center;text-transform:uppercase;color:', ';', ';', ';'], theme.accent, medium('\n    font-size: 18px;\n  '), large('\n    text-align: left;\n  '));
+var StyledTitle = styled.div(['margin-bottom:10px;font-size:15px;text-align:center;text-transform:uppercase;color:', ';font-weight:600;', ';', ';'], theme.accent, medium('\n    font-size: 18px;\n  '), large('\n    text-align: left;\n  '));
 
 var StyledSubtitle = styled.div(['font-size:25px;font-weight:200;line-height:1.3;text-align:center;color:', ';', ';', ';'], function (_ref) {
   var dark = _ref.dark;
@@ -6819,7 +5458,7 @@ var StyledEmphasis = styled.div(['margin:0 0 30px;padding-left:30px;font-size:18
   return dark ? 'white' : 'black';
 }, medium('\n    margin: 0 30px 40px 0;\n    font-size: 19px;\n  '), large('\n    margin: 40px 0;\n  '));
 
-var StyledContent$1 = styled.div(['font-size:17px;color:', ';', ';p{margin-bottom:1em;}'], function (_ref3) {
+var StyledContent$1 = styled.div(['font-size:17px;color:', ';', ';p{margin-bottom:1em;}p:last-child{margin-bottom:0;}'], function (_ref3) {
   var dark = _ref3.dark;
   return dark ? themeDark.textSecondary : 'black';
 }, medium('\n    font-size: 18px;\n  '));
@@ -6923,9 +5562,9 @@ Object.entries(childrenComponents).forEach(function (_ref5) {
   comp.___typeName = name;
 });
 
-var cross = "data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%2211%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.476%201.524L6.3%205.7l4.176%204.176-1.062%201.062-4.176-4.176-4.176%204.176L0%209.876%204.176%205.7%200%201.524%201.062.462l4.176%204.176L9.414.462z%22%20fill%3D%22%23FB7777%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+var cross = "data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Eclear%20-%20material%3C%2Ftitle%3E%3Cpath%20d%3D%22M10.476%201.524L6.3%205.7l4.176%204.176-1.062%201.062-4.176-4.176-4.176%204.176L0%209.876%204.176%205.7%200%201.524%201.062.462l4.176%204.176L9.414.462z%22%20fill%3D%22%23FB7777%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
 
-var check = "data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2210%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M4.176%207.956L12.114%200l1.062%201.062-9%209L0%205.886l1.044-1.062z%22%20fill%3D%22%2321D48E%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+var check = "data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2210%22%20viewBox%3D%220%200%2014%2010%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Echeck%20-%20material%3C%2Ftitle%3E%3Cpath%20d%3D%22M4.176%207.956L12.114%200l1.062%201.062-9%209L0%205.886l1.044-1.062z%22%20fill%3D%22%2321D48E%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
 
 var gradientStart = theme.gradientStart;
 var gradientEnd = theme.gradientEnd;
@@ -7135,7 +5774,7 @@ var performanceNow$2 = createCommonjsModule(function (module) {
 
 }).call(commonjsGlobal);
 
-
+//# sourceMappingURL=performance-now.js.map
 });
 
 var root = typeof window === 'undefined' ? commonjsGlobal : window;
@@ -8813,7 +7452,7 @@ var DropDownItem = function (_React$Component) {
   return DropDownItem;
 }(React__default.Component);
 
-var arrow = "data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%200h8.36L4.18%204.18z%22%20fill%3D%22%23B3B3B3%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+var arrow = "data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%225%22%20viewBox%3D%220%200%209%205%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3EIcon_arrow%20down-dark%3C%2Ftitle%3E%3Cpath%20d%3D%22M0%200h8.36L4.18%204.18z%22%20fill%3D%22%23B3B3B3%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
 
 var contentBackground$1 = theme.contentBackground;
 var contentBorder$1 = theme.contentBorder;
@@ -8940,15 +7579,13 @@ DropDown.defaultProps = {
   onChange: function onChange() {}
 };
 
-var logo = "be44cc384f06b05d.svg";
+var logo = "472ee4f35897125f.svg";
 
-var iconTwitter = "data:image/svg+xml,%3Csvg%20width%3D%2215%22%20height%3D%2230%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23717171%22%2F%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M13.56%2010.558a5.42%205.42%200%200%201-1.557.419%202.7%202.7%200%200%200%201.189-1.49%205.323%205.323%200%200%201-1.716.652%202.697%202.697%200%200%200-1.975-.853%202.702%202.702%200%200%200-2.704%202.703c0%20.21.025.419.067.62a7.685%207.685%200%200%201-5.575-2.83%202.702%202.702%200%200%200%20.837%203.616%202.724%202.724%200%200%201-1.222-.342v.033c0%201.314.93%202.402%202.168%202.653a2.858%202.858%200%200%201-.712.092c-.175%200-.343-.016-.51-.041a2.708%202.708%200%200%200%202.528%201.875A5.414%205.414%200%200%201%201.02%2018.82a5.62%205.62%200%200%201-.653-.034A7.64%207.64%200%200%200%204.52%2020c4.972%200%207.693-4.118%207.693-7.693%200-.117%200-.234-.009-.351a5.81%205.81%200%200%200%201.356-1.398z%22%2F%3E%3C%2Fdefs%3E%3C%2Fsvg%3E";
+var iconTwitter = "data:image/svg+xml,%3Csvg%20width%3D%2215%22%20height%3D%2230%22%20viewBox%3D%220%200%2015%2030%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23717171%22%2F%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M13.56%2010.558a5.42%205.42%200%200%201-1.557.419%202.7%202.7%200%200%200%201.189-1.49%205.323%205.323%200%200%201-1.716.652%202.697%202.697%200%200%200-1.975-.853%202.702%202.702%200%200%200-2.704%202.703c0%20.21.025.419.067.62a7.685%207.685%200%200%201-5.575-2.83%202.702%202.702%200%200%200%20.837%203.616%202.724%202.724%200%200%201-1.222-.342v.033c0%201.314.93%202.402%202.168%202.653a2.858%202.858%200%200%201-.712.092c-.175%200-.343-.016-.51-.041a2.708%202.708%200%200%200%202.528%201.875A5.414%205.414%200%200%201%201.02%2018.82a5.62%205.62%200%200%201-.653-.034A7.64%207.64%200%200%200%204.52%2020c4.972%200%207.693-4.118%207.693-7.693%200-.117%200-.234-.009-.351a5.81%205.81%200%200%200%201.356-1.398z%22%2F%3E%3C%2Fdefs%3E%3C%2Fsvg%3E";
 
-var iconMedium = "data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2230%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23717171%22%2F%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M4.997%2010.667a.117.117%200%200%200-.025-.042L.695%208.482C.578%208.424.46%208.357.326%208.357.1%208.357%200%208.549%200%208.758v9.543c0%20.25.184.552.419.67l3.892%201.95a.612.612%200%200%200%20.276.067c.285%200%20.41-.243.41-.503v-9.818zm.536.845v5.023l4.47%202.226-4.47-7.249zm9.467.15l-4.52%207.342%203.691%201.841a.793.793%200%200%200%20.394.11c.276%200%20.435-.193.435-.47v-8.822zm-.025-1.004a.056.056%200%200%200-.034-.05l-4.528-2.26a.488.488%200%200%200-.218-.05.505.505%200%200%200-.435.234l-2.712%204.412%203.264%205.307c.335-.536%204.663-7.559%204.663-7.593z%22%2F%3E%3C%2Fdefs%3E%3C%2Fsvg%3E";
+var iconMedium = "data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2230%22%20viewBox%3D%220%200%2016%2030%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23717171%22%2F%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M4.997%2010.667a.117.117%200%200%200-.025-.042L.695%208.482C.578%208.424.46%208.357.326%208.357.1%208.357%200%208.549%200%208.758v9.543c0%20.25.184.552.419.67l3.892%201.95a.612.612%200%200%200%20.276.067c.285%200%20.41-.243.41-.503v-9.818zm.536.845v5.023l4.47%202.226-4.47-7.249zm9.467.15l-4.52%207.342%203.691%201.841a.793.793%200%200%200%20.394.11c.276%200%20.435-.193.435-.47v-8.822zm-.025-1.004a.056.056%200%200%200-.034-.05l-4.528-2.26a.488.488%200%200%200-.218-.05.505.505%200%200%200-.435.234l-2.712%204.412%203.264%205.307c.335-.536%204.663-7.559%204.663-7.593z%22%2F%3E%3C%2Fdefs%3E%3C%2Fsvg%3E";
 
-var iconSlack = "data:image/svg+xml,%3Csvg%20width%3D%2215%22%20height%3D%2230%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23717171%22%2F%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M12.715%2013.638c-.126%200-.26.026-.385.067l-1.373.47-.879-2.646%201.314-.452c.469-.159.87-.594.87-1.113%200-.67-.56-1.155-1.213-1.155-.125%200-.243.016-.36.05l-1.356.46-.443-1.347a1.228%201.228%200%200%200-1.164-.83c-.661%200-1.205.553-1.205%201.215%200%20.134.025.267.067.393l.452%201.34-2.595.878-.452-1.34A1.206%201.206%200%200%200%202.838%208.8a1.213%201.213%200%200%200-1.139%201.607l.444%201.331-1.314.444A1.225%201.225%200%200%200%200%2013.337c0%20.67.519%201.18%201.189%201.18.134%200%20.267-.025.401-.067l1.306-.452.88%202.62-1.307.444a1.225%201.225%200%200%200-.828%201.155c0%20.678.51%201.18%201.188%201.18.143%200%20.285-.033.419-.075l1.28-.444.46%201.365c.168.502.629.828%201.156.828.67%200%201.205-.56%201.205-1.213%200-.134-.025-.268-.067-.394l-.46-1.372%202.595-.888.46%201.381a1.211%201.211%200%200%200%202.36-.385%201.24%201.24%200%200%200-.058-.393l-.469-1.398%201.44-.494c.502-.176.779-.552.779-1.088%200-.686-.528-1.189-1.214-1.189zm-6.646%202.194l-.88-2.62%202.596-.896.879%202.637-2.595.879z%22%2F%3E%3C%2Fdefs%3E%3C%2Fsvg%3E";
-
-var iconMail = "data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2230%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23717171%22%2F%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M11.865%209.219c.332%200%20.625.127.88.38.253.255.38.547.38.88v7.793c0%20.332-.127.625-.38.878a1.211%201.211%200%200%201-.88.381H1.26c-.332%200-.625-.127-.88-.38a1.207%201.207%200%200%201-.38-.88v-7.793c0-.332.127-.624.38-.878.255-.254.548-.381.88-.381h10.605zm-.146%202.666v-1.26l-5.156%203.428-5.157-3.428v1.26l5.157%203.428%205.156-3.428z%22%2F%3E%3C%2Fdefs%3E%3C%2Fsvg%3E";
+var iconRocket = "data:image/svg+xml,%3Csvg%20width%3D%2218%22%20height%3D%2215%22%20viewBox%3D%220%200%2018%2015%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Erocket%3C%2Ftitle%3E%3Cpath%20d%3D%22M18%207.488c0-.885-.27-1.734-.804-2.523-.479-.708-1.15-1.336-1.994-1.864-1.63-1.02-3.773-1.581-6.033-1.581-.755%200-1.5.062-2.221.186A7.358%207.358%200%200%200%205.42.634C2.458-.773%200%20.6%200%20.6s2.285%201.838%201.913%203.45C.891%205.044.337%206.24.337%207.488v.024c0%201.247.554%202.444%201.576%203.437C2.285%2012.561%200%2014.4%200%2014.4s2.458%201.374%205.421-.033a7.355%207.355%200%200%200%201.527-1.072c.722.124%201.466.186%202.22.186%202.26%200%204.403-.561%206.034-1.581.844-.528%201.515-1.156%201.994-1.864.534-.789.804-1.638.804-2.523V7.5v-.012zm-8.828%204.864c-.951%200-1.862-.108-2.704-.304-.855%201.007-2.737%202.409-4.565%201.956.594-.626%201.475-1.683%201.287-3.424-1.096-.835-1.754-1.903-1.754-3.068%200-2.673%203.464-4.84%207.736-4.84s7.736%202.167%207.736%204.84-3.464%204.84-7.736%204.84zm1.028-4.84c0%20.556-.46%201.007-1.028%201.007-.567%200-1.027-.451-1.027-1.007%200-.556.46-1.006%201.027-1.006.568%200%201.028.45%201.028%201.006zm2.545-1.006c-.567%200-1.027.45-1.027%201.006s.46%201.007%201.027%201.007c.568%200%201.028-.451%201.028-1.007%200-.556-.46-1.006-1.028-1.006zm-7.146%200c-.567%200-1.027.45-1.027%201.006s.46%201.007%201.027%201.007c.568%200%201.028-.451%201.028-1.007%200-.556-.46-1.006-1.028-1.006z%22%20fill%3D%22%23717171%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E";
 
 var medium$1 = function medium(css$$1) {
   return breakpoint('medium', css$$1);
@@ -8957,12 +7594,12 @@ var large$1 = function large(css$$1) {
   return breakpoint('large', css$$1);
 };
 
-var StyledFooter = getPublicUrl(styled.footer(['padding:60px 20px 35px;font-size:15px;color:grey;background:', ';', ';.main{display:flex;align-items:center;flex-direction:column;margin:0 auto;}.logo{margin-bottom:60px;}.menus{display:flex;}.menu-1{margin-right:35px;}.social-links{display:flex;justify-content:center;margin-top:30px;}.social-links li{display:flex;}.icon{overflow:hidden;text-indent:-9999px;padding-left:30px;background-repeat:no-repeat;background-position:50% 50%;}li{list-style:none;line-height:2;}a{text-decoration:none;}strong a{color:', ';font-weight:400;}.icon.twitter{background-image:url(', ');}.icon.medium{background-image:url(', ');}.icon.slack{background-image:url(', ');}.icon.mail{background-image:url(', ');}', ';', ';'], colors.Rain['Shark'], function (_ref) {
+var StyledFooter = getPublicUrl(styled.footer(['padding:60px 20px 35px;font-size:15px;color:grey;background:', ';', ';.main{display:flex;align-items:center;flex-direction:column;margin:0 auto;}.logo{margin-bottom:60px;}.menus{display:flex;}.menu-1{margin-right:35px;}.social-links{display:flex;justify-content:center;margin-top:30px;}.social-links li{display:flex;}.icon{overflow:hidden;text-indent:-9999px;padding-left:30px;background-repeat:no-repeat;background-position:50% 50%;}li{list-style:none;line-height:2;}a{text-decoration:none;}strong a{color:', ';font-weight:400;}.icon.twitter{background-image:url(', ');}.icon.medium{background-image:url(', ');}.icon.rocket{background-image:url(', ');}', ';', ';'], colors.Rain['Shark'], function (_ref) {
   var compact = _ref.compact;
 
   if (!compact) return '';
   return '\n      padding-top: 30px;\n      padding-bottom: 30px;\n      .icon {\n        padding-left: 25px;\n      }\n    ';
-}, themeDark.accent, styledPublicUrl(iconTwitter), styledPublicUrl(iconMedium), styledPublicUrl(iconSlack), styledPublicUrl(iconMail), medium$1('\n    padding-bottom: 70px;\n\n    .all-links {\n      display: flex;\n      justify-content: space-between;\n    }\n    .social-links {\n      display: block;\n      margin-top: 0;\n      margin-left: 120px;\n    }\n    .social-links li {\n      display: block;\n    }\n    .icon {\n      overflow: visible;\n      text-indent: 0;\n      background-position: 0 50%;\n    }\n  '), large$1('\n    padding-top: 90px;\n    .main {\n      flex-direction: row;\n      max-width: ' + grid(12, 11) + 'px;\n    }\n    .logo {\n      width: ' + grid(3, 3) + 'px;\n      flex-shrink: 0;\n    }\n    .menus {\n      display: flex;\n      width: ' + grid(6, 6) + 'px;\n    }\n    .menu-1 {\n      width: ' + grid(2, 2) + 'px;\n      margin-right: 0;\n    }\n    .menu-2 {\n      width: ' + grid(4, 4) + 'px;\n    }\n    .social-links {\n      width: ' + grid(3) + 'px;\n      margin-left: 0;\n    }\n    li {\n      margin: 0 0 10px;\n      line-height: 1.5;\n    }\n  ')));
+}, themeDark.accent, styledPublicUrl(iconTwitter), styledPublicUrl(iconMedium), styledPublicUrl(iconRocket), medium$1('\n    padding-bottom: 70px;\n\n    .all-links {\n      display: flex;\n      justify-content: space-between;\n    }\n    .social-links {\n      display: block;\n      margin-top: 0;\n      margin-left: 120px;\n    }\n    .social-links li {\n      display: block;\n    }\n    .icon {\n      overflow: visible;\n      text-indent: 0;\n      background-position: 0 50%;\n    }\n  '), large$1('\n    padding-top: 90px;\n    .main {\n      flex-direction: row;\n      max-width: ' + grid(12, 11) + 'px;\n    }\n    .logo {\n      width: ' + grid(3, 3) + 'px;\n      flex-shrink: 0;\n    }\n    .menus {\n      display: flex;\n      width: ' + grid(6, 6) + 'px;\n    }\n    .menu-1 {\n      width: ' + grid(2, 2) + 'px;\n      margin-right: 0;\n    }\n    .menu-2 {\n      width: ' + grid(4, 4) + 'px;\n    }\n    .social-links {\n      width: ' + grid(3) + 'px;\n      margin-left: 0;\n    }\n    li {\n      margin: 0 0 10px;\n      line-height: 1.5;\n    }\n  ')));
 
 var DefaultProps$2 = {
   compact: false
@@ -9098,7 +7735,7 @@ var Footer = function Footer(_ref2) {
             null,
             React__default.createElement(
               'a',
-              { href: 'https://blog.aragon.one', className: 'icon medium', target: '_blank' },
+              { href: 'https://blog.aragon.one/', className: 'icon medium', target: '_blank' },
               'Medium'
             )
           ),
@@ -9107,7 +7744,7 @@ var Footer = function Footer(_ref2) {
             null,
             React__default.createElement(
               'a',
-              { href: 'https://aragon.chat', className: 'icon slack', target: '_blank' },
+              { href: 'https://aragon.chat/', className: 'icon rocket', target: '_blank' },
               'Community'
             )
           )
@@ -9121,11 +7758,11 @@ Footer.defaultProps = DefaultProps$2;
 
 var Footer$1 = getPublicUrl(Footer);
 
-var logo$1 = "data:image/svg+xml,%3Csvg%20width%3D%22200%22%20height%3D%22183%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%2240.59%25%22%20y1%3D%22172.164%25%22%20x2%3D%22134.278%25%22%20y2%3D%22-209.701%25%22%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%22125.497%25%22%20x2%3D%2263.448%25%22%20y2%3D%22-8.979%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2272.854%25%22%20y1%3D%22157.035%25%22%20x2%3D%2272.854%25%22%20y2%3D%2250%25%22%20id%3D%22c%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%22140.325%25%22%20x2%3D%22122.689%25%22%20y2%3D%22-73.565%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%2295.2%25%22%20x2%3D%2276.121%25%22%20y2%3D%22-21.873%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M99.9%200l-2.912.915C87.782%203.887%2039.932%2020.343%201.893%2052.57L0%2054.17l.465%202.626c.784%204.268%205.341%2026.823%2018.048%2051.836%208.171%2016.031%2018.16%2030.102%2029.693%2041.824%2014.051%2014.241%2030.459%2024.802%2048.78%2031.396l2.972%201.05%201.937-.753%201.03-.364c18.209-6.553%2034.615-17.112%2048.764-31.388%2011.467-11.593%2021.458-25.666%2029.695-41.827%2012.782-25.102%2017.587-48.377%2018.076-52.006h.005l.456-2.592-2.056-1.468C159.836%2020.318%20112.047%203.884%20102.87.923L99.9%200z%22%20fill%3D%22url%28%23a%29%22%2F%3E%3Cpath%20d%3D%22M85.23%2043.803c-.061%200-28.567%209.109-28.567%2034.02%200%2024.912%2027.515%2036.995%2047.778%2036.995%2011.021%200%2020.075-3.208%2026.047-6.134.77-3.531%203.569-11.895%2012.83-11.958%201.651-.064%203.2.246%204.502.99%206.197%203.346%202.17%209.604%202.17%209.604a13.943%2013.943%200%200%200%201.416-.306c7.448-2.006%2015.84-10.525%2014.385-24.791-1.167-11.44-11.726-18.69-16.862-21.57-1.681-.944-2.782-1.42-2.782-1.42.186-1.162.246-2.061.246-2.751%200-.13-.002-.251-.006-.365v-1.34c-26.952-16.35-49.76-18.868-61.01-18.868-4.859%200-7.582.457-7.582.457l7.436%207.437zm56.95%2015.491s-3.656-1.177-7.373-1.673c-1.86%201.921-3.471%202.727-3.967%202.975l-.124.124c-10.844-2.293-14.748-7.87-14.748-7.87%2010.225-.062%2019.458%202.354%2026.212%206.444z%22%20fill%3D%22url%28%23b%29%22%20opacity%3D%22.401%22%2F%3E%3Cpath%20d%3D%22M152.281%2074.725c0%208.118-3.345%2015.616-9.047%2021.689l-.271.312.457-.002c1.549-.062%203.098.248%204.4.991%206.197%203.347%202.17%209.605%202.17%209.605%207.745-1.239%2017.35-9.914%2015.8-25.097-1.166-11.44-11.725-18.69-16.86-21.57a31.046%2031.046%200%200%201%203.351%2014.072%22%20fill%3D%22url%28%23c%29%22%20opacity%3D%22.1%22%2F%3E%3Cpath%20d%3D%22M26.857%20103.168c0%201.006.039%201.962.095%202.897%207.669%2014.75%2016.894%2027.635%2027.446%2038.305%2013.159%2013.278%2028.47%2023.13%2045.52%2029.29%2016.986-6.139%2032.299-16.012%2045.521-29.353a141.977%20141.977%200%200%200%2011.21-12.826c-28.27-2.032-26.553-19.203-26.553-19.203%200-.681%200-1.363.124-2.045%200%200%20.063-.603.269-1.55-5.972%202.927-15.026%206.135-26.048%206.135-20.263%200-47.778-12.083-47.778-36.995%200-24.911%2028.506-34.02%2028.506-34.02l-.015-.005a29.86%2029.86%200%200%200-2.216-.058c-31.17%201.116-56.081%2027.267-56.081%2059.428%22%20fill%3D%22url%28%23d%29%22%20opacity%3D%22.453%22%2F%3E%3Cpath%20d%3D%22M99.9%200l-2.912.915C87.782%203.887%2039.932%2020.343%201.893%2052.57L0%2054.17l.465%202.626c.784%204.268%205.341%2026.823%2018.048%2051.836%208.171%2016.031%2018.16%2030.102%2029.693%2041.824%2014.051%2014.241%2030.459%2024.802%2048.78%2031.396l2.972%201.05%201.937-.753%201.03-.364c18.209-6.553%2034.615-17.112%2048.764-31.388%2011.467-11.593%2021.458-25.666%2029.695-41.827%2012.782-25.102%2017.587-48.377%2018.076-52.006h.005l.456-2.592-2.056-1.468C159.836%2020.318%20112.047%203.884%20102.87.923L99.9%200zM54.399%20144.37c-10.861-10.983-20.322-24.306-28.123-39.602C15.523%2083.71%2010.912%2064.732%209.436%2057.59%2045.466%2027.844%2089.521%2012.462%2099.914%209.1c10.445%203.408%2054.72%2018.972%2090.482%2048.489-1.489%207.117-6.123%2026.018-16.836%2047.055-7.843%2015.38-17.305%2028.724-28.12%2039.662-13.223%2013.341-28.536%2023.214-45.522%2029.353-17.05-6.16-32.361-16.012-45.52-29.29z%22%20fill%3D%22url%28%23e%29%22%20opacity%3D%22.127%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+var logo$1 = "data:image/svg+xml,%3Csvg%20width%3D%22200%22%20height%3D%22183%22%20viewBox%3D%220%200%20200%20183%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3ELogo%20bg%3C%2Ftitle%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%2240.59%25%22%20y1%3D%22172.164%25%22%20x2%3D%22134.278%25%22%20y2%3D%22-209.701%25%22%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%22125.497%25%22%20x2%3D%2263.448%25%22%20y2%3D%22-8.979%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2272.854%25%22%20y1%3D%22157.035%25%22%20x2%3D%2272.854%25%22%20y2%3D%2250%25%22%20id%3D%22c%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%22140.325%25%22%20x2%3D%22122.689%25%22%20y2%3D%22-73.565%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%2295.2%25%22%20x2%3D%2276.121%25%22%20y2%3D%22-21.873%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M99.9%200l-2.912.915C87.782%203.887%2039.932%2020.343%201.893%2052.57L0%2054.17l.465%202.626c.784%204.268%205.341%2026.823%2018.048%2051.836%208.171%2016.031%2018.16%2030.102%2029.693%2041.824%2014.051%2014.241%2030.459%2024.802%2048.78%2031.396l2.972%201.05%201.937-.753%201.03-.364c18.209-6.553%2034.615-17.112%2048.764-31.388%2011.467-11.593%2021.458-25.666%2029.695-41.827%2012.782-25.102%2017.587-48.377%2018.076-52.006h.005l.456-2.592-2.056-1.468C159.836%2020.318%20112.047%203.884%20102.87.923L99.9%200z%22%20fill%3D%22url%28%23a%29%22%2F%3E%3Cpath%20d%3D%22M85.23%2043.803c-.061%200-28.567%209.109-28.567%2034.02%200%2024.912%2027.515%2036.995%2047.778%2036.995%2011.021%200%2020.075-3.208%2026.047-6.134.77-3.531%203.569-11.895%2012.83-11.958%201.651-.064%203.2.246%204.502.99%206.197%203.346%202.17%209.604%202.17%209.604a13.943%2013.943%200%200%200%201.416-.306c7.448-2.006%2015.84-10.525%2014.385-24.791-1.167-11.44-11.726-18.69-16.862-21.57-1.681-.944-2.782-1.42-2.782-1.42.186-1.162.246-2.061.246-2.751%200-.13-.002-.251-.006-.365v-1.34c-26.952-16.35-49.76-18.868-61.01-18.868-4.859%200-7.582.457-7.582.457l7.436%207.437zm56.95%2015.491s-3.656-1.177-7.373-1.673c-1.86%201.921-3.471%202.727-3.967%202.975l-.124.124c-10.844-2.293-14.748-7.87-14.748-7.87%2010.225-.062%2019.458%202.354%2026.212%206.444z%22%20fill%3D%22url%28%23b%29%22%20opacity%3D%22.401%22%2F%3E%3Cpath%20d%3D%22M152.281%2074.725c0%208.118-3.345%2015.616-9.047%2021.689l-.271.312.457-.002c1.549-.062%203.098.248%204.4.991%206.197%203.347%202.17%209.605%202.17%209.605%207.745-1.239%2017.35-9.914%2015.8-25.097-1.166-11.44-11.725-18.69-16.86-21.57a31.046%2031.046%200%200%201%203.351%2014.072%22%20fill%3D%22url%28%23c%29%22%20opacity%3D%22.1%22%2F%3E%3Cpath%20d%3D%22M26.857%20103.168c0%201.006.039%201.962.095%202.897%207.669%2014.75%2016.894%2027.635%2027.446%2038.305%2013.159%2013.278%2028.47%2023.13%2045.52%2029.29%2016.986-6.139%2032.299-16.012%2045.521-29.353a141.977%20141.977%200%200%200%2011.21-12.826c-28.27-2.032-26.553-19.203-26.553-19.203%200-.681%200-1.363.124-2.045%200%200%20.063-.603.269-1.55-5.972%202.927-15.026%206.135-26.048%206.135-20.263%200-47.778-12.083-47.778-36.995%200-24.911%2028.506-34.02%2028.506-34.02l-.015-.005a29.86%2029.86%200%200%200-2.216-.058c-31.17%201.116-56.081%2027.267-56.081%2059.428%22%20fill%3D%22url%28%23d%29%22%20opacity%3D%22.453%22%2F%3E%3Cpath%20d%3D%22M99.9%200l-2.912.915C87.782%203.887%2039.932%2020.343%201.893%2052.57L0%2054.17l.465%202.626c.784%204.268%205.341%2026.823%2018.048%2051.836%208.171%2016.031%2018.16%2030.102%2029.693%2041.824%2014.051%2014.241%2030.459%2024.802%2048.78%2031.396l2.972%201.05%201.937-.753%201.03-.364c18.209-6.553%2034.615-17.112%2048.764-31.388%2011.467-11.593%2021.458-25.666%2029.695-41.827%2012.782-25.102%2017.587-48.377%2018.076-52.006h.005l.456-2.592-2.056-1.468C159.836%2020.318%20112.047%203.884%20102.87.923L99.9%200zM54.399%20144.37c-10.861-10.983-20.322-24.306-28.123-39.602C15.523%2083.71%2010.912%2064.732%209.436%2057.59%2045.466%2027.844%2089.521%2012.462%2099.914%209.1c10.445%203.408%2054.72%2018.972%2090.482%2048.489-1.489%207.117-6.123%2026.018-16.836%2047.055-7.843%2015.38-17.305%2028.724-28.12%2039.662-13.223%2013.341-28.536%2023.214-45.522%2029.353-17.05-6.16-32.361-16.012-45.52-29.29z%22%20fill%3D%22url%28%23e%29%22%20opacity%3D%22.127%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 
-var bgLandscape = "data:image/svg+xml,%3Csvg%20width%3D%221440%22%20height%3D%22491%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%22-14.438%25%22%20y1%3D%22107.641%25%22%20x2%3D%2298.443%25%22%20y2%3D%22-54.066%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h720v491H0z%22%2F%3E%3ClinearGradient%20x1%3D%2295.341%25%22%20y1%3D%2296.71%25%22%20x2%3D%2237.949%25%22%20y2%3D%228.725%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2225.323%25%22%20y1%3D%2264.209%25%22%20x2%3D%22-177.025%25%22%20y2%3D%22232.498%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2298.443%25%22%20y1%3D%22-54.066%25%22%20x2%3D%22-14.438%25%22%20y2%3D%22107.641%25%22%20id%3D%22g%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22f%22%20d%3D%22M0%200h720v491H0z%22%2F%3E%3ClinearGradient%20x1%3D%22224.819%25%22%20y1%3D%22-159.682%25%22%20x2%3D%2229.43%25%22%20y2%3D%2296.423%25%22%20id%3D%22i%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%2250%25%22%20y2%3D%2297.636%25%22%20id%3D%22j%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%22-96.692%25%22%20y2%3D%22190.844%25%22%20id%3D%22k%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23C7C7C7%22%20stop-opacity%3D%22.012%22%20offset%3D%221.236%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20transform%3D%22translate%28720%29%22%3E%3Cmask%20id%3D%22c%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23b%29%22%20xlink%3Ahref%3D%22%23a%22%2F%3E%3Cg%20mask%3D%22url%28%23c%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%201l552%20533%22%20stroke%3D%22url%28%23d%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28132%20-284%29%22%2F%3E%3Cpath%20d%3D%22M429.5%20414.5L805.854%2038.146%22%20stroke%3D%22url%28%23e%29%22%20transform%3D%22translate%28132%20-284%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cmask%20id%3D%22h%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23f%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23g%29%22%20xlink%3Ahref%3D%22%23f%22%2F%3E%3Cg%20mask%3D%22url%28%23h%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%20700.5l376.354-376.354%22%20stroke%3D%22url%28%23i%29%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M162.5%20116l552%20533%22%20stroke%3D%22url%28%23j%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M433.5%20376.5L809.854.146%22%20stroke%3D%22url%28%23k%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+var bgLandscape = "data:image/svg+xml,%3Csvg%20width%3D%221440%22%20height%3D%22491%22%20viewBox%3D%220%200%201440%20491%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Ctitle%3EGroup%205%3C%2Ftitle%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%22-14.438%25%22%20y1%3D%22107.641%25%22%20x2%3D%2298.443%25%22%20y2%3D%22-54.066%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h720v491H0z%22%2F%3E%3ClinearGradient%20x1%3D%2295.341%25%22%20y1%3D%2296.71%25%22%20x2%3D%2237.949%25%22%20y2%3D%228.725%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2225.323%25%22%20y1%3D%2264.209%25%22%20x2%3D%22-177.025%25%22%20y2%3D%22232.498%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2298.443%25%22%20y1%3D%22-54.066%25%22%20x2%3D%22-14.438%25%22%20y2%3D%22107.641%25%22%20id%3D%22g%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22f%22%20d%3D%22M0%200h720v491H0z%22%2F%3E%3ClinearGradient%20x1%3D%22224.819%25%22%20y1%3D%22-159.682%25%22%20x2%3D%2229.43%25%22%20y2%3D%2296.423%25%22%20id%3D%22i%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%2250%25%22%20y2%3D%2297.636%25%22%20id%3D%22j%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%22-96.692%25%22%20y2%3D%22190.844%25%22%20id%3D%22k%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23C7C7C7%22%20stop-opacity%3D%22.012%22%20offset%3D%221.236%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20transform%3D%22translate%28720%29%22%3E%3Cmask%20id%3D%22c%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23b%29%22%20xlink%3Ahref%3D%22%23a%22%2F%3E%3Cg%20mask%3D%22url%28%23c%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%201l552%20533%22%20stroke%3D%22url%28%23d%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28132%20-284%29%22%2F%3E%3Cpath%20d%3D%22M429.5%20414.5L805.854%2038.146%22%20stroke%3D%22url%28%23e%29%22%20transform%3D%22translate%28132%20-284%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cmask%20id%3D%22h%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23f%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23g%29%22%20xlink%3Ahref%3D%22%23f%22%2F%3E%3Cg%20mask%3D%22url%28%23h%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%20700.5l376.354-376.354%22%20stroke%3D%22url%28%23i%29%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M162.5%20116l552%20533%22%20stroke%3D%22url%28%23j%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M433.5%20376.5L809.854.146%22%20stroke%3D%22url%28%23k%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 
-var bgPortrait = "data:image/svg+xml,%3Csvg%20width%3D%22768%22%20height%3D%22880%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%22-14.438%25%22%20y1%3D%22107.641%25%22%20x2%3D%2298.443%25%22%20y2%3D%22-54.066%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h768v440H0z%22%2F%3E%3ClinearGradient%20x1%3D%2295.341%25%22%20y1%3D%2296.71%25%22%20x2%3D%2237.949%25%22%20y2%3D%228.725%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2225.323%25%22%20y1%3D%2264.209%25%22%20x2%3D%22-177.025%25%22%20y2%3D%22232.498%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2298.443%25%22%20y1%3D%22-54.066%25%22%20x2%3D%22-14.438%25%22%20y2%3D%22107.641%25%22%20id%3D%22g%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22f%22%20d%3D%22M0%200h768v440H0z%22%2F%3E%3ClinearGradient%20x1%3D%22224.819%25%22%20y1%3D%22-159.682%25%22%20x2%3D%2229.43%25%22%20y2%3D%2296.423%25%22%20id%3D%22i%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%2250%25%22%20y2%3D%2297.636%25%22%20id%3D%22j%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%22-96.692%25%22%20y2%3D%22190.844%25%22%20id%3D%22k%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23C7C7C7%22%20stop-opacity%3D%22.012%22%20offset%3D%221.236%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20transform%3D%22translate%280%20440%29%22%3E%3Cmask%20id%3D%22c%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23b%29%22%20xlink%3Ahref%3D%22%23a%22%2F%3E%3Cg%20mask%3D%22url%28%23c%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%201l552%20533%22%20stroke%3D%22url%28%23d%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28180%20-284%29%22%2F%3E%3Cpath%20d%3D%22M429.5%20414.5L805.854%2038.146%22%20stroke%3D%22url%28%23e%29%22%20transform%3D%22translate%28180%20-284%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cmask%20id%3D%22h%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23f%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23g%29%22%20xlink%3Ahref%3D%22%23f%22%2F%3E%3Cg%20mask%3D%22url%28%23h%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%20700.5l376.354-376.354%22%20stroke%3D%22url%28%23i%29%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M162.5%20116l552%20533%22%20stroke%3D%22url%28%23j%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M433.5%20376.5L809.854.146%22%20stroke%3D%22url%28%23k%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+var bgPortrait = "data:image/svg+xml,%3Csvg%20width%3D%22768%22%20height%3D%22880%22%20viewBox%3D%220%200%20768%20880%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Ctitle%3E4th%20Section%3C%2Ftitle%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%22-14.438%25%22%20y1%3D%22107.641%25%22%20x2%3D%2298.443%25%22%20y2%3D%22-54.066%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h768v440H0z%22%2F%3E%3ClinearGradient%20x1%3D%2295.341%25%22%20y1%3D%2296.71%25%22%20x2%3D%2237.949%25%22%20y2%3D%228.725%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2225.323%25%22%20y1%3D%2264.209%25%22%20x2%3D%22-177.025%25%22%20y2%3D%22232.498%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2298.443%25%22%20y1%3D%22-54.066%25%22%20x2%3D%22-14.438%25%22%20y2%3D%22107.641%25%22%20id%3D%22g%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22f%22%20d%3D%22M0%200h768v440H0z%22%2F%3E%3ClinearGradient%20x1%3D%22224.819%25%22%20y1%3D%22-159.682%25%22%20x2%3D%2229.43%25%22%20y2%3D%2296.423%25%22%20id%3D%22i%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%2250%25%22%20y2%3D%2297.636%25%22%20id%3D%22j%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%22-96.692%25%22%20y2%3D%22190.844%25%22%20id%3D%22k%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23C7C7C7%22%20stop-opacity%3D%22.012%22%20offset%3D%221.236%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20transform%3D%22translate%280%20440%29%22%3E%3Cmask%20id%3D%22c%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23b%29%22%20xlink%3Ahref%3D%22%23a%22%2F%3E%3Cg%20mask%3D%22url%28%23c%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%201l552%20533%22%20stroke%3D%22url%28%23d%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28180%20-284%29%22%2F%3E%3Cpath%20d%3D%22M429.5%20414.5L805.854%2038.146%22%20stroke%3D%22url%28%23e%29%22%20transform%3D%22translate%28180%20-284%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cmask%20id%3D%22h%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23f%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23g%29%22%20xlink%3Ahref%3D%22%23f%22%2F%3E%3Cg%20mask%3D%22url%28%23h%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%20700.5l376.354-376.354%22%20stroke%3D%22url%28%23i%29%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M162.5%20116l552%20533%22%20stroke%3D%22url%28%23j%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M433.5%20376.5L809.854.146%22%20stroke%3D%22url%28%23k%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 
 var large$2 = function large(css$$1) {
   return breakpoint('large', css$$1);
@@ -9191,16 +7828,16 @@ var PreFooter = function PreFooter(_ref) {
             ' ',
             React__default.createElement(
               'a',
-              { href: 'https://alpha.aragon.one' },
+              { href: 'https://alpha.aragon.one', target: '_blank' },
               'web version'
             )
           ),
           React__default.createElement(
             'a',
-            { href: 'https://github.com/aragon/aragon/releases' },
+            { href: 'https://github.com/aragon/aragon/releases', target: '_blank' },
             React__default.createElement(
               StyledButton,
-              { mode: 'strong' },
+              { mode: 'strong', wide: true },
               'Download Aragon Core 0.3'
             )
           )
@@ -9315,15 +7952,15 @@ var MenuItem = function MenuItem(_ref4) {
 
 MenuItem.defaultProps = DefaultProps$5;
 
-var close = "data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M20.297%205.64l-6.508%206.508%206.508%206.508-1.64%201.64-6.509-6.507-6.507%206.508L4%2018.657l6.508-6.509L4%205.641%205.64%204l6.508%206.508L18.656%204z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+var close = "data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Epanel-close%3C%2Ftitle%3E%3Cpath%20d%3D%22M20.297%205.64l-6.508%206.508%206.508%206.508-1.64%201.64-6.509-6.507-6.507%206.508L4%2018.657l6.508-6.509L4%205.641%205.64%204l6.508%206.508L18.656%204z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
 
-var open = "data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2%2019v-2.352h20V19H2zm0-5.852v-2.296h20v2.296H2zM2%205h20v2.352H2V5z%22%20fill%3D%22%23717171%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+var open = "data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Epanel-open%3C%2Ftitle%3E%3Cpath%20d%3D%22M2%2019v-2.352h20V19H2zm0-5.852v-2.296h20v2.296H2zM2%205h20v2.352H2V5z%22%20fill%3D%22%23717171%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
 
 var Container$1 = styled.div(['min-height:60px;', ';'], unselectable());
 
 var PanelStyles = styled.div(['position:absolute;z-index:3;top:0;right:0;padding-top:70px;line-height:2;font-size:17px;background:', ';a{color:white;text-decoration:none;}'], theme.accent);
 
-var PanelContent = styled.div(['padding:0 60px 30px 30px;a{display:block;}']);
+var PanelContent = styled.div(['padding:0 60px 20px 30px;a{display:block;}']);
 
 var Toggle = styled.a.attrs({ role: 'button' })(['position:absolute;right:0;z-index:4;height:60px;padding:0 15px;display:flex;align-items:center;cursor:pointer;']);
 
@@ -9437,11 +8074,11 @@ var Panel = function (_React$Component) {
 
 var MenuPanel = getPublicUrl(Panel);
 
-var logo$2 = "230936e53c9299d7.svg";
+var logo$2 = "fdb740459e24da26.svg";
 
-var logoCompact = "07757730e766d94a.svg";
+var logoCompact = "e0a3569ec6583a2a.svg";
 
-var logoMinimal = "6abe0a02a6d9003d.svg";
+var logoMinimal = "1052b10322bdef3c.svg";
 
 var Container$2 = styled.span(['display:flex;align-items:center;']);
 
@@ -9633,9 +8270,7 @@ Header.defaultProps = DefaultProps$3;
 
 var StyledCard = styled.div(['width:282px;height:322px;background:', ';border:1px solid ', ';border-radius:3px;'], theme.contentBackground, theme.contentBorder);
 
-var logo$3 = "data:image/svg+xml,%3Csvg%20width%3D%221129%22%20height%3D%22792%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%2258.303%25%22%20y1%3D%2229.305%25%22%20x2%3D%22-20.356%25%22%20y2%3D%2289.584%25%22%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%22125.887%25%22%20x2%3D%2250%25%22%20y2%3D%2227.419%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2238.76%25%22%20y1%3D%2240.284%25%22%20x2%3D%2227.198%25%22%20y2%3D%224.898%25%22%20id%3D%22c%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.7%22%3E%3Cpath%20d%3D%22M474.223%2064.24c-.503%200-231.685%2073.873-231.685%20275.905%200%20202.033%20223.146%20300.029%20387.48%20300.029%2089.383%200%20162.808-26.013%20211.24-49.744%206.242-28.642%2028.943-96.473%20104.047-96.981%2013.393-.523%2025.958%201.99%2036.517%208.021%2050.256%2027.144%2017.59%2077.898%2017.59%2077.898%201.894-.307%203.809-.663%205.724-1.075%201.91-.413%203.83-.89%205.764-1.408%2060.404-16.268%20128.467-85.36%20116.661-201.057-9.463-92.774-95.09-151.58-136.743-174.94-13.64-7.648-22.566-11.513-22.566-11.513%201.508-9.423%201.995-16.71%201.995-22.309%200-1.05-.02-2.035-.05-2.96v-10.86C751.617%2020.65%20566.645.223%20475.414.223c-39.412%200-61.5%203.704-61.5%203.704l60.309%2060.313zm461.86%20125.638s-29.652-9.55-59.8-13.57c-15.083%2015.58-28.15%2022.113-32.17%2024.129-.503.497-1.005%201-1.005%201-87.95-18.595-119.612-63.827-119.612-63.827%2082.93-.497%20157.812%2019.098%20212.587%2052.268z%22%20fill%3D%22url%28%23a%29%22%20opacity%3D%22.779%22%2F%3E%3Cpath%20d%3D%22M1018.002%20315.017c0%2065.842-27.134%20126.647-73.375%20175.899l-2.197%202.528%203.704-.01c12.564-.508%2025.129%202.005%2035.688%208.036%2050.256%2027.144%2017.59%2077.898%2017.59%2077.898%2062.82-10.051%20140.719-80.406%20128.15-203.54-9.464-92.774-95.092-151.58-136.744-174.94%2017.901%2035.357%2027.184%2074.19%2027.184%20114.13%22%20fill%3D%22url%28%23b%29%22%20opacity%3D%22.374%22%2F%3E%3Cpath%20d%3D%22M.808%20545.696c0%208.152.317%2015.911.769%2023.495%2062.198%20119.616%20137.015%20224.115%20222.588%20310.653%20106.72%20107.685%20230.9%20187.578%20369.166%20237.539%20137.764-49.785%20261.949-129.854%20369.182-238.057%2031.792-32.144%2062.112-66.887%2090.915-104.012-229.272-16.479-215.346-155.74-215.346-155.74%200-5.524%200-11.057%201.005-16.585%200%200%20.508-4.89%202.176-12.564-48.432%2023.736-121.857%2049.749-211.244%2049.749-164.335%200-387.48-97.996-387.48-300.029%200-202.032%20231.181-275.905%20231.181-275.905l-.12-.035c-5.86-.452-12.143-.472-17.973-.472C202.836%2072.784.808%20284.863.808%20545.696%22%20fill%3D%22url%28%23c%29%22%20opacity%3D%22.557%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
-
-// AragonApp provides everything needed to start an Aragon App.
+var logo$3 = "data:image/svg+xml,%3Csvg%20width%3D%221129%22%20height%3D%22792%22%20viewBox%3D%220%200%201129%20792%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3ELogo%20bg%3C%2Ftitle%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%2258.303%25%22%20y1%3D%2229.305%25%22%20x2%3D%22-20.356%25%22%20y2%3D%2289.584%25%22%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%22125.887%25%22%20x2%3D%2250%25%22%20y2%3D%2227.419%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2238.76%25%22%20y1%3D%2240.284%25%22%20x2%3D%2227.198%25%22%20y2%3D%224.898%25%22%20id%3D%22c%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.7%22%3E%3Cpath%20d%3D%22M474.223%2064.24c-.503%200-231.685%2073.873-231.685%20275.905%200%20202.033%20223.146%20300.029%20387.48%20300.029%2089.383%200%20162.808-26.013%20211.24-49.744%206.242-28.642%2028.943-96.473%20104.047-96.981%2013.393-.523%2025.958%201.99%2036.517%208.021%2050.256%2027.144%2017.59%2077.898%2017.59%2077.898%201.894-.307%203.809-.663%205.724-1.075%201.91-.413%203.83-.89%205.764-1.408%2060.404-16.268%20128.467-85.36%20116.661-201.057-9.463-92.774-95.09-151.58-136.743-174.94-13.64-7.648-22.566-11.513-22.566-11.513%201.508-9.423%201.995-16.71%201.995-22.309%200-1.05-.02-2.035-.05-2.96v-10.86C751.617%2020.65%20566.645.223%20475.414.223c-39.412%200-61.5%203.704-61.5%203.704l60.309%2060.313zm461.86%20125.638s-29.652-9.55-59.8-13.57c-15.083%2015.58-28.15%2022.113-32.17%2024.129-.503.497-1.005%201-1.005%201-87.95-18.595-119.612-63.827-119.612-63.827%2082.93-.497%20157.812%2019.098%20212.587%2052.268z%22%20fill%3D%22url%28%23a%29%22%20opacity%3D%22.779%22%2F%3E%3Cpath%20d%3D%22M1018.002%20315.017c0%2065.842-27.134%20126.647-73.375%20175.899l-2.197%202.528%203.704-.01c12.564-.508%2025.129%202.005%2035.688%208.036%2050.256%2027.144%2017.59%2077.898%2017.59%2077.898%2062.82-10.051%20140.719-80.406%20128.15-203.54-9.464-92.774-95.092-151.58-136.744-174.94%2017.901%2035.357%2027.184%2074.19%2027.184%20114.13%22%20fill%3D%22url%28%23b%29%22%20opacity%3D%22.374%22%2F%3E%3Cpath%20d%3D%22M.808%20545.696c0%208.152.317%2015.911.769%2023.495%2062.198%20119.616%20137.015%20224.115%20222.588%20310.653%20106.72%20107.685%20230.9%20187.578%20369.166%20237.539%20137.764-49.785%20261.949-129.854%20369.182-238.057%2031.792-32.144%2062.112-66.887%2090.915-104.012-229.272-16.479-215.346-155.74-215.346-155.74%200-5.524%200-11.057%201.005-16.585%200%200%20.508-4.89%202.176-12.564-48.432%2023.736-121.857%2049.749-211.244%2049.749-164.335%200-387.48-97.996-387.48-300.029%200-202.032%20231.181-275.905%20231.181-275.905l-.12-.035c-5.86-.452-12.143-.472-17.973-.472C202.836%2072.784.808%20284.863.808%20545.696%22%20fill%3D%22url%28%23c%29%22%20opacity%3D%22.557%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 
 var StyledAragonApp = styled.main(['min-width:320px;min-height:100vh;background-color:', ';background-image:', ';background-position:50% 50%;background-repeat:no-repeat;'], theme.mainBackground, function (_ref) {
   var backgroundLogo = _ref.backgroundLogo;
