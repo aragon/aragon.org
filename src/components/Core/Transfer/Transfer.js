@@ -12,15 +12,15 @@ const Transfer = () => (
         subtitle: 'Tokens represent your stake in the organization',
         textContent: `
           Your organization is in control of its funds. Transfer and assign
-          them according to your personal needs
+          them according to your personal needs without artificial limitations
         `,
         image: transfer,
       },
       {
         title: 'Fundraising',
-        subtitle: 'Grasp the potential of crowdfunding',
+        subtitle: 'Grasp the potential of a new form of crowdfunding',
         textContent: `
-          Utilize the power of the crowd and raise funds globally, in private
+          Utilize the power of the crowd for funding and raise funds globally, in private
           or publicly, without relying on banks or financial gatekeepers
         `,
         image: raise,
