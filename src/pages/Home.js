@@ -9,7 +9,7 @@ import {
 } from '../components/Home'
 
 const FirstSection = styled.div`
-  margin-bottom: 200px;
+  margin-bottom: calc(-200px - 10%);
 `
 
 const Home = () => (
