@@ -86,7 +86,7 @@ const AGP = () => (
     <div>
       <SectionTitle title="Aragon Governance Proposals" />
       <h1 className="title">
-        Join us in creating an even better Aragon by making your voice heard
+        Join us in improving Aragon by making your voice heard
       </h1>
       <div className="columns">
         <p className="item">
