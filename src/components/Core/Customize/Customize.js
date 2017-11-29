@@ -89,7 +89,7 @@ const Customize = () => (
         <div className="item">
           <img src={settings} alt="" />
           <p>
-            Aragon organizations are powered by the AragonOS and fully
+            Aragon organizations are powered by AragonOS and fully
             customizable to fit your needs
           </p>
         </div>
@@ -102,7 +102,7 @@ const Customize = () => (
         <div className="item">
           <img src={code} alt="" />
           <p>
-            Code is open source. As a developer you can even modify it to match
+            Code is open source. As a developer you can modify it to match
             your specific use case
           </p>
         </div>
