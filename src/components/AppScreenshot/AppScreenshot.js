@@ -13,7 +13,13 @@ const StyledImg = styled.img`
 `
 
 const AppScreenshot = props => (
-  <StyledImg src={appScreen} width="1140" height="508" alt="Aragon App" {...props} />
+  <StyledImg
+    src={appScreen}
+    width="1140"
+    height="508"
+    alt="Aragon"
+    {...props}
+  />
 )
 
 export default AppScreenshot

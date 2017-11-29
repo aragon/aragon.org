@@ -5,7 +5,6 @@ import {
   Text,
   theme,
   breakpoint,
-  BreakPoint,
   Button,
 } from '@aragon/ui'
 import AppScreenshot from '../../AppScreenshot/AppScreenshot'
@@ -54,6 +53,7 @@ const StyledContainer = styled(Section)`
   }
   .buttons {
     display: flex;
+    ${medium('display: none')};
     justify-content: center;
     margin: 20px auto 0;
   }
@@ -69,16 +69,14 @@ const UnstoppableOrganizations = () => (
       <Text size="large" className="subtitle">
         Create value without borders or intermediaries
       </Text>
-      <BreakPoint to="medium">
-        <div className="buttons">
-          <div className="button">
-            <Button mode="outline">Web version</Button>
-          </div>
-          <div className="button">
-            <Button mode="strong">Aragon Core</Button>
-          </div>
+      <div className="buttons">
+        <div className="button">
+          <Button mode="outline">Web version</Button>
         </div>
-      </BreakPoint>
+        <div className="button">
+          <Button mode="strong">Aragon Core</Button>
+        </div>
+      </div>
       <div className="app-wrapper">
         <AppScreenshot className="app-img" />
       </div>
