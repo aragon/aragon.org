@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageTitle, Page } from '../components'
-import { Intro } from '../components/Foundation'
+import { Intro, Grants } from '../components/Foundation'
 
 const Foundation = () => (
   <Page path="/foundation">
@@ -9,6 +9,7 @@ const Foundation = () => (
       subtitle="Cornerstone for architecting the project"
     />
     <Intro />
+    <Grants />
   </Page>
 )
 

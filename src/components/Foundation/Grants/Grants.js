@@ -2,7 +2,7 @@ import React from 'react'
 import { styled } from '@aragon/ui'
 import { breakpoint, Section, Button, theme } from '@aragon/ui'
 
-import SectionTitle from '../../SectionTitle.js'
+import { SectionTitle, Anchor } from '../../'
 
 import repos from './assets/repos.png'
 
@@ -20,20 +20,13 @@ const Main = styled(Section)`
     text-align: center;
     padding: 0 10%;
   }
-  .columns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .item {
-    margin-top: 20px;
-    max-width: 400px;
-  }
+
   img {
     max-width: calc(100% - 30px);
   }
   p {
-    font-size: 18px;
+    font-size: 17px;
+    margin-bottom: 1em;
     color: ${theme.textSecondary};
   }
   .cta {
@@ -42,21 +35,34 @@ const Main = styled(Section)`
   }
 
   ${medium(`
-    padding: 120px 15px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    .title {
+      margin: 0 10%;
+    }
+    p {
+      font-size: 18px;
+    }
     .columns {
-      flex-direction: row;
+      display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
       margin: 50px 0;
+    }
+    .image img {
+      max-width: 75%;
     }
     .item {
       width: 50%;
     }
     .item:nth-child(1) {
-      padding-right: 7.5px;
+      padding-right: 10px;
     }
     .item:nth-child(2) {
-      padding-left: 7.5px;
+      padding-left: 10px;
+    }
+    .cta {
+      margin-top: 50px;
     }
   `)};
 
@@ -77,18 +83,18 @@ const Grants = () => (
       <img src={repos} alt="" />
       <div className="columns">
         <p className="item">
-          Aragon's Grants Program is intended to encourage and incentivize
-          people outside of the Core Team to engage in the development of the
-          Aragon ecosystem.
+          Aragon Nest was created to support great
+          developers in the development of important tools
+          and research for the Aragon and Ethereum ecosystem.
         </p>
         <p className="item">
-          The Aragon Foundation will introduce multiple distinct events upon
-          which participants can join to submit their concepts for deliberation
-          and be accepted into the Grants Program.
+          The Aragon Foundation will introduce a way for
+          participants to join and submit their concepts for deliberation
+          and be accepted into Aragon Nest.
         </p>
       </div>
       <div className="cta">
-        <Button mode="strong">Apply now</Button>
+        <Anchor mode="strong" href="https://blog.aragon.one/introducing-aragon-nest-1aa8c91c0566" target="_blank">Read more</Anchor>
       </div>
     </div>
   </Main>
