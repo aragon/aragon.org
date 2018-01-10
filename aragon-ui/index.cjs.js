@@ -8,6 +8,367 @@ var React = require('react');
 var React__default = _interopDefault(React);
 var reactDom = _interopDefault(require('react-dom'));
 
+var classCallCheck = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+var createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+
+
+
+
+
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+
+
+var inherits = function (subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+};
+
+
+
+
+
+
+
+
+
+var objectWithoutProperties = function (obj, keys) {
+  var target = {};
+
+  for (var i in obj) {
+    if (keys.indexOf(i) >= 0) continue;
+    if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+    target[i] = obj[i];
+  }
+
+  return target;
+};
+
+var possibleConstructorReturn = function (self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && (typeof call === "object" || typeof call === "function") ? call : self;
+};
+
+
+
+
+
+var slicedToArray = function () {
+  function sliceIterator(arr, i) {
+    var _arr = [];
+    var _n = true;
+    var _d = false;
+    var _e = undefined;
+
+    try {
+      for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+        _arr.push(_s.value);
+
+        if (i && _arr.length === i) break;
+      }
+    } catch (err) {
+      _d = true;
+      _e = err;
+    } finally {
+      try {
+        if (!_n && _i["return"]) _i["return"]();
+      } finally {
+        if (_d) throw _e;
+      }
+    }
+
+    return _arr;
+  }
+
+  return function (arr, i) {
+    if (Array.isArray(arr)) {
+      return arr;
+    } else if (Symbol.iterator in Object(arr)) {
+      return sliceIterator(arr, i);
+    } else {
+      throw new TypeError("Invalid attempt to destructure non-iterable instance");
+    }
+  };
+}();
+
+
+
+var taggedTemplateLiteral = function (strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, {
+    raw: {
+      value: Object.freeze(raw)
+    }
+  }));
+};
+
+
+
+
+
+
+
+
+
+var toConsumableArray = function (arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+    return arr2;
+  } else {
+    return Array.from(arr);
+  }
+};
+
+var Finance = function Finance(props) {
+  return React__default.createElement(
+    "svg",
+    _extends({ width: 22, height: 22, viewBox: "0 0 22 22" }, props),
+    React__default.createElement(
+      "g",
+      { fill: "none", fillRule: "evenodd" },
+      React__default.createElement("path", { d: "M0 0h22v22H0z" }),
+      React__default.createElement("path", {
+        d: "M18.063 3c.253 0 .473.093.659.278a.901.901 0 0 1 .278.66v13.124a.901.901 0 0 1-.278.66.901.901 0 0 1-.66.278H4.938a.901.901 0 0 1-.659-.278.901.901 0 0 1-.278-.66V3.938c0-.253.093-.473.278-.659A.901.901 0 0 1 4.938 3h13.125zm0 14.063V3.938H4.938v13.124h13.125zM7.28 8.155a.463.463 0 0 1-.468-.469.45.45 0 0 1 .139-.33.45.45 0 0 1 .33-.138h.937V6.28a.45.45 0 0 1 .139-.33.45.45 0 0 1 .33-.138.45.45 0 0 1 .33.139.45.45 0 0 1 .138.33v.937h.938a.45.45 0 0 1 .33.139.45.45 0 0 1 .139.33.463.463 0 0 1-.469.469h-.938v.937a.463.463 0 0 1-.469.469.463.463 0 0 1-.468-.47v-.937H7.28zm3.062 3.501c.097.098.146.21.146.337a.417.417 0 0 1-.146.322l-.996.996.996.997c.097.097.146.21.146.337a.417.417 0 0 1-.146.322.425.425 0 0 1-.33.146.425.425 0 0 1-.33-.146l-.995-.982-.997.982a.425.425 0 0 1-.33.146.425.425 0 0 1-.329-.146.417.417 0 0 1-.146-.322c0-.127.049-.24.146-.337l.996-.996-.996-.997a.417.417 0 0 1-.146-.322c0-.127.049-.24.146-.337a.447.447 0 0 1 .33-.132c.132 0 .242.044.33.132l.995.996.997-.996a.447.447 0 0 1 .33-.132c.131 0 .24.044.329.132zm2.563-3.5a.463.463 0 0 1-.469-.47.45.45 0 0 1 .14-.33.45.45 0 0 1 .33-.138h2.812a.45.45 0 0 1 .33.139.45.45 0 0 1 .139.33.463.463 0 0 1-.469.469h-2.813zm0 4.687a.463.463 0 0 1-.469-.469.45.45 0 0 1 .14-.33.45.45 0 0 1 .33-.139h2.812a.45.45 0 0 1 .33.14.45.45 0 0 1 .139.329.463.463 0 0 1-.469.469h-2.813zm0 1.875a.463.463 0 0 1-.469-.469.45.45 0 0 1 .14-.33.45.45 0 0 1 .33-.139h2.812a.45.45 0 0 1 .33.14.45.45 0 0 1 .139.329.463.463 0 0 1-.469.469h-2.813z",
+        fill: "currentColor"
+      })
+    )
+  );
+};
+
+var Fundraising = function Fundraising(props) {
+  return React__default.createElement(
+    "svg",
+    _extends({ width: 22, height: 22, viewBox: "0 0 22 22" }, props),
+    React__default.createElement(
+      "g",
+      { fill: "none", fillRule: "evenodd" },
+      React__default.createElement("path", { d: "M0 0h22v22H0z" }),
+      React__default.createElement(
+        "g",
+        { stroke: "currentColor" },
+        React__default.createElement("path", {
+          d: "M6 12.26C6.402 13.75 9.137 15 12.475 15 16.089 15 19 13.534 19 11.875c0-.886-1.07-1.903-2.967-2.357",
+          strokeLinecap: "round",
+          strokeLinejoin: "round"
+        }),
+        React__default.createElement("path", { d: "M16 6.88C16 8.536 13.1 10 9.5 10S3 8.536 3 6.88C3 5.224 5.9 4 9.5 4S16 5.224 16 6.88" }),
+        React__default.createElement("path", {
+          d: "M6 12v2c0 1.667 2.9 3 6.5 3s6.5-1.333 6.5-3v-2c0 1.643-2.9 3.095-6.5 3.095S6 13.643 6 12z",
+          strokeLinecap: "round",
+          strokeLinejoin: "round"
+        }),
+        React__default.createElement("path", { d: "M9.5 10.095C5.9 10.095 3 8.643 3 7v2c0 1.667 2.9 3 6.5 3S16 10.667 16 9V7c0 1.643-2.9 3.095-6.5 3.095" })
+      )
+    )
+  );
+};
+
+var Groups = function Groups(props) {
+  return React__default.createElement(
+    "svg",
+    _extends({ width: 22, height: 22, viewBox: "0 0 22 22" }, props),
+    React__default.createElement(
+      "g",
+      { fill: "none", fillRule: "evenodd" },
+      React__default.createElement("path", { d: "M0 0h22v22H0z" }),
+      React__default.createElement("path", {
+        d: "M14.928 16.169l.395.22c.264.146.396.337.396.571v1.186a.753.753 0 0 1-.235.564.773.773 0 0 1-.556.227H4.79a.773.773 0 0 1-.557-.227.753.753 0 0 1-.234-.564V16.96c0-.215.132-.4.396-.557l.395-.234 3.032-1.64c-.556-.44-.942-1.026-1.157-1.758-.215-.733-.322-1.314-.322-1.744V9.05c0-.332.102-.662.307-.989.205-.327.474-.623.806-.886.332-.264.71-.479 1.135-.645a3.497 3.497 0 0 1 1.282-.249c.44 0 .87.083 1.29.25.419.165.793.38 1.12.644.327.263.59.559.79.886.2.327.301.657.301.989v1.977c0 .479-.095 1.075-.286 1.787-.19.713-.559 1.29-1.106 1.729l2.945 1.626zM14.78 18v-.835a.391.391 0 0 0-.102-.073l-.117-.059a.071.071 0 0 1-.037-.014.479.479 0 0 0-.051-.03l-2.945-1.626a.99.99 0 0 1-.337-.315.863.863 0 0 1-.146-.432.856.856 0 0 1 .066-.454.913.913 0 0 1 .285-.366c.4-.313.674-.76.82-1.34.147-.581.22-1.058.22-1.429V9.05c0-.342-.256-.733-.769-1.172a2.672 2.672 0 0 0-1.794-.66c-.664 0-1.262.22-1.794.66-.533.44-.799.83-.799 1.172v1.977c0 .371.088.848.264 1.429.176.58.464 1.027.864 1.34.117.098.208.22.271.366a.856.856 0 0 1 .066.454.863.863 0 0 1-.146.432.865.865 0 0 1-.337.3L5.23 17.005a.06.06 0 0 0-.029.007.115.115 0 0 0-.03.022.432.432 0 0 0-.124.059l-.11.073V18h9.844zm3.428-4.16l.395.22c.264.146.396.336.396.57v1.173a.753.753 0 0 1-.234.564.773.773 0 0 1-.557.227h-1.553a5.372 5.372 0 0 0-.183-.542.952.952 0 0 0-.3-.396h1.89v-.835a4.202 4.202 0 0 0-.103-.066.408.408 0 0 0-.117-.05.092.092 0 0 0-.037-.023.402.402 0 0 1-.051-.022l-2.988-1.626a.99.99 0 0 1-.337-.315.863.863 0 0 1-.147-.432.856.856 0 0 1 .066-.454.913.913 0 0 1 .286-.366c.4-.322.68-.774.842-1.355.161-.581.242-1.052.242-1.414V6.721c0-.352-.264-.747-.791-1.187a2.756 2.756 0 0 0-1.817-.659 2.981 2.981 0 0 0-1.787.6 2.301 2.301 0 0 0-.586-.102l-.6-.03c.341-.4.78-.737 1.318-1.01a3.608 3.608 0 0 1 1.655-.41c.44 0 .872.085 1.297.256a4.52 4.52 0 0 1 1.135.652c.332.264.6.562.806.894.205.332.307.664.307.996v1.977c0 .469-.102 1.062-.307 1.78-.205.718-.581 1.292-1.128 1.721l2.988 1.64z",
+        fill: "currentColor"
+      })
+    )
+  );
+};
+
+var Home = function Home(props) {
+  return React__default.createElement(
+    "svg",
+    _extends({ width: 22, height: 22, viewBox: "0 0 22 22" }, props),
+    React__default.createElement(
+      "g",
+      { fill: "none", fillRule: "evenodd" },
+      React__default.createElement("path", { d: "M0 0h22v22H0z" }),
+      React__default.createElement("path", {
+        d: "M17.92 10.515a.46.46 0 0 1 .124.337.52.52 0 0 1-.139.336.717.717 0 0 1-.154.096.403.403 0 0 1-.168.036.49.49 0 0 1-.19-.036.363.363 0 0 1-.147-.11l-.63-.66v7.017a.45.45 0 0 1-.14.33.45.45 0 0 1-.329.139h-3.28a.45.45 0 0 1-.33-.14.45.45 0 0 1-.14-.329v-4.687H8.662l-.015 4.687a.45.45 0 0 1-.139.33.45.45 0 0 1-.33.139H4.913a.463.463 0 0 1-.469-.469v-7.016l-.63.659a.52.52 0 0 1-.337.139.46.46 0 0 1-.336-.125.52.52 0 0 1-.14-.336.46.46 0 0 1 .125-.337L10.2 3.146a.498.498 0 0 1 .161-.11.49.49 0 0 1 .366 0 .363.363 0 0 1 .147.11l7.046 7.369zm-2.241-.909c0-.02.004-.039.014-.058l-5.156-5.39-5.17 5.39c0 .02.002.039.006.058a.24.24 0 0 1 .008.059v7.398H7.71l.015-4.688a.45.45 0 0 1 .139-.33.45.45 0 0 1 .33-.139h4.672a.45.45 0 0 1 .33.14.45.45 0 0 1 .139.329v4.688h2.344V9.605z",
+        fill: "currentColor"
+      })
+    )
+  );
+};
+
+var Identity = function Identity(props) {
+  return React__default.createElement(
+    "svg",
+    _extends({ width: 22, height: 22, viewBox: "0 0 22 22" }, props),
+    React__default.createElement(
+      "g",
+      { fill: "none", fillRule: "evenodd" },
+      React__default.createElement("path", { d: "M0 0h22v22H0z" }),
+      React__default.createElement("path", {
+        d: "M4.04 16.984V18h11.44v1H4.04a1.02 1.02 0 0 1-.731-.297A.943.943 0 0 1 3 18v-1.5c0-.281.173-.518.52-.71l.52-.29 4.566-2.078a3.891 3.891 0 0 1-.926-1.008 6.536 6.536 0 0 1-.61-1.21 6.431 6.431 0 0 1-.333-1.212A6.209 6.209 0 0 1 6.64 9V6.5c0-.417.135-.833.406-1.25a4.43 4.43 0 0 1 1.073-1.125 5.961 5.961 0 0 1 1.503-.813A4.82 4.82 0 0 1 11.32 3c.574 0 1.14.104 1.698.313a5.819 5.819 0 0 1 1.495.812c.439.333.796.708 1.073 1.125.276.417.414.833.414 1.25V9c0 .302-.032.651-.098 1.047a6.59 6.59 0 0 1-.324 1.21 5.86 5.86 0 0 1-.602 1.188 4.13 4.13 0 0 1-.91.992l1.381.61-.26 1-1.56-.703a1.045 1.045 0 0 1-.406-.32.958.958 0 0 1-.195-.477c-.01-.177.016-.344.082-.5a1.03 1.03 0 0 1 .308-.406c.564-.417.962-1.008 1.195-1.774.233-.765.349-1.388.349-1.867V6.5c0-.27-.108-.552-.325-.844a3.757 3.757 0 0 0-.837-.804 4.941 4.941 0 0 0-1.162-.61A3.744 3.744 0 0 0 11.32 4c-.444 0-.883.08-1.316.242a4.932 4.932 0 0 0-1.17.617 3.65 3.65 0 0 0-.837.813c-.211.292-.317.568-.317.828V9c0 .49.127 1.115.382 1.875.254.76.653 1.349 1.194 1.766a.969.969 0 0 1 .195 1.367c-.108.14-.243.247-.406.32l-4.566 2.078a1.041 1.041 0 0 0-.268.157c-.114.083-.171.223-.171.421zM18.5 16a.48.48 0 0 1 .352.148.48.48 0 0 1 .148.352.48.48 0 0 1-.148.352.48.48 0 0 1-.352.148H17v1.5a.48.48 0 0 1-.148.352.48.48 0 0 1-.352.148.48.48 0 0 1-.352-.148A.48.48 0 0 1 16 18.5V17h-1.5a.48.48 0 0 1-.352-.148A.48.48 0 0 1 14 16.5a.48.48 0 0 1 .148-.352A.48.48 0 0 1 14.5 16H16v-1.5a.48.48 0 0 1 .148-.352A.48.48 0 0 1 16.5 14a.48.48 0 0 1 .352.148.48.48 0 0 1 .148.352V16h1.5z",
+        fill: "currentColor"
+      })
+    )
+  );
+};
+
+var Notifications = function Notifications(props) {
+  return React__default.createElement(
+    "svg",
+    _extends({ width: 22, height: 22, viewBox: "0 0 22 22" }, props),
+    React__default.createElement(
+      "g",
+      { fill: "none", fillRule: "evenodd" },
+      React__default.createElement("path", { d: "M0 0h22v22H0z" }),
+      React__default.createElement("path", {
+        d: "M17.271 13.367c.254.313.455.591.601.835a.731.731 0 0 1 .044.733.718.718 0 0 1-.571.424c-.264.04-.469.059-.616.059H13.99c0 .693-.244 1.284-.732 1.772a2.414 2.414 0 0 1-1.773.733 2.414 2.414 0 0 1-1.772-.733 2.414 2.414 0 0 1-.733-1.772H6.3c-.225 0-.457-.027-.696-.08a.732.732 0 0 1-.52-.403c-.117-.245-.107-.496.03-.755a6.56 6.56 0 0 1 .556-.857c.264-.342.552-.73.864-1.164.313-.435.469-.887.469-1.355V7.742c0-.664.115-1.286.344-1.867.23-.582.545-1.09.945-1.524.4-.434.874-.776 1.42-1.025a4.191 4.191 0 0 1 1.759-.374c.634 0 1.225.125 1.772.374a4.46 4.46 0 0 1 1.428 1.025c.406.435.723.942.953 1.524a5.04 5.04 0 0 1 .344 1.867v3.062c0 .478.149.942.447 1.391.297.45.583.84.856 1.172zm-5.786 3.574c.42 0 .78-.149 1.077-.446.298-.298.447-.657.447-1.077H9.962c0 .42.149.779.447 1.077.298.297.656.446 1.076.446zm5.347-2.52a8.139 8.139 0 0 0-.337-.425c-.322-.39-.657-.856-1.003-1.398a3.262 3.262 0 0 1-.52-1.794V7.742c0-.527-.09-1.02-.271-1.48a3.85 3.85 0 0 0-.74-1.2 3.511 3.511 0 0 0-1.106-.813c-.425-.2-.886-.3-1.384-.3-.489 0-.945.1-1.37.3-.425.2-.793.47-1.106.813a3.744 3.744 0 0 0-.732 1.2 4.102 4.102 0 0 0-.264 1.48v3.062c0 .634-.183 1.218-.55 1.75a46.606 46.606 0 0 1-1.157 1.619c-.063.088-.12.17-.168.249h10.708z",
+        fill: "currentColor"
+      })
+    )
+  );
+};
+
+var Permissions = function Permissions(props) {
+  return React__default.createElement(
+    "svg",
+    _extends({ width: 22, height: 22, viewBox: "0 0 22 22" }, props),
+    React__default.createElement(
+      "g",
+      { fill: "none", fillRule: "evenodd" },
+      React__default.createElement("path", { d: "M0 0h22v22H0z" }),
+      React__default.createElement(
+        "g",
+        { stroke: "currentColor" },
+        React__default.createElement("path", {
+          d: "M11.036 3.143L3.578 6.357V7.43h14.916V6.357l-7.458-3.214zm6.88 12.393H4.071c-.318 0-.577.242-.577.535v1.072h15V16.07c0-.293-.26-.535-.578-.535z",
+          strokeLinecap: "round",
+          strokeLinejoin: "round"
+        }),
+        React__default.createElement("path", { d: "M5 7v8.034M8 7v8.275M11 7v8.034M14 7v8.275M17 7v8.275" })
+      )
+    )
+  );
+};
+
+var Settings = function Settings(props) {
+  return React__default.createElement(
+    "svg",
+    _extends({ width: 22, height: 22, viewBox: "0 0 22 22" }, props),
+    React__default.createElement(
+      "g",
+      { fill: "none", fillRule: "evenodd" },
+      React__default.createElement("path", { d: "M0 0h22v22H0z" }),
+      React__default.createElement("path", {
+        d: "M18.063 9.08c.224.038.437.148.637.329.2.18.3.403.3.666v.938c0 .254-.1.459-.3.615-.2.156-.413.264-.637.322l-1.216.293a6.84 6.84 0 0 1-.154.418 4.008 4.008 0 0 1-.183.388l.644 1.084c.127.195.205.42.235.674a.766.766 0 0 1-.235.659l-.659.659a.847.847 0 0 1-.674.256 1.38 1.38 0 0 1-.688-.212l-1.055-.674a7.697 7.697 0 0 1-.41.19 4.595 4.595 0 0 1-.44.162l-.263 1.216a1.29 1.29 0 0 1-.33.637c-.18.2-.403.3-.666.3h-.938a.743.743 0 0 1-.615-.3 1.749 1.749 0 0 1-.322-.637L9.8 15.86a6.001 6.001 0 0 1-.469-.168 4.816 4.816 0 0 1-.454-.213l-1.084.689a1.308 1.308 0 0 1-.681.212.813.813 0 0 1-.667-.256l-.674-.66a.785.785 0 0 1-.22-.658c.03-.254.103-.479.22-.674l.689-1.143a8.068 8.068 0 0 1-.169-.359 3.029 3.029 0 0 1-.139-.388l-1.215-.293a1.749 1.749 0 0 1-.638-.322.743.743 0 0 1-.3-.615v-.938c0-.263.1-.486.3-.666.2-.181.413-.29.638-.33l1.2-.264a3.44 3.44 0 0 1 .147-.41c.059-.136.117-.268.176-.395l-.689-1.143a1.664 1.664 0 0 1-.22-.674.785.785 0 0 1 .22-.659l.674-.659a.813.813 0 0 1 .667-.256c.268.014.495.085.68.212l1.085.689a5.325 5.325 0 0 1 .908-.381l.308-1.202a1.58 1.58 0 0 1 .307-.637.76.76 0 0 1 .63-.3h.938c.263 0 .483.1.659.3.176.2.288.408.337.623l.264 1.23a6.533 6.533 0 0 1 .85.352l1.054-.674a1.38 1.38 0 0 1 .688-.212.847.847 0 0 1 .674.256l.66.66a.766.766 0 0 1 .234.658 1.55 1.55 0 0 1-.235.674l-.644 1.084c.068.137.134.276.198.418.063.141.114.29.153.446l1.201.264zm0 1.86l.014-.836a.515.515 0 0 0-.205-.102l-1.743-.396-.161-.512a2.474 2.474 0 0 0-.117-.352 4.109 4.109 0 0 0-.176-.366l-.235-.469.923-1.538a.474.474 0 0 0 .066-.117.28.28 0 0 0 .022-.088l-.615-.6a.348.348 0 0 0-.19.058l-1.51.967-.483-.25a11.505 11.505 0 0 0-.351-.168 1.904 1.904 0 0 0-.366-.124l-.513-.176-.381-1.772a.431.431 0 0 0-.044-.11l-.03-.051h-.864a.34.34 0 0 0-.058.087.52.52 0 0 0-.044.147l-.425 1.7-.498.16a4.51 4.51 0 0 0-.762.322l-.483.25-1.567-.997-.074-.036a.671.671 0 0 0-.088-.037l-.615.615c0 .03.008.064.022.103a.898.898 0 0 0 .066.132l.952 1.582-.234.454a8.76 8.76 0 0 0-.154.351 2.79 2.79 0 0 0-.11.323l-.16.512-1.773.396a.537.537 0 0 0-.096.044.199.199 0 0 1-.066.03v.863c.02.02.05.037.088.052a.81.81 0 0 0 .147.036l1.714.44.16.498a3.144 3.144 0 0 0 .265.615l.22.454-.953 1.597a.474.474 0 0 0-.066.117.298.298 0 0 0-.022.103l.615.6c.03 0 .062-.007.096-.022a.59.59 0 0 0 .095-.051l1.538-.982.483.25a4.51 4.51 0 0 0 .762.322l.498.16.44 1.73c.01.048.022.09.036.124a.254.254 0 0 0 .051.08h.85a.515.515 0 0 0 .103-.19l.38-1.743.513-.176a5.14 5.14 0 0 0 .703-.293l.484-.249 1.538.982.073.036a.72.72 0 0 0 .088.037l.615-.615a.298.298 0 0 0-.022-.103.826.826 0 0 0-.066-.132l-.923-1.523.235-.469c.058-.107.11-.217.154-.33.044-.112.085-.227.124-.344l.161-.483 1.743-.44a.635.635 0 0 0 .125-.036.254.254 0 0 0 .08-.052zM11.5 7.687c.781 0 1.448.273 2 .82a2.7 2.7 0 0 1 .827 1.992 2.7 2.7 0 0 1-.827 1.992 2.737 2.737 0 0 1-2 .82 2.72 2.72 0 0 1-1.985-.82 2.7 2.7 0 0 1-.828-1.992 2.7 2.7 0 0 1 .828-1.992 2.72 2.72 0 0 1 1.985-.82zm0 4.687c.518 0 .96-.183 1.326-.55.366-.366.549-.807.549-1.325 0-.518-.183-.96-.55-1.326a1.806 1.806 0 0 0-1.325-.549c-.518 0-.96.183-1.326.55a1.804 1.804 0 0 0-.549 1.325c0 .518.183.96.55 1.326.366.366.807.549 1.325.549z",
+        fill: "currentColor"
+      })
+    )
+  );
+};
+
+var Tokens = function Tokens(props) {
+  return React__default.createElement(
+    "svg",
+    _extends({ width: 22, height: 22, viewBox: "0 0 22 22" }, props),
+    React__default.createElement(
+      "g",
+      { fill: "none", fillRule: "evenodd" },
+      React__default.createElement("path", { d: "M0 0h22v22H0z" }),
+      React__default.createElement(
+        "g",
+        { transform: "translate(2 3)", stroke: "currentColor" },
+        React__default.createElement("circle", { cx: 9, cy: 13, r: 3 }),
+        React__default.createElement("circle", { cx: 9, cy: 2, r: 2 }),
+        React__default.createElement("circle", { cx: 2, cy: 5, r: 2 }),
+        React__default.createElement("circle", { cx: 16, cy: 5, r: 2 }),
+        React__default.createElement("path", { d: "M3.275 6.48l3.715 4.164m1.994-6.645v5.99m5.844-3.393l-4.019 4.018" })
+      )
+    )
+  );
+};
+
+var Voting = function Voting(props) {
+  return React__default.createElement(
+    "svg",
+    _extends({ width: 22, height: 22, viewBox: "0 0 22 22" }, props),
+    React__default.createElement(
+      "g",
+      { fill: "none", fillRule: "evenodd" },
+      React__default.createElement("path", { d: "M0 0h22v22H0z" }),
+      React__default.createElement("path", {
+        d: "M2.053 11.267c.576.047 1.169.105 1.497.176.328.07 2.297.557 3.656.557.2 0 .442-.005.723-.015a6.99 6.99 0 0 0 .814-.075c.26-.04.489-.1.683-.181.194-.08 2.051-3.995 1.83-4.59-.149-.398-1.243-.598-3.282-.603-.311 0-.579.001-.803.005l-.337.005a.318.318 0 0 1-.16-.04.292.292 0 0 1-.111-.11.237.237 0 0 1-.055-.142.385.385 0 0 1 .025-.16c.08-.228.149-.479.206-.754a6.92 6.92 0 0 0 .12-.808c.024-.265.027-.507.01-.728-.016-.221-.062-.392-.135-.513l-.13-.2C6.562 3.03 6.462 3 6.301 3c-.02 0-.054.017-.1.05-.047.034-.101.117-.161.251a11.039 11.039 0 0 1-.89 1.723A7.683 7.683 0 0 1 4.138 6.31a5.006 5.006 0 0 1-1.06.828 2.635 2.635 0 0 1-1.024.352c-.06.127-.08 3.65 0 3.777zm18.167-.534c-.575-.047-1.168-.105-1.496-.176-.328-.07-2.297-.557-3.656-.557-.201 0-.442.005-.724.015a6.99 6.99 0 0 0-.813.075c-.261.04-.49.1-.683.181-.195.08-2.052 3.995-1.83 4.59.148.398 1.242.598 3.281.603.312 0 .58-.001.804-.005l.336-.005c.06 0 .114.014.16.04a.292.292 0 0 1 .111.11.244.244 0 0 1 .056.142.385.385 0 0 1-.025.16 5.73 5.73 0 0 0-.206.754 7.047 7.047 0 0 0-.12.808 4.466 4.466 0 0 0-.011.728c.017.221.062.392.136.513l.13.2c.04.06.14.091.302.091.02 0 .053-.017.1-.05.047-.034.1-.117.16-.251.269-.643.565-1.217.89-1.723a7.683 7.683 0 0 1 1.014-1.286 5.006 5.006 0 0 1 1.06-.828 2.64 2.64 0 0 1 1.024-.352c.06-.127.08-3.65 0-3.777z",
+        stroke: "currentColor",
+        strokeLinecap: "round",
+        strokeLinejoin: "round"
+      })
+    )
+  );
+};
+
+var Wallet = function Wallet(props) {
+  return React__default.createElement(
+    "svg",
+    _extends({ width: 22, height: 22, viewBox: "0 0 22 22" }, props),
+    React__default.createElement(
+      "g",
+      { fill: "none", fillRule: "evenodd" },
+      React__default.createElement("path", { d: "M0 0h22v22H0z" }),
+      React__default.createElement("path", {
+        d: "M19 7.186v8.642c0 .39-.137.723-.41.996-.274.274-.606.41-.996.41H5.406c-.39 0-.722-.136-.996-.41a1.356 1.356 0 0 1-.41-.996v-7.5c0-.38.137-.708.41-.981.274-.274.6-.415.982-.425h.468V5.047c0-.39.14-.723.418-.996a1.36 1.36 0 0 1 .989-.41l10.59 2.109c.528.146.85.38.967.703.117.322.176.567.176.733zM6.798 5.046v1.876h10.327c.186.01.308-.03.366-.117l.088-.132L7.237 4.578a.467.467 0 0 0-.44.469zm11.264 10.782V7.391c0 .156-.1.273-.3.351-.2.078-.412.117-.637.117H5.406a.45.45 0 0 0-.33.14.45.45 0 0 0-.138.33v7.5a.45.45 0 0 0 .139.329.45.45 0 0 0 .33.139h12.187a.45.45 0 0 0 .33-.14.45.45 0 0 0 .139-.329zm-11.25-4.687c.254 0 .474.092.66.278a.901.901 0 0 1 .278.66.894.894 0 0 1-.278.666.913.913 0 0 1-.66.27.906.906 0 0 1-.666-.27.906.906 0 0 1-.271-.667c0-.254.09-.474.271-.66a.894.894 0 0 1 .667-.277z",
+        fill: "currentColor"
+      })
+    )
+  );
+};
+
 /*!
  * isobject <https://github.com/jonschlinkert/isobject>
  *
@@ -1592,6 +1953,15 @@ var stylis$1 = createCommonjsModule(function (module, exports) {
 }));
 });
 
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * 
+ */
+
 function makeEmptyFunction(arg) {
   return function () {
     return arg;
@@ -1626,6 +1996,17 @@ var emptyFunction_1 = emptyFunction;
  *
  */
 
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
 var validateFormat = function validateFormat(format) {};
 
 if (process.env.NODE_ENV !== 'production') {
@@ -1658,6 +2039,13 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 var invariant_1 = invariant;
+
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
 
 var warning = emptyFunction_1;
 
@@ -1709,6 +2097,7 @@ object-assign
 @license MIT
 */
 
+/* eslint-disable no-unused-vars */
 var getOwnPropertySymbols = Object.getOwnPropertySymbols;
 var hasOwnProperty$1 = Object.prototype.hasOwnProperty;
 var propIsEnumerable = Object.prototype.propertyIsEnumerable;
@@ -2522,6 +2911,17 @@ var hoistNonReactStatics = function hoistNonReactStatics(targetComponent, source
     return targetComponent;
 };
 
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * @typechecks
+ */
+
 var _uppercasePattern = /([A-Z])/g;
 
 /**
@@ -2681,13 +3081,13 @@ var getNonce = (function () {
                                      return typeof __webpack_nonce__ !== 'undefined' ? __webpack_nonce__ : null;
 });
 
-var classCallCheck = function (instance, Constructor) {
+var classCallCheck$1 = function (instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
 
-var createClass = function () {
+var createClass$1 = function () {
   function defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
       var descriptor = props[i];
@@ -2711,7 +3111,7 @@ var createClass = function () {
 
 
 
-var _extends = Object.assign || function (target) {
+var _extends$1 = Object.assign || function (target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i];
 
@@ -2727,7 +3127,7 @@ var _extends = Object.assign || function (target) {
 
 
 
-var inherits = function (subClass, superClass) {
+var inherits$1 = function (subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
     throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
   }
@@ -2751,7 +3151,7 @@ var inherits = function (subClass, superClass) {
 
 
 
-var objectWithoutProperties = function (obj, keys) {
+var objectWithoutProperties$1 = function (obj, keys) {
   var target = {};
 
   for (var i in obj) {
@@ -2763,7 +3163,7 @@ var objectWithoutProperties = function (obj, keys) {
   return target;
 };
 
-var possibleConstructorReturn = function (self, call) {
+var possibleConstructorReturn$1 = function (self, call) {
   if (!self) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
@@ -2794,7 +3194,7 @@ var COMPONENTS_PER_TAG = 40;
 var BrowserTag = function () {
   function BrowserTag(el, isLocal) {
     var existingSource = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
-    classCallCheck(this, BrowserTag);
+    classCallCheck$1(this, BrowserTag);
 
     this.el = el;
     this.isLocal = isLocal;
@@ -2942,7 +3342,7 @@ var StyleSheet = function () {
   function StyleSheet(tagConstructor) {
     var tags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
     var names = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-    classCallCheck(this, StyleSheet);
+    classCallCheck$1(this, StyleSheet);
     this.hashes = {};
     this.deferredInjections = {};
     this.stylesCacheable = typeof document !== 'undefined';
@@ -3080,16 +3480,16 @@ var StyleSheet = function () {
   StyleSheet.clone = function clone(oldSheet) {
     var newSheet = new StyleSheet(oldSheet.tagConstructor, oldSheet.tags.map(function (tag) {
       return tag.clone();
-    }), _extends({}, oldSheet.names));
+    }), _extends$1({}, oldSheet.names));
 
-    newSheet.hashes = _extends({}, oldSheet.hashes);
-    newSheet.deferredInjections = _extends({}, oldSheet.deferredInjections);
+    newSheet.hashes = _extends$1({}, oldSheet.hashes);
+    newSheet.deferredInjections = _extends$1({}, oldSheet.deferredInjections);
     clones.push(newSheet);
 
     return newSheet;
   };
 
-  createClass(StyleSheet, null, [{
+  createClass$1(StyleSheet, null, [{
     key: 'instance',
     get: function get$$1() {
       return instance || (instance = StyleSheet.create());
@@ -3102,11 +3502,11 @@ var _StyleSheetManager$ch;
 
 //      
 var StyleSheetManager = function (_Component) {
-  inherits(StyleSheetManager, _Component);
+  inherits$1(StyleSheetManager, _Component);
 
   function StyleSheetManager() {
-    classCallCheck(this, StyleSheetManager);
-    return possibleConstructorReturn(this, _Component.apply(this, arguments));
+    classCallCheck$1(this, StyleSheetManager);
+    return possibleConstructorReturn$1(this, _Component.apply(this, arguments));
   }
 
   StyleSheetManager.prototype.getChildContext = function getChildContext() {
@@ -3136,7 +3536,7 @@ StyleSheetManager.propTypes = {
 /* eslint-disable no-underscore-dangle */
 var ServerTag = function () {
   function ServerTag(isLocal) {
-    classCallCheck(this, ServerTag);
+    classCallCheck$1(this, ServerTag);
 
     this.isLocal = isLocal;
     this.components = {};
@@ -3196,7 +3596,7 @@ var ServerTag = function () {
       attrs.nonce = nonce;
     }
 
-    return React__default.createElement('style', _extends({
+    return React__default.createElement('style', _extends$1({
       key: key, type: 'text/css' }, attrs, {
       dangerouslySetInnerHTML: { __html: this.concatenateCSS() }
     }));
@@ -3209,7 +3609,7 @@ var ServerTag = function () {
     copy.names = [].concat(this.names);
     copy.size = this.size;
     copy.components = Object.keys(this.components).reduce(function (acc, key) {
-      acc[key] = _extends({}, _this2.components[key]); // eslint-disable-line no-param-reassign
+      acc[key] = _extends$1({}, _this2.components[key]); // eslint-disable-line no-param-reassign
       return acc;
     }, {});
 
@@ -3221,7 +3621,7 @@ var ServerTag = function () {
 
 var ServerStyleSheet = function () {
   function ServerStyleSheet() {
-    classCallCheck(this, ServerStyleSheet);
+    classCallCheck$1(this, ServerStyleSheet);
 
     this.instance = StyleSheet.clone(StyleSheet.instance);
   }
@@ -3995,12 +4395,12 @@ var warnChannelDeprecated = once(function () {
  */
 
 var ThemeProvider = function (_Component) {
-  inherits(ThemeProvider, _Component);
+  inherits$1(ThemeProvider, _Component);
 
   function ThemeProvider() {
-    classCallCheck(this, ThemeProvider);
+    classCallCheck$1(this, ThemeProvider);
 
-    var _this = possibleConstructorReturn(this, _Component.call(this));
+    var _this = possibleConstructorReturn$1(this, _Component.call(this));
 
     _this.unsubscribeToOuterId = -1;
 
@@ -4026,7 +4426,7 @@ var ThemeProvider = function (_Component) {
     var _this3 = this,
         _babelHelpers$extends;
 
-    return _extends({}, this.context, (_babelHelpers$extends = {}, _babelHelpers$extends[CHANNEL_NEXT] = {
+    return _extends$1({}, this.context, (_babelHelpers$extends = {}, _babelHelpers$extends[CHANNEL_NEXT] = {
       getTheme: this.getTheme,
       subscribe: this.broadcast.subscribe,
       unsubscribe: this.broadcast.unsubscribe
@@ -4066,7 +4466,7 @@ var ThemeProvider = function (_Component) {
     if (!isPlainObject(theme)) {
       throw new Error('[ThemeProvider] Please make your theme prop a plain object');
     }
-    return _extends({}, this.outerTheme, theme);
+    return _extends$1({}, this.outerTheme, theme);
   };
 
   ThemeProvider.prototype.render = function render() {
@@ -4107,21 +4507,21 @@ var _StyledComponent = (function (ComponentStyle, constructWithOptions) {
   };
 
   var BaseStyledComponent = function (_Component) {
-    inherits(BaseStyledComponent, _Component);
+    inherits$1(BaseStyledComponent, _Component);
 
     function BaseStyledComponent() {
       var _temp, _this, _ret;
 
-      classCallCheck(this, BaseStyledComponent);
+      classCallCheck$1(this, BaseStyledComponent);
 
       for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
         args[_key] = arguments[_key];
       }
 
-      return _ret = (_temp = (_this = possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.attrs = {}, _this.state = {
+      return _ret = (_temp = (_this = possibleConstructorReturn$1(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.attrs = {}, _this.state = {
         theme: null,
         generatedClassName: ''
-      }, _this.unsubscribeId = -1, _temp), possibleConstructorReturn(_this, _ret);
+      }, _this.unsubscribeId = -1, _temp), possibleConstructorReturn$1(_this, _ret);
     }
 
     BaseStyledComponent.prototype.unsubscribeFromContext = function unsubscribeFromContext() {
@@ -4133,7 +4533,7 @@ var _StyledComponent = (function (ComponentStyle, constructWithOptions) {
     BaseStyledComponent.prototype.buildExecutionContext = function buildExecutionContext(theme, props) {
       var attrs = this.constructor.attrs;
 
-      var context = _extends({}, props, { theme: theme });
+      var context = _extends$1({}, props, { theme: theme });
       if (attrs === undefined) {
         return context;
       }
@@ -4145,7 +4545,7 @@ var _StyledComponent = (function (ComponentStyle, constructWithOptions) {
         return acc;
       }, {});
 
-      return _extends({}, context, this.attrs);
+      return _extends$1({}, context, this.attrs);
     };
 
     BaseStyledComponent.prototype.generateAndInjectStyles = function generateAndInjectStyles(theme, props) {
@@ -4243,7 +4643,7 @@ var _StyledComponent = (function (ComponentStyle, constructWithOptions) {
       // eslint-disable-next-line react/prop-types
       this.props.className, styledComponentId, this.attrs.className, generatedClassName].filter(Boolean).join(' ');
 
-      var baseProps = _extends({}, this.attrs, {
+      var baseProps = _extends$1({}, this.attrs, {
         className: className
       });
 
@@ -4293,21 +4693,21 @@ var _StyledComponent = (function (ComponentStyle, constructWithOptions) {
     var componentStyle = new ComponentStyle(extendingRules === undefined ? rules : extendingRules.concat(rules), attrs, styledComponentId);
 
     var StyledComponent = function (_ParentComponent) {
-      inherits(StyledComponent, _ParentComponent);
+      inherits$1(StyledComponent, _ParentComponent);
 
       function StyledComponent() {
-        classCallCheck(this, StyledComponent);
-        return possibleConstructorReturn(this, _ParentComponent.apply(this, arguments));
+        classCallCheck$1(this, StyledComponent);
+        return possibleConstructorReturn$1(this, _ParentComponent.apply(this, arguments));
       }
 
       StyledComponent.withComponent = function withComponent(tag) {
         var previousComponentId = options.componentId,
-            optionsToCopy = objectWithoutProperties(options, ['componentId']);
+            optionsToCopy = objectWithoutProperties$1(options, ['componentId']);
 
 
         var newComponentId = previousComponentId && previousComponentId + '-' + (isTag(tag) ? tag : getComponentName(tag));
 
-        var newOptions = _extends({}, optionsToCopy, {
+        var newOptions = _extends$1({}, optionsToCopy, {
           componentId: newComponentId,
           ParentComponent: StyledComponent
         });
@@ -4315,17 +4715,17 @@ var _StyledComponent = (function (ComponentStyle, constructWithOptions) {
         return createStyledComponent(tag, newOptions, rules);
       };
 
-      createClass(StyledComponent, null, [{
+      createClass$1(StyledComponent, null, [{
         key: 'extend',
         get: function get$$1() {
           var rulesFromOptions = options.rules,
               parentComponentId = options.componentId,
-              optionsToCopy = objectWithoutProperties(options, ['rules', 'componentId']);
+              optionsToCopy = objectWithoutProperties$1(options, ['rules', 'componentId']);
 
 
           var newRules = rulesFromOptions === undefined ? rules : rulesFromOptions.concat(rules);
 
-          var newOptions = _extends({}, optionsToCopy, {
+          var newOptions = _extends$1({}, optionsToCopy, {
             rules: newRules,
             parentComponentId: parentComponentId,
             ParentComponent: StyledComponent
@@ -4452,7 +4852,7 @@ var isStaticRules = function isStaticRules(rules, attrs) {
 var _ComponentStyle = (function (nameGenerator, flatten, stringifyRules) {
   var ComponentStyle = function () {
     function ComponentStyle(rules, attrs, componentId) {
-      classCallCheck(this, ComponentStyle);
+      classCallCheck$1(this, ComponentStyle);
 
       this.rules = rules;
       this.isStatic = isStaticRules(rules, attrs);
@@ -4606,11 +5006,11 @@ var _constructWithOptions = (function (css) {
 
     /* If config methods are called, wrap up a new template function and merge options */
     templateFunction.withConfig = function (config) {
-      return constructWithOptions(componentConstructor, tag, _extends({}, options, config));
+      return constructWithOptions(componentConstructor, tag, _extends$1({}, options, config));
     };
     templateFunction.attrs = function (attrs) {
-      return constructWithOptions(componentConstructor, tag, _extends({}, options, {
-        attrs: _extends({}, options.attrs || {}, attrs) }));
+      return constructWithOptions(componentConstructor, tag, _extends$1({}, options, {
+        attrs: _extends$1({}, options.attrs || {}, attrs) }));
     };
 
     return templateFunction;
@@ -4630,18 +5030,18 @@ var wrapWithTheme = function wrapWithTheme(Component$$1) {
   var isStyledComponent$$1 = isStyledComponent(Component$$1);
 
   var WithTheme = function (_React$Component) {
-    inherits(WithTheme, _React$Component);
+    inherits$1(WithTheme, _React$Component);
 
     function WithTheme() {
       var _temp, _this, _ret;
 
-      classCallCheck(this, WithTheme);
+      classCallCheck$1(this, WithTheme);
 
       for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
         args[_key] = arguments[_key];
       }
 
-      return _ret = (_temp = (_this = possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = {}, _this.unsubscribeId = -1, _temp), possibleConstructorReturn(_this, _ret);
+      return _ret = (_temp = (_this = possibleConstructorReturn$1(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = {}, _this.unsubscribeId = -1, _temp), possibleConstructorReturn$1(_this, _ret);
     }
 
     // NOTE: This is so that isStyledComponent passes for the innerRef unwrapping
@@ -4691,7 +5091,7 @@ var wrapWithTheme = function wrapWithTheme(Component$$1) {
       var theme = this.state.theme;
 
 
-      return React__default.createElement(Component$$1, _extends({
+      return React__default.createElement(Component$$1, _extends$1({
         theme: theme
       }, this.props, {
         innerRef: isStyledComponent$$1 ? innerRef : undefined,
@@ -4725,166 +5125,6 @@ var StyledComponent = _StyledComponent(ComponentStyle, constructWithOptions);
 var keyframes = _keyframes(generateAlphabeticName, stringifyRules, css);
 var injectGlobal = _injectGlobal(stringifyRules, css);
 var styled = _styled(StyledComponent, constructWithOptions);
-
-var classCallCheck$1 = function (instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-};
-
-var createClass$1 = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-
-
-
-
-
-
-var _extends$1 = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-
-
-var inherits$1 = function (subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-};
-
-
-
-
-
-
-
-
-
-var objectWithoutProperties$1 = function (obj, keys) {
-  var target = {};
-
-  for (var i in obj) {
-    if (keys.indexOf(i) >= 0) continue;
-    if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
-    target[i] = obj[i];
-  }
-
-  return target;
-};
-
-var possibleConstructorReturn$1 = function (self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-};
-
-
-
-
-
-var slicedToArray = function () {
-  function sliceIterator(arr, i) {
-    var _arr = [];
-    var _n = true;
-    var _d = false;
-    var _e = undefined;
-
-    try {
-      for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-        _arr.push(_s.value);
-
-        if (i && _arr.length === i) break;
-      }
-    } catch (err) {
-      _d = true;
-      _e = err;
-    } finally {
-      try {
-        if (!_n && _i["return"]) _i["return"]();
-      } finally {
-        if (_d) throw _e;
-      }
-    }
-
-    return _arr;
-  }
-
-  return function (arr, i) {
-    if (Array.isArray(arr)) {
-      return arr;
-    } else if (Symbol.iterator in Object(arr)) {
-      return sliceIterator(arr, i);
-    } else {
-      throw new TypeError("Invalid attempt to destructure non-iterable instance");
-    }
-  };
-}();
-
-
-
-var taggedTemplateLiteral = function (strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, {
-    raw: {
-      value: Object.freeze(raw)
-    }
-  }));
-};
-
-
-
-
-
-
-
-
-
-var toConsumableArray = function (arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-    return arr2;
-  } else {
-    return Array.from(arr);
-  }
-};
 
 var aragon = {
   Grey: {
@@ -4966,10 +5206,12 @@ var aragon = {
     shadow: '=Grey.Gainsboro',
     textPrimary: '=Black.Black',
     textSecondary: '=Grey.Dim Grey',
-    textTertiary: '=Grey.Dim Grey',
+    textTertiary: '=Grey.Light Grey',
     accent: '=Eagle.Dark Turquoise',
     positive: '=Green.Spring Green',
-    negative: '=Red.Salmon Red'
+    positiveText: '=White.White',
+    negative: '=Red.Salmon Red',
+    negativeText: '=White.White'
   },
   'Aragon UI Dark': {
     gradientStart: '=Eagle.Cerulean',
@@ -4991,7 +5233,9 @@ var aragon = {
     textTertiary: '=Grey.Dim Grey',
     accent: '=Eagle.Dark Turquoise',
     positive: '=Green.Spring Green',
-    negative: '=Red.Salmon Red'
+    positiveText: '=White.White',
+    negative: '=Red.Salmon Red',
+    negativeText: '=White.White'
   }
 };
 
@@ -5261,8 +5505,9 @@ var GRID = {
 };
 
 var SPRINGS = {
+  slow: { stiffness: 150, damping: 18, precision: 0.001 },
   normal: { stiffness: 190, damping: 22, precision: 0.001 },
-  fast: { stiffness: 250, damping: 22, precision: 0.001 }
+  fast: { stiffness: 220, damping: 24, precision: 0.001 }
 
   // These breakpoints values represent minimum screen sizes.
   // Small screen sizes should be targetted by default (mobile first).
@@ -5278,8 +5523,8 @@ var font = function font(_ref) {
       weight = _ref$weight === undefined ? 'normal' : _ref$weight;
 
   var fontSize = FONT_SIZES[size] || FONT_SIZES.normal;
-  var fontWeigt = FONT_WEIGHTS[weight] || FONT_WEIGHTS.normal;
-  return '\n    font-size: ' + fontSize + ';\n    font-weight: ' + fontWeigt + ';\n    line-height: 1.5;\n  ';
+  var fontWeight = FONT_WEIGHTS[weight] || FONT_WEIGHTS.normal;
+  return '\n    font-size: ' + fontSize + ';\n    font-weight: ' + fontWeight + ';\n    line-height: 1.5;\n  ';
 };
 
 var grid = function grid(cols) {
@@ -5301,36 +5546,41 @@ var BreakPoint = function BreakPoint(_ref2) {
   var from = _ref2.from,
       to = _ref2.to,
       children = _ref2.children,
-      props = objectWithoutProperties$1(_ref2, ['from', 'to', 'children']);
+      props = objectWithoutProperties(_ref2, ['from', 'to', 'children']);
 
+  var names = ['medium', 'large'];
   var query = {};
-  if (BREAKPOINTS[from]) {
+  if (from && names.includes(from)) {
     query.minWidth = BREAKPOINTS[from];
   }
-  if (BREAKPOINTS[to]) {
+  if (to && names.includes(to)) {
     query.maxWidth = BREAKPOINTS[to] - 1;
   }
   return React__default.createElement(
     Media,
-    _extends$1({ query: query, defaultMatches: false }, props),
+    _extends({ query: query, defaultMatches: false }, props),
     function (ok) {
       return ok ? children : null;
     }
   );
 };
 
+BreakPoint.defaultProps = {
+  to: '',
+  from: ''
+};
+
 var unselectable = function unselectable() {
   return '\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n';
 };
 
-// TODO: deprecate the previous names
-
+// High order component wrapper
 var getPublicUrl = function getPublicUrl(Component$$1) {
   var highOrderComponent = function highOrderComponent(baseProps, context) {
     var _context$publicUrl = context.publicUrl,
         publicUrl = _context$publicUrl === undefined ? '' : _context$publicUrl;
 
-    var props = _extends$1({}, baseProps, { publicUrl: publicUrl });
+    var props = _extends({}, baseProps, { publicUrl: publicUrl });
     return React__default.createElement(Component$$1, props);
   };
   highOrderComponent.contextTypes = {
@@ -5371,14 +5621,14 @@ var injectStyles = function injectStyles(asset) {
 };
 
 var BaseStyles = function (_React$Component) {
-  inherits$1(BaseStyles, _React$Component);
+  inherits(BaseStyles, _React$Component);
 
   function BaseStyles() {
-    classCallCheck$1(this, BaseStyles);
-    return possibleConstructorReturn$1(this, (BaseStyles.__proto__ || Object.getPrototypeOf(BaseStyles)).apply(this, arguments));
+    classCallCheck(this, BaseStyles);
+    return possibleConstructorReturn(this, (BaseStyles.__proto__ || Object.getPrototypeOf(BaseStyles)).apply(this, arguments));
   }
 
-  createClass$1(BaseStyles, [{
+  createClass(BaseStyles, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
       var _this2 = this;
@@ -5398,7 +5648,9 @@ var BaseStyles = function (_React$Component) {
 
 var BaseStyles$1 = getPublicUrl(BaseStyles);
 
-var StyledContent = styled.div(['width:100%;margin:0 auto;max-width:', 'px;'], function (_ref) {
+var StyledContent = styled.div.withConfig({
+  displayName: 'Section__StyledContent'
+})(['width:100%;margin:0 auto;max-width:', 'px;'], function (_ref) {
   var large = _ref.large;
   return grid(large ? 12 : 10);
 });
@@ -5413,7 +5665,7 @@ var Section = function Section(_ref2) {
       visual = _ref2.visual,
       className = _ref2.className,
       publicUrl = _ref2.publicUrl,
-      props = objectWithoutProperties$1(_ref2, ['large', 'visual', 'className', 'publicUrl']);
+      props = objectWithoutProperties(_ref2, ['large', 'visual', 'className', 'publicUrl']);
 
   var containerProps = { className: className };
   var content = React__default.createElement(
@@ -5442,23 +5694,35 @@ var large = function large(css$$1) {
   return breakpoint('large', css$$1);
 };
 
-var StyledIllustratedSection = styled(Section)(['padding:120px 15px 120px;.main{display:block;align-items:center;', ';}.text{margin-top:20px;', ';', ';}'], large('display: flex'), medium('\n      display: flex;\n      margin-top: 40px;\n    '), large('\n      display: block;\n      margin-top: 0;\n    '));
+var StyledIllustratedSection = styled(Section).withConfig({
+  displayName: 'IllustratedSection__StyledIllustratedSection'
+})(['padding:120px 15px 120px;.main{display:block;align-items:center;', ';}.text{margin-top:20px;', ';', ';}'], large('display: flex'), medium('\n      display: flex;\n      margin-top: 40px;\n    '), large('\n      display: block;\n      margin-top: 0;\n    '));
 
-var StyledIllustration = styled.div(['margin-top:40px;img{display:block;margin:0 auto;max-width:calc(100% - 30px);}', ';'], large('\n    flex-shrink: 0;\n    width: calc(40% + 150px);\n    margin-left: 50px;\n    margin-right: -100px;\n    margin-top: 0;\n    padding: 0 70px;\n    &:first-child {\n      margin-left: -100px;\n      margin-right: 50px;\n    }\n    img {\n      width: 100%;\n      margin: 0;\n    }\n  '));
+var StyledIllustration = styled.div.withConfig({
+  displayName: 'IllustratedSection__StyledIllustration'
+})(['margin-top:40px;img{display:block;margin:0 auto;max-width:calc(100% - 30px);}', ';'], large('\n    flex-shrink: 0;\n    width: calc(40% + 150px);\n    margin-left: 50px;\n    margin-right: -100px;\n    margin-top: 0;\n    padding: 0 70px;\n    &:first-child {\n      margin-left: -100px;\n      margin-right: 50px;\n    }\n    img {\n      width: 100%;\n      margin: 0;\n    }\n  '));
 
-var StyledTitle = styled.div(['margin-bottom:10px;font-size:15px;text-align:center;text-transform:uppercase;color:', ';font-weight:600;', ';', ';'], theme.accent, medium('\n    font-size: 18px;\n  '), large('\n    text-align: left;\n  '));
+var StyledTitle = styled.div.withConfig({
+  displayName: 'IllustratedSection__StyledTitle'
+})(['margin-bottom:10px;font-size:15px;text-align:center;text-transform:uppercase;color:', ';font-weight:600;', ';', ';'], theme.accent, medium('\n    font-size: 18px;\n  '), large('\n    text-align: left;\n  '));
 
-var StyledSubtitle = styled.div(['font-size:25px;font-weight:200;line-height:1.3;text-align:center;color:', ';', ';', ';'], function (_ref) {
+var StyledSubtitle = styled.div.withConfig({
+  displayName: 'IllustratedSection__StyledSubtitle'
+})(['font-size:25px;font-weight:200;line-height:1.3;text-align:center;color:', ';', ';', ';'], function (_ref) {
   var dark = _ref.dark;
   return dark ? 'white' : 'black';
 }, medium('\n    font-size: 37px;\n  '), large('\n    text-align: left;\n  '));
 
-var StyledEmphasis = styled.div(['margin:0 0 30px;padding-left:30px;font-size:18px;border-left:4px solid ', ';color:', ';', ';', ';'], theme.accent, function (_ref2) {
+var StyledEmphasis = styled.div.withConfig({
+  displayName: 'IllustratedSection__StyledEmphasis'
+})(['margin:0 0 30px;padding-left:30px;font-size:18px;border-left:4px solid ', ';color:', ';', ';', ';'], theme.accent, function (_ref2) {
   var dark = _ref2.dark;
   return dark ? 'white' : 'black';
 }, medium('\n    margin: 0 30px 40px 0;\n    font-size: 19px;\n  '), large('\n    margin: 40px 0;\n  '));
 
-var StyledContent$1 = styled.div(['font-size:17px;color:', ';', ';p{margin-bottom:1em;}p:last-child{margin-bottom:0;}'], function (_ref3) {
+var StyledContent$1 = styled.div.withConfig({
+  displayName: 'IllustratedSection__StyledContent'
+})(['font-size:17px;color:', ';', ';p{margin-bottom:1em;}p:last-child{margin-bottom:0;}'], function (_ref3) {
   var dark = _ref3.dark;
   return dark ? themeDark.textSecondary : 'black';
 }, medium('\n    font-size: 18px;\n  '));
@@ -5480,14 +5744,40 @@ var IllustratedSection = function IllustratedSection(_ref4) {
       dark = _ref4.dark,
       children = _ref4.children;
 
+  // Using proxiedComponents instead of childrenComponents is a way to
+  // circumvent the react-hot-loader proxy wrapper.
+  //
+  // See https://github.com/gaearon/react-hot-loader/issues/304
+  var proxiedComponents = Object.keys(childrenComponents).map(function (name) {
+    var Comp = childrenComponents[name];
+    return [name, Comp, React__default.createElement(Comp, null).type];
+  });
+  var elementType = function elementType(elt) {
+    var compGroup = proxiedComponents.find(function (_ref5) {
+      var _ref6 = slicedToArray(_ref5, 3),
+          name = _ref6[0],
+          Comp = _ref6[1],
+          ProxiedComp = _ref6[2];
+
+      return elt.type === ProxiedComp;
+    });
+    if (!compGroup) return { name: '', component: elt.type };
+    return { name: compGroup[0], component: compGroup[1] };
+  };
+
   // Collect the elements
   var elts = React__default.Children.toArray(children).reduce(
   // Fill the .elt property for existing children
   function (elts, elt, i) {
-    var name = elt.type.___typeName;
+    var _elementType = elementType(elt),
+        name = _elementType.name,
+        component = _elementType.component;
+
     if (!elts[name]) return elts;
+
     elts[name].elt = elt;
-    if (name === 'Illustration') {
+
+    if (component === childrenComponents.Illustration) {
       elts[name].first = i === 0;
     }
     return elts;
@@ -5495,7 +5785,7 @@ var IllustratedSection = function IllustratedSection(_ref4) {
 
   // Fill the initial elts object with { elt: null } entries
   Object.keys(childrenComponents).reduce(function (elts, name) {
-    elts[name] = { elt: null };
+    elts[name] = { elt: null, first: false };
     return elts;
   }, {}));
 
@@ -5549,22 +5839,52 @@ var IllustratedSection = function IllustratedSection(_ref4) {
 
 IllustratedSection.defaultProps = DefaultProps$1;
 
-Object.entries(childrenComponents).forEach(function (_ref5) {
-  var _ref6 = slicedToArray(_ref5, 2),
-      name = _ref6[0],
-      comp = _ref6[1];
+Object.entries(childrenComponents).forEach(function (_ref7) {
+  var _ref8 = slicedToArray(_ref7, 2),
+      name = _ref8[0],
+      comp = _ref8[1];
 
   // Expose the child component
   IllustratedSection[name] = comp;
-
-  // It is the simplest way to circumvent the react-hot-loader proxy wrapper.
-  // See https://github.com/gaearon/react-hot-loader/issues/304
-  comp.___typeName = name;
 });
 
-var cross = "data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Eclear%20-%20material%3C%2Ftitle%3E%3Cpath%20d%3D%22M10.476%201.524L6.3%205.7l4.176%204.176-1.062%201.062-4.176-4.176-4.176%204.176L0%209.876%204.176%205.7%200%201.524%201.062.462l4.176%204.176L9.414.462z%22%20fill%3D%22%23FB7777%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+var BadgeNumber = function BadgeNumber(_ref) {
+  var _ref$number = _ref.number,
+      number = _ref$number === undefined ? 0 : _ref$number,
+      _ref$small = _ref.small,
+      small = _ref$small === undefined ? false : _ref$small,
+      props = objectWithoutProperties(_ref, ['number', 'small']);
+  return React__default.createElement(
+    Main,
+    _extends({ small: small }, props),
+    number
+  );
+};
 
-var check = "data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2210%22%20viewBox%3D%220%200%2014%2010%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Echeck%20-%20material%3C%2Ftitle%3E%3Cpath%20d%3D%22M4.176%207.956L12.114%200l1.062%201.062-9%209L0%205.886l1.044-1.062z%22%20fill%3D%22%2321D48E%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+var Main = styled.span.withConfig({
+  displayName: 'BadgeNumber__Main'
+})(['display:flex;overflow:hidden;justify-content:center;align-items:center;padding-top:1px;width:', 'px;height:', 'px;line-height:', 'px;border-radius:', 'px;font-size:', 'px;font-weight:600;color:', ';background:', ';'], function (_ref2) {
+  var small = _ref2.small;
+  return small ? '14' : '18';
+}, function (_ref3) {
+  var small = _ref3.small;
+  return small ? '14' : '18';
+}, function (_ref4) {
+  var small = _ref4.small;
+  return small ? '13' : '17';
+}, function (_ref5) {
+  var small = _ref5.small;
+  return small ? '7' : '9';
+}, function (_ref6) {
+  var small = _ref6.small;
+  return small ? '10' : '12';
+}, theme.positiveText, theme.positive);
+
+var cross = "data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.476%201.524L6.3%205.7l4.176%204.176-1.062%201.062-4.176-4.176-4.176%204.176L0%209.876%204.176%205.7%200%201.524%201.062.462l4.176%204.176L9.414.462z%22%20fill%3D%22%23FB7777%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+
+var check = "data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2210%22%20viewBox%3D%220%200%2014%2010%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M4.176%207.956L12.114%200l1.062%201.062-9%209L0%205.886l1.044-1.062z%22%20fill%3D%22%2321D48E%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+
+var _templateObject$1 = taggedTemplateLiteral(['\n    display: inline-block;\n    text-decoration: none;\n  '], ['\n    display: inline-block;\n    text-decoration: none;\n  ']);
 
 var gradientStart = theme.gradientStart;
 var gradientEnd = theme.gradientEnd;
@@ -5595,7 +5915,9 @@ var positiveStyle = css(['padding-left:34px;background:url(', ') no-repeat 12px 
 
 var negativeStyle = css(['padding-left:30px;background:url(', ') no-repeat 10px calc(50% - 1px);'], styledPublicUrl(cross));
 
-var StyledButton = getPublicUrl(styled.button(['width:', ';padding:10px 15px;white-space:nowrap;', ';color:', ';background:', ';border:0;border-radius:3px;cursor:pointer;outline:0;&,&:after{transition-property:all;transition-duration:100ms;transition-timing-function:ease-in-out;}&::-moz-focus-inner{border:0;}', ';', ';', ';'], function (_ref) {
+var StyledButton = styled.button.withConfig({
+  displayName: 'Button__StyledButton'
+})(['width:', ';padding:10px 15px;white-space:nowrap;', ';color:', ';background:', ';border:0;border-radius:3px;cursor:pointer;outline:0;&,&:after{transition-property:all;transition-duration:100ms;transition-timing-function:ease-in-out;}&::-moz-focus-inner{border:0;}', ';', ';', ';'], function (_ref) {
   var wide = _ref.wide;
   return wide ? '100%' : 'auto';
 }, font({ size: 'small', weight: 'normal' }), textSecondary, contentBackground, function (_ref2) {
@@ -5614,7 +5936,14 @@ var StyledButton = getPublicUrl(styled.button(['width:', ';padding:10px 15px;whi
   if (emphasis === 'positive') return positiveStyle;
   if (emphasis === 'negative') return negativeStyle;
   return '';
-}));
+});
+
+// Flow declaration: see https://github.com/styled-components/styled-components/issues/570#issuecomment-332087358
+// Currently throwing errors: https://github.com/styled-components/styled-components/issues/1350
+var Button = getPublicUrl(StyledButton);
+var Anchor = getPublicUrl(StyledButton.withComponent('a').extend(_templateObject$1));
+
+Button.Anchor = Anchor;
 
 var mapToZero_1 = createCommonjsModule(function (module, exports) {
 // currently used to initiate the velocity style object to 0
@@ -5774,7 +6103,7 @@ var performanceNow$2 = createCommonjsModule(function (module) {
 
 }).call(commonjsGlobal);
 
-//# sourceMappingURL=performance-now.js.map
+
 });
 
 var root = typeof window === 'undefined' ? commonjsGlobal : window;
@@ -7186,6 +7515,76 @@ var reactMotion_5 = reactMotion.presets;
 var reactMotion_6 = reactMotion.stripStyle;
 var reactMotion_7 = reactMotion.reorderKeys;
 
+var BORDER_WIDTH = 4;
+
+var VALUE_DEFAULT = 1;
+var SIZE_DEFAULT = 80;
+var LABEL_DEFAULT = function LABEL_DEFAULT(value) {
+  return Math.round(value * 100) + '%';
+};
+
+var CircleGraph = function CircleGraph(_ref) {
+  var value = _ref.value,
+      label = _ref.label,
+      size = _ref.size;
+
+  var length = Math.PI * 2 * (size - BORDER_WIDTH);
+  var radius = (size - BORDER_WIDTH) / 2;
+  return React__default.createElement(
+    reactMotion_1,
+    {
+      defaultStyle: { progressValue: 0 },
+      style: { progressValue: reactMotion_4(value, spring('slow')) }
+    },
+    function (_ref2) {
+      var progressValue = _ref2.progressValue;
+      return React__default.createElement(
+        'svg',
+        {
+          width: size,
+          height: size,
+          viewBox: '0 0 ' + size + ' ' + size,
+          xmlns: 'http://www.w3.org/2000/svg'
+        },
+        React__default.createElement(CircleBase, { cx: size / 2, cy: size / 2, r: radius }),
+        React__default.createElement(CircleValue, {
+          cx: size / 2,
+          cy: size / 2,
+          r: radius,
+          style: {
+            strokeDasharray: length,
+            strokeDashoffset: length - length * progressValue / 2,
+            strokeWidth: BORDER_WIDTH
+          }
+        }),
+        React__default.createElement(
+          Label,
+          { x: '50%', y: '50%' },
+          label(Math.min(value, Math.max(0, progressValue)))
+        )
+      );
+    }
+  );
+};
+
+CircleGraph.defaultProps = {
+  value: VALUE_DEFAULT,
+  size: SIZE_DEFAULT,
+  label: LABEL_DEFAULT
+};
+
+var CircleBase = styled.circle.withConfig({
+  displayName: 'CircleGraph__CircleBase'
+})(['fill:none;stroke:#6d777b;opacity:0.3;']);
+
+var CircleValue = styled.circle.withConfig({
+  displayName: 'CircleGraph__CircleValue'
+})(['fill:none;transform:rotate(270deg);transform-origin:50% 50%;stroke:#21c1e7;']);
+
+var Label = styled.text.withConfig({
+  displayName: 'CircleGraph__Label'
+})(['fill:#000;font-size:16px;font-weight:600;dominant-baseline:middle;alignment-baseline:middle;text-anchor:middle;']);
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -7381,30 +7780,34 @@ function lerp(progress, value1, value2) {
  * @returns {Number}
  */
 
+var NON_BREAKING_SPACE$1 = '\xa0';
+
 var accent = theme.accent;
 var contentBackgroundActive = theme.contentBackgroundActive;
 
 
-var StyledDropDownItem = styled.div.attrs({ tabIndex: '0' })(['position:relative;padding:8px 15px;cursor:pointer;outline:0;', ';&:after{content:\'\';opacity:0;position:absolute;z-index:2;top:0;left:0;right:0;bottom:0;margin:-1px -2px;border:2px solid ', ';transition:all 100ms ease-in-out;}&:active{background-color:', ';}&:hover,&:focus{color:', ';}&:focus:after{opacity:', ';}'], unselectable, accent, contentBackgroundActive, accent, function (_ref) {
+var StyledDropDownItem = styled.div.attrs({ tabIndex: '0' }).withConfig({
+  displayName: 'DropDownItem__StyledDropDownItem'
+})(['position:relative;padding:8px 15px;cursor:pointer;outline:0;&:after{content:\'\';opacity:0;position:absolute;z-index:2;top:0;left:0;right:0;bottom:0;margin:-1px -2px;border:2px solid ', ';transition:all 100ms ease-in-out;}&:active{background-color:', ';}&:hover,&:focus{color:', ';}&:focus:after{opacity:', ';}'], accent, contentBackgroundActive, accent, function (_ref) {
   var displayFocus = _ref.displayFocus;
   return displayFocus ? 1 : 0;
 });
 
 var DropDownItem = function (_React$Component) {
-  inherits$1(DropDownItem, _React$Component);
+  inherits(DropDownItem, _React$Component);
 
   function DropDownItem() {
     var _ref2;
 
     var _temp, _this, _ret;
 
-    classCallCheck$1(this, DropDownItem);
+    classCallCheck(this, DropDownItem);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = possibleConstructorReturn$1(this, (_ref2 = DropDownItem.__proto__ || Object.getPrototypeOf(DropDownItem)).call.apply(_ref2, [this].concat(args))), _this), _this.state = {
+    return _ret = (_temp = (_this = possibleConstructorReturn(this, (_ref2 = DropDownItem.__proto__ || Object.getPrototypeOf(DropDownItem)).call.apply(_ref2, [this].concat(args))), _this), _this.state = {
       pressed: false,
       displayFocus: false
     }, _this.handleActivate = function (event) {
@@ -7419,10 +7822,10 @@ var DropDownItem = function (_React$Component) {
       _this.setState({ pressed: false });
     }, _this.handleFocus = function () {
       _this.setState({ displayFocus: !_this.state.pressed });
-    }, _temp), possibleConstructorReturn$1(_this, _ret);
+    }, _temp), possibleConstructorReturn(_this, _ret);
   }
 
-  createClass$1(DropDownItem, [{
+  createClass(DropDownItem, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -7452,61 +7855,82 @@ var DropDownItem = function (_React$Component) {
   return DropDownItem;
 }(React__default.Component);
 
-var arrow = "data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%225%22%20viewBox%3D%220%200%209%205%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3EIcon_arrow%20down-dark%3C%2Ftitle%3E%3Cpath%20d%3D%22M0%200h8.36L4.18%204.18z%22%20fill%3D%22%23B3B3B3%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+DropDownItem.defaultProps = {
+  children: NON_BREAKING_SPACE$1,
+  mainRef: function mainRef() {},
+  className: ''
+};
+
+var arrow = "data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%225%22%20viewBox%3D%220%200%209%205%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%200h8.36L4.18%204.18z%22%20fill%3D%22%23B3B3B3%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+
+var NON_BREAKING_SPACE = '\xa0';
 
 var contentBackground$1 = theme.contentBackground;
 var contentBorder$1 = theme.contentBorder;
 var textPrimary$1 = theme.textPrimary;
 
 
-var StyledDropDown = styled.div(['position:relative;color:', ';white-space:nowrap;box-shadow:0 4px 4px 0 rgba(0,0,0,0.03);&:focus{outline:0;}'], textPrimary$1);
+var StyledDropDown = styled.div.withConfig({
+  displayName: 'DropDown__StyledDropDown'
+})(['position:relative;display:', ';flex-direction:column;color:', ';white-space:nowrap;box-shadow:0 4px 4px 0 rgba(0,0,0,0.03);', ';&:focus{outline:0;}'], function (_ref) {
+  var wide = _ref.wide;
+  return wide ? 'flex' : 'inline-flex';
+}, textPrimary$1, unselectable);
 
-var DropDownItems = styled.ul(['display:', ';min-width:100%;padding:8px 0;position:absolute;z-index:2;top:calc(100% - 1px);color:', ';background:', ';border:1px solid ', ';box-shadow:0 4px 4px 0 rgba(0,0,0,0.06);border-radius:3px;list-style:none;'], function (_ref) {
-  var opened = _ref.opened;
+var DropDownItems = styled.div.withConfig({
+  displayName: 'DropDown__DropDownItems'
+})(['display:', ';min-width:', ';padding:8px 0;position:absolute;z-index:2;top:calc(100% - 1px);color:', ';background:', ';border:1px solid ', ';box-shadow:0 4px 4px 0 rgba(0,0,0,0.06);border-radius:3px;list-style:none;'], function (_ref2) {
+  var opened = _ref2.opened;
   return opened ? 'block' : 'none';
+}, function (_ref3) {
+  var wide = _ref3.wide;
+  return wide ? '100%' : '0';
 }, textPrimary$1, contentBackground$1, contentBorder$1);
 
-var DropDownActiveItem = getPublicUrl(styled(DropDownItem)(['padding-right:40px;background:', ' url(', ') no-repeat calc(100% - 15px) 50%;border:1px solid ', ';border-radius:3px;&:hover,&:focus{color:inherit;}&:active{color:', ';}'], contentBackground$1, styledPublicUrl(arrow), contentBorder$1, textPrimary$1));
+var DropDownActiveItem = getPublicUrl(styled(DropDownItem).withConfig({
+  displayName: 'DropDown__DropDownActiveItem'
+})(['padding-right:40px;background:', ' url(', ') no-repeat calc(100% - 15px) 50%;border:1px solid ', ';border-radius:3px;&:hover,&:focus{color:inherit;}&:active{color:', ';}'], contentBackground$1, styledPublicUrl(arrow), contentBorder$1, textPrimary$1));
 
 var DropDown = function (_React$Component) {
-  inherits$1(DropDown, _React$Component);
+  inherits(DropDown, _React$Component);
 
   function DropDown() {
-    var _ref2;
+    var _ref4;
 
     var _temp, _this, _ret;
 
-    classCallCheck$1(this, DropDown);
+    classCallCheck(this, DropDown);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = possibleConstructorReturn$1(this, (_ref2 = DropDown.__proto__ || Object.getPrototypeOf(DropDown)).call.apply(_ref2, [this].concat(args))), _this), _this.state = {
+    return _ret = (_temp = (_this = possibleConstructorReturn(this, (_ref4 = DropDown.__proto__ || Object.getPrototypeOf(DropDown)).call.apply(_ref4, [this].concat(args))), _this), _this.state = {
       opened: false
     }, _this.handleToggle = function () {
       _this.setState({ opened: !_this.state.opened });
     }, _this.handleClose = function () {
       _this.setState({ opened: false });
-    }, _this.handleItemActivate = function (index, _ref3) {
-      var keyboard = _ref3.keyboard;
+    }, _this.handleItemActivate = function (index, _ref5) {
+      var keyboard = _ref5.keyboard;
 
       _this.props.onChange(index);
       _this.setState({ opened: false });
       if (_this.activeItemElt && keyboard) {
         _this.activeItemElt.focus();
       }
-    }, _temp), possibleConstructorReturn$1(_this, _ret);
+    }, _temp), possibleConstructorReturn(_this, _ret);
   }
 
-  createClass$1(DropDown, [{
+  createClass(DropDown, [{
     key: 'render',
     value: function render() {
       var _this2 = this;
 
       var _props = this.props,
           items = _props.items,
-          active = _props.active;
+          active = _props.active,
+          wide = _props.wide;
       var opened = this.state.opened;
 
       var activeItem = items[active] || items[0];
@@ -7515,7 +7939,7 @@ var DropDown = function (_React$Component) {
         { onClickOut: this.handleClose },
         React__default.createElement(
           StyledDropDown,
-          null,
+          { wide: wide },
           React__default.createElement(
             DropDownActiveItem,
             {
@@ -7534,35 +7958,35 @@ var DropDown = function (_React$Component) {
                 closeProgress: reactMotion_4(Number(opened), spring('fast'))
               }
             },
-            function (_ref4) {
-              var openProgress = _ref4.openProgress,
-                  closeProgress = _ref4.closeProgress;
+            function (_ref6) {
+              var openProgress = _ref6.openProgress,
+                  closeProgress = _ref6.closeProgress;
 
-              var scale = opened ? lerp(openProgress, 0.95, 1) : 1;
+              var scale = opened ? lerp(openProgress, 0.98, 1) : 1;
               return React__default.createElement(
                 DropDownItems,
                 {
+                  role: 'listbox',
                   opened: openProgress > 0,
+                  wide: wide,
                   style: {
                     transform: 'scale(' + scale + ',' + scale + ')',
                     opacity: opened ? openProgress : closeProgress
                   }
                 },
-                items.map(function (item, i) {
+                items.length ? items.map(function (item, i) {
                   return React__default.createElement(
-                    'li',
-                    { key: i },
-                    React__default.createElement(
-                      DropDownItem,
-                      {
-                        index: i,
-                        active: i === active,
-                        onActivate: _this2.handleItemActivate
-                      },
-                      item
-                    )
+                    DropDownItem,
+                    {
+                      role: 'option',
+                      key: i,
+                      index: i,
+                      active: i === active,
+                      onActivate: _this2.handleItemActivate
+                    },
+                    item
                   );
-                })
+                }) : NON_BREAKING_SPACE
               );
             }
           )
@@ -7576,16 +8000,110 @@ var DropDown = function (_React$Component) {
 DropDown.defaultProps = {
   items: [],
   active: 0,
+  wide: false,
   onChange: function onChange() {}
 };
 
-var logo = "472ee4f35897125f.svg";
+var StyledText = styled.span.withConfig({
+  displayName: 'Text__StyledText'
+})(['', ';', ';', ';'], function (_ref) {
+  var size = _ref.size,
+      weight = _ref.weight;
+  return font({ size: size, weight: weight });
+}, function (_ref2) {
+  var smallcaps = _ref2.smallcaps;
+
+  if (!smallcaps) return '';
+  return '\n      text-transform: lowercase;\n      font-variant: small-caps;\n    ';
+}, function (_ref3) {
+  var color = _ref3.color;
+
+  return 'color: ' + (color || theme.textPrimary);
+});
+
+var Text = function Text(props) {
+  return React__default.createElement(StyledText, props);
+};
+
+var createTextContainer = function createTextContainer(Element, defaultProps) {
+  var Container = function Container(_ref4) {
+    var children = _ref4.children,
+        color = _ref4.color,
+        size = _ref4.size,
+        smallcaps = _ref4.smallcaps,
+        weight = _ref4.weight,
+        props = objectWithoutProperties(_ref4, ['children', 'color', 'size', 'smallcaps', 'weight']);
+
+    var textProps = { color: color, size: size, smallcaps: smallcaps, weight: weight };
+    return React__default.createElement(
+      Element,
+      props,
+      React__default.createElement(
+        Text,
+        textProps,
+        children
+      )
+    );
+  };
+  Container.defaultProps = defaultProps;
+
+  return Container;
+};
+
+Text.Block = createTextContainer('div');
+Text.Paragraph = createTextContainer('p');
+
+var TypedText = Text;
+
+var StyledField = styled.div.withConfig({
+  displayName: 'Field__StyledField'
+})(['margin-bottom:20px;']);
+
+var Field = function Field(_ref) {
+  var children = _ref.children,
+      label = _ref.label,
+      props = objectWithoutProperties(_ref, ['children', 'label']);
+  return React__default.createElement(
+    StyledField,
+    props,
+    React__default.createElement(
+      'label',
+      null,
+      React__default.createElement(
+        TypedText.Block,
+        { color: theme.textSecondary, smallcaps: true },
+        label
+      ),
+      children
+    )
+  );
+};
+
+var StyledInput = styled.input.withConfig({
+  displayName: 'TextInput__StyledInput'
+})(['', ';width:', ';padding:5px 10px;background:', ';border:1px solid ', ';border-radius:3px;box-shadow:inset 0 1px 2px rgba(0,0,0,0.06);color:', ';appearance:none;&:focus{outline:none;border-color:', ';}&:read-only{color:transparent;text-shadow:0 0 0 ', ';}'], font({ size: 'small', weight: 'normal' }), function (_ref) {
+  var wide = _ref.wide;
+  return wide ? '100%' : 'auto';
+}, theme.contentBackground, theme.contentBorder, theme.textPrimary, theme.contentBorderActive, theme.textSecondary);
+
+var TextInput = function TextInput(props) {
+  return React__default.createElement(StyledInput, props);
+};
+TextInput.defaultProps = {
+  type: 'text'
+};
+
+TextInput.Number = function (props) {
+  return React__default.createElement(StyledInput, _extends({ type: 'number' }, props));
+};
+
+var logo = "feef84fc525d4290.svg";
 
 var iconTwitter = "data:image/svg+xml,%3Csvg%20width%3D%2215%22%20height%3D%2230%22%20viewBox%3D%220%200%2015%2030%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23717171%22%2F%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M13.56%2010.558a5.42%205.42%200%200%201-1.557.419%202.7%202.7%200%200%200%201.189-1.49%205.323%205.323%200%200%201-1.716.652%202.697%202.697%200%200%200-1.975-.853%202.702%202.702%200%200%200-2.704%202.703c0%20.21.025.419.067.62a7.685%207.685%200%200%201-5.575-2.83%202.702%202.702%200%200%200%20.837%203.616%202.724%202.724%200%200%201-1.222-.342v.033c0%201.314.93%202.402%202.168%202.653a2.858%202.858%200%200%201-.712.092c-.175%200-.343-.016-.51-.041a2.708%202.708%200%200%200%202.528%201.875A5.414%205.414%200%200%201%201.02%2018.82a5.62%205.62%200%200%201-.653-.034A7.64%207.64%200%200%200%204.52%2020c4.972%200%207.693-4.118%207.693-7.693%200-.117%200-.234-.009-.351a5.81%205.81%200%200%200%201.356-1.398z%22%2F%3E%3C%2Fdefs%3E%3C%2Fsvg%3E";
 
 var iconMedium = "data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2230%22%20viewBox%3D%220%200%2016%2030%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23717171%22%2F%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M4.997%2010.667a.117.117%200%200%200-.025-.042L.695%208.482C.578%208.424.46%208.357.326%208.357.1%208.357%200%208.549%200%208.758v9.543c0%20.25.184.552.419.67l3.892%201.95a.612.612%200%200%200%20.276.067c.285%200%20.41-.243.41-.503v-9.818zm.536.845v5.023l4.47%202.226-4.47-7.249zm9.467.15l-4.52%207.342%203.691%201.841a.793.793%200%200%200%20.394.11c.276%200%20.435-.193.435-.47v-8.822zm-.025-1.004a.056.056%200%200%200-.034-.05l-4.528-2.26a.488.488%200%200%200-.218-.05.505.505%200%200%200-.435.234l-2.712%204.412%203.264%205.307c.335-.536%204.663-7.559%204.663-7.593z%22%2F%3E%3C%2Fdefs%3E%3C%2Fsvg%3E";
 
-var iconRocket = "data:image/svg+xml,%3Csvg%20width%3D%2218%22%20height%3D%2215%22%20viewBox%3D%220%200%2018%2015%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Erocket%3C%2Ftitle%3E%3Cpath%20d%3D%22M18%207.488c0-.885-.27-1.734-.804-2.523-.479-.708-1.15-1.336-1.994-1.864-1.63-1.02-3.773-1.581-6.033-1.581-.755%200-1.5.062-2.221.186A7.358%207.358%200%200%200%205.42.634C2.458-.773%200%20.6%200%20.6s2.285%201.838%201.913%203.45C.891%205.044.337%206.24.337%207.488v.024c0%201.247.554%202.444%201.576%203.437C2.285%2012.561%200%2014.4%200%2014.4s2.458%201.374%205.421-.033a7.355%207.355%200%200%200%201.527-1.072c.722.124%201.466.186%202.22.186%202.26%200%204.403-.561%206.034-1.581.844-.528%201.515-1.156%201.994-1.864.534-.789.804-1.638.804-2.523V7.5v-.012zm-8.828%204.864c-.951%200-1.862-.108-2.704-.304-.855%201.007-2.737%202.409-4.565%201.956.594-.626%201.475-1.683%201.287-3.424-1.096-.835-1.754-1.903-1.754-3.068%200-2.673%203.464-4.84%207.736-4.84s7.736%202.167%207.736%204.84-3.464%204.84-7.736%204.84zm1.028-4.84c0%20.556-.46%201.007-1.028%201.007-.567%200-1.027-.451-1.027-1.007%200-.556.46-1.006%201.027-1.006.568%200%201.028.45%201.028%201.006zm2.545-1.006c-.567%200-1.027.45-1.027%201.006s.46%201.007%201.027%201.007c.568%200%201.028-.451%201.028-1.007%200-.556-.46-1.006-1.028-1.006zm-7.146%200c-.567%200-1.027.45-1.027%201.006s.46%201.007%201.027%201.007c.568%200%201.028-.451%201.028-1.007%200-.556-.46-1.006-1.028-1.006z%22%20fill%3D%22%23717171%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E";
+var iconRocket = "data:image/svg+xml,%3Csvg%20width%3D%2218%22%20height%3D%2215%22%20viewBox%3D%220%200%2018%2015%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M18%207.488c0-.885-.27-1.734-.804-2.523-.479-.708-1.15-1.336-1.994-1.864-1.63-1.02-3.773-1.581-6.033-1.581-.755%200-1.5.062-2.221.186A7.358%207.358%200%200%200%205.42.634C2.458-.773%200%20.6%200%20.6s2.285%201.838%201.913%203.45C.891%205.044.337%206.24.337%207.488v.024c0%201.247.554%202.444%201.576%203.437C2.285%2012.561%200%2014.4%200%2014.4s2.458%201.374%205.421-.033a7.355%207.355%200%200%200%201.527-1.072c.722.124%201.466.186%202.22.186%202.26%200%204.403-.561%206.034-1.581.844-.528%201.515-1.156%201.994-1.864.534-.789.804-1.638.804-2.523v-.025zm-8.828%204.864c-.951%200-1.862-.108-2.704-.304-.855%201.007-2.737%202.409-4.565%201.956.594-.626%201.475-1.683%201.287-3.424-1.096-.835-1.754-1.903-1.754-3.068%200-2.673%203.464-4.84%207.736-4.84s7.736%202.167%207.736%204.84-3.464%204.84-7.736%204.84zm1.028-4.84c0%20.556-.46%201.007-1.028%201.007a1.017%201.017%200%200%201-1.027-1.007c0-.556.46-1.006%201.027-1.006.568%200%201.028.45%201.028%201.006zm2.545-1.006c-.567%200-1.027.45-1.027%201.006s.46%201.007%201.027%201.007c.568%200%201.028-.451%201.028-1.007%200-.556-.46-1.006-1.028-1.006zm-7.146%200c-.567%200-1.027.45-1.027%201.006s.46%201.007%201.027%201.007c.568%200%201.028-.451%201.028-1.007%200-.556-.46-1.006-1.028-1.006z%22%20fill%3D%22%23717171%22%2F%3E%3C%2Fsvg%3E";
 
 var medium$1 = function medium(css$$1) {
   return breakpoint('medium', css$$1);
@@ -7594,7 +8112,9 @@ var large$1 = function large(css$$1) {
   return breakpoint('large', css$$1);
 };
 
-var StyledFooter = getPublicUrl(styled.footer(['padding:60px 20px 35px;font-size:15px;color:grey;background:', ';', ';.main{display:flex;align-items:center;flex-direction:column;margin:0 auto;}.logo{margin-bottom:60px;}.menus{display:flex;}.menu-1{margin-right:35px;}.social-links{display:flex;justify-content:center;margin-top:30px;}.social-links li{display:flex;}.icon{overflow:hidden;text-indent:-9999px;padding-left:30px;background-repeat:no-repeat;background-position:50% 50%;}li{list-style:none;line-height:2;}a{text-decoration:none;}strong a{color:', ';font-weight:400;}.icon.twitter{background-image:url(', ');}.icon.medium{background-image:url(', ');}.icon.rocket{background-image:url(', ');}', ';', ';'], colors.Rain['Shark'], function (_ref) {
+var StyledFooter = getPublicUrl(styled.footer.withConfig({
+  displayName: 'Footer__StyledFooter'
+})(['padding:60px 20px 35px;font-size:15px;color:grey;background:', ';', ';.main{display:flex;align-items:center;flex-direction:column;margin:0 auto;}.logo{margin-bottom:60px;}.menus{display:flex;}.menu-1{margin-right:35px;}.social-links{display:flex;justify-content:center;margin-top:30px;}.social-links li{display:flex;}.icon{overflow:hidden;text-indent:-9999px;padding-left:30px;background-repeat:no-repeat;background-position:50% 50%;}li{list-style:none;line-height:2;}a{text-decoration:none;}strong a{color:', ';font-weight:400;}.icon.twitter{background-image:url(', ');}.icon.medium{background-image:url(', ');}.icon.rocket{background-image:url(', ');}', ';', ';'], colors.Rain['Shark'], function (_ref) {
   var compact = _ref.compact;
 
   if (!compact) return '';
@@ -7758,19 +8278,23 @@ Footer.defaultProps = DefaultProps$2;
 
 var Footer$1 = getPublicUrl(Footer);
 
-var logo$1 = "data:image/svg+xml,%3Csvg%20width%3D%22200%22%20height%3D%22183%22%20viewBox%3D%220%200%20200%20183%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3ELogo%20bg%3C%2Ftitle%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%2240.59%25%22%20y1%3D%22172.164%25%22%20x2%3D%22134.278%25%22%20y2%3D%22-209.701%25%22%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%22125.497%25%22%20x2%3D%2263.448%25%22%20y2%3D%22-8.979%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2272.854%25%22%20y1%3D%22157.035%25%22%20x2%3D%2272.854%25%22%20y2%3D%2250%25%22%20id%3D%22c%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%22140.325%25%22%20x2%3D%22122.689%25%22%20y2%3D%22-73.565%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%2295.2%25%22%20x2%3D%2276.121%25%22%20y2%3D%22-21.873%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M99.9%200l-2.912.915C87.782%203.887%2039.932%2020.343%201.893%2052.57L0%2054.17l.465%202.626c.784%204.268%205.341%2026.823%2018.048%2051.836%208.171%2016.031%2018.16%2030.102%2029.693%2041.824%2014.051%2014.241%2030.459%2024.802%2048.78%2031.396l2.972%201.05%201.937-.753%201.03-.364c18.209-6.553%2034.615-17.112%2048.764-31.388%2011.467-11.593%2021.458-25.666%2029.695-41.827%2012.782-25.102%2017.587-48.377%2018.076-52.006h.005l.456-2.592-2.056-1.468C159.836%2020.318%20112.047%203.884%20102.87.923L99.9%200z%22%20fill%3D%22url%28%23a%29%22%2F%3E%3Cpath%20d%3D%22M85.23%2043.803c-.061%200-28.567%209.109-28.567%2034.02%200%2024.912%2027.515%2036.995%2047.778%2036.995%2011.021%200%2020.075-3.208%2026.047-6.134.77-3.531%203.569-11.895%2012.83-11.958%201.651-.064%203.2.246%204.502.99%206.197%203.346%202.17%209.604%202.17%209.604a13.943%2013.943%200%200%200%201.416-.306c7.448-2.006%2015.84-10.525%2014.385-24.791-1.167-11.44-11.726-18.69-16.862-21.57-1.681-.944-2.782-1.42-2.782-1.42.186-1.162.246-2.061.246-2.751%200-.13-.002-.251-.006-.365v-1.34c-26.952-16.35-49.76-18.868-61.01-18.868-4.859%200-7.582.457-7.582.457l7.436%207.437zm56.95%2015.491s-3.656-1.177-7.373-1.673c-1.86%201.921-3.471%202.727-3.967%202.975l-.124.124c-10.844-2.293-14.748-7.87-14.748-7.87%2010.225-.062%2019.458%202.354%2026.212%206.444z%22%20fill%3D%22url%28%23b%29%22%20opacity%3D%22.401%22%2F%3E%3Cpath%20d%3D%22M152.281%2074.725c0%208.118-3.345%2015.616-9.047%2021.689l-.271.312.457-.002c1.549-.062%203.098.248%204.4.991%206.197%203.347%202.17%209.605%202.17%209.605%207.745-1.239%2017.35-9.914%2015.8-25.097-1.166-11.44-11.725-18.69-16.86-21.57a31.046%2031.046%200%200%201%203.351%2014.072%22%20fill%3D%22url%28%23c%29%22%20opacity%3D%22.1%22%2F%3E%3Cpath%20d%3D%22M26.857%20103.168c0%201.006.039%201.962.095%202.897%207.669%2014.75%2016.894%2027.635%2027.446%2038.305%2013.159%2013.278%2028.47%2023.13%2045.52%2029.29%2016.986-6.139%2032.299-16.012%2045.521-29.353a141.977%20141.977%200%200%200%2011.21-12.826c-28.27-2.032-26.553-19.203-26.553-19.203%200-.681%200-1.363.124-2.045%200%200%20.063-.603.269-1.55-5.972%202.927-15.026%206.135-26.048%206.135-20.263%200-47.778-12.083-47.778-36.995%200-24.911%2028.506-34.02%2028.506-34.02l-.015-.005a29.86%2029.86%200%200%200-2.216-.058c-31.17%201.116-56.081%2027.267-56.081%2059.428%22%20fill%3D%22url%28%23d%29%22%20opacity%3D%22.453%22%2F%3E%3Cpath%20d%3D%22M99.9%200l-2.912.915C87.782%203.887%2039.932%2020.343%201.893%2052.57L0%2054.17l.465%202.626c.784%204.268%205.341%2026.823%2018.048%2051.836%208.171%2016.031%2018.16%2030.102%2029.693%2041.824%2014.051%2014.241%2030.459%2024.802%2048.78%2031.396l2.972%201.05%201.937-.753%201.03-.364c18.209-6.553%2034.615-17.112%2048.764-31.388%2011.467-11.593%2021.458-25.666%2029.695-41.827%2012.782-25.102%2017.587-48.377%2018.076-52.006h.005l.456-2.592-2.056-1.468C159.836%2020.318%20112.047%203.884%20102.87.923L99.9%200zM54.399%20144.37c-10.861-10.983-20.322-24.306-28.123-39.602C15.523%2083.71%2010.912%2064.732%209.436%2057.59%2045.466%2027.844%2089.521%2012.462%2099.914%209.1c10.445%203.408%2054.72%2018.972%2090.482%2048.489-1.489%207.117-6.123%2026.018-16.836%2047.055-7.843%2015.38-17.305%2028.724-28.12%2039.662-13.223%2013.341-28.536%2023.214-45.522%2029.353-17.05-6.16-32.361-16.012-45.52-29.29z%22%20fill%3D%22url%28%23e%29%22%20opacity%3D%22.127%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+var logo$1 = "data:image/svg+xml,%3Csvg%20width%3D%22200%22%20height%3D%22183%22%20viewBox%3D%220%200%20200%20183%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%2240.59%25%22%20y1%3D%22172.164%25%22%20x2%3D%22134.278%25%22%20y2%3D%22-209.701%25%22%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%22125.497%25%22%20x2%3D%2263.448%25%22%20y2%3D%22-8.979%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2272.854%25%22%20y1%3D%22157.035%25%22%20x2%3D%2272.854%25%22%20y2%3D%2250%25%22%20id%3D%22c%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%22140.325%25%22%20x2%3D%22122.689%25%22%20y2%3D%22-73.565%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%220%25%22%20y1%3D%2295.2%25%22%20x2%3D%2276.121%25%22%20y2%3D%22-21.873%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M99.9%200l-2.912.915C87.782%203.887%2039.932%2020.343%201.893%2052.57L0%2054.17l.465%202.626c.784%204.268%205.341%2026.823%2018.048%2051.836%208.171%2016.031%2018.16%2030.102%2029.693%2041.824%2014.051%2014.241%2030.459%2024.802%2048.78%2031.396l2.972%201.05%201.937-.753%201.03-.364c18.209-6.553%2034.615-17.112%2048.764-31.388%2011.467-11.593%2021.458-25.666%2029.695-41.827%2012.782-25.102%2017.587-48.377%2018.076-52.006h.005l.456-2.592-2.056-1.468C159.836%2020.318%20112.047%203.884%20102.87.923L99.9%200z%22%20fill%3D%22url%28%23a%29%22%2F%3E%3Cpath%20d%3D%22M85.23%2043.803c-.061%200-28.567%209.109-28.567%2034.02%200%2024.912%2027.515%2036.995%2047.778%2036.995%2011.021%200%2020.075-3.208%2026.047-6.134.77-3.531%203.569-11.895%2012.83-11.958%201.651-.064%203.2.246%204.502.99%206.197%203.346%202.17%209.604%202.17%209.604a13.943%2013.943%200%200%200%201.416-.306c7.448-2.006%2015.84-10.525%2014.385-24.791-1.167-11.44-11.726-18.69-16.862-21.57-1.681-.944-2.782-1.42-2.782-1.42.186-1.162.246-2.061.246-2.751%200-.13-.002-.251-.006-.365v-1.34c-26.952-16.35-49.76-18.868-61.01-18.868-4.859%200-7.582.457-7.582.457l7.436%207.437zm56.95%2015.491s-3.656-1.177-7.373-1.673c-1.86%201.921-3.471%202.727-3.967%202.975l-.124.124c-10.844-2.293-14.748-7.87-14.748-7.87%2010.225-.062%2019.458%202.354%2026.212%206.444z%22%20fill%3D%22url%28%23b%29%22%20opacity%3D%22.401%22%2F%3E%3Cpath%20d%3D%22M152.281%2074.725c0%208.118-3.345%2015.616-9.047%2021.689l-.271.312.457-.002c1.549-.062%203.098.248%204.4.991%206.197%203.347%202.17%209.605%202.17%209.605%207.745-1.239%2017.35-9.914%2015.8-25.097-1.166-11.44-11.725-18.69-16.86-21.57a31.046%2031.046%200%200%201%203.351%2014.072%22%20fill%3D%22url%28%23c%29%22%20opacity%3D%22.1%22%2F%3E%3Cpath%20d%3D%22M26.857%20103.168c0%201.006.039%201.962.095%202.897%207.669%2014.75%2016.894%2027.635%2027.446%2038.305%2013.159%2013.278%2028.47%2023.13%2045.52%2029.29%2016.986-6.139%2032.299-16.012%2045.521-29.353a141.977%20141.977%200%200%200%2011.21-12.826c-28.27-2.032-26.553-19.203-26.553-19.203%200-.681%200-1.363.124-2.045%200%200%20.063-.603.269-1.55-5.972%202.927-15.026%206.135-26.048%206.135-20.263%200-47.778-12.083-47.778-36.995%200-24.911%2028.506-34.02%2028.506-34.02l-.015-.005a29.86%2029.86%200%200%200-2.216-.058c-31.17%201.116-56.081%2027.267-56.081%2059.428%22%20fill%3D%22url%28%23d%29%22%20opacity%3D%22.453%22%2F%3E%3Cpath%20d%3D%22M99.9%200l-2.912.915C87.782%203.887%2039.932%2020.343%201.893%2052.57L0%2054.17l.465%202.626c.784%204.268%205.341%2026.823%2018.048%2051.836%208.171%2016.031%2018.16%2030.102%2029.693%2041.824%2014.051%2014.241%2030.459%2024.802%2048.78%2031.396l2.972%201.05%201.937-.753%201.03-.364c18.209-6.553%2034.615-17.112%2048.764-31.388%2011.467-11.593%2021.458-25.666%2029.695-41.827%2012.782-25.102%2017.587-48.377%2018.076-52.006h.005l.456-2.592-2.056-1.468C159.836%2020.318%20112.047%203.884%20102.87.923L99.9%200zM54.399%20144.37c-10.861-10.983-20.322-24.306-28.123-39.602C15.523%2083.71%2010.912%2064.732%209.436%2057.59%2045.466%2027.844%2089.521%2012.462%2099.914%209.1c10.445%203.408%2054.72%2018.972%2090.482%2048.489-1.489%207.117-6.123%2026.018-16.836%2047.055-7.843%2015.38-17.305%2028.724-28.12%2039.662-13.223%2013.341-28.536%2023.214-45.522%2029.353-17.05-6.16-32.361-16.012-45.52-29.29z%22%20fill%3D%22url%28%23e%29%22%20opacity%3D%22.127%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 
-var bgLandscape = "data:image/svg+xml,%3Csvg%20width%3D%221440%22%20height%3D%22491%22%20viewBox%3D%220%200%201440%20491%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Ctitle%3EGroup%205%3C%2Ftitle%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%22-14.438%25%22%20y1%3D%22107.641%25%22%20x2%3D%2298.443%25%22%20y2%3D%22-54.066%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h720v491H0z%22%2F%3E%3ClinearGradient%20x1%3D%2295.341%25%22%20y1%3D%2296.71%25%22%20x2%3D%2237.949%25%22%20y2%3D%228.725%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2225.323%25%22%20y1%3D%2264.209%25%22%20x2%3D%22-177.025%25%22%20y2%3D%22232.498%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2298.443%25%22%20y1%3D%22-54.066%25%22%20x2%3D%22-14.438%25%22%20y2%3D%22107.641%25%22%20id%3D%22g%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22f%22%20d%3D%22M0%200h720v491H0z%22%2F%3E%3ClinearGradient%20x1%3D%22224.819%25%22%20y1%3D%22-159.682%25%22%20x2%3D%2229.43%25%22%20y2%3D%2296.423%25%22%20id%3D%22i%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%2250%25%22%20y2%3D%2297.636%25%22%20id%3D%22j%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%22-96.692%25%22%20y2%3D%22190.844%25%22%20id%3D%22k%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23C7C7C7%22%20stop-opacity%3D%22.012%22%20offset%3D%221.236%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20transform%3D%22translate%28720%29%22%3E%3Cmask%20id%3D%22c%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23b%29%22%20xlink%3Ahref%3D%22%23a%22%2F%3E%3Cg%20mask%3D%22url%28%23c%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%201l552%20533%22%20stroke%3D%22url%28%23d%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28132%20-284%29%22%2F%3E%3Cpath%20d%3D%22M429.5%20414.5L805.854%2038.146%22%20stroke%3D%22url%28%23e%29%22%20transform%3D%22translate%28132%20-284%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cmask%20id%3D%22h%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23f%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23g%29%22%20xlink%3Ahref%3D%22%23f%22%2F%3E%3Cg%20mask%3D%22url%28%23h%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%20700.5l376.354-376.354%22%20stroke%3D%22url%28%23i%29%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M162.5%20116l552%20533%22%20stroke%3D%22url%28%23j%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M433.5%20376.5L809.854.146%22%20stroke%3D%22url%28%23k%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+var bgLandscape = "data:image/svg+xml,%3Csvg%20width%3D%221440%22%20height%3D%22491%22%20viewBox%3D%220%200%201440%20491%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%22-14.438%25%22%20y1%3D%22107.641%25%22%20x2%3D%2298.443%25%22%20y2%3D%22-54.066%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h720v491H0z%22%2F%3E%3ClinearGradient%20x1%3D%2295.341%25%22%20y1%3D%2296.71%25%22%20x2%3D%2237.949%25%22%20y2%3D%228.725%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2225.323%25%22%20y1%3D%2264.209%25%22%20x2%3D%22-177.025%25%22%20y2%3D%22232.498%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2298.443%25%22%20y1%3D%22-54.066%25%22%20x2%3D%22-14.438%25%22%20y2%3D%22107.641%25%22%20id%3D%22g%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22f%22%20d%3D%22M0%200h720v491H0z%22%2F%3E%3ClinearGradient%20x1%3D%22224.819%25%22%20y1%3D%22-159.682%25%22%20x2%3D%2229.43%25%22%20y2%3D%2296.423%25%22%20id%3D%22i%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%2250%25%22%20y2%3D%2297.636%25%22%20id%3D%22j%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%22-96.692%25%22%20y2%3D%22190.844%25%22%20id%3D%22k%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23C7C7C7%22%20stop-opacity%3D%22.012%22%20offset%3D%221.236%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20transform%3D%22translate%28720%29%22%3E%3Cmask%20id%3D%22c%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23b%29%22%20xlink%3Ahref%3D%22%23a%22%2F%3E%3Cg%20mask%3D%22url%28%23c%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%201l552%20533%22%20stroke%3D%22url%28%23d%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28132%20-284%29%22%2F%3E%3Cpath%20d%3D%22M429.5%20414.5L805.854%2038.146%22%20stroke%3D%22url%28%23e%29%22%20transform%3D%22translate%28132%20-284%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cmask%20id%3D%22h%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23f%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23g%29%22%20xlink%3Ahref%3D%22%23f%22%2F%3E%3Cg%20mask%3D%22url%28%23h%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%20700.5l376.354-376.354%22%20stroke%3D%22url%28%23i%29%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M162.5%20116l552%20533%22%20stroke%3D%22url%28%23j%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M433.5%20376.5L809.854.146%22%20stroke%3D%22url%28%23k%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 
-var bgPortrait = "data:image/svg+xml,%3Csvg%20width%3D%22768%22%20height%3D%22880%22%20viewBox%3D%220%200%20768%20880%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Ctitle%3E4th%20Section%3C%2Ftitle%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%22-14.438%25%22%20y1%3D%22107.641%25%22%20x2%3D%2298.443%25%22%20y2%3D%22-54.066%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h768v440H0z%22%2F%3E%3ClinearGradient%20x1%3D%2295.341%25%22%20y1%3D%2296.71%25%22%20x2%3D%2237.949%25%22%20y2%3D%228.725%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2225.323%25%22%20y1%3D%2264.209%25%22%20x2%3D%22-177.025%25%22%20y2%3D%22232.498%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2298.443%25%22%20y1%3D%22-54.066%25%22%20x2%3D%22-14.438%25%22%20y2%3D%22107.641%25%22%20id%3D%22g%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22f%22%20d%3D%22M0%200h768v440H0z%22%2F%3E%3ClinearGradient%20x1%3D%22224.819%25%22%20y1%3D%22-159.682%25%22%20x2%3D%2229.43%25%22%20y2%3D%2296.423%25%22%20id%3D%22i%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%2250%25%22%20y2%3D%2297.636%25%22%20id%3D%22j%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%22-96.692%25%22%20y2%3D%22190.844%25%22%20id%3D%22k%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23C7C7C7%22%20stop-opacity%3D%22.012%22%20offset%3D%221.236%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20transform%3D%22translate%280%20440%29%22%3E%3Cmask%20id%3D%22c%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23b%29%22%20xlink%3Ahref%3D%22%23a%22%2F%3E%3Cg%20mask%3D%22url%28%23c%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%201l552%20533%22%20stroke%3D%22url%28%23d%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28180%20-284%29%22%2F%3E%3Cpath%20d%3D%22M429.5%20414.5L805.854%2038.146%22%20stroke%3D%22url%28%23e%29%22%20transform%3D%22translate%28180%20-284%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cmask%20id%3D%22h%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23f%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23g%29%22%20xlink%3Ahref%3D%22%23f%22%2F%3E%3Cg%20mask%3D%22url%28%23h%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%20700.5l376.354-376.354%22%20stroke%3D%22url%28%23i%29%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M162.5%20116l552%20533%22%20stroke%3D%22url%28%23j%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M433.5%20376.5L809.854.146%22%20stroke%3D%22url%28%23k%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+var bgPortrait = "data:image/svg+xml,%3Csvg%20width%3D%22768%22%20height%3D%22880%22%20viewBox%3D%220%200%20768%20880%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%22-14.438%25%22%20y1%3D%22107.641%25%22%20x2%3D%2298.443%25%22%20y2%3D%22-54.066%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h768v440H0z%22%2F%3E%3ClinearGradient%20x1%3D%2295.341%25%22%20y1%3D%2296.71%25%22%20x2%3D%2237.949%25%22%20y2%3D%228.725%25%22%20id%3D%22d%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2225.323%25%22%20y1%3D%2264.209%25%22%20x2%3D%22-177.025%25%22%20y2%3D%22232.498%25%22%20id%3D%22e%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2298.443%25%22%20y1%3D%22-54.066%25%22%20x2%3D%22-14.438%25%22%20y2%3D%22107.641%25%22%20id%3D%22g%22%3E%3Cstop%20stop-color%3D%22%230B0B0A%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23464F51%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20id%3D%22f%22%20d%3D%22M0%200h768v440H0z%22%2F%3E%3ClinearGradient%20x1%3D%22224.819%25%22%20y1%3D%22-159.682%25%22%20x2%3D%2229.43%25%22%20y2%3D%2296.423%25%22%20id%3D%22i%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%2250%25%22%20y2%3D%2297.636%25%22%20id%3D%22j%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20stop-opacity%3D%220%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%220%25%22%20x2%3D%22-96.692%25%22%20y2%3D%22190.844%25%22%20id%3D%22k%22%3E%3Cstop%20stop-color%3D%22%23C8C8C8%22%20stop-opacity%3D%220%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23C7C7C7%22%20stop-opacity%3D%22.012%22%20offset%3D%221.236%25%22%2F%3E%3Cstop%20stop-color%3D%22%23979797%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20transform%3D%22translate%280%20440%29%22%3E%3Cmask%20id%3D%22c%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23b%29%22%20xlink%3Ahref%3D%22%23a%22%2F%3E%3Cg%20mask%3D%22url%28%23c%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%201l552%20533%22%20stroke%3D%22url%28%23d%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28180%20-284%29%22%2F%3E%3Cpath%20d%3D%22M429.5%20414.5L805.854%2038.146%22%20stroke%3D%22url%28%23e%29%22%20transform%3D%22translate%28180%20-284%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cmask%20id%3D%22h%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23f%22%2F%3E%3C%2Fmask%3E%3Cuse%20fill%3D%22url%28%23g%29%22%20xlink%3Ahref%3D%22%23f%22%2F%3E%3Cg%20mask%3D%22url%28%23h%29%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M.5%20700.5l376.354-376.354%22%20stroke%3D%22url%28%23i%29%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M162.5%20116l552%20533%22%20stroke%3D%22url%28%23j%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3Cpath%20d%3D%22M433.5%20376.5L809.854.146%22%20stroke%3D%22url%28%23k%29%22%20opacity%3D%22.446%22%20transform%3D%22translate%28-347%20-99%29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 
 var large$2 = function large(css$$1) {
   return breakpoint('large', css$$1);
 };
 
-var Main = getPublicUrl(styled.div(['position:relative;overflow:hidden;background-color:', ';background-repeat:no-repeat;background-position:50% 50%;background-size:cover;background-image:url(', ');', ';'], colors.Rain.Shark, styledPublicUrl(bgPortrait), large$2(css(['background-image:url(', ');'], styledPublicUrl(bgLandscape)))));
+var Main$1 = getPublicUrl(styled.div.withConfig({
+  displayName: 'PreFooter__Main'
+})(['position:relative;overflow:hidden;background-color:', ';background-repeat:no-repeat;background-position:50% 50%;background-size:cover;background-image:url(', ');', ';'], colors.Rain.Shark, styledPublicUrl(bgPortrait), large$2(css(['background-image:url(', ');'], styledPublicUrl(bgLandscape)))));
 
-var Container = getPublicUrl(styled(Section).attrs({ visual: true })(['position:relative;z-index:2;padding:0 20px;color:', ';.main{display:flex;flex-direction:column;align-items:center;width:100%;background:url(', ') no-repeat 50% 50%;background-size:140px;', ';}.section{display:flex;flex-direction:column;justify-content:center;width:100%;max-width:', 'px;min-height:400px;height:50%;text-align:center;}.title{margin-bottom:30px;color:', ';font-size:27px;}.desc{font-size:18px;margin-bottom:30px;}.desc:last-child{margin-bottom:0;}.desc a{color:', ';}.email input{width:100%;padding:10px;font-size:15px;border:0;border-radius:3px;background:#fff;}button{font-size:15px;}', ';'], themeDark.textTertiary, styledPublicUrl(logo$1), large$2('background-size: 200px;'), grid(4), themeDark.textPrimary, themeDark.textSecondary, large$2('\n    padding-top: 140px;\n    padding-bottom: 140px;\n\n    .main {\n      flex-direction: row;\n      justify-content: space-between;\n      align-items: flex-start;\n    }\n    .section {\n      min-height: 0;\n      width: ' + (grid(4) + 'px') + ';\n      justify-content: flex-start;\n      text-align: left;\n      padding-top: 0;\n    }\n    .section + .section {\n      text-align: right;\n      padding-bottom: 0;\n    }\n  ')));
+var Container = getPublicUrl(styled(Section).attrs({ visual: true }).withConfig({
+  displayName: 'PreFooter__Container'
+})(['position:relative;z-index:2;padding:0 20px;color:', ';.main{display:flex;flex-direction:column;align-items:center;width:100%;background:url(', ') no-repeat 50% 50%;background-size:140px;', ';}.section{display:flex;flex-direction:column;justify-content:center;width:100%;max-width:', 'px;min-height:400px;height:50%;text-align:center;}.title{margin-bottom:30px;color:', ';font-size:27px;}.desc{font-size:18px;margin-bottom:30px;}.desc:last-child{margin-bottom:0;}.desc a{color:', ';}.email input{width:100%;padding:10px;font-size:15px;border:0;border-radius:3px;background:#fff;}button{font-size:15px;}', ';'], themeDark.textTertiary, styledPublicUrl(logo$1), large$2('background-size: 200px;'), grid(4), themeDark.textPrimary, themeDark.textSecondary, large$2('\n    padding-top: 140px;\n    padding-bottom: 140px;\n\n    .main {\n      flex-direction: row;\n      justify-content: space-between;\n      align-items: flex-start;\n    }\n    .section {\n      min-height: 0;\n      width: ' + (grid(4) + 'px') + ';\n      justify-content: flex-start;\n      text-align: left;\n      padding-top: 0;\n    }\n    .section + .section {\n      text-align: right;\n      padding-bottom: 0;\n    }\n  ')));
 
 var emailFormDefault = function emailFormDefault() {
   return React__default.createElement(
@@ -7794,11 +8318,14 @@ var emailFormDefault = function emailFormDefault() {
   );
 };
 
+var DefaultProps$3 = {
+  emailForm: emailFormDefault
+};
+
 var PreFooter = function PreFooter(_ref) {
-  var _ref$emailForm = _ref.emailForm,
-      emailForm = _ref$emailForm === undefined ? emailFormDefault : _ref$emailForm;
+  var emailForm = _ref.emailForm;
   return React__default.createElement(
-    Main,
+    Main$1,
     null,
     React__default.createElement(
       Container,
@@ -7836,7 +8363,7 @@ var PreFooter = function PreFooter(_ref) {
             'a',
             { href: 'https://github.com/aragon/aragon/releases', target: '_blank' },
             React__default.createElement(
-              StyledButton,
+              Button,
               { mode: 'strong', wide: true },
               'Download Aragon Core 0.3'
             )
@@ -7847,71 +8374,11 @@ var PreFooter = function PreFooter(_ref) {
   );
 };
 
-var StyledText = styled.p(['color:', ';', ';', ';', ';'], theme.textPrimary, function (_ref) {
-  var size = _ref.size,
-      weight = _ref.weight;
-  return font({ size: size, weight: weight });
-}, function (_ref2) {
-  var smallcaps = _ref2.smallcaps;
+PreFooter.defaultProps = DefaultProps$3;
 
-  if (!smallcaps) return '';
-  return '\n      text-transform: lowercase;\n      font-variant: small-caps;\n    ';
-}, function (_ref3) {
-  var color = _ref3.color;
-
-  return color ? 'color: ' + color : '';
-});
-
-var StyledBlock = StyledText.withComponent('div');
-var StyledInline = StyledText.withComponent('span');
-
-var styledHeadings = [StyledText.withComponent('h1'), StyledText.withComponent('h2'), StyledText.withComponent('h3'), StyledText.withComponent('h4'), StyledText.withComponent('h5'), StyledText.withComponent('h6')];
-
-var getStyledComponent = function getStyledComponent(_ref4) {
-  var _ref4$heading = _ref4.heading,
-      heading = _ref4$heading === undefined ? null : _ref4$heading,
-      _ref4$block = _ref4.block,
-      block = _ref4$block === undefined ? false : _ref4$block,
-      _ref4$inline = _ref4.inline,
-      inline = _ref4$inline === undefined ? false : _ref4$inline;
-
-  if (block) return StyledBlock;
-  if (inline) return StyledInline;
-  if (heading) {
-    return styledHeadings[Math.max(1, Math.min(6, parseInt(heading, 10))) - 1] || StyledText;
-  }
-  return StyledText;
-};
-
-var DefaultProps$4 = {
-  block: false,
-  inline: false,
-  smallcaps: false,
-  heading: null,
-  size: null,
-  weight: null,
-  color: null
-};
-
-var Text = function Text(_ref5) {
-  var block = _ref5.block,
-      inline = _ref5.inline,
-      heading = _ref5.heading,
-      smallcaps = _ref5.smallcaps,
-      size = _ref5.size,
-      weight = _ref5.weight,
-      color = _ref5.color,
-      children = _ref5.children,
-      props = objectWithoutProperties$1(_ref5, ['block', 'inline', 'heading', 'smallcaps', 'size', 'weight', 'color', 'children']);
-
-  var StyledComp = getStyledComponent({ inline: inline, block: block, heading: heading });
-  var styledProps = _extends$1({}, props, { weight: weight, size: size, smallcaps: smallcaps, color: color, children: children });
-  return React__default.createElement(StyledComp, styledProps);
-};
-
-Text.defaultProps = DefaultProps$4;
-
-var StyledMenuItem = styled.li(['display:flex;align-items:stretch;white-space:nowrap;> span{display:flex;align-items:center;padding:0 15px;font-size:15px;color:', ';}a{text-decoration:none;color:', ';}'], function (_ref) {
+var StyledMenuItem = styled.li.withConfig({
+  displayName: 'MenuItem__StyledMenuItem'
+})(['display:flex;align-items:stretch;white-space:nowrap;> span{display:flex;align-items:center;padding:0 15px;font-size:15px;color:', ';}a{text-decoration:none;color:', ';}'], function (_ref) {
   var active = _ref.active;
   return active ? theme.accent : theme.textSecondary;
 }, function (_ref2) {
@@ -7919,19 +8386,17 @@ var StyledMenuItem = styled.li(['display:flex;align-items:stretch;white-space:no
   return active ? theme.accent : theme.textSecondary;
 });
 
-var renderLinkDefault = function renderLinkDefault(_ref3) {
-  var url = _ref3.url,
-      children = _ref3.children;
-  return React__default.createElement(
-    'a',
-    { href: url },
-    children
-  );
-};
-
 var DefaultProps$5 = {
   active: false,
-  renderLink: renderLinkDefault
+  renderLink: function renderLink(_ref3) {
+    var url = _ref3.url,
+        children = _ref3.children;
+    return React__default.createElement(
+      'a',
+      { href: url },
+      children
+    );
+  }
 };
 
 var MenuItem = function MenuItem(_ref4) {
@@ -7952,52 +8417,50 @@ var MenuItem = function MenuItem(_ref4) {
 
 MenuItem.defaultProps = DefaultProps$5;
 
-var close = "data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Epanel-close%3C%2Ftitle%3E%3Cpath%20d%3D%22M20.297%205.64l-6.508%206.508%206.508%206.508-1.64%201.64-6.509-6.507-6.507%206.508L4%2018.657l6.508-6.509L4%205.641%205.64%204l6.508%206.508L18.656%204z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+var close = "data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M20.297%205.64l-6.508%206.508%206.508%206.508-1.64%201.64-6.509-6.507-6.507%206.508L4%2018.657l6.508-6.509L4%205.641%205.64%204l6.508%206.508L18.656%204z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
 
-var open = "data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Epanel-open%3C%2Ftitle%3E%3Cpath%20d%3D%22M2%2019v-2.352h20V19H2zm0-5.852v-2.296h20v2.296H2zM2%205h20v2.352H2V5z%22%20fill%3D%22%23717171%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+var open = "data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2%2019v-2.352h20V19H2zm0-5.852v-2.296h20v2.296H2zM2%205h20v2.352H2V5z%22%20fill%3D%22%23717171%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
 
-var Container$1 = styled.div(['min-height:60px;', ';'], unselectable());
+var Container$1 = styled.div.withConfig({
+  displayName: 'MenuPanel__Container'
+})(['min-height:60px;', ';'], unselectable());
 
-var PanelStyles = styled.div(['position:absolute;z-index:3;top:0;right:0;padding-top:70px;line-height:2;font-size:17px;background:', ';a{color:white;text-decoration:none;}'], theme.accent);
+var PanelStyles = styled.div.withConfig({
+  displayName: 'MenuPanel__PanelStyles'
+})(['position:absolute;z-index:3;top:0;right:0;padding-top:70px;line-height:2;font-size:17px;background:', ';a{color:white;text-decoration:none;}'], theme.accent);
 
-var PanelContent = styled.div(['padding:0 60px 20px 30px;a{display:block;}']);
+var PanelContent = styled.div.withConfig({
+  displayName: 'MenuPanel__PanelContent'
+})(['padding:0 60px 20px 30px;a{display:block;}']);
 
-var Toggle = styled.a.attrs({ role: 'button' })(['position:absolute;right:0;z-index:4;height:60px;padding:0 15px;display:flex;align-items:center;cursor:pointer;']);
-
-var renderLinkDefault$1 = function renderLinkDefault(_ref) {
-  var url = _ref.url,
-      children = _ref.children;
-  return React__default.createElement(
-    'a',
-    { href: url },
-    children
-  );
-};
+var Toggle = styled.a.attrs({ role: 'button' }).withConfig({
+  displayName: 'MenuPanel__Toggle'
+})(['position:absolute;right:0;z-index:4;height:60px;padding:0 15px;display:flex;align-items:center;cursor:pointer;']);
 
 var Panel = function (_React$Component) {
-  inherits$1(Panel, _React$Component);
+  inherits(Panel, _React$Component);
 
   function Panel() {
-    var _ref2;
+    var _ref;
 
     var _temp, _this, _ret;
 
-    classCallCheck$1(this, Panel);
+    classCallCheck(this, Panel);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = possibleConstructorReturn$1(this, (_ref2 = Panel.__proto__ || Object.getPrototypeOf(Panel)).call.apply(_ref2, [this].concat(args))), _this), _this.state = {
+    return _ret = (_temp = (_this = possibleConstructorReturn(this, (_ref = Panel.__proto__ || Object.getPrototypeOf(Panel)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       opened: false
     }, _this.toggle = function () {
       _this.setState({ opened: !_this.state.opened });
     }, _this.close = function () {
       _this.setState({ opened: false });
-    }, _temp), possibleConstructorReturn$1(_this, _ret);
+    }, _temp), possibleConstructorReturn(_this, _ret);
   }
 
-  createClass$1(Panel, [{
+  createClass(Panel, [{
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -8005,8 +8468,7 @@ var Panel = function (_React$Component) {
       var _props = this.props,
           items = _props.items,
           publicUrl = _props.publicUrl,
-          _props$renderLink = _props.renderLink,
-          renderLink = _props$renderLink === undefined ? renderLinkDefault$1 : _props$renderLink;
+          renderLink = _props.renderLink;
       var opened = this.state.opened;
 
       return React__default.createElement(
@@ -8016,8 +8478,8 @@ var Panel = function (_React$Component) {
             openProgress: reactMotion_4(Number(opened), spring('fast'))
           }
         },
-        function (_ref3) {
-          var openProgress = _ref3.openProgress;
+        function (_ref2) {
+          var openProgress = _ref2.openProgress;
           return React__default.createElement(
             Container$1,
             null,
@@ -8046,11 +8508,11 @@ var Panel = function (_React$Component) {
                 React__default.createElement(
                   PanelContent,
                   null,
-                  items.map(function (_ref4) {
-                    var _ref5 = slicedToArray(_ref4, 3),
-                        url = _ref5[0],
-                        label = _ref5[1],
-                        active = _ref5[2];
+                  items.map(function (_ref3) {
+                    var _ref4 = slicedToArray(_ref3, 3),
+                        url = _ref4[0],
+                        label = _ref4[1],
+                        active = _ref4[2];
 
                     return React__default.createElement(
                       'div',
@@ -8072,29 +8534,42 @@ var Panel = function (_React$Component) {
   return Panel;
 }(React__default.Component);
 
+Panel.defaultProps = {
+  renderLink: function renderLink(_ref5) {
+    var url = _ref5.url,
+        children = _ref5.children;
+    return React__default.createElement(
+      'a',
+      { href: url },
+      children
+    );
+  }
+};
+
+
 var MenuPanel = getPublicUrl(Panel);
 
-var logo$2 = "fdb740459e24da26.svg";
+var logo$2 = "6a089bdf02f98b6c.svg";
 
-var logoCompact = "e0a3569ec6583a2a.svg";
+var logoCompact = "f2b90665d4eb28f3.svg";
 
-var logoMinimal = "1052b10322bdef3c.svg";
+var logoMinimal = "188027b3d4ea587a.svg";
 
-var Container$2 = styled.span(['display:flex;align-items:center;']);
-
-var renderLinkDefault$2 = function renderLinkDefault(_ref) {
-  var url = _ref.url,
-      children = _ref.children;
-  return React__default.createElement(
-    'a',
-    { href: url },
-    children
-  );
-};
+var Container$2 = styled.span.withConfig({
+  displayName: 'Logo__Container'
+})(['display:flex;align-items:center;']);
 
 var DefaultProps$6 = {
   compact: false,
-  renderLink: renderLinkDefault$2
+  renderLink: function renderLink(_ref) {
+    var url = _ref.url,
+        children = _ref.children;
+    return React__default.createElement(
+      'a',
+      { href: url },
+      children
+    );
+  }
 };
 
 var Logo = function Logo(_ref2) {
@@ -8145,14 +8620,16 @@ var large$3 = function large(css$$1) {
   return breakpoint('large', css$$1);
 };
 
-var StyledHeader = styled.div(['padding:0 12px;background:', ';.in{display:flex;justify-content:space-between;align-items:stretch;min-height:60px;max-width:1140px;margin:0 auto;}.menu,.buttons{display:flex;align-items:center;}.menu{align-items:stretch;}.logo,.logo a{display:flex;align-items:center;}.title{display:flex;align-items:center;margin-left:40px;}.menu-items{display:flex;align-items:center;}.nav{display:flex;align-items:stretch;list-style:none;margin-left:20px;}.nav ul{display:flex;align-items:stretch;}.button{margin-left:10px;&:first-child{margin:0;}}', ';', ';', ';'], theme.contentBackground, medium$2('\n    .in {\n      min-height: 70px;\n    }\n  '), large$3('\n    .in {\n      min-height: 70px;\n    }\n    .nav {\n      margin-left: 45px;\n    }\n  '), function (_ref) {
+var StyledHeader = styled.div.withConfig({
+  displayName: 'Header__StyledHeader'
+})(['padding:0 12px;background:', ';.in{display:flex;justify-content:space-between;align-items:stretch;min-height:60px;max-width:1140px;margin:0 auto;}.menu,.buttons{display:flex;align-items:center;}.menu{align-items:stretch;}.logo,.logo a{display:flex;align-items:center;}.title{display:flex;align-items:center;margin-left:40px;}.menu-items{display:flex;align-items:center;}.nav{display:flex;align-items:stretch;list-style:none;margin-left:20px;}.nav ul{display:flex;align-items:stretch;}.button{margin-left:10px;&:first-child{margin:0;}}', ';', ';', ';'], theme.contentBackground, medium$2('\n    .in {\n      min-height: 70px;\n    }\n  '), large$3('\n    .in {\n      min-height: 70px;\n    }\n    .nav {\n      margin-left: 45px;\n    }\n  '), function (_ref) {
   var withTitle = _ref.withTitle;
 
   if (!withTitle) return '';
   return '\n      .logo {\n        padding-right: 40px;\n        border-right: 1px solid #e8e8e8;\n        padding-top: 6px;\n        padding-bottom: 8px;\n      }\n      .logo img:first-child {\n        margin-right: 10px;\n      }\n    ';
 });
 
-var DefaultProps$3 = {
+var DefaultProps$4 = {
   menuItems: []
 };
 
@@ -8174,9 +8651,14 @@ var Header = function Header(_ref2) {
           'div',
           { className: 'title' },
           React__default.createElement(
-            Text,
-            { heading: '1', size: 'xlarge' },
-            title
+            'h1',
+            null,
+            React__default.createElement(
+              TypedText,
+              { size: 'xlarge' },
+              title,
+              ' '
+            )
           )
         ),
         menuItems.length > 0 && React__default.createElement(
@@ -8223,7 +8705,7 @@ var Header = function Header(_ref2) {
               'a',
               { href: 'https://alpha.aragon.one', target: '_blank' },
               React__default.createElement(
-                StyledButton,
+                Button,
                 { mode: 'outline' },
                 React__default.createElement(
                   BreakPoint,
@@ -8243,9 +8725,12 @@ var Header = function Header(_ref2) {
             { className: 'button' },
             React__default.createElement(
               'a',
-              { href: 'https://github.com/aragon/aragon/releases', target: '_blank' },
+              {
+                href: 'https://github.com/aragon/aragon/releases',
+                target: '_blank'
+              },
               React__default.createElement(
-                StyledButton,
+                Button,
                 { mode: 'strong' },
                 React__default.createElement(
                   BreakPoint,
@@ -8266,26 +8751,306 @@ var Header = function Header(_ref2) {
   );
 };
 
-Header.defaultProps = DefaultProps$3;
+Header.defaultProps = DefaultProps$4;
 
-var StyledCard = styled.div(['width:282px;height:322px;background:', ';border:1px solid ', ';border-radius:3px;'], theme.contentBackground, theme.contentBorder);
+var close$1 = "data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%2210%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10%201.014L6.014%205%2010%208.986%208.986%2010%205%206.014%201.014%2010%200%208.986%203.986%205%200%201.014%201.014%200%205%203.986%208.986%200z%22%20fill%3D%22%236D777B%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.7%22%2F%3E%3C%2Fsvg%3E";
 
-var logo$3 = "data:image/svg+xml,%3Csvg%20width%3D%221129%22%20height%3D%22792%22%20viewBox%3D%220%200%201129%20792%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3ELogo%20bg%3C%2Ftitle%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%2258.303%25%22%20y1%3D%2229.305%25%22%20x2%3D%22-20.356%25%22%20y2%3D%2289.584%25%22%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%22125.887%25%22%20x2%3D%2250%25%22%20y2%3D%2227.419%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2238.76%25%22%20y1%3D%2240.284%25%22%20x2%3D%2227.198%25%22%20y2%3D%224.898%25%22%20id%3D%22c%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.7%22%3E%3Cpath%20d%3D%22M474.223%2064.24c-.503%200-231.685%2073.873-231.685%20275.905%200%20202.033%20223.146%20300.029%20387.48%20300.029%2089.383%200%20162.808-26.013%20211.24-49.744%206.242-28.642%2028.943-96.473%20104.047-96.981%2013.393-.523%2025.958%201.99%2036.517%208.021%2050.256%2027.144%2017.59%2077.898%2017.59%2077.898%201.894-.307%203.809-.663%205.724-1.075%201.91-.413%203.83-.89%205.764-1.408%2060.404-16.268%20128.467-85.36%20116.661-201.057-9.463-92.774-95.09-151.58-136.743-174.94-13.64-7.648-22.566-11.513-22.566-11.513%201.508-9.423%201.995-16.71%201.995-22.309%200-1.05-.02-2.035-.05-2.96v-10.86C751.617%2020.65%20566.645.223%20475.414.223c-39.412%200-61.5%203.704-61.5%203.704l60.309%2060.313zm461.86%20125.638s-29.652-9.55-59.8-13.57c-15.083%2015.58-28.15%2022.113-32.17%2024.129-.503.497-1.005%201-1.005%201-87.95-18.595-119.612-63.827-119.612-63.827%2082.93-.497%20157.812%2019.098%20212.587%2052.268z%22%20fill%3D%22url%28%23a%29%22%20opacity%3D%22.779%22%2F%3E%3Cpath%20d%3D%22M1018.002%20315.017c0%2065.842-27.134%20126.647-73.375%20175.899l-2.197%202.528%203.704-.01c12.564-.508%2025.129%202.005%2035.688%208.036%2050.256%2027.144%2017.59%2077.898%2017.59%2077.898%2062.82-10.051%20140.719-80.406%20128.15-203.54-9.464-92.774-95.092-151.58-136.744-174.94%2017.901%2035.357%2027.184%2074.19%2027.184%20114.13%22%20fill%3D%22url%28%23b%29%22%20opacity%3D%22.374%22%2F%3E%3Cpath%20d%3D%22M.808%20545.696c0%208.152.317%2015.911.769%2023.495%2062.198%20119.616%20137.015%20224.115%20222.588%20310.653%20106.72%20107.685%20230.9%20187.578%20369.166%20237.539%20137.764-49.785%20261.949-129.854%20369.182-238.057%2031.792-32.144%2062.112-66.887%2090.915-104.012-229.272-16.479-215.346-155.74-215.346-155.74%200-5.524%200-11.057%201.005-16.585%200%200%20.508-4.89%202.176-12.564-48.432%2023.736-121.857%2049.749-211.244%2049.749-164.335%200-387.48-97.996-387.48-300.029%200-202.032%20231.181-275.905%20231.181-275.905l-.12-.035c-5.86-.452-12.143-.472-17.973-.472C202.836%2072.784.808%20284.863.808%20545.696%22%20fill%3D%22url%28%23c%29%22%20opacity%3D%22.557%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+var PANEL_WIDTH = 400;
+var PANEL_OVERFLOW = PANEL_WIDTH * 0.2;
+var PANEL_HIDE_RIGHT = -PANEL_WIDTH * 1.6;
 
-var StyledAragonApp = styled.main(['min-width:320px;min-height:100vh;background-color:', ';background-image:', ';background-position:50% 50%;background-repeat:no-repeat;'], theme.mainBackground, function (_ref) {
+var StyledSidePanel = styled.div.withConfig({
+  displayName: 'SidePanel__StyledSidePanel'
+})(['position:fixed;z-index:3;top:0;left:0;right:0;bottom:0;']);
+
+var Overlay = styled.div.withConfig({
+  displayName: 'SidePanel__Overlay'
+})(['position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(68,81,89,0.65);']);
+
+var StyledPanel = styled.aside.withConfig({
+  displayName: 'SidePanel__StyledPanel'
+})(['display:flex;flex-direction:column;width:', 'px;padding-right:', 'px;padding-left:30px;height:100%;background:white;position:absolute;top:0;right:0;box-shadow:-2px 0 36px rgba(0,0,0,0.2);'], PANEL_WIDTH + PANEL_OVERFLOW, 30 + PANEL_OVERFLOW);
+
+var StyledPanelHeader = styled.header.withConfig({
+  displayName: 'SidePanel__StyledPanelHeader'
+})(['position:relative;padding-top:15px;padding-bottom:15px;padding-right:20px;']);
+
+var StyledPanelCloseButton = styled.button.withConfig({
+  displayName: 'SidePanel__StyledPanelCloseButton'
+})(['', ' &{position:absolute;padding:20px;top:0;right:-30px;cursor:pointer;background:none;border:0;&::-moz-focus-inner{border:0;}}'], StyledPanelHeader);
+
+var motionStyles = function motionStyles(progress) {
+  return {
+    overlay: { opacity: progress },
+    panel: { right: lerp(progress, PANEL_HIDE_RIGHT, -PANEL_OVERFLOW) + 'px' }
+  };
+};
+
+var SidePanel = function SidePanel(_ref) {
+  var children = _ref.children,
+      title = _ref.title,
+      opened = _ref.opened,
+      onClose = _ref.onClose,
+      publicUrl = _ref.publicUrl;
+
+  return React__default.createElement(
+    reactMotion_1,
+    { style: { progress: reactMotion_4(Number(opened), spring('slow')) } },
+    function (_ref2) {
+      var progress = _ref2.progress;
+
+      var styles = motionStyles(progress);
+      return React__default.createElement(
+        StyledSidePanel,
+        { hidden: progress === 0 },
+        React__default.createElement(Overlay, { style: styles.overlay }),
+        React__default.createElement(
+          StyledPanel,
+          { style: styles.panel },
+          React__default.createElement(
+            StyledPanelHeader,
+            null,
+            React__default.createElement(
+              'h1',
+              null,
+              React__default.createElement(
+                TypedText,
+                { size: 'xxlarge' },
+                title
+              )
+            ),
+            React__default.createElement(
+              StyledPanelCloseButton,
+              { type: 'button', onClick: onClose },
+              React__default.createElement('img', { src: prefixUrl(close$1, publicUrl), alt: 'Close' })
+            )
+          ),
+          children
+        )
+      );
+    }
+  );
+};
+
+var SidePanel$1 = getPublicUrl(SidePanel);
+
+var StyledTable = styled.table.withConfig({
+  displayName: 'Table__StyledTable'
+})(['width:100%;border-spacing:0;']);
+
+var Table = function Table(_ref) {
+  var header = _ref.header,
+      children = _ref.children,
+      props = objectWithoutProperties(_ref, ['header', 'children']);
+  return React__default.createElement(
+    StyledTable,
+    props,
+    header && React__default.createElement(
+      'thead',
+      null,
+      header
+    ),
+    React__default.createElement(
+      'tbody',
+      null,
+      children
+    )
+  );
+};
+
+var StyledTableRow = styled.tr.withConfig({
+  displayName: 'TableRow__StyledTableRow'
+})(['']);
+
+var contentBackground$2 = theme.contentBackground;
+var contentBorder$2 = theme.contentBorder;
+
+
+var StyledTableCell = styled.td.withConfig({
+  displayName: 'TableCell__StyledTableCell'
+})(['padding:20px;background:', ';border-bottom:1px solid ', ';&:first-child{border-left:1px solid ', ';}&:last-child{border-right:1px solid ', ';}', ':first-child &{border-top:1px solid ', ';}', ':first-child &:first-child{border-top-left-radius:3px;}', ':first-child &:last-child{border-top-right-radius:3px;}', ':last-child &:first-child{border-bottom-left-radius:3px;}', ':last-child &:last-child{border-bottom-right-radius:3px;}'], contentBackground$2, contentBorder$2, contentBorder$2, contentBorder$2, StyledTableRow, contentBorder$2, StyledTableRow, StyledTableRow, StyledTableRow, StyledTableRow);
+
+var StyledTableCellContent = styled.div.withConfig({
+  displayName: 'TableCell__StyledTableCellContent'
+})(['display:flex;align-items:center;justify-content:space-between;']);
+
+var DefaultProps$7 = {
+  contentContainer: StyledTableCellContent
+};
+
+var TableCell = function TableCell(_ref) {
+  var children = _ref.children,
+      Container = _ref.contentContainer,
+      props = objectWithoutProperties(_ref, ['children', 'contentContainer']);
+  return React__default.createElement(
+    StyledTableCell,
+    props,
+    React__default.createElement(
+      Container,
+      null,
+      children
+    )
+  );
+};
+
+TableCell.defaultProps = DefaultProps$7;
+
+var StyledTableHeader = styled.th.withConfig({
+  displayName: 'TableHeader__StyledTableHeader'
+})(['padding-left:21px;text-align:left;font-weight:normal;']);
+
+var TableHeader = function TableHeader(_ref) {
+  var title = _ref.title,
+      props = objectWithoutProperties(_ref, ['title']);
+  return React__default.createElement(
+    StyledTableHeader,
+    props,
+    React__default.createElement(
+      TypedText.Block,
+      { color: theme.textSecondary, smallcaps: true },
+      title
+    )
+  );
+};
+
+var StyledCard = styled.div.withConfig({
+  displayName: 'Card__StyledCard'
+})(['width:', ';height:', ';background:', ';border:1px solid ', ';border-radius:3px;'], function (_ref) {
+  var width = _ref.width;
+  return width ? width : '282px';
+}, function (_ref2) {
+  var height = _ref2.height;
+  return height ? height : '322px';
+}, theme.contentBackground, theme.contentBorder);
+
+var _templateObject$2 = taggedTemplateLiteral(['\n  display: flex;\n  padding: 40px 60px;\n  align-items: center;\n  text-align: center;\n  section {\n    padding-top: 20px;\n  }\n'], ['\n  display: flex;\n  padding: 40px 60px;\n  align-items: center;\n  text-align: center;\n  section {\n    padding-top: 20px;\n  }\n']);
+
+var StyledCard$1 = StyledCard.extend(_templateObject$2);
+
+var StyledHeading = styled.h1.withConfig({
+  displayName: 'EmptyStateCard__StyledHeading'
+})(['margin:20px 0 5px;']);
+
+// $FlowFixMe
+var StyledActionButton = styled(Button).withConfig({
+  displayName: 'EmptyStateCard__StyledActionButton'
+})(['width:150px;margin-top:20px;']);
+
+var DefaultProps$8 = {
+  actionButton: StyledActionButton,
+  title: 'Nothing here.'
+};
+
+var EmptyStateCard = function EmptyStateCard(_ref) {
+  var actionText = _ref.actionText,
+      onActivate = _ref.onActivate,
+      text = _ref.text,
+      title = _ref.title,
+      ActionButton = _ref.actionButton,
+      Icon = _ref.icon,
+      props = objectWithoutProperties(_ref, ['actionText', 'onActivate', 'text', 'title', 'actionButton', 'icon']);
+  return React__default.createElement(
+    StyledCard$1,
+    props,
+    React__default.createElement(
+      'section',
+      null,
+      React__default.createElement(Icon, null),
+      React__default.createElement(
+        StyledHeading,
+        null,
+        React__default.createElement(
+          TypedText,
+          { color: theme.accent, weight: 'bold', size: 'large' },
+          title
+        )
+      ),
+      React__default.createElement(
+        TypedText.Block,
+        null,
+        text
+      ),
+      React__default.createElement(
+        ActionButton,
+        { mode: 'strong', onClick: onActivate },
+        actionText
+      )
+    )
+  );
+};
+
+EmptyStateCard.defaultProps = DefaultProps$8;
+
+var chevronSvg = "data:image/svg+xml,%3Csvg%20width%3D%227%22%20height%3D%2212%22%20viewBox%3D%220%200%207%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M.446%2012a.512.512%200%200%201-.172-.03.422.422%200%200%201-.146-.087A.37.37%200%200%201%200%2011.6a.37.37%200%200%201%20.128-.281l5.826-5.361L.217.692A.376.376%200%200%201%20.089.405.378.378%200%200%201%20.217.117.444.444%200%200%201%20.529%200c.123%200%20.228.04.313.117l6.03%205.56A.37.37%200%200%201%207%205.96a.37.37%200%200%201-.128.281l-6.12%205.643A.477.477%200%200%201%20.446%2012z%22%20fill%3D%22%2300CBE6%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+
+var StyledAppBar = styled.div.withConfig({
+  displayName: 'AppBar__StyledAppBar'
+})(['display:flex;align-items:center;justify-content:flex-start;height:64px;background:', ';border-bottom:1px solid ', ';'], theme.contentBackground, theme.contentBorder);
+
+var StyledAppBarStart = styled.div.withConfig({
+  displayName: 'AppBar__StyledAppBarStart'
+})(['display:flex;align-items:center;padding-left:30px;']);
+var StyledAppBarEnd = styled.div.withConfig({
+  displayName: 'AppBar__StyledAppBarEnd'
+})(['margin-left:auto;padding-right:30px;']);
+
+var StyledAppBarTitle = getPublicUrl(styled.h1.withConfig({
+  displayName: 'AppBar__StyledAppBarTitle'
+})(['padding-right:20px;margin-right:20px;background-image:', ';background-position:100% 50%;background-repeat:no-repeat;'], function (_ref) {
+  var chevron = _ref.chevron;
+  return chevron ? css(['url(', ')'], styledPublicUrl(chevronSvg)) : 'none';
+}));
+
+var AppBar = function AppBar(_ref2) {
+  var children = _ref2.children,
+      endContent = _ref2.endContent,
+      title = _ref2.title,
+      props = objectWithoutProperties(_ref2, ['children', 'endContent', 'title']);
+  return React__default.createElement(
+    StyledAppBar,
+    props,
+    React__default.createElement(
+      StyledAppBarStart,
+      null,
+      React__default.createElement(
+        StyledAppBarTitle,
+        { chevron: !!children },
+        React__default.createElement(
+          TypedText,
+          { size: 'xxlarge' },
+          title
+        )
+      )
+    ),
+    children,
+    endContent && React__default.createElement(
+      StyledAppBarEnd,
+      null,
+      endContent
+    )
+  );
+};
+
+var logo$3 = "data:image/svg+xml,%3Csvg%20width%3D%221129%22%20height%3D%22792%22%20viewBox%3D%220%200%201129%20792%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%2258.303%25%22%20y1%3D%2229.305%25%22%20x2%3D%22-20.356%25%22%20y2%3D%2289.584%25%22%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%22125.887%25%22%20x2%3D%2250%25%22%20y2%3D%2227.419%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2238.76%25%22%20y1%3D%2240.284%25%22%20x2%3D%2227.198%25%22%20y2%3D%224.898%25%22%20id%3D%22c%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.7%22%3E%3Cpath%20d%3D%22M474.223%2064.24c-.503%200-231.685%2073.873-231.685%20275.905%200%20202.033%20223.146%20300.029%20387.48%20300.029%2089.383%200%20162.808-26.013%20211.24-49.744%206.242-28.642%2028.943-96.473%20104.047-96.981%2013.393-.523%2025.958%201.99%2036.517%208.021%2050.256%2027.144%2017.59%2077.898%2017.59%2077.898%201.894-.307%203.809-.663%205.724-1.075%201.91-.413%203.83-.89%205.764-1.408%2060.404-16.268%20128.467-85.36%20116.661-201.057-9.463-92.774-95.09-151.58-136.743-174.94-13.64-7.648-22.566-11.513-22.566-11.513%201.508-9.423%201.995-16.71%201.995-22.309%200-1.05-.02-2.035-.05-2.96v-10.86C751.617%2020.65%20566.645.223%20475.414.223c-39.412%200-61.5%203.704-61.5%203.704l60.309%2060.313zm461.86%20125.638s-29.652-9.55-59.8-13.57c-15.083%2015.58-28.15%2022.113-32.17%2024.129-.503.497-1.005%201-1.005%201-87.95-18.595-119.612-63.827-119.612-63.827%2082.93-.497%20157.812%2019.098%20212.587%2052.268z%22%20fill%3D%22url%28%23a%29%22%20opacity%3D%22.779%22%2F%3E%3Cpath%20d%3D%22M1018.002%20315.017c0%2065.842-27.134%20126.647-73.375%20175.899l-2.197%202.528%203.704-.01c12.564-.508%2025.129%202.005%2035.688%208.036%2050.256%2027.144%2017.59%2077.898%2017.59%2077.898%2062.82-10.051%20140.719-80.406%20128.15-203.54-9.464-92.774-95.092-151.58-136.744-174.94%2017.901%2035.357%2027.184%2074.19%2027.184%20114.13%22%20fill%3D%22url%28%23b%29%22%20opacity%3D%22.374%22%2F%3E%3Cpath%20d%3D%22M.808%20545.696c0%208.152.317%2015.911.769%2023.495%2062.198%20119.616%20137.015%20224.115%20222.588%20310.653%20106.72%20107.685%20230.9%20187.578%20369.166%20237.539%20137.764-49.785%20261.949-129.854%20369.182-238.057%2031.792-32.144%2062.112-66.887%2090.915-104.012-229.272-16.479-215.346-155.74-215.346-155.74%200-5.524%200-11.057%201.005-16.585%200%200%20.508-4.89%202.176-12.564-48.432%2023.736-121.857%2049.749-211.244%2049.749-164.335%200-387.48-97.996-387.48-300.029%200-202.032%20231.181-275.905%20231.181-275.905l-.12-.035c-5.86-.452-12.143-.472-17.973-.472C202.836%2072.784.808%20284.863.808%20545.696%22%20fill%3D%22url%28%23c%29%22%20opacity%3D%22.557%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+
+// AragonApp provides everything needed to start an Aragon App.
+
+var StyledAragonApp = styled.main.withConfig({
+  displayName: 'AragonApp__StyledAragonApp'
+})(['min-width:320px;min-height:100vh;background-color:', ';background-image:', ';background-position:50% 50%;background-repeat:no-repeat;'], theme.mainBackground, function (_ref) {
   var backgroundLogo = _ref.backgroundLogo;
   return backgroundLogo ? css(['url(', ')'], styledPublicUrl(logo$3)) : 'none';
 });
 
 var AragonApp = function (_React$Component) {
-  inherits$1(AragonApp, _React$Component);
+  inherits(AragonApp, _React$Component);
 
   function AragonApp() {
-    classCallCheck$1(this, AragonApp);
-    return possibleConstructorReturn$1(this, (AragonApp.__proto__ || Object.getPrototypeOf(AragonApp)).apply(this, arguments));
+    classCallCheck(this, AragonApp);
+    return possibleConstructorReturn(this, (AragonApp.__proto__ || Object.getPrototypeOf(AragonApp)).apply(this, arguments));
   }
 
-  createClass$1(AragonApp, [{
+  createClass(AragonApp, [{
     key: 'getChildContext',
     value: function getChildContext() {
       return { publicUrl: this.props.publicUrl };
@@ -8319,9 +9084,13 @@ AragonApp.childContextTypes = {
 };
 AragonApp.Styled = StyledAragonApp;
 
-var Container$3 = styled.div(['position:fixed;z-index:999;left:0;right:0;top:0;bottom:0;display:flex;width:', 'px;margin:0 auto;pointerevents:none;'], grid(12));
+var Container$3 = styled.div.withConfig({
+  displayName: 'LayoutGrid__Container'
+})(['position:fixed;z-index:999;left:0;right:0;top:0;bottom:0;display:flex;width:', 'px;margin:0 auto;pointerevents:none;'], grid(12));
 
-var Column = styled.div(['width:', 'px;height:100%;background:rgba(184,184,184,0.5);'], grid(1));
+var Column = styled.div.withConfig({
+  displayName: 'LayoutGrid__Column'
+})(['width:', 'px;height:100%;background:rgba(184,184,184,0.5);'], grid(1));
 
 var LayoutGrid = function LayoutGrid() {
   return React__default.createElement(
@@ -8361,13 +9130,35 @@ exports.BreakPoint = BreakPoint;
 exports.BaseStyles = BaseStyles$1;
 exports.Section = Section;
 exports.IllustratedSection = IllustratedSection;
-exports.Button = StyledButton;
+exports.BadgeNumber = BadgeNumber;
+exports.Button = Button;
+exports.CircleGraph = CircleGraph;
 exports.DropDown = DropDown;
+exports.Field = Field;
+exports.TextInput = TextInput;
 exports.Footer = Footer$1;
 exports.PreFooter = PreFooter;
 exports.Header = Header;
-exports.Text = Text;
+exports.SidePanel = SidePanel$1;
+exports.Table = Table;
+exports.TableCell = TableCell;
+exports.TableHeader = TableHeader;
+exports.TableRow = StyledTableRow;
+exports.Text = TypedText;
 exports.Card = StyledCard;
+exports.EmptyStateCard = EmptyStateCard;
+exports.AppBar = AppBar;
 exports.AragonApp = AragonApp;
 exports.LayoutGrid = LayoutGrid;
+exports.IconFinance = Finance;
+exports.IconFundraising = Fundraising;
+exports.IconGroups = Groups;
+exports.IconHome = Home;
+exports.IconIdentity = Identity;
+exports.IconNotifications = Notifications;
+exports.IconPermissions = Permissions;
+exports.IconSettings = Settings;
+exports.IconTokens = Tokens;
+exports.IconVoting = Voting;
+exports.IconWallet = Wallet;
 //# sourceMappingURL=index.cjs.js.map

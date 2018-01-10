@@ -2590,7 +2590,8 @@ var Foundation = function Foundation() {
       title: 'Foundation',
       subtitle: 'Cornerstone for architecting the project'
     }),
-    _react2.default.createElement(_Foundation.Intro, null)
+    _react2.default.createElement(_Foundation.Intro, null),
+    _react2.default.createElement(_Foundation.Grants, null)
   );
 };
 
@@ -2736,7 +2737,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  padding: 50px 15px;\n  background: #fff;\n  .title {\n    margin-top: 10px;\n    margin-bottom: 25px;\n    font-size: 25px;\n    color: ', ';\n    text-align: center;\n    padding: 0 10%;\n  }\n  .columns {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n  .item {\n    margin-top: 20px;\n    max-width: 400px;\n  }\n  img {\n    max-width: calc(100% - 30px);\n  }\n  p {\n    font-size: 18px;\n    color: ', ';\n  }\n  .cta {\n    text-align: center;\n    margin-top: 50px;\n  }\n\n  ', ';\n\n  ', ';\n'], ['\n  padding: 50px 15px;\n  background: #fff;\n  .title {\n    margin-top: 10px;\n    margin-bottom: 25px;\n    font-size: 25px;\n    color: ', ';\n    text-align: center;\n    padding: 0 10%;\n  }\n  .columns {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n  .item {\n    margin-top: 20px;\n    max-width: 400px;\n  }\n  img {\n    max-width: calc(100% - 30px);\n  }\n  p {\n    font-size: 18px;\n    color: ', ';\n  }\n  .cta {\n    text-align: center;\n    margin-top: 50px;\n  }\n\n  ', ';\n\n  ', ';\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  padding: 50px 15px;\n  background: #fff;\n  .title {\n    margin-top: 10px;\n    margin-bottom: 25px;\n    font-size: 25px;\n    color: ', ';\n    text-align: center;\n    padding: 0 10%;\n  }\n\n  img {\n    max-width: calc(100% - 30px);\n  }\n  p {\n    font-size: 17px;\n    margin-bottom: 1em;\n    color: ', ';\n  }\n  .cta {\n    text-align: center;\n    margin-top: 50px;\n  }\n\n  ', ';\n\n  ', ';\n'], ['\n  padding: 50px 15px;\n  background: #fff;\n  .title {\n    margin-top: 10px;\n    margin-bottom: 25px;\n    font-size: 25px;\n    color: ', ';\n    text-align: center;\n    padding: 0 10%;\n  }\n\n  img {\n    max-width: calc(100% - 30px);\n  }\n  p {\n    font-size: 17px;\n    margin-bottom: 1em;\n    color: ', ';\n  }\n  .cta {\n    text-align: center;\n    margin-top: 50px;\n  }\n\n  ', ';\n\n  ', ';\n']);
 
 var _react = __webpack_require__(0);
 
@@ -2744,9 +2745,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _ui = __webpack_require__(1);
 
-var _SectionTitle = __webpack_require__(4);
-
-var _SectionTitle2 = _interopRequireDefault(_SectionTitle);
+var _ = __webpack_require__(2);
 
 var _repos = __webpack_require__(73);
 
@@ -2763,7 +2762,7 @@ var large = function large(css) {
   return (0, _ui.breakpoint)('large', css);
 };
 
-var Main = (0, _ui.styled)(_ui.Section)(_templateObject, _ui.theme.textPrimary, _ui.theme.textSecondary, medium('\n    padding: 120px 15px;\n    .columns {\n      flex-direction: row;\n      flex-wrap: wrap;\n      align-items: flex-start;\n      margin: 50px 0;\n    }\n    .item {\n      width: 50%;\n    }\n    .item:nth-child(1) {\n      padding-right: 7.5px;\n    }\n    .item:nth-child(2) {\n      padding-left: 7.5px;\n    }\n  '), large('\n    .title {\n      font-size: 37px;\n    }\n  '));
+var Main = (0, _ui.styled)(_ui.Section)(_templateObject, _ui.theme.textPrimary, _ui.theme.textSecondary, medium('\n    padding-top: 120px;\n    padding-bottom: 120px;\n    .title {\n      margin: 0 10%;\n    }\n    p {\n      font-size: 18px;\n    }\n    .columns {\n      display: flex;\n      flex-wrap: wrap;\n      align-items: flex-start;\n      margin: 50px 0;\n    }\n    .image img {\n      max-width: 75%;\n    }\n    .item {\n      width: 50%;\n    }\n    .item:nth-child(1) {\n      padding-right: 10px;\n    }\n    .item:nth-child(2) {\n      padding-left: 10px;\n    }\n    .cta {\n      margin-top: 50px;\n    }\n  '), large('\n    .title {\n      font-size: 37px;\n    }\n  '));
 
 var Grants = function Grants() {
   return _react2.default.createElement(
@@ -2772,7 +2771,7 @@ var Grants = function Grants() {
     _react2.default.createElement(
       'div',
       null,
-      _react2.default.createElement(_SectionTitle2.default, { title: 'Grants program' }),
+      _react2.default.createElement(_.SectionTitle, { title: 'Grants program' }),
       _react2.default.createElement(
         'h1',
         { className: 'title' },
@@ -2785,21 +2784,21 @@ var Grants = function Grants() {
         _react2.default.createElement(
           'p',
           { className: 'item' },
-          'Aragon\'s Grants Program is intended to encourage and incentivize people outside of the Core Team to engage in the development of the Aragon ecosystem.'
+          'Aragon Nest was created to support great developers in the development of important tools and research for the Aragon and Ethereum ecosystem.'
         ),
         _react2.default.createElement(
           'p',
           { className: 'item' },
-          'The Aragon Foundation will introduce multiple distinct events upon which participants can join to submit their concepts for deliberation and be accepted into the Grants Program.'
+          'The Aragon Foundation will introduce a way for participants to join and submit their concepts for deliberation and be accepted into Aragon Nest.'
         )
       ),
       _react2.default.createElement(
         'div',
         { className: 'cta' },
         _react2.default.createElement(
-          _ui.Button,
-          { mode: 'strong' },
-          'Apply now'
+          _.Anchor,
+          { mode: 'strong', href: 'https://blog.aragon.one/introducing-aragon-nest-1aa8c91c0566', target: '_blank' },
+          'Read more'
         )
       )
     )
@@ -3471,7 +3470,7 @@ module.exports = __webpack_require__.p + "static/45d8619a-Luke.png";
 /* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/718178fb-Maria.png";
+module.exports = __webpack_require__.p + "static/542bdeaa-Maria.png";
 
 /***/ }),
 /* 96 */
@@ -3483,7 +3482,7 @@ module.exports = __webpack_require__.p + "static/582035cc-Mihai.jpg";
 /* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/0f1f07f5-Oliver.png";
+module.exports = __webpack_require__.p + "static/79579c4b-Oliver.png";
 
 /***/ }),
 /* 98 */
@@ -3938,4 +3937,4 @@ exports.default = NotFound;
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=app.static.e8979ef7.js.map
+//# sourceMappingURL=app.static.3eee42ec.js.map
