@@ -5877,8 +5877,6 @@ var cross = "data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%2211%22%20
 
 var check = "data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2210%22%20viewBox%3D%220%200%2014%2010%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M4.176%207.956L12.114%200l1.062%201.062-9%209L0%205.886l1.044-1.062z%22%20fill%3D%22%2321D48E%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
 
-var _templateObject$1 = taggedTemplateLiteral(['\n    display: inline-block;\n    text-decoration: none;\n  '], ['\n    display: inline-block;\n    text-decoration: none;\n  ']);
-
 var gradientStart = theme.gradientStart;
 var gradientEnd = theme.gradientEnd;
 var gradientStartActive = theme.gradientStartActive;
@@ -5908,7 +5906,8 @@ var positiveStyle = css(['padding-left:34px;background:url(', ') no-repeat 12px 
 
 var negativeStyle = css(['padding-left:30px;background:url(', ') no-repeat 10px calc(50% - 1px);'], styledPublicUrl(cross));
 
-var StyledButton = styled.button.withConfig({
+// Flow declaration: see https://github.com/styled-components/styled-components/issues/570#issuecomment-332087358
+var StyledButton = getPublicUrl(styled.button.withConfig({
   displayName: 'Button__StyledButton'
 })(['width:', ';padding:10px 15px;white-space:nowrap;', ';color:', ';background:', ';border:0;border-radius:3px;cursor:pointer;outline:0;&,&:after{transition-property:all;transition-duration:100ms;transition-timing-function:ease-in-out;}&::-moz-focus-inner{border:0;}', ';', ';', ';'], function (_ref) {
   var wide = _ref.wide;
@@ -5929,14 +5928,7 @@ var StyledButton = styled.button.withConfig({
   if (emphasis === 'positive') return positiveStyle;
   if (emphasis === 'negative') return negativeStyle;
   return '';
-});
-
-// Flow declaration: see https://github.com/styled-components/styled-components/issues/570#issuecomment-332087358
-// Currently throwing errors: https://github.com/styled-components/styled-components/issues/1350
-var Button = getPublicUrl(StyledButton);
-var Anchor = getPublicUrl(StyledButton.withComponent('a').extend(_templateObject$1));
-
-Button.Anchor = Anchor;
+}));
 
 var mapToZero_1 = createCommonjsModule(function (module, exports) {
 // currently used to initiate the velocity style object to 0
@@ -7997,9 +7989,9 @@ DropDown.defaultProps = {
   onChange: function onChange() {}
 };
 
-var StyledText = styled.span.withConfig({
+var StyledText = styled.p.withConfig({
   displayName: 'Text__StyledText'
-})(['', ';', ';', ';'], function (_ref) {
+})(['color:', ';', ';', ';', ';'], theme.textPrimary, function (_ref) {
   var size = _ref.size,
       weight = _ref.weight;
   return font({ size: size, weight: weight });
@@ -8011,42 +8003,67 @@ var StyledText = styled.span.withConfig({
 }, function (_ref3) {
   var color = _ref3.color;
 
-  return 'color: ' + (color || theme.textPrimary);
+  return color ? 'color: ' + color : '';
 });
 
-var Text = function Text(props) {
-  return React.createElement(StyledText, props);
+var StyledBlock = StyledText.withComponent('div');
+var StyledInline = StyledText.withComponent('span');
+
+var StyledH1 = StyledText.withComponent('h1');
+var StyledH2 = StyledText.withComponent('h2');
+var StyledH3 = StyledText.withComponent('h3');
+var StyledH4 = StyledText.withComponent('h4');
+var StyledH5 = StyledText.withComponent('h5');
+var StyledH6 = StyledText.withComponent('h6');
+var styledHeadings = [StyledH1, StyledH2, StyledH3, StyledH4, StyledH5, StyledH6];
+
+var getStyledComponent = function getStyledComponent(_ref4) {
+  var heading = _ref4.heading,
+      _ref4$block = _ref4.block,
+      block = _ref4$block === undefined ? false : _ref4$block,
+      _ref4$inline = _ref4.inline,
+      inline = _ref4$inline === undefined ? false : _ref4$inline;
+
+  if (block) return StyledBlock;
+  if (inline) return StyledInline;
+  if (heading) {
+    return styledHeadings[Math.max(1, Math.min(6, parseInt(heading, 10))) - 1] || StyledText;
+  }
+  return StyledText;
 };
 
-var createTextContainer = function createTextContainer(Element, defaultProps) {
-  var Container = function Container(_ref4) {
-    var children = _ref4.children,
-        color = _ref4.color,
-        size = _ref4.size,
-        smallcaps = _ref4.smallcaps,
-        weight = _ref4.weight,
-        props = objectWithoutProperties(_ref4, ['children', 'color', 'size', 'smallcaps', 'weight']);
-
-    var textProps = { color: color, size: size, smallcaps: smallcaps, weight: weight };
-    return React.createElement(
-      Element,
-      props,
-      React.createElement(
-        Text,
-        textProps,
-        children
-      )
-    );
-  };
-  Container.defaultProps = defaultProps;
-
-  return Container;
+var DefaultProps$2 = {
+  block: false,
+  inline: false,
+  smallcaps: false,
+  heading: -1,
+  size: '',
+  weight: '',
+  color: ''
 };
 
-Text.Block = createTextContainer('div');
-Text.Paragraph = createTextContainer('p');
+var Text = function Text(_ref5) {
+  var block = _ref5.block,
+      inline = _ref5.inline,
+      heading = _ref5.heading,
+      smallcaps = _ref5.smallcaps,
+      size = _ref5.size,
+      weight = _ref5.weight,
+      color = _ref5.color,
+      children = _ref5.children,
+      props = objectWithoutProperties(_ref5, ['block', 'inline', 'heading', 'smallcaps', 'size', 'weight', 'color', 'children']);
 
-var TypedText = Text;
+  var StyledComp = getStyledComponent({ inline: inline, block: block, heading: heading });
+  return React.createElement(StyledComp, _extends({}, props, {
+    weight: weight,
+    size: size,
+    smallcaps: smallcaps,
+    color: color,
+    children: children
+  }));
+};
+
+Text.defaultProps = DefaultProps$2;
 
 var StyledField = styled.div.withConfig({
   displayName: 'Field__StyledField'
@@ -8063,7 +8080,7 @@ var Field = function Field(_ref) {
       'label',
       null,
       React.createElement(
-        TypedText.Block,
+        Text,
         { color: theme.textSecondary, smallcaps: true },
         label
       ),
@@ -8114,7 +8131,7 @@ var StyledFooter = getPublicUrl(styled.footer.withConfig({
   return '\n      padding-top: 30px;\n      padding-bottom: 30px;\n      .icon {\n        padding-left: 25px;\n      }\n    ';
 }, themeDark.accent, styledPublicUrl(iconTwitter), styledPublicUrl(iconMedium), styledPublicUrl(iconRocket), medium$1('\n    padding-bottom: 70px;\n\n    .all-links {\n      display: flex;\n      justify-content: space-between;\n    }\n    .social-links {\n      display: block;\n      margin-top: 0;\n      margin-left: 120px;\n    }\n    .social-links li {\n      display: block;\n    }\n    .icon {\n      overflow: visible;\n      text-indent: 0;\n      background-position: 0 50%;\n    }\n  '), large$1('\n    padding-top: 90px;\n    .main {\n      flex-direction: row;\n      max-width: ' + grid(12, 11) + 'px;\n    }\n    .logo {\n      width: ' + grid(3, 3) + 'px;\n      flex-shrink: 0;\n    }\n    .menus {\n      display: flex;\n      width: ' + grid(6, 6) + 'px;\n    }\n    .menu-1 {\n      width: ' + grid(2, 2) + 'px;\n      margin-right: 0;\n    }\n    .menu-2 {\n      width: ' + grid(4, 4) + 'px;\n    }\n    .social-links {\n      width: ' + grid(3) + 'px;\n      margin-left: 0;\n    }\n    li {\n      margin: 0 0 10px;\n      line-height: 1.5;\n    }\n  ')));
 
-var DefaultProps$2 = {
+var DefaultProps$3 = {
   compact: false
 };
 
@@ -8267,7 +8284,7 @@ var Footer = function Footer(_ref2) {
   );
 };
 
-Footer.defaultProps = DefaultProps$2;
+Footer.defaultProps = DefaultProps$3;
 
 var Footer$1 = getPublicUrl(Footer);
 
@@ -8311,7 +8328,7 @@ var emailFormDefault = function emailFormDefault() {
   );
 };
 
-var DefaultProps$3 = {
+var DefaultProps$4 = {
   emailForm: emailFormDefault
 };
 
@@ -8356,7 +8373,7 @@ var PreFooter = function PreFooter(_ref) {
             'a',
             { href: 'https://github.com/aragon/aragon/releases', target: '_blank' },
             React.createElement(
-              Button,
+              StyledButton,
               { mode: 'strong', wide: true },
               'Download Aragon Core 0.3'
             )
@@ -8367,7 +8384,7 @@ var PreFooter = function PreFooter(_ref) {
   );
 };
 
-PreFooter.defaultProps = DefaultProps$3;
+PreFooter.defaultProps = DefaultProps$4;
 
 var StyledMenuItem = styled.li.withConfig({
   displayName: 'MenuItem__StyledMenuItem'
@@ -8379,7 +8396,7 @@ var StyledMenuItem = styled.li.withConfig({
   return active ? theme.accent : theme.textSecondary;
 });
 
-var DefaultProps$5 = {
+var DefaultProps$6 = {
   active: false,
   renderLink: function renderLink(_ref3) {
     var url = _ref3.url,
@@ -8408,7 +8425,7 @@ var MenuItem = function MenuItem(_ref4) {
   );
 };
 
-MenuItem.defaultProps = DefaultProps$5;
+MenuItem.defaultProps = DefaultProps$6;
 
 var close = "data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M20.297%205.64l-6.508%206.508%206.508%206.508-1.64%201.64-6.509-6.507-6.507%206.508L4%2018.657l6.508-6.509L4%205.641%205.64%204l6.508%206.508L18.656%204z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
 
@@ -8552,7 +8569,7 @@ var Container$2 = styled.span.withConfig({
   displayName: 'Logo__Container'
 })(['display:flex;align-items:center;']);
 
-var DefaultProps$6 = {
+var DefaultProps$7 = {
   compact: false,
   renderLink: function renderLink(_ref) {
     var url = _ref.url,
@@ -8602,7 +8619,7 @@ var Logo = function Logo(_ref2) {
   );
 };
 
-Logo.defaultProps = DefaultProps$6;
+Logo.defaultProps = DefaultProps$7;
 
 var Logo$1 = getPublicUrl(Logo);
 
@@ -8622,7 +8639,7 @@ var StyledHeader = styled.div.withConfig({
   return '\n      .logo {\n        padding-right: 40px;\n        border-right: 1px solid #e8e8e8;\n        padding-top: 6px;\n        padding-bottom: 8px;\n      }\n      .logo img:first-child {\n        margin-right: 10px;\n      }\n    ';
 });
 
-var DefaultProps$4 = {
+var DefaultProps$5 = {
   menuItems: []
 };
 
@@ -8644,14 +8661,9 @@ var Header = function Header(_ref2) {
           'div',
           { className: 'title' },
           React.createElement(
-            'h1',
-            null,
-            React.createElement(
-              TypedText,
-              { size: 'xlarge' },
-              title,
-              ' '
-            )
+            Text,
+            { heading: '1', size: 'xlarge' },
+            title
           )
         ),
         menuItems.length > 0 && React.createElement(
@@ -8698,7 +8710,7 @@ var Header = function Header(_ref2) {
               'a',
               { href: 'https://alpha.aragon.one', target: '_blank' },
               React.createElement(
-                Button,
+                StyledButton,
                 { mode: 'outline' },
                 React.createElement(
                   BreakPoint,
@@ -8723,7 +8735,7 @@ var Header = function Header(_ref2) {
                 target: '_blank'
               },
               React.createElement(
-                Button,
+                StyledButton,
                 { mode: 'strong' },
                 React.createElement(
                   BreakPoint,
@@ -8744,7 +8756,7 @@ var Header = function Header(_ref2) {
   );
 };
 
-Header.defaultProps = DefaultProps$4;
+Header.defaultProps = DefaultProps$5;
 
 var close$1 = "data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%2210%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10%201.014L6.014%205%2010%208.986%208.986%2010%205%206.014%201.014%2010%200%208.986%203.986%205%200%201.014%201.014%200%205%203.986%208.986%200z%22%20fill%3D%22%236D777B%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.7%22%2F%3E%3C%2Fsvg%3E";
 
@@ -8804,13 +8816,9 @@ var SidePanel = function SidePanel(_ref) {
             StyledPanelHeader,
             null,
             React.createElement(
-              'h1',
-              null,
-              React.createElement(
-                TypedText,
-                { size: 'xxlarge' },
-                title
-              )
+              Text,
+              { size: 'xxlarge', heading: '1' },
+              title
             ),
             React.createElement(
               StyledPanelCloseButton,
@@ -8867,7 +8875,7 @@ var StyledTableCellContent = styled.div.withConfig({
   displayName: 'TableCell__StyledTableCellContent'
 })(['display:flex;align-items:center;justify-content:space-between;']);
 
-var DefaultProps$7 = {
+var DefaultProps$8 = {
   contentContainer: StyledTableCellContent
 };
 
@@ -8886,7 +8894,7 @@ var TableCell = function TableCell(_ref) {
   );
 };
 
-TableCell.defaultProps = DefaultProps$7;
+TableCell.defaultProps = DefaultProps$8;
 
 var StyledTableHeader = styled.th.withConfig({
   displayName: 'TableHeader__StyledTableHeader'
@@ -8899,7 +8907,7 @@ var TableHeader = function TableHeader(_ref) {
     StyledTableHeader,
     props,
     React.createElement(
-      TypedText.Block,
+      Text,
       { color: theme.textSecondary, smallcaps: true },
       title
     )
@@ -8916,55 +8924,47 @@ var StyledCard = styled.div.withConfig({
   return height ? height : '322px';
 }, theme.contentBackground, theme.contentBorder);
 
-var _templateObject$2 = taggedTemplateLiteral(['\n  display: flex;\n  padding: 40px 60px;\n  align-items: center;\n  text-align: center;\n  section {\n    padding-top: 20px;\n  }\n'], ['\n  display: flex;\n  padding: 40px 60px;\n  align-items: center;\n  text-align: center;\n  section {\n    padding-top: 20px;\n  }\n']);
+var _templateObject$1 = taggedTemplateLiteral(['\n  display: flex;\n  padding: 40px 60px;\n  align-items: center;\n  text-align: center;\n  section {\n    padding-top: 20px;\n  }\n'], ['\n  display: flex;\n  padding: 40px 60px;\n  align-items: center;\n  text-align: center;\n  section {\n    padding-top: 20px;\n  }\n']);
+var _templateObject2 = taggedTemplateLiteral(['\n  margin: 20px 0 5px;\n'], ['\n  margin: 20px 0 5px;\n']);
 
-var StyledCard$1 = StyledCard.extend(_templateObject$2);
+var StyledCard$1 = StyledCard.extend(_templateObject$1);
 
-var StyledHeading = styled.h1.withConfig({
-  displayName: 'EmptyStateCard__StyledHeading'
-})(['margin:20px 0 5px;']);
+var StyledHeading = StyledH1.extend(_templateObject2);
 
-// $FlowFixMe
-var StyledActionButton = styled(Button).withConfig({
+var StyledActionButton = styled(StyledButton).withConfig({
   displayName: 'EmptyStateCard__StyledActionButton'
 })(['width:150px;margin-top:20px;']);
 
-var DefaultProps$8 = {
-  actionButton: StyledActionButton,
+var DefaultProps$9 = {
   title: 'Nothing here.'
 };
 
 var EmptyStateCard = function EmptyStateCard(_ref) {
   var actionText = _ref.actionText,
+      icon = _ref.icon,
       onActivate = _ref.onActivate,
       text = _ref.text,
       title = _ref.title,
-      ActionButton = _ref.actionButton,
-      Icon = _ref.icon,
-      props = objectWithoutProperties(_ref, ['actionText', 'onActivate', 'text', 'title', 'actionButton', 'icon']);
+      props = objectWithoutProperties(_ref, ['actionText', 'icon', 'onActivate', 'text', 'title']);
   return React.createElement(
     StyledCard$1,
     props,
     React.createElement(
       'section',
       null,
-      React.createElement(Icon, null),
+      React.createElement('img', { src: icon, alt: '' }),
       React.createElement(
         StyledHeading,
-        null,
-        React.createElement(
-          TypedText,
-          { color: theme.accent, weight: 'bold', size: 'large' },
-          title
-        )
+        { color: theme.accent, weight: 'bold', size: 'large' },
+        title
       ),
       React.createElement(
-        TypedText.Block,
+        Text,
         null,
         text
       ),
       React.createElement(
-        ActionButton,
+        StyledActionButton,
         { mode: 'strong', onClick: onActivate },
         actionText
       )
@@ -8972,9 +8972,11 @@ var EmptyStateCard = function EmptyStateCard(_ref) {
   );
 };
 
-EmptyStateCard.defaultProps = DefaultProps$8;
+EmptyStateCard.defaultProps = DefaultProps$9;
 
 var chevronSvg = "data:image/svg+xml,%3Csvg%20width%3D%227%22%20height%3D%2212%22%20viewBox%3D%220%200%207%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M.446%2012a.512.512%200%200%201-.172-.03.422.422%200%200%201-.146-.087A.37.37%200%200%201%200%2011.6a.37.37%200%200%201%20.128-.281l5.826-5.361L.217.692A.376.376%200%200%201%20.089.405.378.378%200%200%201%20.217.117.444.444%200%200%201%20.529%200c.123%200%20.228.04.313.117l6.03%205.56A.37.37%200%200%201%207%205.96a.37.37%200%200%201-.128.281l-6.12%205.643A.477.477%200%200%201%20.446%2012z%22%20fill%3D%22%2300CBE6%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E";
+
+var _templateObject$2 = taggedTemplateLiteral(['\n  padding-right: 20px;\n  margin-right: 20px;\n  background-image: ', ';\n  background-position: 100% 50%;\n  background-repeat: no-repeat;\n'], ['\n  padding-right: 20px;\n  margin-right: 20px;\n  background-image: ', ';\n  background-position: 100% 50%;\n  background-repeat: no-repeat;\n']);
 
 var StyledAppBar = styled.div.withConfig({
   displayName: 'AppBar__StyledAppBar'
@@ -8987,9 +8989,7 @@ var StyledAppBarEnd = styled.div.withConfig({
   displayName: 'AppBar__StyledAppBarEnd'
 })(['margin-left:auto;padding-right:30px;']);
 
-var StyledAppBarTitle = getPublicUrl(styled.h1.withConfig({
-  displayName: 'AppBar__StyledAppBarTitle'
-})(['padding-right:20px;margin-right:20px;background-image:', ';background-position:100% 50%;background-repeat:no-repeat;'], function (_ref) {
+var StyledAppBarTitle = getPublicUrl(StyledH1.extend(_templateObject$2, function (_ref) {
   var chevron = _ref.chevron;
   return chevron ? css(['url(', ')'], styledPublicUrl(chevronSvg)) : 'none';
 }));
@@ -9007,12 +9007,8 @@ var AppBar = function AppBar(_ref2) {
       null,
       React.createElement(
         StyledAppBarTitle,
-        { chevron: !!children },
-        React.createElement(
-          TypedText,
-          { size: 'xxlarge' },
-          title
-        )
+        { chevron: !!children, size: 'xxlarge' },
+        title
       )
     ),
     children,
@@ -9102,5 +9098,5 @@ var LayoutGrid = function LayoutGrid() {
   );
 };
 
-export { css as styledCss, keyframes as styledKeyframes, injectGlobal as styledInjectGlobal, ThemeProvider as styledThemeProvider, wrapWithTheme as styledWithTheme, ServerStyleSheet as styledServerStyleSheet, StyleSheetManager as styledStyleSheetManager, styled, theme, themeDark, brand, colors, font, grid, spring, breakpoint, unselectable, BreakPoint, BaseStyles$1 as BaseStyles, Section, IllustratedSection, BadgeNumber, Button, CircleGraph, DropDown, Field, TextInput, Footer$1 as Footer, PreFooter, Header, SidePanel$1 as SidePanel, Table, TableCell, TableHeader, StyledTableRow as TableRow, TypedText as Text, StyledCard as Card, EmptyStateCard, AppBar, AragonApp, LayoutGrid, Finance as IconFinance, Fundraising as IconFundraising, Groups as IconGroups, Home as IconHome, Identity as IconIdentity, Notifications as IconNotifications, Permissions as IconPermissions, Settings as IconSettings, Tokens as IconTokens, Voting as IconVoting, Wallet as IconWallet };
+export { css as styledCss, keyframes as styledKeyframes, injectGlobal as styledInjectGlobal, ThemeProvider as styledThemeProvider, wrapWithTheme as styledWithTheme, ServerStyleSheet as styledServerStyleSheet, StyleSheetManager as styledStyleSheetManager, styled, theme, themeDark, brand, colors, font, grid, spring, breakpoint, unselectable, BreakPoint, BaseStyles$1 as BaseStyles, Section, IllustratedSection, BadgeNumber, StyledButton as Button, CircleGraph, DropDown, Field, TextInput, Footer$1 as Footer, PreFooter, Header, SidePanel$1 as SidePanel, Table, TableCell, TableHeader, StyledTableRow as TableRow, Text, StyledCard as Card, EmptyStateCard, AppBar, AragonApp, LayoutGrid, Finance as IconFinance, Fundraising as IconFundraising, Groups as IconGroups, Home as IconHome, Identity as IconIdentity, Notifications as IconNotifications, Permissions as IconPermissions, Settings as IconSettings, Tokens as IconTokens, Voting as IconVoting, Wallet as IconWallet };
 //# sourceMappingURL=index.esm.js.map
