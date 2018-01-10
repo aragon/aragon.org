@@ -2,6 +2,8 @@
 
 The website of the Aragon project.
 
+**Important:** please use the [`v0.3.0-website`](https://github.com/aragon/aragon-ui/tree/v0.3.0-website) branch of Aragon UI to build the website.
+
 ## Build Setup
 
 ``` bash
