@@ -71,10 +71,9 @@ const UnstoppableOrganizations = () => (
       </Text>
       <div className="buttons">
         <div className="button">
-          <Button mode="outline">Web version</Button>
-        </div>
-        <div className="button">
-          <Button mode="strong">Aragon Core</Button>
+          <a href="https://blog.aragon.one/news-from-the-front-5820cd9f2e46" target="_blank">
+            <Button mode="strong">Preview Aragon 0.5</Button>
+          </a>
         </div>
       </div>
       <div className="app-wrapper">
