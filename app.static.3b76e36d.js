@@ -1262,18 +1262,13 @@ var UnstoppableOrganizations = function UnstoppableOrganizations() {
           'div',
           { className: 'button' },
           _react2.default.createElement(
-            _ui.Button,
-            { mode: 'outline' },
-            'Web version'
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'button' },
-          _react2.default.createElement(
-            _ui.Button,
-            { mode: 'strong' },
-            'Aragon Core'
+            'a',
+            { href: 'https://blog.aragon.one/news-from-the-front-5820cd9f2e46', target: '_blank' },
+            _react2.default.createElement(
+              _ui.Button,
+              { mode: 'strong' },
+              'Preview Aragon 0.5'
+            )
           )
         )
       ),
@@ -3937,4 +3932,4 @@ exports.default = NotFound;
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=app.static.3eee42ec.js.map
+//# sourceMappingURL=app.static.3b76e36d.js.map

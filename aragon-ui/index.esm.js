@@ -1946,15 +1946,6 @@ var stylis$1 = createCommonjsModule(function (module, exports) {
 }));
 });
 
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
 function makeEmptyFunction(arg) {
   return function () {
     return arg;
@@ -1989,17 +1980,6 @@ var emptyFunction_1 = emptyFunction;
  *
  */
 
-/**
- * Use invariant() to assert state which your program assumes to be true.
- *
- * Provide sprintf-style format (only %s is supported) and arguments
- * to provide information about what broke and what you were
- * expecting.
- *
- * The invariant message will be stripped in production, but the invariant
- * will remain to ensure logic does not differ in production.
- */
-
 var validateFormat = function validateFormat(format) {};
 
 if (process.env.NODE_ENV !== 'production') {
@@ -2032,13 +2012,6 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 var invariant_1 = invariant;
-
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
 
 var warning = emptyFunction_1;
 
@@ -2090,7 +2063,6 @@ object-assign
 @license MIT
 */
 
-/* eslint-disable no-unused-vars */
 var getOwnPropertySymbols = Object.getOwnPropertySymbols;
 var hasOwnProperty$1 = Object.prototype.hasOwnProperty;
 var propIsEnumerable = Object.prototype.propertyIsEnumerable;
@@ -2903,17 +2875,6 @@ var hoistNonReactStatics = function hoistNonReactStatics(targetComponent, source
 
     return targetComponent;
 };
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @typechecks
- */
 
 var _uppercasePattern = /([A-Z])/g;
 
@@ -5567,7 +5528,8 @@ var unselectable = function unselectable() {
   return '\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n';
 };
 
-// High order component wrapper
+// TODO: deprecate the previous names
+
 var getPublicUrl = function getPublicUrl(Component$$1) {
   var highOrderComponent = function highOrderComponent(baseProps, context) {
     var _context$publicUrl = context.publicUrl,
@@ -6088,7 +6050,7 @@ var performanceNow$2 = createCommonjsModule(function (module) {
 
 }).call(commonjsGlobal);
 
-
+//# sourceMappingURL=performance-now.js.map
 });
 
 var root = typeof window === 'undefined' ? commonjsGlobal : window;
@@ -8705,30 +8667,8 @@ var Header = function Header(_ref2) {
             { className: 'button' },
             React.createElement(
               'a',
-              { href: 'https://alpha.aragon.one', target: '_blank' },
-              React.createElement(
-                StyledButton,
-                { mode: 'outline' },
-                React.createElement(
-                  BreakPoint,
-                  { from: 'medium', to: 'large' },
-                  'Web version'
-                ),
-                React.createElement(
-                  BreakPoint,
-                  { from: 'large' },
-                  'Try the web version'
-                )
-              )
-            )
-          ),
-          React.createElement(
-            'div',
-            { className: 'button' },
-            React.createElement(
-              'a',
               {
-                href: 'https://github.com/aragon/aragon/releases',
+                href: 'https://blog.aragon.one/news-from-the-front-5820cd9f2e46',
                 target: '_blank'
               },
               React.createElement(
@@ -8737,12 +8677,12 @@ var Header = function Header(_ref2) {
                 React.createElement(
                   BreakPoint,
                   { from: 'medium', to: 'large' },
-                  'Aragon Core'
+                  'Preview Aragon 0.5'
                 ),
                 React.createElement(
                   BreakPoint,
                   { from: 'large' },
-                  'Download Aragon Core'
+                  'Preview Aragon 0.5'
                 )
               )
             )
@@ -9018,8 +8958,6 @@ var AppBar = function AppBar(_ref2) {
 };
 
 var logo$3 = "data:image/svg+xml,%3Csvg%20width%3D%221129%22%20height%3D%22792%22%20viewBox%3D%220%200%201129%20792%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20x1%3D%2258.303%25%22%20y1%3D%2229.305%25%22%20x2%3D%22-20.356%25%22%20y2%3D%2289.584%25%22%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2250%25%22%20y1%3D%22125.887%25%22%20x2%3D%2250%25%22%20y2%3D%2227.419%25%22%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20x1%3D%2238.76%25%22%20y1%3D%2240.284%25%22%20x2%3D%2227.198%25%22%20y2%3D%224.898%25%22%20id%3D%22c%22%3E%3Cstop%20stop-color%3D%22%23E9F2F4%22%20offset%3D%220%25%22%2F%3E%3Cstop%20stop-color%3D%22%23FFF%22%20offset%3D%22100%25%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.7%22%3E%3Cpath%20d%3D%22M474.223%2064.24c-.503%200-231.685%2073.873-231.685%20275.905%200%20202.033%20223.146%20300.029%20387.48%20300.029%2089.383%200%20162.808-26.013%20211.24-49.744%206.242-28.642%2028.943-96.473%20104.047-96.981%2013.393-.523%2025.958%201.99%2036.517%208.021%2050.256%2027.144%2017.59%2077.898%2017.59%2077.898%201.894-.307%203.809-.663%205.724-1.075%201.91-.413%203.83-.89%205.764-1.408%2060.404-16.268%20128.467-85.36%20116.661-201.057-9.463-92.774-95.09-151.58-136.743-174.94-13.64-7.648-22.566-11.513-22.566-11.513%201.508-9.423%201.995-16.71%201.995-22.309%200-1.05-.02-2.035-.05-2.96v-10.86C751.617%2020.65%20566.645.223%20475.414.223c-39.412%200-61.5%203.704-61.5%203.704l60.309%2060.313zm461.86%20125.638s-29.652-9.55-59.8-13.57c-15.083%2015.58-28.15%2022.113-32.17%2024.129-.503.497-1.005%201-1.005%201-87.95-18.595-119.612-63.827-119.612-63.827%2082.93-.497%20157.812%2019.098%20212.587%2052.268z%22%20fill%3D%22url%28%23a%29%22%20opacity%3D%22.779%22%2F%3E%3Cpath%20d%3D%22M1018.002%20315.017c0%2065.842-27.134%20126.647-73.375%20175.899l-2.197%202.528%203.704-.01c12.564-.508%2025.129%202.005%2035.688%208.036%2050.256%2027.144%2017.59%2077.898%2017.59%2077.898%2062.82-10.051%20140.719-80.406%20128.15-203.54-9.464-92.774-95.092-151.58-136.744-174.94%2017.901%2035.357%2027.184%2074.19%2027.184%20114.13%22%20fill%3D%22url%28%23b%29%22%20opacity%3D%22.374%22%2F%3E%3Cpath%20d%3D%22M.808%20545.696c0%208.152.317%2015.911.769%2023.495%2062.198%20119.616%20137.015%20224.115%20222.588%20310.653%20106.72%20107.685%20230.9%20187.578%20369.166%20237.539%20137.764-49.785%20261.949-129.854%20369.182-238.057%2031.792-32.144%2062.112-66.887%2090.915-104.012-229.272-16.479-215.346-155.74-215.346-155.74%200-5.524%200-11.057%201.005-16.585%200%200%20.508-4.89%202.176-12.564-48.432%2023.736-121.857%2049.749-211.244%2049.749-164.335%200-387.48-97.996-387.48-300.029%200-202.032%20231.181-275.905%20231.181-275.905l-.12-.035c-5.86-.452-12.143-.472-17.973-.472C202.836%2072.784.808%20284.863.808%20545.696%22%20fill%3D%22url%28%23c%29%22%20opacity%3D%22.557%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E";
-
-// AragonApp provides everything needed to start an Aragon App.
 
 var StyledAragonApp = styled.main.withConfig({
   displayName: 'AragonApp__StyledAragonApp'
