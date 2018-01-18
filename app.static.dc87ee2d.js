@@ -1052,7 +1052,7 @@ var ReadyToTry = function ReadyToTry() {
         _react2.default.createElement(
           'p',
           { className: 'subtitle' },
-          'Download Aragon Core Alpha 0.3'
+          'Aragon 0.5 will be released soon.'
         ),
         _react2.default.createElement(
           _ui.BreakPoint,
@@ -1062,13 +1062,13 @@ var ReadyToTry = function ReadyToTry() {
             { className: 'buttons' },
             _react2.default.createElement(
               _.Anchor,
-              { href: 'https://alpha.aragon.one', target: '_blank' },
-              'Web version'
+              { mode: 'strong', href: 'https://blog.aragon.one/news-from-the-front-5820cd9f2e46', target: '_blank' },
+              'Preview Aragon 0.5'
             ),
             _react2.default.createElement(
               _.Anchor,
-              { mode: 'strong', href: 'https://github.com/aragon/aragon/releases', target: '_blank' },
-              'Aragon Core'
+              { href: 'https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&id=e81a44c4bd', target: '_blank' },
+              'Newsletter'
             )
           )
         ),
@@ -1080,13 +1080,13 @@ var ReadyToTry = function ReadyToTry() {
             { className: 'buttons' },
             _react2.default.createElement(
               _.Anchor,
-              { href: 'https://alpha.aragon.one', target: '_blank' },
-              'Try the Web version'
+              { mode: 'strong', href: 'https://blog.aragon.one/news-from-the-front-5820cd9f2e46', target: '_blank' },
+              'Preview Aragon 0.5'
             ),
             _react2.default.createElement(
               _.Anchor,
-              { mode: 'strong', href: 'https://github.com/aragon/aragon/releases', target: '_blank' },
-              'Download Aragon Core'
+              { href: 'https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&id=e81a44c4bd', target: '_blank' },
+              'Subscribe to the newsletter'
             )
           )
         )
@@ -3932,4 +3932,4 @@ exports.default = NotFound;
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=app.static.3b76e36d.js.map
+//# sourceMappingURL=app.static.dc87ee2d.js.map
