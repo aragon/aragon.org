@@ -87,17 +87,17 @@ const ReadyToTry = () => (
     <div className="in">
       <div className="content">
         <h1 className="title">Ready to try Aragon?</h1>
-        <p className="subtitle">Download Aragon Core Alpha 0.3</p>
+        <p className="subtitle">Aragon 0.5 will be released soon.</p>
         <BreakPoint to="medium">
           <div className="buttons">
-            <Anchor href="https://alpha.aragon.one" target="_blank">Web version</Anchor>
-            <Anchor mode="strong" href="https://github.com/aragon/aragon/releases" target="_blank">Aragon Core</Anchor>
+            <Anchor mode="strong" href="https://blog.aragon.one/news-from-the-front-5820cd9f2e46" target="_blank">Preview Aragon 0.5</Anchor>
+            <Anchor href="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&id=e81a44c4bd" target="_blank">Newsletter</Anchor>
           </div>
         </BreakPoint>
         <BreakPoint from="medium">
           <div className="buttons">
-            <Anchor href="https://alpha.aragon.one" target="_blank">Try the Web version</Anchor>
-            <Anchor mode="strong" href="https://github.com/aragon/aragon/releases" target="_blank">Download Aragon Core</Anchor>
+            <Anchor mode="strong" href="https://blog.aragon.one/news-from-the-front-5820cd9f2e46" target="_blank">Preview Aragon 0.5</Anchor>
+            <Anchor href="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&id=e81a44c4bd" target="_blank">Subscribe to the newsletter</Anchor>
           </div>
         </BreakPoint>
       </div>
