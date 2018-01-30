@@ -65,7 +65,7 @@ const Core = () => (
         <StyledMember
           picture="Tatu.png"
           name="Tatu Karki"
-          title="Communications Director"
+          title="Communications Lead"
           twitter="Smokyish"
           medium="Smokyish"
           github="Smokyish"
@@ -100,6 +100,20 @@ const Core = () => (
           twitter="sohkai"
           medium="sohkai"
           github="sohkai"
+        />
+        <StyledMember
+          picture="John.png"
+          name="John Light"
+          title="Community Lead"
+          twitter="lightcoin"
+          github="john-light"
+        />
+        <StyledMember
+          picture="Alexa.png"
+          name="Alexa Weaver"
+          title="Operations Assistant"
+          twitter="alexa_rwr"
+          medium="Alexa_RWR"
         />
       </div>
     </div>
