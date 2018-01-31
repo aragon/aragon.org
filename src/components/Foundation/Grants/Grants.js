@@ -86,14 +86,14 @@ const Grants = () => (
       <img src={repos} alt="" />
       <div className="columns">
         <p className="item">
-          Aragon Nest was created to support great
-          developers in the development of important tools
-          and research for the Aragon and Ethereum ecosystems.
+          The Aragon Nest program was created to support great
+          teams in the research and development of all-important tools
+          for the Aragon and Ethereum ecosystems
         </p>
         <p className="item">
-          You can suggest proposals of grants we should give, 
-          or you can apply for a Nest grant for your project.
-          The process is totally transparent for the community.
+          You can propose subjects for grants that we should award,
+          or you can apply for a grant from Nest to your project.
+          The process is completely transparent for the community
         </p>
       </div>
       <div className="cta">
