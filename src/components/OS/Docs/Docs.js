@@ -92,7 +92,7 @@ const Docs = () => (
         </p>
         <p className="item">
           aragonOS-based applications follow the UNIX philosophy and do one simple thing very well.
--         They expose permissions for other apps to consume their functionality and build upon them.
+          They expose permissions for other apps to consume their functionality and build upon them
         </p>
       </div>
       <div className="cta">
