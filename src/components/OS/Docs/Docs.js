@@ -86,12 +86,12 @@ const Docs = () => (
       <img src="https://raw.githubusercontent.com/aragon/aragon-wiki/master/docs/images/aragonos/aragon_tech_lead_wants_to_transfer_100_eth_to_payroll_contract.gif" alt="" />
       <div className="columns">
         <p className="item">
-          Once you understand the robustness of the Access Control List that powers aragonOS,
-          your vision for smart contract development will change radically.<br />
-          It's designed to do one simple thing exceedingly well
+          Once you understand the robustness of the architecture and the Access Control List
+          that powers aragonOS, your vision for smart contract development
+          will change radically
         </p>
         <p className="item">
-          aragonOS-based applications follow the UNIX philosophy and do one simple thing very well.
+          aragonOS-based apps follow the UNIX philosophy to do one simple thing exceedingly well.
           They expose permissions for other apps to consume their functionality and build upon them
         </p>
       </div>
