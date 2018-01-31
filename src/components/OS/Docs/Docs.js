@@ -11,7 +11,7 @@ const large = css => breakpoint('large', css)
 
 const Main = styled(Section)`
   padding: 50px 15px;
-  background: #fff;
+  background: #fcfcff;
   .title {
     margin-top: 10px;
     margin-bottom: 25px;
@@ -81,17 +81,17 @@ const Docs = () => (
     <div>
       <SectionTitle title="Getting started" />
       <h1 className="title">
-        Check out development resources
+        The aragonOS architecture
       </h1>
-      <img src={bsod} alt="" />
+      <img src="https://cdn-images-1.medium.com/max/1200/1*5rZnVMu2_J8L2McuFNnwmA.gif" alt="" />
       <div className="columns">
         <p className="item">
-          Best starting point is the 
+          Once you understand the powerful ACL that powers aragonOS,
+          your vision for smart contract development will radically change.
         </p>
         <p className="item">
-          The Aragon Foundation will introduce a way for
-          participants to join and submit their concepts for deliberation
-          and be accepted into Aragon Nest.
+          aragonOS apps follow the UNIX philosophy and do one simple thing very well.
+          They expose permissions for other apps to consume their functionality and build upon them.
         </p>
       </div>
       <div className="cta">
