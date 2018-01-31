@@ -1,14 +1,13 @@
 import React from 'react'
 import { styled } from '@aragon/ui'
 import { Section } from '@aragon/ui'
-import logos from './assets/logos.png'
 
 import economist from './assets/economist.svg'
 import coindesk from './assets/coindesk.svg'
 import forbes from './assets/forbes.svg'
-import ibt from './assets/ibt.svg'
 import nasdaq from './assets/nasdaq.svg'
 import reuters from './assets/reuters.svg'
+import venturebeat from './assets/venturebeat.svg'
 
 const LOGOS = [
   {
@@ -25,11 +24,19 @@ const LOGOS = [
     opacity: 0.75,
   },
   {
+    name: 'VentureBeat',
+    image: venturebeat,
+    url:
+      'https://venturebeat.com/2017/12/03/no-ceo-needed-these-blockchain-platforms-will-let-the-crowd-run-startups/',
+    opacity: 0.5,
+  },
+  {
     name: 'Forbes',
     image: forbes,
     url:
       'https://www.forbes.com/sites/rogeraitken/2017/04/20/forbes-under-30-tech-prodigy-in-cryptosale-for-decentralized-jurisdiction-platform/',
     opacity: 0.75,
+    width: 92,
   },
   {
     name: 'Reuters',
@@ -44,14 +51,6 @@ const LOGOS = [
     url:
       'http://www.nasdaq.com/article/disintermediating-entrepreneurship-iis-the-first-step-towards-a-fairer-world-cm806430',
     opacity: 0.5,
-  },
-  {
-    name: 'IBT',
-    image: ibt,
-    url:
-      'http://www.ibtimes.co.uk/ethereum-based-aragon-leads-blockchain-exodus-slack-amid-phishing-scams-1640474',
-    opacity: 0.5,
-    width: 92,
   },
 ]
 
