@@ -17,7 +17,7 @@ const Snippet = () => (
   <StyledOverlapBackground>
     <IllustratedSection>
       <Subtitle dark>
-        <p>Upgradeability, permissions and governance, all taken care of</p>
+        <p>Upgradeability, access control and governance, all taken care of</p>
       </Subtitle>
       <Content dark>
         <p>
