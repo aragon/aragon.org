@@ -6,6 +6,7 @@ import { AragonApp, Header, PreFooter, Footer, Button } from '@aragon/ui'
 
 const menuItems = [
   ['/core', 'Core'],
+  ['/os', 'aragonOS'],
   ['/network', 'Network'],
   ['/foundation', 'Foundation'],
   ['/about', 'About'],

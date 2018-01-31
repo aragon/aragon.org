@@ -22,6 +22,7 @@ export default {
   getRoutes: () => [
     { path: '/', component: 'src/pages/Home' },
     { path: '/core', component: 'src/pages/Core' },
+    { path: '/os', component: 'src/pages/OS' },
     { path: '/network', component: 'src/pages/Network' },
     { path: '/foundation', component: 'src/pages/Foundation' },
     { path: '/about', component: 'src/pages/About' },
