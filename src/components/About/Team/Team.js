@@ -64,7 +64,7 @@ const Core = () => (
         />
         <StyledMember
           picture="Tatu.png"
-          name="Tatu Karki"
+          name="Tatu Kärki"
           title="Communications Lead"
           twitter="Smokyish"
           medium="Smokyish"
@@ -91,6 +91,7 @@ const Core = () => (
           name="Pierre Bertet"
           title="UI & Interaction Developer"
           twitter="bpierre"
+          medium="bpierre"
           github="bpierre"
         />
         <StyledMember
@@ -106,6 +107,7 @@ const Core = () => (
           name="John Light"
           title="Community Lead"
           twitter="lightcoin"
+          medium="lightcoin"
           github="john-light"
         />
         <StyledMember
@@ -114,6 +116,7 @@ const Core = () => (
           title="Operations Assistant"
           twitter="alexa_rwr"
           medium="Alexa_RWR"
+          github="alexarwr"
         />
       </div>
     </div>
