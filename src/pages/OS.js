@@ -6,7 +6,7 @@ const OS = () => (
   <Page path="/os">
     <PageTitle
       title="aragonOS"
-      subtitle="The smart contract framework for dapps and protocols"
+      subtitle="The smart contract framework for DApps and protocols"
     />
     <Snippet />
     <Docs />

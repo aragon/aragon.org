@@ -17,21 +17,23 @@ const Snippet = () => (
   <StyledOverlapBackground>
     <IllustratedSection>
       <Subtitle dark>
-        <p>Upgradeability, access control and governance, all taken care of</p>
+        <p>Upgradeability,<br />
+        access control and governance.<br />
+        All taken care of</p>
       </Subtitle>
       <Content dark>
         <p>
-          aragonOS' architecture can be used by any complex DApp or 
-          protocol and it allows extendability with the ability to plug in any 
+          The architecture of aragonOS can be used by any complex DApp or
+          protocol. It enables extendability with the capability to plug in any
           Aragon governance module
         </p>
         <p>
-          Using aragonOS will always be free and it doesn’t require any tokens whatsoever
+          Using aragonOS is independent of any tokens and will always be free
         </p>
       </Content>
       <Emphasis dark>
         <p>
-          aragonOS is a smart contract development framework with a very strong focus 
+          aragonOS is a smart contract development framework with a very strong focus
           on governance and upgradeability
         </p>
       </Emphasis>
