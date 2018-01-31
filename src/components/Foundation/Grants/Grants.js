@@ -64,6 +64,9 @@ const Main = styled(Section)`
     .cta {
       margin-top: 50px;
     }
+    .cta a {
+      margin: 0 0.5rem;
+    }
   `)};
 
   ${large(`
@@ -85,16 +88,17 @@ const Grants = () => (
         <p className="item">
           Aragon Nest was created to support great
           developers in the development of important tools
-          and research for the Aragon and Ethereum ecosystem.
+          and research for the Aragon and Ethereum ecosystems.
         </p>
         <p className="item">
-          The Aragon Foundation will introduce a way for
-          participants to join and submit their concepts for deliberation
-          and be accepted into Aragon Nest.
+          You can suggest proposals of grants we should give, 
+          or you can apply for a Nest grant for your project.
+          The process is totally transparent for the community.
         </p>
       </div>
       <div className="cta">
-        <Anchor mode="strong" href="https://blog.aragon.one/introducing-aragon-nest-1aa8c91c0566" target="_blank">Read more</Anchor>
+        <Anchor mode="strong" href="https://github.com/aragon/nest" target="_blank">Check out proposals</Anchor>
+        <Anchor mode="outline" href="https://blog.aragon.one/launch-of-aragon-nest-8d42d1a37595" target="_blank">Read more</Anchor>
       </div>
     </div>
   </Main>
