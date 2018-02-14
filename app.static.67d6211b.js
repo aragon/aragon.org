@@ -798,7 +798,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var menuItems = [['/core', 'Core'], ['/os', 'aragonOS'], ['/network', 'Network'], ['/foundation', 'Foundation'], ['/about', 'About'], ['/join', 'Join us'], ['https://wiki.aragon.one', 'Wiki']];
+var menuItems = [['/core', 'Core'], ['/os', 'aragonOS'], ['/network', 'Network'], ['/foundation', 'Foundation'], ['/about', 'About'], ['/join', 'Join us'], ['https://wiki.aragon.one', 'Wiki'], ['https://blog.aragon.one', 'Blog']];
 
 var renderMenuItemLink = function renderMenuItemLink(_ref) {
   var url = _ref.url,
@@ -2514,14 +2514,12 @@ var Docs = function Docs() {
         _react2.default.createElement(
           'p',
           { className: 'item' },
-          'Once you understand the robustness of the Access Control List that powers aragonOS, your vision for smart contract development will change radically.',
-          _react2.default.createElement('br', null),
-          'It\'s designed to do one simple thing exceedingly well'
+          'Once you understand the robustness of the architecture and the Access Control List that powers aragonOS, your vision for smart contract development will change radically'
         ),
         _react2.default.createElement(
           'p',
           { className: 'item' },
-          'aragonOS-based applications follow the UNIX philosophy and do one simple thing very well. They expose permissions for other apps to consume their functionality and build upon them'
+          'aragonOS-based apps follow the UNIX philosophy to do one simple thing exceedingly well. They expose permissions for other apps to consume their functionality and build upon them'
         )
       ),
       _react2.default.createElement(
@@ -4223,4 +4221,4 @@ exports.default = NotFound;
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=app.static.1f846e9f.js.map
+//# sourceMappingURL=app.static.67d6211b.js.map
