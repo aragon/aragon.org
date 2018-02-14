@@ -12,6 +12,7 @@ const menuItems = [
   ['/about', 'About'],
   ['/join', 'Join us'],
   ['https://wiki.aragon.one', 'Wiki'],
+  ['https://blog.aragon.one', 'Blog'],
 ]
 
 const renderMenuItemLink = ({ url, children }) =>
