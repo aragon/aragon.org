@@ -118,6 +118,29 @@ const Core = () => (
           medium="Alexa_RWR"
           github="alexarwr"
         />
+        <StyledMember
+          picture="Jouni.png"
+          name="Jouni Helminen"
+          title="Design Lead"
+          twitter="dharmaone"
+          medium="dharmaone"
+          github="jounih"
+        />
+        <StyledMember
+          picture="Bingen.png"
+          name="Bingen Eguzkitza"
+          title="Solidity Engineer"
+          twitter="bingentxu"
+          medium="bingentxu"
+          github="bingen"
+        />
+        <StyledMember
+          picture="Chris.png"
+          name="Chris Remus"
+          title="Product Manager"
+          twitter="cjremus"
+          github="chris-remus"
+        />
       </div>
     </div>
   </CoreSection>
