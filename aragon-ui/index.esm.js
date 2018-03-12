@@ -8124,12 +8124,12 @@ var large$1 = function large(css$$1) {
 
 var StyledFooter = getPublicUrl(styled.footer.withConfig({
   displayName: 'Footer__StyledFooter'
-})(['padding:60px 20px 35px;font-size:15px;color:grey;background:', ';', ';.main{display:flex;align-items:center;flex-direction:column;margin:0 auto;}.logo{margin-bottom:60px;}.menus{display:flex;}.menu-1{margin-right:35px;}.menu-2{margin-right:35px;}.menu-3{margin-right:35px;}.social-links{display:flex;justify-content:center;margin-top:30px;}.social-links li{display:flex;margin-left:75px;}.icon{overflow:hidden;text-indent:-9999px;padding-left:30px;background-repeat:no-repeat;background-position:50% 50%;}li{list-style:none;line-height:2;}a{text-decoration:none;}strong a{color:', ';font-weight:400;}.icon.twitter{background-image:url(', ');}.icon.medium{background-image:url(', ');}.icon.rocket{background-image:url(', ');}', ';', ';'], colors.Rain['Shark'], function (_ref) {
+})(['padding:60px 20px 35px;font-size:15px;color:grey;background:', ';', ';.main{display:flex;align-items:center;flex-direction:column;margin:0 auto;}.logo{margin-bottom:60px;}.menus{display:flex;}.menu-1{margin-right:35px;}.social-links{display:flex;justify-content:center;margin-top:30px;}.social-links li{display:flex;}.icon{overflow:hidden;text-indent:-9999px;padding-left:30px;background-repeat:no-repeat;background-position:50% 50%;}li{list-style:none;line-height:2;}a{text-decoration:none;}strong a{color:', ';font-weight:400;}.icon.twitter{background-image:url(', ');}.icon.medium{background-image:url(', ');}.icon.rocket{background-image:url(', ');}', ';', ';'], colors.Rain['Shark'], function (_ref) {
   var compact = _ref.compact;
 
   if (!compact) return '';
   return '\n      padding-top: 30px;\n      padding-bottom: 30px;\n      .icon {\n        padding-left: 25px;\n      }\n    ';
-}, themeDark.accent, styledPublicUrl(iconTwitter), styledPublicUrl(iconMedium), styledPublicUrl(iconRocket), medium$1('\n    padding-bottom: 70px;\n\n    .all-links {\n      display: flex;\n      justify-content: space-between;\n    }\n    .social-links {\n      display: block;\n      margin-top: 0;\n      margin-left: 120px;\n    }\n    .social-links li {\n      display: block;\n    }\n    .icon {\n      overflow: visible;\n      text-indent: 0;\n      background-position: 0 50%;\n    }\n  '), large$1('\n    padding-top: 90px;\n    .main {\n      flex-direction: row;\n      max-width: ' + grid(12, 11) + 'px;\n    }\n    .logo {\n      width: ' + grid(3, 3) + 'px;\n      flex-shrink: 0;\n    }\n    .menus {\n      display: flex;\n      width: ' + grid(6, 6) + 'px;\n    }\n    .menu-1 {\n      width: ' + grid(2, 2) + 'px;\n      margin-right: 0;\n    }\n    .menu-2 {\n      width: ' + grid(2, 2) + 'px;\n    }\n    .menu-3 {\n      width: ' + grid(2, 2) + 'px;\n    }\n    .social-links {\n      width: ' + grid(3) + 'px;\n      margin-left: 0;\n    }\n    li {\n      margin: 0 0 10px;\n      line-height: 1.5;\n    }\n  ')));
+}, themeDark.accent, styledPublicUrl(iconTwitter), styledPublicUrl(iconMedium), styledPublicUrl(iconRocket), medium$1('\n    padding-bottom: 70px;\n\n    .all-links {\n      display: flex;\n      justify-content: space-between;\n    }\n    .social-links {\n      display: block;\n      margin-top: 0;\n      margin-left: 120px;\n    }\n    .social-links li {\n      display: block;\n    }\n    .icon {\n      overflow: visible;\n      text-indent: 0;\n      background-position: 0 50%;\n    }\n  '), large$1('\n    padding-top: 90px;\n    .main {\n      flex-direction: row;\n      max-width: ' + grid(12, 11) + 'px;\n    }\n    .logo {\n      width: ' + grid(3, 3) + 'px;\n      flex-shrink: 0;\n    }\n    .menus {\n      display: flex;\n      width: ' + grid(6, 6) + 'px;\n    }\n    .menu-1 {\n      width: ' + grid(2, 2) + 'px;\n      margin-right: 0;\n    }\n    .menu-2 {\n      width: ' + grid(4, 4) + 'px;\n    }\n    .social-links {\n      width: ' + grid(3) + 'px;\n      margin-left: 0;\n    }\n    li {\n      margin: 0 0 10px;\n      line-height: 1.5;\n    }\n  ')));
 
 var DefaultProps$3 = {
   compact: false
@@ -8236,57 +8236,13 @@ var Footer = function Footer(_ref2) {
                 'li',
                 null,
                 React.createElement(
-                  'a',
-                  { href: 'https://blog.aragon.one/', target: '_blank' },
-                  'Blog'
-                )
-              )
-            )
-          ),
-          React.createElement(
-            'nav',
-            { className: 'menu-3' },
-            React.createElement(
-              'ul',
-              null,
-              React.createElement(
-                'li',
-                null,
-                React.createElement(
                   'strong',
                   null,
                   React.createElement(
                     'a',
                     { href: 'https://blog.aragon.one/news-from-the-front-5820cd9f2e46', target: '_blank' },
-                    'Preview Aragon Core 0.5'
+                    'Preview Aragon 0.5'
                   )
-                )
-              ),
-              React.createElement(
-                'li',
-                null,
-                React.createElement(
-                  'a',
-                  { href: 'mailto:contact@aragon.one' },
-                  'Contact Us'
-                )
-              ),
-              React.createElement(
-                'li',
-                null,
-                React.createElement(
-                  'a',
-                  { href: 'mailto:media@aragon.one' },
-                  'Media/Press Inquiries'
-                )
-              ),
-              React.createElement(
-                'li',
-                null,
-                React.createElement(
-                  'a',
-                  { href: 'https://wiki.aragon.one/press/press-kit/', target: '_blank' },
-                  'Press Kit'
                 )
               )
             )
