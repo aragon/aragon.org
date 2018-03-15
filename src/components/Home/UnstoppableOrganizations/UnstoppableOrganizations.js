@@ -72,7 +72,7 @@ const UnstoppableOrganizations = () => (
       <div className="buttons">
         <div className="button">
           <a href="https://blog.aragon.one/news-from-the-front-5820cd9f2e46" target="_blank">
-            <Button mode="strong">Preview Aragon 0.5</Button>
+            <Button mode="strong">Try Aragon 0.5</Button>
           </a>
         </div>
       </div>
