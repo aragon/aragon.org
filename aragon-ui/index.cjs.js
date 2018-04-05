@@ -8405,25 +8405,22 @@ var PreFooter = function PreFooter(_ref) {
           React__default.createElement(
             'h1',
             { className: 'title' },
-            'Aragon Alpha'
+            'Aragon Core Beta'
           ),
           React__default.createElement(
             'p',
             { className: 'desc' },
-            'Completely updated',
+            'Try the completely updated',
             React__default.createElement('br', null),
-            ' Aragon Alpha v0.5 Coming Soon'
+            ' Aragon Core v0.5 Beta'
           ),
           React__default.createElement(
             'a',
-            {
-              href: 'https://blog.aragon.one/news-from-the-front-5820cd9f2e46',
-              target: '_blank'
-            },
+            { href: 'https://app.aragon.one/', target: '_blank' },
             React__default.createElement(
               StyledButton,
               { mode: 'strong', wide: true },
-              'Learn More'
+              'Try Aragon Core 0.5'
             )
           )
         )

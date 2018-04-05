@@ -1037,7 +1037,7 @@ var large = function large(css) {
 
 var gradient = 'linear-gradient(\n  130deg,\n  ' + _ui.theme.mainBgGradientStart + ',\n  ' + _ui.theme.mainBgGradientEnd + '\n)';
 
-var Main = (0, _ui.styled)(_ui.Section)(_templateObject, gradient, _ui.theme.mainBgGradientStart, _ui.theme.textPrimary, _ui.theme.textSecondary, medium('\n    background-image: url(' + _backgroundLines2.default + '), ' + gradient + ';\n    .in {\n      display: flex;\n      padding-top: 50px;\n    }\n    .title {\n      font-size: 38px;\n    }\n    .subtitle {\n      font-size: 15px;\n    }\n    .app-img {\n      margin-right: -90px;\n      margin-left: 90px;\n    }\n    .buttons {\n      margin-top: 50px;\n    }\n  '));
+var Main = (0, _ui.styled)(_ui.Section)(_templateObject, gradient, _ui.theme.mainBgGradientStart, _ui.theme.textPrimary, _ui.theme.textSecondary, medium('\n    background-image: url(' + _backgroundLines2.default + '), ' + gradient + ';\n    .in {\n      display: flex;\n      padding-top: 50px;\n    }\n    .title {\n      font-size: 38px;\n    }\n    .subtitle {\n      font-size: 18px;\n    }\n    .app-img {\n      margin-right: -90px;\n      margin-left: 90px;\n    }\n    .buttons {\n      margin-top: 50px;\n    }\n  '));
 
 var ReadyToTry = function ReadyToTry() {
   return _react2.default.createElement(
@@ -1057,13 +1057,7 @@ var ReadyToTry = function ReadyToTry() {
         _react2.default.createElement(
           'p',
           { className: 'subtitle' },
-          'Thanks to ',
-          _react2.default.createElement(
-            'a',
-            { href: '/os' },
-            'aragonOS'
-          ),
-          ', Aragon Core v0.5 is the most powerful way to create and manage any type of decentralized organizations'
+          'Aragon 0.5 will be released soon.'
         ),
         _react2.default.createElement(
           _ui.BreakPoint,
@@ -1073,8 +1067,8 @@ var ReadyToTry = function ReadyToTry() {
             { className: 'buttons' },
             _react2.default.createElement(
               _.Anchor,
-              { mode: 'strong', href: 'https://app.aragon.one/', target: '_blank' },
-              'Try Aragon Core 0.5'
+              { mode: 'strong', href: 'https://blog.aragon.one/news-from-the-front-5820cd9f2e46', target: '_blank' },
+              'Preview Aragon 0.5'
             ),
             _react2.default.createElement(
               _.Anchor,
@@ -1091,8 +1085,8 @@ var ReadyToTry = function ReadyToTry() {
             { className: 'buttons' },
             _react2.default.createElement(
               _.Anchor,
-              { mode: 'strong', href: 'https://app.aragon.one/', target: '_blank' },
-              'Try Aragon Core 0.5'
+              { mode: 'strong', href: 'https://blog.aragon.one/news-from-the-front-5820cd9f2e46', target: '_blank' },
+              'Preview Aragon 0.5'
             ),
             _react2.default.createElement(
               _.Anchor,
@@ -1278,7 +1272,7 @@ var UnstoppableOrganizations = function UnstoppableOrganizations() {
             _react2.default.createElement(
               _ui.Button,
               { mode: 'strong' },
-              'Try Aragon 0.5'
+              'Preview Aragon 0.5'
             )
           )
         )
@@ -4271,4 +4265,4 @@ exports.default = NotFound;
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=app.static.8228bfa7.js.map
+//# sourceMappingURL=app.static.4e2ebe9b.js.map
