@@ -1,6 +1,7 @@
 import React from 'react'
-import { styled, styledCss as css } from '@aragon/ui'
-import { Section, Text, theme, breakpoint } from '@aragon/ui'
+import styled, { css } from 'styled-components'
+import { Text, theme, breakpoint } from '@aragon/ui'
+import { Section } from '@aragon/web'
 
 import background from './assets/background.svg'
 

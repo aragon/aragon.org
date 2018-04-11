@@ -1,6 +1,7 @@
 import React from 'react'
-import { styled } from '@aragon/ui'
-import { breakpoint, Section, Button, theme } from '@aragon/ui'
+import styled from 'styled-components'
+import { breakpoint, Button, theme } from '@aragon/ui'
+import { Section } from '@aragon/web'
 
 import { SectionTitle, Anchor } from '../../'
 
@@ -86,19 +87,31 @@ const Grants = () => (
       <img src={repos} alt="" />
       <div className="columns">
         <p className="item">
-          The Aragon Nest program was created to support great
-          teams in the research and development of all-important tools
-          for the Aragon and Ethereum ecosystems
+          The Aragon Nest program was created to support great teams in the
+          research and development of all-important tools for the Aragon and
+          Ethereum ecosystems
         </p>
         <p className="item">
-          You can propose subjects for grants that we should award,
-          or you can apply for a grant from Nest to your project.
-          The process is completely transparent for the community
+          You can propose subjects for grants that we should award, or you can
+          apply for a grant from Nest to your project. The process is completely
+          transparent for the community
         </p>
       </div>
       <div className="cta">
-        <Anchor mode="strong" href="https://github.com/aragon/nest" target="_blank">Check out proposals</Anchor>
-        <Anchor mode="outline" href="https://blog.aragon.one/launch-of-aragon-nest-8d42d1a37595" target="_blank">Read more</Anchor>
+        <Anchor
+          mode="strong"
+          href="https://github.com/aragon/nest"
+          target="_blank"
+        >
+          Check out proposals
+        </Anchor>
+        <Anchor
+          mode="outline"
+          href="https://blog.aragon.one/launch-of-aragon-nest-8d42d1a37595"
+          target="_blank"
+        >
+          Read more
+        </Anchor>
       </div>
     </div>
   </Main>

@@ -2,7 +2,7 @@ import fs from 'fs-extra'
 import path from 'path'
 import chalk from 'chalk'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
-import { styledServerStyleSheet as ServerStyleSheet } from '@aragon/ui'
+import { ServerStyleSheet } from 'styled-components'
 import React from 'react'
 
 const REACT_STATIC_PATHS = {

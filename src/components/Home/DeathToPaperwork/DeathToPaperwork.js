@@ -1,6 +1,7 @@
 import React from 'react'
-import { styled } from '@aragon/ui'
-import { IllustratedSection, theme } from '@aragon/ui'
+import styled from 'styled-components'
+import { theme } from '@aragon/ui'
+import { IllustratedSection } from '@aragon/web'
 
 import illustration from './assets/illustration.svg'
 import blockchain from './assets/blockchain.svg'
@@ -48,12 +49,17 @@ const DeathToPaperwork = () => (
     <Content>
       <ul id="blockchain">
         <li>
-          Blockchain technology provides a single shared source of cryptographically verified truth. This is secured by a network made up of thousands of computers all over the globe. Anyone can set up their own node where all the necessary data is replicated across the network
+          Blockchain technology provides a single shared source of
+          cryptographically verified truth. This is secured by a network made up
+          of thousands of computers all over the globe. Anyone can set up their
+          own node where all the necessary data is replicated across the network
         </li>
       </ul>
       <ul id="ethereum">
         <li>
-          This decentralized design ensures a borderless and permissionless way of operating, without the fear of a government or a malicious third-party interfering
+          This decentralized design ensures a borderless and permissionless way
+          of operating, without the fear of a government or a malicious
+          third-party interfering
         </li>
       </ul>
     </Content>

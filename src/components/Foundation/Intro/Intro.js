@@ -1,20 +1,19 @@
 import React from 'react'
-import { styled, breakpoint, IllustratedSection } from '@aragon/ui'
+import styled from 'styled-components'
+import { breakpoint } from '@aragon/ui'
+import { IllustratedSection } from '@aragon/web'
 import OverlapBackground from '../../OverlapBackground/OverlapBackground'
 
 import illustration from './assets/illustration.svg'
 
 const { Illustration, Subtitle, Emphasis, Content } = IllustratedSection
 
-const StyledOverlapBackground = styled(OverlapBackground)`
-`
+const StyledOverlapBackground = styled(OverlapBackground)``
 
 const StyledIllustratedSection = styled(IllustratedSection)`
   padding-top: 0;
   padding-bottom: 70px;
-  ${breakpoint('large', `
-    padding-top: 0;
-  `)};
+  ${breakpoint('large', 'padding-top: 0;')};
 `
 
 const Intro = () => (

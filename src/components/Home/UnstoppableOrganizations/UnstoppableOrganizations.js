@@ -1,12 +1,7 @@
 import React from 'react'
-import { styled, styledCss as css } from '@aragon/ui'
-import {
-  Section,
-  Text,
-  theme,
-  breakpoint,
-  Button,
-} from '@aragon/ui'
+import styled, { css } from 'styled-components'
+import { Text, theme, breakpoint, Button } from '@aragon/ui'
+import { Section } from '@aragon/web'
 import AppScreenshot from '../../AppScreenshot/AppScreenshot'
 import background from './assets/background.svg'
 
@@ -71,7 +66,10 @@ const UnstoppableOrganizations = () => (
       </Text>
       <div className="buttons">
         <div className="button">
-          <a href="https://blog.aragon.one/news-from-the-front-5820cd9f2e46" target="_blank">
+          <a
+            href="https://blog.aragon.one/news-from-the-front-5820cd9f2e46"
+            target="_blank"
+          >
             <Button mode="strong">Try Aragon 0.5</Button>
           </a>
         </div>

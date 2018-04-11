@@ -1,6 +1,6 @@
 import React from 'react'
-import { styled } from '@aragon/ui'
-import { Section } from '@aragon/ui'
+import styled from 'styled-components'
+import { Section } from '@aragon/web'
 
 import economist from './assets/economist.svg'
 import coindesk from './assets/coindesk.svg'

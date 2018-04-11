@@ -1,12 +1,7 @@
 import React from 'react'
-import { styled } from '@aragon/ui'
-import {
-  Section,
-  BreakPoint,
-  font,
-  theme,
-  breakpoint,
-} from '@aragon/ui'
+import styled from 'styled-components'
+import { BreakPoint, font, theme, breakpoint } from '@aragon/ui'
+import { Section } from '@aragon/web'
 
 import { Anchor } from '../'
 import AppScreenshot from '../AppScreenshot/AppScreenshot'
@@ -87,17 +82,43 @@ const ReadyToTry = () => (
     <div className="in">
       <div className="content">
         <h1 className="title">Ready to try Aragon?</h1>
-        <p className="subtitle">Thanks to <a href="/os">aragonOS</a>, Aragon Core v0.5 is the most powerful way to create and manage any type of decentralized organizations</p>
+        <p className="subtitle">
+          Thanks to <a href="/os">aragonOS</a>, Aragon Core v0.5 is the most
+          powerful way to create and manage any type of decentralized
+          organizations.
+        </p>
         <BreakPoint to="medium">
           <div className="buttons">
-            <Anchor mode="strong" href="https://app.aragon.one/" target="_blank">Try Aragon Core 0.5</Anchor>
-            <Anchor href="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&id=e81a44c4bd" target="_blank">Newsletter</Anchor>
+            <Anchor
+              mode="strong"
+              href="https://app.aragon.one/"
+              target="_blank"
+            >
+              Try Aragon Core 0.5
+            </Anchor>
+            <Anchor
+              href="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&id=e81a44c4bd"
+              target="_blank"
+            >
+              Newsletter
+            </Anchor>
           </div>
         </BreakPoint>
         <BreakPoint from="medium">
           <div className="buttons">
-            <Anchor mode="strong" href="https://app.aragon.one/" target="_blank">Try Aragon Core 0.5</Anchor>
-            <Anchor href="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&id=e81a44c4bd" target="_blank">Subscribe to the newsletter</Anchor>
+            <Anchor
+              mode="strong"
+              href="https://app.aragon.one/"
+              target="_blank"
+            >
+              Try Aragon Core 0.5
+            </Anchor>
+            <Anchor
+              href="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&id=e81a44c4bd"
+              target="_blank"
+            >
+              Subscribe to the newsletter
+            </Anchor>
           </div>
         </BreakPoint>
       </div>
