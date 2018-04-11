@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Link, getRouteProps } from 'react-static'
+import { Link, SiteData, RouteData, Head } from 'react-static'
 import Routes from 'react-static-routes'
 import styled from 'styled-components'
 import { AragonApp, Button } from '@aragon/ui'
@@ -105,12 +105,26 @@ class Page extends React.Component {
     const { children, path } = this.props
     const items = menuItems.map(item => [...item, item[0] === path])
     return (
-      <AragonApp publicUrl="/aragon-ui/">
-        <Header menuItems={items} renderMenuItemLink={renderMenuItemLink} />
-        <Content>{children}</Content>
-        <PreFooter emailForm={this.renderEmailForm()} />
-        <Footer />
-      </AragonApp>
+      <SiteData
+        render={({ title: siteTitle }) => (
+          <RouteData
+            render={({ title }) => (
+              <AragonApp publicUrl="/aragon-ui/">
+                <Head>
+                  <title>{title || siteTitle}</title>
+                </Head>
+                <Header
+                  menuItems={items}
+                  renderMenuItemLink={renderMenuItemLink}
+                />
+                <Content>{children}</Content>
+                <PreFooter emailForm={this.renderEmailForm()} />
+                <Footer />
+              </AragonApp>
+            )}
+          />
+        )}
+      />
     )
   }
 }

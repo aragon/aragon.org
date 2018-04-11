@@ -16,18 +16,50 @@ const ARAGON_UI_ASSETS = path.dirname(require.resolve('@aragon/ui'))
 
 export default {
   siteRoot: process.env.SITE_ROOT || '',
-  getSiteProps: () => ({
+  getSiteData: () => ({
     title: 'Aragon',
   }),
   getRoutes: () => [
-    { path: '/', component: 'src/pages/Home' },
-    { path: '/core', component: 'src/pages/Core' },
-    { path: '/os', component: 'src/pages/OS' },
-    { path: '/network', component: 'src/pages/Network' },
-    { path: '/foundation', component: 'src/pages/Foundation' },
-    { path: '/about', component: 'src/pages/About' },
-    { path: '/join', component: 'src/pages/Join' },
-    { is404: true, component: 'src/pages/NotFound' },
+    {
+      path: '/',
+      component: 'src/pages/Home',
+      getData: () => ({ title: '' }),
+    },
+    {
+      path: '/core',
+      component: 'src/pages/Core',
+      getData: () => ({ title: 'Aragon Core' }),
+    },
+    {
+      path: '/os',
+      component: 'src/pages/OS',
+      getData: () => ({ title: 'aragonOS' }),
+    },
+    {
+      path: '/network',
+      component: 'src/pages/Network',
+      getData: () => ({ title: 'Aragon Network' }),
+    },
+    {
+      path: '/foundation',
+      component: 'src/pages/Foundation',
+      getData: () => ({ title: 'Aragon Foundation' }),
+    },
+    {
+      path: '/about',
+      component: 'src/pages/About',
+      getData: () => ({ title: 'About Aragon' }),
+    },
+    {
+      path: '/join',
+      component: 'src/pages/Join',
+      getData: () => ({ title: 'Join Aragon' }),
+    },
+    {
+      is404: true,
+      component: 'src/pages/NotFound',
+      getData: () => ({ title: 'Page Not Found' }),
+    },
   ],
   paths: REACT_STATIC_PATHS,
   webpack: (conf, { defaultLoaders }) => {
@@ -93,12 +125,20 @@ export default {
       `
     }
     render() {
-      const { Html, Head, Body, siteProps, children, renderMeta } = this.props
+      const {
+        Html,
+        Head,
+        Body,
+        siteData: { title: siteTitle },
+        children,
+        renderMeta,
+        routeInfo: { allProps: { title } = {} } = {},
+      } = this.props
       return (
         <Html>
           <Head>
             <meta charSet="UTF-8" />
-            <title>{siteProps.title}</title>
+            <title>{title || siteTitle}</title>
             <meta
               name="viewport"
               content="width=device-width, initial-scale=1"

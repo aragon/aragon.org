@@ -7,7 +7,19 @@ import background from './assets/background.svg'
 
 const medium = css => breakpoint('medium', css)
 
-const StyledContainer = styled(Section)`
+const PageTitle = ({ title, subtitle, children }) => (
+  <Main>
+    <div>
+      <h2 className="title">{title}</h2>
+      <Text size="xlarge" className="subtitle">
+        {subtitle}
+      </Text>
+      <div className="children">{children}</div>
+    </div>
+  </Main>
+)
+
+const Main = styled(Section)`
   padding: 40px 15px 0;
   text-align: center;
   background: url(${background}) no-repeat 50% -60px;
@@ -40,17 +52,5 @@ const StyledContainer = styled(Section)`
     }
   `)};
 `
-
-const PageTitle = ({ title, subtitle, children }) => (
-  <StyledContainer>
-    <div>
-      <h2 className="title">{title}</h2>
-      <Text size="xlarge" className="subtitle">
-        {subtitle}
-      </Text>
-      <div className="children">{children}</div>
-    </div>
-  </StyledContainer>
-)
 
 export default PageTitle
