@@ -1,54 +1,108 @@
 
-    import React, { Component } from 'react'
-    import { Route } from 'react-router-dom'
 
-    import src_pages_Home from '../src/pages/Home'
-import src_pages_Core from '../src/pages/Core'
-import src_pages_OS from '../src/pages/OS'
-import src_pages_Network from '../src/pages/Network'
-import src_pages_Foundation from '../src/pages/Foundation'
-import src_pages_About from '../src/pages/About'
-import src_pages_Join from '../src/pages/Join'
-import src_pages_NotFound from '../src/pages/NotFound'
-    const templateMap = {
-    t_0: src_pages_Home,
-t_1: src_pages_Core,
-t_2: src_pages_OS,
-t_3: src_pages_Network,
-t_4: src_pages_Foundation,
-t_5: src_pages_About,
-t_6: src_pages_Join,
-t_7: src_pages_NotFound
+import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
+
+import universal, { setHasBabelPlugin } from 'react-universal-component'
+
+import { cleanPath } from 'react-static'
+
+
+
+setHasBabelPlugin()
+
+const universalOptions = {
+  loading: () => null,
+  error: props => {
+    console.error(props.error);
+    return <div>An error occurred loading this page's template. More information is available in the console.</div>;
+  },
+}
+
+  const t_0 = universal(import('../src/pages/Home'), universalOptions)
+const t_1 = universal(import('../src/pages/Core'), universalOptions)
+const t_2 = universal(import('../src/pages/OS'), universalOptions)
+const t_3 = universal(import('../src/pages/Network'), universalOptions)
+const t_4 = universal(import('../src/pages/Foundation'), universalOptions)
+const t_5 = universal(import('../src/pages/About'), universalOptions)
+const t_6 = universal(import('../src/pages/Join'), universalOptions)
+const t_7 = universal(import('../src/pages/NotFound'), universalOptions)
+
+
+// Template Map
+global.componentsByTemplateID = global.componentsByTemplateID || [
+  t_0,
+t_1,
+t_2,
+t_3,
+t_4,
+t_5,
+t_6,
+t_7
+]
+
+// Template Tree
+global.templateIDsByPath = global.templateIDsByPath || {
+  '404': 7
+}
+
+// Get template for given path
+const getComponentForPath = path => {
+  path = cleanPath(path)
+  return global.componentsByTemplateID[global.templateIDsByPath[path]]
+}
+
+global.reactStaticGetComponentForPath = getComponentForPath
+global.reactStaticRegisterTemplateIDForPath = (path, id) => {
+  global.templateIDsByPath[path] = id
+}
+
+export default class Routes extends Component {
+  render () {
+    const { component: Comp, render, children } = this.props
+
+    const getFullComponentForPath = path => {
+      let Comp = getComponentForPath(path)
+      let is404 = path === '404'
+      if (!Comp) {
+        is404 = true
+        Comp = getComponentForPath('404')
+      }
+      return newProps => (
+        Comp
+          ? <Comp {...newProps} {...(is404 ? {is404: true} : {})} />
+          : null
+      )
+    }
+
+    const renderProps = {
+      componentsByTemplateID: global.componentsByTemplateID,
+      templateIDsByPath: global.templateIDsByPath,
+      getComponentForPath: getFullComponentForPath
+    }
+
+    if (Comp) {
+      return (
+        <Comp
+          {...renderProps}
+        />
+      )
+    }
+
+    if (render || children) {
+      return (render || children)(renderProps)
+    }
+
+    // This is the default auto-routing renderer
+    return (
+      <Route path='*' render={props => {
+        let Comp = getFullComponentForPath(props.location.pathname)
+        // If Comp is used as a component here, it triggers React to re-mount the entire
+        // component tree underneath during reconciliation, losing all internal state.
+        // By unwrapping it here we keep the real, static component exposed directly to React.
+        return Comp && Comp({ ...props, key: props.location.pathname })
+      }} />
+    )
   }
-    const templateTree = {c:{"404":{t:"t_7"},"/":{t:"t_0"},"core":{t:"t_1"},"os":{t:"t_2"},"network":{t:"t_3"},"foundation":{t:"t_4"},"about":{t:"t_5"},"join":{t:"t_6"}}}
-    
-    const getTemplateForPath = path => {
-      const parts = path === '/' ? ['/'] : path.split('/').filter(d => d)
-      let cursor = templateTree
-      try {
-        parts.forEach(part => {
-          cursor = cursor.c[part]
-        })
-        return templateMap[cursor.t]
-      } catch (e) {
-        return false
-      }
-    }
-  
+}
 
-    export default class Routes extends Component {
-      render () {
-        return (
-            
-    <Route path='*' render={props => {
-      let Template = getTemplateForPath(props.location.pathname)
-      if (!Template) {
-        Template = getTemplateForPath('404')
-      }
-      return Template && <Template {...props} />
-    }} />
-  
-        )
-      }
-    }
-  
