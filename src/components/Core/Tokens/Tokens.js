@@ -1,13 +1,7 @@
 import React from 'react'
-import {
-  styled,
-  styledCss as css,
-  Section,
-  Text,
-  font,
-  theme,
-  breakpoint,
-} from '@aragon/ui'
+import styled, { css } from 'styled-components'
+import { Text, font, theme, breakpoint } from '@aragon/ui'
+import { Section } from '@aragon/web'
 import OverlapBackground from '../../OverlapBackground/OverlapBackground'
 
 import tokens from './assets/tokens.png'
@@ -38,9 +32,11 @@ const Tokens = () => (
   <OverlapBackground>
     <Main>
       <div>
-        <Text heading="1" color={theme.gradientText}>
-          Managing your organization has never been easier
-        </Text>
+        <h1>
+          <Text color={theme.gradientText} size='auto'>
+            Managing your organization has never been easier
+          </Text>
+        </h1>
       </div>
       <img src={tokens} alt="" />
     </Main>

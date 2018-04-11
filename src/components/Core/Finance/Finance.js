@@ -1,5 +1,7 @@
 import React from 'react'
-import { styled, IllustratedSection, theme, breakpoint } from '@aragon/ui'
+import styled from 'styled-components'
+import { theme, breakpoint } from '@aragon/ui'
+import { IllustratedSection } from '@aragon/web'
 
 import finance from './assets/finance.png'
 import sign from './assets/sign.png'
@@ -14,17 +16,18 @@ const Main = styled(IllustratedSection)`
     border: 1px solid #dbebea;
     border-radius: 3px;
   }
-  ${breakpoint('large', `
-    padding-top: 120px;
-    padding-bottom: 120px;
-  `)};
+  ${breakpoint(
+    'large',
+    `
+      padding-top: 120px;
+      padding-bottom: 120px;
+    `
+  )};
 `
 
 const MainWithLessMargin = styled(Main)`
   padding-top: 0px;
-  ${breakpoint('large', `
-    margin-top: -50px;
-  `)};
+  ${breakpoint('large', 'margin-top: -50px;')};
 `
 
 const Finance = () => (
@@ -65,13 +68,17 @@ const Finance = () => (
       </Subtitle>
       <Emphasis>
         <p>
-          Fine-grained permissions deliver the freedom to create an
-          organization that will work for you
+          Fine-grained permissions deliver the freedom to create an organization
+          that will work for you
         </p>
       </Emphasis>
       <Content>
         <p>
-          Permissions can be granular and assigned in fine detail. You can   choose to give people a certain degree of control over the           organization and privileges can be escalated easily through           a voting or different mechanisms if the person isn't allowed to directly perform a desired action
+          Permissions can be granular and assigned in fine detail. You can
+          choose to give people a certain degree of control over the
+          organization and privileges can be escalated easily through a voting
+          or different mechanisms if the person isn't allowed to directly
+          perform a desired action
         </p>
         <p>
           By assigning different permissions to people, you can create the kind

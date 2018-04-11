@@ -1,5 +1,6 @@
 import React from 'react'
-import { styled, Text, theme } from '@aragon/ui'
+import styled from 'styled-components'
+import { Text, theme } from '@aragon/ui'
 
 const StyledSectionTitle = styled.div`
   h1 {
@@ -11,9 +12,11 @@ const StyledSectionTitle = styled.div`
 
 const SectionTitle = ({ title, className }) => (
   <StyledSectionTitle>
-    <Text heading={1} smallcaps color={theme.accent} className={className}>
-      {title}
-    </Text>
+    <h1>
+      <Text smallcaps color={theme.accent} className={className}>
+        {title}
+      </Text>
+    </h1>
   </StyledSectionTitle>
 )
 

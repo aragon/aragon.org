@@ -1,6 +1,7 @@
 import React from 'react'
-import { styled } from '@aragon/ui'
-import { Section, Text, theme } from '@aragon/ui'
+import styled from 'styled-components'
+import { Text, theme } from '@aragon/ui'
+import { Section } from '@aragon/web'
 
 import TwitterIcon from './assets/twitter.svg'
 import MediumIcon from './assets/medium.svg'

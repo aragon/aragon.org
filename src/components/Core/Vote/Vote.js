@@ -1,6 +1,7 @@
 import React from 'react'
+import styled from 'styled-components'
 import SideBySide from '../../SideBySide/SideBySide'
-import { styled, theme } from '@aragon/ui'
+import { theme } from '@aragon/ui'
 
 import vote from './assets/vote.png'
 import payment from './assets/payment.png'

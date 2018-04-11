@@ -1,6 +1,7 @@
 import React from 'react'
-import { styled } from '@aragon/ui'
-import { IllustratedSection, themeDark } from '@aragon/ui'
+import styled from 'styled-components'
+import { themeDark } from '@aragon/ui'
+import { IllustratedSection } from '@aragon/web'
 import OverlapBackground from '../../OverlapBackground/OverlapBackground'
 
 import illustration from './assets/illustration.svg'
