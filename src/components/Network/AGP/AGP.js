@@ -1,5 +1,7 @@
 import React from 'react'
-import { styled, breakpoint, Section, Button, theme } from '@aragon/ui'
+import styled from 'styled-components'
+import { breakpoint, Button, theme } from '@aragon/ui'
+import { Section } from '@aragon/web'
 
 import { SectionTitle, Anchor } from '../..'
 

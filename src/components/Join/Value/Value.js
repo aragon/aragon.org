@@ -1,6 +1,7 @@
 import React from 'react'
-import { styled } from '@aragon/ui'
-import { Section, theme, breakpoint } from '@aragon/ui'
+import styled from 'styled-components'
+import { theme, breakpoint } from '@aragon/ui'
+import { Section } from '@aragon/web'
 
 import { SectionTitle, Anchor } from '../../'
 
@@ -70,7 +71,11 @@ const Value = () => (
         <div className="item">
           <img src={focus} alt="" width="32" height="32" />
           <h2>Focus-driven work</h2>
-          <p>We don't necessarily work 9-5; getting the work done, meeting goals and milestones is more important. You can work however it suits your personal schedule as long as you're focused on delivering quality work
+          <p>
+            We don't necessarily work 9-5; getting the work done, meeting goals
+            and milestones is more important. You can work however it suits your
+            personal schedule as long as you're focused on delivering quality
+            work
           </p>
         </div>
         <div className="item">
@@ -85,12 +90,18 @@ const Value = () => (
         <div className="item">
           <img src={heart} alt="" width="32" height="32" />
           <h2>The value that you bring</h2>
-          <p>Every person has a unique set of skills that bring meaning to what we are doing. We value what you can do and your attitude in doing it. Our goal is to enable you to realize the value which you can bring to the project
+          <p>
+            Every person has a unique set of skills that bring meaning to what
+            we are doing. We value what you can do and your attitude in doing
+            it. Our goal is to enable you to realize the value which you can
+            bring to the project
           </p>
         </div>
       </div>
       <div className="cta">
-        <Anchor mode="strong" href="https://wiki.aragon.one/jobs">View open positions</Anchor>
+        <Anchor mode="strong" href="https://wiki.aragon.one/jobs">
+          View open positions
+        </Anchor>
       </div>
     </div>
   </Main>

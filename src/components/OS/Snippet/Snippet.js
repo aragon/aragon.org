@@ -1,5 +1,6 @@
 import React from 'react'
-import { styled, IllustratedSection } from '@aragon/ui'
+import styled from 'styled-components'
+import { IllustratedSection } from '@aragon/web'
 import OverlapBackground from '../../OverlapBackground/OverlapBackground'
 
 import code from './assets/code.png'
@@ -17,9 +18,11 @@ const Snippet = () => (
   <StyledOverlapBackground>
     <IllustratedSection>
       <Subtitle dark>
-        <p>Upgradeability,<br />
-        access control and governance.<br />
-        All taken care of</p>
+        <p>
+          Upgradeability,<br />
+          access control and governance.<br />
+          All taken care of
+        </p>
       </Subtitle>
       <Content dark>
         <p>
@@ -33,8 +36,8 @@ const Snippet = () => (
       </Content>
       <Emphasis dark>
         <p>
-          aragonOS is a smart contract development framework with a very strong focus
-          on governance and upgradeability
+          aragonOS is a smart contract development framework with a very strong
+          focus on governance and upgradeability
         </p>
       </Emphasis>
       <Illustration>

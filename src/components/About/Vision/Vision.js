@@ -1,5 +1,7 @@
 import React from 'react'
-import { styled, breakpoint, Section, theme } from '@aragon/ui'
+import styled from 'styled-components'
+import { breakpoint, theme } from '@aragon/ui'
+import { Section } from '@aragon/web'
 
 import SectionTitle from '../../SectionTitle.js'
 
@@ -82,10 +84,16 @@ const Vision = () => (
       </div>
       <div className="columns">
         <p className="item">
-          We believe that the progression of modern technology solutions, such as the invention of the blockchain, are changing the incentives for people to interact with each other. We are building the tools for the next generation of organizations to take advantage of this revolution
+          We believe that the progression of modern technology solutions, such
+          as the invention of the blockchain, are changing the incentives for
+          people to interact with each other. We are building the tools for the
+          next generation of organizations to take advantage of this revolution
         </p>
         <p className="item">
-          Experimenting with new governance models has been a very risky endeavour during previous iterations of society. Now, for the first time in human history, we can let a thousand new governance models emerge, all from the comfort of our laptops
+          Experimenting with new governance models has been a very risky
+          endeavour during previous iterations of society. Now, for the first
+          time in human history, we can let a thousand new governance models
+          emerge, all from the comfort of our laptops
         </p>
       </div>
     </div>

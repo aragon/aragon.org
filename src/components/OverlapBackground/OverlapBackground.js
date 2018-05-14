@@ -1,5 +1,7 @@
 import React from 'react'
-import { IllustratedSection, styled, breakpoint } from '@aragon/ui'
+import styled from 'styled-components'
+import { breakpoint } from '@aragon/ui'
+import { IllustratedSection } from '@aragon/web'
 
 import background from './assets/background.svg'
 import leftRepeat from './assets/left-repeat.svg'

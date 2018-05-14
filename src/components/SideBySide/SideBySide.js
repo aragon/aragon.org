@@ -1,5 +1,7 @@
 import React from 'react'
-import { styled, Section, Text, theme, breakpoint } from '@aragon/ui'
+import styled from 'styled-components'
+import { Text, theme, breakpoint } from '@aragon/ui'
+import { Section } from '@aragon/web'
 import SectionTitle from '../SectionTitle'
 
 const medium = css => breakpoint('medium', css)
@@ -65,7 +67,7 @@ const Main = styled(Section)`
       padding-left: 15px;
       text-align: right;
     }
-    .item:nth-child(2) .title {
+    .item:nth-child(2) h1 {
       text-align: right;
     }
   `)};
@@ -77,7 +79,7 @@ const SideBySide = ({ className, items }) => (
       {items.slice(0, 2).map(({ title, subtitle, textContent, image }, i) => (
         <div className="item" key={i}>
           {title && <SectionTitle title={title} className="title" />}
-          <Text heading="2">{subtitle}</Text>
+          <h2>{subtitle}</h2>
           <p>{textContent}</p>
           <div className="image">
             <img src={image} alt="" />

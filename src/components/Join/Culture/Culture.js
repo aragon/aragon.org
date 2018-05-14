@@ -1,12 +1,7 @@
 import React from 'react'
-import {
-  styled,
-  styledCss as css,
-  Text,
-  Section,
-  themeDark,
-  breakpoint,
-} from '@aragon/ui'
+import styled, { css } from 'styled-components'
+import { Text, themeDark, breakpoint } from '@aragon/ui'
+import { Section } from '@aragon/web'
 import OverlapBackground from '../../OverlapBackground/OverlapBackground'
 
 import background from './assets/background.svg'

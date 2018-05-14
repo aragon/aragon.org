@@ -1,5 +1,7 @@
 import React from 'react'
-import { styled, Section, Text, themeDark, breakpoint } from '@aragon/ui'
+import styled from 'styled-components'
+import { Text, themeDark, breakpoint } from '@aragon/ui'
+import { Section } from '@aragon/web'
 
 import permission from './assets/permission.png'
 import settings from './assets/settings.svg'
@@ -80,17 +82,19 @@ const Customize = () => (
   <Main>
     <Content>
       <div>
-        <Text heading="1" color={themeDark.textPrimary}>
-          It's your organization. Make it work for you
-        </Text>
+        <h1>
+          <Text color={themeDark.textPrimary}>
+            It's your organization. Make it work for you
+          </Text>
+        </h1>
       </div>
       <img className="screen" src={permission} alt="" />
       <div className="columns">
         <div className="item">
           <img src={settings} alt="" width="32" height="32" />
           <p>
-            Aragon organizations are powered by AragonOS and fully
-            customizable to fit your needs
+            Aragon organizations are powered by AragonOS and fully customizable
+            to fit your needs
           </p>
         </div>
         <div className="item">
@@ -102,8 +106,8 @@ const Customize = () => (
         <div className="item">
           <img src={code} alt="" width="32" height="32" />
           <p>
-            Code is open source. As a developer you can modify it to match
-            your specific use case
+            Code is open source. As a developer you can modify it to match your
+            specific use case
           </p>
         </div>
       </div>
