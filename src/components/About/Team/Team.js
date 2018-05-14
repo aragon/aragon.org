@@ -79,14 +79,6 @@ const Core = () => (
           github="lkngtn"
         />
         <StyledMember
-          picture="Oliver.png"
-          name="Oliver Nordbjerg"
-          title="Web3 Engineer"
-          twitter="ONordbjerg"
-          medium="notbjerg"
-          github="onbjerg"
-        />
-        <StyledMember
           picture="Pierre.png"
           name="Pierre Bertet"
           title="UI & Interaction Developer"
