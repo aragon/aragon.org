@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { breakpoint, theme } from '@aragon/ui'
 import { Section } from '@aragon/web'
+import drawing0 from './assets/aragon_one_logo.png'
 
 import SectionTitle from '../../SectionTitle'
 import Member from './Member'
@@ -18,6 +19,15 @@ const CoreSection = styled(Section)`
     flex-wrap: wrap;
     align-items: flex-start;
     margin: 50px 0;
+  }
+
+  .aone_img {
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  .aone_img img {
+    max-width: 45%;
   }
 
   ${medium(`
@@ -37,8 +47,11 @@ const StyledMember = styled(Member)`
 
 const Core = () => (
   <CoreSection>
-    <div className="core">
-      <SectionTitle title="Core Team" />
+    <div className="aone">
+      <SectionTitle title="Aragon One Team" />
+      <div className="aone_img">
+        <img className="item" src={drawing0} alt="" />
+      </div>
       <div className="columns">
         <StyledMember
           picture="Luis.png"
