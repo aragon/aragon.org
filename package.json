@@ -2,7 +2,7 @@
   "name": "aragon-website",
   "version": "1.0.0",
   "main": "src/index.js",
-  "license": "GPL-3.0",
+  "license": "AGPL-3.0-or-later",
   "scripts": {
     "start": "NODE_PRESERVE_SYMLINKS=1 react-static start",
     "build": "NODE_PRESERVE_SYMLINKS=1 react-static build",
