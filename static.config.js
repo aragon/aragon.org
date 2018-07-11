@@ -31,11 +31,6 @@ export default {
       getData: () => ({ title: 'Aragon Core' }),
     },
     {
-      path: '/os',
-      component: 'src/pages/OS',
-      getData: () => ({ title: 'aragonOS' }),
-    },
-    {
       path: '/network',
       component: 'src/pages/Network',
       getData: () => ({ title: 'Aragon Network' }),

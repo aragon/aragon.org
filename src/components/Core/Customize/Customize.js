@@ -93,7 +93,7 @@ const Customize = () => (
         <div className="item">
           <img src={settings} alt="" width="32" height="32" />
           <p>
-            Aragon organizations are powered by AragonOS and fully customizable
+            Aragon organizations are powered by aragonOS and fully customizable
             to fit your needs
           </p>
         </div>

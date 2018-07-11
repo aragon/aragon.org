@@ -37,7 +37,7 @@ const AragonNetwork = () => (
     </Emphasis>
     <Content>
       <p>
-        Aragon organizations can be upgraded seamlessly using our AragonOS
+        Aragon organizations can be upgraded seamlessly using our aragonOS
         architecture. They can solve disputes between two parties by using the
         decentralized court system, a digital jurisdiction that operates only
         online and utilizes your peers to resolve issues
