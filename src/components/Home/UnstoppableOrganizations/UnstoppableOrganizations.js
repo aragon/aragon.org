@@ -4,6 +4,7 @@ import { Text, theme, breakpoint, Button } from '@aragon/ui'
 import { Section } from '@aragon/web'
 import AppScreenshot from '../../AppScreenshot/AppScreenshot'
 import background from './assets/background.svg'
+import Video from './Video/Video'
 
 const medium = css => breakpoint('medium', css)
 const large = css => breakpoint('large', css)
@@ -35,16 +36,9 @@ const StyledContainer = styled(Section)`
     ${medium('font-size: 24px')};
     color: ${theme.textSecondary};
   }
-  .app-wrapper {
+  .center-wrapper {
     display: flex;
     align-items: center;
-  }
-  .app-img {
-    margin-left: 50%;
-    transform: translateX(-50%);
-    flex-shrink: 0;
-    margin-top: 40px;
-    ${medium('margin-top: 75px')};
   }
   .buttons {
     display: flex;
@@ -74,8 +68,8 @@ const UnstoppableOrganizations = () => (
           </a>
         </div>
       </div>
-      <div className="app-wrapper">
-        <AppScreenshot className="app-img" />
+      <div className="center-wrapper">
+        <Video />
       </div>
     </div>
   </StyledContainer>
