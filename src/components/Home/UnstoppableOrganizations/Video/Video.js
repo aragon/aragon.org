@@ -81,7 +81,7 @@ class Video extends React.Component {
     this.setState(prevState => ({
       hidden: false
     }))
-    document.getElementById('ytplayer').src += '?autoplay=1'
+    document.getElementById('ytplayer').src += '?rel=0'
   }
 
   render() {
@@ -92,8 +92,8 @@ class Video extends React.Component {
           alt="Aragon"
         />
         <div className="icon"></div>
-        <iframe className={ this.state.hidden ? 'hidden' : '' } id="ytplayer" type="text/html" src="https://www.youtube.com/embed/AqjIWmiAidw" frameBorder="0"></iframe>
-      </StyledDiv> 
+        <iframe className={ this.state.hidden ? 'hidden' : '' } id="ytplayer" type="text/html" src="https://www.youtube-nocookie.com/embed/AqjIWmiAidw" frameBorder="0" allow="autoplay; encrypted-media"></iframe>
+      </StyledDiv>
     )
   }
 }
