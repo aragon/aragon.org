@@ -11,7 +11,7 @@ const menuItems = [
   ['/network', 'Network'],
   ['/foundation', 'Foundation'],
   ['/about', 'About'],
-  ['/join', 'Join us'],
+  ['/contribute', 'Contribute'],
   ['https://wiki.aragon.one', 'Wiki'],
   ['https://blog.aragon.one', 'Blog'],
 ]

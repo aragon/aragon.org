@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { Text, themeDark, breakpoint } from '@aragon/ui'
 import { Section } from '@aragon/web'
+import { SectionTitle, Anchor } from '../../'
 import OverlapBackground from '../../OverlapBackground/OverlapBackground'
 
 import background from './assets/background.svg'
@@ -11,41 +12,51 @@ import deepWorkSessions from './assets/deep-work-sessions.svg'
 import fullyDistributed from './assets/fully-distributed.svg'
 import technologyCompany from './assets/technology-company.svg'
 
-const TITLE = 'Some insights into how we work'
+const TITLE = 'Ways to help'
 const PARTS = [
   {
-    title: 'Fully distributed',
-    img: fullyDistributed,
-    content: `
-      We all work remotely – we don't believe talent is geographically
-      centralized
-    `,
-  },
-  {
-    title: 'Deep work sessions',
-    img: deepWorkSessions,
-    content: `
-      We do focused deep work sessions 4 days a week, leaving Monday for
-      meetings and calls
-    `,
-  },
-  {
-    title: 'Ecosystem-focused',
+    title: 'Contribute code',
     img: buildEcosystem,
     content: `
-      Team members are encouraged to spend a chunk of their paid work time on
-      other blockchain based open source projects to aid the growth of the
-      ecosystem
+      From smart contracts to UI and Javascript, there are many ways to help build Aragon
     `,
+    callToAction: {
+      text: 'Check good first issues',
+      link: 'https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+archived%3Afalse+label%3A%22good+first+issue%22+user%3Aaragon'
+    },
   },
   {
-    title: 'Product first',
+    title: 'Contribute content',
     img: technologyCompany,
     content: `
-      We are a technology-oriented project that is open source only. Our
-      position is product first — we place innovation and user experience above
-      all else
+      Help keep the wiki up to date, contribute to the newsletter or even enhance this website
     `,
+    callToAction: {
+      text: 'Go to the wiki repo',
+      link: 'https://github.com/aragon/aragon-wiki'
+    },
+  },
+  {
+    title: 'Apply for a job',
+    img: fullyDistributed,
+    content: `
+      The teams building Aragon are hiring
+    `,
+    callToAction: {
+      text: 'View openings',
+      link: 'https://wiki.aragon.one/jobs'
+    },
+  },
+  {
+    title: 'Join the conversation',
+    img: deepWorkSessions,
+    content: `
+      Participate in our core dev calls or join the Aragon chat
+    `,
+    callToAction: {
+      text: 'Join the Aragon Chat',
+      link: 'https://aragon.chat'
+    },
   },
 ]
 
@@ -103,6 +114,7 @@ const StyledPart = styled.div`
   p {
     color: ${themeDark.textSecondary};
     font-size: 18px;
+    margin-bottom: 1rem;
   }
   ${medium(`
     width: calc(50% - 15px);
@@ -127,7 +139,7 @@ const StyledPart = styled.div`
   `)};
 `
 
-const Part = ({ img, title, content }) => (
+const Part = ({ img, title, content, callToAction }) => (
   <StyledPart>
     <div className="image">
       <span>
@@ -136,6 +148,12 @@ const Part = ({ img, title, content }) => (
     </div>
     <h2>{title}</h2>
     <p>{content}</p>
+    <Anchor
+      href={callToAction.link}
+      target="_blank"
+    >
+      {callToAction.text}
+    </Anchor>
   </StyledPart>
 )
 
@@ -149,7 +167,7 @@ const wrapEvery = (children, every = 2) => {
   }, [])
 }
 
-const Culture = () => (
+const HowToHelp = () => (
   <OverlapBackground>
     <Main>
       <h1>{TITLE}</h1>
@@ -162,4 +180,4 @@ const Culture = () => (
   </OverlapBackground>
 )
 
-export default Culture
+export default HowToHelp

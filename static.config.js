@@ -46,9 +46,9 @@ export default {
       getData: () => ({ title: 'About Aragon' }),
     },
     {
-      path: '/join',
-      component: 'src/pages/Join',
-      getData: () => ({ title: 'Join Aragon' }),
+      path: '/Contribute',
+      component: 'src/pages/Contribute',
+      getData: () => ({ title: 'Contribute to Aragon' }),
     },
     {
       is404: true,
