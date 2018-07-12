@@ -9,20 +9,21 @@ const large = css => breakpoint('large', css)
 
 const StyledImg = styled.img`
   display: block;
-  max-width: 100%;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1140px;
   height: auto;
   text-align: center;
   border-radius: 3px 3px 0 0;
   box-shadow: 0 4px 64px rgba(149, 149, 149, 0.2);
   filter: brightness(66%);
-  width: 320px;
   margin-bottom: 5rem;
-  ${medium('width: 1140px')};
   ${medium('margin-bottom: 12.5rem')};
 `
 
 const StyledDiv = styled.div`
   position: relative;
+  width: 100%;
   transition: all 0.5s ease;
   margin-left: 50%;
   transform: translateX(-50%);
