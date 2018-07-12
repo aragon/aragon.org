@@ -50,7 +50,11 @@ const StyledDiv = styled.div`
     }
   }
 
-  iframe {
+  .hidden {
+    display: none;
+  }
+
+  #player {
     position: absolute;
     z-index: 1000;
     top: 0;
@@ -59,10 +63,6 @@ const StyledDiv = styled.div`
     left: 0;
     width: 100%;
 	  height: 100%;
-
-    &.hidden {
-      display: none;
-    }
   }
 
   &.playing {
@@ -75,14 +75,29 @@ class Video extends React.Component {
     super(props)
     this.state = { hidden: true }
     this.playVideo = this.playVideo.bind(this)
+
+    const tag = document.createElement('script')
+
+    tag.src = 'https://www.youtube.com/iframe_api'
+    const firstScriptTag = document.getElementsByTagName('script')[0]
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+
+    window.onYouTubeIframeAPIReady = this.initPlayer.bind(this)
+  }
+
+  initPlayer() {
+    this.player = new YT.Player('player', {
+      height: '390',
+      width: '640',
+      videoId: 'AqjIWmiAidw'
+    })
   }
 
   playVideo() {
-    console.log('play')
     this.setState(prevState => ({
       hidden: false
     }))
-    document.getElementById('ytplayer').src += '?autoplay=1'
+    this.player.playVideo()
   }
 
   render() {
@@ -92,8 +107,10 @@ class Video extends React.Component {
           src={thumbnail}
           alt="Aragon"
         />
+        <div className={ this.state.hidden ? 'hidden' : '' }>
+          <div id="player"></div>
+        </div>
         <div className="icon"></div>
-        <iframe className={ this.state.hidden ? 'hidden' : '' } id="ytplayer" type="text/html" src="https://www.youtube.com/embed/AqjIWmiAidw" frameBorder="0"></iframe>
       </StyledDiv> 
     )
   }
