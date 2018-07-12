@@ -6,8 +6,8 @@ import { AragonApp, Button } from '@aragon/ui'
 import { Header, PreFooter, Footer } from '@aragon/web'
 
 const menuItems = [
-  ['/core', 'Core'],
-  ['/os', 'aragonOS'],
+  ['/core', 'Users'],
+  ['https://hack.aragon.org', 'Developers'],
   ['/network', 'Network'],
   ['/foundation', 'Foundation'],
   ['/about', 'About'],

@@ -83,7 +83,7 @@ const ReadyToTry = () => (
       <div className="content">
         <h1 className="title">Ready to try Aragon?</h1>
         <p className="subtitle">
-          Thanks to <a href="/os">aragonOS</a>, Aragon Core v0.5 is the most
+          Thanks to <a href="https://hack.aragon.org/" target="_blank" rel="noopener noreferrer">aragonOS</a>, Aragon Core v0.5 is the most
           powerful way to create and manage any type of decentralized
           organizations.
         </p>
