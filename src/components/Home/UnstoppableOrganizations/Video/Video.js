@@ -89,7 +89,10 @@ class Video extends React.Component {
     this.player = new YT.Player('player', {
       height: '390',
       width: '640',
-      videoId: 'AqjIWmiAidw'
+      videoId: 'AqjIWmiAidw',
+      playerVars: {
+        rel: 0
+      }
     })
   }
 
