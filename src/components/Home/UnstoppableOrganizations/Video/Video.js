@@ -76,6 +76,8 @@ class Video extends React.Component {
     this.state = { hidden: true }
     this.playVideo = this.playVideo.bind(this)
 
+    // react-static doesn't like referencing document directly
+    if (typeof document === 'undefined') return
     const tag = document.createElement('script')
 
     tag.src = 'https://www.youtube.com/iframe_api'
