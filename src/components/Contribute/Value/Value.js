@@ -65,15 +65,15 @@ const Value = () => (
           <img src={focus} alt="" width="32" height="32" />
           <h2>Be concise</h2>
           <p>
-            Try to summarize your contribution and the reasoning behind it,
-            so reviewers can quickly suggest changes or approve
+            Try to summarize your contribution and the reasoning behind it.
+            This will help the reviewers to quickly suggest changes or approve the submission
           </p>
         </div>
         <div className="item">
           <img src={proactive} alt="" width="32" height="32" />
           <h2>Proactive attitude</h2>
           <p>
-            If you are reporting a bug or any problem, try to suggest a solution or possible path forward
+            When reporting a bug or a problem, it is heplful to try to suggest a solution or a possible path forward for that issue
           </p>
         </div>
         <div className="item">
@@ -81,7 +81,7 @@ const Value = () => (
           <h2>Be kind</h2>
           <p>
             Our goal is to enable everyone to realize the value they can
-            bring to the project. Always be respectful and constructive
+            bring to the project and the community. Always be respectful and constructive
           </p>
         </div>
       </div>
