@@ -24,7 +24,7 @@ const t_1 = universal(import('../src/pages/Core'), universalOptions)
 const t_2 = universal(import('../src/pages/Network'), universalOptions)
 const t_3 = universal(import('../src/pages/Foundation'), universalOptions)
 const t_4 = universal(import('../src/pages/About'), universalOptions)
-const t_5 = universal(import('../src/pages/Contribute'), universalOptions)
+const t_5 = universal(import('../src/pages/Join'), universalOptions)
 const t_6 = universal(import('../src/pages/NotFound'), universalOptions)
 
 
