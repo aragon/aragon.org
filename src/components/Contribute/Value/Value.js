@@ -32,13 +32,6 @@ const Main = styled(Section)`
     font-size: 16px;
     color: ${theme.textSecondary};
   }
-  .cta {
-    text-align: center;
-    margin-top: 50px;
-  }
-  .cta button {
-    margin: 0 5px;
-  }
 
   ${medium(`
     padding-top: 128px;
@@ -66,42 +59,31 @@ const Main = styled(Section)`
 const Value = () => (
   <Main>
     <div>
-      <SectionTitle title="Things we value in people" />
+      <SectionTitle title="Tips for contributing" />
       <div className="columns">
         <div className="item">
           <img src={focus} alt="" width="32" height="32" />
-          <h2>Focus-driven work</h2>
+          <h2>Be concise</h2>
           <p>
-            We don't necessarily work 9-5; getting the work done, meeting goals
-            and milestones is more important. You can work however it suits your
-            personal schedule as long as you're focused on delivering quality
-            work
+            Try to summarize your contribution and the reasoning behind it.
+            This will help the reviewers to quickly suggest changes or approve the submission
           </p>
         </div>
         <div className="item">
           <img src={proactive} alt="" width="32" height="32" />
           <h2>Proactive attitude</h2>
           <p>
-            Working remotely and autonomously, having a positive and proactive
-            attitude with a love for time self-management is essential to our
-            day-to-day operations. Own your work and be proud of what you do
+            When reporting a bug or a problem, it is heplful to try to suggest a solution or a possible path forward for that issue
           </p>
         </div>
         <div className="item">
           <img src={heart} alt="" width="32" height="32" />
-          <h2>The value that you bring</h2>
+          <h2>Be kind</h2>
           <p>
-            Every person has a unique set of skills that bring meaning to what
-            we are doing. We value what you can do and your attitude in doing
-            it. Our goal is to enable you to realize the value which you can
-            bring to the project
+            Our goal is to enable everyone to realize the value they can
+            bring to the project and the community. Always be respectful and constructive
           </p>
         </div>
-      </div>
-      <div className="cta">
-        <Anchor mode="strong" href="https://wiki.aragon.one/jobs">
-          View open positions
-        </Anchor>
       </div>
     </div>
   </Main>
