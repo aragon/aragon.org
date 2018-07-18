@@ -368,7 +368,7 @@ var universalOptions = {
 
 var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Home',
-  file: '/home/smoky/Documents/git/aragon/website/dist/react-static-routes.js',
+  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 12)), (0, _importCss3.default)('src/pages/Home', {
       disableWarnings: true
@@ -388,7 +388,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Core',
-  file: '/home/smoky/Documents/git/aragon/website/dist/react-static-routes.js',
+  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 14)), (0, _importCss3.default)('src/pages/Core', {
       disableWarnings: true
@@ -408,7 +408,7 @@ var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Network',
-  file: '/home/smoky/Documents/git/aragon/website/dist/react-static-routes.js',
+  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 16)), (0, _importCss3.default)('src/pages/Network', {
       disableWarnings: true
@@ -428,7 +428,7 @@ var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_3 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Foundation',
-  file: '/home/smoky/Documents/git/aragon/website/dist/react-static-routes.js',
+  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 17)), (0, _importCss3.default)('src/pages/Foundation', {
       disableWarnings: true
@@ -448,7 +448,7 @@ var t_3 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_4 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/About',
-  file: '/home/smoky/Documents/git/aragon/website/dist/react-static-routes.js',
+  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 18)), (0, _importCss3.default)('src/pages/About', {
       disableWarnings: true
@@ -467,28 +467,28 @@ var t_4 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
   }
 }), universalOptions);
 var t_5 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
-  id: '../src/pages/Join',
-  file: '/home/smoky/Documents/git/aragon/website/dist/react-static-routes.js',
+  id: '../src/pages/Contribute',
+  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
   load: function load() {
-    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 19)), (0, _importCss3.default)('src/pages/Join', {
+    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 19)), (0, _importCss3.default)('src/pages/Contribute', {
       disableWarnings: true
     })]).then(function (proms) {
       return proms[0];
     });
   },
   path: function path() {
-    return _path3.default.join(__dirname, '../src/pages/Join');
+    return _path3.default.join(__dirname, '../src/pages/Contribute');
   },
   resolve: function resolve() {
     return /*require.resolve*/(19);
   },
   chunkName: function chunkName() {
-    return 'src/pages/Join';
+    return 'src/pages/Contribute';
   }
 }), universalOptions);
 var t_6 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/NotFound',
-  file: '/home/smoky/Documents/git/aragon/website/dist/react-static-routes.js',
+  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 20)), (0, _importCss3.default)('src/pages/NotFound', {
       disableWarnings: true
@@ -1088,32 +1088,24 @@ var _react2 = _interopRequireDefault(_react);
 
 var _components = __webpack_require__(4);
 
-var _Join = __webpack_require__(120);
+var _Contribute = __webpack_require__(120);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Join = function Join() {
+var Contribute = function Contribute() {
   return _react2.default.createElement(
     _components.Page,
-    { path: '/join' },
-    _react2.default.createElement(
-      _components.PageTitle,
-      {
-        title: 'Join us',
-        subtitle: 'We are building the future of organizations'
-      },
-      _react2.default.createElement(
-        _components.Anchor,
-        { mode: 'strong', href: 'https://wiki.aragon.one/jobs' },
-        'View open positions'
-      )
-    ),
-    _react2.default.createElement(_Join.Culture, null),
-    _react2.default.createElement(_Join.Value, null)
+    { path: '/contribute' },
+    _react2.default.createElement(_components.PageTitle, {
+      title: 'Contribute',
+      subtitle: 'We are building the future of governance'
+    }),
+    _react2.default.createElement(_Contribute.HowToHelp, null),
+    _react2.default.createElement(_Contribute.Value, null)
   );
 };
 
-exports.default = Join;
+exports.default = Contribute;
 
 /***/ }),
 /* 20 */
@@ -2014,7 +2006,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var menuItems = [['/core', 'Users'], ['https://hack.aragon.org', 'Developers'], ['/network', 'Network'], ['/foundation', 'Foundation'], ['/about', 'About'], ['/join', 'Join us'], ['https://wiki.aragon.one', 'Wiki'], ['https://blog.aragon.one', 'Blog']];
+var menuItems = [['/core', 'Users'], ['https://hack.aragon.org', 'Developers'], ['/network', 'Network'], ['/foundation', 'Foundation'], ['/about', 'About'], ['/contribute', 'Contribute'], ['https://wiki.aragon.one', 'Wiki'], ['https://blog.aragon.one', 'Blog']];
 
 var renderMenuItemLink = function renderMenuItemLink(_ref) {
   var url = _ref.url,
@@ -4942,12 +4934,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Culture = __webpack_require__(121);
+var _HowToHelp = __webpack_require__(121);
 
-Object.defineProperty(exports, 'Culture', {
+Object.defineProperty(exports, 'HowToHelp', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_Culture).default;
+    return _interopRequireDefault(_HowToHelp).default;
   }
 });
 
@@ -4978,7 +4970,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 var _templateObject = _taggedTemplateLiteral(['\n  max-width: 400px;\n  margin: 0 auto;\n  text-align: center;\n  h1 {\n    padding: 30px 0 0;\n    font-size: 15px;\n    text-transform: uppercase;\n    color: ', ';\n  }\n  ', ';\n'], ['\n  max-width: 400px;\n  margin: 0 auto;\n  text-align: center;\n  h1 {\n    padding: 30px 0 0;\n    font-size: 15px;\n    text-transform: uppercase;\n    color: ', ';\n  }\n  ', ';\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    max-width: none;\n    h1 {\n      padding-bottom: 40px;\n      font-size: 18px;\n    }\n  '], ['\n    max-width: none;\n    h1 {\n      padding-bottom: 40px;\n      font-size: 18px;\n    }\n  ']),
     _templateObject3 = _taggedTemplateLiteral(['\n  ', ';\n  ', ';\n'], ['\n  ', ';\n  ', ';\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  margin-top: 40px;\n  h2 {\n    margin: 20px 0;\n    color: ', ';\n    font-size: 26px;\n  }\n  p {\n    color: ', ';\n    font-size: 18px;\n  }\n  ', ';\n  ', ';\n'], ['\n  margin-top: 40px;\n  h2 {\n    margin: 20px 0;\n    color: ', ';\n    font-size: 26px;\n  }\n  p {\n    color: ', ';\n    font-size: 18px;\n  }\n  ', ';\n  ', ';\n']);
+    _templateObject4 = _taggedTemplateLiteral(['\n  margin-top: 40px;\n  h2 {\n    margin: 20px 0;\n    color: ', ';\n    font-size: 26px;\n  }\n  p {\n    color: ', ';\n    font-size: 18px;\n    margin-bottom: 1rem;\n  }\n  ', ';\n  ', ';\n'], ['\n  margin-top: 40px;\n  h2 {\n    margin: 20px 0;\n    color: ', ';\n    font-size: 26px;\n  }\n  p {\n    color: ', ';\n    font-size: 18px;\n    margin-bottom: 1rem;\n  }\n  ', ';\n  ', ';\n']);
 
 var _react = __webpack_require__(0);
 
@@ -4991,6 +4983,8 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 var _ui = __webpack_require__(2);
 
 var _web = __webpack_require__(3);
+
+var _ = __webpack_require__(4);
 
 var _OverlapBackground = __webpack_require__(5);
 
@@ -5024,23 +5018,39 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var TITLE = 'Some insights into how we work';
+var TITLE = 'Ways to help';
 var PARTS = [{
-  title: 'Fully distributed',
-  img: _fullyDistributed2.default,
-  content: '\n      We all work remotely \u2013 we don\'t believe talent is geographically\n      centralized\n    '
-}, {
-  title: 'Deep work sessions',
-  img: _deepWorkSessions2.default,
-  content: '\n      We do focused deep work sessions 4 days a week, leaving Monday for\n      meetings and calls\n    '
-}, {
-  title: 'Ecosystem-focused',
+  title: 'Contribute code',
   img: _buildEcosystem2.default,
-  content: '\n      Team members are encouraged to spend a chunk of their paid work time on\n      other blockchain based open source projects to aid the growth of the\n      ecosystem\n    '
+  content: '\n      From smart contracts to UI and Javascript, there are many ways to help build Aragon\n    ',
+  callToAction: {
+    text: 'Check good first issues',
+    link: 'https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+archived%3Afalse+label%3A%22good+first+issue%22+user%3Aaragon'
+  }
 }, {
-  title: 'Product first',
+  title: 'Contribute content',
   img: _technologyCompany2.default,
-  content: '\n      We are a technology-oriented project that is open source only. Our\n      position is product first \u2014 we place innovation and user experience above\n      all else\n    '
+  content: '\n      Help keep the wiki up to date, contribute to the newsletter or even enhance this website\n    ',
+  callToAction: {
+    text: 'Go to the wiki repo',
+    link: 'https://github.com/aragon/aragon-wiki'
+  }
+}, {
+  title: 'Apply for a job',
+  img: _fullyDistributed2.default,
+  content: '\n      The teams building Aragon are hiring\n    ',
+  callToAction: {
+    text: 'View openings',
+    link: 'https://wiki.aragon.one/jobs'
+  }
+}, {
+  title: 'Join the conversation',
+  img: _deepWorkSessions2.default,
+  content: '\n      Participate in our core dev calls or join the Aragon chat\n    ',
+  callToAction: {
+    text: 'Join the Aragon Chat',
+    link: 'https://aragon.chat'
+  }
 }];
 
 var medium = function medium(css) {
@@ -5061,7 +5071,8 @@ var StyledPart = _styledComponents2.default.div(_templateObject4, _ui.themeDark.
 var Part = function Part(_ref) {
   var img = _ref.img,
       title = _ref.title,
-      content = _ref.content;
+      content = _ref.content,
+      callToAction = _ref.callToAction;
   return _react2.default.createElement(
     StyledPart,
     null,
@@ -5083,6 +5094,14 @@ var Part = function Part(_ref) {
       'p',
       null,
       content
+    ),
+    _react2.default.createElement(
+      _.Anchor,
+      {
+        href: callToAction.link,
+        target: '_blank'
+      },
+      callToAction.text
     )
   );
 };
@@ -5099,7 +5118,7 @@ var wrapEvery = function wrapEvery(children) {
   }, []);
 };
 
-var Culture = function Culture() {
+var HowToHelp = function HowToHelp() {
   return _react2.default.createElement(
     _OverlapBackground2.default,
     null,
@@ -5128,7 +5147,7 @@ var Culture = function Culture() {
   );
 };
 
-exports.default = Culture;
+exports.default = HowToHelp;
 
 /***/ }),
 /* 122 */
@@ -5177,7 +5196,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  padding: 50px 15px;\n  background: white;\n\n  .columns {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n  .item {\n    margin-top: 20px;\n    max-width: 400px;\n  }\n  h2 {\n    font-size: 26px;\n    margin: 12px 0;\n  }\n  p {\n    font-size: 16px;\n    color: ', ';\n  }\n  .cta {\n    text-align: center;\n    margin-top: 50px;\n  }\n  .cta button {\n    margin: 0 5px;\n  }\n\n  ', ';\n'], ['\n  padding: 50px 15px;\n  background: white;\n\n  .columns {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n  .item {\n    margin-top: 20px;\n    max-width: 400px;\n  }\n  h2 {\n    font-size: 26px;\n    margin: 12px 0;\n  }\n  p {\n    font-size: 16px;\n    color: ', ';\n  }\n  .cta {\n    text-align: center;\n    margin-top: 50px;\n  }\n  .cta button {\n    margin: 0 5px;\n  }\n\n  ', ';\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  padding: 50px 15px;\n  background: white;\n\n  .columns {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n  .item {\n    margin-top: 20px;\n    max-width: 400px;\n  }\n  h2 {\n    font-size: 26px;\n    margin: 12px 0;\n  }\n  p {\n    font-size: 16px;\n    color: ', ';\n  }\n\n  ', ';\n'], ['\n  padding: 50px 15px;\n  background: white;\n\n  .columns {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n  .item {\n    margin-top: 20px;\n    max-width: 400px;\n  }\n  h2 {\n    font-size: 26px;\n    margin: 12px 0;\n  }\n  p {\n    font-size: 16px;\n    color: ', ';\n  }\n\n  ', ';\n']);
 
 var _react = __webpack_require__(0);
 
@@ -5222,7 +5241,7 @@ var Value = function Value() {
     _react2.default.createElement(
       'div',
       null,
-      _react2.default.createElement(_.SectionTitle, { title: 'Things we value in people' }),
+      _react2.default.createElement(_.SectionTitle, { title: 'Tips for contributing' }),
       _react2.default.createElement(
         'div',
         { className: 'columns' },
@@ -5233,12 +5252,12 @@ var Value = function Value() {
           _react2.default.createElement(
             'h2',
             null,
-            'Focus-driven work'
+            'Be concise'
           ),
           _react2.default.createElement(
             'p',
             null,
-            'We don\'t necessarily work 9-5; getting the work done, meeting goals and milestones is more important. You can work however it suits your personal schedule as long as you\'re focused on delivering quality work'
+            'Try to summarize your contribution and the reasoning behind it. This will help the reviewers to quickly suggest changes or approve the submission'
           )
         ),
         _react2.default.createElement(
@@ -5253,7 +5272,7 @@ var Value = function Value() {
           _react2.default.createElement(
             'p',
             null,
-            'Working remotely and autonomously, having a positive and proactive attitude with a love for time self-management is essential to our day-to-day operations. Own your work and be proud of what you do'
+            'When reporting a bug or a problem, it is heplful to try to suggest a solution or a possible path forward for that issue'
           )
         ),
         _react2.default.createElement(
@@ -5263,22 +5282,13 @@ var Value = function Value() {
           _react2.default.createElement(
             'h2',
             null,
-            'The value that you bring'
+            'Be kind'
           ),
           _react2.default.createElement(
             'p',
             null,
-            'Every person has a unique set of skills that bring meaning to what we are doing. We value what you can do and your attitude in doing it. Our goal is to enable you to realize the value which you can bring to the project'
+            'Our goal is to enable everyone to realize the value they can bring to the project and the community. Always be respectful and constructive'
           )
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'cta' },
-        _react2.default.createElement(
-          _.Anchor,
-          { mode: 'strong', href: 'https://wiki.aragon.one/jobs' },
-          'View open positions'
         )
       )
     )
@@ -5308,4 +5318,4 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIi
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.0a26266c.js.map
+//# sourceMappingURL=static.ef22a235.js.map
