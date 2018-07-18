@@ -46,7 +46,7 @@ export default {
       getData: () => ({ title: 'About Aragon' }),
     },
     {
-      path: '/Contribute',
+      path: '/contribute',
       component: 'src/pages/Contribute',
       getData: () => ({ title: 'Contribute to Aragon' }),
     },
