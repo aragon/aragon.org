@@ -73,7 +73,7 @@ const Value = () => (
           <img src={proactive} alt="" width="32" height="32" />
           <h2>Proactive attitude</h2>
           <p>
-            When reporting a bug or a problem, it is heplful to try to suggest a solution or a possible path forward for that issue
+            When reporting a bug or a problem, it is helpful to try to suggest a solution or a possible path forward for that issue
           </p>
         </div>
         <div className="item">
