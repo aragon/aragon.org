@@ -7,7 +7,7 @@
 		var a = factory();
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(typeof self !== 'undefined' ? self : this, function() {
+})(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -368,7 +368,7 @@ var universalOptions = {
 
 var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Home',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/home/li/dev/aragon/website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 12)), (0, _importCss3.default)('src/pages/Home', {
       disableWarnings: true
@@ -388,7 +388,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Core',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/home/li/dev/aragon/website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 14)), (0, _importCss3.default)('src/pages/Core', {
       disableWarnings: true
@@ -408,7 +408,7 @@ var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Network',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/home/li/dev/aragon/website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 16)), (0, _importCss3.default)('src/pages/Network', {
       disableWarnings: true
@@ -428,7 +428,7 @@ var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_3 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Foundation',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/home/li/dev/aragon/website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 17)), (0, _importCss3.default)('src/pages/Foundation', {
       disableWarnings: true
@@ -448,7 +448,7 @@ var t_3 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_4 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/About',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/home/li/dev/aragon/website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 18)), (0, _importCss3.default)('src/pages/About', {
       disableWarnings: true
@@ -468,7 +468,7 @@ var t_4 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_5 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Contribute',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/home/li/dev/aragon/website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 19)), (0, _importCss3.default)('src/pages/Contribute', {
       disableWarnings: true
@@ -488,7 +488,7 @@ var t_5 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_6 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/NotFound',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/home/li/dev/aragon/website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 20)), (0, _importCss3.default)('src/pages/NotFound', {
       disableWarnings: true
@@ -1390,13 +1390,9 @@ function universal(component) {
           return Promise.reject(error);
         }
 
-        return Promise.resolve().then(function () {
-          if (Component) return Component;
-          return requireAsync(props, context);
-        }).then(function (Component) {
-          (0, _hoistNonReactStatics2.default)(UniversalComponent, Component, { preload: true });
-          return Component;
-        });
+        if (Component) return Promise.resolve(Component);
+
+        return requireAsync(props, context);
       }
     }]);
 
@@ -5272,7 +5268,7 @@ var Value = function Value() {
           _react2.default.createElement(
             'p',
             null,
-            'When reporting a bug or a problem, it is heplful to try to suggest a solution or a possible path forward for that issue'
+            'When reporting a bug or a problem, it is helpful to try to suggest a solution or a possible path forward for that issue'
           )
         ),
         _react2.default.createElement(
@@ -5318,4 +5314,4 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIi
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.ef22a235.js.map
+//# sourceMappingURL=static.d873bcfb.js.map
