@@ -9,7 +9,7 @@
     "serve": "serve dist -p 3000",
     "optimize-svg": "find ./src -name '*.svg' -exec svgo --config '{ \"plugins\": [ { \"removeDesc\": {\"removeAny\": true}, \"removeTitle\": true } ] }' {} \\;",
     "generate-favicon": "icon-gen -i favicon.svg -o public -r",
-    "deploy": "NODE_ENV=production SITE_ROOT=https://aragon.one/ npm run build && echo 'aragon.one' > dist/CNAME && gh-pages -d dist"
+    "deploy": "NODE_ENV=production SITE_ROOT=https://aragon.org/ npm run build && echo 'aragon.org' > dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
     "@aragon/ui": "^0.11.0",
