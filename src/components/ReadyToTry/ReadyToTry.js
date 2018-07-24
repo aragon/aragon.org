@@ -91,7 +91,7 @@ const ReadyToTry = () => (
           <div className="buttons">
             <Anchor
               mode="strong"
-              href="https://app.aragon.one/"
+              href="https://app.aragon.org/"
               target="_blank"
             >
               Try Aragon Core 0.5
@@ -108,7 +108,7 @@ const ReadyToTry = () => (
           <div className="buttons">
             <Anchor
               mode="strong"
-              href="https://app.aragon.one/"
+              href="https://app.aragon.org/"
               target="_blank"
             >
               Try Aragon Core 0.5

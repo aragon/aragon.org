@@ -12,7 +12,7 @@ const menuItems = [
   ['/foundation', 'Foundation'],
   ['/about', 'About'],
   ['/contribute', 'Contribute'],
-  ['https://wiki.aragon.one', 'Wiki'],
+  ['https://wiki.aragon.org', 'Wiki'],
   ['https://blog.aragon.one', 'Blog'],
 ]
 

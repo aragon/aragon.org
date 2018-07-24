@@ -44,7 +44,7 @@ const PARTS = [
     `,
     callToAction: {
       text: 'View openings',
-      link: 'https://wiki.aragon.one/jobs'
+      link: 'https://wiki.aragon.org/jobs'
     },
   },
   {
