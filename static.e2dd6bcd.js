@@ -2002,7 +2002,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var menuItems = [['/core', 'Users'], ['https://hack.aragon.org', 'Developers'], ['/network', 'Network'], ['/foundation', 'Foundation'], ['/about', 'About'], ['/contribute', 'Contribute'], ['https://wiki.aragon.one', 'Wiki'], ['https://blog.aragon.one', 'Blog']];
+var menuItems = [['/core', 'Users'], ['https://hack.aragon.org', 'Developers'], ['/network', 'Network'], ['/foundation', 'Foundation'], ['/about', 'About'], ['/contribute', 'Contribute'], ['https://wiki.aragon.org', 'Wiki'], ['https://blog.aragon.one', 'Blog']];
 
 var renderMenuItemLink = function renderMenuItemLink(_ref) {
   var url = _ref.url,
@@ -2315,7 +2315,7 @@ var ReadyToTry = function ReadyToTry() {
               _.Anchor,
               {
                 mode: 'strong',
-                href: 'https://app.aragon.one/',
+                href: 'https://app.aragon.org/',
                 target: '_blank'
               },
               'Try Aragon Core 0.5'
@@ -2340,7 +2340,7 @@ var ReadyToTry = function ReadyToTry() {
               _.Anchor,
               {
                 mode: 'strong',
-                href: 'https://app.aragon.one/',
+                href: 'https://app.aragon.org/',
                 target: '_blank'
               },
               'Try Aragon Core 0.5'
@@ -5037,7 +5037,7 @@ var PARTS = [{
   content: '\n      The teams building Aragon are hiring\n    ',
   callToAction: {
     text: 'View openings',
-    link: 'https://wiki.aragon.one/jobs'
+    link: 'https://wiki.aragon.org/jobs'
   }
 }, {
   title: 'Join the conversation',
@@ -5314,4 +5314,4 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIi
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.568a5003.js.map
+//# sourceMappingURL=static.e2dd6bcd.js.map
