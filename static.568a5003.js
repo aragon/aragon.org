@@ -67,7 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "https://aragon.one/";
+/******/ 	__webpack_require__.p = "https://aragon.org/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 21);
@@ -5314,4 +5314,4 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIi
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.d873bcfb.js.map
+//# sourceMappingURL=static.568a5003.js.map
