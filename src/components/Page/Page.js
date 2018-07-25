@@ -5,7 +5,11 @@ import styled from 'styled-components'
 import { AragonApp, Button } from '@aragon/ui'
 import { Header, PreFooter, Footer } from '@aragon/web'
 
-const menuItems = [
+import iconTwitter from './assets/twitter.svg'
+import iconMedium from './assets/medium.svg'
+import iconRocket from './assets/rocket.svg'
+
+const headerMenu = [
   ['/core', 'Users'],
   ['https://hack.aragon.org', 'Developers'],
   ['/network', 'Network'],
@@ -14,6 +18,32 @@ const menuItems = [
   ['/contribute', 'Contribute'],
   ['https://wiki.aragon.org', 'Wiki'],
   ['https://blog.aragon.one', 'Blog'],
+]
+
+const footerMenus = [
+  [
+    ['Users', '/core'],
+    ['Developers', 'https://hack.aragon.org/'],
+    ['Network', '/network'],
+    ['About', '/about'],
+  ],
+  [
+    ['Wiki', 'https://wiki.aragon.org'],
+    ['Code', 'https://github.com/aragon'],
+    ['Contribute', '/contribute'],
+    ['Blog', 'https://blog.aragon.one/'],
+  ],
+  [
+    ['*Try Aragon 0.5', 'https://app.aragon.one/'],
+    ['Contact Us', 'mailto:contact@aragon.one'],
+    ['Media/Press Inquiries', 'mailto:media@aragon.one'],
+    ['Press Kit', 'https://wiki.aragon.one/press/press-kit/'],
+  ],
+  [
+    ['Twitter', 'https://twitter.com/AragonProject', iconTwitter],
+    ['Medium', 'https://blog.aragon.one/', iconMedium],
+    ['Aragon Chat', 'https://aragon.chat/', iconRocket],
+  ],
 ]
 
 const renderMenuItemLink = ({ url, children }) =>
@@ -103,7 +133,7 @@ class Page extends React.Component {
 
   render() {
     const { children, path } = this.props
-    const items = menuItems.map(item => [...item, item[0] === path])
+    const headerItems = headerMenu.map(item => [...item, item[0] === path])
     return (
       <SiteData
         render={({ title: siteTitle }) => (
@@ -114,12 +144,12 @@ class Page extends React.Component {
                   <title>{title || siteTitle}</title>
                 </Head>
                 <Header
-                  menuItems={items}
+                  menuItems={headerItems}
                   renderMenuItemLink={renderMenuItemLink}
                 />
                 <Content>{children}</Content>
                 <PreFooter emailForm={this.renderEmailForm()} />
-                <Footer />
+                <Footer menus={footerMenus} />
               </AragonApp>
             )}
           />
