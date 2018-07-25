@@ -42,7 +42,7 @@ const footerMenus = [
   [
     ['Twitter', 'https://twitter.com/AragonProject', iconTwitter],
     ['Medium', 'https://blog.aragon.one/', iconMedium],
-    ['Community', 'https://aragon.chat/', iconRocket],
+    ['Aragon Chat', 'https://aragon.chat/', iconRocket],
   ],
 ]
 
