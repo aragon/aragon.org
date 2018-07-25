@@ -51,7 +51,7 @@ export default {
       getData: () => ({ title: 'Contribute to Aragon' }),
     },
     {
-      is404: true,
+      path: '404',
       component: 'src/pages/NotFound',
       getData: () => ({ title: 'Page Not Found' }),
     },
