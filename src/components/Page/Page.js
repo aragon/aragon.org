@@ -8,7 +8,7 @@ import { Header, PreFooter, Footer } from '@aragon/web'
 import iconTwitter from './assets/twitter.svg'
 import iconMedium from './assets/medium.svg'
 import iconRocket from './assets/rocket.svg'
-import iconGH from './assets/github2.svg'
+import iconGH from './assets/github.svg'
 
 const headerMenu = [
   ['/core', 'Users'],
