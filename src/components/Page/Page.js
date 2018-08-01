@@ -8,6 +8,7 @@ import { Header, PreFooter, Footer } from '@aragon/web'
 import iconTwitter from './assets/twitter.svg'
 import iconMedium from './assets/medium.svg'
 import iconRocket from './assets/rocket.svg'
+import iconGH from './assets/github.svg'
 
 const headerMenu = [
   ['/core', 'Users'],
@@ -28,10 +29,10 @@ const footerMenus = [
     ['About', '/about'],
   ],
   [
-    ['Wiki', 'https://wiki.aragon.org'],
-    ['Code', 'https://github.com/aragon'],
     ['Contribute', '/contribute'],
+    ['Wiki', 'https://wiki.aragon.org'],
     ['Blog', 'https://blog.aragon.one/'],
+    ['Privacy Policy', 'https://wiki.aragon.org/documentation/legal/Privacy_policy/'],
   ],
   [
     ['*Try Aragon 0.5', 'https://app.aragon.one/'],
@@ -40,6 +41,7 @@ const footerMenus = [
     ['Press Kit', 'https://wiki.aragon.one/press/press-kit/'],
   ],
   [
+    ['GitHub ', 'https://github.com/aragon', iconGH],
     ['Twitter', 'https://twitter.com/AragonProject', iconTwitter],
     ['Medium', 'https://blog.aragon.one/', iconMedium],
     ['Aragon Chat', 'https://aragon.chat/', iconRocket],
