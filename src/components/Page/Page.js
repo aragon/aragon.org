@@ -26,13 +26,13 @@ const footerMenus = [
     ['Users', '/core'],
     ['Developers', 'https://hack.aragon.org/'],
     ['Network', '/network'],
-    ['About', '/about'],
+    ['Contribute', '/contribute'],
   ],
   [
-    ['Contribute', '/contribute'],
     ['Wiki', 'https://wiki.aragon.org'],
     ['Blog', 'https://blog.aragon.one/'],
     ['Privacy Policy', 'https://wiki.aragon.org/documentation/legal/Privacy_policy/'],
+    ['Terms of Use', 'https://wiki.aragon.org/documentation/legal/Terms_of_use_websites/'],
   ],
   [
     ['*Try Aragon 0.5', 'https://app.aragon.one/'],
