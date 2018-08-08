@@ -30,8 +30,8 @@ const footerMenus = [
     ['Contribute', '/contribute'],
   ],
   [
+    ['About', '/about'],
     ['Wiki', 'https://wiki.aragon.org'],
-    ['Blog', 'https://blog.aragon.one/'],
     ['Privacy Policy', 'https://wiki.aragon.org/documentation/legal/Privacy_policy/'],
     ['Terms of Use', 'https://wiki.aragon.org/documentation/legal/Terms_of_use_websites/'],
   ],
