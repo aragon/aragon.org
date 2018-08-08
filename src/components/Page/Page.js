@@ -19,7 +19,7 @@ const headerMenu = [
   ['/about', 'About'],
   ['/contribute', 'Contribute'],
   ['https://wiki.aragon.org', 'Wiki'],
-  ['https://blog.aragon.one', 'Blog'],
+  ['https://blog.aragon.org', 'Blog'],
 ]
 
 const footerMenus = [
