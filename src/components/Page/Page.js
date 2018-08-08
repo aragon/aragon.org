@@ -9,6 +9,7 @@ import iconTwitter from './assets/twitter.svg'
 import iconMedium from './assets/medium.svg'
 import iconRocket from './assets/rocket.svg'
 import iconGH from './assets/github.svg'
+import iconGhost from './assets/ghost.svg'
 
 const headerMenu = [
   ['/core', 'Users'],
@@ -43,7 +44,7 @@ const footerMenus = [
   [
     ['GitHub ', 'https://github.com/aragon', iconGH],
     ['Twitter', 'https://twitter.com/AragonProject', iconTwitter],
-    ['Medium', 'https://blog.aragon.one/', iconMedium],
+    ['Blog', 'https://blog.aragon.org/', iconGhost],
     ['Aragon Chat', 'https://aragon.chat/', iconRocket],
   ],
 ]

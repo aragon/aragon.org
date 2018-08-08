@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 15 15"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="ghost-icon.svg"
+   width="15"
+   height="15">
+  <metadata
+     id="metadata22">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Slice 1</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs20">
+    <linearGradient
+       id="linearGradient4158"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#717171;stop-opacity:1;"
+         offset="0"
+         id="stop4160" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4158"
+       id="linearGradient4162"
+       x1="0.184"
+       y1="43.497498"
+       x2="84.315002"
+       y2="43.497498"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4158"
+       id="linearGradient4164"
+       gradientUnits="userSpaceOnUse"
+       x1="0.184"
+       y1="43.497498"
+       x2="84.315002"
+       y2="43.497498" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4158"
+       id="linearGradient4166"
+       gradientUnits="userSpaceOnUse"
+       x1="0.184"
+       y1="43.497498"
+       x2="84.315002"
+       y2="43.497498" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4158"
+       id="linearGradient4168"
+       gradientUnits="userSpaceOnUse"
+       x1="0.184"
+       y1="43.497498"
+       x2="84.315002"
+       y2="43.497498" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4158"
+       id="linearGradient4170"
+       gradientUnits="userSpaceOnUse"
+       x1="0.184"
+       y1="43.497498"
+       x2="84.315002"
+       y2="43.497498" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4158"
+       id="linearGradient4172"
+       gradientUnits="userSpaceOnUse"
+       x1="0.184"
+       y1="43.497498"
+       x2="84.315002"
+       y2="43.497498" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2640"
+     inkscape:window-height="1651"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="2.7126437"
+     inkscape:cx="43.237288"
+     inkscape:cy="43.5"
+     inkscape:window-x="570"
+     inkscape:window-y="195"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <title
+     id="title4">Slice 1</title>
+  <g
+     id="g6"
+     style="opacity:0.6;fill:url(#linearGradient4162);fill-opacity:1;fill-rule:evenodd"
+     transform="matrix(0.17829337,0,0,0.1763316,0.15119402,-1.1389854)">
+    <rect
+       x="0.20900001"
+       y="69.016998"
+       width="33.643002"
+       height="17.014"
+       rx="4"
+       id="rect8"
+       style="fill:url(#linearGradient4164);fill-opacity:1" />
+    <rect
+       x="50.672001"
+       y="69.016998"
+       width="33.622002"
+       height="17.014"
+       rx="4"
+       id="rect10"
+       style="fill:url(#linearGradient4166);fill-opacity:1" />
+    <rect
+       x="0.184"
+       y="34.990002"
+       width="84.121002"
+       height="17.014"
+       rx="4"
+       id="rect12"
+       style="fill:url(#linearGradient4168);fill-opacity:1" />
+    <rect
+       x="0.20900001"
+       y="0.96399999"
+       width="50.469002"
+       height="17.013"
+       rx="4"
+       id="rect14"
+       style="fill:url(#linearGradient4170);fill-opacity:1" />
+    <rect
+       x="67.494003"
+       y="0.96399999"
+       width="16.820999"
+       height="17.013"
+       rx="4"
+       id="rect16"
+       style="fill:url(#linearGradient4172);fill-opacity:1" />
+  </g>
+</svg>
