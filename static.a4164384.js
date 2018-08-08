@@ -2028,7 +2028,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var headerMenu = [['/core', 'Users'], ['https://hack.aragon.org', 'Developers'], ['/network', 'Network'], ['/foundation', 'Foundation'], ['/about', 'About'], ['/contribute', 'Contribute'], ['https://wiki.aragon.org', 'Wiki'], ['https://blog.aragon.org', 'Blog']];
 
-var footerMenus = [[['Users', '/core'], ['Developers', 'https://hack.aragon.org/'], ['Network', '/network'], ['Contribute', '/contribute']], [['Wiki', 'https://wiki.aragon.org'], ['Blog', 'https://blog.aragon.one/'], ['Privacy Policy', 'https://wiki.aragon.org/documentation/legal/Privacy_policy/'], ['Terms of Use', 'https://wiki.aragon.org/documentation/legal/Terms_of_use_websites/']], [['*Try Aragon 0.5', 'https://app.aragon.one/'], ['Contact Us', 'mailto:contact@aragon.one'], ['Media/Press Inquiries', 'mailto:media@aragon.one'], ['Press Kit', 'https://wiki.aragon.one/press/press-kit/']], [['GitHub ', 'https://github.com/aragon', _github2.default], ['Twitter', 'https://twitter.com/AragonProject', _twitter2.default], ['Blog', 'https://blog.aragon.org/', _ghost2.default], ['Aragon Chat', 'https://aragon.chat/', _rocket2.default]]];
+var footerMenus = [[['Users', '/core'], ['Developers', 'https://hack.aragon.org/'], ['Network', '/network'], ['Contribute', '/contribute']], [['About', '/about'], ['Wiki', 'https://wiki.aragon.org'], ['Privacy Policy', 'https://wiki.aragon.org/documentation/legal/Privacy_policy/'], ['Terms of Use', 'https://wiki.aragon.org/documentation/legal/Terms_of_use_websites/']], [['*Try Aragon 0.5', 'https://app.aragon.one/'], ['Contact Us', 'mailto:contact@aragon.one'], ['Media/Press Inquiries', 'mailto:media@aragon.one'], ['Press Kit', 'https://wiki.aragon.one/press/press-kit/']], [['GitHub ', 'https://github.com/aragon', _github2.default], ['Twitter', 'https://twitter.com/AragonProject', _twitter2.default], ['Blog', 'https://blog.aragon.org/', _ghost2.default], ['Aragon Chat', 'https://aragon.chat/', _rocket2.default]]];
 
 var renderMenuItemLink = function renderMenuItemLink(_ref) {
   var url = _ref.url,
@@ -5370,4 +5370,4 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIi
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.f1a2c087.js.map
+//# sourceMappingURL=static.a4164384.js.map
