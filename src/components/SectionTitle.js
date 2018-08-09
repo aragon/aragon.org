@@ -4,7 +4,7 @@ import { Text, theme } from '@aragon/ui'
 
 const StyledSectionTitle = styled.div`
   h1 {
-    font-size: 18px;
+    font-size: 28px;
     text-align: center;
     font-weight: 600;
   }
