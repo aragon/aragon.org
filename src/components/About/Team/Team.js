@@ -70,7 +70,7 @@ const Core = () => (
 			<Emphasis>
 				<p>
 					<a href="http://blog.aragon.one/introducing-aragon-one-b14dd804c5ce/">Aragon One</a> is one of the development teams working on Aragon. <a href="https://aragon.one/">Aragon
-					One</a> is a for-profit company that encompasses the foundational team
+					One</a> is a company that encompasses the foundational team
 					working on the Aragon Project. The company is currently established in
 					Switzerland, although we want it to function as a DAO as much as
 					possible
