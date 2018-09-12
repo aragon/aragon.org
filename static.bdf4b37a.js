@@ -4577,7 +4577,7 @@ var Core = function Core() {
 						{ href: "https://aragon.one/" },
 						"Aragon One"
 					),
-					" is a for-profit company that encompasses the foundational team working on the Aragon Project. The company is currently established in Switzerland, although we want it to function as a DAO as much as possible"
+					" is a company that encompasses the foundational team working on the Aragon Project. The company is currently established in Switzerland, although we want it to function as a DAO as much as possible"
 				)
 			),
 			_react2.default.createElement(
@@ -5485,4 +5485,4 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIi
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.0cf948b8.js.map
+//# sourceMappingURL=static.bdf4b37a.js.map
