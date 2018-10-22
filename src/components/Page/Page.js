@@ -1,159 +1,93 @@
 import React from 'react'
 import { Link, SiteData, RouteData, Head } from 'react-static'
-import Routes from 'react-static-routes'
 import styled from 'styled-components'
-import { AragonApp, Button } from '@aragon/ui'
-import { Header, PreFooter, Footer } from '@aragon/web'
-
-import iconTwitter from './assets/twitter.svg'
-import iconMedium from './assets/medium.svg'
-import iconRocket from './assets/rocket.svg'
-import iconGH from './assets/github.svg'
-import iconGhost from './assets/ghost.svg'
-
-const headerMenu = [
-  ['/core', 'Users'],
-  ['https://hack.aragon.org', 'Developers'],
-  ['/network', 'Network'],
-  ['/foundation', 'Foundation'],
-  ['/about', 'About'],
-  ['/contribute', 'Contribute'],
-  ['https://wiki.aragon.org', 'Wiki'],
-  ['https://blog.aragon.org', 'Blog'],
-  ['https://AraCon.one', 'Conference'],
-]
-
-const footerMenus = [
-  [
-    ['Users', '/core'],
-    ['Developers', 'https://hack.aragon.org/'],
-    ['Network', '/network'],
-    ['Contribute', '/contribute'],
-  ],
-  [
-    ['Transparency', 'https://transparency.aragon.org'],
-    ['Wiki', 'https://wiki.aragon.org'],
-    ['Privacy Policy', 'https://wiki.aragon.org/documentation/legal/Privacy_policy/'],
-    ['Terms of Use', 'https://wiki.aragon.org/documentation/legal/Terms_of_use_websites/'],
-  ],
-  [
-    ['*Try Aragon 0.5', 'https://app.aragon.one/'],
-    ['Contact Us', 'mailto:contact@aragon.one'],
-    ['Media/Press Inquiries', 'mailto:media@aragon.one'],
-    ['Press Kit', 'https://wiki.aragon.one/press/press-kit/'],
-  ],
-  [
-    ['GitHub ', 'https://github.com/aragon', iconGH],
-    ['Twitter', 'https://twitter.com/AragonProject', iconTwitter],
-    ['Blog', 'https://blog.aragon.org/', iconGhost],
-    ['Aragon Chat', 'https://aragon.chat/', iconRocket],
-  ],
-]
-
-const renderMenuItemLink = ({ url, children }) =>
-  url.startsWith('/') ? (
-    <Link to={url}>{children}</Link>
-  ) : (
-    <a href={url} target="_blank" rel="noopener noreferrer">
-      {children}
-    </a>
-  )
+import { AragonApp, AppBar, breakpoint } from '@aragon/ui'
+import Navbar from './Navbar'
+import Footer from './Footer.js'
+const medium = css => breakpoint('medium', css);
 
 const Content = styled.div`
-  min-height: 200px;
-`
+  padding-top: 64px;
+  min-height: calc(100vh - 116px)!important;
 
-const EmailFormWrapper = styled.div`
-  .email-field {
+  section.all-page {
+    min-height: calc(100vh - 116px)!important;
+  }
+  .dark.dark-form {
+    background: #18181A;
+  }
+  .dark.dark-form {
+    background: #1f1f21;
+    ${medium('background: #18181A;')};
+  }
+  .light {
+    background: #fafdfd;
+  }
+  .light.light-form {
+    background: #eff5f8;
+    ${medium('background: #fafdfd;')};
+  }
+  .white {
+    background: white;
+  }
+  .button-strong-div {
     display: flex;
-    width: 100%;
   }
-  input[type='email'] {
-    flex-shrink: 1;
-    width: 100%;
-    min-width: 0;
-    margin-right: 15px;
+  .button-strong-div.centered {
+    justify-content: center;
+  }
+  a.button-strong {
+    text-decoration: none;
+    width: auto;
     padding: 10px 15px;
-    border-radius: 3px;
+    white-space: nowrap;
+    line-height: 1;
+    font-size: 15px;
     border: 0;
-    background: #fff;
+    border-radius: 3px;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 1px rgba(0,0,0,0);
+    color: #FFFFFF;
+    background-image: linear-gradient( 130deg,#00B4E6,#00F0E0 );
+    display: flex;
+    align-items: center;
+    span {
+      font-weight: 800;
+    }
   }
-  .button {
-    flex-shrink: 0;
+  a.button-strong:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.39);
   }
-`
+`;
+
+const menuItems = [
+  ['/discover', 'Discover'],
+  ['/developers', 'Developers'],
+  ['/project', 'Project'],
+  ['/network', 'Network'],
+];
 
 class Page extends React.Component {
-  renderEmailForm() {
-    return (
-      <EmailFormWrapper>
-        <form
-          action="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&amp;id=e81a44c4bd"
-          method="post"
-          name="mc-embedded-subscribe-form"
-          target="_blank"
-          noValidate
-        >
-          <h1 className="title">Aragon Newsletter</h1>
-          <p className="desc">
-            <label htmlFor="mce-EMAIL">
-              Follow the progress of Aragon by subscribing to our monthly
-              newsletter
-            </label>
-          </p>
-          <div className="email-field">
-            <input
-              type="email"
-              name="EMAIL"
-              placeholder="Enter your email"
-              className="required email"
-              id="mce-EMAIL"
-            />
-            <div
-              style={{ position: 'absolute', left: '-5000px' }}
-              aria-hidden="true"
-            >
-              <input
-                type="text"
-                name="b_a590aa3843a54b079d48e6e18_e81a44c4bd"
-                tabIndex="-1"
-                value=""
-              />
-            </div>
-            <Button
-              type="submit"
-              name="subscribe"
-              id="mc-embedded-subscribe"
-              className="button"
-              mode="strong"
-            >
-              Subscribe
-            </Button>
-          </div>
-        </form>
-      </EmailFormWrapper>
-    )
-  }
 
   render() {
-    const { children, path } = this.props
-    const headerItems = headerMenu.map(item => [...item, item[0] === path])
+    const { children, path } = this.props;
+    const items = menuItems.map(item => [...item, item[0] === path]);
+
     return (
       <SiteData
         render={({ title: siteTitle }) => (
           <RouteData
             render={({ title }) => (
-              <AragonApp publicUrl="/aragon-ui/">
+              <AragonApp publicUrl='/aragon-ui/' className="app">
                 <Head>
                   <title>{title || siteTitle}</title>
                 </Head>
-                <Header
-                  menuItems={headerItems}
-                  renderMenuItemLink={renderMenuItemLink}
-                />
+                <Navbar menuItems={items} path={path} />
                 <Content>{children}</Content>
-                <PreFooter emailForm={this.renderEmailForm()} />
-                <Footer menus={footerMenus} />
+                <Footer path={path}/>
               </AragonApp>
             )}
           />

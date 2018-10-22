@@ -26,31 +26,6 @@ export default {
       getData: () => ({ title: '' }),
     },
     {
-      path: '/core',
-      component: 'src/pages/Core',
-      getData: () => ({ title: 'Aragon Core' }),
-    },
-    {
-      path: '/network',
-      component: 'src/pages/Network',
-      getData: () => ({ title: 'Aragon Network' }),
-    },
-    {
-      path: '/foundation',
-      component: 'src/pages/Foundation',
-      getData: () => ({ title: 'Aragon Foundation' }),
-    },
-    {
-      path: '/about',
-      component: 'src/pages/About',
-      getData: () => ({ title: 'About Aragon' }),
-    },
-    {
-      path: '/contribute',
-      component: 'src/pages/Contribute',
-      getData: () => ({ title: 'Contribute to Aragon' }),
-    },
-    {
       is404: true,
       component: 'src/pages/NotFound',
       getData: () => ({ title: 'Page Not Found' }),
