@@ -7,7 +7,6 @@ import Footer from './Footer.js'
 const medium = css => breakpoint('medium', css);
 
 const Content = styled.div`
-  padding-top: 64px;
   min-height: calc(100vh - 116px)!important;
 
   section.all-page {
