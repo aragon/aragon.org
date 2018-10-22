@@ -33,9 +33,8 @@ const StyledMenuItem = styled.li`
   }
   &.active {
     span a span {
-      color: #32325d;
+      color: #22e0ff;
       font-weight: 800;
-      border-bottom: solid 1px #32325d;
     }
   }
 `

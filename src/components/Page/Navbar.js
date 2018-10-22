@@ -38,7 +38,7 @@ class Navbar extends React.Component {
   renderIn = ({ x, menuItems, path }) => {
     return (
       <AragonNavbar
-        style={{ background: x.interpolate(v => `rgba(255, 255, 255, ${v})`) }}
+        style={{ background: x.interpolate(v => `rgba(28, 29, 35)`) }}
       >
         <Center>
           <BreakPoint from="medium">
@@ -106,7 +106,7 @@ class Navbar extends React.Component {
 const AragonNavbar = styled(animated.div)`
   width: 100%;
   height: 64px;
-  background: rgb(255, 255, 255);
+  background: rgb(28, 29, 35);
   display: flex;
   justify-content: flex-start;
   ${medium('justify-content: center;')};
