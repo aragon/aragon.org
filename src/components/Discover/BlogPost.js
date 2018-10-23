@@ -10,7 +10,7 @@ const mudule1Content = (<p>Everyone wasn’t born equal. Aragon represents a new
 const About = () => (
   <Section>
     <Container>
-      <LongCard background="" textAlign="left" title="Freeing the Marias of the world" content={mudule1Content}></LongCard>
+      <LongCard background={'Discover/assets/background-discover3.png'} colorWhite textAlign="left" title="Freeing the Marias of the world" content={mudule1Content}></LongCard>
       <LongCard background="" textAlign="center" title="Reclaim your freedom now"></LongCard>
     </Container>
   </Section>

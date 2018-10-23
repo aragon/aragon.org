@@ -18,8 +18,8 @@ const About = () => (
     <Container>
       <Card imageUrl={'Discover/assets/discover1'} title="21st century organizations" content={mudule1Content}></Card>
       <Card imageUrl={'Discover/assets/discover2'} title="Organizations that work for you" content={mudule2Content}></Card>
-      <LongCard background={'Discover/assets/background-discover1.png'} textAlign="right" title="Global and bureaucracy-free" content={mudule3Content}></LongCard>
-      <LongCard background={'Discover/assets/background-discover2.png'} textAlign="left" color="white" title="Fully customizable" content={mudule4Content}></LongCard>
+      <LongCard background={'Discover/assets/background-discover1.png'} image={'Discover/assets/discover5.svg'} textAlign="right" title="Global and bureaucracy-free" content={mudule3Content}></LongCard>
+      <LongCard background={'Discover/assets/background-discover2.png'} image={'Discover/assets/discover6.svg'} textAlign="left" colorWhite title="Fully customizable" content={mudule4Content}></LongCard>
     </Container>
   </Section>
 );
