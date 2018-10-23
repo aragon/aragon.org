@@ -39,7 +39,7 @@ const SmallCard = styled.div`
   padding: 30px 60px;
   img {
     height: 100px;
-  width: 100px;
+    width: 100px;
   }
   p {
     font-family: 'GraphikRegular', sans-serif;
