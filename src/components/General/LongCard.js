@@ -41,7 +41,7 @@ const LongCard = styled.div`
   &.center {
     justify-content: center;
     p, h1 {
-      tex-align: center;
+      text-align: center;
     }
   }
   &.left {
