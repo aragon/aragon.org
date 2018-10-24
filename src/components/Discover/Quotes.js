@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import { Link } from 'react-static'
 import Quote from '../General/Quote'
 
+import { breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css);
+
 const Quotes = () => (
   <QuoteSection>
     <h2>A new era for organizations</h2>
@@ -19,7 +22,8 @@ const QuoteSection = styled(Section)`
 `
 const Box = styled.div`
   display: grid;
-  grid-template-columns: 50% 50%;
+  ${medium('grid-template-columns: 50% 50%;')};
+  grid-template-columns: 100%;
   grid-template-rows: 250px;
   grid-column-gap: 30px;
   grid-row-gap: 30px;

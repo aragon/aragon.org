@@ -4,10 +4,10 @@ import LongCard from '../General/LongCard'
 import Card from '../General/Card'
 import styled from 'styled-components'
 import { Link } from 'react-static'
-import { Text, Button, breakpoint } from '@aragon/ui'
 
-
+import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
+
 const mudule1Content = (<p>The Aragon project is a community with the mission to empower freedom by creating tools for decentralized governance.</p>);
 const mudule2Content = (<p>Aragon enables developers and designers to create apps that enhance human collaboration. Build the future of decentralized organizations with aragonSDK.</p>);
 const mudule3Content = (<p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday.</p>);
@@ -28,7 +28,8 @@ const About = () => (
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 50% 50%;
+  ${medium('grid-template-columns: 50% 50%;')};
+  grid-template-columns: 100%;
   grid-template-rows: 500px 500px 500px;
   grid-column-gap: 30px;
   grid-row-gap: 30px;

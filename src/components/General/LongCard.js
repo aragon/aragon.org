@@ -2,12 +2,10 @@ import React from 'react'
 import Section from '../General/Section'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css);
 
 class Card extends React.Component {
-  static propTypes = {
-    background: PropTypes.string,
-  }
-
   render() {
     const {
       title,
@@ -33,13 +31,15 @@ class Card extends React.Component {
 
 const LongCard = styled.div`
   grid-column-start: 1;
-  grid-column-end: 3;
+  ${medium('grid-column-end: 3;')};
+  grid-column-end: 2;
   border-radius: 12px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.07);
   background-color: #f9fafc;
-  background-image: url(${props => props.background});
+  background-image: url(${props => props.background ? props.background : ''});
   background-size: cover;
-  padding: 30px 60px;
+  padding: 30px;
+  ${medium('padding: 30px 60px;')};
   display: flex;
   align-items: center;
   &.center {
@@ -66,7 +66,8 @@ const LongCard = styled.div`
   }
   h1 {
     font-family: 'GraphikLight', sans-serif;
-    font-size: 46px;
+    font-size:30px;
+    ${medium('font-size: 46px;')};
     font-weight: 300;
     line-height: 1.35;
     text-align: left;

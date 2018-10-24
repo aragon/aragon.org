@@ -4,10 +4,9 @@ import LongCard from '../General/LongCard'
 import Card from '../General/Card'
 import styled from 'styled-components'
 import { Link } from 'react-static'
-import { Text, Button, breakpoint } from '@aragon/ui'
-
-
+import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
+
 const mudule1Content = (<p>Aragon organizations are digital natives. They live on Ethereum, a global ledger secured by economic incentives and cryptography. No one can take your organization away from you.</p>);
 const mudule2Content = (<p>Aragon leverages smart contracts. Smart contracts are like traditional contracts, but written in computer code and enforced by the blockchain. As efficient and automatic as it gets.</p>);
 const mudule3Content = (<p>Aragon organizations are global from day one. Collaborate with people across countries or continents, without incurring into cumbersome bureaucrazy.</p>);
@@ -26,7 +25,8 @@ const About = () => (
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 50% 50%;
+  ${medium('grid-template-columns: 50% 50%;')};
+  grid-template-columns: 100%;
   grid-template-rows: 500px 500px 500px;
   grid-column-gap: 30px;
   grid-row-gap: 30px;

@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Section from '../General/Section'
 import styled from 'styled-components'
-
+import { breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css);
 
 class Card extends React.Component {
   static propTypes = {
@@ -36,7 +37,8 @@ const SmallCard = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 30px 60px;
+  padding: 30px;
+  ${medium('padding: 30px 60px;')};
   img {
     height: 100px;
     width: 100px;
@@ -51,7 +53,8 @@ const SmallCard = styled.div`
   }
   h1 {
     font-family: 'GraphikLight', sans-serif;
-    font-size: 46px;
+    font-size:30px;
+    ${medium('font-size: 46px;')};
     font-weight: 300;
     line-height: 1.35;
     text-align: center;

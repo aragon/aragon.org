@@ -3,6 +3,9 @@ import Section from '../General/Section'
 import styled from 'styled-components'
 import { Link } from 'react-static'
 
+import { breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css);
+
 const UnstoppableOrganizations = () => (
   <UnstoppableSection>
 

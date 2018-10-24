@@ -31,6 +31,11 @@ export default {
       getData: () => ({ title: '' }),
     },
     {
+      path: '/project',
+      component: 'src/pages/Project',
+      getData: () => ({ title: '' }),
+    },
+    {
       is404: true,
       component: 'src/pages/NotFound',
       getData: () => ({ title: 'Page Not Found' }),
