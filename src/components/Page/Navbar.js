@@ -14,7 +14,7 @@ const renderMenuItemLink = ({ url, children }) =>
       <Text size="xlarge">{children}</Text>
     </Link>
   ) : (
-    <SafeLink href={url}>
+    <SafeLink href={url} target="_blank">
       <Text size="xlarge">{children}</Text>
     </SafeLink>
   )
@@ -60,7 +60,7 @@ class Navbar extends React.Component {
                 />
               </div>
               <div>
-                <img src={logo} />
+                <Link to="/"><img src={logo} /></Link>
               </div>
               <div>
                 <MenuItem

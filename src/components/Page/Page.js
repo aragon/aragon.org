@@ -64,7 +64,7 @@ const Content = styled.div`
 
 const menuItems = [
   ['/discover', 'Discover'],
-  ['/developers', 'Developers'],
+  ['https://hack.aragon.org/', 'Developers'],
   ['/project', 'Project'],
   ['/network', 'Network'],
 ];

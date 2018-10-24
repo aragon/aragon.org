@@ -12,12 +12,13 @@ class Card extends React.Component {
       content,
       image,
       background,
+      gradient,
       colorWhite,
       textAlign,
       children,
     } = this.props
     return (
-      <LongCard className={textAlign} colorWhite={colorWhite} image={image || false} background={require(`../${background}`)}>
+      <LongCard className={textAlign} colorWhite={colorWhite} image={image || false} background={background ? require(`../${background}`) : ''} gradient={gradient ? gradient : ''}>
         {image && textAlign == 'right' && <ImageContainer><img src={require(`../${image}`)}/></ImageContainer>}
         <div className={textAlign + "-box"}>
           {title && <h1>{title}</h1>}
@@ -36,8 +37,10 @@ const LongCard = styled.div`
   border-radius: 12px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.07);
   background-color: #f9fafc;
-  background-image: url(${props => props.background ? props.background : ''});
+  ${props => props.background && 'background-image: url(' + props.background + ');'}
+  ${props => props.gradient && 'background-image:' + props.gradient + ';'}
   background-size: cover;
+  background-position: center;
   padding: 30px;
   ${medium('padding: 30px 60px;')};
   display: flex;
