@@ -2,38 +2,38 @@ import React from 'react'
 import styled from 'styled-components'
 import { breakpoint, SafeLink } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
-import governance from './assets/governance.svg'
-import grants from './assets/grants.svg'
-import contribute from './assets/contribute.svg'
-import blog from './assets/blog.svg'
-import aracon from './assets/aracon.svg'
-import wiki from './assets/wiki.svg'
+import Governance from './assets/Governance'
+import Grants from './assets/Grants.js'
+import Contribute from './assets/Contribute.js'
+import Blog from './assets/Blog.js'
+import Aracon from './assets/Aracon.js'
+import Wiki from './assets/Wiki.js'
 
 const About = () => (
   <Navbar>
     <Container>
       <Item>
-        <img src={governance}/>
+        <Governance/>
         <h6>Governance</h6>
       </Item>
       <Item>
-        <img src={grants}/>
+        <Grants/>
         <h6>Grants</h6>
       </Item>
       <Item>
-        <img src={contribute}/>
+        <Contribute/>
         <h6>Contribute</h6>
       </Item>
       <Item href="https://blog.aragon.org/" target="_blank">
-        <img src={blog}/>
+        <Blog/>
         <h6>Blog</h6>
       </Item>
       <Item href="https://aracon.one/" target="_blank">
-        <img src={aracon}/>
+        <Aracon/>
         <h6>Aracon</h6>
       </Item>
       <Item href="https://wiki.aragon.org/" target="_blank">
-        <img src={wiki}/>
+        <Wiki/>
         <h6>Wiki</h6>
       </Item>
     </Container>
@@ -62,6 +62,9 @@ const Item = styled(SafeLink)`
     h6 {
       color: #22e0ff;
     }
+    svg path.white {
+      fill: #22e0ff;
+    }
   }
   h6 {
     display: none;
@@ -79,10 +82,13 @@ const InternalItem = styled.a`
     h6 {
       color: #22e0ff;
     }
+    svg path.white {
+      fill: #22e0ff;
+    }
   }
   h6 {
     display: none;
-    ${medium('display: bloack')};
+    ${medium('display: block')};
   }
 `
 
