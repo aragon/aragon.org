@@ -60,7 +60,7 @@ class Navbar extends React.Component {
                 />
               </div>
               <div>
-                <Link to="/"><img src={logo} /></Link>
+                <FlexLink to="/"><img src={logo} /></FlexLink>
               </div>
               <div>
                 <MenuItem
@@ -136,6 +136,10 @@ const Center = styled.div`
   img {
     margin: 0 30px;
   }
+`
+
+const FlexLink = styled(Link)`
+  display: flex;
 `
 
 export default Navbar
