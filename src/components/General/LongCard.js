@@ -45,6 +45,8 @@ const LongCard = styled.div`
   ${medium('padding: 30px 60px;')};
   display: flex;
   align-items: center;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
   &.center {
     justify-content: center;
     p, h1 {
@@ -55,7 +57,8 @@ const LongCard = styled.div`
     justify-content: flex-start;
   }
   &.right {
-    justify-content: flex-end;
+    justify-content: center;
+    ${medium('justify-content: flex-end')};;
   }
 
   p {
@@ -78,11 +81,15 @@ const LongCard = styled.div`
     margin: 15px 0 0 0;
   }
   .left-box {
-    width: 50%;
+    width: 100%;
+    ${medium('width: 50%')};
   }
   .right-box {
-    width: 50%;
-    margin-left: ${props => props.image ? "30px" : "50%"};
+    width: 100%;
+    ${medium('width: 50%')};
+    margin-left: 0;
+    margin-left: ${props => props.image ? medium('30px') : medium('50%')}
+
   }
   .center-box {
     width: 80%;
@@ -91,10 +98,16 @@ const LongCard = styled.div`
 `
 
 const ImageContainer = styled.div`
-  width: 50%;
+  width: 100%;
+  ${medium('width: 50%;')};
   display: flex;
   align-items: center;
   justify-content: center;
+  img {
+    max-width: 100%;
+    margin: 15px 0;
+    ${medium('margin: 50%;')};
+  }
 `
 
 export default Card

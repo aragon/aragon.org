@@ -2,10 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { Page } from '../components'
 import About from '../components/Project/About'
+import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import backgroundImage from '../components/Project/assets/hero-background.png'
 
 const Discover = () => (
   <Page path="/project">
+    <SecondaryNavbar/>
     <Section>
       <Container></Container>
     </Section>
@@ -14,8 +16,7 @@ const Discover = () => (
 )
 
 const Section = styled.section`
-  height: 750px;
-  padding-top: 64px;
+  height: 550px;
   background: #faf7ec;
 `;
 
