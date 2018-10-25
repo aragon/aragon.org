@@ -19,7 +19,7 @@ const FooterSection = styled(Section)`
 const Container = styled.div`
   display: grid;
   ${medium('grid-template-columns: 16.66% 16.66% 16.66% 16.66% 33.32%;')};
-  grid-template-columns: 100%;
+  grid-template-columns: 33%;
   grid-template-rows: auto;
   grid-column-gap: 15px;
   grid-row-gap: 15px;
@@ -53,6 +53,11 @@ const Item = styled.div`
       border: solid 0px transparent;
       padding: 0 30px;
       line-height: 2.4;
+      outline: none;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.8;
     }
     input {
       line-height: 2;
@@ -61,6 +66,11 @@ const Item = styled.div`
       background: transparent;
       outline: none;
     }
+  }
+  &.mobile-full {
+    grid-column-start: 1;
+    ${medium('grid-column-end: inherit; grid-column-start: inherit;')};
+    grid-column-end: 4;
   }
 `
 const Box = styled.div`
@@ -74,7 +84,7 @@ const Box = styled.div`
 const Footer = ({ ...props }) => (
   <FooterSection>
     <Container>
-      <Item>
+      <Item className="mobile-full">
           <Link to="/"><img src={logo} /></Link>
       </Item>
       <Item>
@@ -95,7 +105,7 @@ const Footer = ({ ...props }) => (
         <a>Fundation</a>
         <a>About</a>
       </Item>
-      <Item>
+      <Item className="mobile-full">
         <p>Follow us</p>
         <Box><a><img src={twitter} /></a><a><img src={ghost} /></a><a><img src={rocket} /></a></Box>
         <p>Be part of the conversation</p>
@@ -103,7 +113,7 @@ const Footer = ({ ...props }) => (
           <div className="email-field">
             <input type="email" name="EMAIL" placeholder="Enter your email" className="required email" id="mce-EMAIL"/>
             <div aria-hidden="true" style={{position:'absolute', left:'-5000px'}}>
-              <input type="text" name="b_a590aa3843a54b079d48e6e18_e81a44c4bd" tabIndex="-1" value=""/>
+              <input type="text" name="b_a590aa3843a54b079d48e6e18_e81a44c4bd" tabIndex="-1" />
             </div>
             <button type="submit" name="subscribe" id="mc-embedded-subscribe" className="button">Subscribe</button>
           </div>
