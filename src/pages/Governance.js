@@ -12,6 +12,7 @@ const Governance = () => (
       <Container>
         <h2>Power to the people</h2>
         <h4>Aragon is all about empowering people, starting with our own community.<br/>The project is community-governed, and we are committed on decentralizing power.</h4>
+        <a>Manifesto ></a>
       </Container>
     </Section>
     <GovernanceContent/>
@@ -34,6 +35,19 @@ const Container = styled.div`
   flex-direction: column;
   h2, h4 {
     color: white;
+  }
+  a {
+    font-family: 'GraphikLink',sans-serif;
+    font-size: 20px;
+    color: #22e0ff;
+    border: solid 0px transparent;
+    background: transparent;
+    line-height: 1.75;
+    padding: 0;
+    margin-top: 90px!important;
+    display: block;
+    text-align: center;
+    cursor: pointer;
   }
 `;
 

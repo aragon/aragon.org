@@ -23,6 +23,7 @@ class Card extends React.Component {
         <div className={textAlign + "-box"}>
           {title && <h1>{title}</h1>}
           {content && <h1>{content}</h1>}
+          {children}
         </div>
         {image && textAlign == 'left' && <ImageContainer><img src={require(`../${image}`)}/></ImageContainer>}
       </LongCard>

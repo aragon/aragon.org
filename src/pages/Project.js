@@ -4,26 +4,66 @@ import { Page } from '../components'
 import About from '../components/Project/About'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import backgroundImage from '../components/Project/assets/hero-background.png'
+import Section from '../components/General/Section'
 
 const Project = () => (
   <Page path="/project">
     <SecondaryNavbar/>
-    <Section>
-      <Container></Container>
-    </Section>
+    <HeroSection>
+      <Box>
+        <Container>
+          <h2>Fight for freedom</h2>
+          <h4>Aragon is a project to empower freedom by creating tools for decentralized organizations to thrive.</h4>
+          <a>Watch it now ></a>
+        </Container>
+        <Container>
+          <iframe src="https://www.youtube-nocookie.com/embed/AqjIWmiAidw?rel=0&amp;ecver=2" frameBorder="0" allow="autoplay; encrypted-media"  allowFullScreen></iframe>
+        </Container>
+      </Box>
+    </HeroSection>
     <About/>
   </Page>
 )
 
-const Section = styled.section`
+const HeroSection = styled(Section)`
   height: 550px;
   background: #faf7ec;
+  background-image: url(${backgroundImage});
+  padding-top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a, button {
+    font-family: 'GraphikLink',sans-serif;
+    font-size: 20px;
+    text-align: left;
+    color: #22e0ff;
+    border: solid 0px transparent;
+    background: transparent;
+    line-height: 1.75;
+    padding: 0;
+    margin-top: 30px;
+    display: block;
+    font-weight: 500;
+  }
+`;
+const Box = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const Container = styled.div`
+  width: 100%;
+  h2, h4 {
+    text-align: left;
+  }
+  iframe {
+    width: 90%;
+    margin-left: 10%;
+    border-radius: 21px;
+    height: 238px;
+  }
 `;
 
-const Container = styled.div`
-  background-image: url(${backgroundImage});
-  height: 100%;
-  width: 100%;
-`;
 
 export default Project
