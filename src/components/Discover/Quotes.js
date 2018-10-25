@@ -11,8 +11,8 @@ const Quotes = () => (
   <QuoteSection>
     <h2>A new era for organizations</h2>
     <Box>
-      <Quote content="I’m using Aragon to create my non-profit. Thanks to Aragon, all my finances are public so my donors can check how we spend funds and how we are helping others. Anyone can donate with just a couple clicks."/>
-      <Quote content="Aragon is perfect for open source projects. Traditional organizations just aren’t ready for digital communities. With Aragon, I can easily add and reward my contributors, making my project sustainable."/>
+      <Quote image={'Discover/assets/quote1.png'} title="Mike Crason" content="I’m using Aragon to create my non-profit. Thanks to Aragon, all my finances are public so my donors can check how we spend funds and how we are helping others. Anyone can donate with just a couple clicks."/>
+      <Quote image={'Discover/assets/quote2.png'} title="Laura Smith" content="Aragon is perfect for open source projects. Traditional organizations just aren’t ready for digital communities. With Aragon, I can easily add and reward my contributors, making my project sustainable."/>
     </Box>
   </QuoteSection>
 );

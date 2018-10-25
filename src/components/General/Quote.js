@@ -8,12 +8,15 @@ class Quote extends React.Component {
     const {
       title,
       content,
-      imageUrl,
+      image,
       children,
     } = this.props
     return (
       <QuoteContainer>
-        {content && <p>{content}</p>}
+        <div>
+          { title && image && <h4><img src={require(`../${image}`)} />{title}</h4>}
+          {content && <p>{content}</p>}
+        </div>
       </QuoteContainer>
     )
   }
@@ -26,6 +29,16 @@ const QuoteContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 110px;
+  h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1C1D23;
+    img {
+      padding-right: 15px; 
+    }
+  }
 `
 
 export default Quote

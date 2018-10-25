@@ -17,6 +17,23 @@ const Content = styled.div`
     text-align: left;
     color: #7f8198;
   }
+  h2 {
+    font-family: 'GraphikLink', sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 0.91;
+    text-align: center;
+    color: #2d4051;
+    margin: 30px 0;
+  }
+  h4 {
+    font-family: 'GraphikRegular', sans-serif;
+    font-size: 20px;
+    line-height: 1.75;
+    letter-spacing: 0.1px;
+    text-align: center;
+    color: #7f8198;
+  }
 `;
 
 const menuItems = [

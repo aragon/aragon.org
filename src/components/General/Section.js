@@ -9,15 +9,6 @@ const StyledSection = styled.section`
   padding: 30px;
   position: relative;
   background: white;
-  h2 {
-    font-family: 'GraphikLink', sans-serif;
-    font-size: 42px;
-    font-weight: 300;
-    line-height: 0.91;
-    text-align: center;
-    color: #2d4051;
-    margin: 30px 0;
-  }
 `;
 
 const Container = styled.div`

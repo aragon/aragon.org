@@ -44,12 +44,7 @@ const SmallCard = styled.div`
     width: 100px;
   }
   p {
-    font-family: 'GraphikRegular', sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
-    letter-spacing: 0.1px;
     text-align: center;
-    color: #7f8198;
   }
   h1 {
     font-family: 'GraphikLight', sans-serif;

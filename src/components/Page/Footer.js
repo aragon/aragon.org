@@ -3,7 +3,7 @@ import { Text, breakpoint, SafeLink } from '@aragon/ui'
 import { Link } from 'react-static'
 import styled from 'styled-components'
 import Section from '../General/Section'
-import logo from './assets/logo.svg'
+import logo from './assets/logo-footer.svg'
 import twitter from './assets/twitter.svg'
 import ghost from './assets/ghost.svg'
 import rocket from './assets/rocket.svg'
@@ -47,7 +47,7 @@ const Item = styled.div`
     button {
       margin-left: 15px;
       opacity: 0.35;
-      border-radius: 1px;
+      border-radius: 3px;
       background-image: linear-gradient(72deg, #00dbe2, #01bfe3);
       color: white;
       border: solid 0px transparent;

@@ -9,7 +9,10 @@ const Grants = () => (
   <Page path="/project/grants">
     <SecondaryNavbar/>
     <Section>
-      <Container></Container>
+      <Container>
+        <h2>Aragon Nest</h2>
+        <h4>Aragon is re-inventing the future of organizations. But we cannot do it alone. <br/>Nest was born to help the ecosystem flourish.</h4>
+      </Container>
     </Section>
     <GrantseContent/>
   </Page>
@@ -25,6 +28,10 @@ const Container = styled.div`
   height: 100%;
   width: 100%;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export default Grants
