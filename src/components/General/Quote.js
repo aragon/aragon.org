@@ -13,7 +13,7 @@ class Quote extends React.Component {
     } = this.props
     return (
       <QuoteContainer>
-
+        {content && <p>{content}</p>}
       </QuoteContainer>
     )
   }
@@ -22,6 +22,10 @@ class Quote extends React.Component {
 const QuoteContainer = styled.div`
   background-image: radial-gradient(circle at 1% 0, #ffffff, rgba(255, 255, 255, 0.36));
   border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 export default Quote

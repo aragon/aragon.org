@@ -17,10 +17,10 @@ const About = () => (
         <Governance/>
         <h6>Governance</h6>
       </InternalItem>
-      <Item>
+      <InternalItem to="/project/grants">
         <Grants/>
         <h6>Grants</h6>
-      </Item>
+      </InternalItem>
       <Item>
         <Contribute/>
         <h6>Contribute</h6>

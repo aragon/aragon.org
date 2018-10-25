@@ -2,16 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import { Page } from '../components'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
-import backgroundImage from '../components/Project/assets/governance-background.png'
-import GovernanceContent from '../components/Project/GovernanceContent'
+import backgroundImage from '../components/Project/assets/grants-background.png'
+import GrantseContent from '../components/Project/GrantsContent'
 
-const Governance = () => (
-  <Page path="/project/governance">
+const Grants = () => (
+  <Page path="/project/grants">
     <SecondaryNavbar/>
     <Section>
       <Container></Container>
     </Section>
-    <GovernanceContent/>
+    <GrantseContent/>
   </Page>
 )
 
@@ -27,4 +27,4 @@ const Container = styled.div`
   background-size: cover;
 `;
 
-export default Governance
+export default Grants

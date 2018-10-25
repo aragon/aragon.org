@@ -9,56 +9,13 @@ const medium = css => breakpoint('medium', css);
 const Content = styled.div`
   min-height: calc(100vh - 116px)!important;
 
-  section.all-page {
-    min-height: calc(100vh - 116px)!important;
-  }
-  .dark.dark-form {
-    background: #18181A;
-  }
-  .dark.dark-form {
-    background: #1f1f21;
-    ${medium('background: #18181A;')};
-  }
-  .light {
-    background: #fafdfd;
-  }
-  .light.light-form {
-    background: #eff5f8;
-    ${medium('background: #fafdfd;')};
-  }
-  .white {
-    background: white;
-  }
-  .button-strong-div {
-    display: flex;
-  }
-  .button-strong-div.centered {
-    justify-content: center;
-  }
-  a.button-strong {
-    text-decoration: none;
-    width: auto;
-    padding: 10px 15px;
-    white-space: nowrap;
-    line-height: 1;
-    font-size: 15px;
-    border: 0;
-    border-radius: 3px;
-    outline: 0;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 1px 1px rgba(0,0,0,0);
-    color: #FFFFFF;
-    background-image: linear-gradient( 130deg,#00B4E6,#00F0E0 );
-    display: flex;
-    align-items: center;
-    span {
-      font-weight: 800;
-    }
-  }
-  a.button-strong:hover {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.39);
+  p {
+    font-family: 'GraphikRegular', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.1px;
+    text-align: left;
+    color: #7f8198;
   }
 `;
 

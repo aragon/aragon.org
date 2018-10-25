@@ -1,9 +1,57 @@
-<svg width="206" height="166" viewBox="0 0 206 166" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.146 60.4595L103.135 1L205 60.4595" stroke="url(#paint0_linear)" stroke-width="0.5" stroke-dasharray="1"/>
-<defs>
-<linearGradient id="paint0_linear" x1="1.146" y1="1" x2="1.146" y2="60.4595" gradientUnits="userSpaceOnUse">
-<stop stop-color="#00DFFF" stop-opacity="0.929008"/>
-<stop offset="1" stop-color="#5CCFE8" stop-opacity="0.01"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="206px" height="166px" viewBox="0 0 206 166" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 55</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="64.8383539%" y1="13.8241169%" x2="50.0653333%" y2="99.6205677%" id="linearGradient-1">
+            <stop stop-color="#B0E4EF" offset="0%"></stop>
+            <stop stop-color="#44C9E6" offset="100%"></stop>
+        </linearGradient>
+        <path d="M102.846247,120.623391 L0,60.2052667 L102.846247,0 L102.846247,120.623391 Z M102.852624,120.623391 L102.852624,0 L205.846247,60.2052667 L102.852624,120.623391 Z" id="path-2"></path>
+        <linearGradient x1="58.4166067%" y1="46.3771764%" x2="50.0653333%" y2="99.6205677%" id="linearGradient-4">
+            <stop stop-color="#B0E4EF" offset="0%"></stop>
+            <stop stop-color="#44C9E6" offset="100%"></stop>
+        </linearGradient>
+        <path d="M102.846247,124.947716 L0,64.529591 L102.846247,4.32432432 L102.846247,124.947716 Z M102.852624,124.947716 L102.852624,4.32432432 L205.846247,64.529591 L102.852624,124.947716 Z" id="path-5"></path>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-8">
+            <stop stop-color="#00DFFF" stop-opacity="0.929008152" offset="0%"></stop>
+            <stop stop-color="#5CCFE8" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Project---Governance@2x" transform="translate(-902.000000, -739.000000)">
+            <g id="Group-55" transform="translate(902.000000, 740.000000)">
+                <g id="Group-46">
+                    <g id="Group-45">
+                        <g id="Group-41" transform="translate(0.000000, 39.594595)">
+                            <g id="Group-36">
+                                <g id="Group-26">
+                                    <g id="Group-5-Copy">
+                                        <g id="concrete-wall">
+                                            <mask id="mask-3" fill="white">
+                                                <use xlink:href="#path-2"></use>
+                                            </mask>
+                                            <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                            <mask id="mask-6" fill="white">
+                                <use xlink:href="#path-5"></use>
+                            </mask>
+                            <use id="Mask-Copy" stroke="url(#linearGradient-4)" stroke-width="0.5" stroke-dasharray="1" xlink:href="#path-5"></use>
+                        </g>
+                        <path d="M102.846247,125.623391 L0,65.2052667 L102.846247,5 L102.846247,125.623391 Z M102.852624,125.623391 L102.852624,5 L205.846247,65.2052667 L102.852624,125.623391 Z" id="Combined-Shape" fill="url(#linearGradient-7)"></path>
+                        <path d="M102.846247,120.623391 L0,60.2052667 L102.846247,0 L102.846247,120.623391 Z M102.852624,120.623391 L102.852624,0 L205.846247,60.2052667 L102.852624,120.623391 Z" id="Combined-Shape-Copy" fill="url(#linearGradient-7)"></path>
+                        <path d="M1.14583333,59.4594595 L103.135205,0 L205,59.4594595" id="Path-2" stroke="url(#linearGradient-8)" stroke-width="0.5" stroke-dasharray="1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>
