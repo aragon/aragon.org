@@ -19,7 +19,7 @@ const About = () => (
     <Container>
       <Card imageUrl={'Home/assets/home1'} title="On a fight for freedom" content={mudule1Content}></Card>
       <Card imageUrl={'Home/assets/home2'} title="Build human collaboration" content={mudule2Content}></Card>
-      <LongCard background={'Home/assets/background-home1.png'} textAlign="left" colorWhite title="The world’s first digital jurisdiction" content={mudule5Content}></LongCard>
+      <LongCard background={'Home/assets/background-home1.png'} image={'Home/assets/home5.png'} textAlign="left" colorWhite title="The world’s first digital jurisdiction" content={mudule5Content}></LongCard>
       <Card imageUrl={'Home/assets/home3'} title="Nest, our grants program" content={mudule3Content}></Card>
       <Card imageUrl={'Home/assets/home4'} title="Fight for freedom with us" content={mudule4Content}></Card>
     </Container>

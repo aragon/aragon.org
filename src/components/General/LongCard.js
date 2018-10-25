@@ -105,6 +105,7 @@ const ImageContainer = styled.div`
   justify-content: center;
   img {
     max-width: 100%;
+    width: 430px;
     margin: 15px 0;
     ${medium('margin: 50%;')};
   }

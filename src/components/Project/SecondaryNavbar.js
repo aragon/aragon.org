@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { breakpoint, SafeLink } from '@aragon/ui'
+import { Link } from 'react-static'
 const medium = css => breakpoint('medium', css);
 import Governance from './assets/Governance'
 import Grants from './assets/Grants.js'
@@ -12,10 +13,10 @@ import Wiki from './assets/Wiki.js'
 const About = () => (
   <Navbar>
     <Container>
-      <Item>
+      <InternalItem to="/project/governance">
         <Governance/>
         <h6>Governance</h6>
-      </Item>
+      </InternalItem>
       <Item>
         <Grants/>
         <h6>Grants</h6>
@@ -75,9 +76,10 @@ const Item = styled(SafeLink)`
     ${medium('width: auto')};
   }
 `
-const InternalItem = styled.a`
+const InternalItem = styled(Link)`
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
   &:hover {
     h6 {
       color: #22e0ff;

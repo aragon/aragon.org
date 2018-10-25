@@ -1,7 +1,7 @@
 import React from 'react'
 const Svg = () => (
   <svg width="37" height="39" viewBox="0 0 37 39" fill="none">
-  <path fillRule="evenodd" clipRule="evenodd" d="M33.6667 5.625V35.6875H5.66667C4.37808 35.6875 3.33333 34.6532 3.33333 33.375C3.33333 32.0968 4.37808 31.0625 5.66667 31.0625H31.3333V1H5.66667C3.0895 1 1 3.07084 1 5.625V33.375C1 35.9292 3.0895 38 5.66667 38H36V5.625H33.6667Z" fill="white" stroke="white" className="white" stroke-width="0.3"/>
+  <path fillRule="evenodd" clipRule="evenodd" d="M33.6667 5.625V35.6875H5.66667C4.37808 35.6875 3.33333 34.6532 3.33333 33.375C3.33333 32.0968 4.37808 31.0625 5.66667 31.0625H31.3333V1H5.66667C3.0895 1 1 3.07084 1 5.625V33.375C1 35.9292 3.0895 38 5.66667 38H36V5.625H33.6667Z" fill="white" stroke="white" className="white" strokeWidth="0.3"/>
   <rect x="10.4055" y="6.64103" width="13.2973" height="12.3846" fill="url(#pattern0)"/>
   <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="10" y="6" width="14" height="14">
   <rect x="10.4055" y="6.64103" width="13.2973" height="12.3846" fill="url(#pattern1)"/>

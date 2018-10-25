@@ -5,7 +5,7 @@ import About from '../components/Project/About'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import backgroundImage from '../components/Project/assets/hero-background.png'
 
-const Discover = () => (
+const Project = () => (
   <Page path="/project">
     <SecondaryNavbar/>
     <Section>
@@ -26,4 +26,4 @@ const Container = styled.div`
   width: 100%;
 `;
 
-export default Discover
+export default Project

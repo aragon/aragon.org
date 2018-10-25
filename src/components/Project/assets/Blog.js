@@ -2,7 +2,7 @@ import React from 'react'
 const Svg = () => (
   <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg" >
   <path fillRule="evenodd" clipRule="evenodd" d="M7.67414 10.3336V8.40664H1.91856C1.91856 8.40664 0 9.27379 0 10.3336V34.196C0.0639762 36.2836 1.7587 37.9215 3.83711 37.9215H7.67423L7.67414 10.3336Z" className="white" fill="white"/>
-  <path fillRule="evenodd" clipRule="evenodd" d="M38.0101 1.05643H8.59258C7.66525 1.05643 6.67403 2.11627 6.67403 2.98342V35.0996C6.67403 37.2193 4.94732 38.9536 2.83691 38.9536H36.0916C38.202 38.9536 39.9287 37.2193 39.9287 35.0996V2.98342C39.9287 2.05209 38.8735 1.05643 38.0101 1.05643Z" className="white" fill="white" stroke="#2D2E38" stroke-width="2"/>
+  <path fillRule="evenodd" clipRule="evenodd" d="M38.0101 1.05643H8.59258C7.66525 1.05643 6.67403 2.11627 6.67403 2.98342V35.0996C6.67403 37.2193 4.94732 38.9536 2.83691 38.9536H36.0916C38.202 38.9536 39.9287 37.2193 39.9287 35.0996V2.98342C39.9287 2.05209 38.8735 1.05643 38.0101 1.05643Z" className="white" fill="white" stroke="#2D2E38" strokeWidth="2"/>
   <rect x="10" y="7" width="13" height="12" fill="url(#pattern0)"/>
   <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="10" y="7" width="13" height="12">
   <rect x="10" y="7" width="13" height="12" fill="url(#pattern1)"/>
