@@ -36,8 +36,11 @@ const QuoteContainer = styled.div`
     justify-content: center;
     color: #1C1D23;
     img {
-      padding-right: 15px; 
+      padding-right: 15px;
     }
+  }
+  p {
+    min-height: 110px;
   }
 `
 
