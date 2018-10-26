@@ -42,6 +42,20 @@ const Content = styled.div`
     color: #01c3e3;
     margin-top: 30px;
     display: block;
+    text-decoration: none;
+  }
+  .hero-link {
+    font-family: 'GraphikLink',sans-serif;
+    font-size: 20px;
+    color: #22e0ff;
+    border: solid 0px transparent;
+    background: transparent;
+    line-height: 1.75;
+    padding: 0;
+    margin-top: 30px!important;
+    display: block;
+    text-align: left;
+    cursor: pointer;
   }
 `;
 

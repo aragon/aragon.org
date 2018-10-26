@@ -9,7 +9,7 @@ const medium = css => breakpoint('medium', css);
 
 const mudule1Content = (<p>Aragon organizations are digital natives. They live on Ethereum, a global ledger secured by economic incentives and cryptography. No one can take your organization away from you.</p>);
 const mudule2Content = (<p>Aragon leverages smart contracts. Smart contracts are like traditional contracts, but written in computer code and enforced by the blockchain. As efficient and automatic as it gets.</p>);
-const mudule3Content = (<p>Aragon organizations are global from day one. Collaborate with people across countries or continents, without incurring into cumbersome bureaucrazy.</p>);
+const mudule3Content = (<p>Aragon organizations are global from day one. Collaborate with people across countries or continents, without incurring into cumbersome bureau-crazy.</p>);
 const mudule4Content = (<p>With Aragon, you don’t need to pick a one-size-fits-all solution. You can experiment with new kinds of human collaboration, just with a few clicks.</p>);
 
 const About = () => (

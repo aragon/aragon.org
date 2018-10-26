@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Page } from '../components'
 import About from '../components/Home/About'
 import Section from '../components/General/Section'
+import video from '../components/Home/home-assets/home-video.mp4'
 
 const Home = () => (
   <Page path="/">
@@ -11,10 +12,12 @@ const Home = () => (
         <Container>
           <h2>Freedom to organize</h2>
           <h4>Aragon lets you freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, or communities.</h4>
-          <a>Discover the procuct ></a>
+          <a className="hero-link">Discover the procuct ></a>
         </Container>
         <Container>
-          <span></span>
+        <video playsInline autoPlay muted loop>
+          <source src={video} type="video/mp4" />
+        </video>
         </Container>
       </Box>
     </HeroSection>
@@ -24,23 +27,17 @@ const Home = () => (
 
 const HeroSection = styled(Section)`
   background-color: #1c1d23;
-  min-height: 550px;
+  min-height: 650px;
   padding-top: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  a {
-    font-family: 'GraphikLink',sans-serif;
-    font-size: 20px;
-    color: #22e0ff;
-    border: solid 0px transparent;
-    background: transparent;
-    line-height: 1.75;
-    padding: 0;
-    margin-top: 30px!important;
-    display: block;
-    text-align: left;
-    cursor: pointer;
+  position: relative;
+  video {
+    width: 40%;
+    right: 0;
+    position: absolute;
+    bottom: 0;
   }
 `;
 const Box = styled.div`

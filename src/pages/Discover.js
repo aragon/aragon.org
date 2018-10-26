@@ -18,6 +18,7 @@ const Discover = () => (
         <Container>
           <h2>Take back your freedom to organize</h2>
           <h4>Discover the unparalleled power to organize. Whether you want to collaborate with your co-founder, open a non-profit, or just organize an online community, Aragon is there for you. </h4>
+          <a className="hero-link">Try it out ></a>
         </Container>
       </Box>
     </HeroSection>
