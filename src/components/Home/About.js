@@ -10,7 +10,7 @@ const medium = css => breakpoint('medium', css);
 
 const mudule1Content = (
   <span>
-    <p>The Aragon project is a community with the mission to empower freedom by creating tools for decentralized governance.</p>
+    <p>We are a community with the mission to empower freedom by creating tools for decentralized organizations to thrive.</p>
     <p><a className="action-button">About ></a></p>
   </span>
 );
@@ -22,20 +22,20 @@ const mudule2Content = (
 );
 const mudule3Content = (
   <span>
-    <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday.</p>
-    <p><a className="action-button">Discover nest ></a></p>
+    <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday lives. Aragon Nest, our grants program, is bringing it to reality.</p>
+    <p><a className="action-button">Nest ></a></p>
   </span>
 );
 const mudule4Content = (
   <span>
-    <p>Our community is always looking for individuals who want to help our fight for freedom. Check out how to contribute or apply for a job.</p>
+    <p>Our community is always looking for individuals who want to help our fight for freedom. Check out how to contribute or check open positions.</p>
     <p><a className="action-button">Contribute ></a></p>
   </span>
 );
 const mudule5Content = (
   <span>
     <p>Aragon organizations are not only great because they are decentralized, global and unstoppable. They will also benefit from the Aragon Network, the world’s first digital jurisdiction.</p>
-    <p><a className="action-button">Aragon Network</a></p>
+    <p><a className="action-button">Aragon Network ></a></p>
   </span>
 );
 
@@ -46,7 +46,7 @@ const About = () => (
       <Card imageUrl={'Home/home-assets/home2'} title="Build human collaboration" content={mudule2Content}></Card>
       <LongCard background={'Home/home-assets/background-home1.png'} image={'Home/home-assets/home5.png'} textAlign="left" colorWhite title="The world’s first digital jurisdiction" content={mudule5Content}></LongCard>
       <Card imageUrl={'Home/home-assets/home3'} title="Nest, our grants program" content={mudule3Content}></Card>
-      <Card imageUrl={'Home/home-assets/home4'} title="Fight for freedom with us" content={mudule4Content}></Card>
+      <Card imageUrl={'Home/home-assets/home4'} title={(<span>Join <br/>the fight</span>)} content={mudule4Content}></Card>
     </Container>
   </Section>
 );
