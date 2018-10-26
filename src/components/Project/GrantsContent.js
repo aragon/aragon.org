@@ -9,7 +9,7 @@ const medium = css => breakpoint('medium', css);
 const mudule1Content = (<p>Aragon Nest is run in the open. That way, we ensure we remain transparent to our community and the grant recipients and applicants. Everything going on in Nest is reflected in GitHub.</p>);
 const mudule2Content = (<p>We are looking for people that want to help the Aragon and Ethereum ecosystems advance. If you believe you have a proposal or an application for the program, read more and apply.</p>);
 
-const About = () => (
+const GrantsContent = () => (
   <Section>
     <Container>
       <LongCard textAlign="center" color="#b4b5cc" gradient="radial-gradient(circle at 99% 100%, #1c1d23, #2d2e39)" colorWhite title="A thriving ecosystem">
@@ -78,4 +78,4 @@ const LongCardContainer = styled.div`
   }
 `
 
-export default About
+export default GrantsContent

@@ -21,10 +21,10 @@ const About = () => (
         <Grants/>
         <h6>Grants</h6>
       </InternalItem>
-      <Item>
+      <InternalItem to="/project/contribute">
         <Contribute/>
         <h6>Contribute</h6>
-      </Item>
+      </InternalItem>
       <Item href="https://blog.aragon.org/" target="_blank">
         <Blog/>
         <h6>Blog</h6>

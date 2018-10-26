@@ -1,28 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Page } from '../components'
-import NetworkeContent from '../components/Network/NetworkContent'
+import SecondaryNavbar from '../components/Project/SecondaryNavbar'
+import ContributeeContent from '../components/Project/ContributeContent'
 
-const Network = () => (
-  <Page path="/network">
+const Contribute = () => (
+  <Page path="/project/contribute">
+    <SecondaryNavbar/>
     <Section>
       <Container>
-        <h2>The world’s first digital jurisdiction</h2>
-        <h4>Decentralized organizations change the way we think about organizations. <br/>The Aragon Network will change the way you think about jurisdictions and governments.</h4>
-        <a>Whitepaper ></a>
+        <h2>The community awaits you</h2>
+        <h4>The Aragon community is united towards the same goal: to re-shape the future of organizations.</h4>
+        <a>Manifesto ></a>
       </Container>
     </Section>
-    <NetworkeContent/>
+    <ContributeeContent/>
   </Page>
 )
 
 const Section = styled.section`
   height: 550px;
-  background: #faf7ec;
+  background-color: #fbf2e8;
 `;
 
 const Container = styled.div`
-  background-color: #1c1d23;
+  background-color: #fbf2e8;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -43,9 +45,6 @@ const Container = styled.div`
     text-align: center;
     cursor: pointer;
   }
-  h2, h4 {
-    color: white;
-  }
 `;
 
-export default Network
+export default Contribute

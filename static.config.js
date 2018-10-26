@@ -46,6 +46,11 @@ export default {
       getData: () => ({ title: '' }),
     },
     {
+      path: '/project/contribute',
+      component: 'src/pages/Contribute',
+      getData: () => ({ title: '' }),
+    },
+    {
       path: '/network',
       component: 'src/pages/Network',
       getData: () => ({ title: '' }),
