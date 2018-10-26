@@ -6,16 +6,16 @@ import styled from 'styled-components'
 import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
 
-const mudule1Content = (<p>The Aragon Network encompasses a set of courts, which can be used to settle disputes. By using decentralized organizations and smart contracts, we want cases to be closed exponentially faster than how it works in traditional courts.</p>);
-const mudule2Content = (<p>Mom probably advised you not to interact with Internet strangers. Not anymore. Thanks to the Aragon Network, you can transact with pseudonymous parties, or staying pseudonymous yourself.</p>);
-const mudule3Content = (<p>When starting an agreement with someone on the Aragon Network, you can agree with the other party on a minimum and maximum amount of tokens. That pool of tokens will be taken away by the court in case of disputes, to penalize bad behaviour and insure good one.</p>);
+const mudule1Content = (<p>The Aragon Network encompasses a set of courts, which can be used to settle disputes. By using smart contracts, cases can be closed exponentially faster than in traditional courts.</p>);
+const mudule2Content = (<p>Mom probably advised you not to interact with strangers. But thanks to the Aragon Network, you can transact with people who are using aliases, or stay anonymous yourself. You are in control and can open disputes if someone misbehaves.</p>);
+const mudule3Content = (<p>You can agree on a minimum and maximum deposit of tokens upon creating a new agreement on the Aragon Network. These deposits can be used to penalize bad behaviour in the Network court, warranting good behaviour.</p>);
 const mudule4Content = (<p>The Aragon Network is not only a digital jurisdiction, but one in which you can make your voice heard. The Aragon Network will be community-governed, just like Aragon itself.</p>);
 
 const NetworkContent = () => (
   <Section>
     <Container>
       <Card imageUrl={'Network/assets/network1'} title="Effective dispute resolution" content={mudule1Content}></Card>
-      <Card imageUrl={'Network/assets/network2'} title="Pseudonymity and trust, together" content={mudule2Content}></Card>
+      <Card imageUrl={'Network/assets/network2'} title="Anonymity and trust, together" content={mudule2Content}></Card>
       <Card imageUrl={'Network/assets/network3'} title="Insured agreements" content={mudule3Content}></Card>
       <Card imageUrl={'Network/assets/network4'} title="Shape it yourself" content={mudule4Content}></Card>
     </Container>

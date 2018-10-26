@@ -12,7 +12,7 @@ const Contribute = () => (
       <Container>
         <h2>The community awaits you</h2>
         <h4>The Aragon community is united towards the same goal: to re-shape the future of organizations.</h4>
-        <a><span>Manifesto <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
+        <a href="https://blog.aragon.org/decentralizing-aragons-development-5062fd6d135d" target="_blank"><span>Read more <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
       </Container>
     </ContributeSection>
     <ContributeeContent/>
