@@ -9,7 +9,7 @@ const Network = () => (
       <Container>
         <h2>The world’s first digital jurisdiction</h2>
         <h4>Decentralized organizations change the way we think about organizations. <br/>The Aragon Network will change the way you think about jurisdictions and governments.</h4>
-        <a><span>Whitepaper <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
+        <a href="https://github.com/aragon/whitepaper" target="_blank"><span>Whitepaper <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
       </Container>
     </Section>
     <NetworkeContent/>
