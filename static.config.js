@@ -1,7 +1,7 @@
 import fs from 'fs-extra'
 import path from 'path'
-import chalk from 'chalk'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import { ServerStyleSheet } from 'styled-components'
 import React from 'react'
 
@@ -87,6 +87,7 @@ export default {
         oneOf: [defaultLoaders.jsLoader, defaultLoaders.cssLoader, fileLoader],
       },
     ]
+    conf.plugins.push(new ExtractTextPlugin('app.css'))
 
     return conf
   },
