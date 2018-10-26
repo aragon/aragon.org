@@ -13,7 +13,7 @@ const Governance = () => (
       <Container>
         <h2>Power to the people</h2>
         <h4>Aragon is all about empowering people, starting with our own community.<br/>The project is community-governed, and we are committed on decentralizing power.</h4>
-        <a><span>Manifesto <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
+        <a href="https://app.aragon.org" target="_blank"><span>Manifesto <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
       </Container>
     </GovernanceSection>
     <GovernanceContent/>

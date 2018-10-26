@@ -14,11 +14,21 @@ const Quotes = () => (
       <Quote image={'Discover/assets/quote1.png'} title="Mike Crason" content="I’m using Aragon to create my non-profit. Thanks to Aragon, all my finances are public so my donors can check how we spend funds and how we are helping others. Anyone can donate with just a couple clicks."/>
       <Quote image={'Discover/assets/quote2.png'} title="Laura Smith" content="Aragon is perfect for open source projects. Traditional organizations just aren’t ready for digital communities. With Aragon, I can easily add and reward my contributors, making my project sustainable."/>
     </Box>
+    <p className="link">
+      <a className="hero-link" href="http://aragon.aragonpm.com/#/ngo.aragonid.eth" target="_blank">
+        <span>Check an example Aragon organization <img src={require(`../General/assets/hero-arrow.svg`)}/></span>
+      </a>
+    </p>
   </QuoteSection>
 );
 
 const QuoteSection = styled(Section)`
   background-image: linear-gradient(289deg, #95bbce, #c5d0e6 46%, #e7e4f6);
+  p.link, a.hero-link {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1eb8d1;
+  }
 `
 const Box = styled.div`
   display: grid;

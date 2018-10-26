@@ -101,6 +101,9 @@ const Content = styled.div`
     cursor: pointer;
     text-decoration: none;
   }
+  a {
+    text-decoration: none;
+  }
 `;
 
 export default Page

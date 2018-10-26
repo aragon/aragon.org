@@ -14,7 +14,7 @@ const mudule1Content = (
   );
 const mudule2Content = (
   <span>
-    <p><a className="action-button" target="_blank"><span>Read more <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
+    <p><a className="action-button" href="https://app.aragon.org" target="_blank"><span>Read more <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
   </span>
 );
 const BlogPost = () => (

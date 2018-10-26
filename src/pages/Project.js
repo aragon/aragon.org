@@ -17,7 +17,7 @@ const Project = () => (
         <Container>
           <h2>Fight for freedom</h2>
           <h4>Aragon is a project to empower freedom by creating tools for decentralized organizations to thrive.</h4>
-          <a><span>Watch it now <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
+          <a href="https://app.aragon.org" target="_blank"><span>Manifesto <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
         </Container>
         <Container>
           <iframe src="https://www.youtube-nocookie.com/embed/AqjIWmiAidw?rel=0&amp;ecver=2" frameBorder="0" allow="autoplay; encrypted-media"  allowFullScreen></iframe>

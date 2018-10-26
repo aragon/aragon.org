@@ -11,7 +11,7 @@ const medium = css => breakpoint('medium', css);
 const mudule1Content = (
   <span>
     <p>We are a community with the mission to empower freedom by creating tools for decentralized organizations to thrive.</p>
-    <p><a className="action-button"><span>About <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
+    <p><Link to="/project" className="action-button"><span>About <img src={require(`../General/assets/arrow.svg`)}/></span></Link></p>
   </span>
 );
 const mudule2Content = (
@@ -35,7 +35,7 @@ const mudule4Content = (
 const mudule5Content = (
   <span>
     <p>Aragon organizations are not only great because they are decentralized, global and unstoppable. They will also benefit from the Aragon Network, the world’s first digital jurisdiction.</p>
-    <p><a className="action-button"><span>Aragon Network <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
+    <p><Link to="/network" className="action-button"><span>Aragon Network <img src={require(`../General/assets/arrow.svg`)}/></span></Link></p>
   </span>
 );
 
