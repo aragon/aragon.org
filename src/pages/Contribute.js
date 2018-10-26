@@ -6,7 +6,7 @@ import ContributeeContent from '../components/Project/ContributeContent'
 
 const Contribute = () => (
   <Page path="/project/contribute">
-    <SecondaryNavbar/>
+    <SecondaryNavbar page="contribute"/>
     <Section>
       <Container>
         <h2>The community awaits you</h2>

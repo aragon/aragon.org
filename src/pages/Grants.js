@@ -7,7 +7,7 @@ import GrantseContent from '../components/Project/GrantsContent'
 
 const Grants = () => (
   <Page path="/project/grants">
-    <SecondaryNavbar/>
+    <SecondaryNavbar page="grants"/>
     <Section>
       <Container>
         <h2>Aragon Nest</h2>

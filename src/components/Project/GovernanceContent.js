@@ -15,7 +15,7 @@ const About = () => (
     <Container>
       <Card imageUrl={'Project/assets/governance1'} title="Empowering participation" content={mudule1Content}></Card>
       <Card imageUrl={'Project/assets/governance2'} title={(<span>Transparent <br/> finances</span>)} content={mudule2Content}></Card>
-      <LongCard image={'Project/assets/governance3.png'} textAlign="left" color="#b4b5cc" background="Home/assets/background-home1.png" colorWhite title="A decentralized organization" content={module3Content}></LongCard>
+      <LongCard image={'Project/assets/governance3.png'} textAlign="left" color="#b4b5cc" background="Home/home-assets/background-home1.png" colorWhite title="A decentralized organization" content={module3Content}></LongCard>
     </Container>
   </Section>
 );

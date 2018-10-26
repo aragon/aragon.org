@@ -10,18 +10,18 @@ import Blog from './assets/Blog.js'
 import Aracon from './assets/Aracon.js'
 import Wiki from './assets/Wiki.js'
 
-const About = () => (
+const SecondaryNavbar = ({ page, ...props }) => (
   <Navbar>
     <Container>
-      <InternalItem to="/project/governance">
+      <InternalItem className={ page && page === 'governance' && 'active' } to="/project/governance">
         <Governance/>
         <h6>Governance</h6>
       </InternalItem>
-      <InternalItem to="/project/grants">
+      <InternalItem className={ page && page === 'grants' && 'active' } to="/project/grants">
         <Grants/>
         <h6>Grants</h6>
       </InternalItem>
-      <InternalItem to="/project/contribute">
+      <InternalItem className={ page && page === 'contribute' && 'active' } to="/project/contribute">
         <Contribute/>
         <h6>Contribute</h6>
       </InternalItem>
@@ -59,7 +59,7 @@ const Item = styled(SafeLink)`
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  &:hover {
+  &:hover, &.active {
     h6 {
       color: #22e0ff;
     }
@@ -80,7 +80,7 @@ const InternalItem = styled(Link)`
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  &:hover {
+  &:hover, &.active {
     h6 {
       color: #22e0ff;
     }
@@ -94,4 +94,4 @@ const InternalItem = styled(Link)`
   }
 `
 
-export default About
+export default SecondaryNavbar

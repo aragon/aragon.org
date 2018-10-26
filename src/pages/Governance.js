@@ -7,7 +7,7 @@ import GovernanceContent from '../components/Project/GovernanceContent'
 
 const Governance = () => (
   <Page path="/project/governance">
-    <SecondaryNavbar/>
+    <SecondaryNavbar page="governance"/>
     <Section>
       <Container>
         <h2>Power to the people</h2>
