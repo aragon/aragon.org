@@ -78,12 +78,12 @@ const Content = styled.div`
     display: block;
     text-decoration: none;
   }
-  .action-button img {
+  .action-button img, .hero-link img {
     padding-left: 10px;
     height: 12px;
     width: auto;
   }
-  .action-button span {
+  .action-button span, .hero-link span {
     display: inline-flex;
     align-items: center;
   }
@@ -99,15 +99,7 @@ const Content = styled.div`
     display: block;
     text-align: left;
     cursor: pointer;
-  }
-  .hero-link img {
-    padding-left: 10px;
-    height: 12px;
-    width: auto;
-  }
-  .hero-link span {
-    display: inline-flex;
-    align-items: center;
+    text-decoration: none;
   }
 `;
 

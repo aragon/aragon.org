@@ -23,13 +23,13 @@ const mudule2Content = (
 const mudule3Content = (
   <span>
     <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday lives. Aragon Nest, our grants program, is bringing it to reality.</p>
-    <p><a className="action-button"><span>Nest <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
+    <p><Link to="project/grants"className="action-button"><span>Nest <img src={require(`../General/assets/arrow.svg`)}/></span></Link></p>
   </span>
 );
 const mudule4Content = (
   <span>
     <p>Our community is always looking for individuals who want to help our fight for freedom. Check out how to contribute or check open positions.</p>
-    <p><a className="action-button"><span>Contribute <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
+    <p><Link to="project/contribute" className="action-button"><span>Contribute <img src={require(`../General/assets/arrow.svg`)}/></span></Link></p>
   </span>
 );
 const mudule5Content = (

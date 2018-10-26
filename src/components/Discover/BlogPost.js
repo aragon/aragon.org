@@ -12,11 +12,16 @@ const mudule1Content = (
     <p><a className="action-button" href="https://blog.aragon.org/decentralized-organizations-can-solve-the-worlds-worst-problems-840db6255d12/" target="_blank"><span>Read more <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
   </span>
   );
+const mudule2Content = (
+  <span>
+    <p><a className="action-button" target="_blank"><span>Read more <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
+  </span>
+);
 const BlogPost = () => (
   <Section>
     <Container>
       <MariasPost background={'Discover/assets/background-discover3.png'} colorWhite textAlign="left" title="Freeing the Marias of the world" content={mudule1Content}></MariasPost>
-      <LongCard background={'Discover/assets/background-discover4.png'} colorWhite textAlign="center" title="Reclaim your freedom now"></LongCard>
+      <LongCard background={'Discover/assets/background-discover4.png'} colorWhite textAlign="center" title="Reclaim your freedom now" content={mudule2Content}></LongCard>
     </Container>
   </Section>
 );
