@@ -4,31 +4,35 @@ import { Page } from '../components'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import backgroundImage from '../components/Project/assets/grants-background.png'
 import GrantseContent from '../components/Project/GrantsContent'
+import Section from '../components/General/Section'
 
 const Grants = () => (
   <Page path="/project/grants">
     <SecondaryNavbar page="grants"/>
-    <Section>
+    <GrantsSection>
       <Container>
         <h2>Aragon Nest</h2>
         <h4>Aragon is re-inventing the future of organizations. But we cannot do it alone. <br/>Nest was born to help the ecosystem flourish.</h4>
         <a><span>Manifesto <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
       </Container>
-    </Section>
+    </GrantsSection>
     <GrantseContent/>
   </Page>
 )
 
-const Section = styled.section`
+const GrantsSection = styled(Section)`
   height: 550px;
-  background: #faf7ec;
+  background-image: url(${backgroundImage});
+  background-size: cover;
+  background-position: center
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Container = styled.div`
-  background-image: url(${backgroundImage});
   height: 100%;
   width: 100%;
-  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -3,24 +3,28 @@ import styled from 'styled-components'
 import { Page } from '../components'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import ContributeeContent from '../components/Project/ContributeContent'
+import Section from '../components/General/Section'
 
 const Contribute = () => (
   <Page path="/project/contribute">
     <SecondaryNavbar page="contribute"/>
-    <Section>
+    <ContributeSection>
       <Container>
         <h2>The community awaits you</h2>
         <h4>The Aragon community is united towards the same goal: to re-shape the future of organizations.</h4>
         <a><span>Manifesto <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
       </Container>
-    </Section>
+    </ContributeSection>
     <ContributeeContent/>
   </Page>
 )
 
-const Section = styled.section`
+const ContributeSection = styled(Section)`
   height: 550px;
   background-color: #fbf2e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Container = styled.div`
