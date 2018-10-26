@@ -33,7 +33,7 @@ const About = () => (
         </LongCardContainer>
       </LongCard>
       <Card imageUrl={'Project/assets/governance2'} title="Fully transparent" content={mudule1Content}></Card>
-      <Card imageUrl={'Home/assets/home4'} title="Apply now" content={mudule2Content}></Card>
+      <Card imageUrl={'Home/home-assets/home4'} title="Apply now" content={mudule2Content}></Card>
     </Container>
   </Section>
 );
