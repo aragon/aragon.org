@@ -6,6 +6,9 @@ import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import backgroundImage from '../components/Project/assets/hero-background.png'
 import Section from '../components/General/Section'
 
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+
 const Project = () => (
   <Page path="/project">
     <SecondaryNavbar/>
@@ -51,6 +54,8 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
 `;
 const Container = styled.div`
   width: 100%;

@@ -82,6 +82,10 @@ class Navbar extends React.Component {
           </BreakPoint>
           <BreakPoint to="medium">
             <MenuPanel items={menuItems} renderLink={renderMenuItemLink} />
+            <Link to={'/'}>
+              <MobileLogo src={logo} />
+            </Link>
+            <div style={{width: '30px'}}><span></span></div>
           </BreakPoint>
         </Center>
       </AragonNavbar>
@@ -120,8 +124,7 @@ const AragonNavbar = styled(animated.div)`
 `
 
 const Center = styled.div`
-  width: auto;
-  height: auto;
+
   ul {
     display: flex;
     div {
@@ -136,10 +139,20 @@ const Center = styled.div`
   img {
     margin: 0 30px;
   }
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ${medium('width: auto; height: auto; display: inherit;')};
 `
 
 const FlexLink = styled(Link)`
   display: flex;
+`
+
+const MobileLogo = styled.img`
+  margin: 0!important;
 `
 
 export default Navbar

@@ -5,14 +5,15 @@ import { Link } from 'react-static'
 import backgroundImage from './assets/unstoppable-org-background.png'
 import aragonImage from './assets/unstoppable-org.svg'
 
-import { breakpoint } from '@aragon/ui'
-const medium = css => breakpoint('medium', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+
 
 const UnstoppableOrganizations = () => (
   <UnstoppableSection>
     <Box>
       <Container>
-        <img src={aragonImage}/>
+        <Image src={aragonImage}/>
       </Container>
       <Container>
         <h2>Unstoppable <br/>organizations</h2>
@@ -36,6 +37,8 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
 `;
 const Container = styled.div`
   width: 100%;
@@ -48,6 +51,9 @@ const Container = styled.div`
     text-align: left;
     color: #b4b5cc;
   }
+`;
+const Image = styled.img`
+  max-width: 100%
 `;
 
 export default UnstoppableOrganizations

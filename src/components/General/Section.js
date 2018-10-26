@@ -6,7 +6,7 @@ const medium = css => breakpoint('medium', css);
 
 const StyledSection = styled.section`
   width: 100vw;
-  padding: 30px;
+  padding: 30px 15px;
   position: relative;
   background: white;
 `;

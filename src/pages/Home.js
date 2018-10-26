@@ -5,6 +5,9 @@ import About from '../components/Home/About'
 import Section from '../components/General/Section'
 import video from '../components/Home/home-assets/home-video.mp4'
 
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+
 const Home = () => (
   <Page path="/">
     <HeroSection>
@@ -44,6 +47,8 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
 `;
 const Container = styled.div`
   width: 100%;

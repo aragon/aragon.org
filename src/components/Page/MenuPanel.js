@@ -18,7 +18,7 @@ class Panel extends React.Component {
     const { items } = this.props
     const { opened } = this.state
     return (
-      <div>
+      <Pannel>
         <Button mode="text" onClick={() => this.setState({ opened: true })}>
           <img src={menu} />
         </Button>
@@ -42,7 +42,7 @@ class Panel extends React.Component {
             )}
           </Container>
         </SidePanel>
-      </div>
+      </Pannel>
     )
   }
 }
@@ -61,4 +61,14 @@ const Container = styled.div`
   }
 `
 
+const Pannel = styled.div`
+  button {
+    padding: 0;
+    margin: 0!important;
+  }
+  button img, div img {
+    padding: 0;
+    margin: 0;
+  }
+`
 export default Panel

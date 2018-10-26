@@ -8,6 +8,9 @@ import Product from '../components/Discover/Product'
 import UnstoppableOranizations from '../components/Discover/UnstoppableOranizations'
 import BlogPost from '../components/Discover/BlogPost'
 
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+
 const Discover = () => (
   <Page path="/discover">
     <HeroSection>
@@ -42,6 +45,8 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
 `;
 const Container = styled.div`
   width: 100%;

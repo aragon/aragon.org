@@ -12,10 +12,10 @@ const mudule1Content = (
     <p><a className="action-button" href="https://blog.aragon.org/decentralized-organizations-can-solve-the-worlds-worst-problems-840db6255d12/" target="_blank"><span>Read more <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
   </span>
   );
-const About = () => (
+const BlogPost = () => (
   <Section>
     <Container>
-      <LongCard background={'Discover/assets/background-discover3.png'} colorWhite textAlign="left" title="Freeing the Marias of the world" content={mudule1Content}></LongCard>
+      <MariasPost background={'Discover/assets/background-discover3.png'} colorWhite textAlign="left" title="Freeing the Marias of the world" content={mudule1Content}></MariasPost>
       <LongCard background={'Discover/assets/background-discover4.png'} colorWhite textAlign="center" title="Reclaim your freedom now"></LongCard>
     </Container>
   </Section>
@@ -29,5 +29,9 @@ const Container = styled.div`
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 `
+const MariasPost = styled(LongCard)`
+  background-position: 60%!important;
+  ${medium('background-position: center;')};
+`
 
-export default About
+export default BlogPost

@@ -42,7 +42,8 @@ const SecondaryNavbar = ({ page, ...props }) => (
 );
 
 const Navbar = styled.nav`
-  height: 171px;
+  height: 131px;
+  ${medium('height: 171px;')};
   background-color: #2d2e38;
   padding-top: 64px;
 `
@@ -53,7 +54,12 @@ const Container = styled.nav`
   max-width: 1200px;
   margin: auto;
   color: white;
-  height: 107px;
+  height: 67px;
+  ${medium('height: 107px;')};
+  svg {
+    width: 25px;
+    ${medium('width: 40px')};
+  }
 `
 const Item = styled(SafeLink)`
   text-align: center;

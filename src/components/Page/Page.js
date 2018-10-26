@@ -6,6 +6,40 @@ import Navbar from './Navbar'
 import Footer from './Footer.js'
 const medium = css => breakpoint('medium', css);
 
+const menuItems = [
+  ['/discover', 'Discover'],
+  ['https://hack.aragon.org/', 'Developers'],
+  ['/project', 'Project'],
+  ['/network', 'Network'],
+];
+
+class Page extends React.Component {
+
+  render() {
+    const { children, path } = this.props;
+    const items = menuItems.map(item => [...item, item[0] === path]);
+
+    return (
+      <SiteData
+        render={({ title: siteTitle }) => (
+          <RouteData
+            render={({ title }) => (
+              <AragonApp publicUrl='/aragon-ui/' className="app">
+                <Head>
+                  <title>{title || siteTitle}</title>
+                </Head>
+                <Navbar menuItems={items} path={path} />
+                <Content>{children}</Content>
+                <Footer path={path}/>
+              </AragonApp>
+            )}
+          />
+        )}
+      />
+    )
+  }
+}
+
 const Content = styled.div`
   min-height: calc(100vh - 116px)!important;
 
@@ -21,7 +55,7 @@ const Content = styled.div`
     font-family: 'GraphikLink', sans-serif;
     font-size: 42px;
     font-weight: 300;
-    line-height: 0.91;
+    line-height: 1.2;
     text-align: center;
     color: #2d4051;
     margin: 30px 0;
@@ -76,39 +110,5 @@ const Content = styled.div`
     align-items: center;
   }
 `;
-
-const menuItems = [
-  ['/discover', 'Discover'],
-  ['https://hack.aragon.org/', 'Developers'],
-  ['/project', 'Project'],
-  ['/network', 'Network'],
-];
-
-class Page extends React.Component {
-
-  render() {
-    const { children, path } = this.props;
-    const items = menuItems.map(item => [...item, item[0] === path]);
-
-    return (
-      <SiteData
-        render={({ title: siteTitle }) => (
-          <RouteData
-            render={({ title }) => (
-              <AragonApp publicUrl='/aragon-ui/' className="app">
-                <Head>
-                  <title>{title || siteTitle}</title>
-                </Head>
-                <Navbar menuItems={items} path={path} />
-                <Content>{children}</Content>
-                <Footer path={path}/>
-              </AragonApp>
-            )}
-          />
-        )}
-      />
-    )
-  }
-}
 
 export default Page
