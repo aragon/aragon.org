@@ -33,6 +33,7 @@ const Item = styled.div`
     line-height: 3.14;
     color: #7f8198;
     cursor: pointer;
+    text-decoration: none;
   }
   a:hover {
     opacity: 0.8;
@@ -78,6 +79,7 @@ const Box = styled.div`
   a {
     display: inline;
     padding: 0 15px;
+    text-decoration: none;
   }
 `
 
@@ -88,26 +90,30 @@ const Footer = ({ ...props }) => (
           <Link to="/"><img src={logo} /></Link>
       </Item>
       <Item>
-        <a>Core</a>
-        <a>Network</a>
-        <a>Fundation</a>
-        <a>About</a>
+        <Link to="/">Home</Link>
+        <Link to="/discover">Discover</Link>
+        <Link to="/project">Project</Link>
+        <Link to="/network">Network</Link>
       </Item>
       <Item>
-        <a>Wiki</a>
-        <a>Network</a>
-        <a>Fundation</a>
-        <a>About</a>
+        <a href="https://hack.aragon.org/" target="_blank">Developers</a>
+        <Link to="/project/governance">Governance</Link>
+        <Link to="/project/grants">Grants</Link>
+        <Link to="/project/contribute">Contribute</Link>
       </Item>
       <Item>
-        <a>Legal</a>
-        <a>Network</a>
-        <a>Fundation</a>
-        <a>About</a>
+        <a href="https://blog.aragon.org/" target="_blank">Blog</a>
+        <a href="https://wiki.aragon.org/" target="_blank">Wiki</a>
+        <a href="https://aracon.one/" target="_blank">Aracon</a>
+        <a href="https://aragon.chat/" target="_blank">Chat</a>
       </Item>
       <Item className="mobile-full">
         <p>Follow us</p>
-        <Box><a><img src={twitter} /></a><a><img src={ghost} /></a><a><img src={rocket} /></a></Box>
+        <Box>
+          <a href="https://twitter.com/aragonproject" target="_blank"><img src={twitter} /></a>
+          <a href="https://blog.aragon.org/" target="_blank"><img src={ghost} /></a>
+          <a href="https://aragon.chat/" target="_blank"><img src={rocket} /></a>
+        </Box>
         <p>Be part of the conversation</p>
         <form action="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&amp;id=e81a44c4bd" method="post" name="mc-embedded-subscribe-form" target="_blank" noValidate>
           <div className="email-field">

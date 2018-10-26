@@ -17,7 +17,7 @@ const mudule1Content = (
 const mudule2Content = (
   <span>
     <p>Aragon enables developers and designers to create apps that enhance human collaboration. Build the future of decentralized organizations with aragonSDK.</p>
-    <p><a className="action-button"><span>Developers <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
+    <p><a className="action-button" href="https://hack.aragon.org/" target="_blank"><span>Developers <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
   </span>
 );
 const mudule3Content = (

@@ -8,7 +8,16 @@ const medium = css => breakpoint('medium', css);
 
 const mudule1Content = (<p>We care a great deal about governance. That’s why we have created the Aragon Governance Proposals. You can vote on them, or create your own with our governance process.</p>);
 const mudule2Content = (<p>All our finances are public. You can read how we spend every cent. Being transparent is part of our commitment to our community.</p>);
-const module3Content = (<p>We are committed to transitioning Aragon into a fully decentralized organization. That organization will become the Aragon Network.</p>)
+const module3Content = (
+  <span>
+    <p>We are committed to transitioning Aragon into a fully decentralized organization. That organization will become the Aragon Network.</p>
+    <p>
+      <a className="action-button">
+        <span>Aragon network <img src={require(`../General/assets/arrow.svg`)}/></span>
+      </a>
+    </p>
+  </span>
+);
 
 const About = () => (
   <Section>

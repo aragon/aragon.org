@@ -21,7 +21,7 @@ const renderMenuItemLink = ({ url, children }) =>
 
 class Navbar extends React.Component {
   state = {
-    scroll: 0,
+    scroll: 1,
   }
   componentDidMount() {
     window.addEventListener('scroll', this.onScroll)
@@ -32,13 +32,16 @@ class Navbar extends React.Component {
   }
 
   onScroll = event => {
-    const scroll = (document.scrollingElement.scrollTop * 2) / 1000
-    this.setState({ scroll: scroll })
+    let scroll = 1 - ((document.scrollingElement.scrollTop * 2) / 1000);
+    if (scroll < 0.8) {
+      scroll = 0.8;
+    }
+    this.setState({ scroll: scroll})
   }
   renderIn = ({ x, menuItems, path }) => {
     return (
       <AragonNavbar
-        style={{ background: x.interpolate(v => `rgba(28, 29, 35)`) }}
+        style={{ background: x.interpolate(v => `rgba(28, 29, 35, ${v})`) }}
       >
         <Center>
           <BreakPoint from="medium">
@@ -124,7 +127,6 @@ const AragonNavbar = styled(animated.div)`
 `
 
 const Center = styled.div`
-
   ul {
     display: flex;
     div {
