@@ -7,6 +7,8 @@ import video from '../components/Home/home-assets/home-video.mp4'
 
 import { breakpoint, BreakPoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
+
 
 const Home = () => (
   <Page path="/">
@@ -37,10 +39,27 @@ const HeroSection = styled(Section)`
   justify-content: center;
   position: relative;
   video {
-    width: 40%;
-    right: 0;
+    width: auto;
+    display:none;
+    @media (min-width: 900px) and (max-width: 1071px) {
+      display: block;
+      height: 300px;
+    }
+    @media (min-width: 1071px) and (max-width: 1176px) {
+      display: block;
+      height: 350px;
+    }
+    @media (min-width: 1176px) and (max-width: 1330px) {
+      display: block;
+      height: 400px!important;
+    }
+    @media (min-width: 1330px) {
+      display: block;
+      height: 450px;
+    }
     position: absolute;
     bottom: 0;
+    margin-left: 28px;
   }
 `;
 const Box = styled.div`

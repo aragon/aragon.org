@@ -40,8 +40,8 @@ const SmallCard = styled.div`
   padding: 30px;
   ${medium('padding: 30px 60px;')};
   img {
-    height: 100px;
-    width: 100px;
+    height: 130px;
+    width: 130px;
   }
   p {
     text-align: center;
