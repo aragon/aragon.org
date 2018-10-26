@@ -8,11 +8,36 @@ import { Link } from 'react-static'
 import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
 
-const mudule1Content = (<p>The Aragon project is a community with the mission to empower freedom by creating tools for decentralized governance.</p>);
-const mudule2Content = (<p>Aragon enables developers and designers to create apps that enhance human collaboration. Build the future of decentralized organizations with aragonSDK.</p>);
-const mudule3Content = (<p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday.</p>);
-const mudule4Content = (<p>Our community is always looking for individuals who want to help our fight for freedom. Check out how to contribute or apply for a job.</p>);
-const mudule5Content = (<p>Aragon organizations are not only great because they are decentralized, global and unstoppable. They will also benefit from the Aragon Network, the world’s first digital jurisdiction.</p>);
+const mudule1Content = (
+  <span>
+    <p>The Aragon project is a community with the mission to empower freedom by creating tools for decentralized governance.</p>
+    <p><a className="action-button">About ></a></p>
+  </span>
+);
+const mudule2Content = (
+  <span>
+    <p>Aragon enables developers and designers to create apps that enhance human collaboration. Build the future of decentralized organizations with aragonSDK.</p>
+    <p><a className="action-button">Developers ></a></p>
+  </span>
+);
+const mudule3Content = (
+  <span>
+    <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday.</p>
+    <p><a className="action-button">Discover nest ></a></p>
+  </span>
+);
+const mudule4Content = (
+  <span>
+    <p>Our community is always looking for individuals who want to help our fight for freedom. Check out how to contribute or apply for a job.</p>
+    <p><a className="action-button">Contribute ></a></p>
+  </span>
+);
+const mudule5Content = (
+  <span>
+    <p>Aragon organizations are not only great because they are decentralized, global and unstoppable. They will also benefit from the Aragon Network, the world’s first digital jurisdiction.</p>
+    <p><a className="action-button">Aragon Network</a></p>
+  </span>
+);
 
 const About = () => (
   <Section>

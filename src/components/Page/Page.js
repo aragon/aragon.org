@@ -34,6 +34,15 @@ const Content = styled.div`
     text-align: center;
     color: #7f8198;
   }
+  .action-button {
+    font-family: 'GraphikRegular', sans-serif;
+    font-size:16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: #01c3e3;
+    margin-top: 30px;
+    display: block;
+  }
 `;
 
 const menuItems = [
