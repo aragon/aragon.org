@@ -44,6 +44,15 @@ const Content = styled.div`
     display: block;
     text-decoration: none;
   }
+  .action-button img {
+    padding-left: 10px;
+    height: 12px;
+    width: auto;
+  }
+  .action-button span {
+    display: inline-flex;
+    align-items: center;
+  }
   .hero-link {
     font-family: 'GraphikLink',sans-serif;
     font-size: 20px;
@@ -56,6 +65,15 @@ const Content = styled.div`
     display: block;
     text-align: left;
     cursor: pointer;
+  }
+  .hero-link img {
+    padding-left: 10px;
+    height: 12px;
+    width: auto;
+  }
+  .hero-link span {
+    display: inline-flex;
+    align-items: center;
   }
 `;
 

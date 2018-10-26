@@ -17,7 +17,7 @@ const UnstoppableOrganizations = () => (
       <Container>
         <h2>Unstoppable <br/>organizations</h2>
         <h4>Aragon provides all the necessary tools for human collaboration. Aragon organizations are impossible to censor or shut down, escaping the boundaries of opression and censorship.</h4>
-        <a className="hero-link">About the project ></a>
+        <a className="hero-link"><span>About the project <img src={require(`../General/assets/hero-arrow.svg`)}/></span></a>
       </Container>
     </Box>
   </UnstoppableSection>

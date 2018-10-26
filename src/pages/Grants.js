@@ -12,7 +12,7 @@ const Grants = () => (
       <Container>
         <h2>Aragon Nest</h2>
         <h4>Aragon is re-inventing the future of organizations. But we cannot do it alone. <br/>Nest was born to help the ecosystem flourish.</h4>
-        <a>Manifesto ></a>
+        <a><span>Manifesto <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
       </Container>
     </Section>
     <GrantseContent/>

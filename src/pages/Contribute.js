@@ -11,7 +11,7 @@ const Contribute = () => (
       <Container>
         <h2>The community awaits you</h2>
         <h4>The Aragon community is united towards the same goal: to re-shape the future of organizations.</h4>
-        <a>Manifesto ></a>
+        <a><span>Manifesto <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
       </Container>
     </Section>
     <ContributeeContent/>

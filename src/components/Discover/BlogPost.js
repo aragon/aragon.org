@@ -9,7 +9,7 @@ const medium = css => breakpoint('medium', css);
 const mudule1Content = (
   <span>
     <p>Aragon represents a new chapter in the history of society. Read more on why decentralized organizations can solve the world’s worst problems, with the example of Maria.</p>
-    <p><a href="https://blog.aragon.org/decentralized-organizations-can-solve-the-worlds-worst-problems-840db6255d12/" target="_blank" className="action-button">Read more ></a></p>
+    <p><a className="action-button" href="https://blog.aragon.org/decentralized-organizations-can-solve-the-worlds-worst-problems-840db6255d12/" target="_blank"><span>Read more <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
   </span>
   );
 const About = () => (
