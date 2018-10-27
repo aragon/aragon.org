@@ -5,6 +5,7 @@ import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import backgroundImage from '../components/Project/assets/grants-background.png'
 import GrantseContent from '../components/Project/GrantsContent'
 import Section from '../components/General/Section'
+import { Button } from '@aragon/ui'
 
 const Grants = () => (
   <Page path="/project/grants">
@@ -13,7 +14,7 @@ const Grants = () => (
       <Container>
         <h2>Aragon Nest</h2>
         <h4>Aragon is re-inventing the future of organizations. But we cannot do it alone. <br/>Nest was born to help the ecosystem flourish.</h4>
-        <a href="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant" target="_blank"><span>Apply <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
+        <Button.Anchor className="hero-link" mode="strong" href="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant" target="_blank">Apply</Button.Anchor>
       </Container>
     </GrantsSection>
     <GrantseContent/>
@@ -37,19 +38,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  a {
-    font-family: 'GraphikLink',sans-serif;
-    font-size: 20px;
-    color: #22e0ff;
-    border: solid 0px transparent;
-    background: transparent;
-    line-height: 1.75;
-    padding: 0;
-    margin-top: 90px!important;
-    display: block;
-    text-align: center;
-    cursor: pointer;
-  }
 `;
 
 export default Grants

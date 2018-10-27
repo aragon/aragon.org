@@ -5,6 +5,7 @@ import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import backgroundImage from '../components/Project/assets/governance-background.png'
 import GovernanceContent from '../components/Project/GovernanceContent'
 import Section from '../components/General/Section'
+import { Button } from '@aragon/ui'
 
 const Governance = () => (
   <Page path="/project/governance">
@@ -13,7 +14,7 @@ const Governance = () => (
       <Container>
         <h2>Power to the people</h2>
         <h4>Aragon is all about empowering people, starting with our own community.<br/>The project is community-governed, and we are committed on decentralizing power.</h4>
-        <a href="https://app.aragon.org" target="_blank"><span>Manifesto <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
+        <Button.Anchor className="hero-link" mode="strong" href="https://app.aragon.org" target="_blank">Manifesto</Button.Anchor>
       </Container>
     </GovernanceSection>
     <GovernanceContent/>
@@ -40,19 +41,6 @@ const Container = styled.div`
   flex-direction: column;
   h2, h4 {
     color: white;
-  }
-  a {
-    font-family: 'GraphikLink',sans-serif;
-    font-size: 20px;
-    color: #22e0ff;
-    border: solid 0px transparent;
-    background: transparent;
-    line-height: 1.75;
-    padding: 0;
-    margin-top: 90px!important;
-    display: block;
-    text-align: center;
-    cursor: pointer;
   }
 `;
 

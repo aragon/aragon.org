@@ -4,6 +4,8 @@ import { Page } from '../components'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import ContributeeContent from '../components/Project/ContributeContent'
 import Section from '../components/General/Section'
+import backgroundImage from '../components/Project/assets/community-background.png'
+import { Button } from '@aragon/ui'
 
 const Contribute = () => (
   <Page path="/project/contribute">
@@ -12,7 +14,7 @@ const Contribute = () => (
       <Container>
         <h2>The community awaits you</h2>
         <h4>The Aragon community is united towards the same goal: to re-shape the future of organizations.</h4>
-        <a href="https://blog.aragon.org/decentralizing-aragons-development-5062fd6d135d" target="_blank"><span>Read more <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
+        <Button.Anchor className="hero-link" mode="strong" href="https://blog.aragon.org/decentralizing-aragons-development-5062fd6d135d" target="_blank">Read more</Button.Anchor>
       </Container>
     </ContributeSection>
     <ContributeeContent/>
@@ -22,13 +24,15 @@ const Contribute = () => (
 const ContributeSection = styled(Section)`
   height: 550px;
   background-color: #fbf2e8;
+  background-image: url(${backgroundImage});
+  background-size: cover;
+  background-position: center
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
 const Container = styled.div`
-  background-color: #fbf2e8;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -36,19 +40,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  a {
-    font-family: 'GraphikLink',sans-serif;
-    font-size: 20px;
-    color: #22e0ff;
-    border: solid 0px transparent;
-    background: transparent;
-    line-height: 1.75;
-    padding: 0;
-    margin-top: 90px!important;
-    display: block;
-    text-align: center;
-    cursor: pointer;
-  }
 `;
 
 export default Contribute

@@ -2,27 +2,35 @@ import React from 'react'
 import styled from 'styled-components'
 import { Page } from '../components'
 import NetworkeContent from '../components/Network/NetworkContent'
+import Section from '../components/General/Section'
+import backgroundImage from '../components/Network/assets/network-background.png'
+import { Button } from '@aragon/ui'
 
 const Network = () => (
   <Page path="/network">
-    <Section>
+    <NetworkSection>
       <Container>
         <h2>The world’s first digital jurisdiction</h2>
         <h4>Decentralized organizations change the way we think about organizations. <br/>The Aragon Network will change the way you think about jurisdictions and governments.</h4>
-        <a href="https://github.com/aragon/whitepaper" target="_blank"><span>Whitepaper <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
+        <Button.Anchor className="hero-link" mode="strong" href="https://github.com/aragon/whitepaper" target="_blank">Whitepaper</Button.Anchor>
       </Container>
-    </Section>
+    </NetworkSection>
     <NetworkeContent/>
   </Page>
 )
 
-const Section = styled.section`
+const NetworkSection = styled(Section)`
   height: 550px;
   background: #faf7ec;
+  background-image: url(${backgroundImage});
+  background-size: cover;
+  background-position: center
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Container = styled.div`
-  background-color: #1c1d23;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -30,19 +38,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  a {
-    font-family: 'GraphikLink',sans-serif;
-    font-size: 20px;
-    color: #22e0ff;
-    border: solid 0px transparent;
-    background: transparent;
-    line-height: 1.75;
-    padding: 0;
-    margin-top: 90px!important;
-    display: block;
-    text-align: center;
-    cursor: pointer;
-  }
   h2, h4 {
     color: white;
   }

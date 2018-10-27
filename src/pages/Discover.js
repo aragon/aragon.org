@@ -8,7 +8,7 @@ import Product from '../components/Discover/Product'
 import UnstoppableOranizations from '../components/Discover/UnstoppableOranizations'
 import BlogPost from '../components/Discover/BlogPost'
 
-import { breakpoint, BreakPoint } from '@aragon/ui'
+import { breakpoint, BreakPoint, Button } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
 
 const Discover = () => (
@@ -21,7 +21,7 @@ const Discover = () => (
         <Container>
           <h2>Take back your freedom to organize</h2>
           <h4>Discover the unparalleled power to organize. Whether you want to collaborate with your co-founder, open a non-profit, or just organize an online community, Aragon is there for you. </h4>
-          <a className="hero-link" href="https://app.aragon.org" target="_blank"><span>Try it out <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></a>
+          <Button.Anchor className="hero-link" mode="strong" href="https://app.aragon.org" target="_blank">Try it out</Button.Anchor>
         </Container>
       </Box>
     </HeroSection>

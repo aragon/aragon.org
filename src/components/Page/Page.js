@@ -78,28 +78,19 @@ const Content = styled.div`
     display: block;
     text-decoration: none;
   }
-  .action-button img, .hero-link img {
+  .action-button img, {
     padding-left: 10px;
     height: 12px;
     width: auto;
   }
-  .action-button span, .hero-link span {
+  .action-button span {
     display: inline-flex;
     align-items: center;
   }
   .hero-link {
     font-family: 'GraphikLink',sans-serif;
-    font-size: 20px;
-    color: #22e0ff;
-    border: solid 0px transparent;
-    background: transparent;
-    line-height: 1.75;
-    padding: 0;
     margin-top: 30px!important;
-    display: block;
-    text-align: left;
-    cursor: pointer;
-    text-decoration: none;
+    letter-spacing: 0.5px;
   }
   a {
     text-decoration: none;

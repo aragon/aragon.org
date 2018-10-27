@@ -6,7 +6,7 @@ import Section from '../components/General/Section'
 import video from '../components/Home/home-assets/home-video.mp4'
 import { Link } from 'react-static'
 
-import { breakpoint, BreakPoint } from '@aragon/ui'
+import { breakpoint, BreakPoint, Button } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
 const large = css => breakpoint('large', css)
 
@@ -18,7 +18,7 @@ const Home = () => (
         <Container>
           <h2>Freedom to organize</h2>
           <h4>Aragon lets you freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, or communities.</h4>
-          <Link className="hero-link" to="/discover"><span>Discover the procuct <img src={require(`../components/General/assets/hero-arrow.svg`)}/></span></Link>
+          <Button.Anchor className="hero-link" mode="strong" href="./discover" target="_blank">Discover the procuct</Button.Anchor>
         </Container>
         <Container>
         <video playsInline autoPlay muted loop>
