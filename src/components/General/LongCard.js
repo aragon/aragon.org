@@ -63,7 +63,7 @@ const LongCard = styled.div`
   }
 
   p {
-    font-family: 'GraphikRegular', sans-serif;
+    font-family: 'FontRegular', sans-serif;
     font-size: 16px;
     line-height: 1.75;
     letter-spacing: 0.1px;

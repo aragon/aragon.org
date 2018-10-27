@@ -2,31 +2,30 @@ import React from 'react'
 import Section from '../General/Section'
 import styled from 'styled-components'
 import { Link } from 'react-static'
-import backgroundImage from './assets/unstoppable-org-background.png'
-import aragonImage from './assets/unstoppable-org.svg'
+import aragonImage from './assets/association.svg'
 
 import { breakpoint, BreakPoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
 
 
 const UnstoppableOrganizations = () => (
-  <UnstoppableSection>
+  <Association>
     <Box>
       <Container>
         <Image src={aragonImage}/>
       </Container>
       <Container>
-        <h2>Unstoppable <br/>organizations</h2>
-        <h4>Aragon provides all the necessary tools for human collaboration. Aragon organizations are impossible to censor or shut down, escaping the boundaries of opression and censorship.</h4>
-        <Link to="/project" className="action-button"><span>About the project <img src={require(`../General/assets/hero-arrow.svg`)}/></span></Link>
+        <h2>The Aragon <br/>Association</h2>
+        <h4>The Aragon Project is stewarded by the Aragon Association, a Swiss non-profit entity.</h4>
+        <br/><h4>Board of directors</h4>
+        <h4>Luis Cuende and Jorge Izquierdo</h4>
       </Container>
     </Box>
-  </UnstoppableSection>
+  </Association>
 );
 
-const UnstoppableSection = styled(Section)`
+const Association = styled(Section)`
   background-color: #1c1d23;
-  background-image: url(${backgroundImage});
   background-size: cover;
   min-height: 500px;
   display: flex;
@@ -42,6 +41,7 @@ const Box = styled.div`
 `;
 const Container = styled.div`
   width: 100%;
+  margin: 15px 0;
   text-align: center;
   margin: auto;
   ${medium('text-align: left; margin: inherit;')};

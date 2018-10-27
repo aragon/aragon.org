@@ -4,7 +4,8 @@ import { Page } from '../components'
 import NetworkeContent from '../components/Network/NetworkContent'
 import Section from '../components/General/Section'
 import backgroundImage from '../components/Network/assets/network-background.png'
-import { Button } from '@aragon/ui'
+import { Button, breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css);
 
 const Network = () => (
   <Page path="/network">
@@ -20,7 +21,8 @@ const Network = () => (
 )
 
 const NetworkSection = styled(Section)`
-  height: 550px;
+  height: auto;
+  ${medium('height: 550px;')};
   background: #faf7ec;
   background-image: url(${backgroundImage});
   background-size: cover;
@@ -33,6 +35,8 @@ const NetworkSection = styled(Section)`
 const Container = styled.div`
   height: 100%;
   width: 100%;
+  margin: 30px auto;
+  ${medium('margin: auto;')};
   background-size: cover;
   display: flex;
   align-items: center;

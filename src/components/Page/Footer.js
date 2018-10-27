@@ -28,7 +28,7 @@ const Container = styled.div`
 const Item = styled.div`
   a {
     display: block;
-    font-family: 'GraphikRegular', sans-serif;
+    font-family: 'FontRegular', sans-serif;
     font-size: 14px;
     line-height: 3.14;
     color: #7f8198;
@@ -39,7 +39,7 @@ const Item = styled.div`
     opacity: 0.8;
   }
   p, form {
-    font-family: 'GraphikRegular', sans-serif;
+    font-family: 'FontRegular', sans-serif;
     font-size: 14px;
     line-height: 3.14;
     color: #7f8198;

@@ -4,8 +4,9 @@ import LongCard from '../General/LongCard'
 import Card from '../General/Card'
 import styled from 'styled-components'
 import history from './assets/history.svg'
+import mobileHistory from './assets/history-mobile.svg'
 import { Link } from 'react-static'
-import { breakpoint } from '@aragon/ui'
+import { breakpoint, BreakPoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
 
 const mudule1Content = (
@@ -58,7 +59,12 @@ const About = () => (
   <Section>
     <Container>
       <LongCard textAlign="center" background="" title="Our history" content={module3Content} gradient="linear-gradient(292deg, #95bbce, #c5d0e6 46%, #e7e4f6)">
-        <HistoryImage src={history} />
+        <BreakPoint to="medium">
+          <HistoryImage src={mobileHistory} />
+        </BreakPoint>
+        <BreakPoint from="medium">
+          <HistoryImage src={history} />
+        </BreakPoint>
       </LongCard>
       <LongCard textAlign="right" color="#b4b5cc" image={'Project/assets/project3.png'} background="" colorWhite title="Governed by the community" content={module4Content} gradient="radial-gradient(circle at 99% 100%, #1c1d23, #2d2e39)"></LongCard>
       <Card imageUrl={'Project/assets/project1'} title="Nest, our grants program" content={mudule1Content}></Card>

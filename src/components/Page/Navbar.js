@@ -124,6 +124,9 @@ const AragonNavbar = styled(animated.div)`
   .brand {
     display: flex;
   }
+  ul li {
+    padding: 0 20px;
+  }
 `
 
 const Center = styled.div`
@@ -151,6 +154,7 @@ const Center = styled.div`
 
 const FlexLink = styled(Link)`
   display: flex;
+  padding: 0 20px;
 `
 
 const MobileLogo = styled.img`

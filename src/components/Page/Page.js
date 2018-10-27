@@ -44,7 +44,7 @@ const Content = styled.div`
   min-height: calc(100vh - 116px)!important;
 
   p {
-    font-family: 'GraphikRegular', sans-serif;
+    font-family: 'FontRegular', sans-serif;
     font-size: 16px;
     line-height: 1.75;
     letter-spacing: 0.1px;
@@ -52,7 +52,7 @@ const Content = styled.div`
     color: #7f8198;
   }
   h2 {
-    font-family: 'GraphikLink', sans-serif;
+    font-family: 'FontLight', sans-serif;
     font-size: 42px;
     font-weight: 300;
     line-height: 1.2;
@@ -61,7 +61,7 @@ const Content = styled.div`
     margin: 30px 0;
   }
   h4 {
-    font-family: 'GraphikRegular', sans-serif;
+    font-family: 'FontRegular', sans-serif;
     font-size: 20px;
     line-height: 1.75;
     letter-spacing: 0.1px;
@@ -69,7 +69,7 @@ const Content = styled.div`
     color: #7f8198;
   }
   .action-button {
-    font-family: 'GraphikRegular', sans-serif;
+    font-family: 'FontRegular', sans-serif;
     font-size:16px;
     font-weight: 400;
     letter-spacing: normal;
@@ -78,7 +78,7 @@ const Content = styled.div`
     display: block;
     text-decoration: none;
   }
-  .action-button img, {
+  .action-button img {
     padding-left: 10px;
     height: 12px;
     width: auto;
@@ -88,7 +88,7 @@ const Content = styled.div`
     align-items: center;
   }
   .hero-link {
-    font-family: 'GraphikLink',sans-serif;
+    font-family: 'FontLink',sans-serif;
     margin-top: 30px!important;
     letter-spacing: 0.5px;
   }

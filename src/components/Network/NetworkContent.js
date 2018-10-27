@@ -49,35 +49,4 @@ const Container = styled.div`
   grid-row-gap: 30px;
 `
 
-const LongCardContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  ${medium('flex-wrap: nowrap;')};
-  background-image: linear-gradient(119deg, #faf9f4, #2c86d0);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 30px -10% 0 -10%;
-  div {
-    padding: 15px;
-  }
-
-  h5 {
-    font-family: 'GraphikRegular', sans-serif;
-    font-size: 68px;
-    font-weight: 300;
-    line-height: 1.82;
-    text-align: center;
-  }
-  h3 {
-    font-family: 'GraphikRegular', sans-serif;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 1.33;
-    text-align: center;
-  }
-`
-
 export default NetworkContent

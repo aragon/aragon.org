@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Page } from '../components'
 import About from '../components/Project/About'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
+import Association from '../components/Project/Association'
 import backgroundImage from '../components/Project/assets/hero-background.png'
 import Section from '../components/General/Section'
 
@@ -25,11 +26,13 @@ const Project = () => (
       </Box>
     </HeroSection>
     <About/>
+    <Association />
   </Page>
 )
 
 const HeroSection = styled(Section)`
-  height: 550px;
+  height: auto;
+  ${medium('height: 550px;')};
   background: #faf7ec;
   background-image: url(${backgroundImage});
   padding-top: 64px;
@@ -51,9 +54,10 @@ const Container = styled.div`
   }
   iframe {
     width: 90%;
-    margin-left: 10%;
+    margin: 30px 0;
     border-radius: 21px;
     height: 238px;
+    ${medium('margin: 0; margin-left: 10%;')};
   }
 `;
 

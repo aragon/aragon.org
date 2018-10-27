@@ -81,14 +81,14 @@ const LongCardContainer = styled.div`
   }
 
   h5 {
-    font-family: 'GraphikRegular', sans-serif;
+    font-family: 'FontLight', sans-serif;
     font-size: 68px;
     font-weight: 300;
     line-height: 1.82;
     text-align: center;
   }
   h3 {
-    font-family: 'GraphikRegular', sans-serif;
+    font-family: 'FontLight', sans-serif;
     font-size: 24px;
     font-weight: 300;
     line-height: 1.33;

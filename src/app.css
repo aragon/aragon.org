@@ -1,13 +1,13 @@
 @font-face {
- font-family: 'GraphikRegular';
- src: url('./fonts/Graphik-Regular.ttf') format('opentype');
+ font-family: 'FontRegular';
+ src: url('./fonts/HKGrotesk-Regular.ttf') format('opentype');
 }
 @font-face {
- font-family: 'GraphikLight';
- src: url('./fonts/Graphik-Regular.ttf') format('opentype');
+ font-family: 'FontLight';
+ src: url('./fonts/HKGrotesk-Light.ttf') format('opentype');
 }
 body {
-  font-family: 'GraphikRegular' 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
+  font-family: 'FontRegular' 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
     'Lucida Grande', sans-serif;
   font-weight: 300;
   font-size: 16px;
