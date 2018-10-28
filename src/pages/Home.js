@@ -21,9 +21,9 @@ const Home = () => (
           <Button.Anchor className="hero-link" mode="strong" href="./discover" target="_blank">Discover the procuct</Button.Anchor>
         </Container>
         <Container>
-        <video playsInline autoPlay muted loop>
-          <source src={video} type="video/mp4" />
-        </video>
+          <video playsInline autoPlay muted loop>
+            <source src={video} type="video/mp4" />
+          </video>
         </Container>
       </Box>
     </HeroSection>

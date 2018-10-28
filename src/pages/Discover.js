@@ -6,17 +6,22 @@ import Section from '../components/General/Section'
 import Quotes from '../components/Discover/Quotes'
 import Product from '../components/Discover/Product'
 import UnstoppableOranizations from '../components/Discover/UnstoppableOranizations'
+import video from '../components/Home/home-assets/home-video.mp4'
+// import video from '../components/Discover/assets/discover-video.mp4'
 import BlogPost from '../components/Discover/BlogPost'
 
 import { breakpoint, BreakPoint, Button } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Discover = () => (
   <Page path="/discover">
     <HeroSection>
       <Box>
         <Container>
-          <span></span>
+          <video playsInline autoPlay muted loop>
+            <source src={video} type="video/mp4" />
+          </video>
         </Container>
         <Container>
           <h2>Take back your freedom to organize</h2>
@@ -37,9 +42,32 @@ const HeroSection = styled(Section)`
   background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);
   min-height: 550px;
   padding-top: 64px;
-  display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  video {
+    width: auto;
+    display:none;
+    @media (min-width: 900px) and (max-width: 1071px) {
+      display: block;
+      height: 300px;
+    }
+    @media (min-width: 1071px) and (max-width: 1176px) {
+      display: block;
+      height: 350px;
+    }
+    @media (min-width: 1176px) and (max-width: 1330px) {
+      display: block;
+      height: 400px!important;
+    }
+    @media (min-width: 1330px) {
+      display: block;
+      height: 450px;
+    }
+    position: absolute;
+    bottom: 0;
+    right: calc(50% + 30px);
+  }
 `;
 const Box = styled.div`
   display: flex;
