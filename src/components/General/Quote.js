@@ -37,6 +37,8 @@ const QuoteContainer = styled.div`
     color: #1C1D23;
     img {
       padding-right: 15px;
+      width: 75px;
+      height: 60px;
     }
   }
   p {
