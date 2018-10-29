@@ -144,7 +144,8 @@ const ImageContainer = styled.div`
   img {
     max-width: 100%;
     width: 430px;
-    height: 430px;
+    height: auto;
+    ${medium('height: 430px;')};
     margin: 15px 0;
   }
 `
