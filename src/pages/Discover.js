@@ -40,6 +40,7 @@ const Discover = () => (
 
 const HeroSection = styled(Section)`
   background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);
+  overflow: hidden;
   min-height: 550px;
   padding-top: 64px;
   align-items: center;

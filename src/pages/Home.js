@@ -39,6 +39,7 @@ const HeroSection = styled(Section)`
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
   video {
     width: auto;
     display:none;

@@ -29,6 +29,7 @@ const NetworkSection = styled(Section)`
   background-position: center
   display: flex;
   align-items: center;
+  overflow: hidden;
   justify-content: center;
 `;
 

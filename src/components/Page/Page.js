@@ -88,7 +88,7 @@ const Content = styled.div`
     align-items: center;
   }
   .hero-link {
-    font-family: 'FontLink',sans-serif;
+    font-family: 'FontRegular', sans-serif;
     margin-top: 30px!important;
     letter-spacing: 0.5px;
   }
