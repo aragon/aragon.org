@@ -69,6 +69,9 @@ const SmallCard = styled.a`
     color: #2d4051;
     margin: 15px 0 0 0;
   }
+  &:hover {
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.07);
+  }
 `
 const SmallCardLink = styled(Link)`
   height: 100%;
@@ -97,6 +100,9 @@ const SmallCardLink = styled(Link)`
     text-align: center;
     color: #2d4051;
     margin: 15px 0 0 0;
+  }
+  &:hover {
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.07);
   }
 `
 
