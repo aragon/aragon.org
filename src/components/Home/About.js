@@ -44,7 +44,7 @@ const About = () => (
     <Container>
       <Card linkTo="/project" imageUrl={'Home/home-assets/home1'} title="On a fight for freedom" content={mudule1Content}></Card>
       <Card linkTo="https://hack.aragon.org/" imageUrl={'Home/home-assets/home2'} title="Build human collaboration" content={mudule2Content}></Card>
-      <LongCard background={'Home/home-assets/background-home1.png'} image={'Home/home-assets/home5.png'} textAlign="left" colorWhite title="The world’s first digital jurisdiction" content={mudule5Content}></LongCard>
+      <LongCard linkTo="/network" background={'Home/home-assets/background-home1.png'} image={'Home/home-assets/home5.png'} textAlign="left" colorWhite title="The world’s first digital jurisdiction" content={mudule5Content}></LongCard>
       <Card linkTo="/project/contribute"  imageUrl={'Home/home-assets/home3'} title="Nest, our grants program" content={mudule3Content}></Card>
       <Card linkTo="/network"  imageUrl={'Home/home-assets/home4'} title={(<span>Join <br/>the fight</span>)} content={mudule4Content}></Card>
     </Container>

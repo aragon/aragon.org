@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
+import { Link } from 'react-static'
 
 class Card extends React.Component {
   render() {
@@ -15,10 +16,23 @@ class Card extends React.Component {
       gradient,
       colorWhite,
       textAlign,
+      linkTo,
       children,
     } = this.props
     return (
-      <LongCard className={textAlign} colorWhite={colorWhite} image={image || false} background={background ? require(`../${background}`) : ''} gradient={gradient ? gradient : ''}>
+      <Container colorWhite={colorWhite}>
+      {(linkTo && linkTo.startsWith('/')) ? (
+      <LongCardLink to={linkTo} className={textAlign} colorWhite={colorWhite} image={image || false} background={background ? require(`../${background}`) : ''} gradient={gradient ? gradient : ''}>
+        {image && textAlign == 'right' && <ImageContainer><img src={require(`../${image}`)}/></ImageContainer>}
+        <div className={textAlign + "-box"}>
+          {title && <h1>{title}</h1>}
+          {content && <h1>{content}</h1>}
+          {children}
+        </div>
+        {image && textAlign == 'left' && <ImageContainer><img src={require(`../${image}`)}/></ImageContainer>}
+      </LongCardLink>
+      ) : (
+        <LongCard href={linkTo} target="_blank" className={textAlign} colorWhite={colorWhite} image={image || false} background={background ? require(`../${background}`) : ''} gradient={gradient ? gradient : ''}>
         {image && textAlign == 'right' && <ImageContainer><img src={require(`../${image}`)}/></ImageContainer>}
         <div className={textAlign + "-box"}>
           {title && <h1>{title}</h1>}
@@ -27,37 +41,27 @@ class Card extends React.Component {
         </div>
         {image && textAlign == 'left' && <ImageContainer><img src={require(`../${image}`)}/></ImageContainer>}
       </LongCard>
+      )}
+      </Container>
     )
   }
 }
 
-const LongCard = styled.div`
+const Container = styled.a`
   grid-column-start: 1;
   ${medium('grid-column-end: 3;')};
   grid-column-end: 2;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.07);
-  background-color: #f9fafc;
-  ${props => props.background && 'background-image: url(' + props.background + ');'}
-  ${props => props.gradient && 'background-image:' + props.gradient + ';'}
-  background-size: cover;
-  background-position: center;
-  padding: 30px;
-  ${medium('padding: 30px 60px;')};
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  ${medium('flex-direction: row;')};
-  &.center {
+  
+  .center {
     justify-content: center;
     p, h1 {
       text-align: center;
     }
   }
-  &.left {
+  .left {
     justify-content: flex-start;
   }
-  &.right {
+  .right {
     justify-content: center;
     ${medium('justify-content: flex-end')};;
   }
@@ -96,6 +100,39 @@ const LongCard = styled.div`
     width: 80%;
     margin: auto;
   }
+`
+const LongCard = styled.a`
+  border-radius: 12px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.07);
+  background-color: #f9fafc;
+  ${props => props.background && 'background-image: url(' + props.background + ');'}
+  ${props => props.gradient && 'background-image:' + props.gradient + ';'}
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  ${medium('padding: 30px 60px;')};
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
+  height: 100%;
+`
+
+const LongCardLink = styled(Link)`
+  border-radius: 12px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.07);
+  background-color: #f9fafc;
+  ${props => props.background && 'background-image: url(' + props.background + ');'}
+  ${props => props.gradient && 'background-image:' + props.gradient + ';'}
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  ${medium('padding: 30px 60px;')};
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
+  height: 100%;
 `
 
 const ImageContainer = styled.div`

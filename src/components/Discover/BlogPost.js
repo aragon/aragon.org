@@ -20,8 +20,8 @@ const mudule2Content = (
 const BlogPost = () => (
   <Section>
     <Container>
-      <MariasPost background={'Discover/assets/background-discover3.png'} colorWhite textAlign="left" title="Freeing the Marias of the world" content={mudule1Content}></MariasPost>
-      <LongCard background={'Discover/assets/background-discover4.png'} colorWhite textAlign="center" title="Reclaim your freedom now" content={mudule2Content}></LongCard>
+      <MariasPost linkTo="https://blog.aragon.org/decentralized-organizations-can-solve-the-worlds-worst-problems-840db6255d12/" background={'Discover/assets/background-discover3.png'} colorWhite textAlign="left" title="Freeing the Marias of the world" content={mudule1Content}></MariasPost>
+      <LongCard linkTo="https://app.aragon.org" background={'Discover/assets/background-discover4.png'} colorWhite textAlign="center" title="Reclaim your freedom now" content={mudule2Content}></LongCard>
     </Container>
   </Section>
 );

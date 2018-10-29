@@ -50,6 +50,7 @@ const SmallCard = styled.a`
   flex-direction: column;
   justify-content: center;
   padding: 30px;
+  height: 100%;
   ${medium('padding: 30px 60px;')};
   img {
     height: 130px;
@@ -70,6 +71,7 @@ const SmallCard = styled.a`
   }
 `
 const SmallCardLink = styled(Link)`
+  height: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.07);
   background-color: #f9fafc;
