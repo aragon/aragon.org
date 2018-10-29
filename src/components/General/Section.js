@@ -9,6 +9,7 @@ const StyledSection = styled.section`
   padding: 30px 15px;
   position: relative;
   background: white;
+  overflow-x: hidden;
 `;
 
 const Container = styled.div`
