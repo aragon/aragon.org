@@ -68,9 +68,11 @@ const Item = styled(SafeLink)`
   &:hover, &.active {
     h6 {
       color: #22e0ff;
+      transition: all 0.25s ease-in-out;
     }
     svg path.white {
       fill: #22e0ff;
+      transition: all 0.25s ease-in-out;
     }
   }
   h6 {
@@ -89,9 +91,11 @@ const InternalItem = styled(Link)`
   &:hover, &.active {
     h6 {
       color: #22e0ff;
+      transition: all 0.25s ease-in-out;
     }
     svg path.white {
       fill: #22e0ff;
+      transition: all 0.25s ease-in-out;
     }
   }
   h6 {
