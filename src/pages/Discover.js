@@ -45,6 +45,7 @@ const HeroSection = styled(Section)`
   align-items: center;
   justify-content: center;
   position: relative;
+  display: flex;
   video {
     width: auto;
     display:none;
@@ -78,8 +79,9 @@ const Box = styled.div`
 `;
 const Container = styled.div`
   width: 100%;
-  h2, h4 {
+  h2, h4, a {
     text-align: left;
+    margin-left: 60px;
   }
 `;
 
