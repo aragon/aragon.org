@@ -72,7 +72,7 @@ const LongCard = styled.div`
 
   }
   h1 {
-    font-family: 'GraphikLight', sans-serif;
+    font-family: 'FontLight', sans-serif;
     font-size:30px;
     ${medium('font-size: 46px;')};
     font-weight: 300;
