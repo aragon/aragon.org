@@ -127,6 +127,9 @@ const AragonNavbar = styled(animated.div)`
   ul li {
     padding: 0 20px;
   }
+  li {
+    width: 175px;
+  }
 `
 
 const Center = styled.div`
