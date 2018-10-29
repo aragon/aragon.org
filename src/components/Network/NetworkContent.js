@@ -42,7 +42,7 @@ const NetworkContent = () => (
 
 const Container = styled.div`
   display: grid;
-  ${medium('grid-template-columns: 50% 50%; grid-template-rows: 500px 500px')};
+  ${medium('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px')};
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-column-gap: 30px;
