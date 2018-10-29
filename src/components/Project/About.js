@@ -11,7 +11,7 @@ const medium = css => breakpoint('medium', css);
 
 const mudule1Content = (
   <span>
-    <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday. Aragon Nest, our grants program, helps bring it to reality.</p>
+    <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday. Aragon Nest helps bring it to reality.</p>
     <p>
       <Link className="action-button" to="/project/grants">
         <span>Discover nest <img src={require(`../General/assets/arrow.svg`)}/></span>

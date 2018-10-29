@@ -8,7 +8,7 @@ import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
 
 const mudule1Content = (<p>Creating a democratic organization is as easy as selecting the Democracy template. Votes are fully secure and tamper-proof. You can now empower entire communities.</p>);
-const mudule2Content = (<p>No need to go through a huge stack of paper to figure out what’s going on. Thanks to Aragon’s beautifully designed interface, people in your organization can always know the state of your finances, tokens, and any other information.</p>);
+const mudule2Content = (<p>No need to go through a huge stack of paper to figure out what’s going on. Thanks to Aragon, people in your organization can view your finances and any other data.</p>);
 const mudule3Content = (
   <span>
     <p>Aragon organizations are fully modular. You can install apps that enhance your organization. Maybe you want a different voting process, or a different way to manage funds.</p>

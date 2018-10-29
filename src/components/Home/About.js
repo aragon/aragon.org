@@ -10,7 +10,7 @@ const medium = css => breakpoint('medium', css);
 
 const mudule1Content = (
   <span>
-    <p>We are a community with the mission to empower freedom by creating tools for decentralized organizations to thrive.</p>
+    <p>The Aragon project is a community with the mission to empower freedom by creating tools for decentralized organizations to thrive.</p>
     <p><Link to="/project" className="action-button"><span>About <img src={require(`../General/assets/arrow.svg`)}/></span></Link></p>
   </span>
 );
@@ -22,7 +22,7 @@ const mudule2Content = (
 );
 const mudule3Content = (
   <span>
-    <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday lives. Aragon Nest, our grants program, is bringing it to reality.</p>
+    <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday lives. Aragon Nest helps bringing it to reality.</p>
     <p><Link to="project/grants"className="action-button"><span>Nest <img src={require(`../General/assets/arrow.svg`)}/></span></Link></p>
   </span>
 );
