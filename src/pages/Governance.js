@@ -14,7 +14,7 @@ const Governance = () => (
       <Container>
         <h2>Power to the people</h2>
         <h4>Aragon is all about empowering people, starting with our own community.<br/>The project is community-governed, and we are committed on decentralizing power.</h4>
-        <Button.Anchor className="hero-link" mode="strong" href="https://app.aragon.org" target="_blank">Manifesto</Button.Anchor>
+        <Button.Anchor className="hero-link" mode="strong" href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/" target="_blank">Manifesto</Button.Anchor>
       </Container>
     </GovernanceSection>
     <GovernanceContent/>

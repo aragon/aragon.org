@@ -91,6 +91,7 @@ const Content = styled.div`
     font-family: 'FontRegular', sans-serif;
     margin-top: 30px!important;
     letter-spacing: 0.5px;
+    font-size: 15px;
   }
   a {
     text-decoration: none;

@@ -5,7 +5,7 @@ import { theme, breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
 
 const StyledSection = styled.section`
-  width: 100vw;
+  width: 100%;
   padding: 30px 15px;
   position: relative;
   background: white;
