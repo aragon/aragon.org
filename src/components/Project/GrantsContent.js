@@ -10,7 +10,7 @@ const mudule1Content = (
   <span>
     <p>Aragon Nest is run in the open. That way, we ensure we remain transparent to our community and the grant recipients and applicants. Everything going on in Nest is reflected in GitHub.</p>
     <p>
-      <a className="action-button" href=" https://github.com/aragon/nest" target="_blank">
+      <a className="action-button" href="https://github.com/aragon/nest" target="_blank">
         <span>Nest in GitHub <img src={require(`../General/assets/arrow.svg`)}/></span>
       </a>
     </p>
@@ -50,8 +50,8 @@ const GrantsContent = () => (
           </div>
         </LongCardContainer>
       </LongCard>
-      <Card imageUrl={'Project/assets/governance2'} title="Fully transparent" content={mudule1Content}></Card>
-      <Card imageUrl={'Home/home-assets/home4'} title="Apply now" content={mudule2Content}></Card>
+      <Card linkTo="https://github.com/aragon/nest" imageUrl={'Project/assets/governance2'} title="Fully transparent" content={mudule1Content}></Card>
+      <Card linkTo="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant" imageUrl={'Home/home-assets/home4'} title="Apply now" content={mudule2Content}></Card>
     </Container>
   </Section>
 );

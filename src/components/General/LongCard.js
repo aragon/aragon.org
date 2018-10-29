@@ -109,7 +109,6 @@ const ImageContainer = styled.div`
     width: 430px;
     height: 430px;
     margin: 15px 0;
-    ${medium('margin: 50%;')};
   }
 `
 

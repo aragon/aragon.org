@@ -67,8 +67,8 @@ const About = () => (
         </BreakPoint>
       </LongCard>
       <LongCard textAlign="right" color="#b4b5cc" image={'Project/assets/project3.png'} background="" colorWhite title="Governed by the community" content={module4Content} gradient="radial-gradient(circle at 99% 100%, #1c1d23, #2d2e39)"></LongCard>
-      <Card imageUrl={'Project/assets/project1'} title="Nest, our grants program" content={mudule1Content}></Card>
-      <Card imageUrl={'Project/assets/project2'} title={(<span>Join<br/> the fight</span>)} content={mudule2Content}></Card>
+      <Card linkTo="/project/grants" imageUrl={'Project/assets/project1'} title="Nest, our grants program" content={mudule1Content}></Card>
+      <Card linkTo="/project/contribute" imageUrl={'Project/assets/project2'} title={(<span>Join<br/> the fight</span>)} content={mudule2Content}></Card>
     </Container>
   </Section>
 );

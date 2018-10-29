@@ -34,8 +34,8 @@ const NetworkContent = () => (
     <Container>
       <Card imageUrl={'Network/assets/network1'} title="Effective dispute resolution" content={mudule1Content}></Card>
       <Card imageUrl={'Network/assets/network2'} title="Anonymity and trust, together" content={mudule2Content}></Card>
-      <Card imageUrl={'Network/assets/network3'} title="Insured agreements" content={mudule3Content}></Card>
-      <Card imageUrl={'Network/assets/network4'} title="Shape it yourself" content={mudule4Content}></Card>
+      <Card linkTo="https://github.com/aragon/whitepaper" imageUrl={'Network/assets/network3'} title="Insured agreements" content={mudule3Content}></Card>
+      <Card linkTo="https://forum.aragon.org" imageUrl={'Network/assets/network4'} title="Shape it yourself" content={mudule4Content}></Card>
     </Container>
   </Section>
 );

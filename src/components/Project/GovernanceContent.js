@@ -41,8 +41,8 @@ const module3Content = (
 const About = () => (
   <Section>
     <Container>
-      <Card imageUrl={'Project/assets/governance1'} title="Empowering participation" content={mudule1Content}></Card>
-      <Card imageUrl={'Project/assets/governance2'} title={(<span>Transparent <br/> finances</span>)} content={mudule2Content}></Card>
+      <Card linkTo="https://forum.aragon.org/t/request-for-comment-agp-1-the-aragon-governance-proposal-process/233" imageUrl={'Project/assets/governance1'} title="Empowering participation" content={mudule1Content}></Card>
+      <Card linkTo="https://transparency.aragon.org" imageUrl={'Project/assets/governance2'} title={(<span>Transparent <br/> finances</span>)} content={mudule2Content}></Card>
       <LongCard image={'Project/assets/governance3.png'} textAlign="left" color="#b4b5cc" background="Home/home-assets/background-home1.png" colorWhite title="A decentralized organization" content={module3Content}></LongCard>
     </Container>
   </Section>
