@@ -15,7 +15,7 @@ const Quotes = () => (
       <Quote image={'Discover/assets/quote2.png'} title="Laura Smith" content="Aragon is perfect for open source projects. Traditional organizations just aren’t ready for digital communities. With Aragon, I can easily add and reward my contributors, making my project sustainable."/>
     </Box>
     <p className="link">
-      <a className="hero-link" href="http://aragon.aragonpm.com/#/ngo.aragonid.eth" target="_blank">
+      <a className="hero-link" href="https://mainnet.aragon.org/#/genesis.aragonid.eth" target="_blank">
         <span>Check an example Aragon organization <img src={require(`../General/assets/hero-arrow.svg`)}/></span>
       </a>
     </p>
