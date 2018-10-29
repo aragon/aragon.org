@@ -18,7 +18,7 @@ const Home = () => (
         <Container>
           <h2>Freedom to organize</h2>
           <h4>Aragon lets you freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, or communities.</h4>
-          <Button.Anchor className="hero-link" mode="strong" href="./discover" target="_blank">Discover the product</Button.Anchor>
+          <Button.Anchor className="hero-link" mode="strong" href="./discover">Discover the product</Button.Anchor>
         </Container>
         <Container>
           <video playsInline autoPlay muted loop>
