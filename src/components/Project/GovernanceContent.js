@@ -32,7 +32,7 @@ const module3Content = (
     <p>We are committed to transitioning Aragon into a fully decentralized organization. That organization will become the Aragon Network.</p>
     <p>
       <Link to="/network" className="action-button">
-        <span>Aragon network <img src={require(`../General/assets/arrow.svg`)}/></span>
+        <span>Aragon Network <img src={require(`../General/assets/arrow.svg`)}/></span>
       </Link>
     </p>
   </span>
