@@ -18,7 +18,7 @@ class Panel extends React.Component {
     const { items } = this.props
     const { opened } = this.state
     return (
-      <Pannel>
+      <Pannel className="flex-images">
         <Button mode="text" onClick={() => this.setState({ opened: true })}>
           <img src={menu} />
         </Button>
@@ -54,10 +54,10 @@ const Container = styled.div`
   a {
     padding: 10px 0;
     text-decoration: none;
-    color: #4a90e2;
+    color: white;
   }
   a:hover {
-    color: black;
+    color: #22e0ff;
   }
 `
 

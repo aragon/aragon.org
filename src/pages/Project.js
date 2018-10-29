@@ -53,6 +53,9 @@ const Container = styled.div`
   h2, h4 {
     text-align: left;
   }
+  h2 {
+    margin-top: 0;
+  }
   iframe {
     width: 90%;
     margin: 30px 0;

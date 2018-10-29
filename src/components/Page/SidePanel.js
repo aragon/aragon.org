@@ -110,6 +110,7 @@ const Overlay = styled(animated.div)`
 
 const Panel = styled(animated.aside)`
   position: absolute;
+  background: #1c1c23;
   top: 0;
   left: 0;
   display: flex;
@@ -117,7 +118,6 @@ const Panel = styled(animated.aside)`
   width: 280px;
   height: 100vh;
   padding-left: 10px;
-  background: white;
   box-shadow: -2px 0 36px rgba(0, 0, 0, 0.2);
 `;
 
@@ -142,6 +142,7 @@ const PanelContent = styled.div`
 const PanelCloseButton = styled.button`
   ${PanelHeader} & {
     position: absolute;
+    color: white;
     padding: 20px;
     top: 0;
     right: 0;

@@ -39,6 +39,8 @@ const Discover = () => (
 )
 
 const HeroSection = styled(Section)`
+  height: auto;
+  ${medium('height: 600px;')};
   background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);
   overflow: hidden;
   min-height: 550px;
@@ -82,7 +84,8 @@ const Container = styled.div`
   width: 100%;
   h2, h4, a {
     text-align: left;
-    margin-left: 60px;
+    margin-left: 0px;
+    ${medium('margin-left: 60px;')};
   }
 `;
 

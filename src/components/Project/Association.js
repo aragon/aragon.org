@@ -18,7 +18,7 @@ const UnstoppableOrganizations = () => (
         <h2>The Aragon <br/>Association</h2>
         <h4>The Aragon Project is stewarded by the Aragon Association, a Swiss non-profit entity.</h4>
         <br/><h4>Board of directors</h4>
-        <h4>Luis Cuende and Jorge Izquierdo</h4>
+        <h4 className="signs"><span>Luis Cuende</span><span>Jorge Izquierdo</span></h4>
       </Container>
     </Box>
   </Association>
@@ -55,6 +55,14 @@ const Container = styled.div`
     text-align: center;
     ${medium('text-align: left;')};
     color: #b4b5cc;
+  }
+  .signs span {
+    color: white;
+    font-weight: 800;
+    padding: 24px;
+  }
+  .signs {
+    margin: 7px -24px;
   }
 `;
 const Image = styled.img`

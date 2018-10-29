@@ -85,7 +85,7 @@ class Navbar extends React.Component {
           </BreakPoint>
           <BreakPoint to="medium">
             <MenuPanel items={menuItems} renderLink={renderMenuItemLink} />
-            <Link to={'/'}>
+            <Link to={'/'} className="flex-images">
               <MobileLogo src={logo} />
             </Link>
             <div style={{width: '30px'}}><span></span></div>
@@ -123,6 +123,10 @@ const AragonNavbar = styled(animated.div)`
   z-index: 5;
   .brand {
     display: flex;
+  }
+  .flex-images {
+    display: flex;
+    height: 64px;
   }
   ul li {
     padding: 0 20px;
