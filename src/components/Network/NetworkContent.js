@@ -6,8 +6,8 @@ import styled from 'styled-components'
 import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
 
-const mudule1Content = (<p>The Aragon Network encompasses a set of courts, which can be used to settle disputes. By using smart contracts, cases can be closed exponentially faster than in traditional courts.</p>);
-const mudule2Content = (<p>Mom probably advised you not to interact with strangers. But thanks to the Aragon Network, you can transact with people who are using aliases, or stay anonymous yourself. You are in control and can open disputes if someone misbehaves.</p>);
+const mudule1Content = (<p>The Aragon Network encompasses a set of courts, which can be used to settle disputes. By using smart contracts, cases can be closed way faster than in traditional courts. Fairness for everyone.</p>);
+const mudule2Content = (<p>Mom probably advised you not to interact with strangers. But thanks to the Aragon Network, you can transact with people who are using aliases, or stay anonymous yourself. You can open disputes if someone misbehaves.</p>);
 const mudule3Content = (
   <span>
     <p>You can agree on a minimum and maximum deposit of tokens upon creating a new agreement on the Aragon Network. These deposits can be used to penalize bad behaviour in the Network court, warranting good behaviour.</p>
@@ -20,7 +20,7 @@ const mudule3Content = (
 );
 const mudule4Content = (
   <span>
-    <p>The Aragon Network is not only a digital jurisdiction, but one in which you can make your voice heard. The Aragon Network will be community-governed, just like the project itself.</p>
+    <p>The Aragon Network is not only a digital jurisdiction, but one in which you can make your voice heard. The Aragon Network will be governed by the community, just like the Aragon project itself.</p>
     <p>
       <a className="action-button" target="_blank" href="https://forum.aragon.org">
         <span>Aragon forum <img src={require(`../General/assets/arrow.svg`)}/></span>
