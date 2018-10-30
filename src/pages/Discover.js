@@ -31,7 +31,6 @@ const Discover = () => (
       </Box>
     </HeroSection>
     <About/>
-    <Quotes/>
     <Product/>
     <UnstoppableOranizations/>
     <BlogPost/>

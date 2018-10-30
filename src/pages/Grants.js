@@ -4,6 +4,7 @@ import { Page } from '../components'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import backgroundImage from '../components/Project/assets/grants-background.png'
 import GrantseContent from '../components/Project/GrantsContent'
+import GrantsQuotes from '../components/Project/GrantsQuotes'
 import Section from '../components/General/Section'
 import { Button } from '@aragon/ui'
 
