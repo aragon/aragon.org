@@ -33,20 +33,20 @@ const GrantsContent = () => (
       <LongCard textAlign="center" color="#b4b5cc" gradient="radial-gradient(circle at 99% 100%, #1c1d23, #2d2e39)" colorWhite title="A thriving ecosystem">
         <LongCardContainer>
           <div>
-            <h5>$1.5</h5>
-            <h3>Millions given away in grants</h3>
+            <h5 className="one">$1.5</h5>
+            <h3 className="one">Millions given away in grants</h3>
           </div>
           <div>
-            <h5>15</h5>
-            <h3>Teams working together</h3>
+            <h5 className="two">15</h5>
+            <h3 className="two">Teams working together</h3>
           </div>
           <div>
-            <h5>60</h5>
-            <h3>People making their dreams possible</h3>
+            <h5 className="three">60</h5>
+            <h3 className="three">People making their dreams possible</h3>
           </div>
           <div>
-            <h5>120</h5>
-            <h3>Applications to the program</h3>
+            <h5 className="four">120</h5>
+            <h3 className="four">Applications to the program</h3>
           </div>
         </LongCardContainer>
       </LongCard>
@@ -74,7 +74,11 @@ const LongCardContainer = styled.div`
   background-image: linear-gradient(119deg, #faf9f4, #2c86d0);
   -webkit-background-clip: text;
   background-clip: text;
+  
+  -webkit-text-fill-color: white;
   -webkit-text-fill-color: transparent;
+  color: white;
+  // -webkit-text-fill-color: white;
   margin: 30px -10% 0 -10%;
   div {
     padding: 15px;
@@ -93,6 +97,32 @@ const LongCardContainer = styled.div`
     font-weight: 300;
     line-height: 1.33;
     text-align: center;
+  }
+  h5, h3 {
+    background-image: -webkit-linear-gradient(119deg, #faf9f4, #2c86d0);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+  }
+  h3.one, h5.one {
+    background-image: -webkit-linear-gradient(119deg, #FAF9F4, #F9F5DE);
+  }
+  h3.two, h5.two {
+    background-image: -webkit-linear-gradient(119deg, #E1F6ED,  #92BDCB);
+  }
+  h3.three, h5.three {
+    background-image: -webkit-linear-gradient(119deg, #E8E5F7, #ADC5DB);
+  }
+  h3.four, h5.four {
+    background-image: -webkit-linear-gradient(119deg, #B0CBE4, #2C86D0);
   }
 `
 
