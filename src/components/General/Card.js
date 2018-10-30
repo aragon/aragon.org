@@ -4,6 +4,7 @@ import Section from '../General/Section'
 import styled from 'styled-components'
 import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
+const large = css => breakpoint('large', css);
 import { Link } from 'react-static'
 
 class Card extends React.Component {
@@ -54,7 +55,9 @@ const SmallCard = styled.div`
   h1 {
     font-family: 'FontLight', sans-serif;
     font-size:30px;
-    ${medium('font-size: 46px;')};
+    width: inherit;
+    ${medium('font-size: 36px; width: calc(100% + 110px);')};
+    ${large('width: inherit; font-size: 46px;')};
     font-weight: 300;
     line-height: 1.35;
     text-align: center;

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
+const large = css => breakpoint('large', css);
 import { Link } from 'react-static'
 
 class Card extends React.Component {
@@ -43,7 +44,8 @@ const LongCard = styled.div`
   background-size: cover;
   background-position: center;
   padding: 30px;
-  ${medium('padding: 30px 60px;')};
+  ${medium('padding: 30px 15px;')};
+  ${large('padding: 30px 60px;')};
   display: flex;
   align-items: center;
   flex-direction: column;

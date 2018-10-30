@@ -6,6 +6,7 @@ import Quote from '../General/Quote'
 
 import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
+const large = css => breakpoint('large', css);
 
 const Quotes = () => (
   <QuoteSection>
@@ -27,7 +28,8 @@ const QuoteSection = styled(Section)`
 `
 const Box = styled.div`
   display: grid;
-  ${medium('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 250px')};
+  ${medium('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: auto;')};
+  ${large('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 250px')};
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-column-gap: 30px;
