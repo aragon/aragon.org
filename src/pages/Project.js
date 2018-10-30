@@ -18,7 +18,7 @@ const Project = () => (
         <Container>
           <h2>Fight for freedom</h2>
           <h4>Aragon is a project to empower freedom by creating tools for decentralized organizations to thrive.</h4>
-          <Button.Anchor className="hero-link" mode="strong" href="https://mainnet.aragon.org " target="_blank">Manifesto</Button.Anchor>
+          <Button.Anchor className="hero-link" mode="strong" href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/" target="_blank">Manifesto</Button.Anchor>
         </Container>
         <Container>
           <iframe src="https://www.youtube-nocookie.com/embed/AqjIWmiAidw?rel=0&amp;ecver=2" frameBorder="0" allow="autoplay; encrypted-media"  allowFullScreen></iframe>
