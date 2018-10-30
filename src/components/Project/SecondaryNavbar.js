@@ -31,7 +31,7 @@ const SecondaryNavbar = ({ page, ...props }) => (
       </Item>
       <Item href="https://aracon.one/" target="_blank">
         <Aracon/>
-        <h6>Aracon</h6>
+        <h6>AraCon</h6>
       </Item>
       <Item href="https://wiki.aragon.org/" target="_blank">
         <Wiki/>

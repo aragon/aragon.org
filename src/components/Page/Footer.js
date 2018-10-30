@@ -104,7 +104,7 @@ const Footer = ({ ...props }) => (
       <Item>
         <a href="https://blog.aragon.org/" target="_blank">Blog</a>
         <a href="https://wiki.aragon.org/" target="_blank">Wiki</a>
-        <a href="https://aracon.one/" target="_blank">Aracon</a>
+        <a href="https://aracon.one/" target="_blank">AraCon</a>
         <a href="https://aragon.chat/" target="_blank">Chat</a>
       </Item>
       <Item className="mobile-full">
