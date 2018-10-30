@@ -22,7 +22,7 @@ class Card extends React.Component {
     return (
       <Container colorWhite={colorWhite}>
       {(linkTo && linkTo.startsWith('/')) ? (
-      <LongCardLink to={linkTo} className={textAlign} colorWhite={colorWhite} image={image || false} background={background ? require(`../${background}`) : ''} gradient={gradient ? gradient : ''}>
+      <LongCard className={textAlign} colorWhite={colorWhite} image={image || false} background={background ? require(`../${background}`) : ''} gradient={gradient ? gradient : ''}>
         {image && textAlign == 'right' && <ImageContainer><img src={require(`../${image}`)}/></ImageContainer>}
         <div className={textAlign + "-box"}>
           {title && <h1>{title}</h1>}
@@ -30,9 +30,9 @@ class Card extends React.Component {
           {children}
         </div>
         {image && textAlign == 'left' && <ImageContainer><img src={require(`../${image}`)}/></ImageContainer>}
-      </LongCardLink>
+      </LongCard>
       ) : (
-        <LongCard href={linkTo} target="_blank" className={textAlign} colorWhite={colorWhite} image={image || false} background={background ? require(`../${background}`) : ''} gradient={gradient ? gradient : ''}>
+        <LongCard  target="_blank" className={textAlign} colorWhite={colorWhite} image={image || false} background={background ? require(`../${background}`) : ''} gradient={gradient ? gradient : ''}>
         {image && textAlign == 'right' && <ImageContainer><img src={require(`../${image}`)}/></ImageContainer>}
         <div className={textAlign + "-box"}>
           {title && <h1>{title}</h1>}
@@ -101,7 +101,7 @@ const Container = styled.a`
     margin: auto;
   }
 `
-const LongCard = styled.a`
+const LongCard = styled.div`
   border-radius: 12px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.07);
   background-color: #f9fafc;
