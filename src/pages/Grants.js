@@ -19,6 +19,7 @@ const Grants = () => (
       </Container>
     </GrantsSection>
     <GrantseContent/>
+    <GrantsQuotes/>
   </Page>
 )
 

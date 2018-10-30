@@ -11,8 +11,8 @@ const Quotes = () => (
   <QuoteSection>
     <h2>Our eaglets</h2>
     <Box>
-      <Quote image={'Discover/assets/quote1.png'} title="Olivier Sarrouy" content="Entering the Aragon Nest program is not (only) about getting funded. It is about entering a community whose every member is committed to help every others to pursue a common goal: working toward the decentralization of human worlds."/>
-      <Quote image={'Discover/assets/quote2.png'} title="Yalda Mousavinia" content="Every time I scroll through @AragonProject's github repo for Nest it makes me so inspired about the future. What is happening here is next level and it will become even more next level as more organizations cross-pollinate here. Stoked to be in the Nest."/>
+      <Quote image={'Project/assets/oliver.png'} title="Olivier Sarrouy" content="Entering the Aragon Nest program is not (only) about getting funded. It is about entering a community whose every member is committed to help every others to pursue a common goal: working toward the decentralization of human worlds."/>
+      <Quote image={'Project/assets/yalda.png'} title="Yalda Mousavinia" content="Every time I scroll through @AragonProject's github repo for Nest it makes me so inspired about the future. What is happening here is next level and it will become even more next level as more organizations cross-pollinate here. Stoked to be in the Nest."/>
     </Box>
   </QuoteSection>
 );

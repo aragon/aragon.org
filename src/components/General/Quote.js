@@ -36,9 +36,10 @@ const QuoteContainer = styled.div`
     justify-content: center;
     color: #1C1D23;
     img {
-      padding-right: 15px;
-      width: 75px;
+      margin-right: 15px;
+      width: 60px;
       height: 60px;
+      border-radius: 88px;
     }
   }
   p {
