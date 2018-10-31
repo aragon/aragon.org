@@ -54,6 +54,7 @@ const LongCard = styled.div`
   grid-column-start: 1;
   ${medium('grid-column-end: 3;')};
   grid-column-end: 2;
+  transition: all 0.25s ease-in-out;
   
   &.center {
     justify-content: center;
@@ -102,6 +103,9 @@ const LongCard = styled.div`
   .center-box {
     width: 80%;
     margin: auto;
+  }
+  &:hover {
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.07);
   }
 `
 

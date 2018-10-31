@@ -35,7 +35,7 @@ const Container = styled.div`
   grid-row-gap: 30px;
 `
 const MariasPost = styled(LongCard)`
-  background-position: 60%!important;
+  background-position: 60% !important;
   ${medium('background-position: center;')};
 `
 

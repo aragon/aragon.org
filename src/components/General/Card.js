@@ -44,6 +44,7 @@ const SmallCard = styled.div`
   justify-content: center;
   padding: 30px;
   height: 100%;
+  transition: all 0.25s ease-in-out;
   ${medium('padding: 30px 60px;')};
   img {
     height: 130px;
