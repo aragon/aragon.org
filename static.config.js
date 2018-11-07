@@ -158,6 +158,23 @@ export default {
             <link rel="icon" href="/favicon-195.png" sizes="195x195" />
             <link rel="icon" href="/favicon-228.png" sizes="228x228" />
 
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content="@aragonproject" />
+            <meta name="twitter:creator" content="@aragonproject" />
+            <meta name="twitter:description" content="Build unstoppable organizations on Ethereum" />
+            <meta name="twitter:title" content="Aragon" />
+            <meta name="twitter:image" content="https://raw.githubusercontent.com/aragon/website/master/public/twitter-card-icon.png" />
+
+            <meta property="og:title" content="Aragon" />
+            <meta property="og:description" content="Build unstoppable organizations on Ethereum" />
+            <meta property="og:url" content="https://aragon.org/" />
+            <meta property="og:site_name" content="Aragon" />
+            <meta property="og:image" content="https://raw.githubusercontent.com/aragon/website/master/public/twitter-card-icon.png" />
+            <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/aragon/website/master/public/twitter-card-icon.png" />
+            <meta property="og:image:width" content="300" />
+            <meta property="og:image:height" content="300" />
+
+            <meta name="description" content="Build unstoppable organizations on Ethereum">
             {renderMeta.styleTags}
           </Head>
           <Body>
