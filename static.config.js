@@ -174,7 +174,7 @@ export default {
             <meta property="og:image:width" content="300" />
             <meta property="og:image:height" content="300" />
 
-            <meta name="description" content="Build unstoppable organizations on Ethereum">
+            <meta name="description" content="Build unstoppable organizations on Ethereum" />
             {renderMeta.styleTags}
           </Head>
           <Body>
