@@ -10,7 +10,7 @@ const mudule1Content = (<p>The Aragon Network encompasses a set of courts, which
 const mudule2Content = (<p>Mom probably advised you not to interact with strangers. But thanks to the Aragon Network, you can transact with people who are using aliases, or stay anonymous yourself. You can open disputes if someone misbehaves.</p>);
 const mudule3Content = (
   <span>
-    <p>You can agree on a minimum and maximum deposit of tokens upon creating a new agreement on the Aragon Network. These deposits can be used to penalize bad behaviour in the Network court, warranting good behaviour.</p>
+    <p>You can agree on a minimum and maximum deposit of tokens upon creating a new agreement on the Aragon Network. These deposits can be used to penalize bad behaviour, warranting good behaviour.</p>
     <p>
       <a className="action-button" target="_blank" href="https://github.com/aragon/whitepaper">
         <span>Whitepaper <img src={require(`../General/assets/arrow.svg`)}/></span>
