@@ -60,12 +60,39 @@ const Container = styled.nav`
     width: 25px;
     ${medium('width: 40px')};
   }
+  a {
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    ${medium('padding: 0 30px')};
+    &:focus {
+      outline: 0;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        right: 0;
+        bottom: 2px;
+        outline: 2px solid #22e0ff;
+      }
+    }
+    &:active:after {
+      display: none;
+    }
+  }
 `
 const Item = styled(SafeLink)`
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  &:hover, &.active {
+  font-size: 15px;
+  &:hover,
+  &.active {
     h6 {
       color: #22e0ff;
       transition: all 0.25s ease-in-out;
@@ -88,7 +115,9 @@ const InternalItem = styled(Link)`
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  &:hover, &.active {
+  font-size: 15px;
+  &:hover,
+  &.active {
     h6 {
       color: #22e0ff;
       transition: all 0.25s ease-in-out;

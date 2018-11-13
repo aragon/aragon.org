@@ -9,33 +9,47 @@ const MenuItem = ({ url, label, active, renderLink }) => (
   </StyledMenuItem>
 )
 
-const StyledMenuItem = styled.li`
+const StyledMenuItem = styled.div`
   display: flex;
   align-items: stretch;
-  white-space: nowrap;
+  justify-content: center;
+  height: 100%;
   > span {
     display: flex;
     align-items: center;
-    padding: 0 15px;
-    font-size: 15px;
   }
   a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
     text-decoration: none;
-    padding: 0 10px;
-    span {
-      color: #ffffff;
-      font-size: 17px;
-      padding: 7px 0;
-    }
-    span:hover {
+    font-size: 17px;
+    white-space: nowrap;
+    color: #ffffff;
+    &:hover {
       color: #22e0ff;
+    }
+    &:focus {
+      outline: 0;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        outline: 2px solid #22e0ff;
+      }
+    }
+    &:active:after {
+      display: none;
     }
   }
-  &.active {
-    span a span {
-      color: #22e0ff;
-      font-weight: 800;
-    }
+  &.active a {
+    color: #22e0ff;
+    font-weight: 800;
   }
 `
 
