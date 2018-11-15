@@ -10,12 +10,10 @@ import logo from './assets/logo.svg'
 
 const renderMenuItemLink = ({ url, children }) =>
   url.startsWith('/') ? (
-    <Link to={url}>
-      <Text size="xlarge">{children}</Text>
-    </Link>
+    <Link to={url}>{children}</Link>
   ) : (
     <SafeLink href={url} target="_blank">
-      <Text size="xlarge">{children}</Text>
+      {children}
     </SafeLink>
   )
 
@@ -46,49 +44,55 @@ class Navbar extends React.Component {
         <Center>
           <BreakPoint from="medium">
             <ul>
-              <div>
+              <li>
                 <MenuItem
                   url={menuItems[0][0]}
                   label={menuItems[0][1]}
                   active={menuItems[0][2]}
                   renderLink={renderMenuItemLink}
                 />
-              </div>
-              <div>
+              </li>
+              <li>
                 <MenuItem
                   url={menuItems[1][0]}
                   label={menuItems[1][1]}
                   active={menuItems[1][2]}
                   renderLink={renderMenuItemLink}
                 />
-              </div>
-              <div>
-                <FlexLink to="/"><img src={logo} /></FlexLink>
-              </div>
-              <div>
+              </li>
+              <li>
+                <LogoLink to="/">
+                  <img src={logo} />
+                </LogoLink>
+              </li>
+              <li>
                 <MenuItem
                   url={menuItems[2][0]}
                   label={menuItems[2][1]}
                   active={menuItems[2][2]}
                   renderLink={renderMenuItemLink}
                 />
-              </div>
-              <div>
+              </li>
+              <li>
                 <MenuItem
                   url={menuItems[3][0]}
                   label={menuItems[3][1]}
                   active={menuItems[3][2]}
                   renderLink={renderMenuItemLink}
                 />
-              </div>
+              </li>
             </ul>
           </BreakPoint>
           <BreakPoint to="medium">
             <MenuPanel items={menuItems} renderLink={renderMenuItemLink} />
-            <Link to={'/'} className="flex-images">
-              <MobileLogo src={logo} />
+            <Link to={'/'}>
+              <span>
+                <MobileLogo src={logo} />
+              </span>
             </Link>
-            <div style={{width: '30px'}}><span></span></div>
+            <div style={{ width: '30px' }}>
+              <span />
+            </div>
           </BreakPoint>
         </Center>
       </AragonNavbar>
@@ -124,48 +128,65 @@ const AragonNavbar = styled(animated.div)`
   .brand {
     display: flex;
   }
-  .flex-images {
-    display: flex;
-    height: 64px;
+  a {
+    position: relative;
+    &:focus {
+      outline: 0;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: -5px;
+        right: -5px;
+        bottom: 0;
+        outline: 2px solid #22e0ff;
+      }
+    }
+    &:active:after {
+      display: none;
+    }
   }
-  ul li {
-    padding: 0 20px;
-  }
-  li {
-    width: 175px;
-  }
+  ${medium(`
+    a:focus:after {
+      left: 0;
+      right: 0;
+    }
+  `)};
 `
 
 const Center = styled.div`
   ul {
     display: flex;
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    height: 100%;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   button {
     margin: 0 0 0 10px;
-  }
-  img {
-    margin: 0 30px;
   }
   height: 64px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${medium('width: auto; height: auto; display: inherit;')};
+  ${medium('width: auto; height: 100%; display: inherit;')};
 `
 
-const FlexLink = styled(Link)`
+const LogoLink = styled(Link)`
   display: flex;
-  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  width: 148px;
+  height: 100%;
 `
 
 const MobileLogo = styled.img`
-  margin: 0!important;
+  margin: 0 !important;
+  position: relative;
+  top: 4px;
 `
 
 export default Navbar
