@@ -6,6 +6,7 @@ import Section from '../General/Section'
 import logo from './assets/logo-footer.svg'
 import twitter from './assets/twitter.svg'
 import ghost from './assets/ghost.svg'
+import forum from './assets/forum.png'
 import rocket from './assets/rocket.svg'
 
 const medium = css => breakpoint('medium', css);
@@ -83,6 +84,11 @@ const Box = styled.div`
   }
 `
 
+const Forum = styled.img `
+  height: 19px;
+  width: 19px;
+`
+
 const Footer = ({ ...props }) => (
   <FooterSection>
     <Container>
@@ -112,7 +118,7 @@ const Footer = ({ ...props }) => (
         <Box>
           <a href="https://twitter.com/aragonproject" target="_blank"><img src={twitter} /></a>
           <a href="https://blog.aragon.org/" target="_blank"><img src={ghost} /></a>
-          <a href="https://aragon.chat/" target="_blank"><img src={rocket} /></a>
+          <a href="https://forum.aragon.org/" target="_blank"><Forum src={forum} /></a>
         </Box>
         <p>Be part of the conversation</p>
         <form action="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&amp;id=e81a44c4bd" method="post" name="mc-embedded-subscribe-form" target="_blank" noValidate>
