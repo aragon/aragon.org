@@ -60,7 +60,7 @@ class Navbar extends React.Component {
                   renderLink={renderMenuItemLink}
                 />
               </li>
-              <li>
+              <li className="logo">
                 <LogoLink to="/">
                   <img src={logo} />
                 </LogoLink>
@@ -164,6 +164,9 @@ const Center = styled.div`
     align-items: center;
     justify-content: center;
     width: 185px;
+  }
+  li.logo {
+    width: 100px;
   }
   button {
     margin: 0 0 0 10px;
