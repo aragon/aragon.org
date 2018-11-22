@@ -163,6 +163,7 @@ const Center = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 185px;
   }
   button {
     margin: 0 0 0 10px;
