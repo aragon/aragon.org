@@ -185,6 +185,9 @@ const LogoLink = styled(Link)`
   align-items: center;
   width: 148px;
   height: 100%;
+  img {
+    height: 44px;
+  }
 `
 
 const MobileLogo = styled.img`
