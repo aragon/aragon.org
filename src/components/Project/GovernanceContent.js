@@ -11,7 +11,7 @@ const mudule1Content = (
   <span>
     <p>We care a great deal about governance. That’s why we have created the Aragon Governance Proposals. You can vote on them, or create your own with our governance process.</p>
     <p>
-      <a className="action-button" target="_blank" href="https://forum.aragon.org/t/request-for-comment-agp-1-the-aragon-governance-proposal-process/233">
+      <a className="action-button" target="_blank" href="https://github.com/aragon/AGPs/blob/master/AGPs/AGP-1.md">
         <span>Governance process <img src={require(`../General/assets/arrow.svg`)}/></span>
       </a>
     </p>
