@@ -25,7 +25,7 @@ const SecondaryNavbar = ({ page, ...props }) => (
         <Contribute/>
         <h6>Contribute</h6>
       </InternalItem>
-      <Item href="https://blog.aragon.org/" target="_blank">
+      <Item href="https://blog.aragon.org/">
         <Blog/>
         <h6>Blog</h6>
       </Item>
