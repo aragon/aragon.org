@@ -88,12 +88,15 @@ const Forum = styled.img `
   height: 19px;
   width: 19px;
 `
+const LogoImg = styled.img `
+  height: 50px;
+`
 
 const Footer = ({ ...props }) => (
   <FooterSection>
     <Container>
       <Item className="mobile-full">
-          <Link to="/"><img src={logo} /></Link>
+          <Link to="/"><LogoImg src={logo} /></Link>
       </Item>
       <Item>
         <Link to="/">Home</Link>
