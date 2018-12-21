@@ -23,7 +23,7 @@ const Governance = () => (
 
 const GovernanceSection = styled(Section)`
   height: 550px;
-  background: #faf7ec;
+  background: #161618
   background-image: url(${backgroundImage});
   background-size: cover;
   background-position: center
