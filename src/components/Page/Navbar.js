@@ -211,7 +211,7 @@ const AGPBanner = styled.div `
     line-height: 35px;
     padding: 0 30px;
     text-align: center:;
-    color: white;
+    color: black;
   }
   a {
     font-weight: 700;
