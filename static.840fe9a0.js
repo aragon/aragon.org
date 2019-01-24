@@ -938,10 +938,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 64px;\n  background: rgb(28, 29, 35);\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n'], ['\n  width: 100%;\n  height: 64px;\n  background: rgb(28, 29, 35);\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 64px;\n  background: rgb(28, 29, 35);\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  top: 34px;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n'], ['\n  width: 100%;\n  height: 64px;\n  background: rgb(28, 29, 35);\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  top: 34px;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  ul {\n    display: flex;\n    height: 100%;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 185px;\n  }\n  li.logo {\n    width: 100px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 64px;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n'], ['\n  ul {\n    display: flex;\n    height: 100%;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 185px;\n  }\n  li.logo {\n    width: 100px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 64px;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 148px;\n  height: 100%;\n  img {\n    height: 44px;\n  }\n'], ['\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 148px;\n  height: 100%;\n  img {\n    height: 44px;\n  }\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  margin: 0 !important;\n  position: relative;\n  top: 4px;\n'], ['\n  margin: 0 !important;\n  position: relative;\n  top: 4px;\n']);
+    _templateObject4 = _taggedTemplateLiteral(['\n  margin: 0 !important;\n  position: relative;\n  top: 4px;\n'], ['\n  margin: 0 !important;\n  position: relative;\n  top: 4px;\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  position: fixed;\n  z-index: 5;\n  width: 100vw;\n  text-align: center;\n  background-image: linear-gradient(90deg, #2CF4E1, #2CB2E1);\n  p {\n    line-height: 35px;\n    padding: 0 30px;\n    text-align: center:;\n    color: black;\n  }\n  a {\n    font-weight: 700;\n  }\n'], ['\n  position: fixed;\n  z-index: 5;\n  width: 100vw;\n  text-align: center;\n  background-image: linear-gradient(90deg, #2CF4E1, #2CB2E1);\n  p {\n    line-height: 35px;\n    padding: 0 30px;\n    text-align: center:;\n    color: black;\n  }\n  a {\n    font-weight: 700;\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -1134,15 +1135,34 @@ var Navbar = function (_React$Component) {
           path = _props.path;
 
       return _react2.default.createElement(
-        _reactSpring.Spring,
-        {
-          from: { x: 0 },
-          to: { x: this.state.scroll },
-          menuItems: menuItems,
-          path: path,
-          native: true
-        },
-        this.renderIn
+        'div',
+        null,
+        _react2.default.createElement(
+          AGPBanner,
+          null,
+          _react2.default.createElement(
+            'p',
+            null,
+            'AGP Vote #1 is happening now! ',
+            _react2.default.createElement(
+              'a',
+              { target: '_blank', href: 'https://blog.aragon.org/agp-vote-1/' },
+              'Click here'
+            ),
+            ' for details about the vote and how to participate.'
+          )
+        ),
+        _react2.default.createElement(
+          _reactSpring.Spring,
+          {
+            from: { x: 0 },
+            to: { x: this.state.scroll },
+            menuItems: menuItems,
+            path: path,
+            native: true
+          },
+          this.renderIn
+        )
       );
     }
   }]);
@@ -1157,6 +1177,7 @@ var Center = _styledComponents2.default.div(_templateObject2, medium('width: aut
 var LogoLink = (0, _styledComponents2.default)(_reactStatic.Link)(_templateObject3);
 
 var MobileLogo = _styledComponents2.default.img(_templateObject4);
+var AGPBanner = _styledComponents2.default.div(_templateObject5);
 
 exports.default = Navbar;
 
@@ -2472,7 +2493,7 @@ var UnstoppableOrganizations = function UnstoppableOrganizations() {
         _react2.default.createElement(
           'h4',
           null,
-          'Aragon provides all the necessary tools for human collaboration. Aragon organizations are impossible to censor or shut down, escaping the boundaries of opression and censorship.'
+          'Aragon provides all the necessary tools for human collaboration. Aragon organizations are impossible to censor or shut down, escaping the boundaries of oppression and censorship.'
         ),
         _react2.default.createElement(
           _reactStatic.Link,
@@ -4348,7 +4369,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  height: 550px;\n  background: #faf7ec;\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n'], ['\n  height: 550px;\n  background: #faf7ec;\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  height: 550px;\n  background: #161618\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n'], ['\n  height: 550px;\n  background: #161618\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  h2, h4 {\n    color: white;\n  }\n'], ['\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  h2, h4 {\n    color: white;\n  }\n']);
 
 var _react = __webpack_require__(0);
@@ -5920,4 +5941,4 @@ module.exports = __webpack_require__.p + "static/3a1c4c1e-yalda.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.fd66aa13.js.map
+//# sourceMappingURL=static.840fe9a0.js.map
