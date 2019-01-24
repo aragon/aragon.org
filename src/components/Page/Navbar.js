@@ -101,15 +101,20 @@ class Navbar extends React.Component {
   render() {
     const { menuItems, path } = this.props
     return (
-      <Spring
-        from={{ x: 0 }}
-        to={{ x: this.state.scroll }}
-        menuItems={menuItems}
-        path={path}
-        native
-      >
-        {this.renderIn}
-      </Spring>
+      <div>
+        <AGPBanner>
+          <p>AGP Vote #1 is happening now! <a target="_blank" href="https://blog.aragon.org/agp-vote-1/">Click here</a> for details about the vote and how to participate.</p>
+        </AGPBanner>
+        <Spring
+          from={{ x: 0 }}
+          to={{ x: this.state.scroll }}
+          menuItems={menuItems}
+          path={path}
+          native
+        >
+          {this.renderIn}
+        </Spring>
+      </div>
     )
   }
 }
@@ -124,6 +129,7 @@ const AragonNavbar = styled(animated.div)`
   align-items: center;
   padding: 0 20px;
   position: fixed;
+  top: 34px;
   z-index: 5;
   .brand {
     display: flex;
@@ -194,6 +200,22 @@ const MobileLogo = styled.img`
   margin: 0 !important;
   position: relative;
   top: 4px;
+`
+const AGPBanner = styled.div `
+  position: fixed;
+  z-index: 5;
+  width: 100vw;
+  text-align: center;
+  background-image: linear-gradient(90deg, #2CF4E1, #2CB2E1);
+  p {
+    line-height: 35px;
+    padding: 0 30px;
+    text-align: center:;
+    color: white;
+  }
+  a {
+    font-weight: 700;
+  }
 `
 
 export default Navbar
