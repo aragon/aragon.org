@@ -994,7 +994,7 @@ var renderMenuItemLink = function renderMenuItemLink(_ref) {
     children
   ) : _react2.default.createElement(
     _ui.SafeLink,
-    { href: url, target: '_blank' },
+    { href: url },
     children
   );
 };
@@ -5941,4 +5941,4 @@ module.exports = __webpack_require__.p + "static/3a1c4c1e-yalda.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.840fe9a0.js.map
+//# sourceMappingURL=static.9d153f5c.js.map
