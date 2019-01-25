@@ -12,7 +12,7 @@ const renderMenuItemLink = ({ url, children }) =>
   url.startsWith('/') ? (
     <Link to={url}>{children}</Link>
   ) : (
-    <SafeLink href={url} target="_blank">
+    <SafeLink href={url}>
       {children}
     </SafeLink>
   )
