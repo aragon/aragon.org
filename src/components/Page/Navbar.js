@@ -103,7 +103,7 @@ class Navbar extends React.Component {
     return (
       <div>
         <AGPBanner>
-          <p>AGP Vote #1 is over! <a target="_blank" href="https://twitter.com/AragonProject/status/1088952635774914560">Click here</a> for details.</p>
+          <p>AGP Vote #1 is over! <a target="_blank" href="https://twitter.com/AragonProject/status/1088954048512999425">Click here</a> for details.</p>
         </AGPBanner>
         <Spring
           from={{ x: 0 }}
