@@ -1143,13 +1143,13 @@ var Navbar = function (_React$Component) {
           _react2.default.createElement(
             'p',
             null,
-            'AGP Vote #1 is happening now! ',
+            'AGP Vote #1 is over! ',
             _react2.default.createElement(
               'a',
               { target: '_blank', href: 'https://blog.aragon.org/agp-vote-1/' },
               'Click here'
             ),
-            ' for details about the vote and how to participate.'
+            ' for details.'
           )
         ),
         _react2.default.createElement(
@@ -5941,4 +5941,4 @@ module.exports = __webpack_require__.p + "static/3a1c4c1e-yalda.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.9d153f5c.js.map
+//# sourceMappingURL=static.0051df45.js.map
