@@ -1146,7 +1146,7 @@ var Navbar = function (_React$Component) {
             'AGP Vote #1 is over! ',
             _react2.default.createElement(
               'a',
-              { target: '_blank', href: 'https://twitter.com/AragonProject/status/1088954048512999425' },
+              { target: '_blank', href: 'https://blog.aragon.org/final-results-from-aragon-network-vote-1/' },
               'Click here'
             ),
             ' for details.'
@@ -4926,7 +4926,7 @@ var universalOptions = {
 
 var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Home',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 52)), (0, _importCss3.default)('src/pages/Home', {
       disableWarnings: true
@@ -4946,7 +4946,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Discover',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 83)), (0, _importCss3.default)('src/pages/Discover', {
       disableWarnings: true
@@ -4966,7 +4966,7 @@ var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Project',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 84)), (0, _importCss3.default)('src/pages/Project', {
       disableWarnings: true
@@ -4986,7 +4986,7 @@ var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_3 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Governance',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 85)), (0, _importCss3.default)('src/pages/Governance', {
       disableWarnings: true
@@ -5006,7 +5006,7 @@ var t_3 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_4 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Grants',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 86)), (0, _importCss3.default)('src/pages/Grants', {
       disableWarnings: true
@@ -5026,7 +5026,7 @@ var t_4 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_5 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Contribute',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 87)), (0, _importCss3.default)('src/pages/Contribute', {
       disableWarnings: true
@@ -5046,7 +5046,7 @@ var t_5 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_6 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Network',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 88)), (0, _importCss3.default)('src/pages/Network', {
       disableWarnings: true
@@ -5066,7 +5066,7 @@ var t_6 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_7 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/NotFound',
-  file: '/Users/pierre/dev/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 89)), (0, _importCss3.default)('src/pages/NotFound', {
       disableWarnings: true
@@ -5941,4 +5941,4 @@ module.exports = __webpack_require__.p + "static/3a1c4c1e-yalda.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.9ac09036.js.map
+//# sourceMappingURL=static.38b3ac1d.js.map
