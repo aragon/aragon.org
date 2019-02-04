@@ -200,6 +200,7 @@ const MobileLogo = styled.img`
   margin: 0 !important;
   position: relative;
   top: 4px;
+  height: 44px;
 `
 const AGPBanner = styled.div `
   position: fixed;

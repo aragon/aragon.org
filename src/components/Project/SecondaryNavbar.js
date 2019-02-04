@@ -11,7 +11,7 @@ import Aracon from './assets/Aracon.js'
 import Wiki from './assets/Wiki.js'
 
 const SecondaryNavbar = ({ page, ...props }) => (
-  <Navbar>
+  <Navbar className="with-banner">
     <Container>
       <InternalItem className={ page && page === 'governance' && 'active' } to="/project/governance">
         <Governance/>
@@ -46,6 +46,11 @@ const Navbar = styled.nav`
   ${medium('height: 171px;')};
   background-color: #2d2e38;
   padding-top: 64px;
+  &.with-banner {
+    padding-top: 99px;
+    height: 166px;
+    ${medium('height: 206px;')};
+  }
 `
 const Container = styled.nav`
   display: flex;
