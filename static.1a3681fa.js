@@ -440,7 +440,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  height: 131px;\n  ', ';\n  background-color: #2d2e38;\n  padding-top: 64px;\n  &.with-banner {\n    padding-top: 99px;\n    height: 166px;\n    ', ';\n  }\n'], ['\n  height: 131px;\n  ', ';\n  background-color: #2d2e38;\n  padding-top: 64px;\n  &.with-banner {\n    padding-top: 99px;\n    height: 166px;\n    ', ';\n  }\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  height: 131px;\n  ', ';\n  background-color: #2d2e38;\n  padding-top: 64px;\n'], ['\n  height: 131px;\n  ', ';\n  background-color: #2d2e38;\n  padding-top: 64px;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  max-width: 1200px;\n  margin: auto;\n  color: white;\n  height: 67px;\n  ', ';\n  svg {\n    width: 25px;\n    ', ';\n  }\n  a {\n    position: relative;\n    display: flex;\n    height: 100%;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 0 10px;\n    ', ';\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: 0;\n        right: 0;\n        bottom: 2px;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n'], ['\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  max-width: 1200px;\n  margin: auto;\n  color: white;\n  height: 67px;\n  ', ';\n  svg {\n    width: 25px;\n    ', ';\n  }\n  a {\n    position: relative;\n    display: flex;\n    height: 100%;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 0 10px;\n    ', ';\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: 0;\n        right: 0;\n        bottom: 2px;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  text-align: center;\n  cursor: pointer;\n  text-decoration: none;\n  font-size: 15px;\n  &:hover,\n  &.active {\n    h6 {\n      color: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n    svg path.white {\n      fill: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n  }\n  h6 {\n    display: none;\n    ', ';\n  }\n  img {\n    width: 30px;\n    ', ';\n  }\n'], ['\n  text-align: center;\n  cursor: pointer;\n  text-decoration: none;\n  font-size: 15px;\n  &:hover,\n  &.active {\n    h6 {\n      color: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n    svg path.white {\n      fill: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n  }\n  h6 {\n    display: none;\n    ', ';\n  }\n  img {\n    width: 30px;\n    ', ';\n  }\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  text-align: center;\n  cursor: pointer;\n  text-decoration: none;\n  font-size: 15px;\n  &:hover,\n  &.active {\n    h6 {\n      color: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n    svg path.white {\n      fill: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n  }\n  h6 {\n    display: none;\n    ', ';\n  }\n'], ['\n  text-align: center;\n  cursor: pointer;\n  text-decoration: none;\n  font-size: 15px;\n  &:hover,\n  &.active {\n    h6 {\n      color: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n    svg path.white {\n      fill: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n  }\n  h6 {\n    display: none;\n    ', ';\n  }\n']);
@@ -498,7 +498,7 @@ var SecondaryNavbar = function SecondaryNavbar(_ref) {
 
   return _react2.default.createElement(
     Navbar,
-    { className: 'with-banner' },
+    null,
     _react2.default.createElement(
       Container,
       null,
@@ -566,7 +566,7 @@ var SecondaryNavbar = function SecondaryNavbar(_ref) {
   );
 };
 
-var Navbar = _styledComponents2.default.nav(_templateObject, medium('height: 171px;'), medium('height: 206px;'));
+var Navbar = _styledComponents2.default.nav(_templateObject, medium('height: 171px;'));
 var Container = _styledComponents2.default.nav(_templateObject2, medium('height: 107px;'), medium('width: 40px'), medium('padding: 0 30px'));
 var Item = (0, _styledComponents2.default)(_ui.SafeLink)(_templateObject3, medium('display: block'), medium('width: auto'));
 var InternalItem = (0, _styledComponents2.default)(_reactStatic.Link)(_templateObject4, medium('display: block'));
@@ -938,11 +938,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 64px;\n  background: rgb(28, 29, 35);\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  top: 34px;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n'], ['\n  width: 100%;\n  height: 64px;\n  background: rgb(28, 29, 35);\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  top: 34px;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 64px;\n  background: rgb(28, 29, 35);\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n'], ['\n  width: 100%;\n  height: 64px;\n  background: rgb(28, 29, 35);\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  ul {\n    display: flex;\n    height: 100%;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 185px;\n  }\n  li.logo {\n    width: 100px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 64px;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n'], ['\n  ul {\n    display: flex;\n    height: 100%;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 185px;\n  }\n  li.logo {\n    width: 100px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 64px;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 148px;\n  height: 100%;\n  img {\n    height: 44px;\n  }\n'], ['\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 148px;\n  height: 100%;\n  img {\n    height: 44px;\n  }\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  margin: 0 !important;\n  position: relative;\n  top: 4px;\n  height: 44px;\n'], ['\n  margin: 0 !important;\n  position: relative;\n  top: 4px;\n  height: 44px;\n']),
-    _templateObject5 = _taggedTemplateLiteral(['\n  position: fixed;\n  z-index: 5;\n  width: 100vw;\n  text-align: center;\n  background-image: linear-gradient(90deg, #2CF4E1, #2CB2E1);\n  p {\n    line-height: 35px;\n    padding: 0 30px;\n    text-align: center:;\n    color: black;\n  }\n  a {\n    font-weight: 700;\n  }\n'], ['\n  position: fixed;\n  z-index: 5;\n  width: 100vw;\n  text-align: center;\n  background-image: linear-gradient(90deg, #2CF4E1, #2CB2E1);\n  p {\n    line-height: 35px;\n    padding: 0 30px;\n    text-align: center:;\n    color: black;\n  }\n  a {\n    font-weight: 700;\n  }\n']);
+    _templateObject4 = _taggedTemplateLiteral(['\n  margin: 0 !important;\n  position: relative;\n  top: 4px;\n  height: 44px;\n'], ['\n  margin: 0 !important;\n  position: relative;\n  top: 4px;\n  height: 44px;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -1135,34 +1134,15 @@ var Navbar = function (_React$Component) {
           path = _props.path;
 
       return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          AGPBanner,
-          null,
-          _react2.default.createElement(
-            'p',
-            null,
-            'AGP Vote #1 is over! ',
-            _react2.default.createElement(
-              'a',
-              { target: '_blank', href: 'https://blog.aragon.org/final-results-from-aragon-network-vote-1/' },
-              'Click here'
-            ),
-            ' for details.'
-          )
-        ),
-        _react2.default.createElement(
-          _reactSpring.Spring,
-          {
-            from: { x: 0 },
-            to: { x: this.state.scroll },
-            menuItems: menuItems,
-            path: path,
-            native: true
-          },
-          this.renderIn
-        )
+        _reactSpring.Spring,
+        {
+          from: { x: 0 },
+          to: { x: this.state.scroll },
+          menuItems: menuItems,
+          path: path,
+          native: true
+        },
+        this.renderIn
       );
     }
   }]);
@@ -1177,7 +1157,6 @@ var Center = _styledComponents2.default.div(_templateObject2, medium('width: aut
 var LogoLink = (0, _styledComponents2.default)(_reactStatic.Link)(_templateObject3);
 
 var MobileLogo = _styledComponents2.default.img(_templateObject4);
-var AGPBanner = _styledComponents2.default.div(_templateObject5);
 
 exports.default = Navbar;
 
@@ -2926,6 +2905,21 @@ var UnstoppableOrganizations = function UnstoppableOrganizations() {
         _react2.default.createElement(
           'h4',
           null,
+          'Executive director'
+        ),
+        _react2.default.createElement(
+          'h4',
+          { className: 'signs' },
+          _react2.default.createElement(
+            'span',
+            null,
+            'Stefano Bernardi'
+          )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'h4',
+          null,
           'Board of directors'
         ),
         _react2.default.createElement(
@@ -3864,7 +3858,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  background-color: #1c1d23;\n  min-height: 600px;\n  padding-top: 99px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  video {\n    width: auto;\n    display:none;\n    @media (min-width: 900px) and (max-width: 1071px) {\n      display: block;\n      height: 300px;\n    }\n    @media (min-width: 1071px) and (max-width: 1176px) {\n      display: block;\n      height: 350px;\n    }\n    @media (min-width: 1176px) and (max-width: 1330px) {\n      display: block;\n      height: 400px!important;\n    }\n    @media (min-width: 1330px) {\n      display: block;\n      height: 450px;\n    }\n    position: absolute;\n    bottom: 0;\n    margin-left: 28px;\n  }\n'], ['\n  background-color: #1c1d23;\n  min-height: 600px;\n  padding-top: 99px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  video {\n    width: auto;\n    display:none;\n    @media (min-width: 900px) and (max-width: 1071px) {\n      display: block;\n      height: 300px;\n    }\n    @media (min-width: 1071px) and (max-width: 1176px) {\n      display: block;\n      height: 350px;\n    }\n    @media (min-width: 1176px) and (max-width: 1330px) {\n      display: block;\n      height: 400px!important;\n    }\n    @media (min-width: 1330px) {\n      display: block;\n      height: 450px;\n    }\n    position: absolute;\n    bottom: 0;\n    margin-left: 28px;\n  }\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  background-color: #1c1d23;\n  min-height: 600px;\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  video {\n    width: auto;\n    display:none;\n    @media (min-width: 900px) and (max-width: 1071px) {\n      display: block;\n      height: 300px;\n    }\n    @media (min-width: 1071px) and (max-width: 1176px) {\n      display: block;\n      height: 350px;\n    }\n    @media (min-width: 1176px) and (max-width: 1330px) {\n      display: block;\n      height: 400px!important;\n    }\n    @media (min-width: 1330px) {\n      display: block;\n      height: 450px;\n    }\n    position: absolute;\n    bottom: 0;\n    margin-left: 28px;\n  }\n'], ['\n  background-color: #1c1d23;\n  min-height: 600px;\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  video {\n    width: auto;\n    display:none;\n    @media (min-width: 900px) and (max-width: 1071px) {\n      display: block;\n      height: 300px;\n    }\n    @media (min-width: 1071px) and (max-width: 1176px) {\n      display: block;\n      height: 350px;\n    }\n    @media (min-width: 1176px) and (max-width: 1330px) {\n      display: block;\n      height: 400px!important;\n    }\n    @media (min-width: 1330px) {\n      display: block;\n      height: 450px;\n    }\n    position: absolute;\n    bottom: 0;\n    margin-left: 28px;\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  ', ';\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  ', ';\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  width: 100%;\n  h2, h4 {\n    text-align: left;\n    color: white;\n    opacity: 0.8;\n  }\n'], ['\n  width: 100%;\n  h2, h4 {\n    text-align: left;\n    color: white;\n    opacity: 0.8;\n  }\n']);
 
@@ -4145,7 +4139,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  height: auto;\n  ', ';\n  background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);\n  overflow: hidden;\n  min-height: 550px;\n  padding-top: 99px;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  display: flex;\n  video {\n    width: auto;\n    display:none;\n    @media (min-width: 900px) and (max-width: 1071px) {\n      display: block;\n      height: 300px;\n    }\n    @media (min-width: 1071px) and (max-width: 1176px) {\n      display: block;\n      height: 350px;\n    }\n    @media (min-width: 1176px) and (max-width: 1330px) {\n      display: block;\n      height: 400px!important;\n    }\n    @media (min-width: 1330px) {\n      display: block;\n      height: 450px;\n    }\n    position: absolute;\n    bottom: 0;\n    right: calc(50% + 30px);\n  }\n'], ['\n  height: auto;\n  ', ';\n  background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);\n  overflow: hidden;\n  min-height: 550px;\n  padding-top: 99px;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  display: flex;\n  video {\n    width: auto;\n    display:none;\n    @media (min-width: 900px) and (max-width: 1071px) {\n      display: block;\n      height: 300px;\n    }\n    @media (min-width: 1071px) and (max-width: 1176px) {\n      display: block;\n      height: 350px;\n    }\n    @media (min-width: 1176px) and (max-width: 1330px) {\n      display: block;\n      height: 400px!important;\n    }\n    @media (min-width: 1330px) {\n      display: block;\n      height: 450px;\n    }\n    position: absolute;\n    bottom: 0;\n    right: calc(50% + 30px);\n  }\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  height: auto;\n  ', ';\n  background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);\n  overflow: hidden;\n  min-height: 550px;\n  padding-top: 64px;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  display: flex;\n  video {\n    width: auto;\n    display:none;\n    @media (min-width: 900px) and (max-width: 1071px) {\n      display: block;\n      height: 300px;\n    }\n    @media (min-width: 1071px) and (max-width: 1176px) {\n      display: block;\n      height: 350px;\n    }\n    @media (min-width: 1176px) and (max-width: 1330px) {\n      display: block;\n      height: 400px!important;\n    }\n    @media (min-width: 1330px) {\n      display: block;\n      height: 450px;\n    }\n    position: absolute;\n    bottom: 0;\n    right: calc(50% + 30px);\n  }\n'], ['\n  height: auto;\n  ', ';\n  background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);\n  overflow: hidden;\n  min-height: 550px;\n  padding-top: 64px;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  display: flex;\n  video {\n    width: auto;\n    display:none;\n    @media (min-width: 900px) and (max-width: 1071px) {\n      display: block;\n      height: 300px;\n    }\n    @media (min-width: 1071px) and (max-width: 1176px) {\n      display: block;\n      height: 350px;\n    }\n    @media (min-width: 1176px) and (max-width: 1330px) {\n      display: block;\n      height: 400px!important;\n    }\n    @media (min-width: 1330px) {\n      display: block;\n      height: 450px;\n    }\n    position: absolute;\n    bottom: 0;\n    right: calc(50% + 30px);\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  ', ';\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  ', ';\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  width: 100%;\n  h2, h4, a {\n    text-align: left;\n    margin-left: 0px;\n    ', ';\n  }\n'], ['\n  width: 100%;\n  h2, h4, a {\n    text-align: left;\n    margin-left: 0px;\n    ', ';\n  }\n']);
 
@@ -4266,7 +4260,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  height: auto;\n  ', ';\n  background: #faf7ec;\n  background-image: url(', ');\n  padding-top: 99px;\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  justify-content: center;\n'], ['\n  height: auto;\n  ', ';\n  background: #faf7ec;\n  background-image: url(', ');\n  padding-top: 99px;\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  justify-content: center;\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  height: auto;\n  ', ';\n  background: #faf7ec;\n  background-image: url(', ');\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  justify-content: center;\n'], ['\n  height: auto;\n  ', ';\n  background: #faf7ec;\n  background-image: url(', ');\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  justify-content: center;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  ', ';\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  ', ';\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  width: 100%;\n  h2, h4 {\n    text-align: left;\n  }\n  h2 {\n    margin-top: 0;\n  }\n  iframe {\n    width: 90%;\n    margin: 30px 0;\n    border-radius: 21px;\n    height: 238px;\n    ', ';\n  }\n'], ['\n  width: 100%;\n  h2, h4 {\n    text-align: left;\n  }\n  h2 {\n    margin-top: 0;\n  }\n  iframe {\n    width: 90%;\n    margin: 30px 0;\n    border-radius: 21px;\n    height: 238px;\n    ', ';\n  }\n']);
 
@@ -4630,7 +4624,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  height: auto;\n  ', ';\n  padding-top: 99px;\n  background: #faf7ec;\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  justify-content: center;\n'], ['\n  height: auto;\n  ', ';\n  padding-top: 99px;\n  background: #faf7ec;\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  justify-content: center;\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  height: auto;\n  ', ';\n  padding-top: 64px;\n  background: #faf7ec;\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  justify-content: center;\n'], ['\n  height: auto;\n  ', ';\n  padding-top: 64px;\n  background: #faf7ec;\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  justify-content: center;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  height: 100%;\n  width: 100%;\n  margin: 30px auto;\n  ', ';\n  background-size: cover;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  h2, h4 {\n    color: white;\n  }\n'], ['\n  height: 100%;\n  width: 100%;\n  margin: 30px auto;\n  ', ';\n  background-size: cover;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  h2, h4 {\n    color: white;\n  }\n']);
 
 var _react = __webpack_require__(0);
@@ -5941,4 +5935,4 @@ module.exports = __webpack_require__.p + "static/3a1c4c1e-yalda.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.69726977.js.map
+//# sourceMappingURL=static.1a3681fa.js.map

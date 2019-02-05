@@ -1,25 +1,5 @@
-@font-face {
- font-family: 'FontRegular';
- src: url(https://aragon.org/static/2a243cd5-HKGrotesk-Regular.ttf) format('opentype');
-}
-@font-face {
- font-family: 'FontLight';
- src: url(https://aragon.org/static/a4825540-HKGrotesk-Light.ttf) format('opentype');
-}
-
-body {
-  font-family: 'FontRegular', sans-serif !important;
-  font-weight: 300;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-}
-
-a, a span, button {
-  outline: none;
-  -webkit-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
+@font-face{font-family:FontRegular;src:url(https://aragon.org/static/2a243cd5-HKGrotesk-Regular.ttf) format("opentype")}@font-face{font-family:FontLight;src:url(https://aragon.org/static/a4825540-HKGrotesk-Light.ttf) format("opentype")}body{font-family:FontRegular,sans-serif!important;font-weight:300;font-size:16px;margin:0;padding:0;-webkit-font-smoothing:antialiased}a,a span,button{outline:none;-webkit-transition:all .25s ease-in-out;-o-transition:all .25s ease-in-out;transition:all .25s ease-in-out}
+/*# sourceMappingURL=app.css.map*/-in-out;
   transition: all 0.25s ease-in-out;
 }
 /*# sourceMappingURL=app.css.map*/
