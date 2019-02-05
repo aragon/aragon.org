@@ -15,7 +15,7 @@ const UnstoppableOrganizations = () => (
         <Image src={aragonImage}/>
       </Container>
       <Container>
-        <h2>The Aragon <br/>Association</h2>
+        <h2>The Aragon Association</h2>
         <h4>The Aragon Project is stewarded by the Aragon Association, a Swiss non-profit entity.</h4>
         <br/><h4>Executive director</h4>
         <h4 className="signs"><span>Stefano Bernardi</span></h4>
