@@ -2892,9 +2892,7 @@ var UnstoppableOrganizations = function UnstoppableOrganizations() {
         _react2.default.createElement(
           'h2',
           null,
-          'The Aragon ',
-          _react2.default.createElement('br', null),
-          'Association'
+          'The Aragon Association'
         ),
         _react2.default.createElement(
           'h4',
@@ -5935,4 +5933,4 @@ module.exports = __webpack_require__.p + "static/3a1c4c1e-yalda.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.1a3681fa.js.map
+//# sourceMappingURL=static.0d05c5b5.js.map
