@@ -23,7 +23,7 @@ const Network = () => (
 const NetworkSection = styled(Section)`
   height: auto;
   ${medium('height: 550px;')};
-  padding-top: 99px;
+  padding-top: 64px;
   background: #faf7ec;
   background-image: url(${backgroundImage});
   background-size: cover;

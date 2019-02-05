@@ -34,7 +34,7 @@ const Home = () => (
 const HeroSection = styled(Section)`
   background-color: #1c1d23;
   min-height: 600px;
-  padding-top: 99px;
+  padding-top: 64px;
   display: flex;
   align-items: center;
   justify-content: center;

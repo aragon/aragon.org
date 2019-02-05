@@ -35,7 +35,7 @@ const HeroSection = styled(Section)`
   ${medium('height: 550px;')};
   background: #faf7ec;
   background-image: url(${backgroundImage});
-  padding-top: 99px;
+  padding-top: 64px;
   display: flex;
   align-items: center;
   overflow: hidden;
