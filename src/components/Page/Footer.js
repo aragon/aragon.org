@@ -106,24 +106,24 @@ const Footer = ({ ...props }) => (
       </Item>
       <Item>
         <a href="https://hack.aragon.org/" target="_blank">Developers</a>
-        <Link to="/project/governance">Governance</Link>
+        <a href="https://wiki.aragon.org/dev/bug_bounty/" target="_blank">Bug bounty</a>
         <Link to="/project/grants">Grants</Link>
-        <Link to="/project/contribute">Contribute</Link>
+        <Link to="/project/governance">Governance</Link>
       </Item>
       <Item>
-        <a href="https://blog.aragon.org/" target="_blank">Blog</a>
+        <Link to="/project/contribute">Contribute</Link>
+        <a href="https://blog.aragon.org/">Blog</a>
         <a href="https://wiki.aragon.org/" target="_blank">Wiki</a>
         <a href="https://aracon.one/" target="_blank">AraCon</a>
-        <a href="https://aragon.chat/" target="_blank">Chat</a>
       </Item>
       <Item className="mobile-full">
-        <p>Follow us</p>
+        <p>Be part of the conversation</p>
         <Box>
           <a href="https://twitter.com/aragonproject" target="_blank"><img src={twitter} /></a>
-          <a href="https://blog.aragon.org/" target="_blank"><img src={ghost} /></a>
+          <a href="https://aragon.chat/" target="_blank"><img src={rocket} /></a>
           <a href="https://forum.aragon.org/" target="_blank"><Forum src={forum} /></a>
         </Box>
-        <p>Be part of the conversation</p>
+        <p>Subscribe to our newsletter</p>
         <form action="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&amp;id=e81a44c4bd" method="post" name="mc-embedded-subscribe-form" target="_blank" noValidate>
           <div className="email-field">
             <input type="email" name="EMAIL" placeholder="Enter your email" className="required email" id="mce-EMAIL"/>
