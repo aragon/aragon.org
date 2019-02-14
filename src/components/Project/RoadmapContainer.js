@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { theme, breakpoint } from '@aragon/ui'
-import styled from 'styled-components'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {theme, breakpoint} from '@aragon/ui';
+import styled from 'styled-components';
 
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
@@ -27,14 +27,14 @@ const RoadmapContainerContainer = styled.div`
     background: #ddd;
   }
   .roadmap-container:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
 `;
 
-const RoadmapContainer = ({ className, ...props }) => {
-  const containerProps = { className }
+const RoadmapContainer = ({className, ...props}) => {
+  const containerProps = {className};
 
   return (
     <RoadmapContainerContainer {...containerProps}>
@@ -49,4 +49,4 @@ RoadmapContainer.propTypes = {
   className: PropTypes.string,
 };
 
-export default RoadmapContainer
+export default RoadmapContainer;
