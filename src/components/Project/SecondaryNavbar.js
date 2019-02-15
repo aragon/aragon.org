@@ -67,7 +67,7 @@ const Container = styled.nav`
   }
   a.active, a:hover {
     svg {
-      rect {
+      rect.white {
         fill: #22e0ff;
         transition: all 0.25s ease-in-out;
       }

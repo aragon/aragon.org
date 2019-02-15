@@ -32,7 +32,7 @@ const EntryBox = styled.div`
     mix-blend-mode: normal;
     opacity: 0.18;
     position: absolute;
-    left: -40px;
+    left: -40.5px;
     top: -1px;
   }
   .content {
