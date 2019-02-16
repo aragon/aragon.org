@@ -3050,8 +3050,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  display: grid;\n  ', ';\n  grid-template-columns: 100%;\n  grid-template-rows: auto;\n  grid-column-gap: 30px;\n  grid-row-gap: 30px;\n'], ['\n  display: grid;\n  ', ';\n  grid-template-columns: 100%;\n  grid-template-rows: auto;\n  grid-column-gap: 30px;\n  grid-row-gap: 30px;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  ', ';\n  background-image: linear-gradient(119deg, #faf9f4, #2c86d0);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  margin: 30px -10% 0 -10%;\n  div {\n    padding: 15px;\n  }\n\n  h5 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 68px;\n    font-weight: 300;\n    line-height: 1.82;\n    text-align: center;\n  }\n  h3 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 24px;\n    font-weight: 300;\n    line-height: 1.33;\n    text-align: center;\n  }\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  ', ';\n  background-image: linear-gradient(119deg, #faf9f4, #2c86d0);\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  margin: 30px -10% 0 -10%;\n  div {\n    padding: 15px;\n  }\n\n  h5 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 68px;\n    font-weight: 300;\n    line-height: 1.82;\n    text-align: center;\n  }\n  h3 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 24px;\n    font-weight: 300;\n    line-height: 1.33;\n    text-align: center;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  display: grid;\n  ', ';\n  grid-template-columns: 100%;\n  grid-template-rows: auto;\n  grid-column-gap: 30px;\n  grid-row-gap: 30px;\n  .team-box {\n    display: flex;\n    span {\n      margin-right: 50px;\n    }\n  }\n'], ['\n  display: grid;\n  ', ';\n  grid-template-columns: 100%;\n  grid-template-rows: auto;\n  grid-column-gap: 30px;\n  grid-row-gap: 30px;\n  .team-box {\n    display: flex;\n    span {\n      margin-right: 50px;\n    }\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3135,11 +3134,11 @@ var mudule3Content = _react2.default.createElement(
   _react2.default.createElement(
     'p',
     null,
-    'Our vision is to decentralize Aragon\u2019s development. There are different teams working on many parts of the project, but all aligned towards the same mission. The current teams are Aragon One and Aragon DAC.'
+    'Our vision is to decentralize Aragon\u2019s development. There are different teams working on many parts of the project, but all aligned towards the same mission. The current teams are Aragon One and Autark.'
   ),
   _react2.default.createElement(
     'p',
-    null,
+    { className: 'team-box' },
     _react2.default.createElement(
       'a',
       { className: 'action-button', href: 'https://aragon.one', target: '_blank' },
@@ -3152,11 +3151,11 @@ var mudule3Content = _react2.default.createElement(
     ),
     _react2.default.createElement(
       'a',
-      { className: 'action-button', href: 'https://blog.aragon.org/aragon-dac-a-new-community-effort-to-foster-aragons-development-led-by-giveth/', target: '_blank' },
+      { className: 'action-button', href: 'https://www.autark.xyz/', target: '_blank' },
       _react2.default.createElement(
         'span',
         null,
-        'Aragon DAC ',
+        'Autark ',
         _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
@@ -3178,8 +3177,6 @@ var ContributeContent = function ContributeContent() {
 };
 
 var Container = _styledComponents2.default.div(_templateObject, medium('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px'));
-
-var LongCardContainer = _styledComponents2.default.div(_templateObject2, medium('flex-wrap: nowrap;'));
 
 exports.default = ContributeContent;
 
@@ -6026,4 +6023,4 @@ module.exports = require("jquery");
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.c429b267.js.map
+//# sourceMappingURL=static.37b8725d.js.map
