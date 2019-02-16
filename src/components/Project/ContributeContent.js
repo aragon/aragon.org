@@ -13,7 +13,7 @@ const mudule1Content = (
       <a className="action-button" href="https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+archived%3Afalse+label%3A%22good+first+issue%22+user%3Aaragon+" target="_blank">
         <span>Good first issues <img src={require(`../General/assets/arrow.svg`)}/></span>
       </a>
-    </p>  
+    </p>
   </span>
 );
 const mudule2Content = (
@@ -23,20 +23,20 @@ const mudule2Content = (
       <a className="action-button" href="https://wiki.aragon.org/jobs" target="_blank">
         <span>Apply <img src={require(`../General/assets/arrow.svg`)}/></span>
       </a>
-    </p>  
+    </p>
   </span>
 );
 const mudule3Content = (
   <span>
-    <p>Our vision is to decentralize Aragon’s development. There are different teams working on many parts of the project, but all aligned towards the same mission. The current teams are Aragon One and Aragon DAC.</p>
-    <p>
+    <p>Our vision is to decentralize Aragon’s development. There are different teams working on many parts of the project, but all aligned towards the same mission. The current teams are Aragon One and Autark.</p>
+    <p className="team-box">
       <a className="action-button" href="https://aragon.one" target="_blank">
         <span>Aragon One <img src={require(`../General/assets/arrow.svg`)}/></span>
       </a>
-      <a className="action-button" href="https://blog.aragon.org/aragon-dac-a-new-community-effort-to-foster-aragons-development-led-by-giveth/" target="_blank">
-        <span>Aragon DAC <img src={require(`../General/assets/arrow.svg`)}/></span>
+      <a className="action-button" href="https://www.autark.xyz/" target="_blank">
+        <span>Autark <img src={require(`../General/assets/arrow.svg`)}/></span>
       </a>
-    </p>  
+    </p>
   </span>
 );
 
@@ -57,36 +57,11 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-`
-
-const LongCardContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  ${medium('flex-wrap: nowrap;')};
-  background-image: linear-gradient(119deg, #faf9f4, #2c86d0);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 30px -10% 0 -10%;
-  div {
-    padding: 15px;
-  }
-
-  h5 {
-    font-family: 'FontLight', sans-serif;
-    font-size: 68px;
-    font-weight: 300;
-    line-height: 1.82;
-    text-align: center;
-  }
-  h3 {
-    font-family: 'FontLight', sans-serif;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 1.33;
-    text-align: center;
+  .team-box {
+    display: flex;
+    span {
+      margin-right: 50px;
+    }
   }
 `
 
