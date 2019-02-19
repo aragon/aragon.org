@@ -20,7 +20,8 @@ const EntryBox = styled.div`
     height: 12px;
     border-radius: 12px;
     top: 6px;
-    left: -34px;
+    left: 4px;
+    ${medium('left: -34px;')};
     background: linear-gradient(44.28deg, #00dbe2 0%, #01bfe3 101.29%);
   }
   .entry-point:before {
@@ -32,21 +33,34 @@ const EntryBox = styled.div`
     mix-blend-mode: normal;
     opacity: 0.18;
     position: absolute;
-    left: -40.5px;
+    left: -3px;
+    ${medium('left: -40.5px;')};
     top: -1px;
   }
   .content {
     margin: 0 0 2em;
     float: right;
-    width: 100%;
+    width: 90%;
+    ${medium('width: 100%;')};
     padding-left: 5px;
     position: relative;
+  }
+  .last-point:after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    top: 6px;
+    left: -34px;
+    background: #D8D8D8;
   }
 `;
 
 const Entry = ({...props}) => (
   <EntryBox>
     {props.entrypoint && <div className="entry-point" />}
+    {props.lastpoint && <div className="last-point" />}
     <div className="content">{props.children}</div>
   </EntryBox>
 );

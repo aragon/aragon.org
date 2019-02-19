@@ -60,18 +60,19 @@ const Tabs = styled.div`
 
   div {
     color: #2d4051;
+    background: #e6e9ef;
     font-size: 18px;
     text-align: center;
     width: 50%;
     cursor: pointer;
     border: 1px solid rgba(151, 151, 151, 0.16103);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0245131);
-    background: white;
+
     transition: all 0.25s ease-in-out;
   }
   div.active,
   div:hover {
-    background: #e6e9ef;
+    background: white;
   }
   div.left {
     border-radius: 6px 0 0 6px;
