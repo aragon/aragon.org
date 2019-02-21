@@ -114,6 +114,7 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 15px;
   grid-row-gap: 15px;
+  padding: 30px 0;
 `;
 
 const Item = styled.div`
