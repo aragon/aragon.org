@@ -2,18 +2,18 @@ import React from 'react';
 import Section from '../General/Section';
 import Entry from './Entry';
 import styled from 'styled-components';
-import {breakpoint, Badge} from '@aragon/ui';
+import {breakpoint, Badge, DropDown} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 
 class AragonClient extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {active: 'all'};
+    this.state = {active: 0};
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({active: event.target.value});
+  handleChange(index) {
+    this.setState({active: index});
   }
 
   render() {
@@ -23,28 +23,32 @@ class AragonClient extends React.Component {
         <Container>
           <DropdownContainer>
             <h4>Select flock teams</h4>
-            <select value={this.state.active} onChange={this.handleChange}>
-              <option value="all">All</option>
-              <option value="aragon-one">Aragon One</option>
-              <option value="autark">Autark</option>
-            </select>
+            <div className="dropdown-container">
+              <DropDown
+                className="flock-dropdown"
+                items={['All', 'Aragon One', 'Autark']}
+                active={this.state.active}
+                onChange={this.handleChange}
+              />
+            </div>
           </DropdownContainer>
           <RoadmapContainer>
             <div className="roadmap-container">
               <Entry entrypoint>
-                <Title>Current (Q1)</Title>
+                <Title>Current</Title>
                 <Subtitle>
                   Granular areas of focus with well defined scope and product
                   specifications.
                 </Subtitle>
               </Entry>
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="green">
+                        Mobile experience
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>Mobile experience</Badge>
                     </div>
                     <h1>Responsive view</h1>
                     <h3>
@@ -54,13 +58,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="acuamarine">
+                        Identity experience
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>Identity experience</Badge>
                     </div>
                     <h1>Local identity (custom labels) </h1>
                     <h3>
@@ -73,8 +78,7 @@ class AragonClient extends React.Component {
                 </Entry>
               )}
 
-              {(this.state.active == 'all' ||
-                this.state.active == 'autark') && (
+              {(this.state.active == 0 || this.state.active == 2) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
@@ -90,13 +94,12 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="brown">App center</StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>App center</Badge>
                     </div>
                     <h1>Upgrading apps from the UI</h1>
                     <h3>
@@ -107,13 +110,12 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge>Agent application</StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>Agent application</Badge>
                     </div>
                     <h1>Agent application</h1>
                     <h3>
@@ -124,8 +126,7 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'autark') && (
+              {(this.state.active == 0 || this.state.active == 2) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
@@ -141,13 +142,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="yellow">
+                        UX improvements
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>UX improvements</Badge>
                     </div>
                     <h1>Payroll app</h1>
                     <h3>
@@ -158,13 +160,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="yellow">
+                        UX improvements
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>UX improvements</Badge>
                     </div>
                     <h1>Notifications & user feedback</h1>
                     <h3>
@@ -176,13 +179,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="yellow">
+                        UX improvements
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>UX improvements</Badge>
                     </div>
                     <h1>Concierge project</h1>
                     <h3>
@@ -193,8 +197,7 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'autark') && (
+              {(this.state.active == 0 || this.state.active == 2) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
@@ -211,18 +214,17 @@ class AragonClient extends React.Component {
                 </Entry>
               )}
               <Entry entrypoint>
-                <Title>Near-term (Q2 & Q3)</Title>
+                <Title>Near-term</Title>
                 <Subtitle>
                   Wider areas of focus with some flexibility on the scope.
                 </Subtitle>
               </Entry>
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="brown">App center</StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>App center</Badge>
                     </div>
                     <h1>Browsing, installing & uninstalling apps</h1>
                     <h3>
@@ -232,13 +234,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="acuamarine">
+                        Identity experience
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>Identity experience</Badge>
                     </div>
                     <h1>Individual identity</h1>
                     <h3>
@@ -250,8 +253,7 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'autark') && (
+              {(this.state.active == 0 || this.state.active == 2) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
@@ -266,8 +268,7 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'autark') && (
+              {(this.state.active == 0 || this.state.active == 2) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
@@ -284,13 +285,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="yellow">
+                        UX improvements
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>UX improvements</Badge>
                     </div>
                     <h1>Organizations templates</h1>
                     <h3>
@@ -301,13 +303,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="acuamarine">
+                        Identity experience
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>Identity experience</Badge>
                     </div>
                     <h1>Organization identity & membership</h1>
                     <h3>
@@ -319,8 +322,7 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'autark') && (
+              {(this.state.active == 0 || this.state.active == 2) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
@@ -336,13 +338,15 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="violet">
+                        {' '}
+                        Lorikeet design system
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge> Lorikeet design system</Badge>
                     </div>
                     <h1>aragonSDK: Split aragonUI and Lorikeet</h1>
                     <h3>
@@ -352,8 +356,7 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'autark') && (
+              {(this.state.active == 0 || this.state.active == 2) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
@@ -374,8 +377,7 @@ class AragonClient extends React.Component {
                   High level areas of focus with a broader and flexible scope
                 </Subtitle>
               </Entry>
-              {(this.state.active == 'all' ||
-                this.state.active == 'autark') && (
+              {(this.state.active == 0 || this.state.active == 2) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
@@ -391,13 +393,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="green">
+                        Mobile experience
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>Mobile experience</Badge>
                     </div>
                     <h1>Native mobile app</h1>
                     <h3>
@@ -407,13 +410,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="blue">
+                        Flexible permissions
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>Flexible permissions</Badge>
                     </div>
                     <h1>Conditional permissions</h1>
                     <h3>
@@ -423,8 +427,7 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'autark') && (
+              {(this.state.active == 0 || this.state.active == 2) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
@@ -440,13 +443,12 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="brown">App center</StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>App center</Badge>
                     </div>
                     <h1>Incentivisation model for app developers</h1>
                     <h3>
@@ -457,13 +459,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="blue">
+                        Flexible permissions
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>Flexible permissions</Badge>
                     </div>
                     <h1>Budgeting app</h1>
                     <h3>
@@ -474,8 +477,7 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'autark') && (
+              {(this.state.active == 0 || this.state.active == 2) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
@@ -491,13 +493,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="grey">
+                        Developer resources
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>Developer resources</Badge>
                     </div>
                     <h1>aragonOS: Global emergency failsafe</h1>
                     <h3>
@@ -508,13 +511,14 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              {(this.state.active == 'all' ||
-                this.state.active == 'aragon-one') && (
+              {(this.state.active == 0 || this.state.active == 1) && (
                 <Entry>
                   <Module>
                     <div className="badge-container">
+                      <StyledBadge className="grey">
+                        Developer resources
+                      </StyledBadge>
                       <AragonOneBadge>Aragon One</AragonOneBadge>
-                      <Badge>Developer resources</Badge>
                     </div>
                     <h1>
                       aragonSDK: Continuously improve developer experience
@@ -526,7 +530,7 @@ class AragonClient extends React.Component {
                   </Module>
                 </Entry>
               )}
-              <Entry lastpoint></Entry>
+              <Entry lastpoint />
             </div>
           </RoadmapContainer>
         </Container>
@@ -541,6 +545,14 @@ const DropdownContainer = styled.div`
   margin: auto;
   padding: 0px 55px;
   flex-direction: column;
+  div.dropdown-container {
+    text-align: left;
+    width: 100%;
+    ${medium('width: calc(100% - 207px);')};
+    div {
+      min-width: 100% !important;
+    }
+  }
   ${medium('flex-direction: row;')};
 
   h4 {
@@ -550,20 +562,14 @@ const DropdownContainer = styled.div`
     font-weight: 700;
     padding-right: 30px;
   }
-  select {
-    background: #ffffff;
-    border: 1px solid rgba(151, 151, 151, 0.16103);
-    box-sizing: border-box;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0245131);
-    border-radius: 6px;
-    line-height: 42px;
-    font-size: 18px;
-    color: #2d4051;
+  .flock-dropdown {
     width: 100%;
     ${medium('width: calc(100% - 207px);')};
     outline: none;
+    text-align: left;
   }
 `;
+
 const RoadmapContainer = styled.div`
   margin-top: 50px;
   .roadmap-container {
@@ -582,7 +588,7 @@ const RoadmapContainer = styled.div`
     ${medium('left: 21px;')};
     bottom: 20px;
     width: 2px;
-    background: #D8D8D8;
+    background: #d8d8d8;
   }
   .roadmap-container:after {
     content: '';
@@ -594,7 +600,37 @@ const RoadmapContainer = styled.div`
 const AragonOneBadge = styled(Badge)`
   background: #f7837140;
   color: #b2565d;
-  margin-right: 10px;
+  margin-left: 10px;
+`;
+const StyledBadge = styled(Badge)`
+  &.blue {
+    background: #d5e8ff80;
+    color: #4188dc;
+  }
+  &.brown {
+    background: #dca97c80;
+    color: #b5753a;
+  }
+  &.green {
+    background: #aae06d80;
+    color: #069b4c;
+  }
+  &.violet {
+    background: #f7d0ff80;
+    color: #a64bb8;
+  }
+  &.acuamarine {
+    background: #a3f2e080;
+    color: #49a792;
+  }
+  &.grey {
+    background: #d8d8d880;
+    color: #8b8b8b;
+  }
+  &.yellow {
+    background: #fff36280;
+    color: #afa63c;
+  }
 `;
 
 const AutarkBadge = styled(Badge)`
@@ -602,10 +638,6 @@ const AutarkBadge = styled(Badge)`
   color: #af7e2e;
 `;
 
-const IdentityBadge = styled(Badge)`
-  background: #d5e8ff80;
-  color: #4188dc;
-`;
 const RoadmapSection = styled(Section)`
   background: #f9fafc;
 `;

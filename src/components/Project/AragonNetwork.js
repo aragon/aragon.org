@@ -11,7 +11,7 @@ const AragonNetwork = () => (
       <RoadmapContainer>
         <div className="roadmap-container">
           <Entry entrypoint>
-            <Title>Current (Q1)- aragon network</Title>
+            <Title>Current</Title>
             <Subtitle>
               Granular areas of focus with well defined scope and product
               specifications.
@@ -21,6 +21,7 @@ const AragonNetwork = () => (
             <Module>
               <div className="badge-container">
                 <EnhancedBadge>Enhanced voting</EnhancedBadge>
+                <AragonOneBadge>Aragon One</AragonOneBadge>
               </div>
               <h1>Delegate voting</h1>
               <h3>
@@ -34,6 +35,7 @@ const AragonNetwork = () => (
             <Module>
               <div className="badge-container">
                 <Badge>Dispute Resolution</Badge>
+                <AragonOneBadge>Aragon One</AragonOneBadge>
               </div>
               <h1>Staking and Lock Managers</h1>
               <h3>
@@ -43,8 +45,23 @@ const AragonNetwork = () => (
               </h3>
             </Module>
           </Entry>
+          <Entry>
+            <Module>
+              <div className="badge-container">
+                <Badge>Dispute Resolution</Badge>
+                <AragonOneBadge>Aragon One</AragonOneBadge>
+              </div>
+              <h1>Aragon Court PoC</h1>
+              <h3>
+                This deliverable includes the Aragon Court protocol, an
+                interface for users of the court to review and manage agreements
+                and disputes, and an interface for jurors to participate in the
+                arbitration process.
+              </h3>
+            </Module>
+          </Entry>
           <Entry entrypoint>
-            <Title>Near-term (Q2 & Q3)</Title>
+            <Title>Near-term</Title>
             <Subtitle>
               Wider areas of focus with some flexibility on the scope.
             </Subtitle>
@@ -53,6 +70,7 @@ const AragonNetwork = () => (
             <Module>
               <div className="badge-container">
                 <Badge>Dispute Resolution</Badge>
+                <AragonOneBadge>Aragon One</AragonOneBadge>
               </div>
               <h1>Proposals agreements</h1>
               <h3>
@@ -65,21 +83,8 @@ const AragonNetwork = () => (
           <Entry>
             <Module>
               <div className="badge-container">
-                <Badge>Dispute Resolution</Badge>
-              </div>
-              <h1>Aragon Court PoC</h1>
-              <h3>
-                This deliverable includes the Aragon Court protocol, an
-                interface for users of the court to review and manage agreements
-                and disputes, and an interface for jurors to participate in the
-                arbitration process.
-              </h3>
-            </Module>
-          </Entry>
-          <Entry>
-            <Module>
-              <div className="badge-container">
                 <EnhancedBadge>Enhanced Voting</EnhancedBadge>
+                <AragonOneBadge>Aragon One</AragonOneBadge>
               </div>
               <h1>Vote Relay Protocol</h1>
               <h3>
@@ -89,7 +94,7 @@ const AragonNetwork = () => (
               </h3>
             </Module>
           </Entry>
-          <Entry lastpoint></Entry>
+          <Entry lastpoint />
         </div>
       </RoadmapContainer>
     </Container>
@@ -119,7 +124,7 @@ const RoadmapContainer = styled.div`
     ${medium('left: 21px;')};
     bottom: 20px;
     width: 2px;
-    background: #D8D8D8;
+    background: #d8d8d8;
   }
   .roadmap-container:after {
     content: '';
@@ -131,7 +136,7 @@ const RoadmapContainer = styled.div`
 const AragonOneBadge = styled(Badge)`
   background: #f7837140;
   color: #b2565d;
-  margin-right: 10px;
+  margin-left: 10px;
 `;
 
 const AutarkBadge = styled(Badge)`

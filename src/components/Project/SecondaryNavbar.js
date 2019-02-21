@@ -30,7 +30,7 @@ const SecondaryNavbar = ({ page, ...props }) => (
         <Blog/>
         <h6>Blog</h6>
       </Item>
-      <InternalItem className={ page && page === 'roadmap' && 'active' } to="/project/roadmap">
+      <InternalItem className={ page && page === 'roadmap' ? 'active roadmap-item' : 'roadmap-item'} to="/project/roadmap">
         <Roadmap/>
         <h6>Roadmap</h6>
       </InternalItem>
@@ -124,12 +124,21 @@ const Item = styled(SafeLink)`
     width: 30px;
     ${medium('width: auto')};
   }
+
 `
 const InternalItem = styled(Link)`
   text-align: center;
   cursor: pointer;
   text-decoration: none;
   font-size: 15px;
+  &.roadmap-item {
+    h6 {
+      margin-top: 2px;
+    }
+    svg {
+      margin-top: 5px;
+    }
+  }
   &:hover,
   &.active {
     h6 {
