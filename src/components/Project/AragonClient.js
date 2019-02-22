@@ -34,506 +34,505 @@ class AragonClient extends React.Component {
           </DropdownContainer>
           <RoadmapContainer>
             <Entry entrypoint>
-  <Title>Current</Title>
-  <Subtitle>
-    Granular areas of focus with well defined scope and product specifications.
-  </Subtitle>
-</Entry>;
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="green">Mobile experience</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Responsive view</h1>
-        <h3>
-          Make the platform and core apps responsive so Aragon can be used from
-          mobile browsers such as Status or Cipher.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="acuamarine">Identity experience</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Local identity (custom labels) </h1>
-        <h3>
-          As an intermediate solution for the full Aragon identity experience,
-          we will allow people to create custom local labels to identify
-          addresses that represent different members of the organization.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
+            <Title>Current</Title>
+            <Subtitle>
+              Granular areas of focus with well defined scope and product specifications.
+            </Subtitle>
+          </Entry>;
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="green">Mobile experience</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Responsive view</h1>
+                  <h3>
+                    Make the platform and core apps responsive so Aragon can be used from
+                    mobile browsers such as Status or Cipher.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="acuamarine">Identity experience</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Local identity (custom labels) </h1>
+                  <h3>
+                    As an intermediate solution for the full Aragon identity experience,
+                    we will allow people to create custom local labels to identify
+                    addresses that represent different members of the organization.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
 
-{
-  (this.state.active == 0 || this.state.active == 2) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <AutarkBadge>Autark</AutarkBadge>
-        </div>
-        <h1>Finalize Planning Suite</h1>
-        <h3>
-          Finalize the development of the Planning Suite, which enables issue
-          curation, allocating bounties as a DAO, budgeting via range voting,
-          and on-chain mapping of human-readable names to Ethereum addresses.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="brown">App center</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Upgrading apps from the UI</h1>
-        <h3>
-          Provide users with a secure way to upgrade app versions, fixes for
-          features or enhancements to already installed/in use apps.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge>Agent application</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Agent application</h1>
-        <h3>
-          This application will enable organizations to interact natively with
-          other web3 applications (including other Aragon organizations).
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 2) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <AutarkBadge>Autark</AutarkBadge>
-        </div>
-        <h1>Rewards App</h1>
-        <h3>
-          Allow organizations to distribute payments to token holders based on
-          the number of tokens earned in a specific period (one-time reward) or
-          based on total holdings (dividend).
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="yellow">UX improvements</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Payroll app</h1>
-        <h3>
-          This app will allow organizations to manage on-chain salary payments
-          and for employees to request payments and see their available balance.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="yellow">UX improvements</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Notifications & user feedback</h1>
-        <h3>
-          Implement an activity panel that will provide people information about
-          ongoing and past transactions as well as a toast component for
-          immediate feedback on users’ actions.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="yellow">UX improvements</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Concierge project</h1>
-        <h3>
-          Guided on-boarding of projects interested in collaborate with Aragon
-          or use Aragon tools for their governance needs.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 2) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <AutarkBadge>Autark</AutarkBadge>
-        </div>
-        <h1>Organization Identity</h1>
-        <h3>
-          Allow organizations to manage their manifesto, mission statement,
-          values, code of conduct, and contact information so it’s easily
-          accessible to prospective and current members of the organization.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-<Entry entrypoint>
-  <Title>Near-term</Title>
-  <Subtitle>Wider areas of focus with some flexibility on the scope.</Subtitle>
-</Entry>;
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="brown">App center</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Browsing, installing & uninstalling apps</h1>
-        <h3>
-          Enhance app discovery and app management for end users. Expand the
-          on-boarding and app center experience.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="acuamarine">Identity experience</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Individual identity</h1>
-        <h3>
-          Allow individuals to create and manage their user profiles, mapping
-          their address to a human readable name that can be used to interact
-          with apps within the organization.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 2) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <AutarkBadge>Autark</AutarkBadge>
-        </div>
-        <h1>Rich User Profiles</h1>
-        <h3>
-          Allow individuals to associate additional details to their identity
-          such as Github commit history, work history, portfolios, and
-          membership to other Aragon organizations.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 2) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <AutarkBadge>Autark</AutarkBadge>
-        </div>
-        <h1>Data Storage and Standards</h1>
-        <h3>
-          Design the implementation strategy and information architecture for
-          user profiles and contextual discussions. Document infrastructure
-          solutions and recommendations for Aragon apps that require fast and
-          queryable data that is hosted on distributed storage.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="yellow">UX improvements</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Organizations templates</h1>
-        <h3>
-          Research new organizational models, define the apps and permissions
-          required to realize them and create kits that people can use.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="acuamarine">Identity experience</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Organization identity & membership</h1>
-        <h3>
-          Allow users to create and manage their organizations’ profiles,
-          providing an intuitive way to add members to a given organization and
-          granting them permissions & privileges.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 2) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <AutarkBadge>Autark</AutarkBadge>
-        </div>
-        <h1>Reputation Support</h1>
-        <h3>
-          Expand governance possibilities by providing more features for
-          reputation-based organizations, including the ability to allocation
-          non-transferable tokens in place of (or in addition to) traditional
-          bounties.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="violet"> Lorikeet design system</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>aragonSDK: Split aragonUI and Lorikeet</h1>
-        <h3>
-          Push Lorikeet as an ecosystem-wide project, while still providing an
-          Aragon-opinionated experience with aragonUI
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 2) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <AutarkBadge>Autark</AutarkBadge>
-        </div>
-        <h1>Expanded Forwarder Options</h1>
-        <h3>
-          Allow for more tightly coupled forwarder interactions where the
-          forwarded call data can be leveraged and modified within the Forwarder
-          contract.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-<Entry entrypoint>
-  <Title>Future</Title>
-  <Subtitle>
-    High level areas of focus with a broader and flexible scope
-  </Subtitle>
-</Entry>;
-{
-  (this.state.active == 0 || this.state.active == 2) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <AutarkBadge>Autark</AutarkBadge>
-        </div>
-        <h1>Flexible App Development</h1>
-        <h3>
-          Enhance aragonAPI to support the development of apps with a single
-          front-end and multiple contracts, and for contract data to be
-          displayed across multiple user interfaces without coupling at the
-          contract level.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="green">Mobile experience</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Native mobile app</h1>
-        <h3>
-          Build native mobile Aragon client so users can benefit from device and
-          OS specific capabilities.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="blue">Flexible permissions</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Conditional permissions</h1>
-        <h3>
-          Allow users to set and manage time-based and conditional permissions.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 2) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <AutarkBadge>Autark</AutarkBadge>
-        </div>
-        <h1>Organization Branding</h1>
-        <h3>
-          Allow organizations to customize their branding by offering at least
-          three additional color palettes, including the ability to change the
-          background image so it’s different than the Aragon eagle.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="brown">App center</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Incentivisation model for app developers</h1>
-        <h3>
-          Provide app developers with different monetisation models to create
-          revenue from the apps they publish in the Aragon App Center.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="blue">Flexible permissions</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>Budgeting app</h1>
-        <h3>
-          Enable organizations to plan and control their financial resources by
-          setting time based permissions like budgeting.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 2) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <AutarkBadge>Autark</AutarkBadge>
-        </div>
-        <h1>Contextual Discussions</h1>
-        <h3>
-          Develop a design pattern and component for contextual discussions
-          within Aragon, and implement it one application to showcase the
-          feature, such as the Voting app.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="grey">Developer resources</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>aragonOS: Global emergency failsafe</h1>
-        <h3>
-          Provide an opt-in failsafe for organizations and individual apps to
-          safely freeze their state during times of emergency.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-{
-  (this.state.active == 0 || this.state.active == 1) && (
-    <Entry>
-      <Module>
-        <div className="badge-container">
-          <StyledBadge className="grey">Developer resources</StyledBadge>
-          <AragonOneBadge>Aragon One</AragonOneBadge>
-        </div>
-        <h1>aragonSDK: Continuously improve developer experience</h1>
-        <h3>
-          Reduce time for developers to get up and running with using the
-          aragonSDK and add features they request to it.
-        </h3>
-      </Module>
-    </Entry>
-  );
-}
-<Entry lastpoint />;
-
+          {
+            (this.state.active == 0 || this.state.active == 2) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AutarkBadge>Autark</AutarkBadge>
+                  </div>
+                  <h1>Finalize Planning Suite</h1>
+                  <h3>
+                    Finalize the development of the Planning Suite, which enables issue
+                    curation, allocating bounties as a DAO, budgeting via range voting,
+                    and on-chain mapping of human-readable names to Ethereum addresses.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="brown">App center</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Upgrading apps from the UI</h1>
+                  <h3>
+                    Provide users with a secure way to upgrade app versions, fixes for
+                    features or enhancements to already installed/in use apps.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge>Agent application</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Agent application</h1>
+                  <h3>
+                    This application will enable organizations to interact natively with
+                    other web3 applications (including other Aragon organizations).
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 2) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AutarkBadge>Autark</AutarkBadge>
+                  </div>
+                  <h1>Rewards App</h1>
+                  <h3>
+                    Allow organizations to distribute payments to token holders based on
+                    the number of tokens earned in a specific period (one-time reward) or
+                    based on total holdings (dividend).
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="yellow">UX improvements</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Payroll app</h1>
+                  <h3>
+                    This app will allow organizations to manage on-chain salary payments
+                    and for employees to request payments and see their available balance.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="yellow">UX improvements</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Notifications & user feedback</h1>
+                  <h3>
+                    Implement an activity panel that will provide people information about
+                    ongoing and past transactions as well as a toast component for
+                    immediate feedback on users’ actions.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="yellow">UX improvements</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Concierge project</h1>
+                  <h3>
+                    Guided on-boarding of projects interested in collaborate with Aragon
+                    or use Aragon tools for their governance needs.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 2) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AutarkBadge>Autark</AutarkBadge>
+                  </div>
+                  <h1>Organization Identity</h1>
+                  <h3>
+                    Allow organizations to manage their manifesto, mission statement,
+                    values, code of conduct, and contact information so it’s easily
+                    accessible to prospective and current members of the organization.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          <Entry entrypoint>
+            <Title>Near-term</Title>
+            <Subtitle>Wider areas of focus with some flexibility on the scope.</Subtitle>
+          </Entry>;
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="brown">App center</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Browsing, installing & uninstalling apps</h1>
+                  <h3>
+                    Enhance app discovery and app management for end users. Expand the
+                    on-boarding and app center experience.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="acuamarine">Identity experience</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Individual identity</h1>
+                  <h3>
+                    Allow individuals to create and manage their user profiles, mapping
+                    their address to a human readable name that can be used to interact
+                    with apps within the organization.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 2) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AutarkBadge>Autark</AutarkBadge>
+                  </div>
+                  <h1>Rich User Profiles</h1>
+                  <h3>
+                    Allow individuals to associate additional details to their identity
+                    such as Github commit history, work history, portfolios, and
+                    membership to other Aragon organizations.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 2) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AutarkBadge>Autark</AutarkBadge>
+                  </div>
+                  <h1>Data Storage and Standards</h1>
+                  <h3>
+                    Design the implementation strategy and information architecture for
+                    user profiles and contextual discussions. Document infrastructure
+                    solutions and recommendations for Aragon apps that require fast and
+                    queryable data that is hosted on distributed storage.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="yellow">UX improvements</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Organizations templates</h1>
+                  <h3>
+                    Research new organizational models, define the apps and permissions
+                    required to realize them and create kits that people can use.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="acuamarine">Identity experience</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Organization identity & membership</h1>
+                  <h3>
+                    Allow users to create and manage their organizations’ profiles,
+                    providing an intuitive way to add members to a given organization and
+                    granting them permissions & privileges.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 2) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AutarkBadge>Autark</AutarkBadge>
+                  </div>
+                  <h1>Reputation Support</h1>
+                  <h3>
+                    Expand governance possibilities by providing more features for
+                    reputation-based organizations, including the ability to allocation
+                    non-transferable tokens in place of (or in addition to) traditional
+                    bounties.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="violet"> Lorikeet design system</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>aragonSDK: Split aragonUI and Lorikeet</h1>
+                  <h3>
+                    Push Lorikeet as an ecosystem-wide project, while still providing an
+                    Aragon-opinionated experience with aragonUI
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 2) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AutarkBadge>Autark</AutarkBadge>
+                  </div>
+                  <h1>Expanded Forwarder Options</h1>
+                  <h3>
+                    Allow for more tightly coupled forwarder interactions where the
+                    forwarded call data can be leveraged and modified within the Forwarder
+                    contract.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          <Entry entrypoint>
+            <Title>Future</Title>
+            <Subtitle>
+              High level areas of focus with a broader and flexible scope
+            </Subtitle>
+          </Entry>;
+          {
+            (this.state.active == 0 || this.state.active == 2) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AutarkBadge>Autark</AutarkBadge>
+                  </div>
+                  <h1>Flexible App Development</h1>
+                  <h3>
+                    Enhance aragonAPI to support the development of apps with a single
+                    front-end and multiple contracts, and for contract data to be
+                    displayed across multiple user interfaces without coupling at the
+                    contract level.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="green">Mobile experience</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Native mobile app</h1>
+                  <h3>
+                    Build native mobile Aragon client so users can benefit from device and
+                    OS specific capabilities.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="blue">Flexible permissions</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Conditional permissions</h1>
+                  <h3>
+                    Allow users to set and manage time-based and conditional permissions.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 2) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AutarkBadge>Autark</AutarkBadge>
+                  </div>
+                  <h1>Organization Branding</h1>
+                  <h3>
+                    Allow organizations to customize their branding by offering at least
+                    three additional color palettes, including the ability to change the
+                    background image so it’s different than the Aragon eagle.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="brown">App center</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Incentivisation model for app developers</h1>
+                  <h3>
+                    Provide app developers with different monetisation models to create
+                    revenue from the apps they publish in the Aragon App Center.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="blue">Flexible permissions</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>Budgeting app</h1>
+                  <h3>
+                    Enable organizations to plan and control their financial resources by
+                    setting time based permissions like budgeting.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 2) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AutarkBadge>Autark</AutarkBadge>
+                  </div>
+                  <h1>Contextual Discussions</h1>
+                  <h3>
+                    Develop a design pattern and component for contextual discussions
+                    within Aragon, and implement it one application to showcase the
+                    feature, such as the Voting app.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="grey">Developer resources</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>aragonOS: Global emergency failsafe</h1>
+                  <h3>
+                    Provide an opt-in failsafe for organizations and individual apps to
+                    safely freeze their state during times of emergency.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          {
+            (this.state.active == 0 || this.state.active == 1) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="grey">Developer resources</StyledBadge>
+                    <AragonOneBadge>Aragon One</AragonOneBadge>
+                  </div>
+                  <h1>aragonSDK: Continuously improve developer experience</h1>
+                  <h3>
+                    Reduce time for developers to get up and running with using the
+                    aragonSDK and add features they request to it.
+                  </h3>
+                </Module>
+              </Entry>
+            );
+          }
+          <Entry lastpoint />
           </RoadmapContainer>
         </Container>
       </RoadmapSection>
