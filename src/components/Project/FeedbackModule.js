@@ -49,9 +49,13 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  ${medium(
-    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: auto'
-  )};
+  ${breakpoint(
+    'medium',
+    `
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    grid-template-rows: auto
+  `
+  )}
 `;
 
 const Feedback = styled.div`
@@ -66,7 +70,14 @@ const Feedback = styled.div`
   grid-column-start: 1;
   grid-column-end: 2;
   transition: all 0.25s ease-in-out;
-  ${medium('padding: 30px 15px; grid-column-end: 3; flex-direction: row;')};
+  ${breakpoint(
+    'medium',
+    `
+    padding: 30px 15px;
+    grid-column-end: 3;
+    flex-direction: row;
+  `
+  )}
   ${large('padding: 30px 60px;')};
   &:hover {
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.07);
