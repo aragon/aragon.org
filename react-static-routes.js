@@ -25,8 +25,9 @@ const t_2 = universal(import('../src/pages/Project'), universalOptions)
 const t_3 = universal(import('../src/pages/Governance'), universalOptions)
 const t_4 = universal(import('../src/pages/Grants'), universalOptions)
 const t_5 = universal(import('../src/pages/Contribute'), universalOptions)
-const t_6 = universal(import('../src/pages/Network'), universalOptions)
-const t_7 = universal(import('../src/pages/NotFound'), universalOptions)
+const t_6 = universal(import('../src/pages/Roadmap'), universalOptions)
+const t_7 = universal(import('../src/pages/Network'), universalOptions)
+const t_8 = universal(import('../src/pages/NotFound'), universalOptions)
 
 
 // Template Map
@@ -38,12 +39,13 @@ t_3,
 t_4,
 t_5,
 t_6,
-t_7
+t_7,
+t_8
 ]
 
 // Template Tree
 global.templateIDsByPath = global.templateIDsByPath || {
-  '404': 7
+  '404': 8
 }
 
 // Get template for given path
