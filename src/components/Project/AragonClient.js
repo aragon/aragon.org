@@ -564,9 +564,9 @@ const DropdownContainer = styled.div`
   }
   .flock-dropdown {
     width: 100%;
-    ${medium('width: calc(100% - 207px);')};
     outline: none;
     text-align: left;
+    ${medium('width: calc(100% - 207px);')};
   }
 `;
 
@@ -576,19 +576,19 @@ const RoadmapContainer = styled.div`
     width: 100%;
     max-width: 870px;
     padding: 0;
-    ${medium('padding: 5px 50px;')};
     position: relative;
     margin: auto;
+    ${medium('padding: 5px 50px;')};
   }
   .roadmap-container:before {
     content: '';
     position: absolute;
     top: 12px;
     left: 9px;
-    ${medium('left: 21px;')};
     bottom: 20px;
     width: 2px;
     background: #d8d8d8;
+    ${medium('left: 21px;')};
   }
   .roadmap-container:after {
     content: '';
@@ -645,8 +645,8 @@ const Container = styled.div`
   width: 100%;
   margin: 0;
   padding: 50px 0;
-  ${medium('padding: 50px 8.5%;')};
   text-align: center;
+  ${medium('padding: 50px 8.5%;')};
 `;
 
 const Title = styled.h1`

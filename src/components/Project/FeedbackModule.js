@@ -29,7 +29,10 @@ const FeedbackModule = () => (
                 target="_blank">
                 <span>
                   Join the Aragon forum{' '}
-                  <img src={require(`../General/assets/arrow.svg`)} />
+                  <img
+                    src={require(`../General/assets/arrow.svg`)}
+                    alt="feedback"
+                  />
                 </span>
               </a>
             </p>
@@ -41,39 +44,37 @@ const FeedbackModule = () => (
 );
 
 const StyledSection = styled(Section)`
-    padding: 100px 15px;
-`
+  padding: 100px 15px;
+`;
 const Container = styled.div`
   display: grid;
-  ${medium(
-    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: auto'
-  )};
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  ${medium(
+    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: auto'
+  )};
 `;
 
 const Feedback = styled.div`
   border-radius: 12px;
-  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.07);
-  &:hover {
-    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.07);
-    transition: all 0.25s ease-in-out;
-  }
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.07);
   background-color: #f9fafc;
   padding: 30px;
-  ${medium('padding: 30px 15px;')};
-  ${large('padding: 30px 60px;')};
   display: flex;
   align-items: center;
   flex-direction: column;
-  ${medium('flex-direction: row;')};
   height: 100%;
   grid-column-start: 1;
-  ${medium('grid-column-end: 3;')};
   grid-column-end: 2;
   transition: all 0.25s ease-in-out;
+  ${medium('padding: 30px 15px; grid-column-end: 3; flex-direction: row;')};
+  ${large('padding: 30px 60px;')};
+  &:hover {
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.07);
+    transition: all 0.25s ease-in-out;
+  }
   p {
     font-family: 'FontRegular', sans-serif;
     font-size: 16px;
@@ -86,20 +87,20 @@ const Feedback = styled.div`
     font-family: 'FontLight', sans-serif;
     font-size: 30px;
     max-width: 535px;
-    ${medium('font-size: 46px;')};
     font-weight: 300;
     line-height: 1.35;
     text-align: left;
     color: #2d4051;
     margin: 15px 0 0 0;
+    ${medium('font-size: 46px;')};
   }
 `;
 const ImageContainer = styled.div`
   width: 100%;
-  ${medium('width: 50%;')};
   display: flex;
   align-items: center;
   justify-content: center;
+  ${medium('width: 50%;')};
   img {
     max-width: 100%;
     height: auto;

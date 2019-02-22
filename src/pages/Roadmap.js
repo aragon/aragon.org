@@ -67,7 +67,6 @@ const Tabs = styled.div`
     cursor: pointer;
     border: 1px solid rgba(151, 151, 151, 0.16103);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0245131);
-
     transition: all 0.25s ease-in-out;
   }
   div.active,
