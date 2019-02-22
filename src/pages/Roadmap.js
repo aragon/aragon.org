@@ -83,7 +83,7 @@ const Tabs = styled.div`
 
 const Hero = styled(Section)`
   height: 550px;
-  background-color: #fbf2e8;
+  background-color: rgb(207, 213, 234);
   background-image: url(${backgroundImage});
   background-size: cover;
   background-position: center
