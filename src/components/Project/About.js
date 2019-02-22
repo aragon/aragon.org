@@ -40,20 +40,6 @@ const module4Content = (
     </p>
   </span>
 );
-const HistoryContainer = (
-  <LongCardContainer>
-    <DateBox className="yellow"/>
-    <Label className="yellow">Aragon was born</Label>
-    <DateBox className="green"/>
-    <Label className="green">Aragon 0.1</Label>
-    <DateBox className="green"/>
-    <Label className="green">Aragon Network token sale</Label>
-    <DateBox className="violet"/>
-    <Label className="violet">Aragon 0.5 “The Architect”</Label>
-    <DateBox className="violet"/>
-    <Label className="violet">Aragon 0.6 and mainnet launch</Label>
-  </LongCardContainer>
-);
 
 const About = () => (
   <Section>
@@ -73,13 +59,6 @@ const About = () => (
   </Section>
 );
 
-const LongCardContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 -10%;
-`
 const HistoryImage = styled.img`
   margin: 30px -8% 0 -8%;
   max-width: 120%;

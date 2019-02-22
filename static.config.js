@@ -51,6 +51,11 @@ export default {
       getData: () => ({ title: '' }),
     },
     {
+      path: '/project/roadmap',
+      component: 'src/pages/Roadmap',
+      getData: () => ({ title: '' }),
+    },
+    {
       path: '/network',
       component: 'src/pages/Network',
       getData: () => ({ title: '' }),

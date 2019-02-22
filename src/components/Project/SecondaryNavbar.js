@@ -6,6 +6,7 @@ const medium = css => breakpoint('medium', css);
 import Governance from './assets/Governance'
 import Grants from './assets/Grants.js'
 import Contribute from './assets/Contribute.js'
+import Roadmap from './assets/Roadmap.js'
 import Blog from './assets/Blog.js'
 import Aracon from './assets/Aracon.js'
 import Wiki from './assets/Wiki.js'
@@ -29,6 +30,10 @@ const SecondaryNavbar = ({ page, ...props }) => (
         <Blog/>
         <h6>Blog</h6>
       </Item>
+      <InternalItem className={ page && page === 'roadmap' ? 'active roadmap-item' : 'roadmap-item'} to="/project/roadmap">
+        <Roadmap/>
+        <h6>Roadmap</h6>
+      </InternalItem>
       <Item href="https://aracon.one/" target="_blank">
         <Aracon/>
         <h6>AraCon</h6>
@@ -60,6 +65,15 @@ const Container = styled.nav`
     width: 25px;
     ${medium('width: 40px')};
   }
+  a.active, a:hover {
+    svg {
+      rect.white {
+        fill: #22e0ff;
+        transition: all 0.25s ease-in-out;
+      }
+    }
+  }
+
   a {
     position: relative;
     display: flex;
@@ -110,12 +124,21 @@ const Item = styled(SafeLink)`
     width: 30px;
     ${medium('width: auto')};
   }
+
 `
 const InternalItem = styled(Link)`
   text-align: center;
   cursor: pointer;
   text-decoration: none;
   font-size: 15px;
+  &.roadmap-item {
+    h6 {
+      margin-top: 2px;
+    }
+    svg {
+      margin-top: 5px;
+    }
+  }
   &:hover,
   &.active {
     h6 {
