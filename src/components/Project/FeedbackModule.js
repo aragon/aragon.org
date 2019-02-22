@@ -12,7 +12,7 @@ const FeedbackModule = () => (
     <Container>
       <Feedback>
         <ImageContainer>
-          <img src={speech} />
+          <img src={speech} alt="feedback" />
         </ImageContainer>
         <div>
           <h1>We value the feedback & ideas from the community</h1>
@@ -29,10 +29,7 @@ const FeedbackModule = () => (
                 target="_blank">
                 <span>
                   Join the Aragon forum{' '}
-                  <img
-                    src={require(`../General/assets/arrow.svg`)}
-                    alt="feedback"
-                  />
+                  <img src={require(`../General/assets/arrow.svg`)} alt=">" />
                 </span>
               </a>
             </p>
