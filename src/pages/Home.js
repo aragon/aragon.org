@@ -6,7 +6,6 @@ import About from '../components/Home/About'
 import Section from '../components/General/Section'
 import video from '../components/Home/home-assets/home-video.mp4'
 import { Link } from 'react-static'
-import $ from 'jquery'
 
 import { breakpoint, BreakPoint, Button } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
