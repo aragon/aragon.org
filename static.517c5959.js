@@ -5744,7 +5744,7 @@ module.exports = __webpack_require__.p + "static/6d5e70b6-hero-background.png";
 /* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/63eb0636-roadmap-background.png";
+module.exports = __webpack_require__.p + "static/2cc47007-roadmap-background.png";
 
 /***/ }),
 /* 93 */
@@ -6245,7 +6245,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _templateObject = _taggedTemplateLiteral(['\n  width: 80%;\n  margin: auto;\n  background: transparent;\n  display: flex;\n  line-height: 50px;\n  margin-top: -25px;\n  position: relative;\n  box-sizing: border-box;\n\n  div {\n    color: #2d4051;\n    background: #e6e9ef;\n    font-size: 18px;\n    text-align: center;\n    width: 50%;\n    cursor: pointer;\n    border: 1px solid rgba(151, 151, 151, 0.16103);\n    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0245131);\n    transition: all 0.25s ease-in-out;\n  }\n  div.active,\n  div:hover {\n    background: white;\n  }\n  div.left {\n    border-radius: 6px 0 0 6px;\n  }\n  div.right {\n    border-radius: 0 6px 6px 0;\n  }\n'], ['\n  width: 80%;\n  margin: auto;\n  background: transparent;\n  display: flex;\n  line-height: 50px;\n  margin-top: -25px;\n  position: relative;\n  box-sizing: border-box;\n\n  div {\n    color: #2d4051;\n    background: #e6e9ef;\n    font-size: 18px;\n    text-align: center;\n    width: 50%;\n    cursor: pointer;\n    border: 1px solid rgba(151, 151, 151, 0.16103);\n    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0245131);\n    transition: all 0.25s ease-in-out;\n  }\n  div.active,\n  div:hover {\n    background: white;\n  }\n  div.left {\n    border-radius: 6px 0 0 6px;\n  }\n  div.right {\n    border-radius: 0 6px 6px 0;\n  }\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  height: 550px;\n  background-color: #fbf2e8;\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n'], ['\n  height: 550px;\n  background-color: #fbf2e8;\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  height: 550px;\n  background-color: rgb(207, 213, 234);\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n'], ['\n  height: 550px;\n  background-color: rgb(207, 213, 234);\n  background-image: url(', ');\n  background-size: cover;\n  background-position: center\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  height: 100%;\n  width: 100%;\n  background-size: cover;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n'], ['\n  height: 100%;\n  width: 100%;\n  background-size: cover;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n']);
 
 var _react = __webpack_require__(0);
@@ -7724,4 +7724,4 @@ module.exports = __webpack_require__.p + "static/3a1c4c1e-yalda.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.6b01b244.js.map
+//# sourceMappingURL=static.517c5959.js.map
