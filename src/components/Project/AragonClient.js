@@ -40,7 +40,7 @@ class AragonClient extends React.Component {
                 specifications.
               </Subtitle>
             </Entry>
-            ;
+
             {(this.state.active == 0 || this.state.active == 1) && (
               <Entry>
                 <Module>
@@ -215,7 +215,7 @@ class AragonClient extends React.Component {
                 Wider areas of focus with some flexibility on the scope.
               </Subtitle>
             </Entry>
-            ;
+
             {(this.state.active == 0 || this.state.active == 1) && (
               <Entry>
                 <Module>
@@ -373,7 +373,7 @@ class AragonClient extends React.Component {
                 High level areas of focus with a broader and flexible scope
               </Subtitle>
             </Entry>
-            ;
+
             {(this.state.active == 0 || this.state.active == 2) && (
               <Entry>
                 <Module>
@@ -526,7 +526,7 @@ class AragonClient extends React.Component {
           </RoadmapContainer>
         </Container>
       </RoadmapSection>
-    );
+    )
   }
 }
 
