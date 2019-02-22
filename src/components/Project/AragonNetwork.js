@@ -9,93 +9,91 @@ const AragonNetwork = () => (
   <RoadmapSection>
     <Container>
       <RoadmapContainer>
-        <div className="roadmap-container">
-          <Entry entrypoint>
-            <Title>Current</Title>
-            <Subtitle>
-              Granular areas of focus with well defined scope and product
-              specifications.
-            </Subtitle>
-          </Entry>
-          <Entry>
-            <Module>
-              <div className="badge-container">
-                <EnhancedBadge>Enhanced voting</EnhancedBadge>
-                <AragonOneBadge>Aragon One</AragonOneBadge>
-              </div>
-              <h1>Delegate voting</h1>
-              <h3>
-                Allow people to delegate their voting power to delegates (i.e.
-                representatives) who can vote on their behalf and continue
-                experimenting with new voting mechanisms.
-              </h3>
-            </Module>
-          </Entry>
-          <Entry>
-            <Module>
-              <div className="badge-container">
-                <Badge>Dispute Resolution</Badge>
-                <AragonOneBadge>Aragon One</AragonOneBadge>
-              </div>
-              <h1>Staking and Lock Managers</h1>
-              <h3>
-                Provides a secure foundation for managing collateral deposits
-                for agreements while allowing collateral assets to be used in to
-                participate in governance.
-              </h3>
-            </Module>
-          </Entry>
-          <Entry>
-            <Module>
-              <div className="badge-container">
-                <Badge>Dispute Resolution</Badge>
-                <AragonOneBadge>Aragon One</AragonOneBadge>
-              </div>
-              <h1>Aragon Court PoC</h1>
-              <h3>
-                This deliverable includes the Aragon Court protocol, an
-                interface for users of the court to review and manage agreements
-                and disputes, and an interface for jurors to participate in the
-                arbitration process.
-              </h3>
-            </Module>
-          </Entry>
-          <Entry entrypoint>
-            <Title>Near-term</Title>
-            <Subtitle>
-              Wider areas of focus with some flexibility on the scope.
-            </Subtitle>
-          </Entry>
-          <Entry>
-            <Module>
-              <div className="badge-container">
-                <Badge>Dispute Resolution</Badge>
-                <AragonOneBadge>Aragon One</AragonOneBadge>
-              </div>
-              <h1>Proposals agreements</h1>
-              <h3>
-                Aragon Agreements are a core component of the Aragon Network,
-                they enable users to define human-readable obligations and lock
-                collateral to provide assurances to their counter-parties.
-              </h3>
-            </Module>
-          </Entry>
-          <Entry>
-            <Module>
-              <div className="badge-container">
-                <EnhancedBadge>Enhanced Voting</EnhancedBadge>
-                <AragonOneBadge>Aragon One</AragonOneBadge>
-              </div>
-              <h1>Vote Relay Protocol</h1>
-              <h3>
-                Improve the experience and scalability of voting by implementing
-                a protocol for votes to be submitted to a set of bonded
-                relayers.
-              </h3>
-            </Module>
-          </Entry>
-          <Entry lastpoint />
-        </div>
+        <Entry entrypoint>
+          <Title>Current</Title>
+          <Subtitle>
+            Granular areas of focus with well defined scope and product
+            specifications.
+          </Subtitle>
+        </Entry>
+        <Entry>
+          <Module>
+            <div className="badge-container">
+              <EnhancedBadge>Enhanced voting</EnhancedBadge>
+              <AragonOneBadge>Aragon One</AragonOneBadge>
+            </div>
+            <h1>Delegate voting</h1>
+            <h3>
+              Allow people to delegate their voting power to delegates (i.e.
+              representatives) who can vote on their behalf and continue
+              experimenting with new voting mechanisms.
+            </h3>
+          </Module>
+        </Entry>
+        <Entry>
+          <Module>
+            <div className="badge-container">
+              <Badge>Dispute Resolution</Badge>
+              <AragonOneBadge>Aragon One</AragonOneBadge>
+            </div>
+            <h1>Staking and Lock Managers</h1>
+            <h3>
+              Provides a secure foundation for managing collateral deposits
+              for agreements while allowing collateral assets to be used in to
+              participate in governance.
+            </h3>
+          </Module>
+        </Entry>
+        <Entry>
+          <Module>
+            <div className="badge-container">
+              <Badge>Dispute Resolution</Badge>
+              <AragonOneBadge>Aragon One</AragonOneBadge>
+            </div>
+            <h1>Aragon Court PoC</h1>
+            <h3>
+              This deliverable includes the Aragon Court protocol, an
+              interface for users of the court to review and manage agreements
+              and disputes, and an interface for jurors to participate in the
+              arbitration process.
+            </h3>
+          </Module>
+        </Entry>
+        <Entry entrypoint>
+          <Title>Near-term</Title>
+          <Subtitle>
+            Wider areas of focus with some flexibility on the scope.
+          </Subtitle>
+        </Entry>
+        <Entry>
+          <Module>
+            <div className="badge-container">
+              <Badge>Dispute Resolution</Badge>
+              <AragonOneBadge>Aragon One</AragonOneBadge>
+            </div>
+            <h1>Proposals agreements</h1>
+            <h3>
+              Aragon Agreements are a core component of the Aragon Network,
+              they enable users to define human-readable obligations and lock
+              collateral to provide assurances to their counter-parties.
+            </h3>
+          </Module>
+        </Entry>
+        <Entry>
+          <Module>
+            <div className="badge-container">
+              <EnhancedBadge>Enhanced Voting</EnhancedBadge>
+              <AragonOneBadge>Aragon One</AragonOneBadge>
+            </div>
+            <h1>Vote Relay Protocol</h1>
+            <h3>
+              Improve the experience and scalability of voting by implementing
+              a protocol for votes to be submitted to a set of bonded
+              relayers.
+            </h3>
+          </Module>
+        </Entry>
+        <Entry lastpoint />
       </RoadmapContainer>
     </Container>
   </RoadmapSection>
@@ -108,15 +106,14 @@ const EnhancedBadge = styled(Badge)`
 
 const RoadmapContainer = styled.div`
   margin-top: 50px;
-  .roadmap-container {
-    width: 100%;
-    max-width: 870px;
-    padding: 0;
-    position: relative;
-    margin: auto;
-    ${medium('padding: 5px 50px;')};
-  }
-  .roadmap-container:before {
+  width: 100%;
+  max-width: 870px;
+  padding: 0;
+  position: relative;
+  margin: auto;
+  ${medium('padding: 5px 50px;')};
+
+  &:before {
     content: '';
     position: absolute;
     top: 12px;
@@ -126,12 +123,12 @@ const RoadmapContainer = styled.div`
     background: #d8d8d8;
     ${medium('left: 21px;')};
   }
-  .roadmap-container:after {
+  &:after {
     content: '';
     display: table;
     clear: both;
   }
-`;
+`
 
 const AragonOneBadge = styled(Badge)`
   background: #f7837140;
