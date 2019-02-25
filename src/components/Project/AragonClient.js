@@ -22,7 +22,7 @@ class AragonClient extends React.Component {
       <RoadmapSection>
         <Container>
           <DropdownContainer>
-            <h4>Select flock teams</h4>
+            <h4>Select Flock teams</h4>
             <div className="dropdown-container">
               <DropDown
                 className="flock-dropdown"
@@ -536,6 +536,7 @@ const DropdownContainer = styled.div`
   margin: auto;
   padding: 0px 55px;
   flex-direction: column;
+  margin-bottom: 50px;
   div.dropdown-container {
     text-align: left;
     width: 100%;
