@@ -21,11 +21,7 @@ class Roadmap extends React.Component {
           <Container>
             <h2>Roadmap</h2>
             <h4>
-              We want to build the best ecosystem for decentralized
-              organizations together. To share insights into our priorities, we
-              publish Aragon 2019 Product Roadmap. This roadmap is a rough
-              estimate of what we’re focused on building in the near, medium and
-              long term.
+              As a community-driven project, we want to share our roadmap with the world.<br/>You can filter by product, and also by development team.
             </h4>
           </Container>
         </Hero>
