@@ -6336,7 +6336,9 @@ var Roadmap = function (_React$Component) {
             _react2.default.createElement(
               'h4',
               null,
-              'We want to build the best ecosystem for decentralized organizations together. To share insights into our priorities, we publish Aragon 2019 Product Roadmap. This roadmap is a rough estimate of what we\u2019re focused on building in the near, medium and long term.'
+              'As a community-driven project, we want to share our roadmap with the world.',
+              _react2.default.createElement('br', null),
+              'You can filter by product, and also by development team.'
             )
           )
         ),
@@ -7724,4 +7726,4 @@ module.exports = __webpack_require__.p + "static/3a1c4c1e-yalda.png";
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.517c5959.js.map
+//# sourceMappingURL=static.fce24367.js.map
