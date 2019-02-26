@@ -482,7 +482,7 @@ class AragonClient extends React.Component {
                   <h3>Contextual Discussions</h3>
                   <h4>
                     Develop a design pattern and component for contextual
-                    discussions within Aragon, and implement it one application
+                    discussions within Aragon, and implement it on one application
                     to showcase the feature, such as the Voting app.
                   </h4>
                 </Module>
