@@ -22,7 +22,7 @@ const AragonNetwork = () => (
               <EnhancedBadge>Enhanced voting</EnhancedBadge>
               <AragonOneBadge>Aragon One</AragonOneBadge>
             </div>
-            <h3>Delegate voting</h3>
+            <h3>Delegative Voting</h3>
             <h4>
               Allow people to delegate their voting power to delegates (i.e.
               representatives) who can vote on their behalf and continue
@@ -36,7 +36,7 @@ const AragonNetwork = () => (
               <Badge>Dispute Resolution</Badge>
               <AragonOneBadge>Aragon One</AragonOneBadge>
             </div>
-            <h3>Staking and Lock Managers</h3>
+            <h3>Staking and token locking</h3>
             <h4>
               Provides a secure foundation for managing collateral deposits
               for agreements while allowing collateral assets to be used in to
@@ -50,12 +50,12 @@ const AragonNetwork = () => (
               <Badge>Dispute Resolution</Badge>
               <AragonOneBadge>Aragon One</AragonOneBadge>
             </div>
-            <h3>Aragon Court PoC</h3>
+            <h3>Aragon Court v1</h3>
             <h4>
-              This deliverable includes the Aragon Court protocol, an
-              interface for users of the court to review and manage agreements
-              and disputes, and an interface for jurors to participate in the
-              arbitration process.
+              The initial Aragon Court protocol running on the EVM, with an
+              interface for organizations to create agreements and disputes
+              as well as an interface for jurors to review disputes and adjudicate
+              cases.
             </h4>
           </Module>
         </Entry>
@@ -71,11 +71,11 @@ const AragonNetwork = () => (
               <Badge>Dispute Resolution</Badge>
               <AragonOneBadge>Aragon One</AragonOneBadge>
             </div>
-            <h3>Proposals agreements</h3>
+            <h3>Agreements</h3>
             <h4>
               Aragon Agreements are a core component of the Aragon Network,
               they enable users to define human-readable obligations and lock
-              collateral to provide assurances to their counter-parties.
+              collateral to provide assurances to their counterparties.
             </h4>
           </Module>
         </Entry>
@@ -85,11 +85,11 @@ const AragonNetwork = () => (
               <EnhancedBadge>Enhanced Voting</EnhancedBadge>
               <AragonOneBadge>Aragon One</AragonOneBadge>
             </div>
-            <h3>Vote Relay Protocol</h3>
+            <h3>Voting Relay Protocol</h3>
             <h4>
-              Improve the experience and scalability of voting by implementing
-              a protocol for votes to be submitted to a set of bonded
-              relayers.
+              Family of layer 2 protocols to increase the scalability of
+              voting by deferring most of the tallying computation to a set
+              of bonded relayers that process votes off-chain.
             </h4>
           </Module>
         </Entry>
