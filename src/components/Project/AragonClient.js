@@ -50,10 +50,11 @@ class AragonClient extends React.Component {
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Responsive view</h3>
+                  <h3>Aragon Mobile: responsiveness</h3>
                   <h4>
-                    Make the platform and core apps responsive so Aragon can be
-                    used from mobile browsers such as Status or Cipher.
+                    First iteration of the Aragon Mobile experience,
+                    making the client and first-party apps responsive so Aragon can be
+                    used from mobile web3 browsers such as Status or Cipher.
                   </h4>
                 </Module>
               </Entry>
@@ -63,16 +64,17 @@ class AragonClient extends React.Component {
                 <Module>
                   <div className="badge-container">
                     <StyledBadge className="acuamarine">
-                      Identity experience
+                      Identity
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Local identity (custom labels) </h3>
+                  <h3>Local identity: custom labels</h3>
                   <h4>
-                    As an intermediate solution for the full Aragon identity
-                    experience, we will allow people to create custom local
-                    labels to identify addresses that represent different
-                    members of the organization.
+                    The first iteration of Identity in Aragon will
+                    allow users to locally tag addresses that represent different
+                    members of the organization. These labels can be exported and
+                    imported, so organizations could share on-chain an address book
+                    of their known members.
                   </h4>
                 </Module>
               </Entry>
@@ -97,14 +99,14 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="brown">App center</StyledBadge>
+                    <StyledBadge className="brown">App Center</StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Upgrading apps from the UI</h3>
+                  <h3>App Center: App upgrades</h3>
                   <h4>
-                    Provide users with a secure way to upgrade app versions,
-                    fixes for features or enhancements to already installed/in
-                    use apps.
+                    Provide users with a secure and intuitive way to upgrade
+                    the smart contracts of their organizations to newer versions that
+                    include new features or bug fixes.
                   </h4>
                 </Module>
               </Entry>
@@ -113,14 +115,14 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge>Agent application</StyledBadge>
+                    <StyledBadge>New app</StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Agent application</h3>
+                  <h3>Aragon Agent</h3>
                   <h4>
-                    This application will enable organizations to interact
-                    natively with other web3 applications (including other
-                    Aragon organizations).
+                    This new Aragon app enables organizations to interact
+                    with other Ethereum protocols or dApps. Agent also allows organizations
+                    to participate in other Aragon organizations.
                   </h4>
                 </Module>
               </Entry>
@@ -129,9 +131,10 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
+                    <StyledBadge>New app</StyledBadge>
                     <AutarkBadge>Autark</AutarkBadge>
                   </div>
-                  <h3>Rewards App</h3>
+                  <h3>Rewards app</h3>
                   <h4>
                     Allow organizations to distribute payments to token holders
                     based on the number of tokens earned in a specific period
@@ -144,12 +147,10 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="yellow">
-                      UX improvements
-                    </StyledBadge>
+                    <StyledBadge>New app</StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Payroll app</h3>
+                  <h3>Aragon Payroll</h3>
                   <h4>
                     This app will allow organizations to manage on-chain salary
                     payments and for employees to request payments and see their
@@ -163,15 +164,15 @@ class AragonClient extends React.Component {
                 <Module>
                   <div className="badge-container">
                     <StyledBadge className="yellow">
-                      UX improvements
+                      User experience
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
                   <h3>Notifications & user feedback</h3>
                   <h4>
-                    Implement an activity panel that will provide people
-                    information about ongoing and past transactions as well as a
-                    toast component for immediate feedback on users’ actions.
+                    Implement an activity panel that will provide users
+                    information about the status of ongoing and past transactions as well as
+                    a new way to display immediate feedback on users’ actions.
                   </h4>
                 </Module>
               </Entry>
@@ -180,15 +181,17 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="yellow">
-                      UX improvements
+                    <StyledBadge className="red">
+                      Adoption
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Concierge project</h3>
+                  <h3>Aragon Concierge</h3>
                   <h4>
-                    Guided on-boarding of projects interested in collaborate
-                    with Aragon or use Aragon tools for their governance needs.
+                    Assisted onboarding for high-profile projects that want to use Aragon,
+                    but the off-the-shelf Aragon experience doesn't fully fit their needs yet.
+                    Current projects have required building organization templates or assist their
+                    development teams building an Aragon app.
                   </h4>
                 </Module>
               </Entry>
@@ -197,6 +200,9 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
+                    <StyledBadge className="acuamarine">
+                      Identity
+                    </StyledBadge>
                     <AutarkBadge>Autark</AutarkBadge>
                   </div>
                   <h3>Organization Identity</h3>
@@ -220,13 +226,14 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="brown">App center</StyledBadge>
+                    <StyledBadge className="brown">App Center</StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Browsing, installing & uninstalling apps</h3>
+                  <h3>App Center: Discovery and app install</h3>
                   <h4>
-                    Enhance app discovery and app management for end users.
-                    Expand the on-boarding and app center experience.
+                    Enhance app discovery and organization app management.
+                    Improve the onboarding process to allow for creating more
+                    tailored organizations.
                   </h4>
                 </Module>
               </Entry>
@@ -236,13 +243,13 @@ class AragonClient extends React.Component {
                 <Module>
                   <div className="badge-container">
                     <StyledBadge className="acuamarine">
-                      Identity experience
+                      Identity
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Individual identity</h3>
+                  <h3>Identity: aragonID for individuals</h3>
                   <h4>
-                    Allow individuals to create and manage their user profiles,
+                    Allow users to create and manage their user profiles,
                     mapping their address to a human readable name that can be
                     used to interact with apps within the organization.
                   </h4>
@@ -253,12 +260,15 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
+                    <StyledBadge className="acuamarine">
+                      Identity
+                    </StyledBadge>
                     <AutarkBadge>Autark</AutarkBadge>
                   </div>
-                  <h3>Rich User Profiles</h3>
+                  <h3>Identity: rich user profiles</h3>
                   <h4>
-                    Allow individuals to associate additional details to their
-                    identity such as Github commit history, work history,
+                    Allow individuals to add details to their profile
+                    such as Github commit history, work history,
                     portfolios, and membership to other Aragon organizations.
                   </h4>
                 </Module>
@@ -268,15 +278,18 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
+                    <StyledBadge className="yellow">
+                      User experience
+                    </StyledBadge>
                     <AutarkBadge>Autark</AutarkBadge>
                   </div>
-                  <h3>Data Storage and Standards</h3>
+                  <h3>Organization data storage</h3>
                   <h4>
                     Design the implementation strategy and information
                     architecture for user profiles and contextual discussions.
                     Document infrastructure solutions and recommendations for
                     Aragon apps that require fast and queryable data that is
-                    hosted on distributed storage.
+                    hosted on decentralized storage protocols.
                   </h4>
                 </Module>
               </Entry>
@@ -286,15 +299,15 @@ class AragonClient extends React.Component {
                 <Module>
                   <div className="badge-container">
                     <StyledBadge className="yellow">
-                      UX improvements
+                      User experience
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Organizations templates</h3>
+                  <h3>New organization templates</h3>
                   <h4>
-                    Research new organizational models, define the apps and
-                    permissions required to realize them and create kits that
-                    people can use.
+                    Research new organizational models, define their specifications
+                    and develop organization templates that allow users to create
+                    new types of organizations.
                   </h4>
                 </Module>
               </Entry>
@@ -304,16 +317,15 @@ class AragonClient extends React.Component {
                 <Module>
                   <div className="badge-container">
                     <StyledBadge className="acuamarine">
-                      Identity experience
+                      Identity
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
                   <h3>Organization identity & membership</h3>
                   <h4>
-                    Allow users to create and manage their organizations’
-                    profiles, providing an intuitive way to add members to a
-                    given organization and granting them permissions &
-                    privileges.
+                    Allow organizations to have their own profile.
+                    Provide a more intuitive way to add members to an
+                    organization, which can have special privileges.
                   </h4>
                 </Module>
               </Entry>
@@ -324,12 +336,12 @@ class AragonClient extends React.Component {
                   <div className="badge-container">
                     <AutarkBadge>Autark</AutarkBadge>
                   </div>
-                  <h3>Reputation Support</h3>
+                  <h3>Reputation</h3>
                   <h4>
-                    Expand governance possibilities by providing more features
+                    Expand governance possibilities by providing features
                     for reputation-based organizations, including the ability to
-                    allocation non-transferable tokens in place of (or in
-                    addition to) traditional bounties.
+                    allocate non-transferable tokens instead of (or in
+                    addition to) regular bounties to compensate labor.
                   </h4>
                 </Module>
               </Entry>
@@ -340,14 +352,14 @@ class AragonClient extends React.Component {
                   <div className="badge-container">
                     <StyledBadge className="violet">
                       {' '}
-                      Lorikeet design system
+                      Lorikeet
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
                   <h3>aragonSDK: Split aragonUI and Lorikeet</h3>
                   <h4>
-                    Push Lorikeet as an ecosystem-wide project, while still
-                    providing an Aragon-opinionated experience with aragonUI
+                    Push the Lorikeet design system as an ecosystem-wide project, while still
+                    providing an opinionated Aragon look and experience with aragonUI.
                   </h4>
                 </Module>
               </Entry>
@@ -358,10 +370,10 @@ class AragonClient extends React.Component {
                   <div className="badge-container">
                     <AutarkBadge>Autark</AutarkBadge>
                   </div>
-                  <h3>Expanded Forwarder Options</h3>
+                  <h3>Expanded Forwarder</h3>
                   <h4>
                     Allow for more tightly coupled forwarder interactions where
-                    the forwarded call data can be leveraged and modified within
+                    the forwarded EVM Script can be leveraged and modified within
                     the Forwarder contract.
                   </h4>
                 </Module>
@@ -380,7 +392,7 @@ class AragonClient extends React.Component {
                   <div className="badge-container">
                     <AutarkBadge>Autark</AutarkBadge>
                   </div>
-                  <h3>Flexible App Development</h3>
+                  <h3>Flexible app development</h3>
                   <h4>
                     Enhance aragonAPI to support the development of apps with a
                     single front-end and multiple contracts, and for contract
@@ -399,10 +411,10 @@ class AragonClient extends React.Component {
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Native mobile app</h3>
+                  <h3>Aragon Mobile: native apps</h3>
                   <h4>
-                    Build native mobile Aragon client so users can benefit from
-                    device and OS specific capabilities.
+                    Develop native mobile wrappers for the Aragon client that leverage
+                    device and OS specific capabilities, such as push notifications.
                   </h4>
                 </Module>
               </Entry>
@@ -411,15 +423,16 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="blue">
-                      Flexible permissions
+                    <StyledBadge className="yellow">
+                      User experience
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
                   <h3>Conditional permissions</h3>
                   <h4>
                     Allow users to set and manage time-based and conditional
-                    permissions.
+                    permissions from the Permissions app, leveraging and expanding
+                    the capabilities or the aragonOS ACL.
                   </h4>
                 </Module>
               </Entry>
@@ -428,9 +441,12 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
+                    <StyledBadge className="yellow">
+                      User experience
+                    </StyledBadge>
                     <AutarkBadge>Autark</AutarkBadge>
                   </div>
-                  <h3>Organization Branding</h3>
+                  <h3>Organization branding</h3>
                   <h4>
                     Allow organizations to customize their branding by offering
                     at least three additional color palettes, including the
@@ -444,12 +460,12 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="brown">App center</StyledBadge>
+                    <StyledBadge className="brown">App Center</StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Incentivisation model for app developers</h3>
+                  <h3>App Center: sustainability for app developers</h3>
                   <h4>
-                    Provide app developers with different monetisation models to
+                    Provide app developers with different monetization models to
                     create revenue from the apps they publish in the Aragon App
                     Center.
                   </h4>
@@ -460,15 +476,16 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="blue">
-                      Flexible permissions
+                  <StyledBadge className="yellow">
+                      User experience
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
-                  <h3>Budgeting app</h3>
+                  <h3>Budgets app</h3>
                   <h4>
                     Enable organizations to plan and control their financial
-                    resources by setting time based permissions like budgeting.
+                    resources by setting budgets that apply to different members and
+                    groups within the organization.
                   </h4>
                 </Module>
               </Entry>
@@ -479,7 +496,7 @@ class AragonClient extends React.Component {
                   <div className="badge-container">
                     <AutarkBadge>Autark</AutarkBadge>
                   </div>
-                  <h3>Contextual Discussions</h3>
+                  <h3>Contextual discussions</h3>
                   <h4>
                     Develop a design pattern and component for contextual
                     discussions within Aragon, and implement it one application
@@ -493,14 +510,16 @@ class AragonClient extends React.Component {
                 <Module>
                   <div className="badge-container">
                     <StyledBadge className="grey">
-                      Developer resources
+                      Security
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
                   <h3>aragonOS: Global emergency failsafe</h3>
                   <h4>
-                    Provide an opt-in failsafe for organizations and individual
-                    apps to safely freeze their state during times of emergency.
+                    Provide an opt-in failsafe for the smart contracts of organizations
+                    to safely shut down the organization should a critical smart contract bug be
+                    found that puts the organization at risk. The organization would then be able
+                    to restore its code to a fixed version.
                   </h4>
                 </Module>
               </Entry>
@@ -509,9 +528,6 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="grey">
-                      Developer resources
-                    </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                   </div>
                   <h3>aragonSDK: Continuously improve developer experience</h3>
