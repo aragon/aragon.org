@@ -73,7 +73,7 @@ class AragonClient extends React.Component {
                     The first iteration of Identity in Aragon will
                     allow users to locally tag addresses that represent different
                     members of the organization. These labels can be exported and
-                    exported, so organizations could share on-chain an address book
+                    imported, so organizations could share on-chain an address book
                     of their known members.
                   </h4>
                 </Module>
