@@ -188,7 +188,7 @@ class AragonClient extends React.Component {
                   <h3>Concierge project</h3>
                   <h4>
                     Guided on-boarding of projects interested in collaborating
-                    with Aragon or in using Aragon tools for their governance needs.
+                    with Aragon or using Aragon tools for their governance needs.
                   </h4>
                 </Module>
               </Entry>
