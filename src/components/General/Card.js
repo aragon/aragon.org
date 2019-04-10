@@ -20,11 +20,13 @@ class Card extends React.Component {
       content,
       imageUrl,
       linkTo,
+      gradient,
+      imageBig,
       children,
     } = this.props
     return (
       <div>
-        <SmallCard  target="_blank">
+        <SmallCard  target="_blank" gradient={gradient ? gradient : ''} imageBig={imageBig ? imageBig : ''}>
           <img src={require(`../${imageUrl}.svg`)}/>
           <h1>{title}</h1>
           <h1>{content}</h1>
@@ -38,6 +40,9 @@ const SmallCard = styled.div`
   border-radius: 12px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.07);
   background-color: #f9fafc;
+  ${props =>
+    props.gradient &&
+    'background-image:' + props.gradient + ';'}
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -49,6 +54,12 @@ const SmallCard = styled.div`
   img {
     height: 130px;
     width: 130px;
+    ${props =>
+      props.imageBig &&
+      'height: auto;'}
+    ${props =>
+      props.imageBig &&
+      'width: 100%;'}
   }
   p {
     text-align: center;
