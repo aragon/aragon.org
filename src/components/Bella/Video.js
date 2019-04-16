@@ -5,6 +5,8 @@ import {Link} from 'react-static';
 import backgroundImage from './assets/video-background.png';
 import play from './assets/play.svg';
 import Zoom from 'react-reveal/Zoom';
+import YouTube from 'react-youtube';
+import VideoModal from '../General/VideoModal'
 
 import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
@@ -12,32 +14,14 @@ const medium = css => breakpoint('medium', css);
 class Video extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      modal: false,
-    };
+    this.videoModal = React.createRef();
     this.handleOpen = this.handleOpen.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-  }
-
-  handleClose() {
-    let show = this.state.modal;
-    let self = this;
-    var element = document.getElementById('modalContent');
-    var modalBackground = document.getElementById('videoModal');
-    modalBackground.classList.add('background-out');
-    element.style.removeProperty('animation-name');
-    element.classList.add('content-out');
-    setTimeout(function() {
-      self.setState({modal: !show});
-    }, 500);
   }
 
   handleOpen() {
-    var modalBackground = document.getElementById('videoModal');
-    modalBackground.classList.add('display-block');
-    let show = this.state.modal;
-    this.setState({modal: !show});
+    this.videoModal.current.handleOpen();
   }
+
 
   render() {
     return (
@@ -62,26 +46,7 @@ class Video extends React.Component {
           </Container>
         </Box>
         <BreakPoint from="medium">
-          <Modal
-            id="videoModal"
-            className={this.state.modal ? 'display-block background-in' : 'background-out'}
-            onClick={this.handleClose}>
-            <Zoom duration={500} spy={this.state.modal}>
-              <div
-                id="modalContent"
-                className={
-                  this.state.modal ? 'modal-content' : 'modal-content content-out'
-                }>
-                <iframe
-                  id="youtubeVideo"
-                  src="https://www.youtube-nocookie.com/embed/AqjIWmiAidw?rel=0&amp;ecver=2"
-                  frameBorder="0"
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen
-                />
-              </div>
-            </Zoom>
-          </Modal>
+          <VideoModal ref={this.videoModal} videoId="AqjIWmiAidw"/>
         </BreakPoint>
       </VideoeSection>
     );
@@ -169,15 +134,12 @@ const Modal = styled.div`
   }
   @keyframes contentOutAnimation {
     0% {
-      transform: scale(1, 1);
       opacity: 1;
     }
     50% {
-      transform: scale(0.5, 0.5);
       opacity: 0.5;
     }
     100% {
-      transform: scale(0, 0);
       opacity: 0;
     }
   }
