@@ -4,6 +4,7 @@ import LongCard from '../General/LongCard';
 import Card from '../General/Card';
 import styled from 'styled-components';
 import {Link} from 'react-static';
+import Fade from 'react-reveal/Fade';
 
 import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
@@ -11,53 +12,62 @@ const medium = css => breakpoint('medium', css);
 const feature1 = (
   <span>
     <p>
-      Aragon organizations are global from day one. Collaborate with people
-      across countries or continents, without incurring into cumbersome
-      bureaucrazy.
+      Click on any address to assign it a name. Then you will always see that
+      name across all Aragon apps. You can export your names and send them to
+      other people in your organization.
     </p>
   </span>
 );
 const feature2 = (
   <span>
     <p>
-      Aragon organizations are global from day one. Collaborate with people
-      across countries or continents, without incurring into cumbersome
-      bureaucrazy.
+      The activity center keeps you informed about the status of your pending
+      transactions.
     </p>
   </span>
 );
 const feature3 = (
   <span>
     <p>
-      Aragon organizations are global from day one. Collaborate with people
-      across countries or continents, without incurring into cumbersome
-      bureaucrazy.
+      Add an employee, their salary and tokens allowed to withdraw. That’s it.
+      For real. Employees get their payroll whenever they prefer. Weekly? Daily?
+      In real time? It’s up to them now.
     </p>
   </span>
 );
 
 const Features = () => (
-  <Section>
+  <Section id="features">
     <Container>
       <LongCard
         background={'Bella/assets/background-1.png'}
         image={'Bella/assets/1.svg'}
         textAlign="right"
-        title="Enjoy the new custom labels"
+        label="new"
+        title="Call people by their name"
         content={feature1}
       />
+
       <LongCard
         background={'Bella/assets/background-2.png'}
         image={'Bella/assets/2.svg'}
+        label="new"
         textAlign="left"
-        title="Check our new notification center"
+        title={
+          <span>
+            Get activity
+            <br /> notifications
+          </span>
+        }
         content={feature2}
       />
+
       <LongCard
         background={'Bella/assets/background-3.png'}
         image={'Bella/assets/3.svg'}
         textAlign="right"
-        title="Discover the new payroll APP"
+        label="invite-only"
+        title="The easiest payroll ever made"
         content={feature3}
       />
     </Container>
@@ -73,6 +83,19 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  .label {
+    display: flex;
+    p {
+      background: #ffffff80;
+      mix-blend-mode: normal;
+      border-radius: 100px;
+      padding: 0 15px;
+      text-transform: uppercase;
+      font-family: 'FontBold';
+      font-size: 10px;
+      color: #8fb5c8;
+    }
+  }
 `;
 
 export default Features;

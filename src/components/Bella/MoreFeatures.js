@@ -4,6 +4,7 @@ import LongCard from '../General/LongCard';
 import Card from '../General/Card';
 import styled from 'styled-components';
 import {Link} from 'react-static';
+import Fade from 'react-reveal/Fade';
 
 import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
@@ -11,39 +12,32 @@ const medium = css => breakpoint('medium', css);
 const feature1 = (
   <span>
     <p>
-      Aragon organizations are global from day one. Collaborate with people
-      across countries or continents, without incurring into cumbersome
-      bureaucrazy.
+      A few years ago, could you ever imagine running a company from your phone?
+ Vote, check finances and always be informed about your organizations.
+      Anywhere, just a tap away.
     </p>
   </span>
 );
 const feature2 = (
   <span>
     <p>
-      Aragon organizations are global from day one. Collaborate with people
-      across countries or continents, without incurring into cumbersome
-      bureaucrazy.
-    </p>
-  </span>
-);
-const feature3 = (
-  <span>
-    <p>
-      Aragon organizations are global from day one. Collaborate with people
-      across countries or continents, without incurring into cumbersome
-      bureaucrazy.
+      Thanks to the new App Center, you can seamlessly upgrade apps in your
+      organization. Enhancements and security fixes constantly make your
+      organization better.
     </p>
   </span>
 );
 
 const Features = () => (
-  <Section>
+  <StyledSection>
     <Container>
       <LongCard
         gradient="linear-gradient(335.08deg, #95BBCE -0.56%, #C5D0E6 46.04%, #E7E4F6 100%)"
         image={'Bella/assets/4.svg'}
         textAlign="right"
-        title="Complete responsive view"
+        label="new"
+        bottom={true}
+        title="Aragon goes mobile"
         content={feature1}
         className="first-feature"
       />
@@ -51,38 +45,45 @@ const Features = () => (
         gradient="linear-gradient(24.28deg, #C3E4DF 0%, #EDFAF2 100.94%)"
         image={'Bella/assets/5.svg'}
         textAlign="right"
-        title="New App center upgrades"
+        label="new"
+        title="Always evolving, constantly improving"
         content={feature2}
       />
-      <Card
-        gradient="linear-gradient(261.3deg, #FBF2E8 0%, #FFEDD9 99.84%)"
-        imageUrl={'Bella/assets/6'}
-        imageBig="true"
-        title="Export your finances in one click"
-        content={feature3}
-      />
-      <Card
-        gradient="linear-gradient(261.3deg, #FBF2E8 0%, #FFEDD9 99.84%)"
-        imageUrl={'Bella/assets/6'}
-        imageBig="true"
-        title="Export your finances in one click"
-        content={feature3}
-      />
     </Container>
-  </Section>
+  </StyledSection>
 );
 
+const StyledSection = styled(Section)`
+  padding: 30px 15px 0 15px;
+`
 const Container = styled.div`
   display: grid;
   ${medium(
-    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px 700px'
+    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px'
   )};
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   .first-feature .image-container {
-    margin-bottom: -70px !important;
+    ${medium('margin-bottom: 2px !important;')};
+    img {
+      height: 502px;
+      width: 502px;
+    }
+  }
+  .label {
+    display: flex;
+    p {
+      background: #ffffff80;
+      mix-blend-mode: normal;
+      border-radius: 100px;
+      padding: 0 15px;
+      text-transform: uppercase;
+      font-family: 'FontBold';
+      font-size: 10px;
+      color: #8fb5c8;
+    }
   }
 `;
 

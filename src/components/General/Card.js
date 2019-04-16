@@ -1,85 +1,96 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Section from '../General/Section'
-import styled from 'styled-components'
-import { breakpoint } from '@aragon/ui'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Section from '../General/Section';
+import styled from 'styled-components';
+import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
-import { Link } from 'react-static'
+import {Link} from 'react-static';
+import Fade from 'react-reveal/Fade';
 
-class Card extends React.Component {
-  static propTypes = {
-    image: PropTypes.node,
-  }
-  static defaultProps = {
-  }
-
-  render() {
-    const {
-      title,
-      content,
-      imageUrl,
-      linkTo,
-      gradient,
-      imageBig,
-      children,
-    } = this.props
-    return (
-      <div>
-        <SmallCard  target="_blank" gradient={gradient ? gradient : ''} imageBig={imageBig ? imageBig : ''}>
-          <img src={require(`../${imageUrl}.svg`)}/>
-          <h1>{title}</h1>
-          <h1>{content}</h1>
-        </SmallCard>
+const SCard = ({...props}) => (
+  <SmallCard
+    target="_blank"
+    colorWhite={props.colorWhite}
+    textAlign={props.textAlign}
+    background={props.background ? require(`../${props.background}`) : ''}
+    gradient={props.gradient ? props.gradient : ''}
+    imageBig={props.imageBig ? props.imageBig : ''}
+    cardHeight={props.cardHeight ? props.cardHeight : false}
+    className={props.className}
+    >
+    <img src={require(`../${props.imageUrl}.svg`)} />
+    {props.label && (
+      <div className="label">
+        <p>{props.label}</p>
       </div>
-    )
-  }
-}
+    )}
+    <h1>{props.title}</h1>
+    <h1>{props.content}</h1>
+  </SmallCard>
+);
+
+const Card = ({...props}) => (
+  <React.Fragment>
+    <BreakPoint to="medium">
+      <SCard {...props} />
+    </BreakPoint>
+    <BreakPoint from="medium">
+      <Fade delay={100}>
+        <SCard {...props} />
+      </Fade>
+    </BreakPoint>
+  </React.Fragment>
+);
 
 const SmallCard = styled.div`
   border-radius: 12px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.07);
   background-color: #f9fafc;
   ${props =>
+    props.background &&
+    'background-image: url(' + props.background + ');'} ${props =>
     props.gradient &&
     'background-image:' + props.gradient + ';'}
+  background-size: 108% 108%;
+  background-position: center;
   display: flex;
-  align-items: center;
+  align-items: ${props =>
+    props.textAlign == 'left' ? 'flex-start' : 'center'};
   flex-direction: column;
   justify-content: center;
   padding: 30px;
-  height: 100%;
   transition: all 0.25s ease-in-out;
   ${medium('padding: 30px 60px;')};
+
+  height: ${props => (props.cardHeight ? props.cardHeight : '500px')};
+
   img {
     height: 130px;
     width: 130px;
-    ${props =>
-      props.imageBig &&
-      'height: auto;'}
-    ${props =>
-      props.imageBig &&
-      'width: 100%;'}
+    ${props => props.imageBig && 'height: auto;'};
+    ${props => props.imageBig && 'width: 100%;'};
   }
   p {
-    text-align: center;
+    color: ${props => (props.colorWhite ? '#b4b5cc' : '#7f8198')};
+    text-align: ${props => (props.textAlign ? props.textAlign : 'center')};
   }
   h1 {
     font-family: 'FontLight', sans-serif;
-    font-size:30px;
+    font-size: 30px;
     width: inherit;
-    ${medium('font-size: 36px; width: calc(100% + 110px);')};
+    ${medium('font-size: 36px; width: 100%;')};
     ${large('width: inherit; font-size: 46px;')};
     font-weight: 300;
     line-height: 1.35;
-    text-align: center;
+    text-align: ${props => (props.textAlign ? props.textAlign : 'center')};
     color: #2d4051;
     margin: 15px 0 0 0;
+    color: ${props => (props.colorWhite ? 'white' : '#2d4051')};
   }
   &:hover {
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.07);
   }
-`
+`;
 
-
-export default Card
+export default Card;

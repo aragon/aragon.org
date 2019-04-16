@@ -2,53 +2,74 @@ import React from 'react';
 import Section from '../General/Section';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {breakpoint} from '@aragon/ui';
+import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
 import {Link} from 'react-static';
+import Fade from 'react-reveal/Fade';
 
-class Card extends React.Component {
-  render() {
-    const {
-      title,
-      content,
-      className,
-      image,
-      background,
-      gradient,
-      colorWhite,
-      textAlign,
-      linkTo,
-      children,
-    } = this.props;
-    return (
-      <LongCard
-        className={textAlign + ' ' + className}
-        colorWhite={colorWhite}
-        image={image || false}
-        background={background ? require(`../${background}`) : ''}
-        gradient={gradient ? gradient : ''}>
-        {image &&
-          textAlign == 'right' && (
-            <ImageContainer className="image-container">
-              <img src={require(`../${image}`)} />
-            </ImageContainer>
-          )}
-        <div className={textAlign + '-box'}>
-          {title && <h1>{title}</h1>}
-          {content && <h1>{content}</h1>}
-          {children}
+const LCard = ({...props}) => (
+  <LongCard
+    className={props.textAlign + ' ' + props.className}
+    colorWhite={props.colorWhite}
+    image={props.image || false}
+    background={props.background ? require(`../${props.background}`) : ''}
+    gradient={props.gradient ? props.gradient : ''}>
+    {props.image &&
+      props.textAlign == 'right' && (
+        <ImageContainer className="image-container">
+          <Fade left={props.bottom ? false : true} bottom={props.bottom ? true : false}  delay={400} distance="50px">
+            {' '}
+            <img src={require(`../${props.image}`)} />
+          </Fade>
+        </ImageContainer>
+      )}
+    <div className={props.textAlign + '-box'}>
+      {props.label && (
+        <div className="label">
+          <p>{props.label}</p>
         </div>
-        {image &&
-          textAlign == 'left' && (
-            <ImageContainer className="image-container">
-              <img src={require(`../${image}`)} />
-            </ImageContainer>
-          )}
-      </LongCard>
-    );
-  }
-}
+      )}
+      {props.title && <h1>{props.title}</h1>}
+      {props.content && <h1>{props.content}</h1>}
+      {props.children}
+    </div>
+    {props.image &&
+      props.textAlign == 'left' && (
+        <ImageContainer className="image-container">
+          <Fade right={props.bottom ? false : true} bottom={props.bottom ? true : false} delay={400} distance="50px">
+            {' '}
+            <img src={require(`../${props.image}`)} />
+          </Fade>
+        </ImageContainer>
+      )}
+  </LongCard>
+);
+
+const Card = ({...props}) => (
+  <React.Fragment>
+    <BreakPoint to="medium">
+      <LCard {...props}/>
+    </BreakPoint>
+    <BreakPoint from="medium">
+      <LongFade>
+        <Fade delay={100} >
+          <LCard {...props}/>
+        </Fade>
+      </LongFade>
+    </BreakPoint>
+  </React.Fragment>
+
+);
+
+
+const LongFade = styled.div`
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-column-start: 1;
+  ${medium('height: 500px ')};
+  height: auto;
+`;
 
 const LongCard = styled('div')`
   border-radius: 12px;
@@ -68,7 +89,8 @@ const LongCard = styled('div')`
   align-items: center;
   flex-direction: column;
   ${medium('flex-direction: row;')};
-  height: 100%;
+  ${medium('height: 500px ')};
+  height: auto;
   grid-column-start: 1;
   ${medium('grid-column-end: 3;')};
   grid-column-end: 2;
