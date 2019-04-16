@@ -13,7 +13,7 @@ const Hero = () => (
     <HeroSection>
       <Box>
         <Container>
-          <h2>Freedom to organize</h2>
+          <h2>Freedom to <br/>organize</h2>
           <h4>Aragon lets you freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, and communities.</h4>
           <Button.Anchor className="hero-link" mode="strong" href="./discover">Discover the product</Button.Anchor>
         </Container>
@@ -41,21 +41,24 @@ const HeroSection = styled(Section)`
     @media (min-width: 900px) and (max-width: 1071px) {
       display: block;
       height: 300px;
+      margin-right: -10px;
+
     }
     @media (min-width: 1071px) and (max-width: 1176px) {
       display: block;
       height: 350px;
+      margin-right: -30px;
     }
     @media (min-width: 1176px) and (max-width: 1330px) {
       display: block;
       height: 400px!important;
+      margin-right: -50px;
     }
     @media (min-width: 1330px) {
       display: block;
       height: 450px;
+      margin-right: -70px;
     }
-    position: absolute;
-    bottom: 0;
     margin-left: 28px;
   }
 `;
@@ -68,7 +71,14 @@ const Box = styled.div`
 `;
 const Container = styled.div`
   width: 100%;
-  h2, h4 {
+  h2 {
+    font-size: 56px;
+    line-height: 75px;
+    text-align: left;
+    color: white;
+    opacity: 1;
+  }
+  h4 {
     text-align: left;
     color: white;
     opacity: 0.8;

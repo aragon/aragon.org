@@ -49,27 +49,30 @@ const HeroSection = styled(Section)`
   position: relative;
   display: flex;
   video {
+    max-width: 100%;
     width: auto;
-    display:none;
+    margin-left: 10px;
     @media (min-width: 900px) and (max-width: 1071px) {
       display: block;
       height: 300px;
+      margin-left: 10px;
+
     }
     @media (min-width: 1071px) and (max-width: 1176px) {
       display: block;
-      height: 350px;
+      height: 430px;
+          margin-left: -20px;
     }
     @media (min-width: 1176px) and (max-width: 1330px) {
       display: block;
-      height: 400px!important;
+      height: 500px!important;
+      margin-left: -60px;
     }
     @media (min-width: 1330px) {
       display: block;
-      height: 450px;
+      height: 550px;
+      margin-left: -30px;
     }
-    position: absolute;
-    bottom: 0;
-    right: calc(50% + 30px);
   }
 `;
 const Box = styled.div`
