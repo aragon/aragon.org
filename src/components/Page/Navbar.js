@@ -18,9 +18,19 @@ const renderMenuItemLink = ({ url, children }) =>
   )
 
 class Navbar extends React.Component {
-  state = {
-    scroll: 1,
+  constructor(props) {
+    super(props);
+    let scroll = 1;
+    if (typeof window !== `undefined` && window.location.href.indexOf('bella') >= 0) {
+      scroll = 0
+    }
+    this.state = {
+      scroll: scroll,
+      height: 64,
+      image: 44,
+    };
   }
+
   componentDidMount() {
     window.addEventListener('scroll', this.onScroll)
   }
@@ -31,15 +41,31 @@ class Navbar extends React.Component {
 
   onScroll = event => {
     let scroll = 1 - ((document.scrollingElement.scrollTop * 2) / 1000);
+    let image = 1 - ((document.scrollingElement.scrollTop * 2) / 1000);
+
     if (scroll < 0.8) {
       scroll = 0.8;
+      image = 0.8;
     }
-    this.setState({ scroll: scroll})
+    if (window.location.href.indexOf('bella') >= 0 && document.scrollingElement.scrollTop == 0) {
+      scroll = 0;
+    }
+    let height = 1 - ((document.scrollingElement.scrollTop * 2) / 1000);
+
+    if (height < 0.68) {
+      height = 0.68;
+    }
+
+    this.setState({
+      scroll: scroll,
+      height: height * 64,
+      image: image * 44,
+    })
   }
-  renderIn = ({ x, menuItems, path }) => {
+  renderIn = ({ x, h, i, menuItems, path }) => {
     return (
       <AragonNavbar
-        style={{ background: x.interpolate(v => `rgba(28, 29, 35, ${v})`) }}
+        style={{ background: x.interpolate(v => `rgba(28, 29, 35, ${v})`), height: h.interpolate(v => `${v}px`) }}
       >
         <Center>
           <BreakPoint from="medium">
@@ -102,8 +128,8 @@ class Navbar extends React.Component {
     const { menuItems, path } = this.props
     return (
       <Spring
-        from={{ x: 0 }}
-        to={{ x: this.state.scroll }}
+        from={{ x: 0, h:64, i: 44 }}
+        to={{ x: this.state.scroll, h: this.state.height, i: this.state.image }}
         menuItems={menuItems}
         path={path}
         native
@@ -117,7 +143,6 @@ class Navbar extends React.Component {
 const AragonNavbar = styled(animated.div)`
   width: 100%;
   height: 64px;
-  background: rgb(28, 29, 35);
   display: flex;
   justify-content: flex-start;
   ${medium('justify-content: center;')};
@@ -130,6 +155,7 @@ const AragonNavbar = styled(animated.div)`
   }
   a {
     position: relative;
+    height: 100%;
     &:focus {
       outline: 0;
       &:after {
@@ -171,7 +197,7 @@ const Center = styled.div`
   button {
     margin: 0 0 0 10px;
   }
-  height: 64px;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -186,15 +212,15 @@ const LogoLink = styled(Link)`
   width: 148px;
   height: 100%;
   img {
-    height: 44px;
+    height: 62%;
   }
 `
 
 const MobileLogo = styled.img`
   margin: 0 !important;
   position: relative;
-  top: 4px;
-  height: 44px;
+  top: 19%;
+  height: 62%;
 `
 
 export default Navbar

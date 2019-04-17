@@ -6,8 +6,7 @@ import Section from '../components/General/Section'
 import Quotes from '../components/Discover/Quotes'
 import Product from '../components/Discover/Product'
 import UnstoppableOranizations from '../components/Discover/UnstoppableOranizations'
-import video from '../components/Home/home-assets/home-video.mp4'
-// import video from '../components/Discover/assets/discover-video.mp4'
+import Hero from '../components/Discover/Hero'
 import BlogPost from '../components/Discover/BlogPost'
 
 import { breakpoint, BreakPoint, Button } from '@aragon/ui'
@@ -16,20 +15,7 @@ const large = css => breakpoint('large', css)
 
 const Discover = () => (
   <Page path="/discover">
-    <HeroSection>
-      <Box>
-        <Container>
-          <video playsInline autoPlay muted loop>
-            <source src={video} type="video/mp4" />
-          </video>
-        </Container>
-        <Container>
-          <h2>Take back your freedom to organize</h2>
-          <h4>Discover the unparalleled power to organize. Whether you want to collaborate with your co-founder, open a non-profit, or just organize an online community, Aragon is there for you. </h4>
-          <Button.Anchor className="hero-link" mode="strong" href="https://mainnet.aragon.org " target="_blank">Try it out</Button.Anchor>
-        </Container>
-      </Box>
-    </HeroSection>
+    <Hero/>
     <About/>
     <Product/>
     <UnstoppableOranizations/>
@@ -49,27 +35,30 @@ const HeroSection = styled(Section)`
   position: relative;
   display: flex;
   video {
+    max-width: 100%;
     width: auto;
-    display:none;
+    margin-left: 10px;
     @media (min-width: 900px) and (max-width: 1071px) {
       display: block;
       height: 300px;
+      margin-left: 10px;
+
     }
     @media (min-width: 1071px) and (max-width: 1176px) {
       display: block;
-      height: 350px;
+      height: 430px;
+          margin-left: -20px;
     }
     @media (min-width: 1176px) and (max-width: 1330px) {
       display: block;
-      height: 400px!important;
+      height: 500px!important;
+      margin-left: -60px;
     }
     @media (min-width: 1330px) {
       display: block;
-      height: 450px;
+      height: 550px;
+      margin-left: -30px;
     }
-    position: absolute;
-    bottom: 0;
-    right: calc(50% + 30px);
   }
 `;
 const Box = styled.div`

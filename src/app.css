@@ -6,6 +6,10 @@
  font-family: 'FontLight';
  src: url('./fonts/HKGrotesk-Light.ttf') format('opentype');
 }
+@font-face {
+ font-family: 'FontBold';
+ src: url('./fonts/HKGrotesk-Bold.ttf') format('opentype');
+}
 
 body {
   font-family: 'FontRegular', sans-serif !important;
@@ -14,6 +18,7 @@ body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 a, a span, button {

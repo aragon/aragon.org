@@ -61,6 +61,11 @@ export default {
       getData: () => ({ title: '' }),
     },
     {
+      path: '/bella',
+      component: 'src/pages/Bella',
+      getData: () => ({ title: '' }),
+    },
+    {
       is404: true,
       component: 'src/pages/NotFound',
       getData: () => ({ title: 'Page Not Found' }),
