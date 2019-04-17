@@ -6,8 +6,7 @@ import Section from '../components/General/Section'
 import Quotes from '../components/Discover/Quotes'
 import Product from '../components/Discover/Product'
 import UnstoppableOranizations from '../components/Discover/UnstoppableOranizations'
-import video from '../components/Home/home-assets/home-video.mp4'
-// import video from '../components/Discover/assets/discover-video.mp4'
+import Hero from '../components/Discover/Hero'
 import BlogPost from '../components/Discover/BlogPost'
 
 import { breakpoint, BreakPoint, Button } from '@aragon/ui'
@@ -16,20 +15,7 @@ const large = css => breakpoint('large', css)
 
 const Discover = () => (
   <Page path="/discover">
-    <HeroSection>
-      <Box>
-        <Container>
-          <video playsInline autoPlay muted loop>
-            <source src={video} type="video/mp4" />
-          </video>
-        </Container>
-        <Container>
-          <h2>Take back your freedom to organize</h2>
-          <h4>Discover the unparalleled power to organize. Whether you want to collaborate with your co-founder, open a non-profit, or just organize an online community, Aragon is there for you. </h4>
-          <Button.Anchor className="hero-link" mode="strong" href="https://mainnet.aragon.org " target="_blank">Try it out</Button.Anchor>
-        </Container>
-      </Box>
-    </HeroSection>
+    <Hero/>
     <About/>
     <Product/>
     <UnstoppableOranizations/>

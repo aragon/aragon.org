@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Section from '../General/Section';
-import video from './home-assets/home-video.mp4';
-import videoMobile from './home-assets/video-mobile.mp4';
-import blur from './home-assets/blur2.png';
+import video from './assets/discover-video.mp4';
+import videoMobile from '../Home/home-assets/video-mobile.mp4';
 import {Link} from 'react-static';
 
 import {breakpoint, BreakPoint, Button} from '@aragon/ui';
@@ -15,76 +14,58 @@ const Hero = () => (
     <Box>
       <BreakPoint to="medium">
         <div className="mobile-container">
-          <video className="video-mobile" playsInline autoPlay muted loop>
+          <VideoMobile playsInline autoPlay muted loop>
             <source src={videoMobile} type="video/mp4" />
-          </video>
+          </VideoMobile>
         </div>
       </BreakPoint>
-      <TextContainer>
-        <h2>
-          Freedom to <br />
-          organize
-        </h2>
-        <h4>
-          Aragon lets you freely organize and collaborate without borders or
-          intermediaries. Create global, bureaucracy-free organizations,
-          companies, and communities.
-        </h4>
-        <Button.Anchor
-          className="principal-hero-link"
-          mode="strong"
-          href="./discover">
-          Discover the product
-        </Button.Anchor>
-      </TextContainer>
       <BreakPoint from="medium">
         <VideoContainer>
-          <Blur src={blur} />
-          <VideoDesktop playsInline autoPlay muted loop>
+          <VideoDesktop  playsInline autoPlay muted loop>
             <source src={video} type="video/mp4" />
           </VideoDesktop>
         </VideoContainer>
       </BreakPoint>
+      <TextContainer>
+        <h2>Take back your freedom to organize</h2>
+        <h4>
+          Discover the unparalleled power to organize. Whether you want to
+          collaborate with your co-founder, open a non-profit, or just organize
+          an online community, Aragon is there for you.
+        </h4>
+        <Button.Anchor
+          className="principal-hero-link"
+          mode="strong"
+          href="https://mainnet.aragon.org "
+          target="_blank">
+          Try it out
+        </Button.Anchor>
+      </TextContainer>
+
     </Box>
   </HeroSection>
 );
+
 const VideoContainer = styled.div`
   width: 100%;
 `;
 
-const Blur = styled.img`
-  position: absolute;
-  z-index: 1;
-  height: auto;
-  @media (min-width: 768px) and (max-width: 960px) {
-    display: none;
-  }
-  @media (min-width: 960px) and (max-width: 1120px) {
-    width: 720px;
-    bottom: 45px;
-    left: calc(50% - 122px);
-  }
-  @media (min-width: 1120px) and (max-width: 1260px) {
-    width: 840px;
-    bottom: -10px;
-    left: calc(50% - 153px);
-  }
-  @media (min-width: 1260px) and (max-width: 1330px) {
-    width: 960px;
-    bottom: -43px;
-    left: calc(50% - 205px);
-  }
-  @media (min-width: 1330px) {
-    width: 1080px;
-    bottom: -71px;
-    left: calc(50% - 277px);
-  }
-`
-const VideoDesktop = styled.video`
+const VideoMobile = styled.video`
   width: 90%;
   max-width: 312px;
   margin-top: 30px;
-  ${medium('width: auto; margin-left: 28px; max-width: inherit; margin-top: 0;')};
+  z-index: 3;
+  position: relative;
+  border-radius: 8px;
+`;
+
+const VideoDesktop = styled.video`
+  height: 450px;
+  max-width: 312px;
+  margin-top: 30px;
+  ${medium(
+    'width: auto; margin-right: 70px; max-width: inherit; margin-top: 0;'
+  )};
   z-index: 2;
   position: relative;
   border-radius: 8px;
@@ -95,28 +76,29 @@ const VideoDesktop = styled.video`
   @media (min-width: 960px) and (max-width: 1120px) {
     display: block;
     height: 300px;
-    margin-right: -10px;
+    margin-left: -10px;
+    margin-right: 30px;
   }
   @media (min-width: 1120px) and (max-width: 1260px) {
     display: block;
     height: 350px;
-    margin-right: -30px;
+    margin-left: -30px;
+    margin-right: 50px;
   }
   @media (min-width: 1260px) and (max-width: 1330px) {
     display: block;
     height: 400px !important;
-    margin-right: -50px;
+    margin-left: -50px;
   }
   @media (min-width: 1330px) {
     display: block;
     height: 450px;
-    margin-right: -70px;
+    margin-left: -70px;
   }
 `
 
-
 const HeroSection = styled(Section)`
-  background-color: #1c1d23;
+  background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);
   min-height: 650px;
   padding-top: 64px;
   display: flex;
@@ -127,14 +109,6 @@ const HeroSection = styled(Section)`
   .mobile-container {
     width: 100%;
     text-align: center;
-  }
-  video.video-mobile {
-    width: 90%;
-    max-width: 312px;
-    margin-top: 30px;
-    z-index: 3;
-    position: relative;
-    border-radius: 8px;
   }
 `;
 const Box = styled.div`
@@ -151,16 +125,12 @@ const TextContainer = styled.div`
   width: 100%;
   ${medium('min-width: 453px;')};
   h2 {
-    font-size: 56px;
-    line-height: 75px;
     text-align: left;
-    color: white;
     opacity: 1;
     margin: 15px 0;
   }
   h4 {
     text-align: left;
-    color: white;
     opacity: 0.8;
   }
 `;
