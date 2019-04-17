@@ -61,7 +61,8 @@ const SmallCard = styled.div`
   justify-content: center;
   padding: 30px;
   transition: all 0.25s ease-in-out;
-  ${medium('padding: 30px 60px;')};
+  ${medium('padding: 15px;')};
+  ${large('padding: 30px 60px;')};
 
   height: ${props => (props.cardHeight ? props.cardHeight : '500px')};
 

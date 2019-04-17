@@ -17,14 +17,14 @@ const LCard = ({...props}) => (
     gradient={props.gradient ? props.gradient : ''}>
     {props.image &&
       props.textAlign == 'right' && (
-        <ImageContainer className="image-container">
+        <ImageContainer className="image-container right-container">
           <Fade left={props.bottom ? false : true} bottom={props.bottom ? true : false}  delay={400} distance="50px">
             {' '}
             <img src={require(`../${props.image}`)} />
           </Fade>
         </ImageContainer>
       )}
-    <div className={props.textAlign + '-box'}>
+    <div className={props.textAlign + '-box text-box'}>
       {props.label && (
         <div className="label">
           <p>{props.label}</p>
@@ -36,7 +36,7 @@ const LCard = ({...props}) => (
     </div>
     {props.image &&
       props.textAlign == 'left' && (
-        <ImageContainer className="image-container">
+        <ImageContainer className="image-container left-container">
           <Fade right={props.bottom ? false : true} bottom={props.bottom ? true : false} delay={400} distance="50px">
             {' '}
             <img src={require(`../${props.image}`)} />
@@ -95,7 +95,20 @@ const LongCard = styled('div')`
   ${medium('grid-column-end: 3;')};
   grid-column-end: 2;
   transition: all 0.25s ease-in-out;
-
+  .left-container {
+    ${medium('margin-left: 20px;')};
+  }
+  .right-container {
+    ${medium('margin-right: 20px;')};
+  }
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .center-box.text-box {
+    display: block;
+  }
   &.center {
     justify-content: center;
     p,
