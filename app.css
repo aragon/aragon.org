@@ -6,6 +6,10 @@
  font-family: 'FontLight';
  src: url(https://aragon.org/static/a4825540-HKGrotesk-Light.ttf) format('opentype');
 }
+@font-face {
+ font-family: 'FontBold';
+ src: url(https://aragon.org/static/cc608387-HKGrotesk-Bold.ttf) format('opentype');
+}
 
 body {
   font-family: 'FontRegular', sans-serif !important;
@@ -14,6 +18,7 @@ body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 a, a span, button {
@@ -22,4 +27,5 @@ a, a span, button {
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+
 /*# sourceMappingURL=app.css.map*/
