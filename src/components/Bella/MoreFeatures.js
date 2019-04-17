@@ -67,11 +67,11 @@ const Container = styled.div`
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   .first-feature .image-container {
-    ${medium('margin-bottom: -100px !important;')};
+    ${medium('margin-bottom: -50px !important;')};
     img {
       height: auto;
       width: auto;
-      ${large('height: 400px; width: 400px;')};
+      ${large('height: 450px; width: 450px;')};
     }
   }
   .label {
