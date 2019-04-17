@@ -163,7 +163,10 @@ const Container = styled.div`
     font-size: 18px;
     line-height: 19px;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+    ${medium(
+      'margin-bottom: 35px;'
+    )};
     color: #FFFFFF;
   }
   img.bella-img {
