@@ -7,7 +7,7 @@ const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
 import {Link} from 'react-static';
 import Fade from 'react-reveal/Fade';
-
+console.log(breakpoint('medium'));
 const SCard = ({...props}) => (
   <SmallCard
     target="_blank"
@@ -63,9 +63,9 @@ const SmallCard = styled.div`
   transition: all 0.25s ease-in-out;
   ${medium('padding: 15px;')};
   ${large('padding: 30px 60px;')};
-
-  height: ${props => (props.cardHeight ? props.cardHeight : '500px')};
-
+  @media (min-width: 768px) {
+    height: ${props => (props.cardHeight ? props.cardHeight : '500px')};
+  }
   img {
     height: 130px;
     width: 130px;

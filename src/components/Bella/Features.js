@@ -66,6 +66,7 @@ const Features = () => (
         background={'Bella/assets/background-3.png'}
         image={'Bella/assets/3.svg'}
         textAlign="right"
+        className="salary-allocation"
         label="invite-only"
         title="The easiest payroll ever made"
         content={feature3}
@@ -83,6 +84,11 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  .salary-allocation {
+    img {
+      margin: 50px;
+    }
+  }
   .label {
     display: flex;
     background: #ffffff80;

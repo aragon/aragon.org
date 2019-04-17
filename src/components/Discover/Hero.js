@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Section from '../General/Section';
 import video from './assets/discover-video.mp4';
 import videoMobile from '../Home/home-assets/video-mobile.mp4';
+import poster from './assets/poster.jpg';
 import {Link} from 'react-static';
 
 import {breakpoint, BreakPoint, Button} from '@aragon/ui';
@@ -18,30 +19,42 @@ const Hero = () => (
             <source src={videoMobile} type="video/mp4" />
           </VideoMobile>
         </div>
+        <TextContainer>
+          <h2>Take back your freedom to organize</h2>
+          <h4>
+            Discover the unparalleled power to organize. Whether you want to
+            collaborate with your co-founder, open a non-profit, or just organize
+            an online community, Aragon is there for you.
+          </h4>
+          <Button.Anchor
+            className="principal-hero-link"
+            mode="strong"
+            href="https://mainnet.aragon.org "
+            target="_blank">
+            Try it out
+          </Button.Anchor>
+        </TextContainer>
       </BreakPoint>
       <BreakPoint from="medium">
-        <VideoContainer>
-          <VideoDesktop  playsInline autoPlay muted loop>
-            <source src={video} type="video/mp4" />
-          </VideoDesktop>
-        </VideoContainer>
+        <VideoDesktop  playsInline autoPlay muted loop poster={poster}>
+          <source src={video} type="video/mp4" />
+        </VideoDesktop>
+        <TextContainer>
+          <h2>Take back your freedom to organize</h2>
+          <h4>
+            Discover the unparalleled power to organize. Whether you want to
+            collaborate with your co-founder, open a non-profit, or just organize
+            an online community, Aragon is there for you.
+          </h4>
+          <Button.Anchor
+            className="principal-hero-link"
+            mode="strong"
+            href="https://mainnet.aragon.org "
+            target="_blank">
+            Try it out
+          </Button.Anchor>
+        </TextContainer>
       </BreakPoint>
-      <TextContainer>
-        <h2>Take back your freedom to organize</h2>
-        <h4>
-          Discover the unparalleled power to organize. Whether you want to
-          collaborate with your co-founder, open a non-profit, or just organize
-          an online community, Aragon is there for you.
-        </h4>
-        <Button.Anchor
-          className="principal-hero-link"
-          mode="strong"
-          href="https://mainnet.aragon.org "
-          target="_blank">
-          Try it out
-        </Button.Anchor>
-      </TextContainer>
-
     </Box>
   </HeroSection>
 );
@@ -60,11 +73,8 @@ const VideoMobile = styled.video`
 `;
 
 const VideoDesktop = styled.video`
-  height: 450px;
-  max-width: 312px;
-  margin-top: 30px;
   ${medium(
-    'width: auto; margin-right: 70px; max-width: inherit; margin-top: 0;'
+    'width: auto; margin-right: 70px;'
   )};
   z-index: 2;
   position: relative;
@@ -76,23 +86,27 @@ const VideoDesktop = styled.video`
   @media (min-width: 960px) and (max-width: 1120px) {
     display: block;
     height: 300px;
+    min-width: 460px;
     margin-left: -10px;
     margin-right: 30px;
   }
   @media (min-width: 1120px) and (max-width: 1260px) {
     display: block;
     height: 350px;
+    min-width: 537px;
     margin-left: -30px;
     margin-right: 50px;
   }
   @media (min-width: 1260px) and (max-width: 1330px) {
     display: block;
     height: 400px !important;
+    min-width: 613px;
     margin-left: -50px;
   }
   @media (min-width: 1330px) {
     display: block;
     height: 450px;
+    min-width: 690px;
     margin-left: -70px;
   }
 `
@@ -116,21 +130,29 @@ const Box = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  ${medium('flex-direction: row;')};
+  margin: 30px auto;
+  ${medium('flex-direction: row; margin: auto; justify-content: space-between;')};
   @media (min-width: 690px) and (max-width: 960px) {
     flex-direction: column;
   }
 `;
+
 const TextContainer = styled.div`
   width: 100%;
-  ${medium('min-width: 453px;')};
+  ${medium('min-width: 453px; max-width: 453px;')};
+  text-align: center;
+  ${medium('text-align: left;')};
   h2 {
-    text-align: left;
-    opacity: 1;
+    text-align: center;
     margin: 15px 0;
+    margin-top: 50px;
+    ${medium('text-align: left; margin-top: 15px;')};
+    opacity: 1;
+
   }
   h4 {
-    text-align: left;
+    text-align: center;
+    ${medium('text-align: left;')};
     opacity: 0.8;
   }
 `;

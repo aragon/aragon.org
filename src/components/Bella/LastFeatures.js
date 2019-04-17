@@ -8,6 +8,7 @@ import Fade from 'react-reveal/Fade';
 
 import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
+const large = css => breakpoint('medium', css);
 
 const feature3 = (
   <span>
@@ -76,8 +77,9 @@ const Container = styled.div`
   }
   .export {
     img {
-      width: calc(90% + 80px);
-      margin: -40px -20px 20px -20px;
+      margin: 10px 0;
+      width: 100%;
+      ${large('width: calc(90% + 80px); margin: -40px -20px 20px -20px;')};
     }
   }
   .label {
