@@ -12,8 +12,7 @@ const medium = css => breakpoint('medium', css);
 const feature3 = (
   <span>
     <p>
-      Keep your accountants happy with regular exports using a standard data
-      format.
+      Export your finances using a standard data format.
     </p>
   </span>
 );
@@ -77,21 +76,25 @@ const Container = styled.div`
   }
   .export {
     img {
-      width: calc(100% + 80px);
-      margin: 0px -40px 40px -40px;
+      width: calc(90% + 80px);
+      margin: -40px -20px 20px -20px;
     }
   }
   .label {
     display: flex;
+    background: #ffffff80;
+    border-radius: 100px;
+    height: 18px;
+    align-items: center;
     p {
-      background: #ffffff80;
-      mix-blend-mode: normal;
-      border-radius: 100px;
       padding: 0 15px;
       text-transform: uppercase;
       font-family: 'FontBold';
       font-size: 10px;
       color: #8fb5c8;
+      height: auto;
+      line-height: 1;
+      margin-top: 2px;
     }
   }
 `;

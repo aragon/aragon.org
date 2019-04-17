@@ -8,6 +8,7 @@ import Fade from 'react-reveal/Fade';
 
 import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
+const large = css => breakpoint('medium', css);
 
 const feature1 = (
   <span>
@@ -68,21 +69,26 @@ const Container = styled.div`
   .first-feature .image-container {
     ${medium('margin-bottom: 2px !important;')};
     img {
-      height: 502px;
-      width: 502px;
+      height: auto;
+      width: auto;
+      ${large('height: 502px; width: 502px;')};
     }
   }
   .label {
     display: flex;
+    background: #ffffff80;
+    border-radius: 100px;
+    height: 18px;
+    align-items: center;
     p {
-      background: #ffffff80;
-      mix-blend-mode: normal;
-      border-radius: 100px;
       padding: 0 15px;
       text-transform: uppercase;
       font-family: 'FontBold';
       font-size: 10px;
       color: #8fb5c8;
+      height: auto;
+      line-height: 1;
+      margin-top: 2px;
     }
   }
 `;
