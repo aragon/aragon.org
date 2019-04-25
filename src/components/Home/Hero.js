@@ -138,6 +138,7 @@ const HeroSection = styled(Section)`
   background-color: #1c1d23;
   min-height: 650px;
   padding-top: 64px;
+  padding-top: 130px;
   display: flex;
   align-items: center;
   justify-content: center;

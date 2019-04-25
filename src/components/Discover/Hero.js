@@ -114,7 +114,7 @@ const VideoDesktop = styled.video`
 const HeroSection = styled(Section)`
   background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);
   min-height: 650px;
-  padding-top: 64px;
+  padding-top: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
