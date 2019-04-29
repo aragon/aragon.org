@@ -49,7 +49,8 @@ const SmallCard = styled.div`
   background-color: #f9fafc;
   ${props =>
     props.background &&
-    'background-image: url(' + props.background + ');'} ${props =>
+    'background-image: url(' + props.background + ');'}
+  ${props =>
     props.gradient &&
     'background-image:' + props.gradient + ';'}
   background-size: 108% 108%;
