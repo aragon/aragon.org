@@ -10,10 +10,6 @@
  font-family: 'FontBold';
  src: url(https://aragon.org/static/cc608387-HKGrotesk-Bold.ttf) format('opentype');
 }
-@font-face {
- font-family: 'FontSemiBold';
- src: url(https://aragon.org/static/41619258-HKGrotesk-SemiBold.ttf) format('opentype');
-}
 
 body {
   font-family: 'FontRegular', sans-serif !important;
