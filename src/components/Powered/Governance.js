@@ -21,7 +21,7 @@ const Governance = () => (
         <div className="content">
           <h3>Governance</h3>
           <h2>
-            Your stakeholders can participate in the future of the organization
+            Stakeholders can help decide the future of the organization
           </h2>
         </div>
       </Fade>

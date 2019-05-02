@@ -23,7 +23,7 @@ const Security = () => (
           </h2>
           <p>
             The smart contracts have been audited by the Whitehat group,
-            Consensys Dilligence and Authio
+            ConsenSys Diligence, and Authio
           </p>
         </div>
       </Fade>

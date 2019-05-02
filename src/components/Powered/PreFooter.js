@@ -12,7 +12,7 @@ const PreFooter = () => (
     <Fade bottom distance="50px">
     <Container>
       <h2>Accountability, transparency and security is what it means to be Powered by Aragon</h2>
-      <a href="https://wiki.aragon.org" target="_blank">Aragon Wiki</a>
+      <a href="https://wiki.aragon.org/design/powered_by_aragon/" target="_blank">Learn more</a>
     </Container>
     </Fade>
   </PreFooterSection>

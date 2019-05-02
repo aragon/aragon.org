@@ -18,7 +18,7 @@ const Transparency = () => (
       <Fade bottom distance="50px">
         <div className="content">
           <h3>Transparency</h3>
-          <h2>Your stakeholders always know what's going on</h2>
+          <h2>Actions are public and transparent by default</h2>
         </div>
       </Fade>
     </TextBox>
