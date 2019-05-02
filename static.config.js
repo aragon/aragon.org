@@ -66,6 +66,11 @@ export default {
       getData: () => ({ title: '' }),
     },
     {
+      path: '/powered-by',
+      component: 'src/pages/PoweredByAragon',
+      getData: () => ({ title: '' }),
+    },
+    {
       is404: true,
       component: 'src/pages/NotFound',
       getData: () => ({ title: 'Page Not Found' }),
