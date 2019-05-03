@@ -1,41 +1,41 @@
-import React from 'react'
-import Section from '../General/Section'
-import styled from 'styled-components'
-import { Link } from 'react-static'
-import Quote from '../General/Quote'
+import React from 'react';
+import Section from '../General/Section';
+import styled from 'styled-components';
+import {Link} from 'react-static';
+import Quote from '../General/Quote';
 
-import { breakpoint } from '@aragon/ui'
+import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
 
 const Quotes = () => (
   <QuoteSection>
-    <h2>Our eaglets</h2>
-    <Box>
-      <Quote image={'Project/assets/oliver.png'} title="Olivier Sarrouy" content="Entering the Aragon Nest program is not (only) about getting funded. It is about entering a community whose every member is committed to help every others to pursue a common goal: working toward the decentralization of human worlds."/>
-      <Quote image={'Project/assets/yalda.png'} title="Yalda Mousavinia" content="Every time I scroll through @AragonProject's github repo for Nest it makes me so inspired about the future. What is happening here is next level and it will become even more next level as more organizations cross-pollinate here. Stoked to be in the Nest."/>
-    </Box>
+    <Quote
+      image={'Project/assets/yalda_sola.png'}
+      background={'Project/assets/quote-bg1.jpg'}
+      title="Yalda Mousavinia"
+      imageRight={false}
+      content="Every time I scroll through @AragonProject's github repo for Nest it makes me so inspired about the future. What is happening here is next level and it will become even more next level as more organizations cross-pollinate here. Stoked to be in the Nest."
+    />
+    <Quote
+      image={'Project/assets/oliver_solo.png'}
+      background={'Project/assets/quote-bg2.jpg'}
+      title="Olivier Sarrouy"
+      imageRight={true}
+      content="Entering the Aragon Nest program is not (only) about getting funded. It is about entering a community whose every member is committed to help every others to pursue a common goal: working toward the decentralization of human worlds."
+    />
   </QuoteSection>
 );
 
-const QuoteSection = styled(Section)`
-  background-image: linear-gradient(289deg, #95bbce, #c5d0e6 46%, #e7e4f6);
-  p.link, a.hero-link {
+const QuoteSection = styled.section`
+  background: white;
+  p.link,
+  a.hero-link {
     text-align: center;
     margin-bottom: 30px;
     color: #1eb8d1;
   }
-`
-const Box = styled.div`
-  display: grid;
-  ${medium('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: auto;')};
-  ${large('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 250px')};
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  background: transparent;
-  margin: 60px auto 30px auto;
-`
+`;
 
-export default Quotes
+
+export default Quotes;

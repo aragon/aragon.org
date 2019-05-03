@@ -10,6 +10,10 @@
  font-family: 'FontBold';
  src: url('./fonts/HKGrotesk-Bold.ttf') format('opentype');
 }
+@font-face {
+ font-family: 'FontSemiBold';
+ src: url('./fonts/HKGrotesk-SemiBold.ttf') format('opentype');
+}
 
 body {
   font-family: 'FontRegular', sans-serif !important;
