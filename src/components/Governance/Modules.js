@@ -15,14 +15,13 @@ const About = () => (
         <div>
           <h1>Create your proposal</h1>
           <p>
-            Aragon organizations are fully modular. You can install apps that
-            enhance your organization. Maybe you want a different voting
-            process, or a different way to manage funds.
+            Do you have an idea for how to improve Aragon? Create an Aragon
+            Governance Proposal and share your idea with the community.
           </p>
           <Button.Anchor
             className="hero-link"
             mode="strong"
-            href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/"
+            href="https://forum.aragon.org/t/how-to-create-an-aragon-governance-proposal/374"
             target="_blank">
             Create Proposal
           </Button.Anchor>
@@ -31,16 +30,15 @@ const About = () => (
       <Box>
         <img src={buy} />
         <div>
-          <h1>Buy now your ANT</h1>
+          <h1>Learn about ANT</h1>
           <p>
-            Aragon organizations are fully modular. You can install apps that
-            enhance your organization. Maybe you want a different voting
-            process, or a different way to manage funds.
+            The Aragon Network Token (ANT) is used to govern the Aragon Network.
+            The quickest way to acquire ANT is to buy some on an exchange.
           </p>
           <Button.Anchor
             className="hero-link"
             mode="strong"
-            href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/"
+            href="https://wiki.aragon.org/documentation/aragon_network_token/#trade-ant"
             target="_blank">
             Buy ANT
           </Button.Anchor>
