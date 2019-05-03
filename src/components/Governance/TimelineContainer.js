@@ -20,7 +20,7 @@ const TimelineContainer = styled.div`
     content: '';
     position: absolute;
     top: 12px;
-    left: calc(33% - 1px);
+    left: 23px;
     ${medium('left: 41px;')};
     bottom: 0px;
     width: 1px;
@@ -35,6 +35,7 @@ const TimelineContainer = styled.div`
 
 const Timeline = ({ className, ...props }) => {
   const containerProps = { className }
+  console.log(document.getElementsByClassName("stage5-box")[0].clientHeight);
 
   return (
     <TimelineContainer {...containerProps}>

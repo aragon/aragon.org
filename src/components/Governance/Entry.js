@@ -16,8 +16,9 @@ const EntryBox = styled.div`
     width: 12px;
     height: 12px;
     border-radius: 12px;
-    top: 6px;
-    left: -14px;
+    top: 5.5px;
+    left: 18px;
+    ${medium('top: 6px; left: -14px;')};
     background-image: linear-gradient(71deg,#6aacf4,#18ebd6);
   }
   .description:before {
@@ -28,14 +29,16 @@ const EntryBox = styled.div`
     opacity: 0.22;
     background-image: linear-gradient(to right,#6aacf4,#18ebd6);
     position: absolute;
-    left: -21px;
+    left: 10px;
     top: -1px;
+    ${medium('left: -21px;')};
   }
   .description {
     margin: 0 0 3em;
     float: right;
     width: 100%;
-    padding-left: 30px;
+    padding-left: 45px;
+    ${medium('padding-left: 30px;')};
     position: relative;
   }
   .description p {
@@ -49,7 +52,7 @@ const EntryBox = styled.div`
 
 const Entry = ({ ...props }) => (
   <EntryBox>
-    <div className="description">
+    <div className={props.className ? props.className + " description" : "description"}>
       <p>{props.title}</p>
       {props.children}
     </div>

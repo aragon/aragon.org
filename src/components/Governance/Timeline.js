@@ -88,8 +88,8 @@ const Timeline = () => (
           </div>
         </Box>
       </Entry>
-      <Entry title="Stage v">
-        <Box>
+      <Entry title="Stage v" className="stage5-box">
+        <Box id="stage5-box">
           <img src={stage5} />
           <div>
             <h6>Aragon Network Vote</h6>
@@ -106,6 +106,7 @@ const Timeline = () => (
           </div>
         </Box>
       </Entry>
+
     </TimelineContainer>
   </TimelineBox>
 );
@@ -127,9 +128,14 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
   margin-top: 20px;
+  max-width: 95%;
   div {
-    margin-left: 30px;
+    margin-left: 0px;
+    margin-top: 20px;
+    ${medium('margin-left: 30px; margin-top: 0;')};
   }
   h5 {
     font-size: 16px;

@@ -66,13 +66,18 @@ const Box = styled.div`
   transition: all 0.25s ease-in-out;
   div {
     padding: 0 30px;
-    ${medium('padding: 0 15px;')};
-    ${large('padding: 0 60px;')};
+    ${medium('padding: 25px 15px;')};
+    ${large('padding: 25px 60px;')};
   }
-
+  a {
+    margin-bottom: 30px;
+    ${medium('margin-bottom: auto;')};
+  }
   @media (min-width: 768px) {
     height: 700px;
   }
+  ${medium('height: 600px;;')};
+  ${large('height: 700px;')};
   img {
     height: auto;
     width: 100%;
@@ -91,7 +96,7 @@ const Box = styled.div`
     ${medium('font-size: 36px; width: 100%;')};
     ${large('width: inherit; font-size: 44px; line-height: 2;')};
     font-weight: 300;
-    line-height: 1.35;
+    line-height: 1.2!important;
     text-align: left;
     color: #2d4051;
     margin: 15px 0 0 0;
