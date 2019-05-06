@@ -118,10 +118,10 @@ class Navbar extends React.Component {
   }
   render() {
     const menuItems = [
-      ['https://aragon.org/discover', 'Discover'],
+      ['/discover', 'Discover'],
       ['https://hack.aragon.org/', 'Developers'],
-      ['https://aragon.org/project', 'Project'],
-      ['https://aragon.org/network', 'Network'],
+      ['/project', 'Project'],
+      ['/network', 'Network'],
     ];
     return (
       <Spring
@@ -221,6 +221,7 @@ const MobileLogo = styled.img`
   top: 19%;
   height: 62%;
   padding: 0!important;
+  max-width: 100%!important;
 `
 
 export default Navbar

@@ -21,10 +21,10 @@ const Footer = ({...props}) => (
         </a>
       </Item>
       <Item>
-          <a href="https://aragon.org" target="_blank">Home</a>
-          <a href="https://aragon.org/discover" target="_blank">Discover</a>
-          <a href="https://aragon.org/project" target="_blank">Project</a>
-          <a href="https://aragon.org/network" target="_blank">Network</a>
+          <Link to="/">Home</Link>
+          <Link to="/discover">Discover</Link>
+          <Link to="/project">Project</Link>
+          <Link to="/network">Network</Link>
       </Item>
       <Item>
         <a href="https://hack.aragon.org/" target="_blank">
@@ -33,11 +33,11 @@ const Footer = ({...props}) => (
         <a href="https://wiki.aragon.org/dev/bug_bounty/" target="_blank">
           Bug bounty
         </a>
-        <a href="https://aragon.org/project/grants" target="_blank">Grants</a>
-          <a href="https://aragon.org/prroject/governance" target="_blank">Governance</a>
+        <Link to="/project/grants">Grants</Link>
+        <Link to="/project/governance">Governance</Link>
       </Item>
       <Item>
-        <a href="https://aragon.org/project/contribute" target="_blank">Contribute</a>
+        <Link to="/project/contribute">Contribute</Link>
         <a href="https://blog.aragon.org/">Blog</a>
         <a href="https://wiki.aragon.org/" target="_blank">
           Wiki
@@ -105,6 +105,7 @@ const Footer = ({...props}) => (
 const FooterSection = styled.section`
   background-color: #28548B;
   padding: 60px 15px;
+
 `;
 
 const Container = styled.div`
@@ -183,17 +184,23 @@ const Box = styled.div`
     padding: 0 15px;
     text-decoration: none;
   }
+  img {
+    padding: 0!important;
+  }
 `;
 
 const Forum = styled.img`
   height: 19px;
   width: 19px;
+  padding: 0!important;
 `;
 const Youtube = styled.img`
   margin-bottom: 1px;
+  padding: 0!important;
 `;
 const LogoImg = styled.img`
   height: 50px;
+  padding: 0!important;
 `;
 
 export default Footer;
