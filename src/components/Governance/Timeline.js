@@ -88,29 +88,37 @@ const Timeline = () => (
           </div>
         </Box>
       </Entry>
-      <Entry title="Stage v" className="stage5-box">
-        <Box id="stage5-box">
-          <img src={stage5} />
-          <div>
-            <h6>Aragon Network Vote</h6>
-            <h5>
-              All AGPs that have moved to Stage V since the last Aragon Network
-              vote cycle and have been approved by the Association board are
-              included on the ballot in the current vote cycle.
-            </h5>
-            <a target="_blank" href="https://blog.aragon.org/tag/governance-proposals/">
-              <span>
-                Vote announcements <img src={require(`../General/assets/arrow.svg`)} />
-              </span>
-            </a>
-          </div>
-        </Box>
-      </Entry>
-
     </TimelineContainer>
+    <LastContainer>
+    <Entry title="Stage v" className="stage5-box">
+      <Box id="stage5-box">
+        <img src={stage5} />
+        <div>
+          <h6>Aragon Network Vote</h6>
+          <h5>
+            All AGPs that have moved to Stage V since the last Aragon Network
+            vote cycle and have been approved by the Association board are
+            included on the ballot in the current vote cycle.
+          </h5>
+          <a target="_blank" href="https://blog.aragon.org/tag/governance-proposals/">
+            <span>
+              Vote announcements <img src={require(`../General/assets/arrow.svg`)} />
+            </span>
+          </a>
+        </div>
+      </Box>
+    </Entry>
+    </LastContainer>
   </TimelineBox>
 );
 
+const LastContainer = styled.div`
+  width: 100%;
+  max-width: 870px;
+  margin: auto;
+  padding: 0;
+  ${medium('padding: 5px 50px;')};
+`
 const TimelineBox = styled.div`
   width: 100%;
   margin: 0;
