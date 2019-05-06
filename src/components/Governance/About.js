@@ -27,6 +27,7 @@ const About = () => (
   </StyledSection>
   <StyledSection>
     <Container>
+      <BreakPoint to="medium"><img src={what} /></BreakPoint>
       <div>
         <h2>What is an AGP?</h2>
         <h4>
@@ -41,7 +42,7 @@ const About = () => (
           </span>
         </a>
       </div>
-      <img src={what} />
+      <BreakPoint from="medium"><img src={what} /></BreakPoint>
     </Container>
   </StyledSection>
   </div>
