@@ -40,7 +40,7 @@ const About = () => (
             mode="strong"
             href="https://wiki.aragon.org/documentation/aragon_network_token/#trade-ant"
             target="_blank">
-            Buy ANT
+            Learn More
           </Button.Anchor>
         </div>
       </Box>

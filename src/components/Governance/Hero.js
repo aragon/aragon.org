@@ -11,8 +11,8 @@ const Hero = () => (
     <Container>
       <h2>Governance</h2>
       <h4>
-        Aragon exists to empower people, starting with our own community. 
-        <br/>The project is community-governed, and we are committed to decentralizing power.
+        Aragon exists to empower people, starting with our own community.
+        <br/>The project is community-governed, and we are committed to decentralizing control.
       </h4>
       <Button.Anchor
         className="hero-link"
