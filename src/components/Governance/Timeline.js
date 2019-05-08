@@ -16,7 +16,7 @@ const Timeline = () => (
     <TimelineContainer>
       <Entry title="Stage i">
         <Box>
-          <img src={stage1} />
+          <StageImg src={stage1} />
           <div>
             <h6>Select AGP Track</h6>
             <h5>
@@ -34,7 +34,7 @@ const Timeline = () => (
       </Entry>
       <Entry title="Stage ii">
         <Box>
-          <img src={stage2} />
+          <StageImg src={stage2} />
           <div>
             <h6>Pre-proposal</h6>
             <h5>
@@ -53,7 +53,7 @@ const Timeline = () => (
       </Entry>
       <Entry title="Stage iii">
         <Box>
-          <img src={stage3} />
+          <StageImg src={stage3} />
           <div>
             <h6>Draft Proposal</h6>
             <h5>
@@ -72,7 +72,7 @@ const Timeline = () => (
       </Entry>
       <Entry title="Stage iv">
         <Box>
-          <img src={stage4} />
+          <StageImg src={stage4} />
           <div>
             <h6>Final Proposal</h6>
             <h5>
@@ -92,7 +92,7 @@ const Timeline = () => (
     <LastContainer>
     <Entry title="Stage v" className="stage5-box">
       <Box id="stage5-box">
-        <img src={stage5} />
+        <StageImg src={stage5} />
         <div>
           <h6>Aragon Network Vote</h6>
           <h5>
@@ -127,6 +127,9 @@ const TimelineBox = styled.div`
   background: #f9fafc;
   text-align: center;
 `;
+const StageImg = styled.img `
+  height: 158px;
+`
 
 const Box = styled.div`
   background: #ffffff;
@@ -145,6 +148,7 @@ const Box = styled.div`
     margin-top: 20px;
     ${medium('margin-left: 30px; margin-top: 0;')};
   }
+
   h5 {
     font-size: 16px;
     line-height: 28px;
