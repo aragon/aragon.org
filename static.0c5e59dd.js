@@ -2721,7 +2721,7 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxMSIg
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/db98c789-about.svg";
+module.exports = __webpack_require__.p + "static/9be36956-about.svg";
 
 /***/ }),
 /* 41 */
@@ -2757,7 +2757,7 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE1
 /* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/4fb2ec29-what.svg";
+module.exports = __webpack_require__.p + "static/c3994ba5-what.svg";
 
 /***/ }),
 /* 47 */
@@ -10039,4 +10039,4 @@ module.exports = require("react-reveal/Pulse");
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.f5f16dcd.js.map
+//# sourceMappingURL=static.0c5e59dd.js.map
