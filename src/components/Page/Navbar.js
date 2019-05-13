@@ -203,8 +203,12 @@ const Center = styled.div`
   li.logo {
     width: 100px;
   }
+<<<<<<< HEAD
   ul.right,
   ul.left {
+=======
+  ul.right, ul.left {
+>>>>>>> Grants animation
     min-width: 350px;
   }
   button {
