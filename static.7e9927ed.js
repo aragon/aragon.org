@@ -666,29 +666,29 @@ var map = {
 	"./Project/assets/Wiki.js": 82,
 	"./Project/assets/association.svg": 47,
 	"./Project/assets/community-background.png": 133,
-	"./Project/assets/contribute-background1.png": 177,
+	"./Project/assets/contribute-background1.png": 178,
 	"./Project/assets/contribute1.svg": 113,
 	"./Project/assets/contribute2.svg": 114,
 	"./Project/assets/contribute3.svg": 115,
 	"./Project/assets/governance-background.png": 134,
 	"./Project/assets/governance1.svg": 116,
 	"./Project/assets/governance2.svg": 117,
-	"./Project/assets/governance3.png": 178,
+	"./Project/assets/governance3.png": 179,
 	"./Project/assets/grants-background.png": 135,
 	"./Project/assets/grants1.svg": 118,
 	"./Project/assets/hero-background.png": 136,
 	"./Project/assets/history-mobile.svg": 48,
 	"./Project/assets/history.svg": 49,
-	"./Project/assets/oliver_solo.png": 179,
+	"./Project/assets/oliver_solo.png": 180,
 	"./Project/assets/project1.svg": 119,
 	"./Project/assets/project2.svg": 120,
-	"./Project/assets/project3.png": 180,
-	"./Project/assets/quote-bg1.jpg": 181,
-	"./Project/assets/quote-bg2.jpg": 182,
+	"./Project/assets/project3.png": 181,
+	"./Project/assets/quote-bg1.jpg": 182,
+	"./Project/assets/quote-bg2.jpg": 183,
 	"./Project/assets/roadmap-background.png": 137,
 	"./Project/assets/speech.svg": 50,
 	"./Project/assets/videothumbnail.png": 138,
-	"./Project/assets/yalda_sola.png": 183,
+	"./Project/assets/yalda_sola.png": 184,
 	"./index": 7,
 	"./index.js": 7
 };
@@ -1200,7 +1200,7 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 64px;\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    height: 100%;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n'], ['\n  width: 100%;\n  height: 64px;\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    height: 100%;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  ul {\n    display: flex;\n    height: 100%;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 185px;\n  }\n  li.logo {\n    width: 100px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n'], ['\n  ul {\n    display: flex;\n    height: 100%;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 185px;\n  }\n  li.logo {\n    width: 100px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  ul {\n    display: flex;\n    height: 100%;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: auto;\n  }\n  li.logo {\n    width: 100px;\n  }\n  ul.right,\n  ul.left {\n    min-width: 350px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n'], ['\n  ul {\n    display: flex;\n    height: 100%;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: auto;\n  }\n  li.logo {\n    width: 100px;\n  }\n  ul.right,\n  ul.left {\n    min-width: 350px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 148px;\n  height: 100%;\n  img {\n    height: 62%;\n  }\n'], ['\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 148px;\n  height: 100%;\n  img {\n    height: 62%;\n  }\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  margin: 0 !important;\n  position: relative;\n  top: 19%;\n  height: 62%;\n'], ['\n  margin: 0 !important;\n  position: relative;\n  top: 19%;\n  height: 62%;\n']);
 
@@ -1305,8 +1305,7 @@ var Navbar = function (_React$Component) {
           to: { x: this.state.scroll, h: this.state.height, i: this.state.image },
           menuItems: menuItems,
           path: path,
-          native: true
-        },
+          native: true },
         this.renderIn
       );
     }
@@ -1352,12 +1351,14 @@ var _initialiseProps = function _initialiseProps() {
     return _react2.default.createElement(
       AragonNavbar,
       {
-        style: { background: x.interpolate(function (v) {
+        style: {
+          background: x.interpolate(function (v) {
             return 'rgba(28, 29, 35, ' + v + ')';
-          }), height: h.interpolate(function (v) {
+          }),
+          height: h.interpolate(function (v) {
             return v + 'px';
-          }) }
-      },
+          })
+        } },
       _react2.default.createElement(
         Center,
         null,
@@ -1366,7 +1367,7 @@ var _initialiseProps = function _initialiseProps() {
           { from: 'medium' },
           _react2.default.createElement(
             'ul',
-            null,
+            { className: 'left' },
             _react2.default.createElement(
               'li',
               null,
@@ -1386,7 +1387,11 @@ var _initialiseProps = function _initialiseProps() {
                 active: menuItems[1][2],
                 renderLink: renderMenuItemLink
               })
-            ),
+            )
+          ),
+          _react2.default.createElement(
+            'ul',
+            null,
             _react2.default.createElement(
               'li',
               { className: 'logo' },
@@ -1395,7 +1400,11 @@ var _initialiseProps = function _initialiseProps() {
                 { to: '/' },
                 _react2.default.createElement('img', { src: _logo2.default })
               )
-            ),
+            )
+          ),
+          _react2.default.createElement(
+            'ul',
+            { className: 'right' },
             _react2.default.createElement(
               'li',
               null,
@@ -6638,8 +6647,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _templateObject = _taggedTemplateLiteral(['\n  display: grid;\n  ', ';\n  grid-template-columns: 100%;\n  grid-template-rows: auto;\n  grid-column-gap: 30px;\n  grid-row-gap: 30px;\n'], ['\n  display: grid;\n  ', ';\n  grid-template-columns: 100%;\n  grid-template-rows: auto;\n  grid-column-gap: 30px;\n  grid-row-gap: 30px;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  ', ';\n  background-image: linear-gradient(119deg, #faf9f4, #2c86d0);\n  -webkit-background-clip: text;\n  background-clip: text;\n  \n  -webkit-text-fill-color: white;\n  -webkit-text-fill-color: transparent;\n  color: white;\n  // -webkit-text-fill-color: white;\n  margin: 30px -10% 0 -10%;\n  div {\n    padding: 15px;\n  }\n\n  h5 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 68px;\n    font-weight: 300;\n    line-height: 1.82;\n    text-align: center;\n  }\n  h3 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 24px;\n    font-weight: 300;\n    line-height: 1.33;\n    text-align: center;\n  }\n  h5, h3 {\n    background-image: -webkit-linear-gradient(119deg, #faf9f4, #2c86d0);\n    background-position-x: initial;\n    background-position-y: initial;\n    background-size: initial;\n    background-repeat-x: initial;\n    background-repeat-y: initial;\n    background-attachment: initial;\n    background-origin: initial;\n    background-clip: initial;\n    background-color: initial;\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent\n  }\n  h3.one, h5.one {\n    background-image: -webkit-linear-gradient(119deg, #FAF9F4, #F9F5DE);\n  }\n  h3.two, h5.two {\n    background-image: -webkit-linear-gradient(119deg, #E1F6ED,  #92BDCB);\n  }\n  h3.three, h5.three {\n    background-image: -webkit-linear-gradient(119deg, #E8E5F7, #ADC5DB);\n  }\n  h3.four, h5.four {\n    background-image: -webkit-linear-gradient(119deg, #B0CBE4, #2C86D0);\n  }\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  ', ';\n  background-image: linear-gradient(119deg, #faf9f4, #2c86d0);\n  -webkit-background-clip: text;\n  background-clip: text;\n  \n  -webkit-text-fill-color: white;\n  -webkit-text-fill-color: transparent;\n  color: white;\n  // -webkit-text-fill-color: white;\n  margin: 30px -10% 0 -10%;\n  div {\n    padding: 15px;\n  }\n\n  h5 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 68px;\n    font-weight: 300;\n    line-height: 1.82;\n    text-align: center;\n  }\n  h3 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 24px;\n    font-weight: 300;\n    line-height: 1.33;\n    text-align: center;\n  }\n  h5, h3 {\n    background-image: -webkit-linear-gradient(119deg, #faf9f4, #2c86d0);\n    background-position-x: initial;\n    background-position-y: initial;\n    background-size: initial;\n    background-repeat-x: initial;\n    background-repeat-y: initial;\n    background-attachment: initial;\n    background-origin: initial;\n    background-clip: initial;\n    background-color: initial;\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent\n  }\n  h3.one, h5.one {\n    background-image: -webkit-linear-gradient(119deg, #FAF9F4, #F9F5DE);\n  }\n  h3.two, h5.two {\n    background-image: -webkit-linear-gradient(119deg, #E1F6ED,  #92BDCB);\n  }\n  h3.three, h5.three {\n    background-image: -webkit-linear-gradient(119deg, #E8E5F7, #ADC5DB);\n  }\n  h3.four, h5.four {\n    background-image: -webkit-linear-gradient(119deg, #B0CBE4, #2C86D0);\n  }\n']);
+    _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  ', ';\n  color: white;\n  margin: 30px -10% 0 -10%;\n  div {\n    padding: 15px;\n  }\n\n  h5 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 68px;\n    font-weight: 300;\n    line-height: 1.82;\n    text-align: center;\n    min-height: 123px;\n  }\n  h3 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 24px;\n    font-weight: 300;\n    line-height: 1.33;\n    text-align: center;\n  }\n  h5,\n  h3 {\n    background-image: -webkit-linear-gradient(119deg, #faf9f4, #2c86d0);\n    background-position-x: initial;\n    background-position-y: initial;\n    background-size: initial;\n    background-repeat-x: initial;\n    background-repeat-y: initial;\n    background-attachment: initial;\n    background-origin: initial;\n    background-clip: initial;\n    background-color: initial;\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n  }\n  h3.one,\n  h5.one {\n    background-image: -webkit-linear-gradient(119deg, #faf9f4, #f9f5de);\n  }\n  h3.two,\n  h5.two {\n    background-image: -webkit-linear-gradient(119deg, #e1f6ed, #92bdcb);\n  }\n  h3.three,\n  h5.three {\n    background-image: -webkit-linear-gradient(119deg, #e8e5f7, #adc5db);\n  }\n  h3.four,\n  h5.four {\n    background-image: -webkit-linear-gradient(119deg, #b0cbe4, #2c86d0);\n  }\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  ', ';\n  color: white;\n  margin: 30px -10% 0 -10%;\n  div {\n    padding: 15px;\n  }\n\n  h5 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 68px;\n    font-weight: 300;\n    line-height: 1.82;\n    text-align: center;\n    min-height: 123px;\n  }\n  h3 {\n    font-family: \'FontLight\', sans-serif;\n    font-size: 24px;\n    font-weight: 300;\n    line-height: 1.33;\n    text-align: center;\n  }\n  h5,\n  h3 {\n    background-image: -webkit-linear-gradient(119deg, #faf9f4, #2c86d0);\n    background-position-x: initial;\n    background-position-y: initial;\n    background-size: initial;\n    background-repeat-x: initial;\n    background-repeat-y: initial;\n    background-attachment: initial;\n    background-origin: initial;\n    background-clip: initial;\n    background-color: initial;\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n  }\n  h3.one,\n  h5.one {\n    background-image: -webkit-linear-gradient(119deg, #faf9f4, #f9f5de);\n  }\n  h3.two,\n  h5.two {\n    background-image: -webkit-linear-gradient(119deg, #e1f6ed, #92bdcb);\n  }\n  h3.three,\n  h5.three {\n    background-image: -webkit-linear-gradient(119deg, #e8e5f7, #adc5db);\n  }\n  h3.four,\n  h5.four {\n    background-image: -webkit-linear-gradient(119deg, #b0cbe4, #2c86d0);\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -6663,13 +6674,24 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _ui = __webpack_require__(2);
 
+var _reactCountup = __webpack_require__(177);
+
+var _reactCountup2 = _interopRequireDefault(_reactCountup);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 var medium = function medium(css) {
   return (0, _ui.breakpoint)('medium', css);
 };
+
 
 var mudule1Content = _react2.default.createElement(
   'span',
@@ -6684,7 +6706,10 @@ var mudule1Content = _react2.default.createElement(
     null,
     _react2.default.createElement(
       'a',
-      { className: 'action-button', href: 'https://github.com/aragon/nest', target: '_blank' },
+      {
+        className: 'action-button',
+        href: 'https://github.com/aragon/nest',
+        target: '_blank' },
       _react2.default.createElement(
         'span',
         null,
@@ -6707,7 +6732,10 @@ var mudule2Content = _react2.default.createElement(
     null,
     _react2.default.createElement(
       'a',
-      { className: 'action-button', href: 'https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant', target: '_blank' },
+      {
+        className: 'action-button',
+        href: 'https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant',
+        target: '_blank' },
       _react2.default.createElement(
         'span',
         null,
@@ -6718,82 +6746,155 @@ var mudule2Content = _react2.default.createElement(
   )
 );
 
-var GrantsContent = function GrantsContent() {
-  return _react2.default.createElement(
-    _Section2.default,
-    null,
-    _react2.default.createElement(
-      Container,
-      null,
-      _react2.default.createElement(
-        _LongCard2.default,
-        { textAlign: 'center', color: '#b4b5cc', gradient: 'radial-gradient(circle at 99% 100%, #1c1d23, #2d2e39)', colorWhite: true, title: 'A thriving ecosystem' },
+var GrantsContent = function (_React$Component) {
+  _inherits(GrantsContent, _React$Component);
+
+  function GrantsContent(props) {
+    _classCallCheck(this, GrantsContent);
+
+    var _this = _possibleConstructorReturn(this, (GrantsContent.__proto__ || Object.getPrototypeOf(GrantsContent)).call(this, props));
+
+    _this.listenToScroll = function () {
+      var scrolled = document.body.scrollTop || document.documentElement.scrollTop;
+
+      var element = document.getElementById('numbersAnimation');
+      var elem = element.getBoundingClientRect().top + document.documentElement.scrollTop;
+
+      if (scrolled >= elem - window.innerHeight - 24) {
+        _this.setState({
+          one: _react2.default.createElement(_reactCountup2.default, { end: 1.5, duration: 2, decimals: 1 }),
+          two: _react2.default.createElement(_reactCountup2.default, { end: 15, duration: 2 }),
+          three: _react2.default.createElement(_reactCountup2.default, { end: 60, duration: 2 }),
+          four: _react2.default.createElement(_reactCountup2.default, { end: 120, duration: 2 })
+        });
+      }
+    };
+
+    _this.state = { one: '', two: '', three: '', four: '' };
+    return _this;
+  }
+
+  _createClass(GrantsContent, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      window.addEventListener('scroll', this.listenToScroll);
+
+      var element = document.getElementById('numbersAnimation');
+      var elem = element.getBoundingClientRect().top + document.documentElement.scrollTop;
+      if (elem - window.innerHeight - 24 <= 0) {
+        this.setState({
+          one: _react2.default.createElement(_reactCountup2.default, { end: 1.5, duration: 2, decimals: 1 }),
+          two: _react2.default.createElement(_reactCountup2.default, { end: 15, duration: 2 }),
+          three: _react2.default.createElement(_reactCountup2.default, { end: 60, duration: 2 }),
+          four: _react2.default.createElement(_reactCountup2.default, { end: 120, duration: 2 })
+        });
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('scroll', this.listenToScroll);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var four = this.state.four;
+
+      return _react2.default.createElement(
+        _Section2.default,
+        null,
         _react2.default.createElement(
-          LongCardContainer,
+          Container,
           null,
           _react2.default.createElement(
-            'div',
-            null,
+            _LongCard2.default,
+            {
+              textAlign: 'center',
+              color: '#b4b5cc',
+              gradient: 'radial-gradient(circle at 99% 100%, #1c1d23, #2d2e39)',
+              colorWhite: true,
+              title: 'A thriving ecosystem' },
             _react2.default.createElement(
-              'h5',
-              { className: 'one' },
-              '$1.5'
-            ),
-            _react2.default.createElement(
-              'h3',
-              { className: 'one' },
-              'Millions given away in grants'
+              LongCardContainer,
+              null,
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'h5',
+                  { className: 'one' },
+                  '$',
+                  this.state.one
+                ),
+                _react2.default.createElement(
+                  'h3',
+                  { className: 'one', id: 'numbersAnimation' },
+                  'Millions given away in grants'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'h5',
+                  { className: 'two' },
+                  this.state.two
+                ),
+                _react2.default.createElement(
+                  'h3',
+                  { className: 'two' },
+                  'Teams working together'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'h5',
+                  { className: 'three' },
+                  this.state.three
+                ),
+                _react2.default.createElement(
+                  'h3',
+                  { className: 'three' },
+                  'People making their dreams possible'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'h5',
+                  { className: 'four' },
+                  this.state.four
+                ),
+                _react2.default.createElement(
+                  'h3',
+                  { className: 'four' },
+                  'Applications to the program'
+                )
+              )
             )
           ),
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-              'h5',
-              { className: 'two' },
-              '15'
-            ),
-            _react2.default.createElement(
-              'h3',
-              { className: 'two' },
-              'Teams working together'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-              'h5',
-              { className: 'three' },
-              '60'
-            ),
-            _react2.default.createElement(
-              'h3',
-              { className: 'three' },
-              'People making their dreams possible'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-              'h5',
-              { className: 'four' },
-              '120'
-            ),
-            _react2.default.createElement(
-              'h3',
-              { className: 'four' },
-              'Applications to the program'
-            )
-          )
+          _react2.default.createElement(_Card2.default, {
+            linkTo: 'https://github.com/aragon/nest',
+            imageUrl: 'Project/assets/governance2',
+            title: 'Fully transparent',
+            content: mudule1Content
+          }),
+          _react2.default.createElement(_Card2.default, {
+            linkTo: 'https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant',
+            imageUrl: 'Home/home-assets/home4',
+            title: 'Apply now',
+            content: mudule2Content
+          })
         )
-      ),
-      _react2.default.createElement(_Card2.default, { linkTo: 'https://github.com/aragon/nest', imageUrl: 'Project/assets/governance2', title: 'Fully transparent', content: mudule1Content }),
-      _react2.default.createElement(_Card2.default, { linkTo: 'https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant', imageUrl: 'Home/home-assets/home4', title: 'Apply now', content: mudule2Content })
-    )
-  );
-};
+      );
+    }
+  }]);
+
+  return GrantsContent;
+}(_react2.default.Component);
 
 var Container = _styledComponents2.default.div(_templateObject, medium('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px'));
 
@@ -8599,7 +8700,7 @@ var _Fade = __webpack_require__(12);
 
 var _Fade2 = _interopRequireDefault(_Fade);
 
-var _Pulse = __webpack_require__(184);
+var _Pulse = __webpack_require__(185);
 
 var _Pulse2 = _interopRequireDefault(_Pulse);
 
@@ -8834,7 +8935,7 @@ var _reactStaticRoutes = __webpack_require__(152);
 
 var _reactStaticRoutes2 = _interopRequireDefault(_reactStaticRoutes);
 
-var _app = __webpack_require__(185);
+var _app = __webpack_require__(186);
 
 var _app2 = _interopRequireDefault(_app);
 
@@ -9984,54 +10085,60 @@ module.exports = __webpack_require__.p + "static/cd2f575f-poster.png";
 
 /***/ }),
 /* 177 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "static/0af87067-contribute-background1.png";
+module.exports = require("react-countup");
 
 /***/ }),
 /* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/44800377-governance3.png";
+module.exports = __webpack_require__.p + "static/0af87067-contribute-background1.png";
 
 /***/ }),
 /* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/e2e2d287-oliver_solo.png";
+module.exports = __webpack_require__.p + "static/44800377-governance3.png";
 
 /***/ }),
 /* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/d2c1f634-project3.png";
+module.exports = __webpack_require__.p + "static/e2e2d287-oliver_solo.png";
 
 /***/ }),
 /* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/62afd7fb-quote-bg1.jpg";
+module.exports = __webpack_require__.p + "static/d2c1f634-project3.png";
 
 /***/ }),
 /* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/ccd63b3a-quote-bg2.jpg";
+module.exports = __webpack_require__.p + "static/62afd7fb-quote-bg1.jpg";
 
 /***/ }),
 /* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/3c797885-yalda_sola.png";
+module.exports = __webpack_require__.p + "static/ccd63b3a-quote-bg2.jpg";
 
 /***/ }),
 /* 184 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/3c797885-yalda_sola.png";
+
+/***/ }),
+/* 185 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-reveal/Pulse");
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -10039,4 +10146,4 @@ module.exports = require("react-reveal/Pulse");
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.0c5e59dd.js.map
+//# sourceMappingURL=static.7e9927ed.js.map
