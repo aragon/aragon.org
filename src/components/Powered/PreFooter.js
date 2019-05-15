@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import background from './assets/pre-footer.svg';
+import logo from './assets/aragon-pre-footer.svg';
 import Fade from 'react-reveal/Fade';
 
 import {breakpoint, BreakPoint} from '@aragon/ui';
@@ -11,6 +12,7 @@ const PreFooter = () => (
   <PreFooterSection>
     <Fade bottom distance="50px">
     <Container>
+      <img src={logo}/>
       <h2>Accountability, transparency and security is what it means to be Powered by Aragon</h2>
       <a href="https://wiki.aragon.org/design/powered_by_aragon/" target="_blank">Learn more</a>
     </Container>
@@ -41,8 +43,8 @@ const Container = styled.div`
     text-align: center;
     color: #FFFFFF;
     margin: auto;
-    margin-top: 230px!important;
-    ${medium('font-size: 48px; margin-top: 110px!important;')};
+    margin-top: 60px!important;
+    ${medium('font-size: 48px;')};
     max-width: 900px;
   }
   a {
@@ -58,6 +60,6 @@ const Container = styled.div`
     opacity: 0.8;
   }
 
-  ${medium('padding-top: 200px;')};
+  ${medium('padding-top: 100px;')};
 `;
 export default PreFooter;
