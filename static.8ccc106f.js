@@ -5374,9 +5374,9 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 64px;\n  display: flex;\n  justify-content: flex-start;\n  padding: 0;\n  ', ';\n  align-items: center;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    height: 100%;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n'], ['\n  width: 100%;\n  height: 64px;\n  display: flex;\n  justify-content: flex-start;\n  padding: 0;\n  ', ';\n  align-items: center;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    height: 100%;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  ul {\n    display: flex;\n    height: 100%;\n    margin: auto;\n    padding: 0;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 185px;\n  }\n  li.logo {\n    width: 100px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 100%;\n  width: 90%;\n  margin: auto;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n'], ['\n  ul {\n    display: flex;\n    height: 100%;\n    margin: auto;\n    padding: 0;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 185px;\n  }\n  li.logo {\n    width: 100px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 100%;\n  width: 90%;\n  margin: auto;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  ul {\n    display: flex;\n    height: 100%;\n    margin: auto;\n    padding: 0;\n  }\n  ul.right,\n  ul.left {\n    min-width: 350px;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: auto;\n  }\n  li.logo {\n    width: 100px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 100%;\n  width: 90%;\n  margin: auto;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n'], ['\n  ul {\n    display: flex;\n    height: 100%;\n    margin: auto;\n    padding: 0;\n  }\n  ul.right,\n  ul.left {\n    min-width: 350px;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: auto;\n  }\n  li.logo {\n    width: 100px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 100%;\n  width: 90%;\n  margin: auto;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 148px;\n  height: 100%;\n  img {\n    height: 62%;\n  }\n'], ['\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 148px;\n  height: 100%;\n  img {\n    height: 62%;\n  }\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  margin: 0 !important;\n  position: relative;\n  top: 19%;\n  height: 62%;\n  padding: 0!important;\n  max-width: 100%!important;\n'], ['\n  margin: 0 !important;\n  position: relative;\n  top: 19%;\n  height: 62%;\n  padding: 0!important;\n  max-width: 100%!important;\n']);
+    _templateObject4 = _taggedTemplateLiteral(['\n  margin: 0 !important;\n  position: relative;\n  top: 19%;\n  height: 62%;\n  padding: 0 !important;\n  max-width: 100% !important;\n'], ['\n  margin: 0 !important;\n  position: relative;\n  top: 19%;\n  height: 62%;\n  padding: 0 !important;\n  max-width: 100% !important;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -5474,12 +5474,14 @@ var Navbar = function (_React$Component) {
       return _react2.default.createElement(
         AragonNavbar,
         {
-          style: { background: x.interpolate(function (v) {
+          style: {
+            background: x.interpolate(function (v) {
               return 'rgba(28, 29, 35, ' + v + ')';
-            }), height: h.interpolate(function (v) {
+            }),
+            height: h.interpolate(function (v) {
               return v + 'px';
-            }) }
-        },
+            })
+          } },
         _react2.default.createElement(
           Center,
           null,
@@ -5488,7 +5490,7 @@ var Navbar = function (_React$Component) {
             { from: 'medium' },
             _react2.default.createElement(
               'ul',
-              null,
+              { className: 'left' },
               _react2.default.createElement(
                 'li',
                 null,
@@ -5506,7 +5508,11 @@ var Navbar = function (_React$Component) {
                   label: menuItems[1][1],
                   renderLink: renderMenuItemLink
                 })
-              ),
+              )
+            ),
+            _react2.default.createElement(
+              'ul',
+              null,
               _react2.default.createElement(
                 'li',
                 { className: 'logo' },
@@ -5515,7 +5521,11 @@ var Navbar = function (_React$Component) {
                   { to: '/' },
                   _react2.default.createElement('img', { src: _logo2.default })
                 )
-              ),
+              )
+            ),
+            _react2.default.createElement(
+              'ul',
+              { className: 'right' },
               _react2.default.createElement(
                 'li',
                 null,
@@ -5587,8 +5597,7 @@ var Navbar = function (_React$Component) {
           from: { x: 0, h: 64, i: 44 },
           to: { x: this.state.scroll, h: this.state.height, i: this.state.image },
           menuItems: menuItems,
-          native: true
-        },
+          native: true },
         this.renderIn
       );
     }
@@ -11921,4 +11930,4 @@ module.exports = require("react-reveal/Pulse");
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.f176c1a3.js.map
+//# sourceMappingURL=static.8ccc106f.js.map
