@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import pando from './assets/pando.svg';
 import althea from './assets/althea.svg';
 import dapp from './assets/dapp.svg';
-import melonport from './assets/melonport.svg';
+import melonport from './assets/melon.svg';
 import Fade from 'react-reveal/Fade';
 
 import {breakpoint, BreakPoint} from '@aragon/ui';
@@ -25,7 +25,7 @@ const Projects = () => (
       </Fade>
       <Fade bottom distance="50px" delay={400}>
         <a target="_blank" href="https://melonport.com/">
-          <img src={melonport} />
+          <Melon src={melonport} />
         </a>
       </Fade>
       <Fade bottom distance="50px" delay={600}>
@@ -44,6 +44,10 @@ const ProjectsSection = styled.section`
   margin-bottom: -3px;
 `;
 
+const Melon = styled.img`
+  width: 46%;
+`;
+
 const Container = styled.div`
   width: 80%;
   margin: auto;
@@ -54,7 +58,8 @@ const Container = styled.div`
   text-align: center;
   flex-wrap: wrap;
   img {
-    max-width: 80%!important;
+    max-width: 80% !important;
+    padding: 30px 0 !important;
     ${medium('max-width: 90%!important;')};
   }
 `;
