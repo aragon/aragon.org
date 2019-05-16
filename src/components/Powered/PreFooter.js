@@ -13,7 +13,7 @@ const PreFooter = () => (
     <Fade bottom distance="50px">
     <Container>
       <img src={logo}/>
-      <h2>Accountability, transparency and security is what it means to be Powered by Aragon</h2>
+      <h2>Transparency, governance, and security are what it means to be Powered by Aragon</h2>
       <a href="https://wiki.aragon.org/design/powered_by_aragon/" target="_blank">Learn more</a>
     </Container>
     </Fade>
@@ -45,7 +45,7 @@ const Container = styled.div`
     margin: auto;
     margin-top: 60px!important;
     ${medium('font-size: 48px;')};
-    max-width: 900px;
+    max-width: 918px;
   }
   a {
     font-family: 'FontSemiBold';
