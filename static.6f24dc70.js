@@ -6036,7 +6036,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(['\n  min-height: 600px;\n  height: auto;\n  background: url(', ') top no-repeat;\n  background-size: cover;\n  height: 1106px;\n  margin-bottom: -3px;\n'], ['\n  min-height: 600px;\n  height: auto;\n  background: url(', ') top no-repeat;\n  background-size: cover;\n  height: 1106px;\n  margin-bottom: -3px;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  width: 80%;\n  margin: auto;\n  height: 100%;\n  padding-top: 50px;\n  text-align: center;\n  h2 {\n    font-family: \'FontRegular\';\n    font-weight: 400;\n    font-size: 38px;\n    line-height: 1.54;\n    text-align: center;\n    color: #FFFFFF;\n    margin: auto;\n    margin-top: 60px!important;\n    ', ';\n    max-width: 900px;\n  }\n  a {\n    font-family: \'FontSemiBold\';\n    font-size: 24px;\n    line-height: 74px;\n    text-align: center;\n    margin: auto;\n    color: #FFFFFF;\n    text-decoration: none;\n  }\n  a:hover {\n    opacity: 0.8;\n  }\n\n  ', ';\n'], ['\n  width: 80%;\n  margin: auto;\n  height: 100%;\n  padding-top: 50px;\n  text-align: center;\n  h2 {\n    font-family: \'FontRegular\';\n    font-weight: 400;\n    font-size: 38px;\n    line-height: 1.54;\n    text-align: center;\n    color: #FFFFFF;\n    margin: auto;\n    margin-top: 60px!important;\n    ', ';\n    max-width: 900px;\n  }\n  a {\n    font-family: \'FontSemiBold\';\n    font-size: 24px;\n    line-height: 74px;\n    text-align: center;\n    margin: auto;\n    color: #FFFFFF;\n    text-decoration: none;\n  }\n  a:hover {\n    opacity: 0.8;\n  }\n\n  ', ';\n']);
+    _templateObject2 = _taggedTemplateLiteral(['\n  width: 80%;\n  margin: auto;\n  height: 100%;\n  padding-top: 50px;\n  text-align: center;\n  h2 {\n    font-family: \'FontRegular\';\n    font-weight: 400;\n    font-size: 38px;\n    line-height: 1.54;\n    text-align: center;\n    color: #FFFFFF;\n    margin: auto;\n    margin-top: 60px!important;\n    ', ';\n    max-width: 918px;\n  }\n  a {\n    font-family: \'FontSemiBold\';\n    font-size: 24px;\n    line-height: 74px;\n    text-align: center;\n    margin: auto;\n    color: #FFFFFF;\n    text-decoration: none;\n  }\n  a:hover {\n    opacity: 0.8;\n  }\n\n  ', ';\n'], ['\n  width: 80%;\n  margin: auto;\n  height: 100%;\n  padding-top: 50px;\n  text-align: center;\n  h2 {\n    font-family: \'FontRegular\';\n    font-weight: 400;\n    font-size: 38px;\n    line-height: 1.54;\n    text-align: center;\n    color: #FFFFFF;\n    margin: auto;\n    margin-top: 60px!important;\n    ', ';\n    max-width: 918px;\n  }\n  a {\n    font-family: \'FontSemiBold\';\n    font-size: 24px;\n    line-height: 74px;\n    text-align: center;\n    margin: auto;\n    color: #FFFFFF;\n    text-decoration: none;\n  }\n  a:hover {\n    opacity: 0.8;\n  }\n\n  ', ';\n']);
 
 var _react = __webpack_require__(0);
 
@@ -6085,7 +6085,7 @@ var PreFooter = function PreFooter() {
         _react2.default.createElement(
           'h2',
           null,
-          'Accountability, transparency and security is what it means to be Powered by Aragon'
+          'Transparency, governance, and security are what it means to be Powered by Aragon'
         ),
         _react2.default.createElement(
           'a',
@@ -11930,4 +11930,4 @@ module.exports = require("react-reveal/Pulse");
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.8ccc106f.js.map
+//# sourceMappingURL=static.6f24dc70.js.map
