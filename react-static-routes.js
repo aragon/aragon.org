@@ -28,7 +28,8 @@ const t_5 = universal(import('../src/pages/Contribute'), universalOptions)
 const t_6 = universal(import('../src/pages/Roadmap'), universalOptions)
 const t_7 = universal(import('../src/pages/Network'), universalOptions)
 const t_8 = universal(import('../src/pages/Bella'), universalOptions)
-const t_9 = universal(import('../src/pages/NotFound'), universalOptions)
+const t_9 = universal(import('../src/pages/PoweredByAragon'), universalOptions)
+const t_10 = universal(import('../src/pages/NotFound'), universalOptions)
 
 
 // Template Map
@@ -42,12 +43,13 @@ t_5,
 t_6,
 t_7,
 t_8,
-t_9
+t_9,
+t_10
 ]
 
 // Template Tree
 global.templateIDsByPath = global.templateIDsByPath || {
-  '404': 9
+  '404': 10
 }
 
 // Get template for given path
