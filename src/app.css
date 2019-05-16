@@ -7,6 +7,10 @@
  src: url('./fonts/HKGrotesk-Light.ttf') format('opentype');
 }
 @font-face {
+ font-family: 'FontSemiBold';
+ src: url('./fonts/HKGrotesk-SemiBold.ttf') format('opentype');
+}
+@font-face {
  font-family: 'FontBold';
  src: url('./fonts/HKGrotesk-Bold.ttf') format('opentype');
 }
