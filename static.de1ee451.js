@@ -2319,7 +2319,7 @@ var Hero = function Hero() {
           _react2.default.createElement(
             'h4',
             null,
-            'Aragon lets you freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, and communities.'
+            'Aragon empowers you freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, and communities.'
           ),
           _react2.default.createElement(
             _ui.Button.Anchor,
@@ -2347,7 +2347,7 @@ var Hero = function Hero() {
           _react2.default.createElement(
             'h4',
             null,
-            'Aragon lets you freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, and communities.'
+            'Aragon empowers you freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, and communities.'
           ),
           _react2.default.createElement(
             _ui.Button.Anchor,
@@ -11930,4 +11930,4 @@ module.exports = require("react-reveal/Pulse");
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.6f24dc70.js.map
+//# sourceMappingURL=static.de1ee451.js.map
