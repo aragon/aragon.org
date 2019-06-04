@@ -4,6 +4,7 @@ import Entry from './Entry';
 import styled from 'styled-components';
 import {breakpoint, Badge, DropDown} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
+import done from './assets/done.svg';
 
 class AragonClient extends React.Component {
   constructor(props) {
@@ -49,6 +50,10 @@ class AragonClient extends React.Component {
                       Mobile experience
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
+                    <DoneBadge>
+                      <img src={done} />
+                      Done
+                    </DoneBadge>
                   </div>
                   <h3>Responsive view</h3>
                   <h4>
@@ -66,6 +71,10 @@ class AragonClient extends React.Component {
                       Identity experience
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
+                    <DoneBadge>
+                      <img src={done} />
+                      Done
+                    </DoneBadge>
                   </div>
                   <h3>Local identity (custom labels) </h3>
                   <h4>
@@ -82,6 +91,10 @@ class AragonClient extends React.Component {
                 <Module>
                   <div className="badge-container">
                     <AutarkBadge>Autark</AutarkBadge>
+                    <DoneBadge>
+                      <img src={done} />
+                      Done
+                    </DoneBadge>
                   </div>
                   <h3>Finalize Planning Suite</h3>
                   <h4>
@@ -99,6 +112,10 @@ class AragonClient extends React.Component {
                   <div className="badge-container">
                     <StyledBadge className="brown">App center</StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
+                    <DoneBadge>
+                      <img src={done} />
+                      Done
+                    </DoneBadge>
                   </div>
                   <h3>Upgrading apps from the UI</h3>
                   <h4>
@@ -166,6 +183,10 @@ class AragonClient extends React.Component {
                       UX improvements
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
+                    <DoneBadge>
+                      <img src={done} />
+                      Done
+                    </DoneBadge>
                   </div>
                   <h3>Notifications & user feedback</h3>
                   <h4>
@@ -188,7 +209,8 @@ class AragonClient extends React.Component {
                   <h3>Concierge project</h3>
                   <h4>
                     Guided on-boarding of projects interested in collaborating
-                    with Aragon or using Aragon tools for their governance needs.
+                    with Aragon or using Aragon tools for their governance
+                    needs.
                   </h4>
                 </Module>
               </Entry>
@@ -475,7 +497,7 @@ class AragonClient extends React.Component {
           </RoadmapContainer>
         </Container>
       </RoadmapSection>
-    )
+    );
   }
 }
 
@@ -536,11 +558,21 @@ const RoadmapContainer = styled.div`
   }
 `;
 
+const DoneBadge = styled(Badge)`
+  background: rgba(0, 219, 140, 0.1);
+  color: #00db8c;
+  float: left;
+  img {
+    padding-right: 5px;
+  }
+`;
+
 const AragonOneBadge = styled(Badge)`
   background: #f7837140;
   color: #b2565d;
   margin-left: 10px;
 `;
+
 const StyledBadge = styled(Badge)`
   &.blue {
     background: #d5e8ff80;
