@@ -334,24 +334,6 @@ class AragonClient extends React.Component {
                 </Module>
               </Entry>
             )}
-            {(this.state.active == 0 || this.state.active == 1) && (
-              <Entry>
-                <Module>
-                  <div className="badge-container">
-                    <StyledBadge className="violet">
-                      {' '}
-                      Lorikeet design system
-                    </StyledBadge>
-                    <AragonOneBadge>Aragon One</AragonOneBadge>
-                  </div>
-                  <h3>aragonSDK: Split aragonUI and Lorikeet</h3>
-                  <h4>
-                    Push Lorikeet as an ecosystem-wide project, while still
-                    providing an Aragon-opinionated experience with aragonUI
-                  </h4>
-                </Module>
-              </Entry>
-            )}
             {(this.state.active == 0 || this.state.active == 2) && (
               <Entry>
                 <Module>
@@ -394,23 +376,6 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="green">
-                      Mobile experience
-                    </StyledBadge>
-                    <AragonOneBadge>Aragon One</AragonOneBadge>
-                  </div>
-                  <h3>Native mobile app</h3>
-                  <h4>
-                    Build native mobile Aragon client so users can benefit from
-                    device and OS specific capabilities.
-                  </h4>
-                </Module>
-              </Entry>
-            )}
-            {(this.state.active == 0 || this.state.active == 1) && (
-              <Entry>
-                <Module>
-                  <div className="badge-container">
                     <StyledBadge className="blue">
                       Flexible permissions
                     </StyledBadge>
@@ -436,22 +401,6 @@ class AragonClient extends React.Component {
                     at least three additional color palettes, including the
                     ability to change the background image so it’s different
                     than the Aragon eagle.
-                  </h4>
-                </Module>
-              </Entry>
-            )}
-            {(this.state.active == 0 || this.state.active == 1) && (
-              <Entry>
-                <Module>
-                  <div className="badge-container">
-                    <StyledBadge className="brown">App center</StyledBadge>
-                    <AragonOneBadge>Aragon One</AragonOneBadge>
-                  </div>
-                  <h3>Incentivisation model for app developers</h3>
-                  <h4>
-                    Provide app developers with different monetisation models to
-                    create revenue from the apps they publish in the Aragon App
-                    Center.
                   </h4>
                 </Module>
               </Entry>
