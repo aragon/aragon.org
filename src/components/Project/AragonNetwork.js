@@ -38,8 +38,8 @@ const AragonNetwork = () => (
             </div>
             <h3>Staking and Lock Managers</h3>
             <h4>
-              Provides a secure foundation for managing collateral deposits
-              for agreements while allowing collateral assets to be used in to
+              Provides a secure foundation for managing collateral deposits for
+              agreements while allowing collateral assets to be used in to
               participate in governance.
             </h4>
           </Module>
@@ -52,9 +52,9 @@ const AragonNetwork = () => (
             </div>
             <h3>Aragon Court PoC</h3>
             <h4>
-              This deliverable includes the Aragon Court protocol, an
-              interface for users of the court to review and manage agreements
-              and disputes, and an interface for jurors to participate in the
+              This deliverable includes the Aragon Court protocol, an interface
+              for users of the court to review and manage agreements and
+              disputes, and an interface for jurors to participate in the
               arbitration process.
             </h4>
           </Module>
@@ -73,8 +73,8 @@ const AragonNetwork = () => (
             </div>
             <h3>Proposals agreements</h3>
             <h4>
-              Aragon Agreements are a core component of the Aragon Network,
-              they enable users to define human-readable obligations and lock
+              Aragon Agreements are a core component of the Aragon Network, they
+              enable users to define human-readable obligations and lock
               collateral to provide assurances to their counter-parties.
             </h4>
           </Module>
@@ -87,9 +87,39 @@ const AragonNetwork = () => (
             </div>
             <h3>Vote Relay Protocol</h3>
             <h4>
-              Improve the experience and scalability of voting by implementing
-              a protocol for votes to be submitted to a set of bonded
-              relayers.
+              Improve the experience and scalability of voting by implementing a
+              protocol for votes to be submitted to a set of bonded relayers.
+            </h4>
+          </Module>
+        </Entry>
+        <Entry entrypoint>
+          <Title>Future</Title>
+          <Subtitle>
+            High level areas of focus with a broader and flexible scope
+          </Subtitle>
+        </Entry>
+        <Entry>
+          <Module>
+            <div className="badge-container">
+              <EnhancedBadge className="orange">Foundraising</EnhancedBadge>
+              <AragonBlackBadge>Aragon Black</AragonBlackBadge>
+            </div>
+            <h3>Discovery /curation platform</h3>
+            <h4>
+              Develop an Aragon Network wide fundraising platform allowing
+              Aragon users to discover, curate and invest in new DAOs.
+            </h4>
+          </Module>
+        </Entry>
+        <Entry>
+          <Module>
+            <div className="badge-container">
+              <AragonBlackBadge>Aragon Black</AragonBlackBadge>
+            </div>
+            <h3>Linking fee and insurance</h3>
+            <h4>
+              Design and discuss an ANT-based token economics model for aragonPM
+              registries, relying on linking fees and an insurance system.
             </h4>
           </Module>
         </Entry>
@@ -102,6 +132,16 @@ const AragonNetwork = () => (
 const EnhancedBadge = styled(Badge)`
   background: #d5e8ff80;
   color: #4188dc;
+
+  &.orange {
+    background: #ffca7280;
+    color: #e4971a;
+  }
+`;
+const AragonBlackBadge = styled(Badge)`
+  background: #00000030;
+  color: black;
+  margin-left: 10px;
 `;
 
 const RoadmapContainer = styled.div`
@@ -128,7 +168,7 @@ const RoadmapContainer = styled.div`
     display: table;
     clear: both;
   }
-`
+`;
 
 const AragonOneBadge = styled(Badge)`
   background: #f7837140;
