@@ -4,6 +4,7 @@ import Entry from './Entry';
 import styled from 'styled-components';
 import {breakpoint, Badge, DropDown} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
+import done from './assets/done.svg';
 
 class AragonClient extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class AragonClient extends React.Component {
             <div className="dropdown-container">
               <DropDown
                 className="flock-dropdown"
-                items={['All', 'Aragon One', 'Autark']}
+                items={['All', 'Aragon One', 'Autark', 'Aragon Black']}
                 active={this.state.active}
                 onChange={this.handleChange}
               />
@@ -49,6 +50,10 @@ class AragonClient extends React.Component {
                       Mobile experience
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
+                    <DoneBadge>
+                      <img src={done} />
+                      Done
+                    </DoneBadge>
                   </div>
                   <h3>Responsive view</h3>
                   <h4>
@@ -66,6 +71,10 @@ class AragonClient extends React.Component {
                       Identity experience
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
+                    <DoneBadge>
+                      <img src={done} />
+                      Done
+                    </DoneBadge>
                   </div>
                   <h3>Local identity (custom labels) </h3>
                   <h4>
@@ -82,6 +91,10 @@ class AragonClient extends React.Component {
                 <Module>
                   <div className="badge-container">
                     <AutarkBadge>Autark</AutarkBadge>
+                    <DoneBadge>
+                      <img src={done} />
+                      Done
+                    </DoneBadge>
                   </div>
                   <h3>Finalize Planning Suite</h3>
                   <h4>
@@ -99,6 +112,10 @@ class AragonClient extends React.Component {
                   <div className="badge-container">
                     <StyledBadge className="brown">App center</StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
+                    <DoneBadge>
+                      <img src={done} />
+                      Done
+                    </DoneBadge>
                   </div>
                   <h3>Upgrading apps from the UI</h3>
                   <h4>
@@ -166,6 +183,10 @@ class AragonClient extends React.Component {
                       UX improvements
                     </StyledBadge>
                     <AragonOneBadge>Aragon One</AragonOneBadge>
+                    <DoneBadge>
+                      <img src={done} />
+                      Done
+                    </DoneBadge>
                   </div>
                   <h3>Notifications & user feedback</h3>
                   <h4>
@@ -188,7 +209,8 @@ class AragonClient extends React.Component {
                   <h3>Concierge project</h3>
                   <h4>
                     Guided on-boarding of projects interested in collaborating
-                    with Aragon or using Aragon tools for their governance needs.
+                    with Aragon or using Aragon tools for their governance
+                    needs.
                   </h4>
                 </Module>
               </Entry>
@@ -205,6 +227,37 @@ class AragonClient extends React.Component {
                     statement, values, code of conduct, and contact information
                     so it’s easily accessible to prospective and current members
                     of the organization.
+                  </h4>
+                </Module>
+              </Entry>
+            )}
+            {(this.state.active == 0 || this.state.active == 3) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="orange">Foundraising</StyledBadge>
+                    <AragonBlackBadge>Aragon Black</AragonBlackBadge>
+                  </div>
+                  <h3>Fundraising library</h3>
+                  <h4>
+                    Develop a modular fundraising library providing low-level
+                    building-blocks: curves, taxation mechanisms, withdrawal
+                    mechanisms, etc.
+                  </h4>
+                </Module>
+              </Entry>
+            )}
+            {(this.state.active == 0 || this.state.active == 3) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="orange">Foundraising</StyledBadge>
+                    <AragonBlackBadge>Aragon Black</AragonBlackBadge>
+                  </div>
+                  <h3>Fundraising app</h3>
+                  <h4>
+                    Develop an opinionated but ready-to-use fundraising app -
+                    based on the previous library - implementing a DAICO scheme.
                   </h4>
                 </Module>
               </Entry>
@@ -264,6 +317,24 @@ class AragonClient extends React.Component {
                 </Module>
               </Entry>
             )}
+            {(this.state.active == 0 || this.state.active == 3) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="grey">
+                      Developer resources
+                    </StyledBadge>
+                    <AragonBlackBadge>Aragon Black</AragonBlackBadge>
+                  </div>
+                  <h3>aragonPM Frontend</h3>
+                  <h4>
+                    Develop a dApp allowing to easily search and browse through
+                    aragonPM registries and repos [an aragonPM equivalent to
+                    npmjs.com].
+                  </h4>
+                </Module>
+              </Entry>
+            )}
             {(this.state.active == 0 || this.state.active == 2) && (
               <Entry>
                 <Module>
@@ -299,6 +370,20 @@ class AragonClient extends React.Component {
                 </Module>
               </Entry>
             )}
+            {(this.state.active == 0 || this.state.active == 3) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AragonBlackBadge>Aragon Black</AragonBlackBadge>
+                  </div>
+                  <h3>Pando</h3>
+                  <h4>
+                    Keep on developing and enhancing the pando protocol and all
+                    related DAO templates for mainnet launch.
+                  </h4>
+                </Module>
+              </Entry>
+            )}
             {(this.state.active == 0 || this.state.active == 1) && (
               <Entry>
                 <Module>
@@ -318,6 +403,38 @@ class AragonClient extends React.Component {
                 </Module>
               </Entry>
             )}
+            {(this.state.active == 0 || this.state.active == 3) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <AragonBlackBadge>Aragon Black</AragonBlackBadge>
+                  </div>
+                  <h3>github2pando</h3>
+                  <h4>
+                    Develop a simple script allowing to synchronize GitHub
+                    repositories with pando repositories on a time-based basis
+                    [daily, weekly, monthly, etc.]
+                  </h4>
+                </Module>
+              </Entry>
+            )}
+            {(this.state.active == 0 || this.state.active == 3) && (
+              <Entry>
+                <Module>
+                  <div className="badge-container">
+                    <StyledBadge className="violet">Legal</StyledBadge>
+                    <AragonBlackBadge>Aragon Black</AragonBlackBadge>
+                  </div>
+                  <h3>Custom Open Source licence</h3>
+                  <h4>
+                    Deliver of a fork of the Contributive Commons Licence in
+                    order to implement an isomorphism between DAOs governance
+                    rules - as defined through blockchain-based smart contracts
+                    - and nation-states juridical frameworks.
+                  </h4>
+                </Module>
+              </Entry>
+            )}
             {(this.state.active == 0 || this.state.active == 2) && (
               <Entry>
                 <Module>
@@ -330,24 +447,6 @@ class AragonClient extends React.Component {
                     for reputation-based organizations, including the ability to
                     allocation non-transferable tokens in place of (or in
                     addition to) traditional bounties.
-                  </h4>
-                </Module>
-              </Entry>
-            )}
-            {(this.state.active == 0 || this.state.active == 1) && (
-              <Entry>
-                <Module>
-                  <div className="badge-container">
-                    <StyledBadge className="violet">
-                      {' '}
-                      Lorikeet design system
-                    </StyledBadge>
-                    <AragonOneBadge>Aragon One</AragonOneBadge>
-                  </div>
-                  <h3>aragonSDK: Split aragonUI and Lorikeet</h3>
-                  <h4>
-                    Push Lorikeet as an ecosystem-wide project, while still
-                    providing an Aragon-opinionated experience with aragonUI
                   </h4>
                 </Module>
               </Entry>
@@ -394,23 +493,6 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="green">
-                      Mobile experience
-                    </StyledBadge>
-                    <AragonOneBadge>Aragon One</AragonOneBadge>
-                  </div>
-                  <h3>Native mobile app</h3>
-                  <h4>
-                    Build native mobile Aragon client so users can benefit from
-                    device and OS specific capabilities.
-                  </h4>
-                </Module>
-              </Entry>
-            )}
-            {(this.state.active == 0 || this.state.active == 1) && (
-              <Entry>
-                <Module>
-                  <div className="badge-container">
                     <StyledBadge className="blue">
                       Flexible permissions
                     </StyledBadge>
@@ -436,22 +518,6 @@ class AragonClient extends React.Component {
                     at least three additional color palettes, including the
                     ability to change the background image so it’s different
                     than the Aragon eagle.
-                  </h4>
-                </Module>
-              </Entry>
-            )}
-            {(this.state.active == 0 || this.state.active == 1) && (
-              <Entry>
-                <Module>
-                  <div className="badge-container">
-                    <StyledBadge className="brown">App center</StyledBadge>
-                    <AragonOneBadge>Aragon One</AragonOneBadge>
-                  </div>
-                  <h3>Incentivisation model for app developers</h3>
-                  <h4>
-                    Provide app developers with different monetisation models to
-                    create revenue from the apps they publish in the Aragon App
-                    Center.
                   </h4>
                 </Module>
               </Entry>
@@ -526,7 +592,7 @@ class AragonClient extends React.Component {
           </RoadmapContainer>
         </Container>
       </RoadmapSection>
-    )
+    );
   }
 }
 
@@ -587,11 +653,27 @@ const RoadmapContainer = styled.div`
   }
 `;
 
+const DoneBadge = styled(Badge)`
+  background: rgba(0, 219, 140, 0.1);
+  color: #00db8c;
+  float: left;
+  img {
+    padding-right: 5px;
+  }
+`;
+
 const AragonOneBadge = styled(Badge)`
   background: #f7837140;
   color: #b2565d;
   margin-left: 10px;
 `;
+
+const AragonBlackBadge = styled(Badge)`
+  background: #00000030;
+  color: black;
+  margin-left: 10px;
+`;
+
 const StyledBadge = styled(Badge)`
   &.blue {
     background: #d5e8ff80;
@@ -620,6 +702,10 @@ const StyledBadge = styled(Badge)`
   &.yellow {
     background: #fff36280;
     color: #afa63c;
+  }
+  &.orange {
+    background: #ffca7280;
+    color: #e4971a;
   }
 `;
 
