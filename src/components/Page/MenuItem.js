@@ -27,9 +27,9 @@ const StyledMenuItem = styled.div`
     text-decoration: none;
     font-size: 17px;
     white-space: nowrap;
-    color: #ffffff;
+    color: #6D7693;
     &:hover {
-      color: #22e0ff;
+      color: black;
     }
     &:focus {
       outline: 0;
