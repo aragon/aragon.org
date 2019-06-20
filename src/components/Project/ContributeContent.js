@@ -30,6 +30,9 @@ const mudule3Content = (
   <span>
     <p>Our vision is to decentralize Aragon’s development. There are different teams working on many parts of the project, but all aligned towards the same mission. The current teams are Aragon One and Autark.</p>
     <p className="team-box">
+      <a className="action-button" href="https://www.aragon.black/" target="_blank">
+        <span>Aragon Black <img src={require(`../General/assets/arrow.svg`)}/></span>
+      </a>
       <a className="action-button" href="https://aragon.one" target="_blank">
         <span>Aragon One <img src={require(`../General/assets/arrow.svg`)}/></span>
       </a>
