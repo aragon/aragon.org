@@ -26,7 +26,7 @@ const Hero = () => (
             organize
           </h2>
           <h4>
-            Aragon empowers you freely organize and collaborate without borders or
+            Aragon empowers you to freely organize and collaborate without borders or
             intermediaries. Create global, bureaucracy-free organizations,
             companies, and communities.
           </h4>
@@ -45,7 +45,7 @@ const Hero = () => (
             organize
           </h2>
           <h4>
-            Aragon empowers you freely organize and collaborate without borders or
+            Aragon empowers you to freely organize and collaborate without borders or
             intermediaries. Create global, bureaucracy-free organizations,
             companies, and communities.
           </h4>
