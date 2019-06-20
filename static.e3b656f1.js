@@ -160,13 +160,13 @@ exports.default = Section;
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-static");
+module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDcgMTEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDEwLjA0MTVMNS41MjA3NSA1LjUyMDc1TDEgMSIgc3Ryb2tlPSIjMDFDM0UzIi8+Cjwvc3ZnPgo="
 
 /***/ }),
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDcgMTEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDEwLjA0MTVMNS41MjA3NSA1LjUyMDc1TDEgMSIgc3Ryb2tlPSIjMDFDM0UzIi8+Cjwvc3ZnPgo="
+module.exports = require("react-static");
 
 /***/ }),
 /* 6 */
@@ -201,7 +201,7 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _ui = __webpack_require__(2);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _Fade = __webpack_require__(10);
 
@@ -383,7 +383,7 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _ui = __webpack_require__(2);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _Fade = __webpack_require__(10);
 
@@ -566,7 +566,7 @@ var map = {
 	"./General/Section.js": 3,
 	"./General/VideoModal": 17,
 	"./General/VideoModal.js": 17,
-	"./General/assets/arrow.svg": 5,
+	"./General/assets/arrow.svg": 4,
 	"./General/assets/hero-arrow.svg": 41,
 	"./Governance/About": 82,
 	"./Governance/About.js": 82,
@@ -785,7 +785,7 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _ui = __webpack_require__(2);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _Governance = __webpack_require__(108);
 
@@ -1145,7 +1145,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -1269,7 +1269,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -1617,7 +1617,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -1764,7 +1764,7 @@ var _close = __webpack_require__(24);
 
 var _close2 = _interopRequireDefault(_close);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1963,7 +1963,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _ui = __webpack_require__(2);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -2273,7 +2273,7 @@ var _poster = __webpack_require__(35);
 
 var _poster2 = _interopRequireDefault(_poster);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -2320,7 +2320,7 @@ var Hero = function Hero() {
           _react2.default.createElement(
             'h4',
             null,
-            'Aragon empowers you freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, and communities.'
+            'Aragon empowers you to freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, and communities.'
           ),
           _react2.default.createElement(
             _ui.Button.Anchor,
@@ -2348,7 +2348,7 @@ var Hero = function Hero() {
           _react2.default.createElement(
             'h4',
             null,
-            'Aragon empowers you freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, and communities.'
+            'Aragon empowers you to freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, and communities.'
           ),
           _react2.default.createElement(
             _ui.Button.Anchor,
@@ -2434,7 +2434,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -2464,7 +2464,7 @@ var mudule1Content = _react2.default.createElement(
         'span',
         null,
         'About ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -2490,7 +2490,7 @@ var mudule2Content = _react2.default.createElement(
         'span',
         null,
         'Developers ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -2513,7 +2513,7 @@ var mudule3Content = _react2.default.createElement(
         'span',
         null,
         'Nest ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -2536,7 +2536,7 @@ var mudule4Content = _react2.default.createElement(
         'span',
         null,
         'Contribute ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -2559,7 +2559,7 @@ var mudule5Content = _react2.default.createElement(
         'span',
         null,
         'Aragon Network ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -2669,7 +2669,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _Fade = __webpack_require__(10);
 
@@ -2996,7 +2996,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _Fade = __webpack_require__(10);
 
@@ -3112,7 +3112,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _Fade = __webpack_require__(10);
 
@@ -3212,7 +3212,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _promoVideo = __webpack_require__(154);
 
@@ -3319,7 +3319,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _videoBackground = __webpack_require__(155);
 
@@ -3477,7 +3477,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -3561,7 +3561,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -3594,7 +3594,7 @@ var mudule1Content = _react2.default.createElement(
         'span',
         null,
         'Read more ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -3615,7 +3615,7 @@ var mudule2Content = _react2.default.createElement(
         'span',
         null,
         'Try it now ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -3694,7 +3694,7 @@ var _poster = __webpack_require__(35);
 
 var _poster2 = _interopRequireDefault(_poster);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -3833,7 +3833,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -3873,7 +3873,7 @@ var mudule3Content = _react2.default.createElement(
         'span',
         null,
         'Developers ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -3930,7 +3930,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _unstoppableOrgBackground = __webpack_require__(160);
 
@@ -4188,7 +4188,7 @@ var About = function About() {
               'span',
               null,
               'About ANT ',
-              _react2.default.createElement('img', { src: __webpack_require__(5) })
+              _react2.default.createElement('img', { src: __webpack_require__(4) })
             )
           )
         )
@@ -4227,7 +4227,7 @@ var About = function About() {
               'span',
               null,
               'Read AGP-1 ',
-              _react2.default.createElement('img', { src: __webpack_require__(5) })
+              _react2.default.createElement('img', { src: __webpack_require__(4) })
             )
           )
         ),
@@ -4605,7 +4605,7 @@ var Timeline = function Timeline() {
                 'span',
                 null,
                 'AGP-1 ',
-                _react2.default.createElement('img', { src: __webpack_require__(5) })
+                _react2.default.createElement('img', { src: __webpack_require__(4) })
               )
             )
           )
@@ -4638,7 +4638,7 @@ var Timeline = function Timeline() {
                 'span',
                 null,
                 'Aragon forum ',
-                _react2.default.createElement('img', { src: __webpack_require__(5) })
+                _react2.default.createElement('img', { src: __webpack_require__(4) })
               )
             )
           )
@@ -4671,7 +4671,7 @@ var Timeline = function Timeline() {
                 'span',
                 null,
                 'Draft AGPs ',
-                _react2.default.createElement('img', { src: __webpack_require__(5) })
+                _react2.default.createElement('img', { src: __webpack_require__(4) })
               )
             )
           )
@@ -4704,7 +4704,7 @@ var Timeline = function Timeline() {
                 'span',
                 null,
                 'Board review ',
-                _react2.default.createElement('img', { src: __webpack_require__(5) })
+                _react2.default.createElement('img', { src: __webpack_require__(4) })
               )
             )
           )
@@ -4741,7 +4741,7 @@ var Timeline = function Timeline() {
                 'span',
                 null,
                 'Vote announcements ',
-                _react2.default.createElement('img', { src: __webpack_require__(5) })
+                _react2.default.createElement('img', { src: __webpack_require__(4) })
               )
             )
           )
@@ -4895,7 +4895,7 @@ var mudule3Content = _react2.default.createElement(
         'span',
         null,
         'Whitepaper ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -4918,7 +4918,7 @@ var mudule4Content = _react2.default.createElement(
         'span',
         null,
         'Aragon forum ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -4968,7 +4968,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _ui = __webpack_require__(2);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -5393,7 +5393,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -5722,7 +5722,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -5869,7 +5869,7 @@ var _close = __webpack_require__(51);
 
 var _close2 = _interopRequireDefault(_close);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6452,7 +6452,7 @@ var _historyMobile = __webpack_require__(69);
 
 var _historyMobile2 = _interopRequireDefault(_historyMobile);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -6482,7 +6482,7 @@ var mudule1Content = _react2.default.createElement(
         'span',
         null,
         'Discover Nest ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -6505,7 +6505,7 @@ var mudule2Content = _react2.default.createElement(
         'span',
         null,
         'Contribute ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -6533,7 +6533,7 @@ var module4Content = _react2.default.createElement(
         'span',
         null,
         'Governance ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -7655,7 +7655,7 @@ var AragonClient = function (_React$Component) {
                 _react2.default.createElement(
                   'h4',
                   null,
-                  'Develop a design pattern and component for contextual discussions within Aragon, and implement it one application to showcase the feature, such as the Voting app.'
+                  'Develop a design pattern and component for contextual discussions within Aragon, and implement it on one application to showcase the feature, such as the Voting app.'
                 )
               )
             ),
@@ -8130,7 +8130,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _association = __webpack_require__(67);
 
@@ -8279,7 +8279,7 @@ var mudule1Content = _react2.default.createElement(
         'span',
         null,
         'Good first issues ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -8302,7 +8302,7 @@ var mudule2Content = _react2.default.createElement(
         'span',
         null,
         'Apply ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -8320,12 +8320,22 @@ var mudule3Content = _react2.default.createElement(
     { className: 'team-box' },
     _react2.default.createElement(
       'a',
+      { className: 'action-button', href: 'https://www.aragon.black/', target: '_blank' },
+      _react2.default.createElement(
+        'span',
+        null,
+        'Aragon Black ',
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
+      )
+    ),
+    _react2.default.createElement(
+      'a',
       { className: 'action-button', href: 'https://aragon.one', target: '_blank' },
       _react2.default.createElement(
         'span',
         null,
         'Aragon One ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     ),
     _react2.default.createElement(
@@ -8335,7 +8345,7 @@ var mudule3Content = _react2.default.createElement(
         'span',
         null,
         'Autark ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -8454,7 +8464,7 @@ var FeedbackModule = function FeedbackModule() {
                   null,
                   'Join the Aragon forum',
                   ' ',
-                  _react2.default.createElement('img', { src: __webpack_require__(5), alt: '>' })
+                  _react2.default.createElement('img', { src: __webpack_require__(4), alt: '>' })
                 )
               )
             )
@@ -8551,7 +8561,7 @@ var mudule1Content = _react2.default.createElement(
         'span',
         null,
         'Nest in GitHub ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -8577,7 +8587,7 @@ var mudule2Content = _react2.default.createElement(
         'span',
         null,
         'Apply ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -8764,7 +8774,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _Quote = __webpack_require__(81);
 
@@ -9255,7 +9265,7 @@ var _homeVideo = __webpack_require__(33);
 
 var _homeVideo2 = _interopRequireDefault(_homeVideo);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -9621,7 +9631,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _ui = __webpack_require__(2);
 
@@ -9651,7 +9661,7 @@ var mudule1Content = _react2.default.createElement(
         'span',
         null,
         'Governance process ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -9674,7 +9684,7 @@ var mudule2Content = _react2.default.createElement(
         'span',
         null,
         'Transparency portal ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -9697,7 +9707,7 @@ var module3Content = _react2.default.createElement(
         'span',
         null,
         'Aragon Network ',
-        _react2.default.createElement('img', { src: __webpack_require__(5) })
+        _react2.default.createElement('img', { src: __webpack_require__(4) })
       )
     )
   )
@@ -10555,7 +10565,7 @@ var _Pulse2 = _interopRequireDefault(_Pulse);
 
 var _ui = __webpack_require__(2);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10880,7 +10890,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 var _reactStaticRoutes = __webpack_require__(187);
 
@@ -10937,7 +10947,7 @@ var _reactUniversalComponent = __webpack_require__(192);
 
 var _reactUniversalComponent2 = _interopRequireDefault(_reactUniversalComponent);
 
-var _reactStatic = __webpack_require__(4);
+var _reactStatic = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11909,7 +11919,7 @@ var map = {
 	"./Discover/assets/discover5.svg": 133,
 	"./Discover/assets/discover6.svg": 134,
 	"./Discover/assets/unstoppable-org.svg": 40,
-	"./General/assets/arrow.svg": 5,
+	"./General/assets/arrow.svg": 4,
 	"./General/assets/hero-arrow.svg": 41,
 	"./Governance/assets/about.svg": 42,
 	"./Governance/assets/stage1.svg": 43,
@@ -12139,4 +12149,4 @@ module.exports = require("react-reveal/Pulse");
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.182fa541.js.map
+//# sourceMappingURL=static.e3b656f1.js.map
