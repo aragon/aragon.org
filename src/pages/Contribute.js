@@ -26,7 +26,7 @@ const ContributeSection = styled(Section)`
   background-color: #fbf2e8;
   background-image: url(${backgroundImage});
   background-size: cover;
-  background-position: center
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;

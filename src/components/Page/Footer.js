@@ -3,6 +3,7 @@ import {Text, breakpoint, SafeLink} from '@aragon/ui';
 import {Link} from 'react-static';
 import styled from 'styled-components';
 import Section from '../General/Section';
+import backgroundImage from './assets/prefooter.png';
 import logo from './assets/logo-footer.svg';
 import twitter from './assets/twitter.svg';
 import ghost from './assets/ghost.svg';
@@ -15,6 +16,20 @@ const large = css => breakpoint('large', css);
 
 const Footer = ({...props}) => (
   <FooterSection>
+    <PreFooter>
+      <PreFooterText>
+      <h2>Try Aragon now</h2>
+      <p>Create now global, bureaucracy-free organizations, companies, or communities.</p>
+      </PreFooterText>
+      <div>
+        <a className="secondary-button centered" href="./discover">
+          Discover Aragon
+        </a>
+        <a className="principal-button centered" href="./discover">
+          Try the product
+        </a>
+      </div>
+    </PreFooter>
     <Container>
       <Item className="mobile-full">
         <Link to="/">
@@ -105,6 +120,64 @@ const Footer = ({...props}) => (
 
 const FooterSection = styled(Section)`
   background-color: #f9fafc;
+  .principal-button {
+    background: linear-gradient(186.69deg, #32fff5 -103.98%, #01bfe3 80.13%);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.150249);
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 1;
+    color: #ffffff;
+    font-family: 'FontMedium';
+    padding: 14px 28px;
+    text-decoration: none;
+  }
+  .secondary-button {
+    background: #ffffff;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.150249);
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 1;
+    color: #212b36;
+    font-family: 'FontMedium';
+    padding: 14px 28px;
+    text-decoration: none;
+  }
+  .principal-button.centered,
+  .secondary-button.centered {
+    margin: 0 10px;
+  }
+`;
+const PreFooterText = styled.div`
+  width: 45%;
+`
+const PreFooter = styled.div`
+  min-height: 70px;
+  background: #ffffff;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.150249);
+  border-radius: 6px;
+  display: flex;
+  padding: 60px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(${backgroundImage});
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    font-family: 'FontMedium';
+    font-size: 42px;
+    line-height: 59px;
+    letter-spacing: -0.564706px;
+    color: #212b36;
+  }
+  p {
+    font-family: 'FontRegular';
+    font-size: 21px;
+    line-height: 35px;
+    letter-spacing: 0.315px;
+    margin-top: 12px;
+    color: #6d7693;
+  }
 `;
 
 const Container = styled.div`
