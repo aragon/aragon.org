@@ -2096,8 +2096,8 @@ var Footer = function Footer(_ref) {
         ),
         _react2.default.createElement(
           'a',
-          { href: 'https://aracon.one/', target: '_blank' },
-          'AraCon'
+          { href: 'https://wiki.aragon.org/dev/bug_bounty/', target: '_blank' },
+          'Security'
         )
       ),
       _react2.default.createElement(
@@ -12149,4 +12149,4 @@ module.exports = require("react-reveal/Pulse");
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.e3b656f1.js.map
+//# sourceMappingURL=static.473e947d.js.map
