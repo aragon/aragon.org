@@ -66,6 +66,11 @@ export default {
       getData: () => ({ title: '' }),
     },
     {
+      path: '/camino',
+      component: 'src/pages/Camino',
+      getData: () => ({ title: '' }),
+    },
+    {
       path: '/powered-by',
       component: 'src/pages/PoweredByAragon',
       getData: () => ({ title: '' }),

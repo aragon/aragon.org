@@ -70,7 +70,7 @@ class Navbar extends React.Component {
     return (
       <AragonNavbar
         style={{
-          background: x.interpolate(v => `rgba(255, 255, 255, ${v})`),
+          background: x.interpolate(v => `transparent`),
           height: h.interpolate(v => `${v}px`),
         }}>
         <Center>
