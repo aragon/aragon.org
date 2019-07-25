@@ -51,6 +51,9 @@ const Navbar = styled.nav`
   ${medium('height: 171px;')};
   background-color: #2d2e38;
   padding-top: 64px;
+  height: 165px;
+  ${medium('height: 205px;')};
+  padding-top: 98px;
 `
 const Container = styled.nav`
   display: flex;

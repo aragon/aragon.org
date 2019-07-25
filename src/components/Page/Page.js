@@ -30,6 +30,9 @@ class Page extends React.Component {
                 <Head>
                   <title>{title || siteTitle}</title>
                 </Head>
+                <AGPBanner>
+                  <p>Aragon Network Vote #3 happening now! <a target="_blank" href="https://blog.aragon.org/final-details-for-aragon-network-vote-3/">Read more</a>.</p>
+                </AGPBanner>
                 <Navbar menuItems={items} path={path} />
                 <Content>{children}</Content>
                 <Footer path={path} />
@@ -107,5 +110,22 @@ const Content = styled.div`
     text-decoration: none;
   }
 `;
+
+const AGPBanner = styled.div `
+  position: fixed;
+  z-index: 5;
+  width: 100vw;
+  text-align: center;
+  background-image: linear-gradient(90deg, #2CF4E1, #2CB2E1);
+  p {
+    line-height: 35px;
+    padding: 0 30px;
+    text-align: center:;
+    color: black;
+  }
+  a {
+    font-weight: 700;
+  }
+`
 
 export default Page

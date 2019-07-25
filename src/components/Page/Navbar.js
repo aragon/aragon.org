@@ -156,6 +156,7 @@ const AragonNavbar = styled(animated.div)`
   justify-content: flex-start;
   ${medium('justify-content: center;')};
   align-items: center;
+  top: 34px;
   padding: 0 20px;
   position: fixed;
   z-index: 5;
