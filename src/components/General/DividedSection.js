@@ -6,22 +6,23 @@ import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 
 const DividedSection = ({image, imageLeft, sectionClass, children}) => (
-  <StyledSection  className={sectionClass}>
+  <StyledSection className={sectionClass}>
     <Box>
-    {imageLeft && (
-      <ImageContainer  className="image-left">
-        <Image src={image} />
-      </ImageContainer>
-    )}
+      {imageLeft && (
+        <ImageContainer className="image-left">
+          <Image className="divided-section-image" src={image} />
+        </ImageContainer>
+      )}
       <Container className="divided-section-container">{children}</Container>
       {!imageLeft && (
         <ImageContainer>
-          <Image src={image} />
+          <Image className="divided-section-image" src={image} />
         </ImageContainer>
       )}
     </Box>
   </StyledSection>
 );
+
 
 const StyledSection = styled(Section)`
   background-color: white;
@@ -30,7 +31,9 @@ const StyledSection = styled(Section)`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px;
+  padding: 30px;
+  flex-direction: column;
+  ${medium('flex-direction: row; padding: 120px;')};
 `;
 const Box = styled.div`
   display: flex;
@@ -40,13 +43,13 @@ const Box = styled.div`
   ${medium('flex-direction: row;')};
 `;
 const Container = styled.div`
-  width: 60%;
+  width: 100%;
   text-align: center;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  ${medium('text-align: left; margin: inherit;')};
+  ${medium('text-align: left; margin: inherit; width: 60%;')};
   p {
     font-size: 21px;
     line-height: 35px;
@@ -68,7 +71,9 @@ const Container = styled.div`
   }
 `;
 const Image = styled.img`
-  max-width: calc(100% + 413px);
+  max-width: 100%;
+  margin: 30px 0;
+  ${medium('max-width: calc(100% + 413px); margin: auto;')};
 `;
 
 const ImageContainer = styled.div`

@@ -31,6 +31,7 @@ class Video extends React.Component {
   render() {
     return (
       <VideoeSection>
+
         <Box>
           <Container>
             <h2>Learn about the story behind Aragon Bella</h2>

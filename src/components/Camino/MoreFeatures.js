@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '../General/Section';
 import Label from './Label';
-import Feature from './Feature';
+import Feature from '../General/DividedSection';
 
 import styled from 'styled-components';
 
@@ -31,7 +31,7 @@ const MoreFeatures = () => (
       <Label title="Voting" image={label1} />
     </Feature>
     <Feature image={image6} sectionClass="feature">
-      <h3 className="agent">
+      <h3 className="finance">
         A new look for the <br />{' '}
         <span className="blue">finance experience</span>
       </h3>
@@ -57,7 +57,7 @@ const MoreFeatures = () => (
 
 const Container = styled.div`
   .divided-section-image {
-    max-width: calc(100% + 200px) !important;
+    ${medium('max-width: calc(100% + 200px) !important;')};
   }
   .red {
     color: #FB7777;
@@ -73,7 +73,10 @@ const Container = styled.div`
     -webkit-text-fill-color: transparent;
   }
   .feature {
-    padding: 0 120px !important;
+    ${medium('padding: 0 120px !important;')};
+  }
+  h3.finance {
+    max-width: 500px;
   }
 `;
 export default MoreFeatures;

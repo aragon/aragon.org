@@ -70,7 +70,7 @@ class Navbar extends React.Component {
     return (
       <AragonNavbar
         style={{
-          background: x.interpolate(v => `transparent`),
+          background: x.interpolate(v => `rgba(28, 29, 35, ${v})`),
           height: h.interpolate(v => `${v}px`),
         }}>
         <Center>
@@ -155,22 +155,10 @@ const AragonNavbar = styled(animated.div)`
   display: flex;
   justify-content: flex-start;
   ${medium('justify-content: center;')};
-  backdrop-filter: blur(10px);
   align-items: center;
   padding: 0 20px;
   position: fixed;
   z-index: 5;
-  backdrop-filter:
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    filter: blur(20px);
-    z-index: -1;
-  }
   .brand {
     display: flex;
   }

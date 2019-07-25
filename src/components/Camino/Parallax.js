@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '../General/Section';
 import styled from 'styled-components';
-import backgroundImage from './assets/background.png';
+import backgroundImage from './assets/background2.png';
 import fase1 from './assets/fase1.png';
 import fase2 from './assets/fase2.png';
 import fase3 from './assets/fase3.png';
@@ -10,9 +10,11 @@ import fase4 from './assets/fase4.png';
 import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 
+
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 class ParallaxComponent extends React.Component {
   render() {
+    var  medium =  false;
     return (
       <Box>
       <ParallaxSection>
@@ -20,7 +22,7 @@ class ParallaxComponent extends React.Component {
           <ParallaxLayer offset={-0.1} speed={0}>
             <img src={backgroundImage} />
           </ParallaxLayer>
-          <ParallaxLayer offset={0.4} speed={0.3}>
+          <ParallaxLayer offset={ 0.4} speed={0.3}>
             <img src={fase4} />
           </ParallaxLayer>
           <ParallaxLayer offset={0.5} speed={0.5}>
@@ -29,7 +31,7 @@ class ParallaxComponent extends React.Component {
           <ParallaxLayer  offset={0.5} speed={0.6}>
             <img src={fase2} />
           </ParallaxLayer>
-          <ParallaxLayer factor={1} offset={0.8} speed={0.9}>
+          <ParallaxLayer factor={1} offset={medium ? 0.8 : 0.5} speed={0.9}>
             <Fase1 src={fase1} />
           </ParallaxLayer>
         </Parallax>

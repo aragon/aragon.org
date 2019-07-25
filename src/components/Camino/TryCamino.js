@@ -10,6 +10,8 @@ const large = css => breakpoint('large', css);
 
 const TryCamino = () => (
   <VideoeSection>
+    <h3>Organizations, re-imagined</h3>
+    <p>A glimpse into the future of organizations that you can use today</p>
     <video playsInline autoPlay muted loop>
       <source src={video} type="video/mp4" />
     </video>
@@ -28,6 +30,20 @@ const VideoeSection = styled(Section)`
     max-width: 100%;
     border-radius: 8px;
     margin: auto;
+  }
+  h3 {
+    font-size: 46px;
+    line-height: 59px;
+    text-align: center;
+    letter-spacing: -0.564706px;
+    color: #FFFFFF;
+  }
+  p {
+    font-size: 21px;
+    line-height: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #7F89A7;
   }
 `;
 

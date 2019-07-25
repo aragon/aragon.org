@@ -29,7 +29,7 @@ class Page extends React.Component {
                 <Head>
                   <title>{title || siteTitle}</title>
                 </Head>
-                <Navbar menuItems={items} path={path} />
+                
                 <Content>{children}</Content>
                 <Footer path={path} />
               </PublicUrl.Provider>
@@ -43,7 +43,6 @@ class Page extends React.Component {
 
 const Content = styled.div`
   min-height: calc(100vh - 116px) !important;
-
   p {
     font-family: 'FontRegular', sans-serif;
     font-size: 16px;
