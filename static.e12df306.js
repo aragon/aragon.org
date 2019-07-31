@@ -770,7 +770,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  height: 131px;\n  ', ';\n  background-color: #2d2e38;\n  padding-top: 64px;\n  height: 165px;\n  ', ';\n  padding-top: 98px;\n'], ['\n  height: 131px;\n  ', ';\n  background-color: #2d2e38;\n  padding-top: 64px;\n  height: 165px;\n  ', ';\n  padding-top: 98px;\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  height: 131px;\n  ', ';\n  background-color: #2d2e38;\n  padding-top: 64px;\n'], ['\n  height: 131px;\n  ', ';\n  background-color: #2d2e38;\n  padding-top: 64px;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  max-width: 1200px;\n  margin: auto;\n  color: white;\n  height: 67px;\n  ', ';\n  svg {\n    width: 25px;\n    ', ';\n  }\n  a.active, a:hover {\n    svg {\n      rect.white {\n        fill: #22e0ff;\n        transition: all 0.25s ease-in-out;\n      }\n    }\n  }\n\n  a {\n    position: relative;\n    display: flex;\n    height: 100%;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 0 10px;\n    ', ';\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: 0;\n        right: 0;\n        bottom: 2px;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n'], ['\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  max-width: 1200px;\n  margin: auto;\n  color: white;\n  height: 67px;\n  ', ';\n  svg {\n    width: 25px;\n    ', ';\n  }\n  a.active, a:hover {\n    svg {\n      rect.white {\n        fill: #22e0ff;\n        transition: all 0.25s ease-in-out;\n      }\n    }\n  }\n\n  a {\n    position: relative;\n    display: flex;\n    height: 100%;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 0 10px;\n    ', ';\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: 0;\n        right: 0;\n        bottom: 2px;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  text-align: center;\n  cursor: pointer;\n  text-decoration: none;\n  font-size: 15px;\n  &:hover,\n  &.active {\n    h6 {\n      color: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n    svg path.white {\n      fill: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n  }\n  h6 {\n    display: none;\n    ', ';\n  }\n  img {\n    width: 30px;\n    ', ';\n  }\n\n'], ['\n  text-align: center;\n  cursor: pointer;\n  text-decoration: none;\n  font-size: 15px;\n  &:hover,\n  &.active {\n    h6 {\n      color: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n    svg path.white {\n      fill: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n  }\n  h6 {\n    display: none;\n    ', ';\n  }\n  img {\n    width: 30px;\n    ', ';\n  }\n\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  text-align: center;\n  cursor: pointer;\n  text-decoration: none;\n  font-size: 15px;\n  &.roadmap-item {\n    h6 {\n      margin-top: 2px;\n    }\n    svg {\n      margin-top: 5px;\n    }\n  }\n  &:hover,\n  &.active {\n    h6 {\n      color: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n    svg path.white {\n      fill: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n  }\n  h6 {\n    display: none;\n    ', ';\n  }\n'], ['\n  text-align: center;\n  cursor: pointer;\n  text-decoration: none;\n  font-size: 15px;\n  &.roadmap-item {\n    h6 {\n      margin-top: 2px;\n    }\n    svg {\n      margin-top: 5px;\n    }\n  }\n  &:hover,\n  &.active {\n    h6 {\n      color: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n    svg path.white {\n      fill: #22e0ff;\n      transition: all 0.25s ease-in-out;\n    }\n  }\n  h6 {\n    display: none;\n    ', ';\n  }\n']);
@@ -910,7 +910,7 @@ var SecondaryNavbar = function SecondaryNavbar(_ref) {
   );
 };
 
-var Navbar = _styledComponents2.default.nav(_templateObject, medium('height: 171px;'), medium('height: 205px;'));
+var Navbar = _styledComponents2.default.nav(_templateObject, medium('height: 171px;'));
 var Container = _styledComponents2.default.nav(_templateObject2, medium('height: 107px;'), medium('width: 40px'), medium('padding: 0 30px'));
 var Item = (0, _styledComponents2.default)(_ui.SafeLink)(_templateObject3, medium('display: block'), medium('width: auto'));
 var InternalItem = (0, _styledComponents2.default)(_reactStatic.Link)(_templateObject4, medium('display: block'));
@@ -1222,21 +1222,6 @@ var Page = function (_React$Component) {
                     title || siteTitle
                   )
                 ),
-                _react2.default.createElement(
-                  AGPBanner,
-                  null,
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    'Aragon Network Vote #3 happening now! ',
-                    _react2.default.createElement(
-                      'a',
-                      { target: '_blank', href: 'https://blog.aragon.org/final-details-for-aragon-network-vote-3/' },
-                      'Read more'
-                    ),
-                    '.'
-                  )
-                ),
                 _react2.default.createElement(_Navbar2.default, { menuItems: items, path: path }),
                 _react2.default.createElement(
                   Content,
@@ -1274,7 +1259,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 64px;\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  top: 34px;\n  padding: 0 20px;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    height: 100%;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n'], ['\n  width: 100%;\n  height: 64px;\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  top: 34px;\n  padding: 0 20px;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    height: 100%;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 64px;\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    height: 100%;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n'], ['\n  width: 100%;\n  height: 64px;\n  display: flex;\n  justify-content: flex-start;\n  ', ';\n  align-items: center;\n  padding: 0 20px;\n  position: fixed;\n  z-index: 5;\n  .brand {\n    display: flex;\n  }\n  a {\n    position: relative;\n    height: 100%;\n    &:focus {\n      outline: 0;\n      &:after {\n        content: \'\';\n        position: absolute;\n        top: 2px;\n        left: -5px;\n        right: -5px;\n        bottom: 0;\n        outline: 2px solid #22e0ff;\n      }\n    }\n    &:active:after {\n      display: none;\n    }\n  }\n  ', ';\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  ul {\n    display: flex;\n    height: 100%;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: auto;\n  }\n  li.logo {\n    width: 100px;\n  }\n  ul.right,\n  ul.left {\n    min-width: 350px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n'], ['\n  ul {\n    display: flex;\n    height: 100%;\n  }\n  li {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: auto;\n  }\n  li.logo {\n    width: 100px;\n  }\n  ul.right,\n  ul.left {\n    min-width: 350px;\n  }\n  button {\n    margin: 0 0 0 10px;\n  }\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  ', ';\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 148px;\n  height: 100%;\n  img {\n    height: 62%;\n  }\n'], ['\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 148px;\n  height: 100%;\n  img {\n    height: 62%;\n  }\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  margin: 0 !important;\n  position: relative;\n  top: 19%;\n  height: 62%;\n'], ['\n  margin: 0 !important;\n  position: relative;\n  top: 19%;\n  height: 62%;\n']);
@@ -2259,7 +2244,7 @@ Object.defineProperty(exports, "__esModule", {
 var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n\n  @media (min-width: 1330px) {\n    min-width: 690px;\n  }\n'], ['\n  width: 100%;\n\n  @media (min-width: 1330px) {\n    min-width: 690px;\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  position: absolute;\n  z-index: 1;\n  height: auto;\n  @media (min-width: 768px) and (max-width: 960px) {\n    display: none;\n  }\n  @media (min-width: 960px) and (max-width: 1120px) {\n    width: 720px;\n    bottom: 45px;\n    left: calc(50% - 122px);\n  }\n  @media (min-width: 1120px) and (max-width: 1260px) {\n    width: 840px;\n    bottom: -10px;\n    left: calc(50% - 153px);\n  }\n  @media (min-width: 1260px) and (max-width: 1330px) {\n    width: 960px;\n    bottom: -43px;\n    left: calc(50% - 205px);\n  }\n  @media (min-width: 1330px) {\n    width: 1080px;\n    bottom: -71px;\n    left: calc(50% - 277px);\n  }\n'], ['\n  position: absolute;\n  z-index: 1;\n  height: auto;\n  @media (min-width: 768px) and (max-width: 960px) {\n    display: none;\n  }\n  @media (min-width: 960px) and (max-width: 1120px) {\n    width: 720px;\n    bottom: 45px;\n    left: calc(50% - 122px);\n  }\n  @media (min-width: 1120px) and (max-width: 1260px) {\n    width: 840px;\n    bottom: -10px;\n    left: calc(50% - 153px);\n  }\n  @media (min-width: 1260px) and (max-width: 1330px) {\n    width: 960px;\n    bottom: -43px;\n    left: calc(50% - 205px);\n  }\n  @media (min-width: 1330px) {\n    width: 1080px;\n    bottom: -71px;\n    left: calc(50% - 277px);\n  }\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  ', ';\n  z-index: 2;\n  position: relative;\n  border-radius: 8px;\n\n  @media (min-width: 10px) and (max-width: 960px) {\n    display: none;\n  }\n  @media (min-width: 960px) and (max-width: 1120px) {\n    display: block;\n    height: 300px;\n    margin-right: -10px;\n  }\n  @media (min-width: 1120px) and (max-width: 1260px) {\n    display: block;\n    height: 350px;\n    margin-right: -30px;\n  }\n  @media (min-width: 1260px) and (max-width: 1330px) {\n    display: block;\n    height: 400px !important;\n    margin-right: -50px;\n  }\n  @media (min-width: 1330px) {\n    display: block;\n    height: 450px;\n    margin-right: -70px;\n  }\n'], ['\n  ', ';\n  z-index: 2;\n  position: relative;\n  border-radius: 8px;\n\n  @media (min-width: 10px) and (max-width: 960px) {\n    display: none;\n  }\n  @media (min-width: 960px) and (max-width: 1120px) {\n    display: block;\n    height: 300px;\n    margin-right: -10px;\n  }\n  @media (min-width: 1120px) and (max-width: 1260px) {\n    display: block;\n    height: 350px;\n    margin-right: -30px;\n  }\n  @media (min-width: 1260px) and (max-width: 1330px) {\n    display: block;\n    height: 400px !important;\n    margin-right: -50px;\n  }\n  @media (min-width: 1330px) {\n    display: block;\n    height: 450px;\n    margin-right: -70px;\n  }\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  background-color: #1c1d23;\n  min-height: 650px;\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  padding-top: 130px;\n  .mobile-container {\n    width: 100%;\n    text-align: center;\n  }\n  video.video-mobile {\n    width: 90%;\n    max-width: 312px;\n    margin-top: 30px;\n    z-index: 3;\n    position: relative;\n    border-radius: 8px;\n  }\n'], ['\n  background-color: #1c1d23;\n  min-height: 650px;\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  padding-top: 130px;\n  .mobile-container {\n    width: 100%;\n    text-align: center;\n  }\n  video.video-mobile {\n    width: 90%;\n    max-width: 312px;\n    margin-top: 30px;\n    z-index: 3;\n    position: relative;\n    border-radius: 8px;\n  }\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  background-color: #1c1d23;\n  min-height: 650px;\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  .mobile-container {\n    width: 100%;\n    text-align: center;\n  }\n  video.video-mobile {\n    width: 90%;\n    max-width: 312px;\n    margin-top: 30px;\n    z-index: 3;\n    position: relative;\n    border-radius: 8px;\n  }\n'], ['\n  background-color: #1c1d23;\n  min-height: 650px;\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  .mobile-container {\n    width: 100%;\n    text-align: center;\n  }\n  video.video-mobile {\n    width: 90%;\n    max-width: 312px;\n    margin-top: 30px;\n    z-index: 3;\n    position: relative;\n    border-radius: 8px;\n  }\n']),
     _templateObject5 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin: 30px auto;\n  ', ';\n  @media (min-width: 690px) and (max-width: 960px) {\n    flex-direction: column;\n  }\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin: 30px auto;\n  ', ';\n  @media (min-width: 690px) and (max-width: 960px) {\n    flex-direction: column;\n  }\n']),
     _templateObject6 = _taggedTemplateLiteral(['\n  width: 100%;\n  ', ';\n  text-align: center;\n  ', ';\n  h2 {\n    font-size: 56px;\n    line-height: 75px;\n    text-align: center;\n    margin: 15px 0;\n    margin-top: 50px;\n    opacity: 1;\n    ', ';\n    color: white;\n\n\n  }\n  h4 {\n    text-align: center;\n    ', ';\n    color: white;\n    opacity: 0.8;\n  }\n'], ['\n  width: 100%;\n  ', ';\n  text-align: center;\n  ', ';\n  h2 {\n    font-size: 56px;\n    line-height: 75px;\n    text-align: center;\n    margin: 15px 0;\n    margin-top: 50px;\n    opacity: 1;\n    ', ';\n    color: white;\n\n\n  }\n  h4 {\n    text-align: center;\n    ', ';\n    color: white;\n    opacity: 0.8;\n  }\n']);
 
@@ -3684,7 +3669,7 @@ Object.defineProperty(exports, "__esModule", {
 var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n'], ['\n  width: 100%;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  width: 90%;\n  max-width: 312px;\n  margin-top: 30px;\n  z-index: 3;\n  position: relative;\n  border-radius: 8px;\n'], ['\n  width: 90%;\n  max-width: 312px;\n  margin-top: 30px;\n  z-index: 3;\n  position: relative;\n  border-radius: 8px;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  ', ';\n  z-index: 2;\n  position: relative;\n  border-radius: 8px;\n\n  @media (min-width: 10px) and (max-width: 960px) {\n    display: none;\n  }\n  @media (min-width: 960px) and (max-width: 1120px) {\n    display: block;\n    height: 300px;\n    min-width: 460px;\n    margin-left: -10px;\n    margin-right: 30px;\n  }\n  @media (min-width: 1120px) and (max-width: 1260px) {\n    display: block;\n    height: 350px;\n    min-width: 537px;\n    margin-left: -30px;\n    margin-right: 50px;\n  }\n  @media (min-width: 1260px) and (max-width: 1330px) {\n    display: block;\n    height: 400px !important;\n    min-width: 613px;\n    margin-left: -50px;\n  }\n  @media (min-width: 1330px) {\n    display: block;\n    height: 450px;\n    min-width: 690px;\n    margin-left: -70px;\n  }\n'], ['\n  ', ';\n  z-index: 2;\n  position: relative;\n  border-radius: 8px;\n\n  @media (min-width: 10px) and (max-width: 960px) {\n    display: none;\n  }\n  @media (min-width: 960px) and (max-width: 1120px) {\n    display: block;\n    height: 300px;\n    min-width: 460px;\n    margin-left: -10px;\n    margin-right: 30px;\n  }\n  @media (min-width: 1120px) and (max-width: 1260px) {\n    display: block;\n    height: 350px;\n    min-width: 537px;\n    margin-left: -30px;\n    margin-right: 50px;\n  }\n  @media (min-width: 1260px) and (max-width: 1330px) {\n    display: block;\n    height: 400px !important;\n    min-width: 613px;\n    margin-left: -50px;\n  }\n  @media (min-width: 1330px) {\n    display: block;\n    height: 450px;\n    min-width: 690px;\n    margin-left: -70px;\n  }\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);\n  min-height: 650px;\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  .mobile-container {\n    width: 100%;\n    text-align: center;\n  }\n  padding-top: 130px;\n'], ['\n  background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);\n  min-height: 650px;\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  .mobile-container {\n    width: 100%;\n    text-align: center;\n  }\n  padding-top: 130px;\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);\n  min-height: 650px;\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  .mobile-container {\n    width: 100%;\n    text-align: center;\n  }\n'], ['\n  background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);\n  min-height: 650px;\n  padding-top: 64px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  overflow: hidden;\n  .mobile-container {\n    width: 100%;\n    text-align: center;\n  }\n']),
     _templateObject5 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin: 30px auto;\n  ', ';\n  @media (min-width: 690px) and (max-width: 960px) {\n    flex-direction: column;\n  }\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin: 30px auto;\n  ', ';\n  @media (min-width: 690px) and (max-width: 960px) {\n    flex-direction: column;\n  }\n']),
     _templateObject6 = _taggedTemplateLiteral(['\n  width: 100%;\n  ', ';\n  text-align: center;\n  ', ';\n  h2 {\n    text-align: center;\n    margin: 15px 0;\n    margin-top: 50px;\n    ', ';\n    opacity: 1;\n\n  }\n  h4 {\n    text-align: center;\n    ', ';\n    opacity: 0.8;\n  }\n'], ['\n  width: 100%;\n  ', ';\n  text-align: center;\n  ', ';\n  h2 {\n    text-align: center;\n    margin: 15px 0;\n    margin-top: 50px;\n    ', ';\n    opacity: 1;\n\n  }\n  h4 {\n    text-align: center;\n    ', ';\n    opacity: 0.8;\n  }\n']);
 
@@ -10993,7 +10978,7 @@ var universalOptions = {
 
 var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Home',
-  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website2/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 117)), (0, _importCss3.default)('src/pages/Home', {
       disableWarnings: true
@@ -11013,7 +10998,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Discover',
-  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website2/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 173)), (0, _importCss3.default)('src/pages/Discover', {
       disableWarnings: true
@@ -11033,7 +11018,7 @@ var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Project',
-  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website2/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 174)), (0, _importCss3.default)('src/pages/Project', {
       disableWarnings: true
@@ -11053,7 +11038,7 @@ var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_3 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Governance',
-  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website2/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 175)), (0, _importCss3.default)('src/pages/Governance', {
       disableWarnings: true
@@ -11073,7 +11058,7 @@ var t_3 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_4 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Grants',
-  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website2/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 176)), (0, _importCss3.default)('src/pages/Grants', {
       disableWarnings: true
@@ -11093,7 +11078,7 @@ var t_4 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_5 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Contribute',
-  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website2/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 177)), (0, _importCss3.default)('src/pages/Contribute', {
       disableWarnings: true
@@ -11113,7 +11098,7 @@ var t_5 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_6 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Roadmap',
-  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website2/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 178)), (0, _importCss3.default)('src/pages/Roadmap', {
       disableWarnings: true
@@ -11133,7 +11118,7 @@ var t_6 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_7 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Network',
-  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website2/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 179)), (0, _importCss3.default)('src/pages/Network', {
       disableWarnings: true
@@ -11153,7 +11138,7 @@ var t_7 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_8 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/Bella',
-  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website2/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 180)), (0, _importCss3.default)('src/pages/Bella', {
       disableWarnings: true
@@ -11173,7 +11158,7 @@ var t_8 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_9 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/PoweredByAragon',
-  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website2/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 181)), (0, _importCss3.default)('src/pages/PoweredByAragon', {
       disableWarnings: true
@@ -11193,7 +11178,7 @@ var t_9 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_10 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/pages/NotFound',
-  file: '/Library/WebServer/Documents/aragon-website/dist/react-static-routes.js',
+  file: '/Library/WebServer/Documents/aragon-website2/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 182)), (0, _importCss3.default)('src/pages/NotFound', {
       disableWarnings: true
@@ -12167,4 +12152,4 @@ module.exports = require("react-reveal/Pulse");
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.9ef2dc8d.js.map
+//# sourceMappingURL=static.e12df306.js.map
