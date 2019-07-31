@@ -143,7 +143,6 @@ const HeroSection = styled(Section)`
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding-top: 130px;
   .mobile-container {
     width: 100%;
     text-align: center;

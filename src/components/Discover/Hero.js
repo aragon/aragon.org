@@ -124,7 +124,6 @@ const HeroSection = styled(Section)`
     width: 100%;
     text-align: center;
   }
-  padding-top: 130px;
 `;
 const Box = styled.div`
   display: flex;
