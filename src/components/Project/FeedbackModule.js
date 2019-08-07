@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
-import speech from './assets/speech.svg';
+import speech from './assets/feedback.svg';
 
 const FeedbackModule = () => (
   <StyledSection>
@@ -90,6 +90,7 @@ const Feedback = styled.div`
     letter-spacing: 0.1px;
     text-align: left;
     color: #7f8198;
+    margin-top: 15px;
   }
   h1 {
     font-family: 'FontLight', sans-serif;
@@ -101,6 +102,9 @@ const Feedback = styled.div`
     color: #2d4051;
     margin: 15px 0 0 0;
     ${medium('font-size: 46px;')};
+  }
+  a {
+    margin-top: 0!important;
   }
 `;
 const ImageContainer = styled.div`

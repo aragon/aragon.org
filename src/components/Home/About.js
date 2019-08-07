@@ -60,7 +60,7 @@ const About = () => (
 
 const AboutSection = styled(Section)`
   padding: 0 15px 30px 15px;
-  margin-top: -207px;
+  ${medium('margin-top: -207px;')};
   z-index: 3;
 `
 const Container = styled.div`

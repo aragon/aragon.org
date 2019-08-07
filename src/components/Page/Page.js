@@ -29,7 +29,7 @@ class Page extends React.Component {
                 <Head>
                   <title>{title || siteTitle}</title>
                 </Head>
-                
+
                 <Content>{children}</Content>
                 <Footer path={path} />
               </PublicUrl.Provider>
@@ -52,21 +52,21 @@ const Content = styled.div`
     color: #7f8198;
   }
   h2 {
-    font-family: 'FontLight', sans-serif;
-    font-size: 42px;
-    font-weight: 300;
-    line-height: 1.2;
+    font-family: 'FontBold', sans-serif;
+    font-size: 68px;
+    line-height: 1;
     text-align: center;
-    color: #2d4051;
-    margin: 30px 0;
+    letter-spacing: -1.8px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
   }
   h4 {
     font-family: 'FontRegular', sans-serif;
-    font-size: 20px;
-    line-height: 1.75;
-    letter-spacing: 0.1px;
+    font-size: 22px;
+    line-height: 1.6;
     text-align: center;
-    color: #7f8198;
+    letter-spacing: 0.33px;
+    color: #FFFFFF;
   }
   .action-button {
     font-family: 'FontRegular', sans-serif;

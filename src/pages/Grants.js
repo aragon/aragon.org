@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Page } from '../components'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
-import backgroundImage from '../components/Project/assets/grants-background.png'
+import backgroundImage from '../components/Project/assets/grants-background.svg'
 import GrantseContent from '../components/Project/GrantsContent'
 import GrantsQuotes from '../components/Project/GrantsQuotes'
 import Section from '../components/General/Section'
@@ -10,7 +10,6 @@ import { Button } from '@aragon/ui'
 
 const Grants = () => (
   <Page path="/project/grants">
-    <SecondaryNavbar page="grants"/>
     <GrantsSection>
       <Container>
         <h2>Aragon Nest</h2>
@@ -18,6 +17,7 @@ const Grants = () => (
         <Button.Anchor className="hero-link" mode="strong" href="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant" target="_blank">Apply</Button.Anchor>
       </Container>
     </GrantsSection>
+    <SecondaryNavbar page="grants"/>
     <GrantseContent/>
     <GrantsQuotes/>
   </Page>

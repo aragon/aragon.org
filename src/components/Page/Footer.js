@@ -144,11 +144,16 @@ const FooterSection = styled(Section)`
   }
   .principal-button.centered,
   .secondary-button.centered {
-    margin: 0 10px;
+    margin: 10px;
+    ${medium('margin: 10px;')};
+    display:  block;
+    ${medium('display: inline;')};
   }
 `;
 const PreFooterText = styled.div`
-  width: 45%;
+  width: 100%;
+  text-align: center;
+  ${medium('width: 45%; text-align: left;')};
 `
 const PreFooter = styled.div`
   min-height: 70px;
@@ -156,13 +161,14 @@ const PreFooter = styled.div`
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.150249);
   border-radius: 6px;
   display: flex;
-  padding: 60px;
+  padding: 30px;
   justify-content: space-between;
   align-items: center;
   background-image: url(${backgroundImage});
   background-size: cover;
   background-position: center;
-
+  flex-direction: column;
+  ${medium('flex-direction: row; padding: 60px;')};
   h2 {
     font-family: 'FontMedium';
     font-size: 42px;

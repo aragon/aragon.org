@@ -98,8 +98,7 @@ class GrantsContent extends React.Component {
           <LongCard
             textAlign="center"
             color="#b4b5cc"
-            gradient="radial-gradient(circle at 99% 100%, #1c1d23, #2d2e39)"
-            colorWhite
+            gradient="radial-gradient(circle at 99% 100%, transparent, transparent)"
             title="A thriving ecosystem">
             <LongCardContainer>
               <div>
@@ -122,15 +121,17 @@ class GrantsContent extends React.Component {
           </LongCard>
           <Card
             linkTo="https://github.com/aragon/nest"
-            imageUrl={'Project/assets/governance2'}
+            imageUrl={'Project/assets/grants1'}
             title="Fully transparent"
             content={mudule1Content}
+            className="transparent"
           />
           <Card
             linkTo="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant"
-            imageUrl={'Home/home-assets/home4'}
+            imageUrl={'Project/assets/grants2'}
             title="Apply now"
             content={mudule2Content}
+            className="apply-card"
           />
         </Container>
       </Section>
@@ -147,6 +148,13 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  .apply-card .principal-image {
+    height: 152px;
+    width: 216px;
+  }
+  .transparent .principal-image {
+    margin-bottom: 14px;
+  }
 `;
 
 const LongCardContainer = styled.div`
@@ -168,44 +176,33 @@ const LongCardContainer = styled.div`
     line-height: 1.82;
     text-align: center;
     min-height: 123px;
-  }
-  h3 {
-    font-family: 'FontLight', sans-serif;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 1.33;
-    text-align: center;
-  }
-  h5,
-  h3 {
     background-image: -webkit-linear-gradient(119deg, #faf9f4, #2c86d0);
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  h3.one,
+  h3 {
+    font-family: 'FontRegular', sans-serif;
+    font-size: 21px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.315px;
+    color: #637381;
+  }
+
   h5.one {
-    background-image: -webkit-linear-gradient(119deg, #faf9f4, #f9f5de);
+    background-image: -webkit-linear-gradient(119deg, #FFBB70, #FF4E78);
   }
-  h3.two,
+
   h5.two {
-    background-image: -webkit-linear-gradient(119deg, #e1f6ed, #92bdcb);
+    background-image: -webkit-linear-gradient(119deg, #FFBB70, #FF4E78);
   }
-  h3.three,
+
   h5.three {
-    background-image: -webkit-linear-gradient(119deg, #e8e5f7, #adc5db);
+    background-image: -webkit-linear-gradient(119deg, #FFBB70, #FF4E78);
   }
-  h3.four,
+
   h5.four {
-    background-image: -webkit-linear-gradient(119deg, #b0cbe4, #2c86d0);
+    background-image: -webkit-linear-gradient(119deg, #FFBB70, #FF4E78);
   }
 `;
 

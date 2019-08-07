@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from '../General/Section';
 import {Link} from 'react-static';
+import {breakpoint} from '@aragon/ui';
 
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
@@ -54,7 +55,8 @@ const TextContainer = styled.div`
   text-align: center;
   h1 {
     font-family: 'FontBold';
-    font-size: 68px;
+    font-size: 47px;
+    ${medium('font-size: 68px;')};
     line-height: 1.09;
     margin: 0;
     text-align: center;

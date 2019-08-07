@@ -6,7 +6,7 @@ import AragonClient from '../components/Project/AragonClient';
 import AragonNetwork from '../components/Project/AragonNetwork';
 import FeedbackModule from '../components/Project/FeedbackModule';
 import Section from '../components/General/Section';
-import backgroundImage from '../components/Project/assets/roadmap-background.png';
+import backgroundImage from '../components/Project/assets/roadmap-cover.svg';
 import {Button} from '@aragon/ui';
 
 class Roadmap extends React.Component {
@@ -16,15 +16,19 @@ class Roadmap extends React.Component {
     const {active} = this.state;
     return (
       <Page path="/project/roadmap">
-        <SecondaryNavbar page="roadmap" />
         <Hero>
           <Container>
             <h2>Roadmap</h2>
             <h4>
-              As a community-driven project, we want to share our roadmap with the world.<br/>You can filter by product, and also by development team.
+              As a community-driven project, we want to share our roadmap with
+              the world.
+              <br />
+              You can filter by product, and also by development team.
             </h4>
           </Container>
         </Hero>
+        <SecondaryNavbar page="roadmap" />
+        <TabsSeparator />
         <Tabs>
           <div
             className={active !== 'left' ? 'left' : 'active left'}
@@ -43,6 +47,11 @@ class Roadmap extends React.Component {
     );
   }
 }
+const TabsSeparator = styled.div`
+  background: white;
+  height: 40px;
+  width: 100%;
+`
 
 const Tabs = styled.div`
   width: 80%;

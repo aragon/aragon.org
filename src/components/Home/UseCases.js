@@ -4,6 +4,7 @@ import Section from '../General/Section';
 import blankDAO from './home-assets/blankDAO.png';
 import { Badge } from '@aragon/ui'
 
+import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
 
@@ -50,8 +51,11 @@ const UseCase = styled.div`
   border-radius: 12px;
   display: flex;
   overflow: hidden;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
   div {
-    padding: 60px;
+    padding: 20px;
+    ${medium('padding: 60px;')};
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -62,8 +66,9 @@ const UseCase = styled.div`
   }
   h2 {
     font-family: 'FontMedium';
-    font-size: 46px;
-    line-height: 59px;
+    font-size: 37px;
+    ${medium('font-size: 46px;')};
+    line-height: 1.28;
     letter-spacing: -0.564706px;
     color: #212b36;
     text-align: left;

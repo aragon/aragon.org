@@ -716,6 +716,8 @@ const AutarkBadge = styled(Badge)`
 
 const RoadmapSection = styled(Section)`
   background: #f9fafc;
+  margin-top: -25px;
+  z-index: -1;
 `;
 const Container = styled.div`
   width: 100%;

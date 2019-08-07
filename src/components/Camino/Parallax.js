@@ -14,7 +14,7 @@ const medium = css => breakpoint('medium', css);
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 class ParallaxComponent extends React.Component {
   render() {
-    var  medium =  false;
+    var  medium =  true;
     return (
       <Box>
       <ParallaxSection>

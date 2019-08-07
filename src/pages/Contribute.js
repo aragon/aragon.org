@@ -4,12 +4,11 @@ import { Page } from '../components'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import ContributeeContent from '../components/Project/ContributeContent'
 import Section from '../components/General/Section'
-import backgroundImage from '../components/Project/assets/community-background.png'
+import backgroundImage from '../components/Project/assets/contribute-cover.svg'
 import { Button } from '@aragon/ui'
 
 const Contribute = () => (
   <Page path="/project/contribute">
-    <SecondaryNavbar page="contribute"/>
     <ContributeSection>
       <Container>
         <h2>The community awaits you</h2>
@@ -17,6 +16,7 @@ const Contribute = () => (
         <Button.Anchor className="hero-link" mode="strong" href="https://blog.aragon.org/decentralizing-aragons-development-5062fd6d135d" target="_blank">Read more</Button.Anchor>
       </Container>
     </ContributeSection>
+    <SecondaryNavbar page="contribute"/>
     <ContributeeContent/>
   </Page>
 )
@@ -31,6 +31,9 @@ const ContributeSection = styled(Section)`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  h4 {
+    max-width: 584px;
+  }
 `;
 
 const Container = styled.div`
