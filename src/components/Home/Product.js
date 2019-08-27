@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from '../General/Section';
 import product from './home-assets/product.png';
-
+import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
 
@@ -17,7 +17,7 @@ const ProductSection = styled(Section)`
   background-color: transparent;
   padding: 0;
   position: relative;
-  margin-top: -114px;
+  ${medium('margin-top: -114px;')};
 
   .container {
     max-width: 100%;

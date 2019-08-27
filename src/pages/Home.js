@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Page} from '../components';
 import Hero from '../components/Home/Hero';
+import Camino from '../components/Home/Camino';
 import Product from '../components/Home/Product';
 import About from '../components/Home/About';
 import UseCases from '../components/Home/UseCases';
@@ -21,6 +22,7 @@ class Home extends React.Component {
         <Hero />
         <Product />
         <About />
+        <Camino />
         <UseCases />
         <Organizations/>
       </Page>

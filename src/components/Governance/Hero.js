@@ -30,7 +30,7 @@ const HeroSection = styled(Section)`
   background: #F9EDDF;
   background-image: url(${background});
   background-size: cover;
-  background-position: center
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;

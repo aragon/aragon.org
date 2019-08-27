@@ -12,12 +12,12 @@ import events from './assets/secondary-navbar/events.svg';
 import wiki from './assets/secondary-navbar/wiki.svg';
 
 const dropdownItems = [
-  (<span><img src={governance} />Governance</span>),
-  (<span><img src={grants} />Grants</span>),
-  (<span><img src={contribute} />Contribute</span>),
-  (<span><img src={blog} />Blog</span>),
-  (<span><img src={events} />Events</span>),
-  (<span><img src={wiki} />Wiki</span>),
+  (<span className="dropdown-span"><img src={governance} />Governance</span>),
+  (<span className="dropdown-span"><img src={grants} />Grants</span>),
+  (<span className="dropdown-span"><img src={contribute} />Contribute</span>),
+  (<span className="dropdown-span"><img src={blog} />Blog</span>),
+  (<span className="dropdown-span"><img src={events} />Events</span>),
+  (<span className="dropdown-span"><img src={wiki} />Wiki</span>),
 ];
 const dropdownNames = [
   'governance',
@@ -99,7 +99,7 @@ class SecondaryNavbar extends React.Component {
               wide
               items={dropdownItems}
               active={dropdownNames.indexOf(this.props.page)}
-              onChange={this.handleChange}
+              className="secondary-dropdown"
             />
           </DropDownContainer>
         </BreakPoint>
@@ -120,6 +120,9 @@ const DropDownContainer = styled.div`
     display: flex;
     align-items: center;
     font-family: 'FontRegular';
+  }
+   span.dropdown-span:hover, span.dropdown-span:focus {
+    color: #4A80E4;
   }
 `;
 

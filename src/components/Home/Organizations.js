@@ -38,23 +38,24 @@ const Organization = styled(Section)`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px;
+  ${medium('padding: 120px;')}
 `;
 const Box = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  ${medium('flex-direction: row;')};
+  ${medium('flex-direction: row;')}
 `;
 const Container = styled.div`
-  width: 60%;
+  width: 100%;
+  ${medium('width: 60%;')}
   text-align: center;
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  ${medium('text-align: left; margin: inherit;')};
+  align-items: center;
+  ${medium('text-align: left; margin: inherit; align-items: flex-start;')};
   .blue {
     background: -webkit-linear-gradient(69deg, #65aaff, #5d21d4);
     -webkit-background-clip: text;
@@ -63,7 +64,8 @@ const Container = styled.div`
   p {
     font-size: 21px;
     line-height: 35px;
-    text-align: left;
+    text-align: center;
+    ${medium('text-align: left;')}
     letter-spacing: 0.24px;
     color: #6d7693;
     max-width: 298px;
@@ -72,7 +74,8 @@ const Container = styled.div`
   h3 {
     font-size: 38px;
     line-height: 52px;
-    text-align: left;
+    text-align: center;
+    ${medium('text-align: left;')}
     letter-spacing: -0.447059px;
     margin: 50px 0 5px;
     color: #212b36;
@@ -81,7 +84,9 @@ const Container = styled.div`
   }
 `;
 const Image = styled.img`
-  max-width: calc(100% + 413px);
+  max-width: 100%;
+  margin-top: 30px;
+  ${medium('max-width: calc(100% + 413px); margin-top: 0;')}
 `;
 
 const ImageContainer = styled.div`
