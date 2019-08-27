@@ -61,7 +61,7 @@ const Container = styled.div`
     width: 110%;
   }
   .agent-app-section .divided-section-container {
-    margin-left: 125px;
+    ${medium('margin-left: 125px;')};
   }
   .yellow {
     background: -webkit-linear-gradient(69deg, #ff9372, #ffd770);
