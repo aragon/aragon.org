@@ -19,27 +19,33 @@ const Templates = () => (
     <Container>
       <Box className="green">
         <img src={company} />
-        <h4>Company</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
-        </p>
+        <div>
+          <h4>Company</h4>
+          <p>
+            Launch your business and assign transferable tokens to contributors
+            and supporters.
+          </p>
+        </div>
       </Box>
-      <Box  className="violet">
+      <Box className="violet">
         <img src={reputation} />
-        <h4>Reputation</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
-        </p>
+        <div>
+          <h4>Reputation</h4>
+          <p>
+            Reward contributors with non-transferable tokens for the value they
+            add to your organization.
+          </p>
+        </div>
       </Box>
       <Box className="red">
         <img src={membership} />
-        <h4>Membership</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
-        </p>
+        <div>
+          <h4>Membership</h4>
+          <p>
+            Create a democratic "one person, one vote" organization where each
+            member gets a non-transferable token.
+          </p>
+        </div>
       </Box>
     </Container>
   </TemplatesSection>
@@ -63,9 +69,14 @@ const Box = styled.div`
     margin: auto;
     margin-bottom:30px;
   }
-  text-align: center
+  div {
+    min-height: 145px;
+  }
+  text-align: center;
   border-radius: 12px;
   padding: 50px 38px;
+  display: flex;
+  flex-direction: column;
   &.red{
     background: linear-gradient(318.35deg, #fff886 -112.1%, #ff4e78 91.91%);
   }

@@ -29,6 +29,7 @@ class Navbar extends React.Component {
       scroll: scroll,
       height: 64,
       image: 44,
+      opacity: 0,
     };
   }
 
@@ -42,11 +43,14 @@ class Navbar extends React.Component {
 
   onScroll = event => {
     let scroll = 1 - (document.scrollingElement.scrollTop * 2) / 1000;
-    let image = 1 - (document.scrollingElement.scrollTop * 2) / 1000;
+
+    let opacity = 0.009 * document.scrollingElement.scrollTop;
+    if (opacity > 0.9) {
+      opacity = 0.9;
+    }
 
     if (scroll < 0.8) {
       scroll = 0.8;
-      image = 0.8;
     }
     if (
       window.location.href.indexOf('bella') >= 0 &&
@@ -63,93 +67,102 @@ class Navbar extends React.Component {
     this.setState({
       scroll: scroll,
       height: height * 64,
-      image: image * 44,
+      opacity: opacity,
     });
   };
-  renderIn = ({x, h, i, menuItems, path}) => {
-    return (
-      <AragonNavbar
-        style={{
-          background: x.interpolate(v => `rgba(28, 29, 35, ${v})`),
-          height: h.interpolate(v => `${v}px`),
-        }}>
-        <Center>
-          <BreakPoint from="medium">
-            <ul className="left">
-              <li>
-                <MenuItem
-                  url={menuItems[0][0]}
-                  label={menuItems[0][1]}
-                  active={menuItems[0][2]}
-                  renderLink={renderMenuItemLink}
-                />
-              </li>
-              <li>
-                <MenuItem
-                  url={menuItems[1][0]}
-                  label={menuItems[1][1]}
-                  active={menuItems[1][2]}
-                  renderLink={renderMenuItemLink}
-                />
-              </li>
-            </ul>
-            <ul>
-              <li className="logo">
-                <LogoLink to="/">
-                  <img src={logo} />
-                </LogoLink>
-              </li>
-            </ul>
-            <ul className="right">
-              <li>
-                <MenuItem
-                  url={menuItems[2][0]}
-                  label={menuItems[2][1]}
-                  active={menuItems[2][2]}
-                  renderLink={renderMenuItemLink}
-                />
-              </li>
-              <li>
-                <MenuItem
-                  url={menuItems[3][0]}
-                  label={menuItems[3][1]}
-                  active={menuItems[3][2]}
-                  renderLink={renderMenuItemLink}
-                />
-              </li>
-            </ul>
-          </BreakPoint>
-          <BreakPoint to="medium">
-            <MenuPanel items={menuItems} renderLink={renderMenuItemLink} />
-            <Link to={'/'}>
-              <span>
-                <MobileLogo src={logo} />
-              </span>
-            </Link>
-            <div style={{width: '30px'}}>
-              <span />
-            </div>
-          </BreakPoint>
-        </Center>
-      </AragonNavbar>
-    );
-  };
+
   render() {
-    const {menuItems, path} = this.props;
+    const {menuItems, path, color} = this.props;
+    let background = 'rgba(28, 36, 46, ';
+    if (color && color == 'black') {
+      background = 'rgba(254, 254, 254, ';
+    }
     return (
-      <Spring
-        from={{x: 0, h: 64, i: 44}}
-        to={{x: this.state.scroll, h: this.state.height, i: this.state.image}}
+      <Inside
+        x={this.state.scroll}
+        h={this.state.height}
+        opacity={this.state.opacity}
         menuItems={menuItems}
         path={path}
-        native>
-        {this.renderIn}
-      </Spring>
+        color={color}
+        background={background}
+      />
     );
   }
 }
 
-const AragonNavbar = styled(animated.div)`
+const Inside = ({x, h, opacity, menuItems, path, background, color}) => (
+  <AragonNavbar
+    style={{
+      height: h,
+      background: background + opacity + ')',
+    }}>
+    <Center>
+      <BreakPoint from="medium">
+        <ul className="left">
+          <li>
+            <MenuItem
+              url={menuItems[0][0]}
+              label={menuItems[0][1]}
+              active={menuItems[0][2]}
+              renderLink={renderMenuItemLink}
+              color={color}
+            />
+          </li>
+          <li>
+            <MenuItem
+              url={menuItems[1][0]}
+              label={menuItems[1][1]}
+              active={menuItems[1][2]}
+              renderLink={renderMenuItemLink}
+              color={color}
+            />
+          </li>
+        </ul>
+        <ul>
+          <li className="logo">
+            <LogoLink to="/">
+              <img src={logo} />
+            </LogoLink>
+          </li>
+        </ul>
+        <ul className="right">
+          <li>
+            <MenuItem
+              url={menuItems[2][0]}
+              label={menuItems[2][1]}
+              active={menuItems[2][2]}
+              renderLink={renderMenuItemLink}
+              color={color}
+            />
+          </li>
+          <li>
+            <MenuItem
+              url={menuItems[3][0]}
+              label={menuItems[3][1]}
+              active={menuItems[3][2]}
+              renderLink={renderMenuItemLink}
+              color={color}
+            />
+          </li>
+        </ul>
+      </BreakPoint>
+      <BreakPoint to="medium">
+        <MenuPanel items={menuItems} renderLink={renderMenuItemLink} />
+        <Link to={'/'}>
+          <span>
+            <MobileLogo src={logo} />
+          </span>
+        </Link>
+        <div style={{width: '30px'}}>
+          <span />
+        </div>
+      </BreakPoint>
+    </Center>
+  </AragonNavbar>
+);
+
+const AragonNavbar = styled.div`
   width: 100%;
   height: 64px;
   display: flex;
@@ -174,7 +187,7 @@ const AragonNavbar = styled(animated.div)`
         left: -5px;
         right: -5px;
         bottom: 0;
-        outline: 2px solid #22e0ff;
+        outline: 2px solid #4A80E4;
       }
     }
     &:active:after {

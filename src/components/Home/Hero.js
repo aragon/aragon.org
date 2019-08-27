@@ -11,20 +11,22 @@ const Hero = () => (
   <HeroSection>
     <TextContainer>
       <h1>Organizations of the future</h1>
-      <div className="h1-blue-box"><h1 className="blue">run on Aragon</h1></div>
+      <div className="h1-blue-box">
+        <h1 className="blue">run on Aragon</h1>
+      </div>
       <h2>
-        Aragon lets you freely organize and collaborate without borders or
-        intermediaries. Create global, bureaucracy-free organizations,
-        companies, or communities.
+        Aragon empowers you to freely organize and collaborate without borders
+        or intermediaries. Create global, bureaucracy-free organizations,
+        companies, and communities.
       </h2>
     </TextContainer>
     <ButtonContainer>
-      <a className="principal-button centered" mode="strong" href="./discover">
+      <a className="principal-button centered" mode="strong" href="https://mainnet.aragon.org/">
         Try the product
       </a>
-      <a className="secondary-button centered" mode="strong" href="./discover">
+      <Link className="secondary-button centered" to="discover">
         Discover Aragon
-      </a>
+      </Link>
     </ButtonContainer>
   </HeroSection>
 );
@@ -74,7 +76,13 @@ const TextContainer = styled.div`
   }
   h1.blue {
     color: rgba(1, 191, 227);
-    background: linear-gradient(to right, #01BFE3 20%, #01F0E0 40%, #01F0E0 60%, #01BFE3 80%);
+    background: linear-gradient(
+      to right,
+      #01bfe3 20%,
+      #01f0e0 40%,
+      #01f0e0 60%,
+      #01bfe3 80%
+    );
     background-size: 200% auto;
     background-clip: text;
     text-fill-color: transparent;
@@ -82,17 +90,16 @@ const TextContainer = styled.div`
     -webkit-text-fill-color: transparent;
 
     animation: shine 4s linear infinite;
-
   }
   h2 {
-    font-family: 'FontRegular'!important;
-    font-size: 22px!important;
-    line-height: 35px!important;
-    text-align: center!important;
-    letter-spacing: 0.33px!important;
-    color: #637381!important;
-    max-width: 632px!important;
-    margin: 20px auto 30px auto!important;
+    font-family: 'FontRegular' !important;
+    font-size: 22px !important;
+    line-height: 35px !important;
+    text-align: center !important;
+    letter-spacing: 0.33px !important;
+    color: #637381 !important;
+    max-width: 632px !important;
+    margin: 20px auto 30px auto !important;
   }
 `;
 export default Hero;

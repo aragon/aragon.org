@@ -6,7 +6,7 @@ import AragonClient from '../components/Project/AragonClient';
 import AragonNetwork from '../components/Project/AragonNetwork';
 import FeedbackModule from '../components/Project/FeedbackModule';
 import Section from '../components/General/Section';
-import backgroundImage from '../components/Project/assets/roadmap-cover.svg';
+import backgroundImage from '../components/Project/assets/roadmap.svg';
 import {Button} from '@aragon/ui';
 
 class Roadmap extends React.Component {

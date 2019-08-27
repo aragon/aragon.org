@@ -11,10 +11,14 @@ const Organizations = () => (
   <Organization>
     <Box>
       <Container>
-        <h3>Organizations you can understand</h3>
+        <h3>
+          Transparent <br />
+          <span className="blue">governance</span>
+        </h3>
         <p>
-          Whether you want to run a company, a community or a co-op, Aragon is
-          easy to use. No need to go through lengthy stack of papers.
+          View and participate in important decisions. Track the movement of
+          funds with full accountability. Understand at a glance who has the
+          power in your organization.
         </p>
         <a className="secondary-button" href="./discover">
           Learn more
@@ -51,6 +55,11 @@ const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   ${medium('text-align: left; margin: inherit;')};
+  .blue {
+    background: -webkit-linear-gradient(69deg, #65aaff, #5d21d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   p {
     font-size: 21px;
     line-height: 35px;
@@ -79,6 +88,6 @@ const ImageContainer = styled.div`
   width: 100%;
   text-align: center;
   margin: auto;
-`
+`;
 
 export default Organizations;

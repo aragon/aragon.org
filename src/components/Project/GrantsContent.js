@@ -99,7 +99,8 @@ class GrantsContent extends React.Component {
             textAlign="center"
             color="#b4b5cc"
             gradient="radial-gradient(circle at 99% 100%, transparent, transparent)"
-            title="A thriving ecosystem">
+            title="A thriving ecosystem"
+            className="numbers" >
             <LongCardContainer>
               <div>
                 <h5 className="one">${this.state.one}</h5>
@@ -154,6 +155,10 @@ const Container = styled.div`
   }
   .transparent .principal-image {
     margin-bottom: 14px;
+  }
+  .numbers {
+    background: white;
+    box-shadow: 0 0 rgb(255, 255, 255);
   }
 `;
 

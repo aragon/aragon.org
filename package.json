@@ -12,16 +12,16 @@
     "deploy": "NODE_ENV=production SITE_ROOT=https://aragon.org/ npm run build && echo 'aragon.org' > dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
-    "@aragon/ui": "^0.18.2",
-    "react": "^16.1.1",
+    "@aragon/ui": "^0.40.2",
+    "react": "^16.7.0-alpha.0",
     "react-countup": "^4.1.3",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.7.0-alpha.0",
     "react-reveal": "^1.2.2",
     "react-router": "^4.2.0",
-    "react-spring": "^8.0.27",
+    "react-spring": "^7.2.10",
     "react-static": "^5.7.1",
     "react-youtube": "^7.9.0",
-    "styled-components": "^3.2.5"
+    "styled-components": "^4.0.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",

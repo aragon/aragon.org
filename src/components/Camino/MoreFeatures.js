@@ -20,35 +20,34 @@ const large = css => breakpoint('medium', css);
 const MoreFeatures = () => (
   <Container>
     <Feature image={image5} imageLeft={true} sectionClass="feature">
-      <h3>
-        New voting <span className="green">experience</span>
+      <h3 className="voting">
+        Enhanced <br />
+        <span className="green">voting transparency</span>
       </h3>
       <p>
-        Voting is where decisions are taken. As such, it is at the very core of
-        Aragon. We put the upmost care into designing a seamless voting
-        experience.
+        The voting app has been redesigned to make governance more accessible.
+        Easily find and understand the details of a vote.
       </p>
       <Label title="Voting" image={label1} />
     </Feature>
     <Feature image={image6} sectionClass="feature">
       <h3 className="finance">
-        A new look for the <br />{' '}
-        <span className="blue">finance experience</span>
+        Better <br />
+        <span className="blue">financial visibility</span>
       </h3>
       <p>
-        The brand-new face of the Finance app enables a much clearer outlook of
-        your organization’s finances. Now with more powerful filters.
+        View and sort your organization’s finances for greater clarity and
+        insight. Now with more powerful filters.
       </p>
       <Label title="Finance" image={label2} />
     </Feature>
-    <Feature image={image7} imageLeft={true}  sectionClass="feature">
-      <h3>
-        New email <span className="red">notifications</span>
+    <Feature image={image7} imageLeft={true} sectionClass="feature">
+      <h3 className="mailing">
+        Stay up to date with <span className="red">email notifications</span>
       </h3>
       <p>
-        Easily subscribe to the events that matter to you. Wheter it’s a new
-        vote being created or a finance transfer being initiated, you are now in
-        the loop.
+        Whether it's a new vote, finance transfer, or permissions change,
+        subscribe to the events that matter to you.
       </p>
       <Label title="notifications" image={label3} />
     </Feature>
@@ -60,15 +59,15 @@ const Container = styled.div`
     ${medium('max-width: calc(100% + 200px) !important;')};
   }
   .red {
-    color: #FB7777;
+    color: #fb7777;
   }
   .blue {
-    background: -webkit-linear-gradient(69deg, #46C4E6, #4A80E4);
+    background: -webkit-linear-gradient(69deg, #46c4e6, #4a80e4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .green {
-    background: -webkit-linear-gradient(69deg, #A8ED2F, #68DFB1);
+    background: -webkit-linear-gradient(69deg, #a8ed2f, #68dfb1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -77,6 +76,9 @@ const Container = styled.div`
   }
   h3.finance {
     max-width: 500px;
+  }
+  h3.voting, h3.mailing {
+    max-width: 369px;
   }
 `;
 export default MoreFeatures;

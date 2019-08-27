@@ -235,7 +235,7 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="orange">Foundraising</StyledBadge>
+                    <StyledBadge className="orange">Fundraising</StyledBadge>
                     <AragonBlackBadge>Aragon Black</AragonBlackBadge>
                   </div>
                   <h3>Fundraising library</h3>
@@ -251,7 +251,7 @@ class AragonClient extends React.Component {
               <Entry>
                 <Module>
                   <div className="badge-container">
-                    <StyledBadge className="orange">Foundraising</StyledBadge>
+                    <StyledBadge className="orange">Fundraising</StyledBadge>
                     <AragonBlackBadge>Aragon Black</AragonBlackBadge>
                   </div>
                   <h3>Fundraising app</h3>

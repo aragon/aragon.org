@@ -1,80 +1,48 @@
 import React from 'react';
-import Section from '../General/Section';
-import LongCard from '../General/LongCard';
+import AlmostFullSection from '../General/AlmostFullSection';
 import styled from 'styled-components';
 import {Link} from 'react-static';
 import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
+import image from './assets/maria.png';
 
-const mudule1Content = (
-  <span>
-    <p>
+const BlogPost = () => (
+  <AlmostFullSection backgroundColor="#639CF5" image={image}>
+    <AlmostFullSectionBox>
+      <h3>Freeing the Marias of the world</h3>
+      <p>
       Aragon represents a new chapter in the history of society. Read more on
       why decentralized organizations can solve the world’s worst problems, with
       the example of Maria.
-    </p>
-    <p>
-      <a
-        className="action-button"
-        href="https://blog.aragon.org/decentralized-organizations-can-solve-the-worlds-worst-problems-840db6255d12/"
-        target="_blank">
-        <span>
-          Read more <img src={require(`../General/assets/arrow.svg`)} />
-        </span>
-      </a>
-    </p>
-  </span>
-);
-const mudule2Content = (
-  <span>
-    <p>
-      <a
-        className="action-button"
-        href="https://mainnet.aragon.org "
-        target="_blank">
-        <span>
-          Try it now <img src={require(`../General/assets/arrow.svg`)} />
-        </span>
-      </a>
-    </p>
-  </span>
-);
-const BlogPost = () => (
-  <Section>
-    <Container>
-      <MariasPost
-        linkTo="https://blog.aragon.org/decentralized-organizations-can-solve-the-worlds-worst-problems-840db6255d12/"
-        background={'Discover/assets/background-discover3.png'}
-        colorWhite
-        textAlign="left"
-        title="Freeing the Marias of the world"
-        content={mudule1Content}
-      />
-      <LongCard
-        linkTo="https://mainnet.aragon.org "
-        background={'Discover/assets/background-discover4.png'}
-        colorWhite
-        textAlign="center"
-        title="Reclaim your freedom"
-        content={mudule2Content}
-      />
-    </Container>
-  </Section>
+      </p>
+      <a href="https://blog.aragon.org/decentralized-organizations-can-solve-the-worlds-worst-problems-840db6255d12/">Read more</a>
+    </AlmostFullSectionBox>
+  </AlmostFullSection>
 );
 
-const Container = styled.div`
-  display: grid;
-  ${medium(
-    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px'
-  )};
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-`;
-const MariasPost = styled(LongCard)`
-  background-position: 60% !important;
-  ${medium('background-position: center;')};
+const AlmostFullSectionBox = styled.div`
+  h3 {
+    font-family: 'FontRegular', sans-serif;
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: -0.564706px;
+    color: #ffffff !important;
+  }
+  p {
+    font-family: 'FontRegular', sans-serif;
+    font-size: 21px;
+    line-height: 35px;
+    letter-spacing: 0.315px;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+  a {
+    font-family: 'FontSemiBold';
+    font-size: 21px;
+    line-height: 35px;
+    letter-spacing: 0.315px;
+    color: #ffffff;
+  }
 `;
 
 export default BlogPost;

@@ -16,9 +16,8 @@ const menuItems = [
 
 class Page extends React.Component {
   render() {
-    const {children, path} = this.props;
+    const {contentColor, children, path, color} = this.props;
     const items = menuItems.map(item => [...item, item[0] === path]);
-
     return (
       <SiteData
         render={({title: siteTitle}) => (
@@ -29,8 +28,8 @@ class Page extends React.Component {
                 <Head>
                   <title>{title || siteTitle}</title>
                 </Head>
-
-                <Content>{children}</Content>
+                <Navbar menuItems={items} path={path} color={color} />
+                <Content contentColor={contentColor}>{children}</Content>
                 <Footer path={path} />
               </PublicUrl.Provider>
             )}
@@ -43,6 +42,9 @@ class Page extends React.Component {
 
 const Content = styled.div`
   min-height: calc(100vh - 116px) !important;
+  ${p =>
+    p.contentColor &&
+    'background-color: ' + p.contentColor}
   p {
     font-family: 'FontRegular', sans-serif;
     font-size: 16px;
@@ -73,7 +75,7 @@ const Content = styled.div`
     font-size: 16px;
     font-weight: 400;
     letter-spacing: normal;
-    color: #01c3e3;
+    color: #4A80E4;
     margin-top: 20px;
     ${large('margin-top: 30px;')};
     display: block;

@@ -57,7 +57,7 @@ const Container = styled.div`
     color: white;
   }
   a:hover {
-    color: #22e0ff;
+    color: #4A80E4;
   }
 `
 

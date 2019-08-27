@@ -7,11 +7,13 @@ const medium = css => breakpoint('medium', css);
 
 const DividedSection = ({image, imageLeft, sectionClass, children}) => (
   <StyledSection className={sectionClass}>
-    <Box>
+    <Box className="box">
       {imageLeft && (
-        <ImageContainer className="image-left">
-          <Image className="divided-section-image" src={image} />
-        </ImageContainer>
+        <BreakPoint from="medium">
+          <ImageContainer className="image-left">
+            <Image className="divided-section-image" src={image} />
+          </ImageContainer>
+        </BreakPoint>
       )}
       <Container className="divided-section-container">{children}</Container>
       {!imageLeft && (
@@ -19,10 +21,16 @@ const DividedSection = ({image, imageLeft, sectionClass, children}) => (
           <Image className="divided-section-image" src={image} />
         </ImageContainer>
       )}
+      {imageLeft && (
+        <BreakPoint to="medium">
+          <ImageContainer className="image-left">
+            <Image className="divided-section-image" src={image} />
+          </ImageContainer>
+        </BreakPoint>
+      )}
     </Box>
   </StyledSection>
 );
-
 
 const StyledSection = styled(Section)`
   background-color: white;
@@ -48,12 +56,15 @@ const Container = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  ${medium('text-align: left; margin: inherit; width: 60%;')};
+  align-items: center;
+  ${medium(
+    'text-align: left; margin: inherit; width: 60%; align-items: flex-start;'
+  )};
   p {
     font-size: 21px;
     line-height: 35px;
-    text-align: left;
+    text-align: center;
+    ${medium('text-align: left;')};
     letter-spacing: 0.24px;
     color: #6d7693;
     max-width: 298px;
@@ -62,7 +73,8 @@ const Container = styled.div`
   h3 {
     font-size: 38px;
     line-height: 52px;
-    text-align: left;
+    text-align: center;
+    ${medium('text-align: left;')};
     letter-spacing: -0.447059px;
     margin: 50px 0 5px;
     color: #212b36;

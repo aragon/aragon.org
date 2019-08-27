@@ -4,10 +4,10 @@ import { Page } from '../components'
 import About from '../components/Project/About'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import Association from '../components/Project/Association'
-import backgroundImage from '../components/Project/assets/hero-background.png'
+import backgroundImage from '../components/Project/assets/project-cover.svg'
 import Section from '../components/General/Section'
 import VideoModal from '../components/General/VideoModal'
-import videothumbnail from '../components/Project/assets/videothumbnail.png'
+import videothumbnail from '../components/Project/assets/project-video.png'
 
 import { breakpoint, BreakPoint, Button } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
@@ -31,8 +31,7 @@ class Project extends React.Component {
 
   render() {
     return(
-      <Page path="/project">
-        <SecondaryNavbar/>
+      <Page path="/project" color="black">
         <HeroSection>
           <Box>
             <Container>
@@ -40,17 +39,13 @@ class Project extends React.Component {
               <h4>Aragon is a project to empower freedom by creating tools for decentralized organizations to thrive.</h4>
               <Button.Anchor className="hero-link" mode="strong" href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/" target="_blank">Manifesto</Button.Anchor>
             </Container>
-            <Container>
-              <BreakPoint to="medium">
-                <a target="_blank" href="https://www.youtube.com/watch?v=AqjIWmiAidw"><img src={videothumbnail}/></a>
-              </BreakPoint>
-              <BreakPoint from="medium">
-                <img src={videothumbnail} onClick={this.handleOpen}/>
-                <VideoModal ref={this.videoModal} videoId="AqjIWmiAidw"/>
-              </BreakPoint>
-            </Container>
           </Box>
         </HeroSection>
+        <SecondaryNavbar/>
+        <VideoContainer>
+          <img src={videothumbnail} onClick={this.handleOpen}/>
+          <VideoModal ref={this.videoModal} videoId="AqjIWmiAidw"/>
+        </VideoContainer>
         <About/>
         <Association />
       </Page>
@@ -58,11 +53,22 @@ class Project extends React.Component {
   }
 }
 
+const VideoContainer = styled.div`
+  text-align: center;
+  img {
+    max-width: 1100px;
+    margin: 100px auto;
+    width: 95%;
+  }
+`
+
 const HeroSection = styled(Section)`
   height: auto;
   ${medium('height: 550px;')};
   background: #faf7ec;
   background-image: url(${backgroundImage});
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 64px;
   display: flex;
   align-items: center;
@@ -82,11 +88,15 @@ const Box = styled.div`
 `;
 const Container = styled.div`
   width: 100%;
-  h2, h4 {
-    text-align: left;
-  }
+  text-align: center;
   h2 {
     margin-top: 0;
+    color: #212B36;
+  }
+  h4 {
+    color: #6D7693;
+    max-width: 663px;
+    margin: auto;
   }
 `;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Section from '../General/Section';
-import background from './assets/hero.png';
+import background from './assets/governance-cover.svg';
 import {breakpoint, BreakPoint, Button} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);

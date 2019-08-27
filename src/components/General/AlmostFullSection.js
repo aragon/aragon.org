@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
+const large = css => breakpoint('large', css);
 
 const AlmostFullSection = ({...props}) => (
   <Section
@@ -14,7 +15,7 @@ const AlmostFullSection = ({...props}) => (
           <Image src={props.image} />
         </ImageContainer>
       )}
-      <Container className="divided-section-container">{props.children}</Container>
+      <Container imageLeft={props.imageLeft} className="divided-section-container">{props.children}</Container>
       {!props.imageLeft && (
         <ImageContainer>
           <Image src={props.image} />
@@ -34,8 +35,8 @@ const Section = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
-  ${medium('padding: 50px 120px;')};
+  padding: 50px 15px;
+  ${large('padding: 50px 120px;')};
 `;
 const Box = styled.div`
   display: flex;
@@ -44,34 +45,40 @@ const Box = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1305px;
-  ${medium('flex-direction: row;')};
+  ${large('flex-direction: row;')};
 `;
 const Container = styled.div`
-  ${medium('width: 60%; padding-left: 150px;')};
+  ${large('width: 60%;')};
+  ${p => p.imageLeft? 'padding-top' : 'padding-bottom'}: 30px;
+  ${breakpoint('large', `padding-bottom:0;`)}
+  @media (min-width: 1152px) {
+    ${p => p.imageLeft? 'padding-left' : 'padding-right'}: 150px;
+  }
+
   text-align: center;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  ${medium('text-align: left; margin: inherit;')};
+  ${large('text-align: left; margin: inherit;')};
   p {
     font-size: 16px;
-    ${medium('font-size: 21px;')};
+    ${large('font-size: 21px;')};
     line-height: 1.66;
     text-align: center;
-    ${medium('text-align: left;')};
+    ${large('text-align: left;')};
     letter-spacing: 0.24px;
     color: #6d7693;
     margin: 20px 0;
   }
   h3 {
     font-size: 20px;
-    ${medium('font-size: 38px;')};
+    ${large('font-size: 38px;')};
     line-height: 1.36;
     text-align: center;
-    ${medium('text-align: left;')};
+    margin: 0;
+    ${large('text-align: left; margin: 50px 0 5px;')};
     letter-spacing: -0.447059px;
-    margin: 50px 0 5px;
     color: #212b36;
     font-family: 'FontMedium', sans-serif;
   }

@@ -5,7 +5,6 @@ import DividedSection from '../General/DividedSection';
 import AlmostFullSection from '../General/AlmostFullSection';
 import styled from 'styled-components';
 import image from './assets/camino.png';
-import image1 from './assets/image1.svg';
 import image2 from './assets/image2.png';
 import image3 from './assets/image3.svg';
 import image4 from './assets/image4.svg';
@@ -19,26 +18,16 @@ const large = css => breakpoint('medium', css);
 
 const Features = () => (
   <Container>
-    <DividedSection image={image1}>
-      <h3>
-        A new way to <span  className="yellow">raise funds</span>
-      </h3>
-      <p>
-        Raise funds from anyone in the world immediatly and with no fees. Remain
-        accountable with built-in transparent finances and governnace.
-      </p>
-      <Label title="Fundrasing" image={label1} />
-    </DividedSection>
     <DividedSection
       image={image2}
       imageLeft={true}
       sectionClass="agent-app-section">
       <h3 className="agent">
-        One app, <br/> <span className="blue">endless possibilities</span>
+        One app, <br /> <span className="blue">endless possibilities</span>
       </h3>
       <p>
-        Aragon Agent enables organizations to interact with other Web3
-        platforms. Say hi to collaborative decentralized finance.
+        Aragon Agent enables organizations to interact directly with any
+        Ethereum application. Access Web3 like never before.
       </p>
       <Label title="Agent" image={label2} />
     </DividedSection>
@@ -51,11 +40,12 @@ const Features = () => (
     </AlmostFullSection>
     <DividedSection image={image3}>
       <h3>
-        New onboarding <span className="blue">experience</span>
+        Streamlined <br />
+        <span className="blue">setup flow</span>
       </h3>
       <p>
-        You can now create even more with Aragon. Incorporate a company, form a
-        membership or found a reputation-based organization in a few clicks.
+        Featuring more templates to match with your needs. Start a company,
+        membership, or reputation-based organization in just a few clicks.
       </p>
       <Label title="Onboarding" image={label3} />
     </DividedSection>
@@ -74,15 +64,15 @@ const Container = styled.div`
     margin-left: 125px;
   }
   .yellow {
-    background: -webkit-linear-gradient(69deg, #FF9372, #FFD770);
+    background: -webkit-linear-gradient(69deg, #ff9372, #ffd770);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  h3.agent{
+  h3.agent {
     max-width: 368px;
   }
   .blue {
-    background: -webkit-linear-gradient(69deg, #65AAFF, #5D21D4);
+    background: -webkit-linear-gradient(69deg, #65aaff, #5d21d4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

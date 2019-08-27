@@ -1,52 +1,66 @@
-import React from 'react'
-import Section from '../General/Section'
-import LongCard from '../General/LongCard'
-import Card from '../General/Card'
-import styled from 'styled-components'
-import { breakpoint } from '@aragon/ui'
+import React from 'react';
+import Section from '../General/Section';
+import styled from 'styled-components';
+import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
+import network1 from './assets/network3.svg';
 
-const mudule1Content = (<p>The Aragon Network encompasses a set of courts, which can be used to settle disputes. By using smart contracts, cases can be closed way faster than in traditional courts. Fairness for everyone.</p>);
-const mudule2Content = (<p>Mom probably advised you not to interact with strangers. But thanks to the Aragon Network, you can transact with people who are using aliases, or stay anonymous yourself. You can open disputes if someone misbehaves.</p>);
-const mudule3Content = (
-  <span>
-    <p>You can agree on a minimum and maximum deposit of tokens upon creating a new agreement on the Aragon Network. These deposits can be used to penalize bad behaviour, warranting good behaviour.</p>
-    <p>
-      <a className="action-button" target="_blank" href="https://github.com/aragon/whitepaper">
-        <span>Whitepaper <img src={require(`../General/assets/arrow.svg`)}/></span>
-      </a>
-    </p>
-  </span>
-);
-const mudule4Content = (
-  <span>
-    <p>The Aragon Network is not only a digital jurisdiction, but one in which you can make your voice heard. The Aragon Network will be governed by the community, just like the Aragon project itself.</p>
-    <p>
-      <a className="action-button" target="_blank" href="https://forum.aragon.org">
-        <span>Aragon forum <img src={require(`../General/assets/arrow.svg`)}/></span>
-      </a>
-    </p>
-  </span>
-);
-
-const NetworkContent = () => (
-  <Section>
+const Content = () => (
+  <StyledSection>
     <Container>
-      <Card imageUrl={'Network/assets/network1'} title="Effective dispute resolution" content={mudule1Content}></Card>
-      <Card imageUrl={'Network/assets/network2'} title="Anonymity and trust, together" content={mudule2Content}></Card>
-      <Card linkTo="https://github.com/aragon/whitepaper" imageUrl={'Network/assets/network3'} title="Insured agreements" content={mudule3Content}></Card>
-      <Card linkTo="https://forum.aragon.org" imageUrl={'Network/assets/network4'} title="Shape it yourself" content={mudule4Content}></Card>
+      <img src={network1} />
+      <div className="right">
+        <h2>Insured agreements</h2>
+        <h4>
+          You can agree on a minimum and maximum deposit of tokens upon creating
+          a new agreement on the Aragon Network. These deposits can be used to
+          penalize bad behaviour, warranting good behaviour.
+        </h4>
+      </div>
     </Container>
-  </Section>
+  </StyledSection>
 );
+
+const StyledSection = styled(Section)`
+  border-bottom: 2px solid #f9fafc;
+`;
 
 const Container = styled.div`
-  display: grid;
-  ${medium('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px')};
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
+  padding: 50px 0;
+  img {
+    max-width: 70%;
+    margin-bottom: 30px;
+    ${medium('max-width: 90%; margin-bottom: 0;')};
 
-export default NetworkContent
+  }
+  div {
+    max-width: 480px;
+  }
+  div.right {
+    ${medium('padding-left: 50px;')};
+  }
+  h2 {
+    font-family: 'FontLight';
+    font-size: 46px;
+    line-height: 62px;
+    color: #2d4051;
+    text-align: center;
+    ${medium('text-align: left;')};
+  }
+  h4 {
+    font-family: 'FontRegular';
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.24px;
+    color: #7f8198;
+    text-align: center;
+    ${medium('text-align: left;')};
+  }
+`;
+
+export default Content;

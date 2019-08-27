@@ -9,14 +9,13 @@ const large = css => breakpoint('large', css);
 const Product = () => (
   <ProductSection>
     <Container>
-    <img src={product} />
+      <img src={product} />
     </Container>
   </ProductSection>
 );
 const ProductSection = styled(Section)`
   background-color: transparent;
   padding: 0;
-  z-index: 2;
   position: relative;
   margin-top: -114px;
 
@@ -25,7 +24,7 @@ const ProductSection = styled(Section)`
     margin auto;
     width: 100%;
   }
-`
+`;
 
 const Container = styled.div`
   text-align: center;

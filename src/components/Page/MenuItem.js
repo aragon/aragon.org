@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { theme, SafeLink } from '@aragon/ui'
 
-const MenuItem = ({ url, label, active, renderLink }) => (
-  <StyledMenuItem className={active ? 'active' : undefined}>
+const MenuItem = ({ url, label, active, renderLink, color }) => (
+  <StyledMenuItem className={active ? 'active' : undefined} color={color}>
     <span>{renderLink({ url, children: label })}</span>
   </StyledMenuItem>
 )
@@ -19,15 +19,20 @@ const StyledMenuItem = styled.div`
     align-items: center;
   }
   a {
+    font-family: 'FontMedium', sans-serif;
     position: relative;
     display: flex;
     align-items: center;
     height: 100%;
     padding: 0 50px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px;
     white-space: nowrap;
-    color: #6D7693;
+    color: white;
+
+    ${props =>
+      props.color == 'black' &&
+      'color: #6D7693;'}
     &:hover {
       color: black;
     }
@@ -40,7 +45,7 @@ const StyledMenuItem = styled.div`
         left: 0;
         right: 0;
         bottom: 0;
-        outline: 2px solid #22e0ff;
+        outline: 2px solid #4A80E4;
       }
     }
     &:active:after {
@@ -48,7 +53,7 @@ const StyledMenuItem = styled.div`
     }
   }
   &.active a {
-    color: #22e0ff;
+    color: #4A80E4;
     font-weight: 800;
   }
 `

@@ -19,7 +19,7 @@ const SCard = ({...props}) => (
     cardHeight={props.cardHeight ? props.cardHeight : false}
     className={props.className}
     >
-    <img class="principal-image" src={require(`../${props.imageUrl}.svg`)} />
+    <img className="principal-image" src={require(`../${props.imageUrl}.svg`)} />
     {props.label && (
       <div className="label">
         <p>{props.label}</p>
@@ -68,8 +68,8 @@ const SmallCard = styled.div`
     height: ${props => (props.cardHeight ? props.cardHeight : '500px')};
   }
   img {
-    height: 130px;
-    width: 130px;
+    height: 140px;
+    width: 140px;
     ${props => props.imageBig && 'height: auto;'};
     ${props => props.imageBig && 'width: 100%;'};
   }

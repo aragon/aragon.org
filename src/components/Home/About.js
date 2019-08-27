@@ -10,25 +10,26 @@ const medium = css => breakpoint('medium', css);
 const mudule1Content = (
   <span>
     <p>
-      The Internet has no borders and organizations shouldn't have them either.
-      Govern organizations with the same ease that you send a tweet.
+      Collaborate with people all over the world and work toward shared goals.
+      Send a vote with the same ease as sending an email.
     </p>
   </span>
 );
 const mudule2Content = (
   <span>
     <p>
-      Create your own organization in under five minutes. No paperwork involved.
-      We know one-size doesn't fit all, so you can customize your organization.
+      Create your organization in under five minutes. No paperwork involved. We
+      know one size doesn't fit all, so you can customize your organization to
+      fit your needs.
     </p>
   </span>
 );
 const mudule3Content = (
   <span>
     <p>
-      We believe human organization is a basic human right. Aragon organizations
-      are sovereign and censorship-resistant. Plus Aragon itself is open source
-      software.
+      We believe the freedom to organize is a basic human right. Aragon
+      organizations are sovereign and censorship-resistant. Built on free and
+      open source software.
     </p>
   </span>
 );
@@ -62,7 +63,7 @@ const AboutSection = styled(Section)`
   padding: 0 15px 30px 15px;
   ${medium('margin-top: -207px;')};
   z-index: 3;
-`
+`;
 const Container = styled.div`
   display: grid;
   ${medium(
@@ -79,6 +80,9 @@ const Container = styled.div`
     margin-bottom: 15px;
     ${medium('margin-bottom: 35px;')};
     color: #ffffff;
+  }
+  p {
+    min-height: 112px;
   }
 `;
 

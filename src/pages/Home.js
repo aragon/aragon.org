@@ -17,7 +17,7 @@ const large = css => breakpoint('large', css);
 class Home extends React.Component {
   render() {
     return (
-      <Page path="/">
+      <Page path="/" color="black">
         <Hero />
         <Product />
         <About />
