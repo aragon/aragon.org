@@ -124,14 +124,14 @@ class UseCases extends React.Component {
                   <a
                     target="_blank"
                     className="action-button"
-                    href="https://mainnet.aragon.org/#/blankdao.aragonid.eth/">
-                    Go to BlankDAO
+                    href="https://aragon.mainnet.aragonpm.com/#/0xfe1f2de598f42ce67bb9aad5ad473f0272d09b74/0x3d5f4417b7fb63aaf3b2aa23fc227e3ddebb951b">
+                    Go to Melon Council
                   </a>
                   <a
                     className="secondary-button"
                     target="_blank"
-                    href="https://docs.google.com/document/d/1mAGAZ5TAbJoTJoNCAwMUKLhEHD-WW-tzc0dHhbsl1gU/edit">
-                    How BlankDAO uses Aragon
+                    href="https://medium.com/melonprotocol/launching-the-melon-council-dao-on-aragonos-42147c86582">
+                    How Melon Council uses Aragon
                   </a>
                 </div>
               </UseCase>
@@ -154,14 +154,14 @@ class UseCases extends React.Component {
                   <a
                     target="_blank"
                     className="action-button"
-                    href="https://mainnet.aragon.org/#/blankdao.aragonid.eth/">
-                    Go to BlankDAO
+                    href="https://mainnet.aragon.org/#/pooltogether/0x7e3797a24114afcfd09e953cda490d81863ec32f">
+                    Go to Pool Together
                   </a>
                   <a
                     className="secondary-button"
                     target="_blank"
-                    href="https://docs.google.com/document/d/1mAGAZ5TAbJoTJoNCAwMUKLhEHD-WW-tzc0dHhbsl1gU/edit">
-                    How BlankDAO uses Aragon
+                    href="https://twitter.com/PoolTogether_/status/1143129765047656448">
+                    How Pool Together uses Aragon
                   </a>
                 </div>
               </UseCase>
@@ -183,14 +183,14 @@ class UseCases extends React.Component {
                   <a
                     target="_blank"
                     className="action-button"
-                    href="https://mainnet.aragon.org/#/blankdao.aragonid.eth/">
-                    Go to BlankDAO
+                    href="https://rinkeby.aragon.org/#/0xe520428C232F6Da6f694b121181f907931fD2211/0xc2555abaed3797b52248e814172d2bea6728e542">
+                    Go to 1Hive
                   </a>
                   <a
                     className="secondary-button"
                     target="_blank"
-                    href="https://docs.google.com/document/d/1mAGAZ5TAbJoTJoNCAwMUKLhEHD-WW-tzc0dHhbsl1gU/edit">
-                    How BlankDAO uses Aragon
+                    href="https://1hive.org/contribute/membership">
+                    How 1Hive uses Aragon
                   </a>
                 </div>
               </UseCase>
