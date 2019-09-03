@@ -35,6 +35,9 @@ const StyledMenuItem = styled.div`
       'color: #6D7693;'}
     &:hover {
       color: black;
+      ${props =>
+        props.color != 'black' &&
+        'color: #ffffffb3;'}
     }
     &:focus {
       outline: 0;

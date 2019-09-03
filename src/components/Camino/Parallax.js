@@ -3,12 +3,11 @@ import Section from '../General/Section';
 import styled from 'styled-components';
 import backgroundImage from './assets/background2.png';
 import parallaxImage from './assets/imageparallax.png';
-import backgroundMobile from './assets/backgroundMobile.png';
 import fase1 from './assets/fase1.png';
 import fase2 from './assets/fase2.png';
 import fase3 from './assets/fase3.png';
 import fase4 from './assets/fase4.png';
-import title from './assets/camino-title.svg';
+import title from './assets/camino-title.png';
 import {Parallax, ParallaxLayer} from 'react-spring/addons.cjs.js';
 
 import {useViewport, breakpoint, BreakPoint} from '@aragon/ui';
@@ -64,7 +63,7 @@ const ParallaxComponent = () => {
 const CaminoTitle = styled.img`
   max-width: 90%;
   margin: 60% auto;
-  ${medium(`margin: auto;`)}
+  ${medium(`margin: auto; max-width: 750px!important;`)}
 `
 const StaticSection = styled.div`
   height: 1200px;

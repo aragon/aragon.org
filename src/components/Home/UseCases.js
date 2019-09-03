@@ -217,6 +217,7 @@ const Container = styled.div`
     max-width: 100%;
     ${medium('max-width: 60%;')}
     ${large('max-width: 42.6%;')}
+    object-fit: cover;
   }
   .action-button {
     margin-top: 0;
