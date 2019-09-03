@@ -70,25 +70,16 @@ const dropdownLinks = [
 class SecondaryNavbar extends React.Component {
   constructor(props) {
     super(props);
-    console.log('page', dropdownNames.indexOf(this.props.page));
+
     this.state = {activeItem: dropdownNames.indexOf(this.props.page)};
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(index) {
-    console.log(index);
-
     this.setState({activeItem: index});
   }
   render() {
-    console.log(
-      'render',
-      this.state.activeItem != dropdownNames.indexOf(this.props.page),
-      this.state.activeItem,
-      dropdownNames.indexOf(this.props.page)
-    );
     if ((this.state.activeItem != dropdownNames.indexOf(this.props.page))) {
-      console.log('entro en el if de que no es igual a la page');
       if (
         dropdownLinks[this.state.activeItem].includes('https://') ||
         dropdownLinks[this.state.activeItem].includes('http://')

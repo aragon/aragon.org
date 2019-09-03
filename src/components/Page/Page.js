@@ -77,9 +77,10 @@ const Content = styled.div`
     letter-spacing: normal;
     color: #4A80E4;
     margin-top: 20px;
-    ${large('margin-top: 30px;')};
+    ${large('margin-top: 30px;')}
     display: block;
     text-decoration: none;
+    cursor: pointer;
   }
   .action-button img {
     padding-left: 10px;
@@ -116,6 +117,7 @@ const Content = styled.div`
     color: #ffffff;
     font-family: 'FontMedium';
     padding: 14px 28px;
+    cursor: pointer;
   }
   .secondary-button {
     background: #ffffff;
@@ -126,6 +128,7 @@ const Content = styled.div`
     color: #212b36;
     font-family: 'FontMedium';
     padding: 14px 28px;
+    cursor: pointer;
   }
   .principal-button.centered,
   .secondary-button.centered {
