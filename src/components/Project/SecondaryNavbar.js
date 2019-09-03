@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {breakpoint, SafeLink, BreakPoint, DropDown} from '@aragon/ui';
 import {Link} from 'react-static';
+import {Redirect} from 'react-router';
 const medium = css => breakpoint('medium', css);
 import governance from './assets/secondary-navbar/governance.svg';
 import governanceActive from './assets/secondary-navbar/governanceActive.svg';
@@ -16,10 +17,12 @@ import events from './assets/secondary-navbar/events.svg';
 import wiki from './assets/secondary-navbar/wiki.svg';
 
 const dropdownItems = [
-  <a href="http://www.google.com"><span className="dropdown-span">
-    <img src={governance} />
-    Governance
-  </span></a>,
+  <a href="http://www.google.com">
+    <span className="dropdown-span">
+      <img src={governance} />
+      Governance
+    </span>
+  </a>,
   <span className="dropdown-span">
     <img src={grants} />
     Grants
@@ -55,20 +58,46 @@ const dropdownNames = [
   'wiki',
 ];
 const dropdownLinks = [
-  './project/governance',
-  './project/grants',
-  './contribute',
+  '/project/governance',
+  '/project/grants',
+  '/project/contribute',
   'https://blog.aragon.org',
-  './project/roadmap',
+  '/project/roadmap',
   'https://aracon.one',
   'https://wiki.aragon.org',
 ];
 
 class SecondaryNavbar extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log('page', dropdownNames.indexOf(this.props.page));
+    this.state = {activeItem: dropdownNames.indexOf(this.props.page)};
+    this.handleChange = this.handleChange.bind(this);
+  }
 
+  handleChange(index) {
+    console.log(index);
 
+    this.setState({activeItem: index});
+  }
   render() {
-    console.log(dropdownNames.indexOf(this.props.page), this.props.page);
+    console.log(
+      'render',
+      this.state.activeItem != dropdownNames.indexOf(this.props.page),
+      this.state.activeItem,
+      dropdownNames.indexOf(this.props.page)
+    );
+    if ((this.state.activeItem != dropdownNames.indexOf(this.props.page))) {
+      console.log('entro en el if de que no es igual a la page');
+      if (
+        dropdownLinks[this.state.activeItem].includes('https://') ||
+        dropdownLinks[this.state.activeItem].includes('http://')
+      ) {
+        window.location.href = dropdownLinks[this.state.activeItem];
+      } else {
+        return (<Redirect to={dropdownLinks[this.state.activeItem]} />)
+      }
+    }
     return (
       <div>
         <BreakPoint from="medium">
@@ -150,8 +179,9 @@ class SecondaryNavbar extends React.Component {
             <DropDown
               wide
               items={dropdownItems}
-              active={dropdownNames.indexOf(this.props.page)}
+              active={this.state.activeItem}
               className="secondary-dropdown"
+              onChange={this.handleChange}
             />
           </DropDownContainer>
         </BreakPoint>
