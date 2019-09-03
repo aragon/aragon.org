@@ -51,6 +51,13 @@ const ButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 0 10px 0;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
+  a {
+    margin: 10px!important;
+    min-width: 186px;
+    ${medium('min-width: auto; margin: 0 10px;')};
+  }
 `;
 const TextContainer = styled.div`
   width: 100%;

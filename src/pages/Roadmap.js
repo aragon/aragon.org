@@ -49,12 +49,13 @@ class Roadmap extends React.Component {
 }
 const TabsSeparator = styled.div`
   background: white;
-  height: 40px;
+  height: 53px;
   width: 100%;
 `
 
 const Tabs = styled.div`
   width: 80%;
+  max-width: 1050px;
   margin: auto;
   background: transparent;
   display: flex;
@@ -64,25 +65,31 @@ const Tabs = styled.div`
   box-sizing: border-box;
 
   div {
-    color: #2d4051;
-    background: #e6e9ef;
+    background: #F9FAFC;
     font-size: 18px;
+    font-family: 'FontMedium', sans-serif;
+    color: #1C242D;
     text-align: center;
     width: 50%;
     cursor: pointer;
-    border: 1px solid rgba(151, 151, 151, 0.16103);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0245131);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0726053);
     transition: all 0.25s ease-in-out;
   }
-  div.active,
   div:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1426053);
     background: white;
   }
+  div.active {
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0726053);
+  }
   div.left {
-    border-radius: 6px 0 0 6px;
+    border-radius: 12px 0 0 12px;
+    border-right: 1px solid rgba(151, 151, 151, 0.16103);
   }
   div.right {
-    border-radius: 0 6px 6px 0;
+    border-left: 1px solid rgba(151, 151, 151, 0.16103);
+    border-radius: 0 12px 12px 0;
   }
 `;
 
@@ -96,6 +103,7 @@ const Hero = styled(Section)`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top:64px;
 `;
 
 const Container = styled.div`

@@ -35,6 +35,7 @@ const HeroSection = styled(Section)`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top:64px;
 `;
 
 const Container = styled.div`

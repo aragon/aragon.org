@@ -4,34 +4,68 @@ import {breakpoint, SafeLink, BreakPoint, DropDown} from '@aragon/ui';
 import {Link} from 'react-static';
 const medium = css => breakpoint('medium', css);
 import governance from './assets/secondary-navbar/governance.svg';
+import governanceActive from './assets/secondary-navbar/governanceActive.svg';
 import grants from './assets/secondary-navbar/grants.svg';
+import grantsActive from './assets/secondary-navbar/grantsActive.svg';
 import roadmap from './assets/secondary-navbar/roadmap.svg';
+import roadmapActive from './assets/secondary-navbar/roadmapActive.svg';
 import contribute from './assets/secondary-navbar/contribute.svg';
+import contributeActive from './assets/secondary-navbar/contributeActive.svg';
 import blog from './assets/secondary-navbar/blog.svg';
 import events from './assets/secondary-navbar/events.svg';
 import wiki from './assets/secondary-navbar/wiki.svg';
 
 const dropdownItems = [
-  (<span className="dropdown-span"><img src={governance} />Governance</span>),
-  (<span className="dropdown-span"><img src={grants} />Grants</span>),
-  (<span className="dropdown-span"><img src={contribute} />Contribute</span>),
-  (<span className="dropdown-span"><img src={blog} />Blog</span>),
-  (<span className="dropdown-span"><img src={events} />Events</span>),
-  (<span className="dropdown-span"><img src={wiki} />Wiki</span>),
+  <a href="http://www.google.com"><span className="dropdown-span">
+    <img src={governance} />
+    Governance
+  </span></a>,
+  <span className="dropdown-span">
+    <img src={grants} />
+    Grants
+  </span>,
+  <span className="dropdown-span">
+    <img src={contribute} />
+    Contribute
+  </span>,
+  <span className="dropdown-span">
+    <img src={blog} />
+    Blog
+  </span>,
+  <span className="dropdown-span">
+    <img src={roadmap} />
+    Roadmap
+  </span>,
+  <span className="dropdown-span">
+    <img src={events} />
+    Events
+  </span>,
+  <span className="dropdown-span">
+    <img src={wiki} />
+    Wiki
+  </span>,
 ];
 const dropdownNames = [
   'governance',
   'grants',
   'contribute',
   'blog',
+  'roadmap',
   'events',
   'wiki',
 ];
+const dropdownLinks = [
+  './project/governance',
+  './project/grants',
+  './contribute',
+  'https://blog.aragon.org',
+  './project/roadmap',
+  'https://aracon.one',
+  'https://wiki.aragon.org',
+];
 
 class SecondaryNavbar extends React.Component {
-  handleChange(index) {
-    this.setState({activeItem: index});
-  }
+
 
   render() {
     console.log(dropdownNames.indexOf(this.props.page), this.props.page);
@@ -44,28 +78,42 @@ class SecondaryNavbar extends React.Component {
                 className={
                   this.props.page &&
                   this.props.page === 'governance' &&
-                  'active'
+                  'governance active'
                 }
                 to="/project/governance">
-                <img src={governance} />
+                {this.props.page === 'governance' ? (
+                  <img src={governanceActive} />
+                ) : (
+                  <img src={governance} />
+                )}
                 <h6>Governance</h6>
               </InternalItem>
               <InternalItem
                 className={
-                  this.props.page && this.props.page === 'grants' && 'active'
+                  this.props.page &&
+                  this.props.page === 'grants' &&
+                  'grants active'
                 }
                 to="/project/grants">
-                <img src={grants} />
+                {this.props.page === 'grants' ? (
+                  <img src={grantsActive} />
+                ) : (
+                  <img src={grants} />
+                )}
                 <h6>Grants</h6>
               </InternalItem>
               <InternalItem
                 className={
                   this.props.page &&
                   this.props.page === 'contribute' &&
-                  'active'
+                  'contribute active'
                 }
                 to="/project/contribute">
-                <img src={contribute} />
+                {this.props.page === 'contribute' ? (
+                  <img src={contributeActive} />
+                ) : (
+                  <img src={contribute} />
+                )}
                 <h6>Contribute</h6>
               </InternalItem>
               <Item href="https://blog.aragon.org/">
@@ -75,11 +123,15 @@ class SecondaryNavbar extends React.Component {
               <InternalItem
                 className={
                   this.props.page && this.props.page === 'roadmap'
-                    ? 'active roadmap-item'
+                    ? 'roadmap active roadmap-item'
                     : 'roadmap-item'
                 }
                 to="/project/roadmap">
-                <img src={roadmap} />
+                {this.props.page === 'roadmap' ? (
+                  <img src={roadmapActive} />
+                ) : (
+                  <img src={roadmap} />
+                )}
                 <h6>Roadmap</h6>
               </InternalItem>
               <Item href="https://aracon.one/" target="_blank">
@@ -121,8 +173,9 @@ const DropDownContainer = styled.div`
     align-items: center;
     font-family: 'FontRegular';
   }
-   span.dropdown-span:hover, span.dropdown-span:focus {
-    color: #4A80E4;
+  span.dropdown-span:hover,
+  span.dropdown-span:focus {
+    color: #4a80e4;
   }
 `;
 
@@ -160,6 +213,21 @@ const Container = styled.nav`
     text-align: center;
     color: #1c242d;
     margin-top: 15px;
+  }
+  .active h6 {
+    color: white;
+  }
+  .governance.active {
+    background: linear-gradient(133.69deg, #65aaff -43.9%, #5d21d4 105.39%);
+  }
+  .grants.active {
+    background: linear-gradient(324.1deg, #fff886 -112.1%, #ff4e78 91.91%);
+  }
+  .contribute.active {
+    background: linear-gradient(135.14deg, #ff9372 8.69%, #ffd770 103.74%);
+  }
+  .roadmap.active {
+    background: linear-gradient(136.45deg, #ffd79a -18.16%, #55ffbd 129.73%);
   }
 `;
 const Item = styled(SafeLink)`

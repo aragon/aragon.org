@@ -8,7 +8,6 @@ import About from '../components/Home/About';
 import UseCases from '../components/Home/UseCases';
 import Organizations from '../components/Home/Organizations';
 import Section from '../components/General/Section';
-import video from '../components/Home/home-assets/home-video.mp4';
 import {Link} from 'react-static';
 
 import {breakpoint, BreakPoint, Button} from '@aragon/ui';

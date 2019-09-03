@@ -62,5 +62,8 @@ const Container = styled.div`
   .customizable img {
     ${medium('margin-right: 76px;')};
   }
+  .customizable {
+    padding: 0px;
+  }
 `;
 export default Features;

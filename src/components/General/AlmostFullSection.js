@@ -77,7 +77,7 @@ const Container = styled.div`
     line-height: 1.36;
     text-align: center;
     margin: 0;
-    ${large('text-align: left; margin: 50px 0 5px;')};
+    ${large('text-align: left; margin: 0 0 5px 0;')};
     letter-spacing: -0.447059px;
     color: #212b36;
     font-family: 'FontMedium', sans-serif;

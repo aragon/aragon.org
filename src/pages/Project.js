@@ -57,7 +57,7 @@ const VideoContainer = styled.div`
   text-align: center;
   img {
     max-width: 1100px;
-    margin: 100px auto;
+    margin: 50px auto 100px auto;
     width: 95%;
   }
 `
@@ -69,7 +69,7 @@ const HeroSection = styled(Section)`
   background-image: url(${backgroundImage});
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 64px;
+  padding-top: 94px;
   display: flex;
   align-items: center;
   overflow: hidden;

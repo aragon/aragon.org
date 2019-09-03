@@ -71,7 +71,7 @@ const About = () => (
 const Container = styled.div`
   display: grid;
   ${medium(
-    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px'
+    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 650px'
   )};
   grid-template-columns: 100%;
   grid-template-rows: auto;
@@ -90,6 +90,9 @@ const ProductFeatures = styled.div`
   }
   .universe h3 .blue {
     color: #639cf5;
+  }
+  .universe {
+    padding: 60px 0 0 0;
   }
 `;
 export default About;

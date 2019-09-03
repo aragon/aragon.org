@@ -159,9 +159,9 @@ const RoadmapContainer = styled.div`
     top: 12px;
     left: 9px;
     bottom: 20px;
-    width: 2px;
-    background: #d8d8d8;
-    ${medium('left: 21px;')};
+    width: 1px;
+    background: rgba(96, 128, 156, 0.152004);
+    ${medium('left: 21.5px;')};
   }
   &:after {
     content: '';

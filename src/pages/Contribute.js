@@ -31,6 +31,7 @@ const ContributeSection = styled(Section)`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top:64px;
   h4 {
     max-width: 584px;
   }

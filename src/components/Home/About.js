@@ -84,6 +84,9 @@ const Container = styled.div`
   p {
     min-height: 112px;
   }
+  h1 {
+    font-family: 'FontLight';
+  }
 `;
 
 export default About;

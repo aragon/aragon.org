@@ -31,7 +31,7 @@ const HeroSection = styled(Section)`
   background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);
   height: auto;
   ${medium('height: 550px;')};
-  padding-top: 64px;
+  padding-top: 94px;
   display: flex;
   align-items: center;
   justify-content: center;

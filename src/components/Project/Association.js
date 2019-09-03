@@ -34,7 +34,7 @@ const Association = styled(Section)`
   background-size: cover;
   background-position: center;
   background-color: #1c1d23;
-  min-height: 500px;
+  min-height: 626px;
   display: flex;
   align-items: center;
   justify-content: center;

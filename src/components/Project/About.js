@@ -141,7 +141,7 @@ const History = styled.div`
     ${medium('width: 594px;')};
   }
   h3 {
-    font-family: 'FontLigh', sans-serif;
+    font-family: 'FontLight', sans-serif;
     font-size: 48px;
     line-height: 59px;
     letter-spacing: -0.564706px;
@@ -161,7 +161,7 @@ const History = styled.div`
 const Container = styled.div`
   display: grid;
   ${medium(
-    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px'
+    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 650px'
   )};
   grid-template-columns: 100%;
   grid-template-rows: auto;

@@ -9,6 +9,8 @@ import TryCamino from '../components/Camino/TryCamino';
 import Features from '../components/Camino/Features';
 import Templates from '../components/Camino/Templates';
 import MoreFeatures from '../components/Camino/MoreFeatures';
+import GovernanceMakeover from '../components/Camino/GovernanceMakeover';
+import DarkMode from '../components/Camino/DarkMode';
 
 import Zoom from 'react-reveal/Fade';
 import Pulse from 'react-reveal/Pulse';
@@ -24,6 +26,8 @@ class Camino extends React.Component {
         <Features />
         <Templates />
         <MoreFeatures />
+        <GovernanceMakeover />
+        <DarkMode />
       </Page>
     );
   }

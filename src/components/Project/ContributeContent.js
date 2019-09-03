@@ -157,7 +157,7 @@ const Decentralized = styled.div`
 const Container = styled.div`
   display: grid;
   ${medium(
-    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px'
+    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 650px'
   )};
   grid-template-columns: 100%;
   grid-template-rows: auto;

@@ -148,7 +148,7 @@ const Inside = ({x, h, opacity, menuItems, path, background, color}) => (
         </ul>
       </BreakPoint>
       <BreakPoint to="medium">
-        <MenuPanel items={menuItems} renderLink={renderMenuItemLink} />
+        <MenuPanel items={menuItems} renderLink={renderMenuItemLink}  color={color}/>
         <Link to={'/'}>
           <span>
             <MobileLogo src={logo} />

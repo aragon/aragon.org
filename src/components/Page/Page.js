@@ -85,6 +85,7 @@ const Content = styled.div`
     padding-left: 10px;
     height: 12px;
     width: auto;
+    margin: 0;
   }
   .action-button span {
     display: inline-flex;
