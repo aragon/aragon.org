@@ -218,7 +218,7 @@ const Center = styled.div`
   }
   ul.right,
   ul.left {
-    min-width: 350px;
+    min-width: 357px;
   }
   button {
     margin: 0 0 0 10px;
