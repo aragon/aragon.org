@@ -19,7 +19,10 @@ const SCard = ({...props}) => (
     cardHeight={props.cardHeight ? props.cardHeight : false}
     className={props.className}
     >
-    <img className="principal-image" src={require(`../${props.imageUrl}.svg`)} />
+    {props.imageUrl.includes('.png') ?
+    <img className="principal-image" src={require(`../${props.imageUrl}`)} />
+  :
+    <img className="principal-image" src={require(`../${props.imageUrl}.svg`)} />}
     {props.label && (
       <div className="label">
         <p>{props.label}</p>

@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
-import image from './assets/image2.png';
 import Label from './Label';
 import label from './assets/label-ds.svg';
 
@@ -34,7 +33,7 @@ const GovernanceMakeover = () => (
     <Container>
       <StyledCard
         linkTo="/project/grants"
-        imageUrl={'Camino/assets/makeover'}
+        imageUrl={'Camino/assets/governance.png'}
         className="governance"
         cardHeight="700px"
         title={
@@ -79,7 +78,7 @@ const StyledCard = styled(Card)`
     -webkit-text-fill-color: transparent;
   }
   h1 .violet {
-    background: -webkit-linear-gradient(69deg, #3023AE, #C86DD7);
+    background: -webkit-linear-gradient(69deg, #3023ae, #c86dd7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -90,7 +89,7 @@ const StyledCard = styled(Card)`
     letter-spacing: -0.447059px;
     margin: 50px 0 5px;
     color: #212b36;
-    font-family: 'FontMedium',sans-serif;
+    font-family: 'FontMedium', sans-serif;
   }
 `;
 
@@ -122,6 +121,12 @@ const Container = styled.div`
   }
   .makeover .content {
     min-height: 160px;
+  }
+  .governance .principal-image {
+    margin-left: -30px;
+    width: calc(100% + 30px);
+    ${medium('margin-left: -15px; width: calc(100% + 15px);')};
+    ${large('margin-left: -60px; width: calc(100% + 60px);')};
   }
 `;
 

@@ -111,7 +111,7 @@ class UseCases extends React.Component {
                 <div>
                   <UseCasesBadge>USE CASE</UseCasesBadge>
                   <h2>
-                    Melon Council: Asset management{' '}
+                    Melon: Disintermediating asset management{' '}
                     <span role="img" aria-label="glow">
                       📊
                     </span>
@@ -249,7 +249,7 @@ const UseCase = styled.div`
   ${medium('flex-direction: row;')};
   div {
     padding: 20px;
-    ${large('padding: 60px;')};
+    ${large('padding: 50px;')};
     display: flex;
     flex-direction: column;
     align-items: flex-start;

@@ -17,38 +17,43 @@ import events from './assets/secondary-navbar/events.svg';
 import wiki from './assets/secondary-navbar/wiki.svg';
 
 const dropdownItems = [
+    <span className="dropdown-span">
+      Explore...
+    </span>
+  ,
   <a href="http://www.google.com">
     <span className="dropdown-span">
-      <img src={governance} />
+      <div><img src={governance} /></div>
       Governance
     </span>
   </a>,
   <span className="dropdown-span">
-    <img src={grants} />
+    <div><img src={grants} /></div>
     Grants
   </span>,
   <span className="dropdown-span">
-    <img src={contribute} />
+    <div><img src={contribute} /></div>
     Contribute
   </span>,
   <span className="dropdown-span">
-    <img src={blog} />
+    <div><img src={blog} /></div>
     Blog
   </span>,
   <span className="dropdown-span">
-    <img src={roadmap} />
+    <div><img src={roadmap} /></div>
     Roadmap
   </span>,
   <span className="dropdown-span">
-    <img src={events} />
+    <div><img src={events} /></div>
     Events
   </span>,
   <span className="dropdown-span">
-    <img src={wiki} />
+    <div><img src={wiki} /></div>
     Wiki
   </span>,
 ];
 const dropdownNames = [
+  'explore',
   'governance',
   'grants',
   'contribute',
@@ -58,6 +63,7 @@ const dropdownNames = [
   'wiki',
 ];
 const dropdownLinks = [
+  '/project',
   '/project/governance',
   '/project/grants',
   '/project/contribute',
@@ -76,7 +82,9 @@ class SecondaryNavbar extends React.Component {
   }
 
   handleChange(index) {
-    this.setState({activeItem: index});
+    if(index != 0) {
+      this.setState({activeItem: index});
+    }
   }
   render() {
     if ((this.state.activeItem != dropdownNames.indexOf(this.props.page))) {
@@ -197,6 +205,10 @@ const DropDownContainer = styled.div`
   span.dropdown-span:hover,
   span.dropdown-span:focus {
     color: #4a80e4;
+  }
+  span.dropdown-span div {
+    width: 40px;
+    text-align:left;
   }
 `;
 
