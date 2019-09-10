@@ -21,7 +21,7 @@ const Hero = () => (
       </h2>
     </TextContainer>
     <ButtonContainer>
-      <a className="principal-button centered" mode="strong" href="https://mainnet.aragon.org/">
+      <a className="principal-button centered" mode="strong" href="https://app.aragon.org">
         Try the product
       </a>
       <Link className="secondary-button centered" to="discover">

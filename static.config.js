@@ -76,7 +76,7 @@ export default {
       getData: () => ({ title: '' }),
     },
     {
-      path: '/frame',
+      path: '/agent',
       component: 'src/pages/Frame',
       getData: () => ({ title: '' }),
     },

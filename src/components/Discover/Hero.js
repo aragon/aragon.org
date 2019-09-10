@@ -36,6 +36,7 @@ const HeroSection = styled(Section)`
   justify-content: center;
   position: relative;
   overflow: hidden;
+  animation: shine 4s linear infinite;
 `;
 
 const TextContainer = styled.div`

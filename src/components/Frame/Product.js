@@ -17,7 +17,8 @@ const ProductSection = styled(Section)`
   background-color: transparent;
   padding: 0;
   position: relative;
-
+  padding-top: 50px;
+  ${medium('padding-top: 150px;')}
   .container {
     max-width: 100%;
     margin auto;

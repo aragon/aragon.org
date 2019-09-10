@@ -15,7 +15,11 @@ const AlmostFullSection = ({...props}) => (
           <Image src={props.image} />
         </ImageContainer>
       )}
-      <Container imageLeft={props.imageLeft} className="divided-section-container">{props.children}</Container>
+      <Container
+        imageLeft={props.imageLeft}
+        className="divided-section-container">
+        {props.children}
+      </Container>
       {!props.imageLeft && (
         <ImageContainer>
           <Image src={props.image} />
@@ -27,8 +31,7 @@ const AlmostFullSection = ({...props}) => (
 
 const Section = styled.div`
   ${props =>
-    props.backgroundColor &&
-    'background-color: ' + props.backgroundColor + ';'}
+    props.backgroundColor && 'background-color: ' + props.backgroundColor + ';'}
   background-size: cover;
   min-height: 500px;
   margin: 20px;
@@ -50,10 +53,10 @@ const Box = styled.div`
 `;
 const Container = styled.div`
   ${large('width: 56%;')};
-  ${p => p.imageLeft? 'padding-top' : 'padding-bottom'}: 30px;
+  ${p => (p.imageLeft ? 'padding-top' : 'padding-bottom')}: 30px;
   ${breakpoint('large', `padding-bottom:0;`)}
   @media (min-width: 1152px) {
-    ${p => p.imageLeft? 'padding-left' : 'padding-right'}: 96px;
+    ${p => (p.imageLeft ? 'padding-left' : 'padding-right')}: 96px;
   }
 
   text-align: center;
@@ -89,6 +92,7 @@ const Image = styled.img`
 `;
 
 const ImageContainer = styled.div`
+  max-width: 427px;
   text-align: center;
   margin: auto;
 `;

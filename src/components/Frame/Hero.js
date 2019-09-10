@@ -2,29 +2,39 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from '../General/Section';
 import background from './assets/background-hero.png';
+import robot from './assets/robot.svg';
+import Slide from 'react-reveal/Slide';
+
+import {breakpoint} from '@aragon/ui';
+const medium = css => breakpoint('medium', css);
 
 const Hero = () => (
   <HeroSection>
     <Container>
       <h2>Aragon Agent</h2>
       <div className="h4-blue-box">
-        <h4 className="blue">Hold assets and perfom actions from Aragon organizations</h4>
+        <h4 className="blue">
+          Hold assets and perfom actions from Aragon organizations
+        </h4>
       </div>
+      <Slide bottom>
+        <img src={robot} />
+      </Slide>
     </Container>
   </HeroSection>
 );
 
 const HeroSection = styled(Section)`
   height: 550px;
-  background: #F9EDDF;
+  background: #141E27;
   background-image: url(${background});
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  padding-top:64px;
+  overflow: visible;
+  padding-top: 64px;
 `;
 
 const Container = styled.div`
@@ -34,6 +44,13 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  h2 {
+    margin-top: 70px;
+  }
+  img {
+    width: 200px;
+    ${medium('width: 280px;')};
+  }
   h4 {
     font-size: 22px;
     line-height: 35px;

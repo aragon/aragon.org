@@ -2,7 +2,7 @@ import React from 'react';
 import Section from '../General/Section';
 import styled from 'styled-components';
 import {Link} from 'react-static';
-import video from './assets/frame.mp4';
+import video from './assets/agent-video.mp4';
 
 import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
@@ -20,9 +20,12 @@ const About = () => (
           Ethereum application. Supports native Agent integration, so your
           Aragon organization can interact with any Ethereum app.
         </p>
-        <a className="secondary-button" href="https://frame.sh" target="_blank">
-          Learn more
+        <a className="action-button" href="https://frame.sh" target="_blank">
+          <span>
+            Learn more <img src={require(`../General/assets/arrow.svg`)} />
+          </span>
         </a>
+
       </Container>
       <VideoContainer>
         <Video playsInline autoPlay muted loop src={video} />
@@ -38,7 +41,7 @@ const Organization = styled(Section)`
   display: flex;
   align-items: center;
   justify-content: center;
-  ${medium('padding: 120px;')}
+  ${medium('padding: 30px 120px 100px 120px;')}
 `;
 const Box = styled.div`
   display: flex;
@@ -60,6 +63,7 @@ const Container = styled.div`
     background: -webkit-linear-gradient(69deg, #6590FF, #5D21D4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: block;
   }
   p {
     font-size: 21px;
@@ -86,8 +90,8 @@ const Container = styled.div`
 const Video = styled.video`
   max-width: 100%;
   margin-top: 30px;
-  border-radius: 6px;
-  ${medium('max-width: 86%; margin-top: 0;')}
+  border-radius: 12px;
+  ${medium('max-width: 66%; margin-top: 0;')}
 `;
 
 const VideoContainer = styled.div`

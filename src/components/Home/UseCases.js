@@ -49,19 +49,22 @@ class UseCases extends React.Component {
                 <img src={aragonNetwork} />
                 <div>
                   <UseCasesBadge>USE CASE</UseCasesBadge>
-                  <h2>Aragon Network: A digital jurisdiction </h2>
+                  <h2>
+                    Aragon Network: A digital jurisdiction{' '}
+                    <span role="img" aria-label="glow">
+                      🦅
+                    </span>
+                  </h2>
                   <p>
                     See how Aragon is used to govern the Aragon project itself,
-                    from funds management to policy changes and more.
+                    from funds management to policy changes and more. <br/>
                     <a
                       target="_blank"
                       className="action-button"
                       href="https://mainnet.aragon.org/#/governance.aragonproject.eth/">
-                      {' '}Go to Aragon Governance
+                      {' '}
+                      Go to Aragon Governance
                     </a>{' '}
-                    <span role="img" aria-label="glow">
-                      🦅
-                    </span>
                   </p>
 
                   <a
@@ -78,20 +81,23 @@ class UseCases extends React.Component {
                 <img src={blankDAO} />
                 <div>
                   <UseCasesBadge>USE CASE</UseCasesBadge>
-                  <h2>BlankDAO: From Iran to the world </h2>
+                  <h2>
+                    BlankDAO: From Iran to the world{' '}
+                    <span role="img" aria-label="glow">
+                      ✨
+                    </span>
+                  </h2>
                   <p>
                     See how Aragon enabled a group of talented developers from
                     Iran and other countries to raise funds transparently from
-                    their community.
+                    their community. <br/>
                     <a
                       target="_blank"
                       className="action-button"
                       href="https://mainnet.aragon.org/#/blankdao.aragonid.eth/">
-                      {' '}Go to BlankDAO
-                    </a>{' '}
-                    <span role="img" aria-label="glow">
-                      ✨
-                    </span>
+                      {' '}
+                      Go to BlankDAO
+                    </a>
                   </p>
 
                   <a
@@ -108,7 +114,12 @@ class UseCases extends React.Component {
                 <img src={melon} />
                 <div>
                   <UseCasesBadge>USE CASE</UseCasesBadge>
-                  <h2>Melon: Disintermediating asset management </h2>
+                  <h2>
+                    Melon: Disintermediating asset management{' '}
+                    <span role="img" aria-label="glow">
+                      📊
+                    </span>{' '}
+                  </h2>
                   <p>
                     See how Aragon is used to manage council membership,
                     contract upgrades, ENS subdomains, and network parameters
@@ -117,11 +128,9 @@ class UseCases extends React.Component {
                       target="_blank"
                       className="action-button"
                       href="https://aragon.mainnet.aragonpm.com/#/0xfe1f2de598f42ce67bb9aad5ad473f0272d09b74/0x3d5f4417b7fb63aaf3b2aa23fc227e3ddebb951b">
-                      {' '}Go to Melon Council
-                    </a>{' '}
-                    <span role="img" aria-label="glow">
-                      📊
-                    </span>
+                      {' '}
+                      Go to Melon Council
+                    </a>
                   </p>
 
                   <a
@@ -138,19 +147,22 @@ class UseCases extends React.Component {
                 <img src={pool} />
                 <div>
                   <UseCasesBadge>USE CASE</UseCasesBadge>
-                  <h2>Pool Together: A lottery you can’t lose </h2>
+                  <h2>
+                    Pool Together: A lottery you can’t lose{' '}
+                    <span role="img" aria-label="glow">
+                      🎲
+                    </span>
+                  </h2>
                   <p>
                     See how Aragon is used to transparently manage group funds
-                    among a dapp development team.
+                    among a dapp development team. <br/>
                     <a
                       target="_blank"
                       className="action-button"
                       href="https://mainnet.aragon.org/#/pooltogether/0x7e3797a24114afcfd09e953cda490d81863ec32f">
-                      {' '}Go to Pool Together
-                    </a>{' '}
-                    <span role="img" aria-label="glow">
-                      🎲
-                    </span>
+                      {' '}
+                      Go to Pool Together
+                    </a>
                   </p>
 
                   <a
@@ -167,20 +179,23 @@ class UseCases extends React.Component {
                 <img src={hive} />
                 <div>
                   <UseCasesBadge>USE CASE</UseCasesBadge>
-                  <h2>1Hive: Growing open source commons </h2>
-                  <p>
-                    See how Aragon helps to coordinate and reward maintainers
-                    and contributors in an open source community. <a
-                      target="_blank"
-                      className="action-button"
-                      href="https://rinkeby.aragon.org/#/0xe520428C232F6Da6f694b121181f907931fD2211/0xc2555abaed3797b52248e814172d2bea6728e542">
-                      {' '}Go to 1Hive
-                    </a>{' '}
+                  <h2>
+                    1Hive: Growing open source commons{' '}
                     <span role="img" aria-label="glow">
                       🐝
                     </span>
+                  </h2>
+                  <p>
+                    See how Aragon helps to coordinate and reward maintainers
+                    and contributors in an open source community. <br/>
+                    <a
+                      target="_blank"
+                      className="action-button"
+                      href="https://rinkeby.aragon.org/#/0xe520428C232F6Da6f694b121181f907931fD2211/0xc2555abaed3797b52248e814172d2bea6728e542">
+                      {' '}
+                      Go to 1Hive
+                    </a>
                   </p>
-
                   <a
                     className="secondary-button"
                     target="_blank"

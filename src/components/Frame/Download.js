@@ -12,16 +12,31 @@ const About = () => {
     windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
     iosPlatforms = ['iPhone', 'iPad', 'iPod'],
     os = 'linux',
-    osLink = 'https://nyc3.digitaloceanspaces.com/frame/0.2-rc/Frame-0.2.0.AppImage',
+    osLink = 'https://frame.nyc3.digitaloceanspaces.com/0.2-rc2/Frame-0.2.0.AppImage',
     browser = 'firefox',
     browserLink = 'https://addons.mozilla.org/en-US/firefox/addon/frame-extension';
 
+
+  var isChromium = window.chrome;
+  var winNav = window.navigator;
+
+  if ((winNav.userAgent.match("CriOS")) || (
+    isChromium !== null &&
+    typeof isChromium !== "undefined" &&
+    winNav.vendor === "Google Inc." &&
+    (typeof window.opr !== "undefined") === false &&
+    (winNav.userAgent.indexOf("Edge") > -1) === false
+  )) {
+    browser = 'chrome',
+    browserLink = 'https://chrome.google.com/webstore/detail/frame/ldcoohedfbjoobcadoglnnmmfbdlmmhf';
+  }
+
   if ((macosPlatforms.indexOf(platform) !== -1) || (iosPlatforms.indexOf(platform) !== -1)) {
     os = 'mac';
-    osLink = 'https://nyc3.digitaloceanspaces.com/frame/0.2-rc/Frame-0.2.0.dmg';
+    osLink = 'https://frame.nyc3.digitaloceanspaces.com/0.2-rc2/Frame-0.2.0.dmg';
   } else if (windowsPlatforms.indexOf(platform) !== -1) {
     os = 'windows';
-    osLink = 'https://nyc3.digitaloceanspaces.com/frame/0.2-rc/Frame-Setup-0.2.0.exe';
+    osLink = 'https://frame.nyc3.digitaloceanspaces.com/0.2-rc2/Frame-Setup-0.2.0.exe';
   }
 
   return (

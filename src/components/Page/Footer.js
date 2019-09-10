@@ -22,10 +22,10 @@ const Footer = ({...props}) => (
       <p>Create and manage your organization and give power to your stakeholder community.</p>
       </PreFooterText>
       <div>
-        <a className="principal-button centered" href="./discover">
+        <a className="principal-button centered" href="https://app.aragon.org">
           Try the product
         </a>
-        <a className="secondary-button centered" href="./discover">
+        <a className="secondary-button centered" href="/discover">
           Discover Aragon
         </a>
       </div>
@@ -147,7 +147,7 @@ const FooterSection = styled(Section)`
     margin: 10px;
     ${medium('margin: 10px;')};
     display:  block;
-    ${medium('display: inline;')};
+    ${large('display: inline;')};
   }
 `;
 const PreFooterText = styled.div`
@@ -184,6 +184,11 @@ const PreFooter = styled.div`
     letter-spacing: 0.315px;
     margin-top: 12px;
     color: #6d7693;
+  }
+  .principal-button, .secondary-button {
+    display: block;
+    margin: 30px 0;
+    ${large('display: inline; margin: 0;')}
   }
 
   .principal-button:hover,
