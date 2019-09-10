@@ -42,9 +42,7 @@ class Page extends React.Component {
 
 const Content = styled.div`
   min-height: calc(100vh - 116px) !important;
-  ${p =>
-    p.contentColor &&
-    'background-color: ' + p.contentColor}
+  ${p => p.contentColor && 'background-color: ' + p.contentColor}
   p {
     font-family: 'FontRegular', sans-serif;
     font-size: 16px;
@@ -55,29 +53,31 @@ const Content = styled.div`
   }
   h2 {
     font-family: 'FontBold', sans-serif;
-    font-size: 68px;
+    font-size: 52px;
+    ${medium('font-size: 68px;')}
     line-height: 1;
     text-align: center;
     letter-spacing: -1.8px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 20px;
   }
   h4 {
     font-family: 'FontRegular', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
+    ${medium('font-size: 22px;')}
     line-height: 1.6;
     text-align: center;
     letter-spacing: 0.33px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
   .action-button {
     font-family: 'FontRegular', sans-serif;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: normal;
-    color: #4A80E4;
-    margin-top: 20px;
-    ${large('margin-top: 30px;')}
+    color: #4a80e4;
+    margin-top: 10px;
+    ${large('margin-top: 10px;')}
     display: block;
     text-decoration: none;
     cursor: pointer;
@@ -118,6 +118,7 @@ const Content = styled.div`
     font-family: 'FontMedium';
     padding: 14px 28px;
     cursor: pointer;
+    transition: all 0.25s ease-in-out;
   }
   .secondary-button {
     background: #ffffff;
@@ -129,10 +130,28 @@ const Content = styled.div`
     font-family: 'FontMedium';
     padding: 14px 28px;
     cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+  }
+  .principal-button:hover,
+  .secondary-button:hover {
+    opacity: 0.95;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.150249);
   }
   .principal-button.centered,
   .secondary-button.centered {
     margin: 0 10px;
+  }
+  .hero-button-container {
+    height: 83px;
+    display: flex;
+    align-items: center;
+  }
+  .hero-button-container.centered {
+    justify-content: center;
+  }
+  .hero-button-container.left {
+    justify-content: flex-start;
   }
   .;
 `;

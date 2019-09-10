@@ -153,7 +153,7 @@ const FooterSection = styled(Section)`
 const PreFooterText = styled.div`
   width: 100%;
   text-align: center;
-  ${medium('width: 45%; text-align: left;')};
+  ${medium('width: 45%; text-align: left;')}
 `
 const PreFooter = styled.div`
   min-height: 70px;
@@ -168,10 +168,11 @@ const PreFooter = styled.div`
   background-size: cover;
   background-position: center;
   flex-direction: column;
-  ${medium('flex-direction: row; padding: 60px;')};
+  ${medium('flex-direction: row; padding: 60px;')}
   h2 {
     font-family: 'FontMedium';
-    font-size: 42px;
+    font-size: 36px;
+    ${medium('font-size: 42px;')}
     line-height: 59px;
     letter-spacing: -0.564706px;
     color: #212b36;
@@ -183,6 +184,13 @@ const PreFooter = styled.div`
     letter-spacing: 0.315px;
     margin-top: 12px;
     color: #6d7693;
+  }
+
+  .principal-button:hover,
+  .secondary-button:hover {
+    opacity: 0.95;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.150249);
+    cursor: pointer;
   }
 `;
 

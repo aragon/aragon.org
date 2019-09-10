@@ -12,7 +12,7 @@ const large = css => breakpoint('medium', css);
 
 const Features = () => (
   <Container>
-    <DividedSection image={image1}>
+    <DividedSection sectionClass="global" image={image1}>
       <h3>
         Global and <span className="red">bureaucracy-free</span>
       </h3>
@@ -22,10 +22,7 @@ const Features = () => (
         bureau-crazy.
       </p>
     </DividedSection>
-    <DividedSection
-      image={image2}
-      imageLeft={true}
-      sectionClass="customizable">
+    <DividedSection image={image2} imageLeft={true} sectionClass="customizable">
       <h3>
         Fully <br /> <span className="blue">customizable</span>
       </h3>
@@ -40,7 +37,7 @@ const Features = () => (
 
 const Container = styled.div`
   .red {
-    color: #FF8979;
+    color: #ff8979;
   }
   .customizable h3 {
     max-width: 368px;
@@ -64,6 +61,13 @@ const Container = styled.div`
   }
   .customizable {
     padding: 0px;
+  }
+  .global h3 {
+    margin-top: 0 !important;
+  }
+  .global img {
+    width: 80%;
+    margin-left: 20%;
   }
 `;
 export default Features;

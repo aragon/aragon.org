@@ -85,7 +85,7 @@ const About = () => (
         <a href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/">Manifesto</a>
       </AlmostFullSectionBox>
     </AlmostFullSection>
-    <Section>
+    <AboutSection>
       <Container>
         <Card
           linkTo="/project/grants"
@@ -105,7 +105,7 @@ const About = () => (
           content={mudule2Content}
         />
       </Container>
-    </Section>
+    </AboutSection>
   </div>
 );
 
@@ -169,4 +169,7 @@ const Container = styled.div`
   grid-row-gap: 30px;
 `;
 
+const AboutSection = styled(Section)`
+  padding: 90px 15px;
+`
 export default About;

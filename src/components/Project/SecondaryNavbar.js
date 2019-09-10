@@ -260,7 +260,7 @@ const Container = styled.nav`
     background: linear-gradient(135.14deg, #ff9372 8.69%, #ffd770 103.74%);
   }
   .roadmap.active {
-    background: linear-gradient(136.45deg, #ffd79a -18.16%, #55ffbd 129.73%);
+    background: linear-gradient(134.26deg, #658499 -12.72%, #9FC5C8 96.2%);
   }
 `;
 const Item = styled(SafeLink)`

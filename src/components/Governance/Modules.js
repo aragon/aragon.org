@@ -9,7 +9,7 @@ import buy from './assets/learn-about-ant.svg';
 import proposal from './assets/proposal.svg';
 
 const About = () => (
-  <Section>
+  <ModulesSection>
     <Container>
       <Card
         imageUrl={'Governance/assets/proposal'}
@@ -20,35 +20,37 @@ const About = () => (
             Do you have an idea for how to improve Aragon? Create an Aragon
             Governance Proposal and share your idea with the community.
           </p>
-          <Button.Anchor
-            className="hero-link"
-            mode="strong"
-            href="https://forum.aragon.org/t/how-to-create-an-aragon-governance-proposal/374"
-            target="_blank">
-            Create Proposal
-          </Button.Anchor>
+          <div className="hero-button-container centered">
+            <a className="principal-button" href="https://forum.aragon.org/t/how-to-create-an-aragon-governance-proposal/374"
+              target="_blank">
+              Create Proposal
+            </a>
+          </div>
         </span>}
       />
       <Card
         imageUrl={'Governance/assets/learn-about-ant'}
-        title="Learn about ANT"
+        title={<span>Learn about <br/>ANT</span>}
         content={<span>
           <p>
             The Aragon Network Token (ANT) is used to govern the Aragon Network.
             The quickest way to acquire ANT is to buy some on an exchange.
           </p>
-          <Button.Anchor
-            className="hero-link"
-            mode="strong"
-            href="https://wiki.aragon.org/documentation/aragon_network_token/#trade-ant"
-            target="_blank">
-            Learn More
-          </Button.Anchor>
+          <div className="hero-button-container centered">
+            <a className="principal-button" href="https://wiki.aragon.org/documentation/aragon_network_token/#trade-ant"
+              target="_blank">
+              Learn More
+            </a>
+          </div>
         </span>}
       />
     </Container>
-  </Section>
+  </ModulesSection>
 );
+
+const ModulesSection = styled(Section)`
+  padding: 90px 15px;
+`
 
 const Container = styled.div`
   display: grid;

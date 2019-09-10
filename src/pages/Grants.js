@@ -14,7 +14,12 @@ const Grants = () => (
       <Container>
         <h2>Aragon Nest</h2>
         <h4>Aragon is re-inventing the future of organizations. But we cannot do it alone. <br/>Nest was born to help the ecosystem flourish.</h4>
-        <Button.Anchor className="hero-link" mode="strong" href="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant" target="_blank">Apply</Button.Anchor>
+        <div className="hero-button-container centered">
+          <a className="principal-button" href="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant"
+            target="_blank">
+            Apply
+          </a>
+        </div>
       </Container>
     </GrantsSection>
     <SecondaryNavbar page="grants"/>

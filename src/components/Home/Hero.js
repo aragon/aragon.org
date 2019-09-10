@@ -43,7 +43,8 @@ const HeroSection = styled(Section)`
   overflow: hidden;
   padding-bottom: 0px;
   .container {
-    margin-top: 112px;
+    margin-top: 50px;
+    ${medium('margin-top: 112px;')}
   }
 `;
 const ButtonContainer = styled.div`
@@ -52,7 +53,7 @@ const ButtonContainer = styled.div`
   justify-content: center;
   padding: 0 0 10px 0;
   flex-direction: column;
-  ${medium('flex-direction: row;')};
+  ${medium('flex-direction: row;')}
   a {
     margin: 10px!important;
     min-width: 186px;

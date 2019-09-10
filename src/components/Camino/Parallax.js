@@ -50,12 +50,6 @@ const ParallaxComponent = () => {
           </Parallax>
         </ParallaxSection>
       </BreakPoint>
-      {((width >= 3000)) &&
-      (
-        <StaticSection className={width>=3000 ? 'large' : 'mobile'}>
-          <img src={caminoTitle} />
-        </StaticSection>
-      )}
     </Box>
   );
 };
@@ -114,6 +108,8 @@ const ParallaxSection = styled.div`
 `;
 
 const Box = styled.div`
+  max-width: 3000px;
+  margin: auto;
   div ::-webkit-scrollbar {
     width: 0 !important;
   }

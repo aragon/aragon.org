@@ -93,7 +93,7 @@ class GrantsContent extends React.Component {
   render() {
     const {four} = this.state;
     return (
-      <Section>
+      <ModulesSection>
         <Container>
           <LongCard
             textAlign="center"
@@ -135,10 +135,14 @@ class GrantsContent extends React.Component {
             className="apply-card"
           />
         </Container>
-      </Section>
+      </ModulesSection>
     );
   }
 }
+
+const ModulesSection = styled(Section)`
+  padding: 30px 15px 90px 15px;
+`
 
 const Container = styled.div`
   display: grid;
@@ -150,10 +154,10 @@ const Container = styled.div`
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   .apply-card .principal-image {
-    height: 152px;
-    width: 216px;
+    width: 288px;
   }
   .transparent .principal-image {
+    width: 173px;
     margin-bottom: 14px;
   }
   .numbers {

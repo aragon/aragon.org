@@ -49,7 +49,7 @@ const mudule2Content = (
 );
 
 const ContributeContent = () => (
-  <Section>
+  <ContributeSection>
     <Hero>
       <h3>A thriving ecosystem</h3>
       <p>
@@ -97,17 +97,22 @@ const ContributeContent = () => (
         imageUrl={'Project/assets/contribute1'}
         title="Help with open issues"
         content={mudule1Content}
+        className="contribute1"
       />
       <Card
         linkTo="https://wiki.aragon.org/jobs"
         imageUrl={'Project/assets/contribute2'}
         title="Aragon teams are hiring"
+        className="contribute2"
         content={mudule2Content}
       />
     </Container>
-  </Section>
+  </ContributeSection>
 );
 
+const ContributeSection = styled(Section)`
+  padding: 30px 15px 90px 15px;
+`
 const Hero = styled.div`
   margin-top: 40px;
 
@@ -175,6 +180,12 @@ const Container = styled.div`
     span {
       margin-right: 50px;
     }
+  }
+  .contribute1 .principal-image {
+    width: 250px;
+  }
+  .contribute2 .principal-image {
+    width: 273px;
   }
 `;
 

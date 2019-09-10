@@ -21,7 +21,7 @@ const mudule2Content = (
       with a new design system for a more consistent user experience.
     </p>
     <div className="label">
-      <a href="https://hack.aragon.org/" target="_blank">
+      <a href="https://hack.aragon.org/docs/layout.html" target="_blank">
         <Label title="aragonDS" image={label} />
       </a>
     </div>

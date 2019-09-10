@@ -8,7 +8,7 @@ import network2 from './assets/network2.svg';
 
 const About = () => (
   <div>
-    <StyledSection>
+    <StyledSection className="top">
       <Container>
         <img src={network1} />
         <div className="right">
@@ -21,7 +21,7 @@ const About = () => (
         </div>
       </Container>
     </StyledSection>
-    <StyledSection>
+    <StyledSection className="bottom">
       <Container>
         <BreakPoint to="medium">
           <img src={network2} />
@@ -45,6 +45,12 @@ const About = () => (
 
 const StyledSection = styled(Section)`
   border-bottom: 2px solid #f9fafc;
+  &.top {
+    padding: 90px 15px 45px 15px;
+  }
+  &.bottom  {
+    padding: 45px 15px 90px 15px;
+  }
 `;
 
 const Container = styled.div`

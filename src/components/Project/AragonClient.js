@@ -2,7 +2,7 @@ import React from 'react';
 import Section from '../General/Section';
 import Entry from './Entry';
 import styled from 'styled-components';
-import {breakpoint, Badge, DropDown} from '@aragon/ui';
+import {breakpoint, Badge, DropDown, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 import done from './assets/done.svg';
 
@@ -52,7 +52,7 @@ class AragonClient extends React.Component {
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                     <DoneBadge>
                       <img src={done} />
-                      Done
+                      <BreakPoint from="medium">Done</BreakPoint>
                     </DoneBadge>
                   </div>
                   <h3>Responsive view</h3>
@@ -73,7 +73,7 @@ class AragonClient extends React.Component {
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                     <DoneBadge>
                       <img src={done} />
-                      Done
+                      <BreakPoint from="medium">Done</BreakPoint>
                     </DoneBadge>
                   </div>
                   <h3>Local identity (custom labels) </h3>
@@ -93,7 +93,7 @@ class AragonClient extends React.Component {
                     <AutarkBadge>Autark</AutarkBadge>
                     <DoneBadge>
                       <img src={done} />
-                      Done
+                      <BreakPoint from="medium">Done</BreakPoint>
                     </DoneBadge>
                   </div>
                   <h3>Finalize Planning Suite</h3>
@@ -114,7 +114,7 @@ class AragonClient extends React.Component {
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                     <DoneBadge>
                       <img src={done} />
-                      Done
+                      <BreakPoint from="medium">Done</BreakPoint>
                     </DoneBadge>
                   </div>
                   <h3>Upgrading apps from the UI</h3>
@@ -185,7 +185,7 @@ class AragonClient extends React.Component {
                     <AragonOneBadge>Aragon One</AragonOneBadge>
                     <DoneBadge>
                       <img src={done} />
-                      Done
+                      <BreakPoint from="medium">Done</BreakPoint>
                     </DoneBadge>
                   </div>
                   <h3>Notifications & user feedback</h3>
@@ -657,8 +657,12 @@ const DoneBadge = styled(Badge)`
   background: rgba(0, 219, 140, 0.1);
   color: #00db8c;
   float: left;
+  padding: 7px 4px;
+  position: relative;
+  margin-right: 5px;
+  ${medium('margin-right: 0px; padding: 1px 8px 0; top: 0;')}
   img {
-    padding-right: 5px;
+    ${medium('padding-right: 5px;')}
   }
 `;
 
@@ -717,14 +721,13 @@ const AutarkBadge = styled(Badge)`
 const RoadmapSection = styled(Section)`
   background: #f9fafc;
   margin-top: -25px;
-  z-index: -1;
 `;
 const Container = styled.div`
   width: 100%;
   margin: 0;
   padding: 50px 0;
   text-align: center;
-  ${medium('padding: 50px 8.5%;')};
+  ${medium('padding: 50px 8.5%;')}
 `;
 
 const Title = styled.h1`
@@ -755,7 +758,8 @@ const Module = styled.div`
     transition: all 0.25s ease-in-out;
   }
   h3 {
-    line-height: 42px;
+    line-height: inherit;
+    margin: 10px 0 3px 0;
     font-size: 20px;
     color: #2d4051;
     font-weight: 600;
@@ -767,8 +771,10 @@ const Module = styled.div`
     text-align: left;
   }
   .badge-container {
+    text-align: left;
+    height: 60px;
     padding-top: 10px;
-    text-align: right;
+    ${medium('text-align: right; height: auto;')}
   }
 `;
 

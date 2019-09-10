@@ -84,8 +84,9 @@ const Container = styled.div`
 `;
 const Image = styled.img`
   max-width: 100%;
+  height: auto;
   margin: 30px 0;
-  ${medium('max-width: calc(100% + 413px); margin: auto;')};
+  ${medium('max-width: calc(100% + 413px); margin: auto; height: auto;')};
 `;
 
 const ImageContainer = styled.div`
@@ -94,8 +95,7 @@ const ImageContainer = styled.div`
   margin: auto;
 
   &.image-left {
-    display: flex;
-    justify-content: flex-end;
+    ${medium('display: flex; justify-content: flex-end; align-items: center;')}
   }
 `;
 

@@ -236,7 +236,13 @@ const Module = styled.div`
   }
   .badge-container {
     padding-top: 10px;
-    text-align: right;
+    text-align: left;
+
+    display: flex;
+    min-height: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    ${medium('text-align: right; display: inherit; min-height: auto;')}
   }
 `;
 

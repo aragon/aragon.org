@@ -48,7 +48,6 @@ const StyledMenuItem = styled.div`
         left: 0;
         right: 0;
         bottom: 0;
-        outline: 2px solid #4A80E4;
       }
     }
     &:active:after {
@@ -57,7 +56,6 @@ const StyledMenuItem = styled.div`
   }
   &.active a {
     color: #4A80E4;
-    font-weight: 800;
   }
 `
 

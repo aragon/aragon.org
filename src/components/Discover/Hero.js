@@ -16,13 +16,12 @@ const Hero = () => (
             collaborate with your co-founder, open a non-profit, or just organize
             an online community, Aragon is there for you.
           </h4>
-          <Button.Anchor
-            className="principal-hero-link"
-            mode="strong"
-            href="https://mainnet.aragon.org "
-            target="_blank">
-            Try it out
-          </Button.Anchor>
+          <div className="hero-button-container centered">
+            <a className="principal-button" href="https://mainnet.aragon.org "
+              target="_blank">
+              Try it out
+            </a>
+          </div>
         </TextContainer>
   </HeroSection>
 );

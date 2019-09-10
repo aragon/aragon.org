@@ -41,7 +41,7 @@ class Roadmap extends React.Component {
             Aragon Network
           </div>
         </Tabs>
-        {active === 'left' ? <AragonClient /> : <AragonNetwork />}
+        <div>{active === 'left' ? <AragonClient /> : <AragonNetwork />}</div>
         <FeedbackModule />
       </Page>
     );
@@ -63,6 +63,7 @@ const Tabs = styled.div`
   margin-top: -25px;
   position: relative;
   box-sizing: border-box;
+  z-index: 2;
 
   div {
     background: #F9FAFC;
@@ -98,7 +99,7 @@ const Hero = styled(Section)`
   background-color: rgb(207, 213, 234);
   background-image: url(${backgroundImage});
   background-size: cover;
-  background-position: center
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;

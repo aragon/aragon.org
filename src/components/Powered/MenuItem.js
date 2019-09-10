@@ -49,7 +49,6 @@ const StyledMenuItem = styled.div`
   }
   &.active a {
     color: #22e0ff;
-    font-weight: 800;
   }
 `
 

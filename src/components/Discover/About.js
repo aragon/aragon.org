@@ -29,6 +29,7 @@ const About = () => (
         imageUrl={'Discover/assets/discover1'}
         title="21st century organizations"
         content={mudule1Content}
+        className="discover1"
       />
       <Card
         imageUrl={'Discover/assets/discover2'}
@@ -48,6 +49,9 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  .discover1 img {
+    width: 266px;
+  }
 `;
 
 export default About;

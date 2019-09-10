@@ -19,19 +19,18 @@ const Hero = () => (
         The Aragon Network will change the way you think about jurisdictions and
         governments.
       </h4>
-      <Button.Anchor
-        className="principal-hero-link"
-        mode="strong"
-        href="https://github.com/aragon/whitepaper"
-        target="_blank">
-        Whitepaper
-      </Button.Anchor>
+      <div className="hero-button-container centered">
+        <a className="principal-button" href="https://github.com/aragon/whitepaper"
+          target="_blank">
+          Whitepaper
+        </a>
+      </div>
     </TextContainer>
   </HeroSection>
 );
 
 const HeroSection = styled(Section)`
-  background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);
+  background-image: linear-gradient(340.15deg, #83CCBE 6.67%, #E8F6E4 125.15%);
   height: auto;
   ${medium('height: 550px;')};
   padding-top: 94px;

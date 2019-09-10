@@ -5,7 +5,7 @@ import Feature from '../General/DividedSection';
 
 import styled from 'styled-components';
 
-import image5 from './assets/image5.png';
+import image5 from './assets/image5b.png';
 import image6 from './assets/image6.png';
 import image7 from './assets/image7.png';
 

@@ -187,7 +187,6 @@ const AragonNavbar = styled.div`
         left: -5px;
         right: -5px;
         bottom: 0;
-        outline: 2px solid #4A80E4;
       }
     }
     &:active:after {

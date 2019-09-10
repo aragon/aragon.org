@@ -172,7 +172,7 @@ const Box = styled.div`
     font-size: 16px;
     line-height: 3;
     text-align: center;
-    color: #22e0ff;
+    color: #007bff!important;
   }
 `;
 

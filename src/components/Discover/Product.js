@@ -72,7 +72,7 @@ const Container = styled.div`
   display: grid;
   ${medium(
     'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 650px'
-  )};
+  )}
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-column-gap: 30px;
@@ -81,18 +81,24 @@ const Container = styled.div`
 
 const ProductFeatures = styled.div`
   .divided-section-container {
-    ${medium('width: 81% !important;')};
-    ${large('width: 41% !important;')};
+    ${medium('width: 81% !important;')}
+    ${large('width: 41% !important;')}
   }
   .divided-section-image {
-    ${medium('max-width: 120%')};
-    ${large('max-width: calc(100% + 413px);')};
+    ${medium('max-width: 120%')}
+    ${large('max-width: calc(100% + 413px);')}
+  }
+  .universe h3 {
+    margin-top: 0;
   }
   .universe h3 .blue {
     color: #639cf5;
   }
   .universe {
-    padding: 60px 0 0 0;
+    padding: 60px 0;
+  }
+  .universe img.divided-section-image {
+    ${medium('padding-left: 120px;')};
   }
 `;
 export default About;

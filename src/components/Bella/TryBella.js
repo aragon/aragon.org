@@ -19,7 +19,12 @@ const Video = () => (
         </BreakPoint>
         <h2>Try Aragon 0.7 <br/>Bella now</h2>
         <h4>Aragon empowers you to freely organize and collaborate. Create global, bureaucracy-free organizations, companies, and communities.</h4>
-        <Button.Anchor className="hero-link" mode="strong" href="https://mainnet.aragon.org/">Try Bella now</Button.Anchor>
+        <div className="hero-button-container left">
+          <a className="principal-button" href="https://mainnet.aragon.org/"
+            target="_blank">
+            Try Bella now
+          </a>
+        </div>
       </Container>
       <BreakPoint from="medium">
         <video playsInline autoPlay muted loop>

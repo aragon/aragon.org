@@ -13,7 +13,12 @@ const Contribute = () => (
       <Container>
         <h2>The community awaits you</h2>
         <h4>The Aragon community is united towards the same goal: to re-shape the future of organizations.</h4>
-        <Button.Anchor className="hero-link" mode="strong" href="https://blog.aragon.org/decentralizing-aragons-development-5062fd6d135d" target="_blank">Read more</Button.Anchor>
+        <div className="hero-button-container centered">
+          <a className="principal-button" href="https://blog.aragon.org/decentralizing-aragons-development-5062fd6d135d"
+            target="_blank">
+            Read more
+          </a>
+        </div>
       </Container>
     </ContributeSection>
     <SecondaryNavbar page="contribute"/>

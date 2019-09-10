@@ -27,7 +27,7 @@ const Quotes = () => (
 
 const QuoteSection = styled(Section)`
   background: white;
-  padding: 0 15px 30px 15px;
+  padding: 0 15px 90px 15px;
   img {
     max-height: 483px;
   }

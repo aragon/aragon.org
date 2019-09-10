@@ -44,15 +44,16 @@ const Box = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1305px;
+  max-width: 1100px;
+  margin: auto;
   ${large('flex-direction: row;')};
 `;
 const Container = styled.div`
-  ${large('width: 60%;')};
+  ${large('width: 56%;')};
   ${p => p.imageLeft? 'padding-top' : 'padding-bottom'}: 30px;
   ${breakpoint('large', `padding-bottom:0;`)}
   @media (min-width: 1152px) {
-    ${p => p.imageLeft? 'padding-left' : 'padding-right'}: 150px;
+    ${p => p.imageLeft? 'padding-left' : 'padding-right'}: 96px;
   }
 
   text-align: center;
@@ -80,7 +81,7 @@ const Container = styled.div`
     ${large('text-align: left; margin: 0 0 5px 0;')};
     letter-spacing: -0.447059px;
     color: #212b36;
-    font-family: 'FontMedium', sans-serif;
+    font-family: 'FontRegular', sans-serif;
   }
 `;
 const Image = styled.img`
