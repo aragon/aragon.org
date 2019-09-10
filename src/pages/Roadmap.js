@@ -6,7 +6,7 @@ import AragonClient from '../components/Project/AragonClient';
 import AragonNetwork from '../components/Project/AragonNetwork';
 import FeedbackModule from '../components/Project/FeedbackModule';
 import Section from '../components/General/Section';
-import backgroundImage from '../components/Project/assets/roadmap-background.png';
+import backgroundImage from '../components/Project/assets/roadmap.svg';
 import {Button} from '@aragon/ui';
 
 class Roadmap extends React.Component {
@@ -16,15 +16,19 @@ class Roadmap extends React.Component {
     const {active} = this.state;
     return (
       <Page path="/project/roadmap">
-        <SecondaryNavbar page="roadmap" />
         <Hero>
           <Container>
             <h2>Roadmap</h2>
             <h4>
-              As a community-driven project, we want to share our roadmap with the world.<br/>You can filter by product, and also by development team.
+              As a community-driven project, we want to share our roadmap with
+              the world.
+              <br />
+              You can filter by product, and also by development team.
             </h4>
           </Container>
         </Hero>
+        <SecondaryNavbar page="roadmap" />
+        <TabsSeparator />
         <Tabs>
           <div
             className={active !== 'left' ? 'left' : 'active left'}
@@ -37,15 +41,21 @@ class Roadmap extends React.Component {
             Aragon Network
           </div>
         </Tabs>
-        {active === 'left' ? <AragonClient /> : <AragonNetwork />}
+        <div>{active === 'left' ? <AragonClient /> : <AragonNetwork />}</div>
         <FeedbackModule />
       </Page>
     );
   }
 }
+const TabsSeparator = styled.div`
+  background: white;
+  height: 53px;
+  width: 100%;
+`
 
 const Tabs = styled.div`
   width: 80%;
+  max-width: 1050px;
   margin: auto;
   background: transparent;
   display: flex;
@@ -53,27 +63,34 @@ const Tabs = styled.div`
   margin-top: -25px;
   position: relative;
   box-sizing: border-box;
+  z-index: 2;
 
   div {
-    color: #2d4051;
-    background: #e6e9ef;
+    background: #F9FAFC;
     font-size: 18px;
+    font-family: 'FontMedium', sans-serif;
+    color: #1C242D;
     text-align: center;
     width: 50%;
     cursor: pointer;
-    border: 1px solid rgba(151, 151, 151, 0.16103);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0245131);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0726053);
     transition: all 0.25s ease-in-out;
   }
-  div.active,
   div:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1426053);
     background: white;
   }
+  div.active {
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0726053);
+  }
   div.left {
-    border-radius: 6px 0 0 6px;
+    border-radius: 12px 0 0 12px;
+    border-right: 1px solid rgba(151, 151, 151, 0.16103);
   }
   div.right {
-    border-radius: 0 6px 6px 0;
+    border-left: 1px solid rgba(151, 151, 151, 0.16103);
+    border-radius: 0 12px 12px 0;
   }
 `;
 
@@ -82,11 +99,12 @@ const Hero = styled(Section)`
   background-color: rgb(207, 213, 234);
   background-image: url(${backgroundImage});
   background-size: cover;
-  background-position: center
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top:64px;
 `;
 
 const Container = styled.div`

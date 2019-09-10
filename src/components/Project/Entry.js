@@ -60,7 +60,8 @@ const EntryBox = styled.div`
     height: 12px;
     border-radius: 12px;
     top: 6px;
-    left: -34px;
+    left: 3px;
+    ${medium('left: -34px;')};
     background: #d8d8d8;
   }
 `;

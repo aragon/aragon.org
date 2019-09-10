@@ -2,63 +2,48 @@ import React from 'react'
 import Section from '../General/Section'
 import styled from 'styled-components'
 import { Link } from 'react-static'
-import backgroundImage from './assets/unstoppable-org-background.png'
-import aragonImage from './assets/unstoppable-org.svg'
+import image from './assets/unstoppable.png'
+import AlmostFullSection from '../General/AlmostFullSection';
 
 import { breakpoint, BreakPoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
 
 
 const UnstoppableOrganizations = () => (
-  <UnstoppableSection>
-    <Box>
-      <Container>
-        <Image src={aragonImage}/>
-      </Container>
-      <Container>
-        <h2>Unstoppable <br/>organizations</h2>
-        <h4>Aragon provides all the necessary tools for human collaboration. Aragon organizations are impossible to censor or shut down, escaping the boundaries of oppression and censorship.</h4>
-        <Link to="/project" className="action-button"><span>About the project <img src={require(`../General/assets/hero-arrow.svg`)}/></span></Link>
-      </Container>
-    </Box>
-  </UnstoppableSection>
+  <AlmostFullSection backgroundColor="#FF8979" image={image} imageLeft={true}>
+    <AlmostFullSectionBox>
+      <h3>Unstoppable organizations</h3>
+      <p>
+        Aragon provides all the necessary tools for human collaboration. Aragon organizations are impossible to censor or shut down, escaping the boundaries of oppression and censorship.
+      </p>
+      <Link to="/project">About the project</Link>
+    </AlmostFullSectionBox>
+  </AlmostFullSection>
 );
 
-const UnstoppableSection = styled(Section)`
-  background-color: #1c1d23;
-  background-image: url(${backgroundImage});
-  background-size: cover;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-const Box = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  ${medium('flex-direction: row;')};
-`;
-const Container = styled.div`
-  width: 100%;
-  text-align: center;
-  margin: auto;
-  ${medium('text-align: left; margin: inherit;')};
-  h2 {
-    text-align: center;
-    ${medium('text-align: left;')};
-    color: white;
-    line-height: 1.2;
+const AlmostFullSectionBox = styled.div`
+  h3 {
+    font-family: 'FontRegular', sans-serif;
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: -0.564706px;
+    color: #ffffff !important;
   }
-  h4 {
-    text-align: center;
-    ${medium('text-align: left;')};
-    color: #b4b5cc;
+  p {
+    font-family: 'FontRegular', sans-serif;
+    font-size: 21px;
+    line-height: 35px;
+    letter-spacing: 0.315px;
+    color: #ffffff;
+    opacity: 0.8;
   }
-`;
-const Image = styled.img`
-  max-width: 100%
+  a {
+    font-family: 'FontSemiBold';
+    font-size: 21px;
+    line-height: 35px;
+    letter-spacing: 0.315px;
+    color: #ffffff;
+  }
 `;
 
 export default UnstoppableOrganizations

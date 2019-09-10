@@ -11,7 +11,7 @@ const About = () => (
     <StyledSection>
       <Container>
         <img src={about} />
-        <div>
+        <div className="right">
           <h2>Aragon is a project run by its community.</h2>
           <h4>
             Aragon is governed by Aragon Network Token (ANT) holders. You can
@@ -32,7 +32,7 @@ const About = () => (
         <BreakPoint to="medium">
           <img src={what} />
         </BreakPoint>
-        <div>
+        <div className="left">
           <h2>What is an AGP?</h2>
           <h4>
             AGP stands for Aragon Governance Proposal, a document that proposes
@@ -72,6 +72,14 @@ const Container = styled.div`
   }
   div {
     max-width: 480px;
+    padding-top: 40px;
+    ${medium('padding-top: 0;')};
+  }
+  div.right {
+    ${medium('padding-left: 50px;')};
+  }
+  div.left {
+    ${medium('padding-right: 50px;')};
   }
   h2 {
     font-family: 'FontLight';
@@ -92,7 +100,7 @@ const Container = styled.div`
     font-size: 16px;
     line-height: 4;
     text-align: center;
-    color: #22e0ff;
+    color: #4A80E4;
   }
 `;
 

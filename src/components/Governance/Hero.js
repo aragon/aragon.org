@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Section from '../General/Section';
-import background from './assets/hero.png';
+import background from './assets/governance-cover.svg';
 import {breakpoint, BreakPoint, Button} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
@@ -14,13 +14,12 @@ const Hero = () => (
         Aragon exists to empower people, starting with our own community.
         <br/>The project is community-governed, and we are committed to decentralizing control.
       </h4>
-      <Button.Anchor
-        className="hero-link"
-        mode="strong"
-        href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/"
-        target="_blank">
-        Manifesto
-      </Button.Anchor>
+      <div className="hero-button-container centered">
+        <a className="principal-button" href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/"
+          target="_blank">
+          Manifesto
+        </a>
+      </div>
     </Container>
   </HeroSection>
 );
@@ -30,11 +29,12 @@ const HeroSection = styled(Section)`
   background: #F9EDDF;
   background-image: url(${background});
   background-size: cover;
-  background-position: center
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top:64px;
 `;
 
 const Container = styled.div`

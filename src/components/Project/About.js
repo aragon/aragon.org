@@ -4,11 +4,11 @@ import LongCard from '../General/LongCard';
 import Card from '../General/Card';
 import styled from 'styled-components';
 import history from './assets/history.svg';
-import mobileHistory from './assets/history-mobile.svg';
 import {Link} from 'react-static';
 import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
-
+import AlmostFullSection from '../General/AlmostFullSection';
+import image from './assets/project-governance.png';
 const mudule1Content = (
   <span>
     <p>
@@ -48,116 +48,125 @@ const module3Content = (
     originally started by Luis Cuende and Jorge Izquierdo in November 2016.
   </p>
 );
-const module4Content = (
-  <span>
-    <p>
-      We have a strong commitment to decentralize our own governance. The
-      community will have control over the project’s future.
-    </p>
-    <p>
-      <Link className="action-button" to="/project/governance">
-        <span>
-          Governance <img src={require(`../General/assets/arrow.svg`)} />
-        </span>
-      </Link>
-    </p>
-  </span>
-);
 
 const About = () => (
-  <Section>
-    <Container>
-      <LongCard
-        textAlign="center"
-        background=""
-        title="Our history"
-        content={module3Content}
-        gradient="linear-gradient(292deg, #95bbce, #c5d0e6 46%, #e7e4f6)">
-        <BreakPoint to="medium">
-          <HistoryImage src={mobileHistory} />
-        </BreakPoint>
-        <BreakPoint from="medium">
-          <HistoryImage src={history} />
-        </BreakPoint>
-      </LongCard>
-      <LongCard
-        linkTo="/project/governance"
-        textAlign="right"
-        color="#b4b5cc"
-        image={'Project/assets/project3.png'}
-        background=""
-        colorWhite
-        title="Governed by the community"
-        content={module4Content}
-        gradient="radial-gradient(circle at 99% 100%, #1c1d23, #2d2e39)"
-      />
-      <Card
-        linkTo="/project/grants"
-        imageUrl={'Project/assets/project1'}
-        title="Nest, our grants program"
-        content={mudule1Content}
-      />
-      <Card
-        linkTo="/project/contribute"
-        imageUrl={'Project/assets/project2'}
-        title={
-          <span>
-            Join
-            <br /> the fight
-          </span>
-        }
-        content={mudule2Content}
-      />
-    </Container>
-  </Section>
+  <div>
+    <Section>
+      <History>
+        <div>
+          <h3>Our history</h3>
+          <p>
+            The Aragon Project was born to disintermediate the creation and
+            maintenance of organizations. Everyone should have equal access to
+            governance and collaboration, no matter of their race, gender or
+            age.
+          </p>
+          <p>
+            The project was originally started by Luis Cuende and Jorge
+            Izquierdo in November 2016.
+          </p>
+          <Link className="action-button" to="/project/roadmap">
+            <span>
+              View roadmap <img src={require(`../General/assets/arrow.svg`)} />
+            </span>
+          </Link>
+        </div>
+        <img src={history} />
+      </History>
+    </Section>
+
+    <AlmostFullSection backgroundColor="#639CF5" image={image} imageLeft={true}>
+      <AlmostFullSectionBox>
+        <h3>Governed by the community</h3>
+        <p>
+          The Aragon project has a strong commitment to decentralize its own
+          existence. The community will have control over its future.
+        </p>
+        <a href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/">Manifesto</a>
+      </AlmostFullSectionBox>
+    </AlmostFullSection>
+    <AboutSection>
+      <Container>
+        <Card
+          linkTo="/project/grants"
+          imageUrl={'Project/assets/project1'}
+          title="Nest, our grants program"
+          content={mudule1Content}
+        />
+        <Card
+          linkTo="/project/contribute"
+          imageUrl={'Project/assets/project2'}
+          title={
+            <span>
+              Join
+              <br /> the fight
+            </span>
+          }
+          content={mudule2Content}
+        />
+      </Container>
+    </AboutSection>
+  </div>
 );
 
-const HistoryImage = styled.img`
-  margin: 30px -8% 0 -8%;
-  max-width: 120%;
+const AlmostFullSectionBox = styled.div`
+  h3 {
+    font-family: 'FontRegular', sans-serif;
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: -0.564706px;
+    color: #ffffff !important;
+  }
+  p {
+    font-family: 'FontRegular', sans-serif;
+    font-size: 21px;
+    line-height: 35px;
+    letter-spacing: 0.315px;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+  a {
+    font-family: 'FontSemiBold';
+    font-size: 21px;
+    line-height: 35px;
+    letter-spacing: 0.315px;
+    color: #ffffff;
+  }
 `;
-const Label = styled.div`
-  font-family: 'GraphikLink', sans-serif;
-  font-size: 13px;
-  line-height: 0.97;
-  text-align: center;
-  color: #7f8198;
-  border-radius: 25px;
-  box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.05);
-  margin: 60px 0 0 0;
-  padding: 5px 15px;
-
-  &.yellow {
-    background-image: linear-gradient(96deg, #faf9f4, #f9f5de);
+const History = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${medium('flex-direction: row;')};
+  div {
+    ${medium('width: 594px;')};
   }
-  &.violet {
-    background-color: #ebe4ff;
+  h3 {
+    font-family: 'FontLight', sans-serif;
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: -0.564706px;
+    color: #212b36;
   }
-  &.green {
-    background-image: linear-gradient(205deg, #c4e5df, #d4efe6);
+  p {
+    font-size: 21px;
+    line-height: 35px;
+    letter-spacing: 0.315px;
+    color: #637381;
+    max-width: 100%;
+    ${medium('max-width: 445px;')};
+    margin: 25px 0;
   }
-`;
-const DateBox = styled.div`
-  opacity: 0.31;
-  width: 25px;
-  height: 25px;
-  border-radius: 25px;
-  margin: 60px 0 0 0;
-  &.yellow {
-    background-color: #f9f5de;
-  }
-  &.violet {
-    background-color: #ebe4ff;
-  }
-  &.green {
-    background-color: #d4efe6;
+  img {
+    width: 100%;
+    margin: 30px 0;
+    ${medium('margin: 0; width: auto;')};
   }
 `;
 
 const Container = styled.div`
   display: grid;
   ${medium(
-    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px 500px'
+    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 650px'
   )};
   grid-template-columns: 100%;
   grid-template-rows: auto;
@@ -165,4 +174,7 @@ const Container = styled.div`
   grid-row-gap: 30px;
 `;
 
+const AboutSection = styled(Section)`
+  padding: 90px 15px;
+`
 export default About;

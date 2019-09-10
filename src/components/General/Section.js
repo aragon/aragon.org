@@ -23,7 +23,7 @@ const Section = ({ className, ...props }) => {
 
   return (
     <StyledSection {...containerProps}>
-      <Container>
+      <Container className="container">
         <div {...props} />
       </Container>
     </StyledSection>

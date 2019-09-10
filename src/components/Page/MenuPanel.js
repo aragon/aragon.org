@@ -5,6 +5,7 @@ import { Link } from 'react-static'
 import { Button, SafeLink } from '@aragon/ui'
 import SidePanel from './SidePanel'
 import menu from './assets/menu.svg'
+import menuBlack from './assets/menu-black.svg'
 
 class Panel extends React.Component {
   static propTypes = {
@@ -15,12 +16,12 @@ class Panel extends React.Component {
     opened: false,
   }
   render() {
-    const { items } = this.props
+    const { items, color } = this.props
     const { opened } = this.state
     return (
       <Pannel className="flex-images">
         <Button mode="text" onClick={() => this.setState({ opened: true })}>
-          <img src={menu} />
+          <img src={color == 'black' ? menuBlack : menu} />
         </Button>
         <SidePanel
           title=""
@@ -57,7 +58,7 @@ const Container = styled.div`
     color: white;
   }
   a:hover {
-    color: #22e0ff;
+    color: #4A80E4;
   }
 `
 

@@ -159,9 +159,9 @@ const RoadmapContainer = styled.div`
     top: 12px;
     left: 9px;
     bottom: 20px;
-    width: 2px;
-    background: #d8d8d8;
-    ${medium('left: 21px;')};
+    width: 1px;
+    background: rgba(96, 128, 156, 0.152004);
+    ${medium('left: 21.5px;')};
   }
   &:after {
     content: '';
@@ -184,6 +184,8 @@ const AutarkBadge = styled(Badge)`
 
 const RoadmapSection = styled(Section)`
   background: #f9fafc;
+  margin-top: -25px;
+  z-index: -1;
 `;
 const Container = styled.div`
   width: 100%;
@@ -234,7 +236,13 @@ const Module = styled.div`
   }
   .badge-container {
     padding-top: 10px;
-    text-align: right;
+    text-align: left;
+
+    display: flex;
+    min-height: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    ${medium('text-align: right; display: inherit; min-height: auto;')}
   }
 `;
 

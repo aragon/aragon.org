@@ -19,14 +19,17 @@ const SCard = ({...props}) => (
     cardHeight={props.cardHeight ? props.cardHeight : false}
     className={props.className}
     >
-    <img src={require(`../${props.imageUrl}.svg`)} />
+    {props.imageUrl.includes('.png') ?
+    <img className="principal-image" src={require(`../${props.imageUrl}`)} />
+  :
+    <img className="principal-image" src={require(`../${props.imageUrl}.svg`)} />}
     {props.label && (
       <div className="label">
         <p>{props.label}</p>
       </div>
     )}
     <h1>{props.title}</h1>
-    <h1>{props.content}</h1>
+    <div className="content">{props.content}</div>
   </SmallCard>
 );
 
@@ -62,20 +65,23 @@ const SmallCard = styled.div`
   justify-content: center;
   padding: 30px;
   transition: all 0.25s ease-in-out;
-  ${medium('padding: 15px;')};
-  ${large('padding: 30px 60px;')};
+  ${medium('padding: 15px;')}
+  ${large('padding: 30px 60px;')}
   @media (min-width: 768px) {
-    height: ${props => (props.cardHeight ? props.cardHeight : '500px')};
+    height: ${props => (props.cardHeight ? props.cardHeight : '650px')};
   }
   img {
-    height: 130px;
-    width: 130px;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 15px;
+    ${medium('margin-bottom: 30px;')};
     ${props => props.imageBig && 'height: auto;'};
     ${props => props.imageBig && 'width: 100%;'};
   }
   p {
     color: ${props => (props.colorWhite ? '#b4b5cc' : '#7f8198')};
     text-align: ${props => (props.textAlign ? props.textAlign : 'center')};
+    margin: 15px 0 0 0;
   }
   h1 {
     font-family: 'FontLight', sans-serif;

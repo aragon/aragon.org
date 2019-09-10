@@ -24,7 +24,9 @@ const Timeline = () => (
               proposal complies with AGP-1 and has a chance of passing review by
               the AGP Editors and your peers.{' '}
             </h5>
-            <a target="_blank" href="https://github.com/aragon/AGPs/blob/master/AGPs/AGP-1.md">
+            <a
+              target="_blank"
+              href="https://github.com/aragon/AGPs/blob/master/AGPs/AGP-1.md">
               <span>
                 AGP-1 <img src={require(`../General/assets/arrow.svg`)} />
               </span>
@@ -45,7 +47,8 @@ const Timeline = () => (
             </h5>
             <a target="_blank" href="https://forum.aragon.org/tags/agp">
               <span>
-                Aragon forum <img src={require(`../General/assets/arrow.svg`)} />
+                Aragon forum{' '}
+                <img src={require(`../General/assets/arrow.svg`)} />
               </span>
             </a>
           </div>
@@ -80,9 +83,12 @@ const Timeline = () => (
               next Aragon vote cycle is scheduled to begin and ends one week
               before the next vote cycle is scheduled to begin.
             </h5>
-            <a target="_blank" href="https://github.com/aragon/AGPs/blob/master/aa_board_review.md">
+            <a
+              target="_blank"
+              href="https://github.com/aragon/AGPs/blob/master/aa_board_review.md">
               <span>
-                Board review <img src={require(`../General/assets/arrow.svg`)} />
+                Board review{' '}
+                <img src={require(`../General/assets/arrow.svg`)} />
               </span>
             </a>
           </div>
@@ -90,24 +96,27 @@ const Timeline = () => (
       </Entry>
     </TimelineContainer>
     <LastContainer>
-    <Entry title="Stage v" className="stage5-box">
-      <Box id="stage5-box">
-        <StageImg src={stage5} />
-        <div>
-          <h6>Aragon Network Vote</h6>
-          <h5>
-            All AGPs that have moved to Stage V since the last Aragon Network
-            vote cycle and have been approved by the Association board are
-            included on the ballot in the current vote cycle.
-          </h5>
-          <a target="_blank" href="https://blog.aragon.org/tag/governance-proposals/">
-            <span>
-              Vote announcements <img src={require(`../General/assets/arrow.svg`)} />
-            </span>
-          </a>
-        </div>
-      </Box>
-    </Entry>
+      <Entry title="Stage v" className="stage5-box">
+        <Box id="stage5-box">
+          <StageImg src={stage5} />
+          <div>
+            <h6>Aragon Network Vote</h6>
+            <h5>
+              All AGPs that have moved to Stage V since the last Aragon Network
+              vote cycle and have been approved by the Association board are
+              included on the ballot in the current vote cycle.
+            </h5>
+            <a
+              target="_blank"
+              href="https://blog.aragon.org/tag/governance-proposals/">
+              <span>
+                Vote announcements{' '}
+                <img src={require(`../General/assets/arrow.svg`)} />
+              </span>
+            </a>
+          </div>
+        </Box>
+      </Entry>
     </LastContainer>
   </TimelineBox>
 );
@@ -118,7 +127,7 @@ const LastContainer = styled.div`
   margin: auto;
   padding: 0;
   ${medium('padding: 5px 50px;')};
-`
+`;
 const TimelineBox = styled.div`
   width: 100%;
   margin: 0;
@@ -127,9 +136,9 @@ const TimelineBox = styled.div`
   background: #f9fafc;
   text-align: center;
 `;
-const StageImg = styled.img `
+const StageImg = styled.img`
   height: 158px;
-`
+`;
 
 const Box = styled.div`
   background: #ffffff;
@@ -163,7 +172,7 @@ const Box = styled.div`
     font-size: 16px;
     line-height: 3;
     text-align: center;
-    color: #22E0FF;
+    color: #007bff!important;
   }
 `;
 

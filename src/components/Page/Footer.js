@@ -3,6 +3,7 @@ import {Text, breakpoint, SafeLink} from '@aragon/ui';
 import {Link} from 'react-static';
 import styled from 'styled-components';
 import Section from '../General/Section';
+import backgroundImage from './assets/prefooter.png';
 import logo from './assets/logo-footer.svg';
 import twitter from './assets/twitter.svg';
 import ghost from './assets/ghost.svg';
@@ -15,6 +16,20 @@ const large = css => breakpoint('large', css);
 
 const Footer = ({...props}) => (
   <FooterSection>
+    <PreFooter>
+      <PreFooterText>
+      <h2>Try Aragon now</h2>
+      <p>Create and manage your organization and give power to your stakeholder community.</p>
+      </PreFooterText>
+      <div>
+        <a className="principal-button centered" href="https://app.aragon.org">
+          Try the product
+        </a>
+        <a className="secondary-button centered" href="/discover">
+          Discover Aragon
+        </a>
+      </div>
+    </PreFooter>
     <Container>
       <Item className="mobile-full">
         <Link to="/">
@@ -105,6 +120,83 @@ const Footer = ({...props}) => (
 
 const FooterSection = styled(Section)`
   background-color: #f9fafc;
+  .principal-button {
+    background: linear-gradient(186.69deg, #32fff5 -103.98%, #01bfe3 80.13%);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.150249);
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 1;
+    color: #ffffff;
+    font-family: 'FontMedium';
+    padding: 14px 28px;
+    text-decoration: none;
+  }
+  .secondary-button {
+    background: #ffffff;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.150249);
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 1;
+    color: #212b36;
+    font-family: 'FontMedium';
+    padding: 14px 28px;
+    text-decoration: none;
+  }
+  .principal-button.centered,
+  .secondary-button.centered {
+    margin: 10px;
+    ${medium('margin: 10px;')};
+    display:  block;
+    ${large('display: inline;')};
+  }
+`;
+const PreFooterText = styled.div`
+  width: 100%;
+  text-align: center;
+  ${medium('width: 45%; text-align: left;')}
+`
+const PreFooter = styled.div`
+  min-height: 70px;
+  background: #ffffff;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.150249);
+  border-radius: 6px;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(${backgroundImage});
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  ${medium('flex-direction: row; padding: 60px;')}
+  h2 {
+    font-family: 'FontMedium';
+    font-size: 36px;
+    ${medium('font-size: 42px;')}
+    line-height: 59px;
+    letter-spacing: -0.564706px;
+    color: #212b36;
+  }
+  p {
+    font-family: 'FontRegular';
+    font-size: 21px;
+    line-height: 35px;
+    letter-spacing: 0.315px;
+    margin-top: 12px;
+    color: #6d7693;
+  }
+  .principal-button, .secondary-button {
+    display: block;
+    margin: 30px 0;
+    ${large('display: inline; margin: 0;')}
+  }
+
+  .principal-button:hover,
+  .secondary-button:hover {
+    opacity: 0.95;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.150249);
+    cursor: pointer;
+  }
 `;
 
 const Container = styled.div`

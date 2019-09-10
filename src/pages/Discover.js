@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Page } from '../components'
 import About from '../components/Discover/About'
+import Features from '../components/Discover/Features'
 import Section from '../components/General/Section'
 import Product from '../components/Discover/Product'
 import UnstoppableOranizations from '../components/Discover/UnstoppableOranizations'
@@ -13,11 +14,12 @@ const medium = css => breakpoint('medium', css)
 const large = css => breakpoint('large', css)
 
 const Discover = () => (
-  <Page path="/discover">
+  <Page path="/discover" color="black">
     <Hero/>
     <About/>
-    <Product/>
     <UnstoppableOranizations/>
+    <Features />
+    <Product/>
     <BlogPost/>
   </Page>
 )

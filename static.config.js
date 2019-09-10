@@ -66,8 +66,18 @@ export default {
       getData: () => ({ title: '' }),
     },
     {
+      path: '/camino',
+      component: 'src/pages/Camino',
+      getData: () => ({ title: '' }),
+    },
+    {
       path: '/powered-by',
       component: 'src/pages/PoweredByAragon',
+      getData: () => ({ title: '' }),
+    },
+    {
+      path: '/agent',
+      component: 'src/pages/Frame',
       getData: () => ({ title: '' }),
     },
     {
@@ -172,7 +182,12 @@ export default {
             <link rel="icon" href="/favicon-152.png" sizes="152x152" />
             <link rel="icon" href="/favicon-195.png" sizes="195x195" />
             <link rel="icon" href="/favicon-228.png" sizes="228x228" />
-
+            <link
+              rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+              integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+              crossOrigin="anonymous"
+            />
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:site" content="@aragonproject" />
             <meta name="twitter:creator" content="@aragonproject" />
