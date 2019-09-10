@@ -8,57 +8,77 @@ import fase2 from './assets/fase2.png';
 import fase3 from './assets/fase3.png';
 import fase4 from './assets/fase4.png';
 import title from './assets/camino-title.png';
+import blur from './assets/blur.png';
 import {Parallax, ParallaxLayer} from 'react-spring/addons.cjs.js';
 
-import {useViewport, breakpoint, BreakPoint} from '@aragon/ui';
+import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 
+class ParallaxComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: 0,
+      imageLoaded: false
+    };
+    this.handleImageLoaded = this.handleImageLoaded.bind(this);
+  }
 
-const ParallaxComponent = () => {
-  const {width} = useViewport();
-  console.log(width);
-  return (
-    <Box>
-      <BreakPoint to="medium">
-      <StaticSection className={width>=3000 ? 'large' : 'mobile'}>
-        <CaminoTitle src={title} />
-      </StaticSection>
-      </BreakPoint>
-      <BreakPoint from="medium">
-        <ParallaxSection>
-          <Parallax
-            pages={1.45}
-            scrolling={true}>
-            <ParallaxLayer offset={-0.1} speed={0}>
-              <img src={backgroundImage} />
-            </ParallaxLayer>
-            <ParallaxLayer offset={0.5} speed={0.3}>
-              <img src={fase4} />
-            </ParallaxLayer>
-            <ParallaxLayer offset={0.6} speed={0.5}>
-              <img src={fase3} />
-            </ParallaxLayer>
-            <ParallaxLayer offset={0.6} speed={0.6}>
-              <img src={fase2} />
-            </ParallaxLayer>
-            <ParallaxLayer factor={1} offset={0.9} speed={0.9}>
-              <img src={fase1} />
-            </ParallaxLayer>
-            <ParallaxLayer offset={0.35} speed={0.2}>
-              <CaminoTitle src={title} />
-            </ParallaxLayer>
-          </Parallax>
-        </ParallaxSection>
-      </BreakPoint>
-    </Box>
-  );
-};
+  handleImageLoaded(index) {
+    this.setState({imageLoaded: true});
+    setTimeout(function(){
+      var element = document.getElementById("blur-parallax");
+      element.classList.add("remove-img");
+    }, 750);
+  }
+
+  render() {
+
+    return (
+      <Box>
+        <BreakPoint to="medium">
+          <StaticSection className="mobile">
+            <CaminoTitle src={title} />
+          </StaticSection>
+        </BreakPoint>
+        <BreakPoint from="medium">
+          <img id="blur-parallax" src={blur} className={this.state.imageLoaded ? "blur fade" : "blur"} />
+          <ParallaxSection>
+            <Parallax pages={1.45} scrolling={true}>
+              <ParallaxLayer offset={-0.1} speed={0}>
+                <img
+                  src={backgroundImage}
+                  onLoad={this.handleImageLoaded.bind(this)}
+                />
+              </ParallaxLayer>
+              <ParallaxLayer offset={0.5} speed={0.3}>
+                <img src={fase4} />
+              </ParallaxLayer>
+              <ParallaxLayer offset={0.6} speed={0.5}>
+                <img src={fase3} />
+              </ParallaxLayer>
+              <ParallaxLayer offset={0.6} speed={0.6}>
+                <img src={fase2} />
+              </ParallaxLayer>
+              <ParallaxLayer factor={1} offset={0.9} speed={0.9}>
+                <img src={fase1} />
+              </ParallaxLayer>
+              <ParallaxLayer offset={0.3} speed={0.2}>
+                <CaminoTitle src={title} />
+              </ParallaxLayer>
+            </Parallax>
+          </ParallaxSection>
+        </BreakPoint>
+      </Box>
+    );
+  }
+}
 
 const CaminoTitle = styled.img`
   max-width: 90%;
   margin: 60% auto;
   ${medium(`margin: auto; max-width: 750px!important;`)}
-`
+`;
 const StaticSection = styled.div`
   height: 1200px;
   background-color: #0d5c76;
@@ -75,7 +95,7 @@ const StaticSection = styled.div`
   &.large {
     height: 2700px;
   }
-`
+`;
 const ParallaxSection = styled.div`
   background-color: #062132;
 
@@ -110,6 +130,21 @@ const ParallaxSection = styled.div`
 const Box = styled.div`
   max-width: 3000px;
   margin: auto;
+  .blur {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 100%;
+    height: 111%;
+    transition: all 0.75s ease-in-out;
+  }
+  .blur.fade {
+    opacity: 0;
+  }
+  .blur.fade.remove-img {
+    display: none;
+  }
   div ::-webkit-scrollbar {
     width: 0 !important;
   }

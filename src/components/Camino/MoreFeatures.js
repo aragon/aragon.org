@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 import image5 from './assets/image5b.png';
 import image6 from './assets/image6.png';
-import image7 from './assets/image7.png';
+import image7 from './assets/notifications.svg';
 
 import label1 from './assets/label-voting.svg';
 import label2 from './assets/label-finance.svg';
@@ -41,7 +41,7 @@ const MoreFeatures = () => (
       </p>
       <Label title="Finance" image={label2} />
     </Feature>
-    <Feature image={image7} imageLeft={true} sectionClass="feature">
+    <Feature image={image7} imageLeft={true} sectionClass="feature notifications">
       <h3 className="mailing">
         Stay up to date with <span className="red">email notifications</span>
       </h3>
@@ -73,6 +73,9 @@ const Container = styled.div`
   }
   .feature {
     ${medium('padding: 0 120px !important;')};
+  }
+  .notifications .divided-section-image {
+    ${medium('width: calc(100% + 100px); padding-right: 100px;')};
   }
   h3.finance {
     max-width: 500px;

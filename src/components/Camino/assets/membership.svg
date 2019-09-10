@@ -1,13 +1,1 @@
-<svg width="130" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="12.1875" y="12.1875" width="105.625" height="105.625" stroke="url(#paint0_linear)" stroke-width="6"/>
-<rect width="25.7292" height="25.7292" fill="white"/>
-<rect y="104.271" width="25.7292" height="25.7292" fill="white"/>
-<rect x="104.271" y="104.271" width="25.7292" height="25.7292" fill="white"/>
-<rect x="104.271" width="25.7292" height="25.7292" fill="white"/>
-<defs>
-<linearGradient id="paint0_linear" x1="-146.927" y1="-70.4167" x2="129.323" y2="125.937" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF4E78"/>
-<stop offset="1" stop-color="#FFA38D"/>
-</linearGradient>
-</defs>
-</svg>
+<svg fill="none" height="130" viewBox="0 0 130 130" width="130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-146.927" x2="129.323" y1="-70.4167" y2="125.937"><stop offset="0" stop-color="#ff4e78"/><stop offset="1" stop-color="#ffa38d"/></linearGradient><path d="m12.1875 12.1875h105.625v105.625h-105.625z" stroke="url(#a)" stroke-width="6"/><g fill="#fff"><path d="m0 0h25.7292v25.7292h-25.7292z"/><path d="m0 104.271h25.7292v25.7292h-25.7292z"/><path d="m104.271 104.271h25.7292v25.7292h-25.7292z"/><path d="m104.271 0h25.7292v25.7292h-25.7292z"/></g></svg>

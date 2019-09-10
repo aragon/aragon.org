@@ -1,14 +1,1 @@
-<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="0.832031" width="24" height="24" rx="4" fill="url(#paint0_linear)"/>
-<path d="M11.7699 4.9439C11.9107 4.87348 12.0764 4.87343 12.2172 4.94377L19.1041 8.38475C19.5761 8.62061 19.4083 9.33203 18.8806 9.33203H5.11667C4.58914 9.33203 4.42116 8.62094 4.89294 8.38488L11.7699 4.9439Z" fill="white"/>
-<rect x="6" y="10.832" width="1.8" height="8" rx="0.9" fill="#FFFCFC"/>
-<rect x="16" y="10.832" width="1.8" height="8" rx="0.9" fill="#FFFCFC"/>
-<rect x="11" y="10.832" width="1.8" height="8" rx="0.9" fill="#FFFCFC"/>
-<rect x="4.80005" y="19.6318" width="1.8" height="14.4" rx="0.9" transform="rotate(-90 4.80005 19.6318)" fill="#FFFCFC"/>
-<defs>
-<linearGradient id="paint0_linear" x1="-15.5384" y1="-11.6967" x2="22.5903" y2="26.2481" gradientUnits="userSpaceOnUse">
-<stop stop-color="#498AE4"/>
-<stop offset="1" stop-color="#47C4E6"/>
-</linearGradient>
-</defs>
-</svg>
+<svg fill="none" height="25" viewBox="0 0 24 25" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-15.5384" x2="22.5903" y1="-11.6967" y2="26.2481"><stop offset="0" stop-color="#498ae4"/><stop offset="1" stop-color="#47c4e6"/></linearGradient><rect fill="url(#a)" height="24" rx="4" width="24" y=".832031"/><path d="m11.7699 4.9439c.1408-.07042.3065-.07047.4473-.00013l6.8869 3.44098c.472.23586.3042.94728-.2235.94728h-13.76393c-.52753 0-.69551-.71109-.22373-.94715z" fill="#fff"/><g fill="#fffcfc"><rect height="8" rx=".9" width="1.8" x="6" y="10.832"/><rect height="8" rx=".9" width="1.8" x="16" y="10.832"/><rect height="8" rx=".9" width="1.8" x="11" y="10.832"/><rect height="14.4" rx=".9" transform="matrix(0 -1 1 0 -14.83175 24.43185)" width="1.8" x="4.80005" y="19.6318"/></g></svg>
