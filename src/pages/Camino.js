@@ -27,7 +27,6 @@ class Camino extends React.Component {
         <Templates />
         <MoreFeatures />
         <GovernanceMakeover />
-        <DarkMode />
       </Page>
     );
   }

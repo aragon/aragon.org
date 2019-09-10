@@ -139,9 +139,12 @@ const Decentralized = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  margin-bottom: 100px;
+  ${medium('margin-bottom: 0;')}
   div {
     text-align: center;
-    margin: 50px 0 100px 0;
+    margin: 50px 0 0 0;
+    ${medium('margin: 50px 0 100px 0;')}
   }
   h3 {
     font-size: 36px;
@@ -182,10 +185,12 @@ const Container = styled.div`
     }
   }
   .contribute1 .principal-image {
-    width: 250px;
+    width: 224px;
+    height: auto;
   }
   .contribute2 .principal-image {
-    width: 273px;
+    width: 238px;
+    height: auto;
   }
 `;
 

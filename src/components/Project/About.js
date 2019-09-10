@@ -156,6 +156,11 @@ const History = styled.div`
     ${medium('max-width: 445px;')};
     margin: 25px 0;
   }
+  img {
+    width: 100%;
+    margin: 30px 0;
+    ${medium('margin: 0; width: auto;')};
+  }
 `;
 
 const Container = styled.div`

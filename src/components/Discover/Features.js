@@ -5,24 +5,15 @@ import AlmostFullSection from '../General/AlmostFullSection';
 import styled from 'styled-components';
 import image1 from './assets/tokens.svg';
 import image2 from './assets/fully-customizable.svg';
+import image2Mobile from './assets/fully_customizable.svg';
 
-import {breakpoint} from '@aragon/ui';
+import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('medium', css);
+const large = css => breakpoint('large', css);
 
-const Features = () => (
-  <Container>
-    <DividedSection sectionClass="global" image={image1}>
-      <h3>
-        Global and <span className="red">bureaucracy-free</span>
-      </h3>
-      <p>
-        Aragon organizations are global from day one. Collaborate with people
-        across countries or continents, without incurring into cumbersome
-        bureau-crazy.
-      </p>
-    </DividedSection>
-    <DividedSection image={image2} imageLeft={true} sectionClass="customizable">
+const Features = () => {
+  const content = (
+    <div>
       <h3>
         Fully <br /> <span className="blue">customizable</span>
       </h3>
@@ -31,9 +22,39 @@ const Features = () => (
         can experiment with new kinds of human collaboration, just with a few
         clicks.
       </p>
-    </DividedSection>
-  </Container>
-);
+    </div>
+  );
+  return (
+    <Container>
+      <DividedSection sectionClass="global" image={image1}>
+        <h3>
+          Global and <span className="red">bureaucracy-free</span>
+        </h3>
+        <p>
+          Aragon organizations are global from day one. Collaborate with people
+          across countries or continents, without incurring into cumbersome
+          bureau-crazy.
+        </p>
+      </DividedSection>
+      <BreakPoint from="medium">
+        <DividedSection
+          image={image2}
+          imageLeft={true}
+          sectionClass="customizable">
+          {content}
+        </DividedSection>
+      </BreakPoint>
+      <BreakPoint to="medium">
+        <DividedSection
+          image={image2Mobile}
+          imageLeft={true}
+          sectionClass="customizable">
+          {content}
+        </DividedSection>
+      </BreakPoint>
+    </Container>
+  );
+};
 
 const Container = styled.div`
   .red {

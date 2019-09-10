@@ -43,6 +43,7 @@ const About = () => (
             </span>
           }
           content={mudule2Content}
+          className="transparency"
         />
       </Container>
     </Section>
@@ -77,6 +78,10 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  .transparency .principal-image {
+    height: auto;
+    width: 159px
+  }
 `;
 
 const ProductFeatures = styled.div`

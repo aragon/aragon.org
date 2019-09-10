@@ -62,7 +62,8 @@ const VideoContainer = styled.div`
   text-align: center;
   img {
     max-width: 1100px;
-    margin: 40px auto 100px auto;
+    margin: 40px auto 50px auto;
+    ${medium('margin: 40px auto 100px auto;')};
     width: 95%;
   }
 `

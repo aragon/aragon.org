@@ -65,15 +65,16 @@ const SmallCard = styled.div`
   justify-content: center;
   padding: 30px;
   transition: all 0.25s ease-in-out;
-  ${medium('padding: 15px;')};
-  ${large('padding: 30px 60px;')};
+  ${medium('padding: 15px;')}
+  ${large('padding: 30px 60px;')}
   @media (min-width: 768px) {
     height: ${props => (props.cardHeight ? props.cardHeight : '650px')};
   }
   img {
     height: 200px;
     width: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    ${medium('margin-bottom: 30px;')};
     ${props => props.imageBig && 'height: auto;'};
     ${props => props.imageBig && 'width: 100%;'};
   }

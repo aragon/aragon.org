@@ -220,12 +220,14 @@ const Container = styled.div`
   }
   .carousel-control-prev {
     left: -10%;
+
     ${medium('left: -15%;')}
   }
   .carousel-control-next,
   .carousel-control-prev {
     width: 10%;
-    ${medium('width: 15%;')}
+    display: none;
+    ${medium('width: 15%; display: flex;')}
   }
   .carousel-control-next {
     right: -10%;
@@ -242,8 +244,7 @@ const UseCase = styled.div`
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  margin: 20px;
-  ${medium('flex-direction: row; min-height: 610px;')};
+  ${medium('flex-direction: row; min-height: 610px; margin: 20px;')};
   div {
     padding: 20px;
     ${large('padding: 50px;')};

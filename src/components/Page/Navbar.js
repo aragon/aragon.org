@@ -238,6 +238,7 @@ const LogoLink = styled(Link)`
   height: 100%;
   img {
     height: 62%;
+    margin-bottom: 2px;
   }
 `;
 

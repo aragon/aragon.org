@@ -2,7 +2,7 @@ import React from 'react';
 import Section from '../General/Section';
 import styled from 'styled-components';
 import {Link} from 'react-static';
-import aragonImage from './home-assets/monitor.svg';
+import aragonImage from './home-assets/compu_home.png';
 
 import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
