@@ -221,6 +221,9 @@ const UseCasesBadge = styled(Badge)`
 const UseCasesSection = styled(Section)`
   background-color: white;
   padding: 100px 15px 30px 15px;
+  .container {
+    padding: 0;
+  }
 `;
 const Container = styled.div`
   img {
