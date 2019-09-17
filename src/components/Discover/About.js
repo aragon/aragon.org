@@ -51,6 +51,8 @@ const Container = styled.div`
   .discover1 img {
     width: 266px;
   }
+  padding-top: 65px;
+  padding-bottom: 65px;
 `;
 
 export default About;
