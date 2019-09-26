@@ -88,7 +88,7 @@ const Timeline = () => (
               target="_blank"
               href="https://forum.aragon.org/c/agps">
               <span>
-                Aragon forum{' '}
+                AGP discussions{' '}
                 <img src={require(`../General/assets/arrow.svg`)} />
               </span>
             </a>
