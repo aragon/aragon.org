@@ -55,7 +55,7 @@ const ContributeContent = () => (
       <p>
         Our vision is to decentralize Aragon’s development. There are different
         teams working on many parts of the project, but all aligned towards the
-        same mission. The current teams are Aragon One and Autark.
+        same mission. The current teams are Aragon Black, Aragon One, and Autark.
       </p>
     </Hero>
     <Decentralized>
