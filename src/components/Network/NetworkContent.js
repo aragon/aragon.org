@@ -13,8 +13,8 @@ const Content = () => (
         <h2>Insured agreements</h2>
         <h4>
           You can agree on a minimum and maximum deposit of tokens upon creating
-          a new agreement on the Aragon Network. These deposits can be used to
-          penalize bad behaviour, warranting good behaviour.
+          a new agreement on the Aragon Network. These deposits can be used to 
+          penalize bad behavior and reward good behavior.
         </h4>
       </div>
     </Container>
