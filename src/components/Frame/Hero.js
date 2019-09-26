@@ -14,7 +14,7 @@ const Hero = () => (
       <h2>Aragon Agent</h2>
       <div className="h4-blue-box">
         <h4 className="blue">
-          Hold assets and perfom actions from Aragon organizations
+          Hold assets and perform actions from Aragon organizations
         </h4>
       </div>
       <Slide bottom>
