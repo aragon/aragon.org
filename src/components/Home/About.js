@@ -11,7 +11,8 @@ const mudule1Content = (
   <span>
     <p>
       Collaborate with people all over the world and work toward shared goals.
-      Send a vote with the same ease as sending an email.
+      Organizatize with anyone from anywhere. Send a vote with the same ease as
+      sending an email.
     </p>
   </span>
 );
