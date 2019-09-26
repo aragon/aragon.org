@@ -13,7 +13,7 @@ const About = () => (
         you can make your voice heard. The Aragon Network will be governed by
         the community, just like the Aragon project itself.
       </p>
-      <a href="https://forum.aragon.org/">
+      <a href="https://aragon.org/project/governance">
         Forum
       </a>
     </AlmostFullSectionBox>
