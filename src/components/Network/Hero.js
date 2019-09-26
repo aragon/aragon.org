@@ -15,8 +15,8 @@ const Hero = () => (
         <br /> digital jurisdiction
       </h2>
       <h4>
-        Decentralized organizations change the way we think about organizations.
-        The Aragon Network will change the way you think about jurisdictions and
+        Smart contracts change the way we think about organizations.
+        The Aragon Network will change the way we think about jurisdictions and
         governments.
       </h4>
       <div className="hero-button-container centered">
