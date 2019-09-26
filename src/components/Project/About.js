@@ -12,8 +12,8 @@ import image from './assets/project-governance.png';
 const mudule1Content = (
   <span>
     <p>
-      Aragon is creating a whole stack of decentralized technologies that merge
-      seamlessly inside people’s everyday. Aragon Nest helps bring it to
+      Aragon is creating a whole stack of decentralized technologies that 
+      merge seamlessly with people’s everyday work. Aragon Nest helps bring it to
       reality.
     </p>
     <p>
@@ -42,10 +42,11 @@ const mudule2Content = (
 );
 const module3Content = (
   <p>
-    The Aragon Project was born to disintermediate the creation and maintenance
-    of organizations. Everyone should have equal access to governance and
-    collaboration, no matter of their race, gender or age. The project was
-    originally started by Luis Cuende and Jorge Izquierdo in November 2016.
+    The Aragon project was founded to disintermediate the creation and 
+    maintenance of organizations. We believe everyone should have equal access to
+    governance and collaboration, no matter their age, gender, or race. 
+    The project was originally started by Luis Cuende and Jorge Izquierdo 
+    in November 2016.
   </p>
 );
 
@@ -56,14 +57,13 @@ const About = () => (
         <div>
           <h3>Our history</h3>
           <p>
-            The Aragon Project was born to disintermediate the creation and
-            maintenance of organizations. Everyone should have equal access to
-            governance and collaboration, no matter of their race, gender or
-            age.
+            The Aragon project was founded to disintermediate the creation and 
+            maintenance of organizations. We believe everyone should have equal access to
+            governance and collaboration, no matter their age, gender, or race.
           </p>
           <p>
-            The project was originally started by Luis Cuende and Jorge
-            Izquierdo in November 2016.
+            The project was originally started by Luis Cuende and Jorge Izquierdo 
+            in November 2016.
           </p>
           <Link className="action-button" to="/project/roadmap">
             <span>
@@ -80,9 +80,9 @@ const About = () => (
         <h3>Governed by the community</h3>
         <p>
           The Aragon project has a strong commitment to decentralize its own
-          existence. The community will have control over its future.
+          existence. The community now has control over its own future.
         </p>
-        <a href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/">Manifesto</a>
+        <a href="https://aragon.org/project/governance">About Aragon governance</a>
       </AlmostFullSectionBox>
     </AlmostFullSection>
     <AboutSection>
