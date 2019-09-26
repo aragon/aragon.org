@@ -16,11 +16,11 @@ const About = () => (
           <span className="blue">a desktop-native Ethereum provider</span>
         </h3>
         <p>
-          Use a hardware wallet or hot wallet with Frame to interact with any
-          Ethereum application. Supports native Agent integration, so your
-          Aragon organization can interact with any Ethereum app.
+          Use a hardware wallet or hot wallet with Frame. Supports native
+          Agent integration, so your Aragon organization can easily interact
+          with any Ethereum app.
         </p>
-        <a className="action-button" href="https://frame.sh" target="_blank">
+        <a className="action-button" href="https://help.aragon.org/article/37-agent" target="_blank">
           <span>
             Learn more <img src={require(`../General/assets/arrow.svg`)} />
           </span>
