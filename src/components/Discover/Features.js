@@ -32,7 +32,7 @@ const Features = () => {
         </h3>
         <p>
           Aragon organizations are global from day one. Collaborate with people
-          across countries or continents, without incurring into cumbersome
+          across countries or continents, without experiencing cumbersome
           bureau-crazy.
         </p>
       </DividedSection>
