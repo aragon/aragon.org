@@ -20,8 +20,13 @@ const Organizations = () => (
           funds with full accountability. Understand at a glance who has the
           power in your organization.
         </p>
-        <a className="secondary-button" href="./discover">
-          Learn more
+        <a
+          className="action-button"
+          href="./discover"
+          target="_blank">
+          <span>
+            Learn more <img src={require(`../General/assets/arrow.svg`)} />
+          </span>
         </a>
       </Container>
       <ImageContainer>

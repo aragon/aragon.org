@@ -30,7 +30,11 @@ const Hero = () => (
 );
 
 const HeroSection = styled(Section)`
-  background-image: linear-gradient(340.15deg, #83CCBE 6.67%, #E8F6E4 125.15%);
+  background: linear-gradient(270deg, #83CCBE, #E8F6E4);
+  background-size: 400% 400%;
+  -webkit-animation: HeroAnimation 7s ease infinite;
+  -moz-animation: HeroAnimation 7s ease infinite;
+  animation: HeroAnimation 7s ease infinite;
   height: auto;
   ${medium('height: 550px;')};
   padding-top: 94px;

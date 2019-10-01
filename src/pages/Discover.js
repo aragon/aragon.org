@@ -27,7 +27,13 @@ const Discover = () => (
 const HeroSection = styled(Section)`
   height: auto;
   ${medium('height: 600px;')};
-  background-image: linear-gradient(290deg, #95bbce, #c5d0e6 46%, #e7e4f6);
+  
+  background: linear-gradient(304deg, #95bbce, #c5d0e6, #e7e4f6);
+  background-size: 400% 400%;
+  -webkit-animation: HeroAnimation 7s ease infinite;
+  -moz-animation: HeroAnimation 7s ease infinite;
+  animation: HeroAnimation 7s ease infinite;
+
   overflow: hidden;
   min-height: 550px;
   padding-top: 64px;

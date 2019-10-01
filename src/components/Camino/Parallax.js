@@ -98,7 +98,6 @@ const StaticSection = styled.div`
 `;
 const ParallaxSection = styled.div`
   background-color: #062132;
-
   min-height: 70vh;
   ${medium(`
     min-height: 100vh;
@@ -106,12 +105,17 @@ const ParallaxSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  div {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   &::-webkit-scrollbar {
     display: none;
   }
   ::-webkit-scrollbar-thumb {
     background: #ff0000;
   }
+
   img {
     max-width: 100%;
     margin: auto;

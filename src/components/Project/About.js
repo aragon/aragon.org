@@ -176,5 +176,9 @@ const Container = styled.div`
 
 const AboutSection = styled(Section)`
   padding: 90px 15px;
+  .principal-image {
+    margin-bottom: 0;
+    width: auto;
+  }
 `
 export default About;
