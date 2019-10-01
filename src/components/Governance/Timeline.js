@@ -45,7 +45,7 @@ const Timeline = () => (
               their feedback. Be open-minded and respectful of all feedback you
               receive.
             </h5>
-            <a target="_blank" href="https://forum.aragon.org/tags/agp">
+            <a target="_blank" href="https://forum.aragon.org/c/agps">
               <span>
                 Aragon forum{' '}
                 <img src={require(`../General/assets/arrow.svg`)} />
@@ -75,6 +75,28 @@ const Timeline = () => (
       </Entry>
       <Entry title="Stage iv">
         <Box>
+          <StageImg src={stage2} />
+          <div>
+            <h6>Community Review</h6>
+            <h5>
+              All proposals must go through a mandatory one-week community review period
+              before they are finalized, to ensure the community has an opportunity to give
+              feedback and influence the final proposal language. Listen to community feedback
+              and adjust the proposal as needed to increase its odds of being approved.
+            </h5>
+            <a
+              target="_blank"
+              href="https://forum.aragon.org/c/agps">
+              <span>
+                AGP discussions{' '}
+                <img src={require(`../General/assets/arrow.svg`)} />
+              </span>
+            </a>
+          </div>
+        </Box>
+      </Entry>                               
+      <Entry title="Stage v">
+        <Box>
           <StageImg src={stage4} />
           <div>
             <h6>Final Proposal</h6>
@@ -96,7 +118,7 @@ const Timeline = () => (
       </Entry>
     </TimelineContainer>
     <LastContainer>
-      <Entry title="Stage v" className="stage5-box">
+      <Entry title="Stage vi" className="stage5-box">
         <Box id="stage5-box">
           <StageImg src={stage5} />
           <div>

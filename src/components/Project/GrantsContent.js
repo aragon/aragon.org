@@ -29,9 +29,8 @@ const mudule1Content = (
 const mudule2Content = (
   <span>
     <p>
-      We are looking for people that want to help the Aragon and Ethereum
-      ecosystems advance. If you believe you have a proposal for the program,
-      read more and apply.
+      We are looking for people who want to help advance the Aragon ecosystem. 
+      If you believe you have a proposal for the program, read more and apply.
     </p>
     <p>
       <a

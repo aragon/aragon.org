@@ -12,9 +12,8 @@ const Hero = () => (
       <TextContainer>
           <h2><span className="black">Take back your</span> freedom to organize</h2>
           <h4>
-            Discover the unparalleled power to organize. Whether you want to
-            collaborate with your co-founder, open a non-profit, or just organize
-            an online community, Aragon is there for you.
+            Discover the unparalleled power to organize. Use Aragon to launch a startup, 
+            form a nonprofit, or rally an online community.
           </h4>
           <div className="hero-button-container centered">
             <a className="principal-button" href="https://mainnet.aragon.org "

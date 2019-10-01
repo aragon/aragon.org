@@ -12,7 +12,7 @@ const About = () => {
     windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
     iosPlatforms = ['iPhone', 'iPad', 'iPod'],
     os = 'linux',
-    osLink = 'https://frame.nyc3.digitaloceanspaces.com/0.2-rc2/Frame-0.2.0.AppImage',
+    osLink = 'https://frame.sh/',
     browser = 'firefox',
     browserLink = 'https://addons.mozilla.org/en-US/firefox/addon/frame-extension';
 
@@ -33,10 +33,10 @@ const About = () => {
 
   if ((macosPlatforms.indexOf(platform) !== -1) || (iosPlatforms.indexOf(platform) !== -1)) {
     os = 'mac';
-    osLink = 'https://frame.nyc3.digitaloceanspaces.com/0.2-rc2/Frame-0.2.0.dmg';
+    osLink = 'https://frame.sh/';
   } else if (windowsPlatforms.indexOf(platform) !== -1) {
     os = 'windows';
-    osLink = 'https://frame.nyc3.digitaloceanspaces.com/0.2-rc2/Frame-Setup-0.2.0.exe';
+    osLink = 'https://frame.sh/';
   }
 
   return (

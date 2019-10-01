@@ -46,8 +46,8 @@ const Footer = ({...props}) => (
         <a href="https://hack.aragon.org/" target="_blank">
           Developers
         </a>
-        <a href="https://wiki.aragon.org/dev/bug_bounty/" target="_blank">
-          Bug bounty
+        <a href="https://wiki.aragon.org/association/security/" target="_blank">
+          Security
         </a>
         <Link to="/project/grants">Grants</Link>
         <Link to="/project/governance">Governance</Link>
@@ -58,8 +58,8 @@ const Footer = ({...props}) => (
         <a href="https://wiki.aragon.org/" target="_blank">
           Wiki
         </a>
-        <a href="https://wiki.aragon.org/dev/bug_bounty/" target="_blank">
-          Security
+        <a href="https://aracon.one" target="_blank">
+          AraCon
         </a>
       </Item>
       <Item className="mobile-full">

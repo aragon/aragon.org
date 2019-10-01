@@ -12,7 +12,7 @@ const AragonNetwork = () => (
         <Entry entrypoint>
           <Title>Current</Title>
           <Subtitle>
-            Granular areas of focus with well defined scope and product
+            Granular areas of focus with well-defined scope and product
             specifications.
           </Subtitle>
         </Entry>
@@ -75,7 +75,7 @@ const AragonNetwork = () => (
             <h4>
               Aragon Agreements are a core component of the Aragon Network, they
               enable users to define human-readable obligations and lock
-              collateral to provide assurances to their counter-parties.
+              collateral to provide assurances to their counterparties.
             </h4>
           </Module>
         </Entry>
@@ -101,13 +101,13 @@ const AragonNetwork = () => (
         <Entry>
           <Module>
             <div className="badge-container">
-              <EnhancedBadge className="orange">Foundraising</EnhancedBadge>
+              <EnhancedBadge className="orange">Fundraising</EnhancedBadge>
               <AragonBlackBadge>Aragon Black</AragonBlackBadge>
             </div>
-            <h3>Discovery /curation platform</h3>
+            <h3>Discovery/ curation platform</h3>
             <h4>
-              Develop an Aragon Network wide fundraising platform allowing
-              Aragon users to discover, curate and invest in new DAOs.
+              Develop an Aragon Network-wide fundraising platform allowing
+              Aragon users to discover, curate, and invest in organizations.
             </h4>
           </Module>
         </Entry>

@@ -14,7 +14,7 @@ const UnstoppableOrganizations = () => (
     <AlmostFullSectionBox>
       <h3>Unstoppable organizations</h3>
       <p>
-        Aragon provides all the necessary tools for human collaboration. Aragon organizations are impossible to censor or shut down, escaping the boundaries of oppression and censorship.
+        Aragon provides new tools for human collaboration. Aragon organizations are difficult to shut down, escaping the boundaries of oppression and censorship.
       </p>
       <Link to="/project">About the project</Link>
     </AlmostFullSectionBox>
