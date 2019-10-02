@@ -262,7 +262,7 @@ const UseCase = styled.div`
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  ${medium('flex-direction: row; min-height: 610px; margin: 20px;')};
+  ${medium('flex-direction: row; min-height: 610px; max-height: 650px; margin: 20px;')};
   div {
     padding: 20px;
     ${large('padding: 50px;')};
