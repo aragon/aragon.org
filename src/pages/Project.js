@@ -84,6 +84,13 @@ const HeroSection = styled(Section)`
     cursor: pointer;
     ${medium('margin-left: 20px;')};
   }
+  background: linear-gradient(270deg, #FFCF8A, #FFE8C6);
+  background-size: 400% 400%;
+  -webkit-animation: HeroAnimation 7s ease infinite;
+  -moz-animation: HeroAnimation 7s ease infinite;
+  animation: HeroAnimation 7s ease infinite;
+
+
 `;
 const Box = styled.div`
   display: flex;

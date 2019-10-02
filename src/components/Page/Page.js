@@ -71,8 +71,8 @@ const Content = styled.div`
     color: #ffffff;
   }
   .action-button {
-    font-family: 'FontRegular', sans-serif;
-    font-size: 16px;
+    font-family: 'FontMedium', sans-serif;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: normal;
     color: #4a80e4;
