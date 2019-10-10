@@ -50,7 +50,8 @@ const Container = styled.div`
 
   h3 {
     font-family: 'FontMedium', sans-serif;
-    font-size: 38px;
+    font-size: 30px;
+    ${medium('font-size: 38px;')}
     line-height: 52px;
     text-align: center;
     letter-spacing: -0.447059px;

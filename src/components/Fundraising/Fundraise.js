@@ -4,7 +4,8 @@ import SmallCard from '../General/SmallCard';
 import styled from 'styled-components';
 import {Link} from 'react-static';
 import image from './assets/fundraise-graph.svg';
-import {breakpoint} from '@aragon/ui';
+import imageMobile from './assets/fundraise-graph-mobile.svg';
+import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 
 const Fundraise = () => (
@@ -15,7 +16,8 @@ const Fundraise = () => (
         <p>
           Fundraising’s customizable framework makes setting investment and fundraising terms a dream
         </p>
-        <img src={image} />
+        <BreakPoint to="medium"><img src={imageMobile} /></BreakPoint>
+        <BreakPoint from="medium"><img src={image} /></BreakPoint>
       </div>
     </Container>
   </FundraiseSection>
@@ -53,6 +55,7 @@ const Container = styled.div`
   }
   img {
     margin-bottom: 33px;
+    max-width: 95%;
   }
 `;
 
