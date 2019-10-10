@@ -42,6 +42,10 @@ const Container = styled.div`
     line-height: 80px;
     text-align: center;
     color: #ffffff;
+    transition: all 0.25s ease-in-out;
+  }
+  a:hover {
+    opacity: 0.8;
   }
 
   h3 {
