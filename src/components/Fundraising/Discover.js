@@ -39,7 +39,6 @@ const Container = styled.div`
     font-style: normal;
     font-weight: 600;
     font-size: 21px;
-    line-height: 80px;
     text-align: center;
     color: #ffffff;
     transition: all 0.25s ease-in-out;
@@ -58,6 +57,7 @@ const Container = styled.div`
     color: #ffffff;
     max-width: 800px;
     margin: auto;
+    margin-bottom: 30px;
   }
 `;
 const Image = styled.img`
