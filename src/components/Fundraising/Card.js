@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import image from './assets/fundraising-card.svg';
 
 import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+const large = css => breakpoint('large', css);
 
 const EverythingYouNeed = ({}) => (
   <StyledSection>
@@ -35,14 +35,14 @@ const StyledSection = styled(Section)`
   justify-content: center;
   padding: 30px;
   flex-direction: column;
-  ${medium('flex-direction: row; padding: 120px;')}
+  ${large('flex-direction: row; padding: 120px;')}
 `;
 const Box = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  ${medium('flex-direction: row;')}
+  ${large('flex-direction: row;')}
 `;
 const Container = styled.div`
   width: 100%;
@@ -51,14 +51,14 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  ${medium(
+  ${large(
     'text-align: left; margin: inherit; width: 60%; align-items: flex-start;'
   )}
   p {
     font-size: 21px;
     line-height: 35px;
     text-align: center;
-    ${medium('text-align: left;')}
+    ${large('text-align: left;')}
     letter-spacing: 0.24px;
     color: #6d7693;
     max-width: 298px;
@@ -68,7 +68,7 @@ const Container = styled.div`
     font-size: 38px;
     line-height: 52px;
     text-align: center;
-    ${medium('text-align: left;')}
+    ${large('text-align: left;')}
     letter-spacing: -0.447059px;
     margin: 0 0 5px;
     color: #212b36;
@@ -92,7 +92,7 @@ const Image = styled.img`
   max-width: 100%;
   height: auto;
   margin: 30px 0;
-  ${medium('margin: auto;')};
+  ${large('margin: auto; max-width: 126%; margin-left: -13%!important;')};
 `;
 
 const ImageContainer = styled.div`

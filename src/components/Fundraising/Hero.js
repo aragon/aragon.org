@@ -62,6 +62,7 @@ const HeroSection = styled(Section)`
     color: #ffffff;
     max-width: 370px;
     text-align: left;
+    margin-bottom: 8px;
   }
   h4 {
     font-family: 'FontMedium', sans-serif;
@@ -76,15 +77,18 @@ const HeroSection = styled(Section)`
 const TextContainer = styled.div`
   width: 100%;
   margin: auto;
+  ${large('margin-top: 45px;')}
   text-align: center;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  ${medium('align-items: center;')}
+  ${large('align-items: flex-start;')}
   flex-direction: column;
   ${large('flex-direction: row;')}
   img {
-    max-width: 90%;
-    ${large('max-width: 731px;')}
+    max-width: 100%;
+    ${large('max-width: 760px;')}
   }
 `;
 export default Hero;
