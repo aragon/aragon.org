@@ -47,8 +47,10 @@ const Container = styled.div`
     margin: 50px auto 15px;
     color: #212b36;
     font-family: 'FontMedium', sans-serif;
+    display: block;
   }
   .orange {
+    display: block;
     background: -webkit-linear-gradient(156.5deg, #FF9372 -36.73%, #FFB471 33.53%, #FFD770 106.77%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

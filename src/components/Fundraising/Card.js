@@ -74,8 +74,10 @@ const Container = styled.div`
     color: #212b36;
     font-family: 'FontMedium', sans-serif;
     max-width: 378px;
+    display: block;
   }
   .orange {
+    display: block;
     background: -webkit-linear-gradient(
       156.5deg,
       #ff9372 -36.73%,
