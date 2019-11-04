@@ -164,8 +164,6 @@ const Inside = ({x, h, opacity, menuItems, path, background, color}) => (
 
 const AragonNavbar = styled.div`
   width: 100%;
-  margin-top: 64px;
-  ${medium('margin-top: 33px;')};
   height: 64px;
   display: flex;
   justify-content: flex-start;

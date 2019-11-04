@@ -28,9 +28,6 @@ class Page extends React.Component {
                 <Head>
                   <title>{title || siteTitle}</title>
                 </Head>
-                <AGPBanner>
-                  <p>Aragon Network Vote #4 is happening now! <a target="_blank" href="https://blog.aragon.org/final-details-for-aragon-network-vote-4/">Read more</a>.</p>
-                </AGPBanner>
                 <Navbar menuItems={items} path={path} color={color} />
                 <Content contentColor={contentColor}>{children}</Content>
                 <Footer path={path} />
