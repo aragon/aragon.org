@@ -1,10 +1,11 @@
 import React from 'react';
-import Section from '../General/Section';
-import LongCard from '../General/LongCard';
-import Card from '../General/Card';
 import styled from 'styled-components';
 import {Link} from 'react-static';
 import Fade from 'react-reveal/Fade';
+import {FormattedMessage} from 'react-intl';
+import Section from '../General/Section';
+import LongCard from '../General/LongCard';
+import Card from '../General/Card';
 
 import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
@@ -13,18 +14,20 @@ const large = css => breakpoint('medium', css);
 const feature1 = (
   <span>
     <p>
-      A few years ago, could you ever imagine running a company from your phone?
- Vote, check finances and always be informed about your organizations.
-      Anywhere, just a tap away.
+      <FormattedMessage
+        id="bella.morer-features.feature1.content"
+        defaultMessage="A few years ago, could you ever imagine running a company from your phone? Vote, check finances and always be informed about your organizations. Anywhere, just a tap away."
+      />
     </p>
   </span>
 );
 const feature2 = (
   <span>
     <p>
-      Thanks to the new App Center, you can seamlessly upgrade apps in your
-      organization. Enhancements and security fixes constantly make your
-      organization better.
+      <FormattedMessage
+        id="bella.morer-features.feature2.content"
+        defaultMessage="Thanks to the new App Center, you can seamlessly upgrade apps in your organization. Enhancements and security fixes constantly make your organization better."
+      />
     </p>
   </span>
 );
@@ -38,7 +41,12 @@ const Features = () => (
         textAlign="right"
         label="new"
         bottom={true}
-        title="Aragon goes mobile"
+        title={
+          <FormattedMessage
+            id="bella.morer-features.feature1.title"
+            defaultMessage="Aragon goes mobile"
+          />
+        }
         content={feature1}
         className="first-feature"
       />
@@ -47,7 +55,12 @@ const Features = () => (
         image={'Bella/assets/5.svg'}
         textAlign="right"
         label="new"
-        title="Always evolving, constantly improving"
+        title={
+          <FormattedMessage
+            id="bella.morer-features.feature2.title"
+            defaultMessage="Always evolving, constantly improving"
+          />
+        }
         content={feature2}
       />
     </Container>
@@ -56,7 +69,7 @@ const Features = () => (
 
 const StyledSection = styled(Section)`
   padding: 30px 15px 0 15px;
-`
+`;
 const Container = styled.div`
   display: grid;
   ${medium(

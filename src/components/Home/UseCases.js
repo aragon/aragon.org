@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Badge} from '@aragon/ui';
+import {FormattedMessage} from 'react-intl';
+import Carousel from 'react-bootstrap/Carousel';
 import Section from '../General/Section';
 import blankDAO from './home-assets/usecases/blankDAO.png';
 import aragonNetwork from './home-assets/usecases/aragon-network.png';
@@ -8,8 +11,6 @@ import pool from './home-assets/usecases/pool.png';
 import hive from './home-assets/usecases/1hive.png';
 import prev from './home-assets/arrow-carousel-prev.svg';
 import next from './home-assets/arrow-carousel-next.svg';
-import {Badge} from '@aragon/ui';
-import Carousel from 'react-bootstrap/Carousel';
 
 import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
@@ -48,22 +49,36 @@ class UseCases extends React.Component {
               <UseCase>
                 <img src={aragonNetwork} />
                 <div>
-                  <UseCasesBadge>USE CASE</UseCasesBadge>
+                  <UseCasesBadge>
+                    <FormattedMessage
+                      id="home.usecases.aragonnetwork.label"
+                      defaultMessage="USE CASE"
+                    />
+                  </UseCasesBadge>
                   <h2>
-                    Aragon Network: A digital jurisdiction{' '}
+                    <FormattedMessage
+                      id="home.usecases.aragonnetwork.title"
+                      defaultMessage="Aragon Network: A digital jurisdiction"
+                    />{' '}
                     <span role="img" aria-label="glow">
                       🦅
                     </span>
                   </h2>
                   <p>
-                    See how Aragon is used to govern the Aragon project itself,
-                    from funds management to policy changes and more. <br/>
+                    <FormattedMessage
+                      id="home.usecases.aragonnetwork.description"
+                      defaultMessage="See how Aragon is used to govern the Aragon project itself, from funds management to policy changes and more."
+                    />
+                    <br />
                     <a
                       target="_blank"
                       className="action-button"
                       href="https://mainnet.aragon.org/#/governance.aragonproject.eth/">
                       {' '}
-                      Go to Aragon Governance
+                      <FormattedMessage
+                        id="home.usecases.aragonnetwork.link"
+                        defaultMessage="Go to Aragon Governance"
+                      />
                     </a>{' '}
                   </p>
 
@@ -71,7 +86,10 @@ class UseCases extends React.Component {
                     className="secondary-button"
                     target="_blank"
                     href="https://github.com/aragon/AGPs/blob/master/AGPs/AGP-1.md">
-                    How the Aragon Network uses Aragon
+                    <FormattedMessage
+                      id="home.usecases.aragonnetwork.link2"
+                      defaultMessage="How the Aragon Network uses Aragon"
+                    />
                   </a>
                 </div>
               </UseCase>
@@ -80,23 +98,36 @@ class UseCases extends React.Component {
               <UseCase>
                 <img src={blankDAO} />
                 <div>
-                  <UseCasesBadge>USE CASE</UseCasesBadge>
+                  <UseCasesBadge>
+                    <FormattedMessage
+                      id="home.usecases.blankdao.label"
+                      defaultMessage="USE CASE"
+                    />
+                  </UseCasesBadge>
                   <h2>
-                    BlankDAO: From Iran to the world{' '}
+                    <FormattedMessage
+                      id="home.usecases.blankdao.title"
+                      defaultMessage="BlankDAO: From Iran to the world"
+                    />{' '}
                     <span role="img" aria-label="glow">
                       ✨
                     </span>
                   </h2>
                   <p>
-                    See how Aragon enabled a group of talented developers from
-                    Iran and other countries to raise funds transparently from
-                    their community. <br/>
+                    <FormattedMessage
+                      id="home.usecases.blankdao.description"
+                      defaultMessage="See how Aragon enabled a group of talented developers from Iran and other countries to raise funds transparently from their community."
+                    />
+                    <br />
                     <a
                       target="_blank"
                       className="action-button"
                       href="https://mainnet.aragon.org/#/blankdao.aragonid.eth/">
                       {' '}
-                      Go to BlankDAO
+                      <FormattedMessage
+                        id="home.usecases.blankdao.link1"
+                        defaultMessage="Go to BlankDAO"
+                      />
                     </a>
                   </p>
 
@@ -104,7 +135,10 @@ class UseCases extends React.Component {
                     className="secondary-button"
                     target="_blank"
                     href="https://docs.google.com/document/d/1mAGAZ5TAbJoTJoNCAwMUKLhEHD-WW-tzc0dHhbsl1gU/edit">
-                    How BlankDAO uses Aragon
+                    <FormattedMessage
+                      id="home.usecases.blankdao.link2"
+                      defaultMessage="How BlankDAO uses Aragon"
+                    />
                   </a>
                 </div>
               </UseCase>
@@ -113,23 +147,36 @@ class UseCases extends React.Component {
               <UseCase>
                 <img src={melon} />
                 <div>
-                  <UseCasesBadge>USE CASE</UseCasesBadge>
+                  <UseCasesBadge>
+                    <FormattedMessage
+                      id="home.usecases.melon.label"
+                      defaultMessage="USE CASE"
+                    />
+                  </UseCasesBadge>
                   <h2>
-                    Melon: Disintermediating asset management{' '}
+                    <FormattedMessage
+                      id="home.usecases.melon.title"
+                      defaultMessage="Melon: Disintermediating asset management"
+                    />{' '}
                     <span role="img" aria-label="glow">
                       📊
                     </span>{' '}
                   </h2>
                   <p>
-                    See how Aragon is used to manage council membership,
-                    contract upgrades, ENS subdomains, and network parameters
-                    for an on-chain asset management protocol.
+                    <FormattedMessage
+                      id="home.usecases.melon.description"
+                      defaultMessage="See how Aragon is used to manage council membership, contract upgrades, ENS subdomains, and network parameters for an on-chain asset management protocol."
+                    />
+
                     <a
                       target="_blank"
                       className="action-button"
                       href="https://aragon.mainnet.aragonpm.com/#/0xfe1f2de598f42ce67bb9aad5ad473f0272d09b74/0x3d5f4417b7fb63aaf3b2aa23fc227e3ddebb951b">
                       {' '}
-                      Go to Melon Council
+                      <FormattedMessage
+                        id="home.usecases.melon.link1"
+                        defaultMessage="Go to Melon Council"
+                      />
                     </a>
                   </p>
 
@@ -137,7 +184,10 @@ class UseCases extends React.Component {
                     className="secondary-button"
                     target="_blank"
                     href="https://medium.com/melonprotocol/launching-the-melon-council-dao-on-aragonos-42147c86582">
-                    How Melon Council uses Aragon
+                    <FormattedMessage
+                      id="home.usecases.melon.link2"
+                      defaultMessage="How Melon Council uses Aragon"
+                    />
                   </a>
                 </div>
               </UseCase>
@@ -146,22 +196,36 @@ class UseCases extends React.Component {
               <UseCase>
                 <img src={pool} />
                 <div>
-                  <UseCasesBadge>USE CASE</UseCasesBadge>
+                  <UseCasesBadge>
+                    <FormattedMessage
+                      id="home.usecases.pool.label"
+                      defaultMessage="USE CASE"
+                    />
+                  </UseCasesBadge>
                   <h2>
-                    Pool Together: A lottery you can’t lose{' '}
+                    <FormattedMessage
+                      id="home.usecases.pool.title"
+                      defaultMessage="Pool Together: A lottery you can’t lose"
+                    />{' '}
                     <span role="img" aria-label="glow">
                       🎲
                     </span>
                   </h2>
                   <p>
-                    See how Aragon is used to transparently manage group funds
-                    among a dapp development team. <br/>
+                    <FormattedMessage
+                      id="home.usecases.pool.description"
+                      defaultMessage="See how Aragon is used to transparently manage group funds among a dapp development team."
+                    />
+                    <br />
                     <a
                       target="_blank"
                       className="action-button"
                       href="https://mainnet.aragon.org/#/pooltogether/0x7e3797a24114afcfd09e953cda490d81863ec32f">
                       {' '}
-                      Go to Pool Together
+                      <FormattedMessage
+                        id="home.usecases.pool.link1"
+                        defaultMessage="Go to Pool TogetherE"
+                      />
                     </a>
                   </p>
 
@@ -169,7 +233,10 @@ class UseCases extends React.Component {
                     className="secondary-button"
                     target="_blank"
                     href="https://twitter.com/PoolTogether_/status/1143129765047656448">
-                    How Pool Together uses Aragon
+                    <FormattedMessage
+                      id="home.usecases.pool.link2"
+                      defaultMessage="How Pool Together uses Aragon"
+                    />
                   </a>
                 </div>
               </UseCase>
@@ -178,29 +245,46 @@ class UseCases extends React.Component {
               <UseCase>
                 <img src={hive} />
                 <div>
-                  <UseCasesBadge>USE CASE</UseCasesBadge>
+                  <UseCasesBadge>
+                    <FormattedMessage
+                      id="home.usecases.1hive.label"
+                      defaultMessage="USE CASE"
+                    />
+                  </UseCasesBadge>
                   <h2>
-                    1Hive: Growing open source commons{' '}
+                    <FormattedMessage
+                      id="home.usecases.1hive.title"
+                      defaultMessage="1Hive: Growing open source commons"
+                    />{' '}
                     <span role="img" aria-label="glow">
                       🐝
                     </span>
                   </h2>
                   <p>
-                    See how Aragon helps to coordinate and reward maintainers
-                    and contributors in an open source community. <br/>
+                    <FormattedMessage
+                      id="home.usecases.1hive.description"
+                      defaultMessage="See how Aragon helps to coordinate and reward maintainers and contributors in an open source community."
+                    />
+                    <br />
                     <a
                       target="_blank"
                       className="action-button"
                       href="https://rinkeby.aragon.org/#/0xe520428C232F6Da6f694b121181f907931fD2211/0xc2555abaed3797b52248e814172d2bea6728e542">
                       {' '}
-                      Go to 1Hive
+                      <FormattedMessage
+                        id="home.usecases.1hive.link1"
+                        defaultMessage="Go to 1Hive"
+                      />
                     </a>
                   </p>
                   <a
                     className="secondary-button"
                     target="_blank"
                     href="https://1hive.org/contribute/membership">
-                    How 1Hive uses Aragon
+                    <FormattedMessage
+                      id="home.usecases.1hive.link2"
+                      defaultMessage="How 1Hive uses Aragon"
+                    />
                   </a>
                 </div>
               </UseCase>
@@ -262,7 +346,9 @@ const UseCase = styled.div`
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  ${medium('flex-direction: row; min-height: 610px; max-height: 650px; margin: 20px;')};
+  ${medium(
+    'flex-direction: row; min-height: 610px; max-height: 650px; margin: 20px;'
+  )};
   div {
     padding: 20px;
     ${large('padding: 50px;')};

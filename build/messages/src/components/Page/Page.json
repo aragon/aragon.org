@@ -1,0 +1,54 @@
+[
+  {
+    "id": "page.navbar.discover",
+    "defaultMessage": "Discover",
+    "file": "src/components/Page/Page.js",
+    "start": {
+      "line": 14,
+      "column": 4
+    },
+    "end": {
+      "line": 14,
+      "column": 76
+    }
+  },
+  {
+    "id": "page.navbar.developers",
+    "defaultMessage": "Developers",
+    "file": "src/components/Page/Page.js",
+    "start": {
+      "line": 18,
+      "column": 4
+    },
+    "end": {
+      "line": 21,
+      "column": 6
+    }
+  },
+  {
+    "id": "page.navbar.project",
+    "defaultMessage": "Project",
+    "file": "src/components/Page/Page.js",
+    "start": {
+      "line": 25,
+      "column": 4
+    },
+    "end": {
+      "line": 25,
+      "column": 74
+    }
+  },
+  {
+    "id": "page.navbar.network",
+    "defaultMessage": "Network",
+    "file": "src/components/Page/Page.js",
+    "start": {
+      "line": 29,
+      "column": 4
+    },
+    "end": {
+      "line": 29,
+      "column": 74
+    }
+  }
+]

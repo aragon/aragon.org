@@ -1,12 +1,13 @@
 import React from 'react';
-import Section from '../General/Section';
+import {FormattedMessage} from 'react-intl';
 import styled from 'styled-components';
-import {Link} from 'react-static';
-import backgroundImage from './assets/video-background.png';
-import play from './assets/play.svg';
 import Zoom from 'react-reveal/Zoom';
 import YouTube from 'react-youtube';
-import VideoModal from '../General/VideoModal'
+import {Link} from 'react-static';
+import Section from '../General/Section';
+import backgroundImage from './assets/video-background.png';
+import play from './assets/play.svg';
+import VideoModal from '../General/VideoModal';
 
 import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
@@ -18,8 +19,8 @@ class Video extends React.Component {
     this.handleOpen = this.handleOpen.bind(this);
     if (typeof window !== `undefined`) {
       window.YTConfig = {
-        host: 'https://www.youtube.com'
-      }
+        host: 'https://www.youtube.com',
+      };
     }
   }
 
@@ -27,32 +28,43 @@ class Video extends React.Component {
     this.videoModal.current.handleOpen();
   }
 
-
   render() {
     return (
       <VideoeSection>
-
         <Box>
           <Container>
-            <h2>Learn about the story behind Aragon Bella</h2>
+            <h2>
+              <FormattedMessage
+                id="bella.video.title"
+                defaultMessage="Learn about the story behind Aragon Bella"
+              />
+            </h2>
             <BreakPoint to="medium">
-            <a target="blank" href="https://www.youtube.com/watch?v=_F1LyWkIil4">
-              <h4>
-                <img src={play} />
-                Watch the video now
-              </h4>
-            </a>
+              <a
+                target="blank"
+                href="https://www.youtube.com/watch?v=_F1LyWkIil4">
+                <h4>
+                  <img src={play} />
+                  <FormattedMessage
+                    id="bella.video.action"
+                    defaultMessage="Watch the video now"
+                  />
+                </h4>
+              </a>
             </BreakPoint>
             <BreakPoint from="medium">
               <h4 onClick={this.handleOpen}>
                 <img src={play} />
-                Watch the video now
+                <FormattedMessage
+                  id="bella.video.action2"
+                  defaultMessage="Watch the video now"
+                />
               </h4>
             </BreakPoint>
           </Container>
         </Box>
         <BreakPoint from="medium">
-          <VideoModal ref={this.videoModal} videoId="_F1LyWkIil4"/>
+          <VideoModal ref={this.videoModal} videoId="_F1LyWkIil4" />
         </BreakPoint>
       </VideoeSection>
     );
@@ -113,7 +125,7 @@ const Modal = styled.div`
   height: 100vh;
   overflow: hidden;
   display: none;
-  padding:44px;
+  padding: 44px;
 
   &.display-block {
     display: flex;

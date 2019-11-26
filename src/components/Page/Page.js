@@ -2,16 +2,32 @@ import React from 'react';
 import {Link, SiteData, RouteData, Head} from 'react-static';
 import styled from 'styled-components';
 import {AppBar, BaseStyles, PublicUrl, breakpoint} from '@aragon/ui';
+import {FormattedMessage} from 'react-intl';
 import Navbar from './Navbar';
 import Footer from './Footer.js';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
 
 const menuItems = [
-  ['/discover', 'Discover'],
-  ['https://hack.aragon.org/', 'Developers'],
-  ['/project', 'Project'],
-  ['/network', 'Network'],
+  [
+    '/discover',
+    <FormattedMessage id="page.navbar.discover" defaultMessage="Discover" />,
+  ],
+  [
+    'https://hack.aragon.org/',
+    <FormattedMessage
+      id="page.navbar.developers"
+      defaultMessage="Developers"
+    />,
+  ],
+  [
+    '/project',
+    <FormattedMessage id="page.navbar.project" defaultMessage="Project" />,
+  ],
+  [
+    '/network',
+    <FormattedMessage id="page.navbar.network" defaultMessage="Network" />,
+  ],
 ];
 
 class Page extends React.Component {
@@ -156,7 +172,7 @@ const Content = styled.div`
   .;
 `;
 
-const AGPBanner = styled.div `
+const AGPBanner = styled.div`
   position: fixed;
   z-index: 5;
   height: 66px;
@@ -176,6 +192,6 @@ const AGPBanner = styled.div `
   a {
     font-weight: 700;
   }
-`
+`;
 
-export default Page
+export default Page;

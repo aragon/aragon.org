@@ -1,0 +1,80 @@
+[
+  {
+    "id": "home.about.module1-title",
+    "defaultMessage": "Global by default",
+    "file": "src/components/Home/About.js",
+    "start": {
+      "line": 18,
+      "column": 10
+    },
+    "end": {
+      "line": 21,
+      "column": 12
+    }
+  },
+  {
+    "id": "home.about.module1-description",
+    "defaultMessage": "Collaborate with people all over the world and work toward shared goals. Organize with anyone from anywhere. Send a vote with the same ease as sending an email.",
+    "file": "src/components/Home/About.js",
+    "start": {
+      "line": 25,
+      "column": 12
+    },
+    "end": {
+      "line": 28,
+      "column": 14
+    }
+  },
+  {
+    "id": "home.about.module2-title",
+    "defaultMessage": "Fast and easy",
+    "file": "src/components/Home/About.js",
+    "start": {
+      "line": 36,
+      "column": 10
+    },
+    "end": {
+      "line": 39,
+      "column": 12
+    }
+  },
+  {
+    "id": "home.about.module2-description",
+    "defaultMessage": "Create your organization in under five minutes. No paperwork involved. We know one size doesn't fit all, so you can customize your organization to fit your needs.",
+    "file": "src/components/Home/About.js",
+    "start": {
+      "line": 43,
+      "column": 12
+    },
+    "end": {
+      "line": 46,
+      "column": 14
+    }
+  },
+  {
+    "id": "home.about.module3-title",
+    "defaultMessage": "Truly sovereign",
+    "file": "src/components/Home/About.js",
+    "start": {
+      "line": 54,
+      "column": 10
+    },
+    "end": {
+      "line": 57,
+      "column": 12
+    }
+  },
+  {
+    "id": "home.about.module3-description",
+    "defaultMessage": "We believe the freedom to organize is a basic human right. Aragon organizations are sovereign and censorship-resistant. Built on free and open source software.",
+    "file": "src/components/Home/About.js",
+    "start": {
+      "line": 61,
+      "column": 12
+    },
+    "end": {
+      "line": 64,
+      "column": 14
+    }
+  }
+]
