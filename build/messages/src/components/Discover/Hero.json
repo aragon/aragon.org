@@ -1,0 +1,41 @@
+[
+  {
+    "id": "discover.hero.title",
+    "defaultMessage": "<span className=\"black\">Take back your</span> freedom to organize",
+    "file": "src/components/Discover/Hero.js",
+    "start": {
+      "line": 15,
+      "column": 8
+    },
+    "end": {
+      "line": 18,
+      "column": 10
+    }
+  },
+  {
+    "id": "discover.hero.content",
+    "defaultMessage": "Discover the unparalleled power to organize. Use Aragon to launch a startup, form a nonprofit, or rally an online community.",
+    "file": "src/components/Discover/Hero.js",
+    "start": {
+      "line": 21,
+      "column": 8
+    },
+    "end": {
+      "line": 24,
+      "column": 10
+    }
+  },
+  {
+    "id": "discover.hero.action",
+    "defaultMessage": "Try it out",
+    "file": "src/components/Discover/Hero.js",
+    "start": {
+      "line": 31,
+      "column": 10
+    },
+    "end": {
+      "line": 34,
+      "column": 12
+    }
+  }
+]

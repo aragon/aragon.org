@@ -21,9 +21,8 @@ const messages = {
   es: messages_es,
   en: messages_en,
 };
-const language = 'es';
 
-console.log(messages_es);
+const language = navigator.language.split(/[-_]/)[0]; // language without region code
 
 // Render your app
 if (typeof document !== 'undefined') {

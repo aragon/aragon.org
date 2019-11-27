@@ -1,0 +1,54 @@
+[
+  {
+    "id": "discover.about.module1.content",
+    "defaultMessage": "Aragon organizations are digital natives. They live on Ethereum, a ledger secured by incentives and cryptography. Transactions are transparent and immutable.",
+    "file": "src/components/Discover/About.js",
+    "start": {
+      "line": 13,
+      "column": 4
+    },
+    "end": {
+      "line": 16,
+      "column": 6
+    }
+  },
+  {
+    "id": "discover.about.module2.content",
+    "defaultMessage": "Aragon leverages smart contracts. They are like traditional contracts, but written in computer code and enforced by the blockchain. As efficient and automatic as it gets.",
+    "file": "src/components/Discover/About.js",
+    "start": {
+      "line": 21,
+      "column": 4
+    },
+    "end": {
+      "line": 24,
+      "column": 6
+    }
+  },
+  {
+    "id": "discover.about.module1.title",
+    "defaultMessage": "21st century organizations",
+    "file": "src/components/Discover/About.js",
+    "start": {
+      "line": 34,
+      "column": 10
+    },
+    "end": {
+      "line": 37,
+      "column": 12
+    }
+  },
+  {
+    "id": "discover.about.module2.title",
+    "defaultMessage": "Organizations that work for you",
+    "file": "src/components/Discover/About.js",
+    "start": {
+      "line": 45,
+      "column": 10
+    },
+    "end": {
+      "line": 48,
+      "column": 12
+    }
+  }
+]

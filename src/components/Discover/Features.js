@@ -1,13 +1,14 @@
 import React from 'react';
+import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
+import styled from 'styled-components';
+import {breakpoint, BreakPoint} from '@aragon/ui';
 import Section from '../General/Section';
 import DividedSection from '../General/DividedSection';
 import AlmostFullSection from '../General/AlmostFullSection';
-import styled from 'styled-components';
 import image1 from './assets/tokens.svg';
 import image2 from './assets/fully-customizable.svg';
 import image2Mobile from './assets/fully_customizable.svg';
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
 
@@ -15,12 +16,16 @@ const Features = () => {
   const content = (
     <div>
       <h3>
-        Fully <br /> <span className="blue">customizable</span>
+        <FormattedHTMLMessage
+          id="discover.features.feature2.title"
+          defaultMessage='Fully <br /> <span className="blue">customizable</span>'
+        />
       </h3>
       <p>
-        With Aragon, you don’t need to pick a one-size-fits-all solution. You
-        can experiment with new kinds of human collaboration, just with a few
-        clicks.
+        <FormattedMessage
+          id="discover.features.feature2.content"
+          defaultMessage="With Aragon, you don’t need to pick a one-size-fits-all solution. You can experiment with new kinds of human collaboration, just with a few clicks."
+        />
       </p>
     </div>
   );
@@ -28,12 +33,16 @@ const Features = () => {
     <Container>
       <DividedSection sectionClass="global" image={image1}>
         <h3>
-          Global and <span className="red">bureaucracy-free</span>
+          <FormattedHTMLMessage
+            id="discover.features.feature1.title"
+            defaultMessage='Global and <span className="red">bureaucracy-free</span>'
+          />
         </h3>
         <p>
-          Aragon organizations are global from day one. Collaborate with people
-          across countries or continents, without experiencing cumbersome
-          bureau-crazy.
+          <FormattedMessage
+            id="discover.features.feature1.content"
+            defaultMessage="Aragon organizations are global from day one. Collaborate with people across countries or continents, without experiencing cumbersome bureaucrazy."
+          />
         </p>
       </DividedSection>
       <BreakPoint from="medium">

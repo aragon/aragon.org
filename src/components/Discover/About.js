@@ -1,23 +1,27 @@
 import React from 'react';
-import Section from '../General/Section';
-import LongCard from '../General/LongCard';
-import Card from '../General/Card';
+import {FormattedMessage} from 'react-intl';
 import styled from 'styled-components';
 import {Link} from 'react-static';
 import {breakpoint} from '@aragon/ui';
+import Section from '../General/Section';
+import LongCard from '../General/LongCard';
+import Card from '../General/Card';
 const medium = css => breakpoint('medium', css);
 
 const mudule1Content = (
   <p>
-    Aragon organizations are digital natives. They live on Ethereum, a ledger
-    secured by incentives and cryptography. Transactions are transparent and immutable.
+    <FormattedMessage
+      id="discover.about.module1.content"
+      defaultMessage="Aragon organizations are digital natives. They live on Ethereum, a ledger secured by incentives and cryptography. Transactions are transparent and immutable."
+    />
   </p>
 );
 const mudule2Content = (
   <p>
-    Aragon leverages smart contracts. They are like traditional contracts, but
-    written in computer code and enforced by the blockchain. As efficient and
-    automatic as it gets.
+    <FormattedMessage
+      id="discover.about.module2.content"
+      defaultMessage="Aragon leverages smart contracts. They are like traditional contracts, but written in computer code and enforced by the blockchain. As efficient and automatic as it gets."
+    />
   </p>
 );
 
@@ -26,13 +30,23 @@ const About = () => (
     <Container>
       <Card
         imageUrl={'Discover/assets/discover1'}
-        title="21st century organizations"
+        title={
+          <FormattedMessage
+            id="discover.about.module1.title"
+            defaultMessage="21st century organizations"
+          />
+        }
         content={mudule1Content}
         className="discover1"
       />
       <Card
         imageUrl={'Discover/assets/discover2'}
-        title="Organizations that work for you"
+        title={
+          <FormattedMessage
+            id="discover.about.module2.title"
+            defaultMessage="Organizations that work for you"
+          />
+        }
         content={mudule2Content}
       />
     </Container>
