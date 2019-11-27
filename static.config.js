@@ -21,6 +21,66 @@ export default {
   }),
   getRoutes: () => [
     {
+      path: '/:locale/',
+      component: 'src/pages/Home',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/discover',
+      component: 'src/pages/Discover',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/project',
+      component: 'src/pages/Project',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/project/governance',
+      component: 'src/pages/Governance',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/project/grants',
+      component: 'src/pages/Grants',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/project/contribute',
+      component: 'src/pages/Contribute',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/project/roadmap',
+      component: 'src/pages/Roadmap',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/network',
+      component: 'src/pages/Network',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/bella',
+      component: 'src/pages/Bella',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/camino',
+      component: 'src/pages/Camino',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/powered-by',
+      component: 'src/pages/PoweredByAragon',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/agent',
+      component: 'src/pages/Frame',
+      getData: () => ({title: ''}),
+    },
+    {
       path: '/',
       component: 'src/pages/Home',
       getData: () => ({title: ''}),

@@ -2,9 +2,12 @@ import React from 'react';
 import {Link, SiteData, RouteData, Head} from 'react-static';
 import styled from 'styled-components';
 import {AppBar, BaseStyles, PublicUrl, breakpoint} from '@aragon/ui';
+import Dropdown from 'react-bootstrap/Dropdown';
 import {FormattedMessage} from 'react-intl';
 import Navbar from './Navbar';
 import Footer from './Footer.js';
+import en from './assets/en.svg';
+import es from './assets/es.svg';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
 
@@ -45,6 +48,33 @@ class Page extends React.Component {
                   <title>{title || siteTitle}</title>
                 </Head>
                 <Navbar menuItems={items} path={path} color={color} />
+                <Intl>
+                  <Dropdown>
+                    <Dropdown.Toggle id="dropdown-basic">
+                      {localStorage.getItem('locale') == 'es' ? (
+                        <img src={es} />
+                      ) : (
+                        <img src={en} />
+                      )}
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                      <Dropdown.Item
+                        onClick={() => {
+                          localStorage.setItem('locale', 'en');
+                          window.location.reload(false);
+                        }}>
+                        <img src={en} /> Engliish
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => {
+                          localStorage.setItem('locale', 'es');
+                          window.location.reload(false);
+                        }}>
+                        <img src={es} /> Español
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </Intl>
                 <Content contentColor={contentColor}>{children}</Content>
                 <Footer path={path} />
               </PublicUrl.Provider>
@@ -55,7 +85,29 @@ class Page extends React.Component {
     );
   }
 }
-
+const Intl = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999999;
+  .dropdown-menu {
+    width: 30px;
+    left: auto !important;
+    right: 0px !important;
+    transform: translate3d(-6px, 39px, 0px) !important;
+  }
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .show > .btn-primary.dropdown-toggle {
+    color: black;
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+  }
+`;
 const Content = styled.div`
   min-height: calc(100vh - 116px) !important;
   ${p => p.contentColor && 'background-color: ' + p.contentColor}

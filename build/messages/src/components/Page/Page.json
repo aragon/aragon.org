@@ -4,11 +4,11 @@
     "defaultMessage": "Discover",
     "file": "src/components/Page/Page.js",
     "start": {
-      "line": 14,
+      "line": 17,
       "column": 4
     },
     "end": {
-      "line": 14,
+      "line": 17,
       "column": 76
     }
   },
@@ -17,11 +17,11 @@
     "defaultMessage": "Developers",
     "file": "src/components/Page/Page.js",
     "start": {
-      "line": 18,
+      "line": 21,
       "column": 4
     },
     "end": {
-      "line": 21,
+      "line": 24,
       "column": 6
     }
   },
@@ -30,11 +30,11 @@
     "defaultMessage": "Project",
     "file": "src/components/Page/Page.js",
     "start": {
-      "line": 25,
+      "line": 28,
       "column": 4
     },
     "end": {
-      "line": 25,
+      "line": 28,
       "column": 74
     }
   },
@@ -43,11 +43,11 @@
     "defaultMessage": "Network",
     "file": "src/components/Page/Page.js",
     "start": {
-      "line": 29,
+      "line": 32,
       "column": 4
     },
     "end": {
-      "line": 29,
+      "line": 32,
       "column": 74
     }
   }
