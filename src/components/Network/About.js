@@ -3,95 +3,94 @@ import Section from '../General/Section';
 import styled from 'styled-components';
 import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
-import network1 from './assets/network1.svg';
-import network2 from './assets/network2.svg';
+import Card from '../General/Card';
 
+const mudule1Content = (
+  <span>
+    <p>
+      A parallel, global system of law that enables trustful interactions
+      between individuals and organizations
+    </p>
+    <p>
+      <a
+        className="action-button"
+        href="https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+archived%3Afalse+label%3A%22good+first+issue%22+user%3Aaragon+"
+        target="_blank">
+        <span>
+          Read manifesto <img src={require(`../General/assets/arrow.svg`)} />
+        </span>
+      </a>
+    </p>
+  </span>
+);
+const mudule2Content = (
+  <span>
+    <p>Hold ANT to have a stake in the value of the Aragon Network</p>
+    <p>
+      <a
+        className="action-button"
+        href="https://wiki.aragon.org/jobs"
+        target="_blank">
+        <span>
+          Buy ANT <img src={require(`../General/assets/arrow.svg`)} />
+        </span>
+      </a>
+    </p>
+  </span>
+);
 const About = () => (
-  <div>
-    <StyledSection className="top">
-      <Container>
-        <img src={network1} />
-        <div className="right">
-          <h2>Effective dispute resolution</h2>
-          <h4>
-            The Aragon Network encompasses a set of courts, which can be used to
-            settle disputes. By using smart contracts, cases can be closed way
-            faster than in traditional courts. Fairness for everyone.
-          </h4>
-        </div>
-      </Container>
-    </StyledSection>
-    <StyledSection className="bottom">
-      <Container>
-        <BreakPoint to="medium">
-          <img src={network2} />
-        </BreakPoint>
-        <div className="left">
-          <h2>Anonymity and trust, together</h2>
-          <h4>
-            Mom probably advised you not to interact with strangers. But thanks
-            to the Aragon Network, you can transact with people who are using
-            aliases, or stay anonymous yourself. You can open disputes if
-            someone misbehaves.
-          </h4>
-        </div>
-        <BreakPoint from="medium">
-          <img src={network2} />
-        </BreakPoint>
-      </Container>
-    </StyledSection>
-  </div>
+  <AboutSection>
+    <Container>
+      <Card
+        linkTo="https://github.com/aragon/nest"
+        imageUrl={'Network/assets/network1'}
+        title="What’s a digital jurisdiction?"
+        content={mudule1Content}
+        className="transparent"
+      />
+      <Card
+        linkTo="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant"
+        imageUrl={'Network/assets/network2'}
+        title="Aragon Network's native asset"
+        content={mudule2Content}
+        className="apply-card"
+      />
+    </Container>
+  </AboutSection>
 );
 
-const StyledSection = styled(Section)`
-  border-bottom: 2px solid #f9fafc;
-  &.top {
-    padding: 90px 15px 45px 15px;
-  }
-  &.bottom  {
-    padding: 45px 15px 90px 15px;
-  }
+const AboutSection = styled(Section)`
+  padding: 30px 15px 90px 15px;
 `;
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  ${medium('flex-direction: row;')};
-  padding: 50px 0;
+  display: grid;
+  ${medium(
+    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 650px'
+  )};
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
   img {
-    max-width: 70%;
-    margin-bottom: 30px;
-    ${medium('max-width: 90%; margin-bottom: 0;')};
-
+    width: 242px;
   }
-  div {
-    max-width: 480px;
+  span img {
+    width: auto;
   }
-  div.right {
-    ${medium('padding-left: 50px;')};
+  .team-box {
+    display: flex;
+    span {
+      margin-right: 50px;
+    }
   }
-  div.left {
-    ${medium('padding-right: 50px;')};
+  .contribute1 .principal-image {
+    width: 242px;
+    height: auto;
   }
-  h2 {
-    font-family: 'FontLight';
-    font-size: 46px;
-    line-height: 62px;
-    color: #2d4051;
-    text-align: center;
-    ${medium('text-align: left;')};
-  }
-  h4 {
-    font-family: 'FontRegular';
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: 0.24px;
-    color: #7f8198;
-    text-align: center;
-    ${medium('text-align: left;')};
+  .contribute2 .principal-image {
+    width: 187px;
+    height: auto;
   }
 `;
-
 export default About;
