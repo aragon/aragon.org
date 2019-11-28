@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-static';
-import Fade from 'react-reveal/Fade';
 import Section from '../General/Section';
 import styled from 'styled-components';
 import {breakpoint, BreakPoint} from '@aragon/ui';
@@ -23,7 +22,10 @@ const mudule1Content = (
             It's one of the core components of the Aragon Network.
           </p>
           <p>
-            <a className="action-button" href="" target="_blank">
+            <a
+              className="action-button"
+              href="https://anj.aragon.org/"
+              target="_blank">
               <span>
                 Become a Juror{' '}
                 <img src={require(`../General/assets/arrow.svg`)} />
@@ -48,11 +50,10 @@ const mudule2Content = (
           <p>
             <a
               className="action-button"
-              href="https://wiki.aragon.org/jobs"
+              href="https://blog.aragon.one/aragon-chain/"
               target="_blank">
               <span>
-                Become a Validator{' '}
-                <img src={require(`../General/assets/arrow.svg`)} />
+                Learn more <img src={require(`../General/assets/arrow.svg`)} />
               </span>
             </a>
           </p>
@@ -66,24 +67,10 @@ const About = () => (
   <AboutSection>
     <CardContainer>
       <div className="juror">
-        <BreakPoint to="medium">
-          <Card>{mudule1Content}</Card>
-        </BreakPoint>
-        <BreakPoint from="medium">
-          <Fade delay={100}>
-            <Card>{mudule1Content}</Card>
-          </Fade>
-        </BreakPoint>
+        <Card>{mudule1Content}</Card>
       </div>
       <div className="chain">
-        <BreakPoint to="medium">
-          <Card>{mudule2Content}</Card>
-        </BreakPoint>
-        <BreakPoint from="medium">
-          <Fade delay={100}>
-            <Card>{mudule2Content}</Card>
-          </Fade>
-        </BreakPoint>
+        <Card>{mudule2Content}</Card>
       </div>
     </CardContainer>
   </AboutSection>

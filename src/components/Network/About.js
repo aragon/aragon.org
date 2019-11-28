@@ -14,7 +14,7 @@ const mudule1Content = (
     <p>
       <a
         className="action-button"
-        href="https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+archived%3Afalse+label%3A%22good+first+issue%22+user%3Aaragon+"
+        href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/"
         target="_blank">
         <span>
           Read manifesto <img src={require(`../General/assets/arrow.svg`)} />
