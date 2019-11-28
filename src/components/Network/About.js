@@ -29,7 +29,7 @@ const mudule2Content = (
     <p>
       <a
         className="action-button"
-        href="https://wiki.aragon.org/jobs"
+        href="https://coinmarketcap.com/currencies/aragon/"
         target="_blank">
         <span>
           Buy ANT <img src={require(`../General/assets/arrow.svg`)} />

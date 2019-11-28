@@ -5,7 +5,7 @@ import Section from '../General/Section';
 import styled from 'styled-components';
 import {breakpoint, BreakPoint} from '@aragon/ui';
 import juror from './assets/juror.svg';
-import ant from './assets/ant.svg';
+import ant from './assets/ant.png';
 
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
