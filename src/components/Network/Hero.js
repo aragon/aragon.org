@@ -61,6 +61,9 @@ const TextContainer = styled.div`
   max-width: 663px;
   margin: auto;
   text-align: center;
+  h2 {
+    margin-top: 20px;
+  }
   h4 {
     color: #ffffff;
   }

@@ -90,13 +90,13 @@ const About = () => (
 );
 
 const AboutSection = styled(Section)`
-  padding: 30px 15px 90px 15px;
+  padding: 30px 15px 35px 15px;
 `;
 
 const CardContainer = styled.div`
   display: grid !important;
   ${medium(
-    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 650px;'
+    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: auto;'
   )};
   grid-template-columns: 100%;
   grid-template-rows: auto;
@@ -105,10 +105,16 @@ const CardContainer = styled.div`
   span img {
     width: auto;
   }
+  p {
+    margin: 5px auto;
+  }
   .chain p.content {
     max-width: 300px;
     min-height: 84px;
-    margin: 15px auto;
+    margin: 5px auto;
+  }
+  .juror p.content {
+    margin-top: 5px;
   }
 `;
 
@@ -124,7 +130,7 @@ const Card = styled.div`
   p {
     color: #7f8198;
     text-align: center;
-    margin: 15px 0 0 0;
+    margin: 5px 0 0 0;
   }
   h1 {
     font-family: 'FontLight', sans-serif;
