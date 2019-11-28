@@ -1,47 +1,29 @@
 import React from 'react';
-import Section from '../General/Section';
 import styled from 'styled-components';
-import AlmostFullSection from '../General/AlmostFullSection';
-import image from './assets/network4.png';
+import background from './assets/protocols.png';
 
-const About = () => (
-  <AlmostFullSection backgroundColor="#639CF5" image={image} imageLeft={true}>
-    <AlmostFullSectionBox>
-      <h3>The Aragon Network will be governed by the community</h3>
-      <p>
-        The Aragon Network is not only a digital jurisdiction, but one in which
-        you can make your voice heard. The Aragon Network will be governed by
-        the community, just like the Aragon project itself.
-      </p>
-      <a href="https://aragon.org/project/governance">
-        Forum
-      </a>
-    </AlmostFullSectionBox>
-  </AlmostFullSection>
+const Community = () => (
+  <Section>
+    <div>
+      <h2>Aragon Network Protocols</h2>
+      <h4>The Aragon Network earns revenues by running for-profit protocols</h4>
+    </div>
+  </Section>
 );
 
-const AlmostFullSectionBox = styled.div`
-  h3 {
-    font-family: 'FontRegular', sans-serif;
-    font-size: 48px;
-    line-height: 59px;
-    letter-spacing: -0.564706px;
-    color: #ffffff !important;
-  }
-  p {
-    font-family: 'FontRegular', sans-serif;
-    font-size: 21px;
-    line-height: 35px;
-    letter-spacing: 0.315px;
-    color: #ffffff;
-    opacity: 0.8;
-  }
-  a {
-    font-family: 'FontSemiBold';
-    font-size: 21px;
-    line-height: 35px;
-    letter-spacing: 0.315px;
-    color: #ffffff;
+const Section = styled.div`
+  background-image: url(${background});
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  tex-align: center;
+  h4 {
+    max-width: 515px;
+    margin: auto;
   }
 `;
-export default About;
+export default Community;

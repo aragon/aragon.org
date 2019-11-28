@@ -6,7 +6,7 @@ import Community from '../components/Network/Community';
 import NetworkeContent from '../components/Network/NetworkContent';
 
 const Network = () => (
-  <Page path="/network" color="black">
+  <Page path="/network">
     <Hero />
     <About />
     <Community />
