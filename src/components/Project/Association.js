@@ -18,7 +18,7 @@ const UnstoppableOrganizations = () => (
       <br />
       <h5>Executive director</h5>
       <h4 className="signs">
-        <span>Stefano Bernardi</span>
+        <span>Luis Cuende</span>
       </h4>
       <br />
       <h5>Board of directors</h5>
