@@ -1,0 +1,41 @@
+[
+  {
+    "id": "discover.unstoppable-organizations.title",
+    "defaultMessage": "Unstoppable organizations",
+    "file": "src/components/Discover/UnstoppableOranizations.js",
+    "start": {
+      "line": 16,
+      "column": 8
+    },
+    "end": {
+      "line": 19,
+      "column": 10
+    }
+  },
+  {
+    "id": "discover.unstoppable-organizations.content",
+    "defaultMessage": "Aragon provides new tools for human collaboration. Aragon organizations are difficult to shut down, escaping the boundaries of oppression and censorship.",
+    "file": "src/components/Discover/UnstoppableOranizations.js",
+    "start": {
+      "line": 22,
+      "column": 8
+    },
+    "end": {
+      "line": 25,
+      "column": 10
+    }
+  },
+  {
+    "id": "discover.unstoppable-organizations.action",
+    "defaultMessage": "About the project",
+    "file": "src/components/Discover/UnstoppableOranizations.js",
+    "start": {
+      "line": 28,
+      "column": 8
+    },
+    "end": {
+      "line": 31,
+      "column": 10
+    }
+  }
+]

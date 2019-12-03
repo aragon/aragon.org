@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import {breakpoint, BreakPoint} from '@aragon/ui';
 import Section from '../General/Section';
 import product from './home-assets/product.png';
-import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
 

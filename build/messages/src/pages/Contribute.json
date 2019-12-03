@@ -1,0 +1,41 @@
+[
+  {
+    "id": "project.contribute.hero.title",
+    "defaultMessage": "The community awaits you",
+    "file": "src/pages/Contribute.js",
+    "start": {
+      "line": 15,
+      "column": 10
+    },
+    "end": {
+      "line": 18,
+      "column": 12
+    }
+  },
+  {
+    "id": "project.contribute.hero.content",
+    "defaultMessage": "The Aragon community is united towards the same goal: to re-shape the future of organizations.",
+    "file": "src/pages/Contribute.js",
+    "start": {
+      "line": 21,
+      "column": 10
+    },
+    "end": {
+      "line": 24,
+      "column": 12
+    }
+  },
+  {
+    "id": "project.contribute.hero.action",
+    "defaultMessage": "Read more",
+    "file": "src/pages/Contribute.js",
+    "start": {
+      "line": 31,
+      "column": 12
+    },
+    "end": {
+      "line": 34,
+      "column": 14
+    }
+  }
+]

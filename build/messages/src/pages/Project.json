@@ -1,0 +1,41 @@
+[
+  {
+    "id": "project.hero.title",
+    "defaultMessage": "Fight for freedom",
+    "file": "src/pages/Project.js",
+    "start": {
+      "line": 39,
+      "column": 16
+    },
+    "end": {
+      "line": 42,
+      "column": 18
+    }
+  },
+  {
+    "id": "project.hero.content",
+    "defaultMessage": "Aragon is a project to empower freedom by creating tools for decentralized organizations to thrive.",
+    "file": "src/pages/Project.js",
+    "start": {
+      "line": 45,
+      "column": 16
+    },
+    "end": {
+      "line": 48,
+      "column": 18
+    }
+  },
+  {
+    "id": "project.hero.action",
+    "defaultMessage": "Manifesto",
+    "file": "src/pages/Project.js",
+    "start": {
+      "line": 55,
+      "column": 18
+    },
+    "end": {
+      "line": 58,
+      "column": 20
+    }
+  }
+]

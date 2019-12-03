@@ -1,28 +1,33 @@
 import React from 'react';
-import Section from '../General/Section';
-import LongCard from '../General/LongCard';
-import Card from '../General/Card';
 import styled from 'styled-components';
 import {Link} from 'react-static';
 import Fade from 'react-reveal/Fade';
+import {FormattedMessage} from 'react-intl';
+import Section from '../General/Section';
+import LongCard from '../General/LongCard';
+import Card from '../General/Card';
 
 import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('medium', css);
 
-const feature3 = (
+const feature1 = (
   <span>
     <p>
-      Export your finances using a standard data format.
+      <FormattedMessage
+        id="bella.last-features.feature1.content"
+        defaultMessage="Export your finances using a standard data format."
+      />
     </p>
   </span>
 );
-const feature4 = (
+const feature2 = (
   <span>
     <p>
-      All your saved names stay only on your device. App upgrades are always
-      opt-in. Aragon organizations are sovereign, and we want them to stay that
-      way.
+      <FormattedMessage
+        id="bella.last-features.feature2.content"
+        defaultMessage="All your saved names stay only on your device. App upgrades are always opt-in. Aragon organizations are sovereign, and we want them to stay that way."
+      />
     </p>
   </span>
 );
@@ -39,8 +44,13 @@ const LastFeatures = () => (
           label="new"
           textAlign="left"
           cardHeight="700px"
-          title="Export your finances in one click"
-          content={feature3}
+          title={
+            <FormattedMessage
+              id="bella.last-features.feature1.title"
+              defaultMessage="Export your finances in one click"
+            />
+          }
+          content={feature1}
         />
       </Fade>
       <Fade delay={200}>
@@ -49,10 +59,15 @@ const LastFeatures = () => (
           imageUrl={'Bella/assets/8'}
           imageBig="true"
           textAlign="left"
-          title="Private and secure"
+          title={
+            <FormattedMessage
+              id="bella.last-features.feature2.title"
+              defaultMessage="Private and secure"
+            />
+          }
           colorWhite="true"
           cardHeight="700px"
-          content={feature4}
+          content={feature2}
         />
       </Fade>
     </Container>

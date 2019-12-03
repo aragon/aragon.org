@@ -11,15 +11,13 @@ const large = css => breakpoint('large', css);
 const Hero = () => (
   <HeroSection>
     <Navbar />
-    <Container>
-
-    </Container>
+    <Container />
   </HeroSection>
 );
 
 const HeroSection = styled.section`
   min-height: 600px;
-  background-color: #019FE3;
+  background-color: #019fe3;
   background-image: url(${background});
   background-size: cover;
   background-position: top;

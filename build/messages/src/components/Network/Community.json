@@ -1,0 +1,28 @@
+[
+  {
+    "id": "network.community.title",
+    "defaultMessage": "Aragon Network Protocols",
+    "file": "src/components/Network/Community.js",
+    "start": {
+      "line": 10,
+      "column": 8
+    },
+    "end": {
+      "line": 13,
+      "column": 10
+    }
+  },
+  {
+    "id": "network.community.subtitle",
+    "defaultMessage": "The Aragon Network earns revenues by running for-profit protocols",
+    "file": "src/components/Network/Community.js",
+    "start": {
+      "line": 16,
+      "column": 8
+    },
+    "end": {
+      "line": 19,
+      "column": 10
+    }
+  }
+]

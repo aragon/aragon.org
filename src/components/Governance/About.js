@@ -1,10 +1,12 @@
 import React from 'react';
-import Section from '../General/Section';
+import {FormattedMessage} from 'react-intl';
 import styled from 'styled-components';
 import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import Section from '../General/Section';
 import about from './assets/about.svg';
 import what from './assets/what.svg';
+
+const medium = css => breakpoint('medium', css);
 
 const About = () => (
   <div>
@@ -12,16 +14,27 @@ const About = () => (
       <Container>
         <img src={about} />
         <div className="right">
-          <h2>Aragon is a project run by its community.</h2>
+          <h2>
+            <FormattedMessage
+              id="project.governance.about.module1.title"
+              defaultMessage="Aragon is a project run by its community."
+            />
+          </h2>
           <h4>
-            Aragon is governed by Aragon Network Token (ANT) holders. You can
-            participate in governance by voting with ANT.
+            <FormattedMessage
+              id="project.governance.about.module1.content"
+              defaultMessage="Aragon is governed by Aragon Network Token (ANT) holders. You can participate in governance by voting with ANT."
+            />
           </h4>
           <a
             target="_blank"
             href="https://wiki.aragon.org/documentation/aragon_network_token/">
             <span>
-              About ANT <img src={require(`../General/assets/arrow.svg`)} />
+              <FormattedMessage
+                id="project.governance.about.module1.action"
+                defaultMessage="About ANT"
+              />{' '}
+              <img src={require(`../General/assets/arrow.svg`)} />
             </span>
           </a>
         </div>
@@ -33,18 +46,27 @@ const About = () => (
           <img src={what} />
         </BreakPoint>
         <div className="left">
-          <h2>What is an AGP?</h2>
+          <h2>
+            <FormattedMessage
+              id="project.governance.about.module2.title"
+              defaultMessage="What is an AGP?"
+            />
+          </h2>
           <h4>
-            AGP stands for Aragon Governance Proposal, a document that proposes
-            a change to the governance of the Aragon project. Community members
-            create and review proposals following AGP-1: The Aragon Governance
-            Proposal Process.
+            <FormattedMessage
+              id="project.governance.about.module2.content"
+              defaultMessage="AGP stands for Aragon Governance Proposal, a document that proposes a change to the governance of the Aragon project. Community members create and review proposals following AGP-1: The Aragon Governance Proposal Process."
+            />
           </h4>
           <a
             target="_blank"
             href="https://github.com/aragon/AGPs/blob/master/AGPs/AGP-1.md">
             <span>
-              Read AGP-1 <img src={require(`../General/assets/arrow.svg`)} />
+              <FormattedMessage
+                id="project.governance.about.module2.action"
+                defaultMessage="Read AGP-1"
+              />{' '}
+              <img src={require(`../General/assets/arrow.svg`)} />
             </span>
           </a>
         </div>
@@ -100,7 +122,7 @@ const Container = styled.div`
     font-size: 16px;
     line-height: 4;
     text-align: center;
-    color: #4A80E4;
+    color: #4a80e4;
   }
 `;
 

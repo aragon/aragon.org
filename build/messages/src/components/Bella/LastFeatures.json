@@ -1,0 +1,54 @@
+[
+  {
+    "id": "bella.last-features.feature1.content",
+    "defaultMessage": "Export your finances using a standard data format.",
+    "file": "src/components/Bella/LastFeatures.js",
+    "start": {
+      "line": 17,
+      "column": 6
+    },
+    "end": {
+      "line": 20,
+      "column": 8
+    }
+  },
+  {
+    "id": "bella.last-features.feature2.content",
+    "defaultMessage": "All your saved names stay only on your device. App upgrades are always opt-in. Aragon organizations are sovereign, and we want them to stay that way.",
+    "file": "src/components/Bella/LastFeatures.js",
+    "start": {
+      "line": 27,
+      "column": 6
+    },
+    "end": {
+      "line": 30,
+      "column": 8
+    }
+  },
+  {
+    "id": "bella.last-features.feature1.title",
+    "defaultMessage": "Export your finances in one click",
+    "file": "src/components/Bella/LastFeatures.js",
+    "start": {
+      "line": 48,
+      "column": 12
+    },
+    "end": {
+      "line": 51,
+      "column": 14
+    }
+  },
+  {
+    "id": "bella.last-features.feature2.title",
+    "defaultMessage": "Private and secure",
+    "file": "src/components/Bella/LastFeatures.js",
+    "start": {
+      "line": 63,
+      "column": 12
+    },
+    "end": {
+      "line": 66,
+      "column": 14
+    }
+  }
+]

@@ -1,10 +1,11 @@
 import React from 'react';
+import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
+import {Link} from 'react-static';
+import Fade from 'react-reveal/Fade';
+import styled from 'styled-components';
 import Section from '../General/Section';
 import LongCard from '../General/LongCard';
 import Card from '../General/Card';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import Fade from 'react-reveal/Fade';
 
 import {breakpoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
@@ -12,26 +13,30 @@ const medium = css => breakpoint('medium', css);
 const feature1 = (
   <span>
     <p>
-      Click on any address to assign it a name. Then you will always see that
-      name across all Aragon apps. You can export your names and send them to
-      other people in your organization.
+      <FormattedMessage
+        id="bella.features.feature1.content"
+        defaultMessage="Click on any address to assign it a name. Then you will always see that name across all Aragon apps. You can export your names and send them to other people in your organization."
+      />
     </p>
   </span>
 );
 const feature2 = (
   <span>
     <p>
-      The activity center keeps you informed about the status of your pending
-      transactions.
+      <FormattedMessage
+        id="bella.features.feature2.content"
+        defaultMessage="The activity center keeps you informed about the status of your pending transactions."
+      />
     </p>
   </span>
 );
 const feature3 = (
   <span>
     <p>
-      Add an employee, their salary and tokens allowed to withdraw. That’s it.
-      For real. Employees get their payroll whenever they prefer. Weekly? Daily?
-      In real time? It’s up to them now.
+      <FormattedMessage
+        id="bella.features.feature3.content"
+        defaultMessage="Add an employee, their salary and tokens allowed to withdraw. That’s it. For real. Employees get their payroll whenever they prefer. Weekly? Daily? In real time? It’s up to them now."
+      />
     </p>
   </span>
 );
@@ -44,7 +49,12 @@ const Features = () => (
         image={'Bella/assets/1.svg'}
         textAlign="right"
         label="new"
-        title="Call people by their name"
+        title={
+          <FormattedMessage
+            id="bella.features.feature1.title"
+            defaultMessage="Call people by their name"
+          />
+        }
         content={feature1}
       />
 
@@ -54,10 +64,10 @@ const Features = () => (
         label="new"
         textAlign="left"
         title={
-          <span>
-            Get activity
-            <br /> notifications
-          </span>
+          <FormattedHTMLMessage
+            id="bella.features.feature2.title"
+            defaultMessage="<span>Get activity<br /> notifications</span>"
+          />
         }
         content={feature2}
       />
@@ -68,7 +78,12 @@ const Features = () => (
         textAlign="right"
         className="salary-allocation"
         label="invite-only"
-        title="The easiest payroll ever made"
+        title={
+          <FormattedMessage
+            id="bella.features.feature3.title"
+            defaultMessage="The easiest payroll ever made"
+          />
+        }
         content={feature3}
       />
     </Container>

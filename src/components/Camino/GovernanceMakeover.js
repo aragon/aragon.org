@@ -1,24 +1,29 @@
 import React from 'react';
-import Section from '../General/Section';
-import Card from '../General/Card';
+import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
 import styled from 'styled-components';
 import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import Section from '../General/Section';
+import Card from '../General/Card';
 import Label from './Label';
 import label from './assets/label-ds.svg';
+const medium = css => breakpoint('medium', css);
+const large = css => breakpoint('large', css);
 
 const mudule1Content = (
   <p>
-    Simplified permissions management that makes it easy to understand at a
-    glance who has the authority in your organization.
+    <FormattedMessage
+      id="camino.governance-makeover.module1.content"
+      defaultMessage="Simplified permissions management that makes it easy to understand at a glance who has the authority in your organization."
+    />
   </p>
 );
 const mudule2Content = (
   <span>
     <p>
-      The Aragon client and default apps have been rebuilt from the ground up
-      with a new design system for a more consistent user experience.
+      <FormattedMessage
+        id="camino.governance-makeover.module2.content"
+        defaultMessage="The Aragon client and default apps have been rebuilt from the ground up with a new design system for a more consistent user experience."
+      />
     </p>
     <div className="label">
       <a href="https://hack.aragon.org/docs/layout.html" target="_blank">
@@ -37,10 +42,10 @@ const GovernanceMakeover = () => (
         className="governance"
         cardHeight="700px"
         title={
-          <span>
-            Modern
-            <br /> <span className="blue">governance</span>
-          </span>
+          <FormattedHTMLMessage
+            id="camino.governance-makeover.module1.title"
+            defaultMessage="<span>Modern<br /> <span class='blue'>governance</span></span>"
+          />
         }
         content={mudule1Content}
       />
@@ -50,10 +55,10 @@ const GovernanceMakeover = () => (
         className="makeover"
         cardHeight="700px"
         title={
-          <span>
-            Fresh
-            <br /> <span className="violet">makeover</span>
-          </span>
+          <FormattedHTMLMessage
+            id="camino.governance-makeover.module2.title"
+            defaultMessage="<span>Fresh<br /> <span class='violet'>makeover</span></span>"
+          />
         }
         content={mudule2Content}
       />

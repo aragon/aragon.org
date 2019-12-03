@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, breakpoint, SafeLink} from '@aragon/ui';
 import {Link} from 'react-static';
 import styled from 'styled-components';
+import {FormattedMessage} from 'react-intl';
 import Section from '../General/Section';
 import backgroundImage from './assets/prefooter.png';
 import logo from './assets/logo-footer.svg';
@@ -18,15 +19,31 @@ const Footer = ({...props}) => (
   <FooterSection>
     <PreFooter>
       <PreFooterText>
-      <h2>Try Aragon now</h2>
-      <p>Create and manage your organization and give power to your stakeholder community.</p>
+        <h2>
+          <FormattedMessage
+            id="page.footer.title"
+            defaultMessage="Try Aragon now"
+          />
+        </h2>
+        <p>
+          <FormattedMessage
+            id="page.footer.description"
+            defaultMessage="Create and manage your organization and give power to your stakeholder community."
+          />
+        </p>
       </PreFooterText>
       <div>
         <a className="principal-button centered" href="https://app.aragon.org">
-          Try the product
+          <FormattedMessage
+            id="page.footer.link1"
+            defaultMessage="Try the product"
+          />
         </a>
         <a className="secondary-button centered" href="/discover">
-          Discover Aragon
+          <FormattedMessage
+            id="page.footer.link2"
+            defaultMessage="Discover Aragon"
+          />
         </a>
       </div>
     </PreFooter>
@@ -37,33 +54,69 @@ const Footer = ({...props}) => (
         </Link>
       </Item>
       <Item>
-        <Link to="/">Home</Link>
-        <Link to="/discover">Discover</Link>
-        <Link to="/project">Project</Link>
-        <Link to="/network">Network</Link>
+        <Link to="/">
+          <FormattedMessage id="page.footer.home" defaultMessage="Home" />
+        </Link>
+        <Link to="/discover">
+          <FormattedMessage
+            id="page.footer.discover"
+            defaultMessage="Discover"
+          />
+        </Link>
+        <Link to="/project">
+          <FormattedMessage id="page.footer.project" defaultMessage="Project" />
+        </Link>
+        <Link to="/network">
+          <FormattedMessage id="page.footer.network" defaultMessage="Network" />
+        </Link>
       </Item>
       <Item>
         <a href="https://hack.aragon.org/" target="_blank">
-          Developers
+          <FormattedMessage
+            id="page.footer.developers"
+            defaultMessage="Developers"
+          />
         </a>
         <a href="https://wiki.aragon.org/association/security/" target="_blank">
-          Security
+          <FormattedMessage
+            id="page.footer.security"
+            defaultMessage="Security"
+          />
         </a>
-        <Link to="/project/grants">Grants</Link>
-        <Link to="/project/governance">Governance</Link>
+        <Link to="/project/grants">
+          <FormattedMessage id="page.footer.grants" defaultMessage="Grants" />
+        </Link>
+        <Link to="/project/governance">
+          <FormattedMessage
+            id="page.footer.governance"
+            defaultMessage="Governance"
+          />
+        </Link>
       </Item>
       <Item>
-        <Link to="/project/contribute">Contribute</Link>
-        <a href="https://blog.aragon.org/">Blog</a>
+        <Link to="/project/contribute">
+          <FormattedMessage
+            id="page.footer.contribute"
+            defaultMessage="Contribute"
+          />
+        </Link>
+        <a href="https://blog.aragon.org/">
+          <FormattedMessage id="page.footer.blog" defaultMessage="Blog" />
+        </a>
         <a href="https://wiki.aragon.org/" target="_blank">
-          Wiki
+          <FormattedMessage id="page.footer.wiki" defaultMessage="Wiki" />
         </a>
         <a href="https://aracon.one" target="_blank">
           AraCon
         </a>
       </Item>
       <Item className="mobile-full">
-        <p>Be part of the conversation</p>
+        <p>
+          <FormattedMessage
+            id="page.footer.socialmediia"
+            defaultMessage="Be part of the conversation"
+          />
+        </p>
         <Box>
           <a href="https://twitter.com/aragonproject" target="_blank">
             <img src={twitter} />
@@ -80,7 +133,12 @@ const Footer = ({...props}) => (
             <Youtube src={youtube} />
           </a>
         </Box>
-        <p>Subscribe to our newsletter</p>
+        <p>
+          <FormattedMessage
+            id="page.footer.subscribe.title"
+            defaultMessage="Subscribe to our newsletter"
+          />
+        </p>
         <form
           action="https://one.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&amp;id=e81a44c4bd"
           method="post"
@@ -107,9 +165,12 @@ const Footer = ({...props}) => (
             <button
               type="submit"
               name="subscribe"
-              id="mc-embedded-subscribe"
+              id="mc-embedded-subscribe.action"
               className="button">
-              Subscribe
+              <FormattedMessage
+                id="page.footer.subscribe"
+                defaultMessage="Subscribe"
+              />
             </button>
           </div>
         </form>
@@ -146,7 +207,7 @@ const FooterSection = styled(Section)`
   .secondary-button.centered {
     margin: 10px;
     ${medium('margin: 10px;')};
-    display:  block;
+    display: block;
     ${large('display: inline;')};
   }
 `;
@@ -154,7 +215,7 @@ const PreFooterText = styled.div`
   width: 100%;
   text-align: center;
   ${medium('width: 45%; text-align: left;')}
-`
+`;
 const PreFooter = styled.div`
   min-height: 70px;
   background: #ffffff;
@@ -185,7 +246,8 @@ const PreFooter = styled.div`
     margin-top: 12px;
     color: #6d7693;
   }
-  .principal-button, .secondary-button {
+  .principal-button,
+  .secondary-button {
     display: block;
     margin: 30px 0;
     ${large('display: inline; margin: 0;')}

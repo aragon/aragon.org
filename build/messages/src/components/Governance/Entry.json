@@ -1,0 +1,15 @@
+[
+  {
+    "id": "project.governance.timeline.stage",
+    "defaultMessage": "Stage",
+    "file": "src/components/Governance/Entry.js",
+    "start": {
+      "line": 61,
+      "column": 8
+    },
+    "end": {
+      "line": 64,
+      "column": 10
+    }
+  }
+]

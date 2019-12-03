@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Section from '../General/Section';
 import {Link} from 'react-static';
 import {breakpoint} from '@aragon/ui';
+import {FormattedMessage} from 'react-intl';
 
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
@@ -10,22 +11,42 @@ const large = css => breakpoint('large', css);
 const Hero = () => (
   <HeroSection>
     <TextContainer>
-      <h1>Organizations of the future</h1>
+      <h1>
+        <FormattedMessage
+          id="home.hero.title1"
+          defaultMessage="Organizations of the future"
+        />
+      </h1>
       <div className="h1-blue-box">
-        <h1 className="blue">run on Aragon</h1>
+        <h1 className="blue">
+          <FormattedMessage
+            id="home.hero.title2"
+            defaultMessage="run on Aragon"
+          />
+        </h1>
       </div>
       <h2>
-        Aragon empowers you to freely organize and collaborate without borders
-        or intermediaries. Create global, bureaucracy-free organizations,
-        companies, and communities.
+        <FormattedMessage
+          id="home.hero.description"
+          defaultMessage="Aragon empowers you to freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, and communities."
+        />
       </h2>
     </TextContainer>
     <ButtonContainer>
-      <a className="principal-button centered" mode="strong" href="https://app.aragon.org">
-        Try the product
+      <a
+        className="principal-button centered"
+        mode="strong"
+        href="https://app.aragon.org">
+        <FormattedMessage
+          id="home.hero.action1"
+          defaultMessage="Try the product"
+        />
       </a>
       <Link className="secondary-button centered" to="discover">
-        Discover Aragon
+        <FormattedMessage
+          id="home.hero.action2"
+          defaultMessage="Discover Aragon"
+        />
       </Link>
     </ButtonContainer>
   </HeroSection>
@@ -55,7 +76,7 @@ const ButtonContainer = styled.div`
   flex-direction: column;
   ${medium('flex-direction: row;')}
   a {
-    margin: 10px!important;
+    margin: 10px !important;
     min-width: 186px;
     ${medium('min-width: auto; margin: 0 10px;')};
   }

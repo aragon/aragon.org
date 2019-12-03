@@ -1,0 +1,54 @@
+[
+  {
+    "id": "project.grants.quotes.quote1.badge",
+    "defaultMessage": "QUOTES",
+    "file": "src/components/Project/GrantsQuotes.js",
+    "start": {
+      "line": 49,
+      "column": 20
+    },
+    "end": {
+      "line": 52,
+      "column": 22
+    }
+  },
+  {
+    "id": "project.grants.quotes.quote1.content",
+    "defaultMessage": "Every time I scroll through @AragonProject's github repo for Nest it makes me so inspired about the future. What is happening here is next level and it will become even more next level as more organizations cross-pollinate here. Stoked to be in the Nest.",
+    "file": "src/components/Project/GrantsQuotes.js",
+    "start": {
+      "line": 55,
+      "column": 20
+    },
+    "end": {
+      "line": 58,
+      "column": 22
+    }
+  },
+  {
+    "id": "project.grants.quotes.quote2.badge",
+    "defaultMessage": "QUOTES",
+    "file": "src/components/Project/GrantsQuotes.js",
+    "start": {
+      "line": 69,
+      "column": 20
+    },
+    "end": {
+      "line": 72,
+      "column": 22
+    }
+  },
+  {
+    "id": "project.grants.quotes.quote2.content",
+    "defaultMessage": "Entering the Aragon Nest program is not (only) about getting funded. It is about entering a community whose every member is committed to help every others to pursue a common goal: working toward the decentralization of human worlds.",
+    "file": "src/components/Project/GrantsQuotes.js",
+    "start": {
+      "line": 75,
+      "column": 20
+    },
+    "end": {
+      "line": 78,
+      "column": 22
+    }
+  }
+]

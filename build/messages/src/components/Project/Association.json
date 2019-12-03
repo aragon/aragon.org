@@ -1,0 +1,54 @@
+[
+  {
+    "id": "project.home.association.title",
+    "defaultMessage": "The Aragon Association",
+    "file": "src/components/Project/Association.js",
+    "start": {
+      "line": 14,
+      "column": 8
+    },
+    "end": {
+      "line": 17,
+      "column": 10
+    }
+  },
+  {
+    "id": "project.home.association.content",
+    "defaultMessage": "The Aragon Project is stewarded by the Aragon Association, a Swiss non-profit entity.",
+    "file": "src/components/Project/Association.js",
+    "start": {
+      "line": 20,
+      "column": 8
+    },
+    "end": {
+      "line": 23,
+      "column": 10
+    }
+  },
+  {
+    "id": "project.home.association.executive.title",
+    "defaultMessage": "Executive director",
+    "file": "src/components/Project/Association.js",
+    "start": {
+      "line": 27,
+      "column": 8
+    },
+    "end": {
+      "line": 30,
+      "column": 10
+    }
+  },
+  {
+    "id": "project.home.association.board.title",
+    "defaultMessage": "Board of directors",
+    "file": "src/components/Project/Association.js",
+    "start": {
+      "line": 37,
+      "column": 8
+    },
+    "end": {
+      "line": 40,
+      "column": 10
+    }
+  }
+]

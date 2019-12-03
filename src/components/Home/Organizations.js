@@ -1,8 +1,9 @@
 import React from 'react';
-import Section from '../General/Section';
 import styled from 'styled-components';
 import {Link} from 'react-static';
+import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
 import aragonImage from './home-assets/compu_home.png';
+import Section from '../General/Section';
 
 import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
@@ -12,20 +13,24 @@ const Organizations = () => (
     <Box>
       <Container>
         <h3>
-          Transparent <br />
-          <span className="blue">governance</span>
+          <FormattedHTMLMessage
+            id="home.organizations.title"
+            defaultMessage='Transparent <br /> <span class="blue">governance </span>'
+          />
         </h3>
         <p>
-          View and participate in important decisions. Track the movement of
-          funds with full accountability. Understand at a glance who has the
-          power in your organization.
+          <FormattedMessage
+            id="home.organizations.description"
+            defaultMessage="View and participate in important decisions. Track the movement of funds with full accountability. Understand at a glance who has the power in your organization."
+          />
         </p>
-        <a
-          className="action-button"
-          href="./discover"
-          target="_blank">
+        <a className="action-button" href="./discover" target="_blank">
           <span>
-            Learn more <img src={require(`../General/assets/arrow.svg`)} />
+            <FormattedMessage
+              id="home.organizations.action"
+              defaultMessage="Learn more"
+            />
+            <img src={require(`../General/assets/arrow.svg`)} />
           </span>
         </a>
       </Container>

@@ -56,7 +56,13 @@ class Navbar extends React.Component {
       image: image * 44,
     });
   };
-  renderIn = ({x, h, i, menuItems}) => {
+  renderIn = ({x, h, i}) => {
+    const menuItems = [
+      ['/discover', 'Discover'],
+      ['https://hack.aragon.org/', 'Developers'],
+      ['/project', 'Project'],
+      ['/network', 'Network'],
+    ];
     return (
       <AragonNavbar
         style={{
@@ -121,17 +127,10 @@ class Navbar extends React.Component {
     );
   };
   render() {
-    const menuItems = [
-      ['/discover', 'Discover'],
-      ['https://hack.aragon.org/', 'Developers'],
-      ['/project', 'Project'],
-      ['/network', 'Network'],
-    ];
     return (
       <Spring
         from={{x: 0, h: 64, i: 44}}
         to={{x: this.state.scroll, h: this.state.height, i: this.state.image}}
-        menuItems={menuItems}
         native>
         {this.renderIn}
       </Spring>

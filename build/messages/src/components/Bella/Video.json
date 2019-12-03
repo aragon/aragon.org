@@ -1,0 +1,41 @@
+[
+  {
+    "id": "bella.video.title",
+    "defaultMessage": "Learn about the story behind Aragon Bella",
+    "file": "src/components/Bella/Video.js",
+    "start": {
+      "line": 37,
+      "column": 14
+    },
+    "end": {
+      "line": 40,
+      "column": 16
+    }
+  },
+  {
+    "id": "bella.video.action",
+    "defaultMessage": "Watch the video now",
+    "file": "src/components/Bella/Video.js",
+    "start": {
+      "line": 48,
+      "column": 18
+    },
+    "end": {
+      "line": 51,
+      "column": 20
+    }
+  },
+  {
+    "id": "bella.video.action2",
+    "defaultMessage": "Watch the video now",
+    "file": "src/components/Bella/Video.js",
+    "start": {
+      "line": 58,
+      "column": 16
+    },
+    "end": {
+      "line": 61,
+      "column": 18
+    }
+  }
+]

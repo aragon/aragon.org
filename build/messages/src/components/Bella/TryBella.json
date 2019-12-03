@@ -1,0 +1,41 @@
+[
+  {
+    "id": "bella.try-bella.title",
+    "defaultMessage": "Try Aragon 0.7 <br />Bella now",
+    "file": "src/components/Bella/TryBella.js",
+    "start": {
+      "line": 22,
+      "column": 10
+    },
+    "end": {
+      "line": 25,
+      "column": 12
+    }
+  },
+  {
+    "id": "bella.try-bella.content",
+    "defaultMessage": "Aragon empowers you to freely organize and collaborate. Create global, bureaucracy-free organizations, companies, and communities.",
+    "file": "src/components/Bella/TryBella.js",
+    "start": {
+      "line": 28,
+      "column": 10
+    },
+    "end": {
+      "line": 31,
+      "column": 12
+    }
+  },
+  {
+    "id": "bella.try-bella.action",
+    "defaultMessage": "Try Bella now",
+    "file": "src/components/Bella/TryBella.js",
+    "start": {
+      "line": 38,
+      "column": 12
+    },
+    "end": {
+      "line": 41,
+      "column": 14
+    }
+  }
+]

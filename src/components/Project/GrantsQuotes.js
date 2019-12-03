@@ -1,13 +1,14 @@
 import React from 'react';
-import Section from '../General/Section';
+import {FormattedMessage} from 'react-intl';
 import styled from 'styled-components';
-import {Link} from 'react-static';
+import {breakpoint, Badge} from '@aragon/ui';
 import Carousel from 'react-bootstrap/Carousel';
+import Section from '../General/Section';
 import prev from '../Home/home-assets/arrow-carousel-prev.svg';
 import next from '../Home/home-assets/arrow-carousel-next.svg';
 import yalda from './assets/yalda.png';
 import olivier from './assets/olivier.png';
-import {breakpoint, Badge} from '@aragon/ui';
+
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
 
@@ -45,14 +46,16 @@ class Quotes extends React.Component {
                 <img src={yalda} />
                 <div>
                   <StyledBadge background="#AECAFF" foreground="#5770A0">
-                    QUOTES
+                    <FormattedMessage
+                      id="project.grants.quotes.quote1.badge"
+                      defaultMessage="QUOTES"
+                    />
                   </StyledBadge>
                   <p>
-                    Every time I scroll through @AragonProject's github repo for
-                    Nest it makes me so inspired about the future. What is
-                    happening here is next level and it will become even more
-                    next level as more organizations cross-pollinate here.
-                    Stoked to be in the Nest.
+                    <FormattedMessage
+                      id="project.grants.quotes.quote1.content"
+                      defaultMessage="Every time I scroll through @AragonProject's github repo for Nest it makes me so inspired about the future. What is happening here is next level and it will become even more next level as more organizations cross-pollinate here. Stoked to be in the Nest."
+                    />
                   </p>
                   <p className="name">Yalda Mausavinia</p>
                 </div>
@@ -63,13 +66,16 @@ class Quotes extends React.Component {
                 <img src={olivier} />
                 <div>
                   <StyledBadge background="#AECAFF" foreground="#5770A0">
-                    QUOTES
+                    <FormattedMessage
+                      id="project.grants.quotes.quote2.badge"
+                      defaultMessage="QUOTES"
+                    />
                   </StyledBadge>
                   <p>
-                    Entering the Aragon Nest program is not (only) about getting
-                    funded. It is about entering a community whose every member
-                    is committed to help every others to pursue a common goal:
-                    working toward the decentralization of human worlds.
+                    <FormattedMessage
+                      id="project.grants.quotes.quote2.content"
+                      defaultMessage="Entering the Aragon Nest program is not (only) about getting funded. It is about entering a community whose every member is committed to help every others to pursue a common goal: working toward the decentralization of human worlds."
+                    />
                   </p>
                   <p className="name">Olivier Sarrouy</p>
                 </div>

@@ -1,18 +1,18 @@
-import fs from 'fs-extra'
-import path from 'path'
-import CopyWebpackPlugin from 'copy-webpack-plugin'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import { ServerStyleSheet } from 'styled-components'
-import React from 'react'
+import fs from 'fs-extra';
+import path from 'path';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import {ServerStyleSheet} from 'styled-components';
+import React from 'react';
 
 const REACT_STATIC_PATHS = {
   src: 'src',
   dist: 'dist',
   devDist: 'dist',
   public: 'public',
-}
+};
 
-const ARAGON_UI_ASSETS = path.dirname(require.resolve('@aragon/ui'))
+const ARAGON_UI_ASSETS = path.dirname(require.resolve('@aragon/ui'));
 
 export default {
   siteRoot: process.env.SITE_ROOT || '',
@@ -23,78 +23,138 @@ export default {
     {
       path: '/',
       component: 'src/pages/Home',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
     },
     {
       path: '/discover',
       component: 'src/pages/Discover',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
     },
     {
       path: '/project',
       component: 'src/pages/Project',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
     },
     {
       path: '/project/governance',
       component: 'src/pages/Governance',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
     },
     {
       path: '/project/grants',
       component: 'src/pages/Grants',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
     },
     {
       path: '/project/contribute',
       component: 'src/pages/Contribute',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
     },
     {
       path: '/project/roadmap',
       component: 'src/pages/Roadmap',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
     },
     {
       path: '/network',
       component: 'src/pages/Network',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
     },
     {
       path: '/bella',
       component: 'src/pages/Bella',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
     },
     {
       path: '/camino',
       component: 'src/pages/Camino',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
     },
     {
       path: '/powered-by',
       component: 'src/pages/PoweredByAragon',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
     },
     {
       path: '/agent',
       component: 'src/pages/Frame',
-      getData: () => ({ title: '' }),
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/',
+      component: 'src/pages/Home',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/discover',
+      component: 'src/pages/Discover',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/project',
+      component: 'src/pages/Project',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/project/governance',
+      component: 'src/pages/Governance',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/project/grants',
+      component: 'src/pages/Grants',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/project/contribute',
+      component: 'src/pages/Contribute',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/project/roadmap',
+      component: 'src/pages/Roadmap',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/network',
+      component: 'src/pages/Network',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/bella',
+      component: 'src/pages/Bella',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/camino',
+      component: 'src/pages/Camino',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/powered-by',
+      component: 'src/pages/PoweredByAragon',
+      getData: () => ({title: ''}),
+    },
+    {
+      path: '/:locale/agent',
+      component: 'src/pages/Frame',
+      getData: () => ({title: ''}),
     },
     {
       is404: true,
       component: 'src/pages/NotFound',
-      getData: () => ({ title: 'Page Not Found' }),
+      getData: () => ({title: 'Page Not Found'}),
     },
   ],
   paths: REACT_STATIC_PATHS,
-  webpack: (conf, { defaultLoaders }) => {
+  webpack: (conf, {defaultLoaders}) => {
     conf.resolve = Object.assign({}, conf.resolve || {}, {
       // Needed when @aragon/ui is linked (development)
       modules: ((conf.resolve && conf.resolve.modules) || []).concat([
         path.join(__dirname, 'node_modules'),
         path.join(__dirname, REACT_STATIC_PATHS.dist),
       ]),
-    })
+    });
 
     // Copy the Aragon UI assets to dist/aragon-ui. CopyWebpackPlugin is aware
     // of webpack-dev-server so there is no need to add this directory to the
@@ -108,28 +168,28 @@ export default {
           ),
         },
       ]),
-    ])
+    ]);
 
-    const fileLoader = defaultLoaders.fileLoader
-    fileLoader.query.name = 'static/[hash:8]-[name].[ext]'
+    const fileLoader = defaultLoaders.fileLoader;
+    fileLoader.query.name = 'static/[hash:8]-[name].[ext]';
     conf.module.rules = [
       {
         oneOf: [defaultLoaders.jsLoader, defaultLoaders.cssLoader, fileLoader],
       },
-    ]
-    conf.plugins.push(new ExtractTextPlugin('app.css'))
+    ];
+    conf.plugins.push(new ExtractTextPlugin('app.css'));
 
-    return conf
+    return conf;
   },
   renderToHtml: (render, Comp, meta) => {
-    const sheet = new ServerStyleSheet()
-    const html = render(sheet.collectStyles(<Comp />))
-    meta.styleTags = sheet.getStyleElement()
-    return html
+    const sheet = new ServerStyleSheet();
+    const html = render(sheet.collectStyles(<Comp />));
+    meta.styleTags = sheet.getStyleElement();
+    return html;
   },
   Document: class CustomHtml extends React.Component {
     analyticsCode() {
-      if (process.env.NODE_ENV !== 'production') return ''
+      if (process.env.NODE_ENV !== 'production') return '';
       return `
         var _paq = window._paq || []
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -148,18 +208,18 @@ export default {
           g.src = u + 'matomo.js'
           s.parentNode.insertBefore(g, s)
         })()
-      `
+      `;
     }
     render() {
       const {
         Html,
         Head,
         Body,
-        siteData: { title: siteTitle },
+        siteData: {title: siteTitle},
         children,
         renderMeta,
-        routeInfo: { allProps: { title } = {} } = {},
-      } = this.props
+        routeInfo: {allProps: {title} = {}} = {},
+      } = this.props;
       return (
         <Html>
           <Head>
@@ -191,30 +251,45 @@ export default {
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:site" content="@aragonproject" />
             <meta name="twitter:creator" content="@aragonproject" />
-            <meta name="twitter:description" content="Build unstoppable organizations on Ethereum" />
+            <meta
+              name="twitter:description"
+              content="Build unstoppable organizations on Ethereum"
+            />
             <meta name="twitter:title" content="Aragon" />
-            <meta name="twitter:image" content="https://raw.githubusercontent.com/aragon/website/master/public/twitter-card-icon.png" />
+            <meta
+              name="twitter:image"
+              content="https://raw.githubusercontent.com/aragon/website/master/public/twitter-card-icon.png"
+            />
 
             <meta property="og:title" content="Aragon" />
-            <meta property="og:description" content="Build unstoppable organizations on Ethereum" />
+            <meta
+              property="og:description"
+              content="Build unstoppable organizations on Ethereum"
+            />
             <meta property="og:url" content="https://aragon.org/" />
             <meta property="og:site_name" content="Aragon" />
-            <meta property="og:image" content="https://raw.githubusercontent.com/aragon/website/master/public/twitter-card-icon.png" />
-            <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/aragon/website/master/public/twitter-card-icon.png" />
+            <meta
+              property="og:image"
+              content="https://raw.githubusercontent.com/aragon/website/master/public/twitter-card-icon.png"
+            />
+            <meta
+              property="og:image:secure_url"
+              content="https://raw.githubusercontent.com/aragon/website/master/public/twitter-card-icon.png"
+            />
             <meta property="og:image:width" content="300" />
             <meta property="og:image:height" content="300" />
-
-            <meta name="description" content="Build unstoppable organizations on Ethereum" />
+            <meta
+              name="description"
+              content="Build unstoppable organizations on Ethereum"
+            />
             {renderMeta.styleTags}
           </Head>
           <Body>
             {children}
-            <script
-              dangerouslySetInnerHTML={{ __html: this.analyticsCode() }}
-            />
+            <script dangerouslySetInnerHTML={{__html: this.analyticsCode()}} />
           </Body>
         </Html>
-      )
+      );
     }
   },
-}
+};

@@ -1,4 +1,5 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 import styled from 'styled-components';
 import {Link} from 'react-static';
 import {breakpoint} from '@aragon/ui';
@@ -12,14 +13,27 @@ const Hero = () => (
   <HeroSection>
     <HeroMask>
       <TextContainer>
-        <h2>Aragon Network</h2>
-        <h4>Welcome to the world’s first digital jurisdiction</h4>
+        <h2>
+          <FormattedMessage
+            id="network.hero.title"
+            defaultMessage="Aragon Network"
+          />
+        </h2>
+        <h4>
+          <FormattedMessage
+            id="network.hero.subtitle"
+            defaultMessage="Welcome to the world’s first digital jurisdiction"
+          />
+        </h4>
         <div className="hero-button-container centered">
           <a
             className="principal-button"
             href="https://github.com/aragon/whitepaper"
             target="_blank">
-            Whitepaper
+            <FormattedMessage
+              id="network.hero.action"
+              defaultMessage="Whitepaper"
+            />
           </a>
         </div>
       </TextContainer>

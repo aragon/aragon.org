@@ -1,0 +1,80 @@
+[
+  {
+    "id": "camino.features.feature1.title",
+    "defaultMessage": "One app, <br /> <span class='blue'>endless possibilities</span>",
+    "file": "src/components/Camino/Features.js",
+    "start": {
+      "line": 26,
+      "column": 8
+    },
+    "end": {
+      "line": 29,
+      "column": 10
+    }
+  },
+  {
+    "id": "camino.features.feature1.content",
+    "defaultMessage": "Aragon Agent enables organizations to interact directly with any Ethereum application. Access Web3 like never before.",
+    "file": "src/components/Camino/Features.js",
+    "start": {
+      "line": 32,
+      "column": 8
+    },
+    "end": {
+      "line": 35,
+      "column": 10
+    }
+  },
+  {
+    "id": "camino.features.feature2.title",
+    "defaultMessage": "Aragon 0.8 Camino is here thanks to our brave early adopters.",
+    "file": "src/components/Camino/Features.js",
+    "start": {
+      "line": 41,
+      "column": 8
+    },
+    "end": {
+      "line": 44,
+      "column": 10
+    }
+  },
+  {
+    "id": "camino.features.feature2.content",
+    "defaultMessage": "Our product team has been closely working with users and early adopters. Your honest feedback has helped shape what Aragon is today.",
+    "file": "src/components/Camino/Features.js",
+    "start": {
+      "line": 47,
+      "column": 8
+    },
+    "end": {
+      "line": 50,
+      "column": 10
+    }
+  },
+  {
+    "id": "camino.features.feature3.title",
+    "defaultMessage": "Streamlined <br /><span class='blue'>setup flow</span>",
+    "file": "src/components/Camino/Features.js",
+    "start": {
+      "line": 55,
+      "column": 8
+    },
+    "end": {
+      "line": 58,
+      "column": 10
+    }
+  },
+  {
+    "id": "camino.features.feature3.content",
+    "defaultMessage": "Featuring more templates to match with your needs. Start a company, membership, or reputation-based organization in just a few clicks.",
+    "file": "src/components/Camino/Features.js",
+    "start": {
+      "line": 61,
+      "column": 8
+    },
+    "end": {
+      "line": 64,
+      "column": 10
+    }
+  }
+]

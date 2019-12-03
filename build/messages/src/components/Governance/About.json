@@ -1,0 +1,80 @@
+[
+  {
+    "id": "project.governance.about.module1.title",
+    "defaultMessage": "Aragon is a project run by its community.",
+    "file": "src/components/Governance/About.js",
+    "start": {
+      "line": 18,
+      "column": 12
+    },
+    "end": {
+      "line": 21,
+      "column": 14
+    }
+  },
+  {
+    "id": "project.governance.about.module1.content",
+    "defaultMessage": "Aragon is governed by Aragon Network Token (ANT) holders. You can participate in governance by voting with ANT.",
+    "file": "src/components/Governance/About.js",
+    "start": {
+      "line": 24,
+      "column": 12
+    },
+    "end": {
+      "line": 27,
+      "column": 14
+    }
+  },
+  {
+    "id": "project.governance.about.module1.action",
+    "defaultMessage": "About ANT",
+    "file": "src/components/Governance/About.js",
+    "start": {
+      "line": 33,
+      "column": 14
+    },
+    "end": {
+      "line": 36,
+      "column": 16
+    }
+  },
+  {
+    "id": "project.governance.about.module2.title",
+    "defaultMessage": "What is an AGP?",
+    "file": "src/components/Governance/About.js",
+    "start": {
+      "line": 50,
+      "column": 12
+    },
+    "end": {
+      "line": 53,
+      "column": 14
+    }
+  },
+  {
+    "id": "project.governance.about.module2.content",
+    "defaultMessage": "AGP stands for Aragon Governance Proposal, a document that proposes a change to the governance of the Aragon project. Community members create and review proposals following AGP-1: The Aragon Governance Proposal Process.",
+    "file": "src/components/Governance/About.js",
+    "start": {
+      "line": 56,
+      "column": 12
+    },
+    "end": {
+      "line": 59,
+      "column": 14
+    }
+  },
+  {
+    "id": "project.governance.about.module2.action",
+    "defaultMessage": "Read AGP-1",
+    "file": "src/components/Governance/About.js",
+    "start": {
+      "line": 65,
+      "column": 14
+    },
+    "end": {
+      "line": 68,
+      "column": 16
+    }
+  }
+]
