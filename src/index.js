@@ -23,9 +23,12 @@ const messages = {
   en: messages_en,
 };
 
-const language = navigator.language.split(/[-_]/)[0]; // language without region code
-if (!localStorage.getItem('locale')) {
-  localStorage.setItem('locale', language);
+let language = 'en';
+if (typeof window !== 'undefined') {
+  language = window.navigator.language.split(/[-_]/)[0]; // language without region code
+  if (!localStorage.getItem('locale')) {
+    localStorage.setItem('locale', language);
+  }
 }
 
 // Render your app
