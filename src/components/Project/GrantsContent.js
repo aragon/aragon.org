@@ -1,18 +1,21 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
+import styled from 'styled-components';
+import {breakpoint} from '@aragon/ui';
+import CountUp from 'react-countup';
 import Section from '../General/Section';
 import LongCard from '../General/LongCard';
 import Card from '../General/Card';
-import styled from 'styled-components';
-import {breakpoint} from '@aragon/ui';
+
 const medium = css => breakpoint('medium', css);
-import CountUp from 'react-countup';
 
 const mudule1Content = (
   <span>
     <p>
-      Aragon Nest is run in the open. We want to remain transparent to our
-      community and the grant applicants. Everything going on in Nest is
-      reflected in GitHub.
+      <FormattedMessage
+        id="project.grants.module1.content"
+        defaultMessage="Aragon Nest is run in the open. We want to remain transparent to our community and the grant applicants. Everything going on in Nest is reflected in GitHub."
+      />
     </p>
     <p>
       <a
@@ -20,7 +23,11 @@ const mudule1Content = (
         href="https://github.com/aragon/nest"
         target="_blank">
         <span>
-          Nest in GitHub <img src={require(`../General/assets/arrow.svg`)} />
+          <FormattedMessage
+            id="project.grants.module1.action"
+            defaultMessage="Nest in GitHub"
+          />
+          <img src={require(`../General/assets/arrow.svg`)} />
         </span>
       </a>
     </p>
@@ -29,8 +36,10 @@ const mudule1Content = (
 const mudule2Content = (
   <span>
     <p>
-      We are looking for people who want to help advance the Aragon ecosystem. 
-      If you believe you have a proposal for the program, read more and apply.
+      <FormattedMessage
+        id="project.grants.module2.content"
+        defaultMessage="We are looking for people who want to help advance the Aragon ecosystem. If you believe you have a proposal for the program, read more and apply."
+      />
     </p>
     <p>
       <a
@@ -38,7 +47,11 @@ const mudule2Content = (
         href="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant"
         target="_blank">
         <span>
-          Apply <img src={require(`../General/assets/arrow.svg`)} />
+          <FormattedMessage
+            id="project.grants.module2.action"
+            defaultMessage="Apply"
+          />
+          <img src={require(`../General/assets/arrow.svg`)} />
         </span>
       </a>
     </p>
@@ -57,7 +70,7 @@ class GrantsContent extends React.Component {
     var element = document.getElementById('numbersAnimation');
     var elem =
       element.getBoundingClientRect().top + document.documentElement.scrollTop;
-    if ((elem - window.innerHeight - 24) <= 0) {
+    if (elem - window.innerHeight - 24 <= 0) {
       this.setState({
         one: <CountUp end={1.5} duration={2} decimals={1} />,
         two: <CountUp end={15} duration={2} />,
@@ -79,7 +92,7 @@ class GrantsContent extends React.Component {
     var elem =
       element.getBoundingClientRect().top + document.documentElement.scrollTop;
 
-    if (scrolled >= (elem - window.innerHeight - 24)) {
+    if (scrolled >= elem - window.innerHeight - 24) {
       this.setState({
         one: <CountUp end={1.5} duration={2} decimals={1} />,
         two: <CountUp end={15} duration={2} />,
@@ -98,38 +111,73 @@ class GrantsContent extends React.Component {
             textAlign="center"
             color="#b4b5cc"
             gradient="radial-gradient(circle at 99% 100%, transparent, transparent)"
-            title="A thriving ecosystem"
-            className="numbers" >
+            title={
+              <FormattedMessage
+                id="project.grants.ecosystem.title"
+                defaultMessage="A thriving ecosystem"
+              />
+            }
+            className="numbers">
             <LongCardContainer>
               <div>
                 <h5 className="one">${this.state.one}</h5>
-                <h3 className="one" id="numbersAnimation">Millions given away in grants</h3>
+                <h3 className="one" id="numbersAnimation">
+                  <FormattedMessage
+                    id="project.grants.ecosystem.number1"
+                    defaultMessage="Millions given away in grants"
+                  />
+                </h3>
               </div>
               <div>
                 <h5 className="two">{this.state.two}</h5>
-                <h3 className="two">Teams working together</h3>
+                <h3 className="two">
+                  <FormattedMessage
+                    id="project.grants.ecosystem.number2"
+                    defaultMessage="Teams working together"
+                  />
+                </h3>
               </div>
               <div>
                 <h5 className="three">{this.state.three}</h5>
-                <h3 className="three">People making their dreams possible</h3>
+                <h3 className="three">
+                  <FormattedMessage
+                    id="project.grants.ecosystem.number3"
+                    defaultMessage="People making their dreams possible"
+                  />
+                </h3>
               </div>
               <div>
                 <h5 className="four">{this.state.four}</h5>
-                <h3 className="four">Applications to the program</h3>
+                <h3 className="four">
+                  <FormattedMessage
+                    id="project.grants.ecosystem.number4"
+                    defaultMessage="Applications to the program"
+                  />
+                </h3>
               </div>
             </LongCardContainer>
           </LongCard>
           <Card
             linkTo="https://github.com/aragon/nest"
             imageUrl={'Project/assets/grants1'}
-            title="Fully transparent"
+            title={
+              <FormattedMessage
+                id="project.grants.module1.title"
+                defaultMessage="Fully transparent"
+              />
+            }
             content={mudule1Content}
             className="transparent"
           />
           <Card
             linkTo="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant"
             imageUrl={'Project/assets/grants2'}
-            title="Apply now"
+            title={
+              <FormattedMessage
+                id="project.grants.module2.title"
+                defaultMessage="Apply now"
+              />
+            }
             content={mudule2Content}
             className="apply-card"
           />
@@ -141,7 +189,7 @@ class GrantsContent extends React.Component {
 
 const ModulesSection = styled(Section)`
   padding: 30px 15px 90px 15px;
-`
+`;
 
 const Container = styled.div`
   display: grid;
@@ -198,19 +246,19 @@ const LongCardContainer = styled.div`
   }
 
   h5.one {
-    background-image: -webkit-linear-gradient(119deg, #FFBB70, #FF4E78);
+    background-image: -webkit-linear-gradient(119deg, #ffbb70, #ff4e78);
   }
 
   h5.two {
-    background-image: -webkit-linear-gradient(119deg, #FFBB70, #FF4E78);
+    background-image: -webkit-linear-gradient(119deg, #ffbb70, #ff4e78);
   }
 
   h5.three {
-    background-image: -webkit-linear-gradient(119deg, #FFBB70, #FF4E78);
+    background-image: -webkit-linear-gradient(119deg, #ffbb70, #ff4e78);
   }
 
   h5.four {
-    background-image: -webkit-linear-gradient(119deg, #FFBB70, #FF4E78);
+    background-image: -webkit-linear-gradient(119deg, #ffbb70, #ff4e78);
   }
 `;
 

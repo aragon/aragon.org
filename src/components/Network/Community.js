@@ -1,12 +1,23 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 import styled from 'styled-components';
 import background from './assets/protocols.png';
 
 const Community = () => (
   <Section>
     <div>
-      <h2>Aragon Network Protocols</h2>
-      <h4>The Aragon Network earns revenues by running for-profit protocols</h4>
+      <h2>
+        <FormattedMessage
+          id="network.community.title"
+          defaultMessage="Aragon Network Protocols"
+        />
+      </h2>
+      <h4>
+        <FormattedMessage
+          id="network.community.subtitle"
+          defaultMessage="The Aragon Network earns revenues by running for-profit protocols"
+        />
+      </h4>
     </div>
   </Section>
 );

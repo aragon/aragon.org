@@ -1,49 +1,72 @@
 import React from 'react';
-import Section from '../General/Section';
+import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
+import {breakpoint} from '@aragon/ui';
 import styled from 'styled-components';
 import {Link} from 'react-static';
-
-import {breakpoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-
+import Section from '../General/Section';
 import company from './assets/company.svg';
 import reputation from './assets/reputation.svg';
 import membership from './assets/membership.svg';
 
+const medium = css => breakpoint('medium', css);
+
 const Templates = () => (
   <TemplatesSection>
     <h3>
-      Start your organization with our <br />
-      <span className="blue">pre-configured templates</span>
+      <FormattedHTMLMessage
+        id="camino.templates.title"
+        defaultMessage="Start your organization with our <br /><span class='blue'>pre-configured templates</span>"
+      />
     </h3>
     <Container>
       <Box className="green">
         <img src={company} />
         <div>
-          <h4>Company</h4>
+          <h4>
+            <FormattedMessage
+              id="camino.templates.template1.title"
+              defaultMessage="Company"
+            />
+          </h4>
           <p>
-            Launch your business and assign transferable tokens to contributors
-            and supporters.
+            <FormattedMessage
+              id="camino.templates.template1.content"
+              defaultMessage="Launch your business and assign transferable tokens to contributors and supporters."
+            />
           </p>
         </div>
       </Box>
       <Box className="violet">
         <img src={reputation} />
         <div>
-          <h4>Reputation</h4>
+          <h4>
+            <FormattedMessage
+              id="camino.templates.template2.title"
+              defaultMessage="Reputation"
+            />
+          </h4>
           <p>
-            Reward contributors with non-transferable tokens for the value they
-            add to your organization.
+            <FormattedMessage
+              id="camino.templates.template2.content"
+              defaultMessage="Reward contributors with non-transferable tokens for the value they add to your organization."
+            />
           </p>
         </div>
       </Box>
       <Box className="red">
         <img src={membership} />
         <div>
-          <h4>Membership</h4>
+          <h4>
+            <FormattedMessage
+              id="camino.templates.template3.title"
+              defaultMessage="Membership"
+            />
+          </h4>
           <p>
-            Create a democratic "one person, one vote" organization where each
-            member gets a non-transferable token.
+            <FormattedMessage
+              id="camino.templates.template3.content"
+              defaultMessage='Create a democratic "one person, one vote" organization where each member gets a non-transferable token.'
+            />
           </p>
         </div>
       </Box>
@@ -55,19 +78,19 @@ const Box = styled.div`
   p {
     font-weight: 300;
     font-size: 16px;
-    text-align:  left;
+    text-align: left;
     line-height: 25px;
     color: #ffffff;
   }
   h4 {
     font-size: 32px;
     line-height: 49px;
-    text-align:  left;
+    text-align: left;
     color: #ffffff;
   }
   img {
     margin: auto;
-    margin-bottom:30px;
+    margin-bottom: 30px;
   }
   div {
     min-height: 145px;
@@ -77,14 +100,14 @@ const Box = styled.div`
   padding: 50px 38px;
   display: flex;
   flex-direction: column;
-  &.red{
+  &.red {
     background: linear-gradient(318.35deg, #fff886 -112.1%, #ff4e78 91.91%);
   }
-  &.violet{
-    background: linear-gradient(127.86deg, #65AAFF -43.9%, #5D21D4 105.39%);
+  &.violet {
+    background: linear-gradient(127.86deg, #65aaff -43.9%, #5d21d4 105.39%);
   }
-  &.green{
-    background: linear-gradient(126.21deg, #9AFFD8 -49.19%, #68DFB1 59.11%);
+  &.green {
+    background: linear-gradient(126.21deg, #9affd8 -49.19%, #68dfb1 59.11%);
   }
 `;
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-static';
-import Section from '../General/Section';
+import {FormattedMessage} from 'react-intl';
 import styled from 'styled-components';
-import {breakpoint, BreakPoint} from '@aragon/ui';
+import {breakpoint} from '@aragon/ui';
+import Section from '../General/Section';
 import juror from './assets/juror.svg';
 import ant from './assets/ant.png';
 
@@ -14,12 +14,19 @@ const mudule1Content = (
   <React.Fragment>
     <img className="principal-image" src={juror} />
     <div className="wrapper">
-      <h1>Aragon Court</h1>
+      <h1>
+        <FormattedMessage
+          id="network.network-content.module1.title"
+          defaultMessage="Aragon Court"
+        />
+      </h1>
       <div className="content">
         <span>
           <p>
-            Aragon Court is a dispute resolution protocol that runs on Ethereum.
-            It's one of the core components of the Aragon Network.
+            <FormattedMessage
+              id="network.network-content.module1.content"
+              defaultMessage="Aragon Court is a dispute resolution protocol that runs on Ethereum. It's one of the core components of the Aragon Network."
+            />
           </p>
           <p>
             <a
@@ -27,7 +34,10 @@ const mudule1Content = (
               href="https://anj.aragon.org/"
               target="_blank">
               <span>
-                Become a Juror{' '}
+                <FormattedMessage
+                  id="network.network-content.module1.action"
+                  defaultMessage="Become a Juror"
+                />{' '}
                 <img src={require(`../General/assets/arrow.svg`)} />
               </span>
             </a>
@@ -41,11 +51,19 @@ const mudule2Content = (
   <React.Fragment>
     <img className="principal-image" src={ant} />
     <div className="wrapper">
-      <h1>Aragon Chain</h1>
+      <h1>
+        <FormattedMessage
+          id="network.network-content.module2.title"
+          defaultMessage="Aragon Chain"
+        />
+      </h1>
       <div className="content">
         <span>
           <p className="content">
-            A public blockchain optimized for Aragon organizations
+            <FormattedMessage
+              id="network.network-content.module2.content"
+              defaultMessage="A public blockchain optimized for Aragon organizations"
+            />
           </p>
           <p>
             <a
@@ -53,7 +71,11 @@ const mudule2Content = (
               href="https://blog.aragon.one/aragon-chain/"
               target="_blank">
               <span>
-                Learn more <img src={require(`../General/assets/arrow.svg`)} />
+                <FormattedMessage
+                  id="network.network-content.module2.action"
+                  defaultMessage="Learn more"
+                />
+                <img src={require(`../General/assets/arrow.svg`)} />
               </span>
             </a>
           </p>

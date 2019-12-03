@@ -1,16 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Page } from '../components'
-import About from '../components/Project/About'
-import SecondaryNavbar from '../components/Project/SecondaryNavbar'
-import Association from '../components/Project/Association'
-import backgroundImage from '../components/Project/assets/project-cover.svg'
-import Section from '../components/General/Section'
-import VideoModal from '../components/General/VideoModal'
-import videothumbnail from '../components/Project/assets/project-video.png'
+import React from 'react';
+import {FormattedMessage} from 'react-intl';
+import {breakpoint} from '@aragon/ui';
+import styled from 'styled-components';
+import {Page} from '../components';
+import About from '../components/Project/About';
+import SecondaryNavbar from '../components/Project/SecondaryNavbar';
+import Association from '../components/Project/Association';
+import backgroundImage from '../components/Project/assets/project-cover.svg';
+import Section from '../components/General/Section';
+import VideoModal from '../components/General/VideoModal';
+import videothumbnail from '../components/Project/assets/project-video.png';
 
-import { breakpoint, BreakPoint, Button } from '@aragon/ui'
-const medium = css => breakpoint('medium', css)
+const medium = css => breakpoint('medium', css);
 
 class Project extends React.Component {
   constructor(props) {
@@ -19,8 +20,8 @@ class Project extends React.Component {
     this.handleOpen = this.handleOpen.bind(this);
     if (typeof window !== `undefined`) {
       window.YTConfig = {
-        host: 'https://www.youtube.com'
-      }
+        host: 'https://www.youtube.com',
+      };
     }
   }
 
@@ -28,33 +29,47 @@ class Project extends React.Component {
     this.videoModal.current.handleOpen();
   }
 
-
   render() {
-    return(
+    return (
       <Page path="/project" color="black">
         <HeroSection>
           <Box>
             <Container>
-              <h2>Fight for freedom</h2>
-              <h4>Aragon is a project to empower freedom by creating tools for decentralized organizations to thrive.</h4>
+              <h2>
+                <FormattedMessage
+                  id="project.hero.title"
+                  defaultMessage="Fight for freedom"
+                />
+              </h2>
+              <h4>
+                <FormattedMessage
+                  id="project.hero.content"
+                  defaultMessage="Aragon is a project to empower freedom by creating tools for decentralized organizations to thrive."
+                />
+              </h4>
               <div className="hero-button-container centered">
-                <a className="principal-button" href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/"
+                <a
+                  className="principal-button"
+                  href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/"
                   target="_blank">
-                  Manifesto
+                  <FormattedMessage
+                    id="project.hero.action"
+                    defaultMessage="Manifesto"
+                  />
                 </a>
               </div>
             </Container>
           </Box>
         </HeroSection>
-        <SecondaryNavbar/>
+        <SecondaryNavbar />
         <VideoContainer>
-          <img src={videothumbnail} onClick={this.handleOpen}/>
-          <VideoModal ref={this.videoModal} videoId="AqjIWmiAidw"/>
+          <img src={videothumbnail} onClick={this.handleOpen} />
+          <VideoModal ref={this.videoModal} videoId="AqjIWmiAidw" />
         </VideoContainer>
-        <About/>
+        <About />
         <Association />
       </Page>
-    )
+    );
   }
 }
 
@@ -66,7 +81,7 @@ const VideoContainer = styled.div`
     ${medium('margin: 40px auto 100px auto;')};
     width: 95%;
   }
-`
+`;
 
 const HeroSection = styled(Section)`
   height: auto;
@@ -84,13 +99,11 @@ const HeroSection = styled(Section)`
     cursor: pointer;
     ${medium('margin-left: 20px;')};
   }
-  background: linear-gradient(270deg, #FFCF8A, #FFE8C6);
+  background: linear-gradient(270deg, #ffcf8a, #ffe8c6);
   background-size: 400% 400%;
   -webkit-animation: HeroAnimation 7s ease infinite;
   -moz-animation: HeroAnimation 7s ease infinite;
   animation: HeroAnimation 7s ease infinite;
-
-
 `;
 const Box = styled.div`
   display: flex;
@@ -104,14 +117,13 @@ const Container = styled.div`
   text-align: center;
   h2 {
     margin-top: 0;
-    color: #212B36;
+    color: #212b36;
   }
   h4 {
-    color: #6D7693;
+    color: #6d7693;
     max-width: 663px;
     margin: auto;
   }
 `;
 
-
-export default Project
+export default Project;

@@ -1,32 +1,47 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Page } from '../components'
-import SecondaryNavbar from '../components/Project/SecondaryNavbar'
-import backgroundImage from '../components/Project/assets/grants-background.svg'
-import GrantseContent from '../components/Project/GrantsContent'
-import GrantsQuotes from '../components/Project/GrantsQuotes'
-import Section from '../components/General/Section'
-import { Button } from '@aragon/ui'
+import React from 'react';
+import styled from 'styled-components';
+import {FormattedMessage} from 'react-intl';
+import {Page} from '../components';
+import SecondaryNavbar from '../components/Project/SecondaryNavbar';
+import backgroundImage from '../components/Project/assets/grants-background.svg';
+import GrantseContent from '../components/Project/GrantsContent';
+import GrantsQuotes from '../components/Project/GrantsQuotes';
+import Section from '../components/General/Section';
 
 const Grants = () => (
   <Page path="/project/grants">
     <GrantsSection>
       <Container>
-        <h2>Aragon Nest</h2>
-        <h4>Aragon is re-inventing the future of organizations. But we cannot do it alone. <br/>Nest was born to help the ecosystem flourish.</h4>
+        <h2>
+          <FormattedMessage
+            id="project.grants.hero.title"
+            defaultMessage="Aragon Nest"
+          />
+        </h2>
+        <h4>
+          <FormattedMessage
+            id="project.grants.hero.content"
+            defaultMessage="Aragon is re-inventing the future of organizations. But we cannot do it alone. <br/>Nest was born to help the ecosystem flourish."
+          />
+        </h4>
         <div className="hero-button-container centered">
-          <a className="principal-button" href="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant"
+          <a
+            className="principal-button"
+            href="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant"
             target="_blank">
-            Apply
+            <FormattedMessage
+              id="project.grants.hero.action"
+              defaultMessage="Apply"
+            />
           </a>
         </div>
       </Container>
     </GrantsSection>
-    <SecondaryNavbar page="grants"/>
-    <GrantseContent/>
-    <GrantsQuotes/>
+    <SecondaryNavbar page="grants" />
+    <GrantseContent />
+    <GrantsQuotes />
   </Page>
-)
+);
 
 const GrantsSection = styled(Section)`
   height: 550px;
@@ -49,4 +64,4 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-export default Grants
+export default Grants;

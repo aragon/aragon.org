@@ -1,27 +1,44 @@
 import React from 'react';
-import Section from '../General/Section';
 import styled from 'styled-components';
-import {Link} from 'react-static';
+import {breakpoint} from '@aragon/ui';
+import {FormattedMessage} from 'react-intl';
+import Section from '../General/Section';
 import backgroundImage from './assets/association-background.svg';
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
 
 const UnstoppableOrganizations = () => (
   <Association>
     <Container>
-      <h2>The Aragon Association</h2>
+      <h2>
+        <FormattedMessage
+          id="project.home.association.title"
+          defaultMessage="The Aragon Association"
+        />
+      </h2>
       <h4>
-        The Aragon Project is stewarded by the Aragon Association, a Swiss
-        non-profit entity.
+        <FormattedMessage
+          id="project.home.association.content"
+          defaultMessage="The Aragon Project is stewarded by the Aragon Association, a Swiss non-profit entity."
+        />
       </h4>
       <br />
-      <h5>Executive director</h5>
+      <h5>
+        <FormattedMessage
+          id="project.home.association.executive.title"
+          defaultMessage="Executive director"
+        />
+      </h5>
       <h4 className="signs">
-        <span>Stefano Bernardi</span>
+        <span>Luis Cuende</span>
       </h4>
       <br />
-      <h5>Board of directors</h5>
+      <h5>
+        <FormattedMessage
+          id="project.home.association.board.title"
+          defaultMessage="Board of directors"
+        />
+      </h5>
       <h4 className="signs">Luis Cuende</h4>
       <h4>Jorge Izquierdo</h4>
     </Container>
@@ -70,7 +87,7 @@ const Container = styled.div`
     letter-spacing: 0.24px;
     text-align: left;
     text-transform: uppercase;
-    color: #7F8198;
+    color: #7f8198;
   }
   .signs span {
     color: white;

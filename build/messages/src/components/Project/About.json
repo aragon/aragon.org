@@ -1,0 +1,171 @@
+[
+  {
+    "id": "project.home.about.module1.content",
+    "defaultMessage": "Aragon is creating a whole stack of decentralized technologies that merge seamlessly with people’s everyday work. Aragon Nest helps bring it to reality.",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 18,
+      "column": 6
+    },
+    "end": {
+      "line": 21,
+      "column": 8
+    }
+  },
+  {
+    "id": "project.home.about.module1.action",
+    "defaultMessage": "Discover Nest",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 26,
+      "column": 10
+    },
+    "end": {
+      "line": 29,
+      "column": 12
+    }
+  },
+  {
+    "id": "project.home.about.module2.content",
+    "defaultMessage": "Our community is always looking for individuals who want to help our fight for freedom. Check out how to contribute or check open positions.",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 39,
+      "column": 6
+    },
+    "end": {
+      "line": 42,
+      "column": 8
+    }
+  },
+  {
+    "id": "project.home.about.module2.action",
+    "defaultMessage": "Contribute",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 47,
+      "column": 10
+    },
+    "end": {
+      "line": 50,
+      "column": 12
+    }
+  },
+  {
+    "id": "project.home.about.history.title",
+    "defaultMessage": "Our history",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 64,
+      "column": 12
+    },
+    "end": {
+      "line": 67,
+      "column": 14
+    }
+  },
+  {
+    "id": "project.home.about.history.content",
+    "defaultMessage": "The Aragon project was founded to disintermediate the creation and maintenance of organizations. We believe everyone should have equal access to governance and collaboration, no matter their age, gender, or race.",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 70,
+      "column": 12
+    },
+    "end": {
+      "line": 73,
+      "column": 14
+    }
+  },
+  {
+    "id": "project.home.about.history.content2",
+    "defaultMessage": "The project was originally started by Luis Cuende and Jorge Izquierdo in November 2016.",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 76,
+      "column": 12
+    },
+    "end": {
+      "line": 79,
+      "column": 14
+    }
+  },
+  {
+    "id": "project.home.about.history.action",
+    "defaultMessage": "View roadmap",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 83,
+      "column": 14
+    },
+    "end": {
+      "line": 86,
+      "column": 16
+    }
+  },
+  {
+    "id": "project.home.about.governance.title",
+    "defaultMessage": "Governed by the community",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 98,
+      "column": 10
+    },
+    "end": {
+      "line": 101,
+      "column": 12
+    }
+  },
+  {
+    "id": "project.home.about.governance.content",
+    "defaultMessage": "The Aragon project has a strong commitment to decentralize its own existence. The community now has control over its own future.",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 104,
+      "column": 10
+    },
+    "end": {
+      "line": 107,
+      "column": 12
+    }
+  },
+  {
+    "id": "project.home.about.governance.action",
+    "defaultMessage": "About Aragon governance",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 110,
+      "column": 10
+    },
+    "end": {
+      "line": 113,
+      "column": 12
+    }
+  },
+  {
+    "id": "project.home.about.module1.title",
+    "defaultMessage": "Nest, our grants program",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 123,
+      "column": 12
+    },
+    "end": {
+      "line": 126,
+      "column": 14
+    }
+  },
+  {
+    "id": "project.home.about.module2.title",
+    "defaultMessage": "<span>Join<br /> the fight</span>",
+    "file": "src/components/Project/About.js",
+    "start": {
+      "line": 134,
+      "column": 12
+    },
+    "end": {
+      "line": 137,
+      "column": 14
+    }
+  }
+]

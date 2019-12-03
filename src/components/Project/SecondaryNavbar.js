@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import {FormattedMessage} from 'react-intl';
 import {breakpoint, SafeLink, BreakPoint, DropDown} from '@aragon/ui';
 import {Link} from 'react-static';
 import {Redirect} from 'react-router';
-const medium = css => breakpoint('medium', css);
 import governance from './assets/secondary-navbar/governance.svg';
 import governanceActive from './assets/secondary-navbar/governanceActive.svg';
 import grants from './assets/secondary-navbar/grants.svg';
@@ -16,40 +16,74 @@ import blog from './assets/secondary-navbar/blog.svg';
 import events from './assets/secondary-navbar/events.svg';
 import wiki from './assets/secondary-navbar/wiki.svg';
 
+const medium = css => breakpoint('medium', css);
+
 const dropdownItems = [
-    <span className="dropdown-span">
-      Explore...
-    </span>
-  ,
+  <span className="dropdown-span">Explore...</span>,
   <a href="http://www.google.com">
     <span className="dropdown-span">
-      <div><img src={governance} /></div>
-      Governance
+      <div>
+        <img src={governance} />
+      </div>
+      <FormattedMessage
+        id="project.secondary-navbar.mobile.item1"
+        defaultMessage="Governance"
+      />
     </span>
   </a>,
   <span className="dropdown-span">
-    <div><img src={grants} /></div>
-    Grants
+    <div>
+      <img src={grants} />
+    </div>
+    <FormattedMessage
+      id="project.secondary-navbar.mobile.item2"
+      defaultMessage="Grants"
+    />
   </span>,
   <span className="dropdown-span">
-    <div><img src={contribute} /></div>
-    Contribute
+    <div>
+      <img src={contribute} />
+    </div>
+    <FormattedMessage
+      id="project.secondary-navbar.mobile.item3"
+      defaultMessage="Contribute"
+    />
   </span>,
   <span className="dropdown-span">
-    <div><img src={blog} /></div>
-    Blog
+    <div>
+      <img src={blog} />
+    </div>
+    <FormattedMessage
+      id="project.secondary-navbar.mobile.item4"
+      defaultMessage="Blog"
+    />
   </span>,
   <span className="dropdown-span">
-    <div><img src={roadmap} /></div>
-    Roadmap
+    <div>
+      <img src={roadmap} />
+    </div>
+    <FormattedMessage
+      id="project.secondary-navbar.mobile.item5"
+      defaultMessage="Roadmap"
+    />
   </span>,
   <span className="dropdown-span">
-    <div><img src={events} /></div>
-    Events
+    <div>
+      <img src={events} />
+    </div>
+    <FormattedMessage
+      id="project.secondary-navbar.mobile.item6"
+      defaultMessage="Events"
+    />
   </span>,
   <span className="dropdown-span">
-    <div><img src={wiki} /></div>
-    Wiki
+    <div>
+      <img src={wiki} />
+    </div>
+    <FormattedMessage
+      id="project.secondary-navbar.mobile.item7"
+      defaultMessage="Wiki"
+    />
   </span>,
 ];
 const dropdownNames = [
@@ -82,19 +116,19 @@ class SecondaryNavbar extends React.Component {
   }
 
   handleChange(index) {
-    if(index != 0) {
+    if (index != 0) {
       this.setState({activeItem: index});
     }
   }
   render() {
-    if ((this.state.activeItem != dropdownNames.indexOf(this.props.page))) {
+    if (this.state.activeItem != dropdownNames.indexOf(this.props.page)) {
       if (
         dropdownLinks[this.state.activeItem].includes('https://') ||
         dropdownLinks[this.state.activeItem].includes('http://')
       ) {
         window.location.href = dropdownLinks[this.state.activeItem];
       } else {
-        return (<Redirect to={dropdownLinks[this.state.activeItem]} />)
+        return <Redirect to={dropdownLinks[this.state.activeItem]} />;
       }
     }
     return (
@@ -114,7 +148,12 @@ class SecondaryNavbar extends React.Component {
                 ) : (
                   <img src={governance} />
                 )}
-                <h6>Governance</h6>
+                <h6>
+                  <FormattedMessage
+                    id="project.secondary-navbar.item1"
+                    defaultMessage="Governance"
+                  />
+                </h6>
               </InternalItem>
               <InternalItem
                 className={
@@ -128,7 +167,12 @@ class SecondaryNavbar extends React.Component {
                 ) : (
                   <img src={grants} />
                 )}
-                <h6>Grants</h6>
+                <h6>
+                  <FormattedMessage
+                    id="project.secondary-navbar.item2"
+                    defaultMessage="Grants"
+                  />
+                </h6>
               </InternalItem>
               <InternalItem
                 className={
@@ -142,11 +186,21 @@ class SecondaryNavbar extends React.Component {
                 ) : (
                   <img src={contribute} />
                 )}
-                <h6>Contribute</h6>
+                <h6>
+                  <FormattedMessage
+                    id="project.secondary-navbar.item3"
+                    defaultMessage="Contribute"
+                  />
+                </h6>
               </InternalItem>
               <Item href="https://blog.aragon.org/">
                 <img src={blog} />
-                <h6>Blog</h6>
+                <h6>
+                  <FormattedMessage
+                    id="project.secondary-navbar.item4"
+                    defaultMessage="Blog"
+                  />
+                </h6>
               </Item>
               <InternalItem
                 className={
@@ -160,15 +214,30 @@ class SecondaryNavbar extends React.Component {
                 ) : (
                   <img src={roadmap} />
                 )}
-                <h6>Roadmap</h6>
+                <h6>
+                  <FormattedMessage
+                    id="project.secondary-navbar.item5"
+                    defaultMessage="Roadmap"
+                  />
+                </h6>
               </InternalItem>
               <Item href="https://aracon.one/" target="_blank">
                 <img src={events} />
-                <h6>Events</h6>
+                <h6>
+                  <FormattedMessage
+                    id="project.secondary-navbar.item6"
+                    defaultMessage="Events"
+                  />
+                </h6>
               </Item>
               <Item href="https://wiki.aragon.org/" target="_blank">
                 <img src={wiki} />
-                <h6>Wiki</h6>
+                <h6>
+                  <FormattedMessage
+                    id="project.secondary-navbar.item7"
+                    defaultMessage="Wiki"
+                  />
+                </h6>
               </Item>
             </Container>
           </Navbar>
@@ -208,7 +277,7 @@ const DropDownContainer = styled.div`
   }
   span.dropdown-span div {
     width: 40px;
-    text-align:left;
+    text-align: left;
   }
 `;
 
@@ -260,7 +329,7 @@ const Container = styled.nav`
     background: linear-gradient(135.14deg, #ff9372 8.69%, #ffd770 103.74%);
   }
   .roadmap.active {
-    background: linear-gradient(134.26deg, #658499 -12.72%, #9FC5C8 96.2%);
+    background: linear-gradient(134.26deg, #658499 -12.72%, #9fc5c8 96.2%);
   }
 `;
 const Item = styled(SafeLink)`

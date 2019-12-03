@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from '../General/Section';
 import styled from 'styled-components';
-import {Link} from 'react-static';
+import {FormattedMessage} from 'react-intl';
+import Section from '../General/Section';
 import video from '../Camino/assets/camino.mp4';
 import video1 from '../Camino/assets/camino.ogv';
 
@@ -11,8 +11,18 @@ const large = css => breakpoint('large', css);
 
 const TryCamino = () => (
   <VideoeSection>
-    <h3>Organizations, re-imagined</h3>
-    <p>A glimpse into the future of organizations that you can use today</p>
+    <h3>
+      <FormattedMessage
+        id="camino.video.title"
+        defaultMessage="Organizations, re-imagined"
+      />
+    </h3>
+    <p>
+      <FormattedMessage
+        id="camino.video.subtitle"
+        defaultMessage="A glimpse into the future of organizations that you can use today"
+      />
+    </p>
     <video playsInline autoPlay muted loop>
       <source src={video1} type="video/ogg" />
       <source src={video} type="video/mp4" />
@@ -39,14 +49,14 @@ const VideoeSection = styled(Section)`
     line-height: 59px;
     text-align: center;
     letter-spacing: -0.564706px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
   p {
     font-size: 21px;
     line-height: 35px;
     text-align: center;
     margin-bottom: 50px;
-    color: #7F89A7;
+    color: #7f89a7;
   }
 `;
 
