@@ -103,9 +103,12 @@ const Intl = styled.div`
   .btn-primary:not(:disabled):not(.disabled):active,
   .show > .btn-primary.dropdown-toggle {
     color: black;
+    display: flex;
+    align-items: center;
     background-color: transparent;
     border-color: transparent;
     outline: none;
+    box-shadow: none;
   }
 `;
 const Content = styled.div`

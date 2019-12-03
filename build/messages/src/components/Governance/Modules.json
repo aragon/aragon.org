@@ -1,0 +1,80 @@
+[
+  {
+    "id": "project.governance.module1.title",
+    "defaultMessage": "Create your proposal",
+    "file": "src/components/Governance/Modules.js",
+    "start": {
+      "line": 19,
+      "column": 10
+    },
+    "end": {
+      "line": 22,
+      "column": 12
+    }
+  },
+  {
+    "id": "project.governance.module1.content",
+    "defaultMessage": "Do you have an idea for how to improve Aragon? Create an Aragon Governance Proposal and share your idea with the community.",
+    "file": "src/components/Governance/Modules.js",
+    "start": {
+      "line": 27,
+      "column": 14
+    },
+    "end": {
+      "line": 30,
+      "column": 16
+    }
+  },
+  {
+    "id": "project.governance.module1.action",
+    "defaultMessage": "Create Proposal",
+    "file": "src/components/Governance/Modules.js",
+    "start": {
+      "line": 37,
+      "column": 16
+    },
+    "end": {
+      "line": 40,
+      "column": 18
+    }
+  },
+  {
+    "id": "project.governance.module2.title",
+    "defaultMessage": "<span>Learn about <br />ANT</span>",
+    "file": "src/components/Governance/Modules.js",
+    "start": {
+      "line": 49,
+      "column": 10
+    },
+    "end": {
+      "line": 52,
+      "column": 12
+    }
+  },
+  {
+    "id": "project.governance.module2.content",
+    "defaultMessage": "The Aragon Network Token (ANT) is used to govern the Aragon Network. The quickest way to acquire ANT is to buy some on an exchange.",
+    "file": "src/components/Governance/Modules.js",
+    "start": {
+      "line": 57,
+      "column": 14
+    },
+    "end": {
+      "line": 60,
+      "column": 16
+    }
+  },
+  {
+    "id": "project.governance.module2.action",
+    "defaultMessage": "Learn More",
+    "file": "src/components/Governance/Modules.js",
+    "start": {
+      "line": 67,
+      "column": 16
+    },
+    "end": {
+      "line": 70,
+      "column": 18
+    }
+  }
+]

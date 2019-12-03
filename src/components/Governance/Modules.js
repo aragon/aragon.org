@@ -1,48 +1,77 @@
 import React from 'react';
+import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
+import {breakpoint} from '@aragon/ui';
+import styled from 'styled-components';
 import Section from '../General/Section';
 import Card from '../General/Card';
-import styled from 'styled-components';
-import {breakpoint, Button} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
 import buy from './assets/learn-about-ant.svg';
 import proposal from './assets/proposal.svg';
+
+const medium = css => breakpoint('medium', css);
+const large = css => breakpoint('large', css);
 
 const About = () => (
   <ModulesSection>
     <Container>
       <Card
         imageUrl={'Governance/assets/proposal'}
-        title="Create your proposal"
+        title={
+          <FormattedMessage
+            id="project.governance.module1.title"
+            defaultMessage="Create your proposal"
+          />
+        }
         content={
           <span>
-          <p>
-            Do you have an idea for how to improve Aragon? Create an Aragon
-            Governance Proposal and share your idea with the community.
-          </p>
-          <div className="hero-button-container centered">
-            <a className="principal-button" href="https://forum.aragon.org/t/how-to-create-an-aragon-governance-proposal/374"
-              target="_blank">
-              Create Proposal
-            </a>
-          </div>
-        </span>}
+            <p>
+              <FormattedMessage
+                id="project.governance.module1.content"
+                defaultMessage="Do you have an idea for how to improve Aragon? Create an Aragon Governance Proposal and share your idea with the community."
+              />
+            </p>
+            <div className="hero-button-container centered">
+              <a
+                className="principal-button"
+                href="https://forum.aragon.org/t/how-to-create-an-aragon-governance-proposal/374"
+                target="_blank">
+                <FormattedMessage
+                  id="project.governance.module1.action"
+                  defaultMessage="Create Proposal"
+                />
+              </a>
+            </div>
+          </span>
+        }
       />
       <Card
         imageUrl={'Governance/assets/learn-about-ant'}
-        title={<span>Learn about <br/>ANT</span>}
-        content={<span>
-          <p>
-            The Aragon Network Token (ANT) is used to govern the Aragon Network.
-            The quickest way to acquire ANT is to buy some on an exchange.
-          </p>
-          <div className="hero-button-container centered">
-            <a className="principal-button" href="https://wiki.aragon.org/documentation/aragon_network_token/#trade-ant"
-              target="_blank">
-              Learn More
-            </a>
-          </div>
-        </span>}
+        title={
+          <FormattedHTMLMessage
+            id="project.governance.module2.title"
+            defaultMessage="<span>Learn about <br />ANT</span>"
+          />
+        }
+        content={
+          <span>
+            <p>
+              <FormattedMessage
+                id="project.governance.module2.content"
+                defaultMessage="The Aragon Network Token (ANT) is used to govern the Aragon Network. The quickest way to acquire ANT is to buy some on an exchange."
+              />
+            </p>
+            <div className="hero-button-container centered">
+              <a
+                className="principal-button"
+                href="https://wiki.aragon.org/documentation/aragon_network_token/#trade-ant"
+                target="_blank">
+                <FormattedMessage
+                  id="project.governance.module2.action"
+                  defaultMessage="Learn More"
+                />
+              </a>
+            </div>
+          </span>
+        }
       />
     </Container>
   </ModulesSection>
@@ -50,7 +79,7 @@ const About = () => (
 
 const ModulesSection = styled(Section)`
   padding: 90px 15px;
-`
+`;
 
 const Container = styled.div`
   display: grid;
@@ -97,7 +126,7 @@ const Box = styled.div`
     ${medium('font-size: 36px; width: 100%;')};
     ${large('width: inherit; font-size: 44px; line-height: 2;')};
     font-weight: 300;
-    line-height: 1.2!important;
+    line-height: 1.2 !important;
     text-align: left;
     color: #2d4051;
     margin: 15px 0 0 0;

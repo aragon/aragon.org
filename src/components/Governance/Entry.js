@@ -1,6 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import { theme, breakpoint } from '@aragon/ui'
+import React from 'react';
+import {FormattedMessage} from 'react-intl';
+import styled from 'styled-components';
+import {theme, breakpoint} from '@aragon/ui';
 
 const medium = css => breakpoint('medium', css);
 const large = css => breakpoint('large', css);
@@ -19,7 +20,7 @@ const EntryBox = styled.div`
     top: 5.5px;
     left: 18px;
     ${medium('top: 6px; left: -14px;')};
-    background-image: linear-gradient(71deg,#6aacf4,#18ebd6);
+    background-image: linear-gradient(71deg, #6aacf4, #18ebd6);
   }
   .description:before {
     content: '';
@@ -27,7 +28,7 @@ const EntryBox = styled.div`
     height: 26px;
     border-radius: 30px;
     opacity: 0.22;
-    background-image: linear-gradient(to right,#6aacf4,#18ebd6);
+    background-image: linear-gradient(to right, #6aacf4, #18ebd6);
     position: absolute;
     left: 10px;
     top: -1px;
@@ -45,18 +46,27 @@ const EntryBox = styled.div`
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.5px;
-    color: #2D4051;
+    color: #2d4051;
     text-transform: uppercase;
   }
 `;
 
-const Entry = ({ ...props }) => (
+const Entry = ({...props}) => (
   <EntryBox>
-    <div className={props.className ? props.className + " description" : "description"}>
-      <p>{props.title}</p>
+    <div
+      className={
+        props.className ? props.className + ' description' : 'description'
+      }>
+      <p>
+        <FormattedMessage
+          id="project.governance.timeline.stage"
+          defaultMessage="Stage"
+        />{' '}
+        {props.title}
+      </p>
       {props.children}
     </div>
   </EntryBox>
 );
 
-export default Entry
+export default Entry;
