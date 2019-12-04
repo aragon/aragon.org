@@ -63,7 +63,7 @@ class Page extends React.Component {
                           localStorage.setItem('locale', 'en');
                           window.location.reload(false);
                         }}>
-                        <img src={en} /> Engliish
+                        <img src={en} /> English
                       </Dropdown.Item>
                       <Dropdown.Item
                         onClick={() => {
