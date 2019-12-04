@@ -39,12 +39,12 @@ const Footer = ({ ...props }) => (
             defaultMessage="Try the product"
           />
         </a>
-        <a className="secondary-button centered" href="/discover">
+        <Link to="/discover" className="secondary-button centered">
           <FormattedMessage
             id="page.footer.link2"
             defaultMessage="Discover Aragon"
           />
-        </a>
+        </Link>
       </div>
     </PreFooter>
     <Container>
