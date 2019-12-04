@@ -1,37 +1,37 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import {breakpoint, Badge} from '@aragon/ui';
-import Carousel from 'react-bootstrap/Carousel';
-import Section from '../General/Section';
-import prev from '../Home/home-assets/arrow-carousel-prev.svg';
-import next from '../Home/home-assets/arrow-carousel-next.svg';
-import yalda from './assets/yalda.png';
-import olivier from './assets/olivier.png';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import { breakpoint, Badge } from '@aragon/ui'
+import Carousel from 'react-bootstrap/Carousel'
+import Section from '../General/Section'
+import prev from '../Home/home-assets/arrow-carousel-prev.svg'
+import next from '../Home/home-assets/arrow-carousel-next.svg'
+import yalda from './assets/yalda.png'
+import olivier from './assets/olivier.png'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 class Quotes extends React.Component {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.handleSelect = this.handleSelect.bind(this);
+    this.handleSelect = this.handleSelect.bind(this)
 
     this.state = {
       index: 0,
       direction: null,
-    };
+    }
   }
 
   handleSelect(selectedIndex, e) {
     this.setState({
       index: selectedIndex,
       direction: e.direction,
-    });
+    })
   }
   render() {
-    const {index, direction} = this.state;
+    const { index, direction } = this.state
     return (
       <QuotesSection>
         <Container>
@@ -40,7 +40,8 @@ class Quotes extends React.Component {
             direction={direction}
             nextIcon={<img src={next} />}
             prevIcon={<img src={prev} />}
-            onSelect={this.handleSelect}>
+            onSelect={this.handleSelect}
+          >
             <Carousel.Item>
               <Item>
                 <img src={yalda} />
@@ -84,7 +85,7 @@ class Quotes extends React.Component {
           </Carousel>
         </Container>
       </QuotesSection>
-    );
+    )
   }
 }
 
@@ -94,7 +95,7 @@ const QuotesSection = styled(Section)`
   .container {
     padding: 0;
   }
-`;
+`
 const Container = styled.div`
   img {
     max-width: 100%;
@@ -124,11 +125,11 @@ const Container = styled.div`
   .carousel-indicators {
     display: none;
   }
-`;
+`
 
 const StyledBadge = styled(Badge)`
   padding: 3px 17px 1px;
-`;
+`
 const QuoteSection = styled(Section)`
   background: white;
   padding: 0 15px 90px 15px;
@@ -149,7 +150,7 @@ const QuoteSection = styled(Section)`
     color: #6d7693;
     margin: 0;
   }
-`;
+`
 
 const Item = styled.div`
   background: #f9fafc;
@@ -190,6 +191,6 @@ const Item = styled.div`
     color: #6d7693;
     margin: 30px 0;
   }
-`;
+`
 
-export default Quotes;
+export default Quotes

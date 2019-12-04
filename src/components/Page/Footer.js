@@ -1,21 +1,21 @@
-import React from 'react';
-import {Text, breakpoint, SafeLink} from '@aragon/ui';
-import {Link} from 'react-static';
-import styled from 'styled-components';
-import {FormattedMessage} from 'react-intl';
-import Section from '../General/Section';
-import backgroundImage from './assets/prefooter.png';
-import logo from './assets/logo-footer.svg';
-import twitter from './assets/twitter.svg';
-import ghost from './assets/ghost.svg';
-import forum from './assets/forum.png';
-import rocket from './assets/rocket.svg';
-import youtube from './assets/youtube.svg';
+import React from 'react'
+import { Text, breakpoint, SafeLink } from '@aragon/ui'
+import { Link } from 'react-static'
+import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
+import Section from '../General/Section'
+import backgroundImage from './assets/prefooter.png'
+import logo from './assets/logo-footer.svg'
+import twitter from './assets/twitter.svg'
+import ghost from './assets/ghost.svg'
+import forum from './assets/forum.png'
+import rocket from './assets/rocket.svg'
+import youtube from './assets/youtube.svg'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
-const Footer = ({...props}) => (
+const Footer = ({ ...props }) => (
   <FooterSection>
     <PreFooter>
       <PreFooterText>
@@ -129,7 +129,8 @@ const Footer = ({...props}) => (
           </a>
           <a
             href="https://www.youtube.com/channel/UCODiU_-FWhr4SVOoBlm-qaQ"
-            target="_blank">
+            target="_blank"
+          >
             <Youtube src={youtube} />
           </a>
         </Box>
@@ -144,7 +145,8 @@ const Footer = ({...props}) => (
           method="post"
           name="mc-embedded-subscribe-form"
           target="_blank"
-          noValidate>
+          noValidate
+        >
           <div className="email-field">
             <input
               type="email"
@@ -155,7 +157,8 @@ const Footer = ({...props}) => (
             />
             <div
               aria-hidden="true"
-              style={{position: 'absolute', left: '-5000px'}}>
+              style={{ position: 'absolute', left: '-5000px' }}
+            >
               <input
                 type="text"
                 name="b_a590aa3843a54b079d48e6e18_e81a44c4bd"
@@ -166,7 +169,8 @@ const Footer = ({...props}) => (
               type="submit"
               name="subscribe"
               id="mc-embedded-subscribe.action"
-              className="button">
+              className="button"
+            >
               <FormattedMessage
                 id="page.footer.subscribe"
                 defaultMessage="Subscribe"
@@ -177,7 +181,7 @@ const Footer = ({...props}) => (
       </Item>
     </Container>
   </FooterSection>
-);
+)
 
 const FooterSection = styled(Section)`
   background-color: #f9fafc;
@@ -210,12 +214,12 @@ const FooterSection = styled(Section)`
     display: block;
     ${large('display: inline;')};
   }
-`;
+`
 const PreFooterText = styled.div`
   width: 100%;
   text-align: center;
   ${medium('width: 45%; text-align: left;')}
-`;
+`
 const PreFooter = styled.div`
   min-height: 70px;
   background: #ffffff;
@@ -259,7 +263,7 @@ const PreFooter = styled.div`
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.150249);
     cursor: pointer;
   }
-`;
+`
 
 const Container = styled.div`
   display: grid;
@@ -269,7 +273,7 @@ const Container = styled.div`
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   padding: 30px 0;
-`;
+`
 
 const Item = styled.div`
   a {
@@ -320,7 +324,7 @@ const Item = styled.div`
     ${medium('grid-column-end: inherit; grid-column-start: inherit;')};
     grid-column-end: 4;
   }
-`;
+`
 const Box = styled.div`
   margin: 0 -15px;
   a {
@@ -328,17 +332,17 @@ const Box = styled.div`
     padding: 0 15px;
     text-decoration: none;
   }
-`;
+`
 
 const Forum = styled.img`
   height: 19px;
   width: 19px;
-`;
+`
 const Youtube = styled.img`
   margin-bottom: 1px;
-`;
+`
 const LogoImg = styled.img`
   height: 50px;
-`;
+`
 
-export default Footer;
+export default Footer

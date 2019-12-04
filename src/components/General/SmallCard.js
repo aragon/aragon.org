@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Section from '../General/Section';
-import styled from 'styled-components';
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
-import {Link} from 'react-static';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Section from '../General/Section'
+import styled from 'styled-components'
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
+import { Link } from 'react-static'
+import Fade from 'react-reveal/Fade'
 
-const SCard = ({...props}) => (
+const SCard = ({ ...props }) => (
   <SmallCard
     target="_blank"
     cardHeight={props.cardHeight ? props.cardHeight : false}
     className={props.className}
-    >
+  >
     <img src={require(`../${props.imageUrl}.svg`)} />
     {props.label && (
       <div className="label">
@@ -23,9 +23,9 @@ const SCard = ({...props}) => (
     <h1>{props.title}</h1>
     <h1>{props.content}</h1>
   </SmallCard>
-);
+)
 
-const Card = ({...props}) => (
+const Card = ({ ...props }) => (
   <React.Fragment>
     <BreakPoint to="medium">
       <SCard {...props} />
@@ -36,7 +36,7 @@ const Card = ({...props}) => (
       </Fade>
     </BreakPoint>
   </React.Fragment>
-);
+)
 
 const SmallCard = styled.div`
   border-radius: 12px;
@@ -59,18 +59,17 @@ const SmallCard = styled.div`
     line-height: 28px;
     text-align: center;
     letter-spacing: 0.24px;
-    color: #6D7693;
+    color: #6d7693;
   }
   h1 {
     font-size: 38px;
     line-height: 42px;
     text-align: center;
     letter-spacing: -0.447059px;
-        margin: 16px 0 5px;
-    color: #212B36;
+    margin: 16px 0 5px;
+    color: #212b36;
     font-family: 'FontMedium', sans-serif;
-
   }
-`;
+`
 
-export default Card;
+export default Card

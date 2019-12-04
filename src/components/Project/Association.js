@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import {breakpoint} from '@aragon/ui';
-import {FormattedMessage} from 'react-intl';
-import Section from '../General/Section';
-import backgroundImage from './assets/association-background.svg';
+import React from 'react'
+import styled from 'styled-components'
+import { breakpoint } from '@aragon/ui'
+import { FormattedMessage } from 'react-intl'
+import Section from '../General/Section'
+import backgroundImage from './assets/association-background.svg'
 
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 const UnstoppableOrganizations = () => (
   <Association>
@@ -43,7 +43,7 @@ const UnstoppableOrganizations = () => (
       <h4>Jorge Izquierdo</h4>
     </Container>
   </Association>
-);
+)
 
 const Association = styled(Section)`
   background-image: url(${backgroundImage});
@@ -55,7 +55,7 @@ const Association = styled(Section)`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 const Container = styled.div`
   width: 100%;
   margin: 15px 0;
@@ -93,9 +93,9 @@ const Container = styled.div`
     color: white;
     opacity: 1;
   }
-`;
+`
 const Image = styled.img`
   max-width: 100%;
-`;
+`
 
-export default UnstoppableOrganizations;
+export default UnstoppableOrganizations

@@ -30,11 +30,11 @@
     "defaultMessage": "Whitepaper",
     "file": "src/components/Network/Hero.js",
     "start": {
-      "line": 33,
+      "line": 34,
       "column": 12
     },
     "end": {
-      "line": 36,
+      "line": 37,
       "column": 14
     }
   }

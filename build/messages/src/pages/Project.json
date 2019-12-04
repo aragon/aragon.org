@@ -30,11 +30,11 @@
     "defaultMessage": "Manifesto",
     "file": "src/pages/Project.js",
     "start": {
-      "line": 55,
+      "line": 56,
       "column": 18
     },
     "end": {
-      "line": 58,
+      "line": 59,
       "column": 20
     }
   }

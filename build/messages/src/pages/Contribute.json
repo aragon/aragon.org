@@ -30,11 +30,11 @@
     "defaultMessage": "Read more",
     "file": "src/pages/Contribute.js",
     "start": {
-      "line": 31,
+      "line": 32,
       "column": 12
     },
     "end": {
-      "line": 34,
+      "line": 35,
       "column": 14
     }
   }

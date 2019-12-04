@@ -56,11 +56,11 @@
     "defaultMessage": "Stay up to date with <span class='red'>email notifications</span>",
     "file": "src/components/Camino/MoreFeatures.js",
     "start": {
-      "line": 55,
+      "line": 56,
       "column": 8
     },
     "end": {
-      "line": 58,
+      "line": 59,
       "column": 10
     }
   },
@@ -69,11 +69,11 @@
     "defaultMessage": "Whether it's a new vote, finance transfer, or permissions change, subscribe to the events that matter to you.",
     "file": "src/components/Camino/MoreFeatures.js",
     "start": {
-      "line": 61,
+      "line": 62,
       "column": 8
     },
     "end": {
-      "line": 64,
+      "line": 65,
       "column": 10
     }
   }

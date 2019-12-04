@@ -95,11 +95,11 @@
     "defaultMessage": "Governance",
     "file": "src/components/Project/SecondaryNavbar.js",
     "start": {
-      "line": 152,
+      "line": 153,
       "column": 18
     },
     "end": {
-      "line": 155,
+      "line": 156,
       "column": 20
     }
   },
@@ -108,11 +108,11 @@
     "defaultMessage": "Grants",
     "file": "src/components/Project/SecondaryNavbar.js",
     "start": {
-      "line": 171,
+      "line": 173,
       "column": 18
     },
     "end": {
-      "line": 174,
+      "line": 176,
       "column": 20
     }
   },
@@ -121,11 +121,11 @@
     "defaultMessage": "Contribute",
     "file": "src/components/Project/SecondaryNavbar.js",
     "start": {
-      "line": 190,
+      "line": 193,
       "column": 18
     },
     "end": {
-      "line": 193,
+      "line": 196,
       "column": 20
     }
   },
@@ -134,11 +134,11 @@
     "defaultMessage": "Blog",
     "file": "src/components/Project/SecondaryNavbar.js",
     "start": {
-      "line": 199,
+      "line": 202,
       "column": 18
     },
     "end": {
-      "line": 202,
+      "line": 205,
       "column": 20
     }
   },
@@ -147,11 +147,11 @@
     "defaultMessage": "Roadmap",
     "file": "src/components/Project/SecondaryNavbar.js",
     "start": {
-      "line": 218,
+      "line": 222,
       "column": 18
     },
     "end": {
-      "line": 221,
+      "line": 225,
       "column": 20
     }
   },
@@ -160,11 +160,11 @@
     "defaultMessage": "Events",
     "file": "src/components/Project/SecondaryNavbar.js",
     "start": {
-      "line": 227,
+      "line": 231,
       "column": 18
     },
     "end": {
-      "line": 230,
+      "line": 234,
       "column": 20
     }
   },
@@ -173,11 +173,11 @@
     "defaultMessage": "Wiki",
     "file": "src/components/Project/SecondaryNavbar.js",
     "start": {
-      "line": 236,
+      "line": 240,
       "column": 18
     },
     "end": {
-      "line": 239,
+      "line": 243,
       "column": 20
     }
   }

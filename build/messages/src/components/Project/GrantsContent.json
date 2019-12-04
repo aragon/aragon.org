@@ -17,11 +17,11 @@
     "defaultMessage": "Nest in GitHub",
     "file": "src/components/Project/GrantsContent.js",
     "start": {
-      "line": 26,
+      "line": 27,
       "column": 10
     },
     "end": {
-      "line": 29,
+      "line": 30,
       "column": 12
     }
   },
@@ -30,11 +30,11 @@
     "defaultMessage": "We are looking for people who want to help advance the Aragon ecosystem. If you believe you have a proposal for the program, read more and apply.",
     "file": "src/components/Project/GrantsContent.js",
     "start": {
-      "line": 39,
+      "line": 40,
       "column": 6
     },
     "end": {
-      "line": 42,
+      "line": 43,
       "column": 8
     }
   },
@@ -43,11 +43,11 @@
     "defaultMessage": "Apply",
     "file": "src/components/Project/GrantsContent.js",
     "start": {
-      "line": 50,
+      "line": 52,
       "column": 10
     },
     "end": {
-      "line": 53,
+      "line": 55,
       "column": 12
     }
   },
@@ -56,11 +56,11 @@
     "defaultMessage": "A thriving ecosystem",
     "file": "src/components/Project/GrantsContent.js",
     "start": {
-      "line": 115,
+      "line": 117,
       "column": 14
     },
     "end": {
-      "line": 118,
+      "line": 120,
       "column": 16
     }
   },
@@ -69,11 +69,11 @@
     "defaultMessage": "Millions given away in grants",
     "file": "src/components/Project/GrantsContent.js",
     "start": {
-      "line": 125,
+      "line": 128,
       "column": 18
     },
     "end": {
-      "line": 128,
+      "line": 131,
       "column": 20
     }
   },
@@ -82,11 +82,11 @@
     "defaultMessage": "Teams working together",
     "file": "src/components/Project/GrantsContent.js",
     "start": {
-      "line": 134,
+      "line": 137,
       "column": 18
     },
     "end": {
-      "line": 137,
+      "line": 140,
       "column": 20
     }
   },
@@ -95,11 +95,11 @@
     "defaultMessage": "People making their dreams possible",
     "file": "src/components/Project/GrantsContent.js",
     "start": {
-      "line": 143,
+      "line": 146,
       "column": 18
     },
     "end": {
-      "line": 146,
+      "line": 149,
       "column": 20
     }
   },
@@ -108,11 +108,11 @@
     "defaultMessage": "Applications to the program",
     "file": "src/components/Project/GrantsContent.js",
     "start": {
-      "line": 152,
+      "line": 155,
       "column": 18
     },
     "end": {
-      "line": 155,
+      "line": 158,
       "column": 20
     }
   },
@@ -121,11 +121,11 @@
     "defaultMessage": "Fully transparent",
     "file": "src/components/Project/GrantsContent.js",
     "start": {
-      "line": 164,
+      "line": 167,
       "column": 14
     },
     "end": {
-      "line": 167,
+      "line": 170,
       "column": 16
     }
   },
@@ -134,11 +134,11 @@
     "defaultMessage": "Apply now",
     "file": "src/components/Project/GrantsContent.js",
     "start": {
-      "line": 176,
+      "line": 179,
       "column": 14
     },
     "end": {
-      "line": 179,
+      "line": 182,
       "column": 16
     }
   }

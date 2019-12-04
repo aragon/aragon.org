@@ -82,11 +82,11 @@
     "defaultMessage": "Developers",
     "file": "src/components/Discover/Product.js",
     "start": {
-      "line": 77,
+      "line": 78,
       "column": 10
     },
     "end": {
-      "line": 80,
+      "line": 81,
       "column": 12
     }
   }

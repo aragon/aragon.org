@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import {FormattedMessage} from 'react-intl';
-import Section from '../General/Section';
-import video from '../Camino/assets/camino.mp4';
-import video1 from '../Camino/assets/camino.ogv';
+import React from 'react'
+import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
+import Section from '../General/Section'
+import video from '../Camino/assets/camino.mp4'
+import video1 from '../Camino/assets/camino.ogv'
 
-import {breakpoint, BreakPoint, Button} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint, BreakPoint, Button } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const TryCamino = () => (
   <VideoeSection>
@@ -28,7 +28,7 @@ const TryCamino = () => (
       <source src={video} type="video/mp4" />
     </video>
   </VideoeSection>
-);
+)
 
 const VideoeSection = styled(Section)`
   background-color: #062132;
@@ -58,6 +58,6 @@ const VideoeSection = styled(Section)`
     margin-bottom: 50px;
     color: #7f89a7;
   }
-`;
+`
 
-export default TryCamino;
+export default TryCamino

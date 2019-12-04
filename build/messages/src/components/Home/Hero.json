@@ -43,11 +43,11 @@
     "defaultMessage": "Try the product",
     "file": "src/components/Home/Hero.js",
     "start": {
-      "line": 40,
+      "line": 41,
       "column": 8
     },
     "end": {
-      "line": 43,
+      "line": 44,
       "column": 10
     }
   },
@@ -56,11 +56,11 @@
     "defaultMessage": "Discover Aragon",
     "file": "src/components/Home/Hero.js",
     "start": {
-      "line": 46,
+      "line": 47,
       "column": 8
     },
     "end": {
-      "line": 49,
+      "line": 50,
       "column": 10
     }
   }

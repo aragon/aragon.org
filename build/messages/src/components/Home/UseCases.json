@@ -4,11 +4,11 @@
     "defaultMessage": "USE CASE",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 53,
+      "line": 54,
       "column": 20
     },
     "end": {
-      "line": 56,
+      "line": 57,
       "column": 22
     }
   },
@@ -17,11 +17,11 @@
     "defaultMessage": "Aragon Network: A digital jurisdiction",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 59,
+      "line": 60,
       "column": 20
     },
     "end": {
-      "line": 62,
+      "line": 63,
       "column": 22
     }
   },
@@ -30,11 +30,11 @@
     "defaultMessage": "See how Aragon is used to govern the Aragon project itself, from funds management to policy changes and more.",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 68,
+      "line": 69,
       "column": 20
     },
     "end": {
-      "line": 71,
+      "line": 72,
       "column": 22
     }
   },
@@ -43,11 +43,11 @@
     "defaultMessage": "Go to Aragon Governance",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 78,
+      "line": 80,
       "column": 22
     },
     "end": {
-      "line": 81,
+      "line": 83,
       "column": 24
     }
   },
@@ -56,11 +56,11 @@
     "defaultMessage": "How the Aragon Network uses Aragon",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 89,
+      "line": 92,
       "column": 20
     },
     "end": {
-      "line": 92,
+      "line": 95,
       "column": 22
     }
   },
@@ -69,11 +69,11 @@
     "defaultMessage": "USE CASE",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 102,
+      "line": 105,
       "column": 20
     },
     "end": {
-      "line": 105,
+      "line": 108,
       "column": 22
     }
   },
@@ -82,11 +82,11 @@
     "defaultMessage": "BlankDAO: From Iran to the world",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 108,
+      "line": 111,
       "column": 20
     },
     "end": {
-      "line": 111,
+      "line": 114,
       "column": 22
     }
   },
@@ -95,11 +95,11 @@
     "defaultMessage": "See how Aragon enabled a group of talented developers from Iran and other countries to raise funds transparently from their community.",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 117,
+      "line": 120,
       "column": 20
     },
     "end": {
-      "line": 120,
+      "line": 123,
       "column": 22
     }
   },
@@ -108,11 +108,11 @@
     "defaultMessage": "Go to BlankDAO",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 127,
+      "line": 131,
       "column": 22
     },
     "end": {
-      "line": 130,
+      "line": 134,
       "column": 24
     }
   },
@@ -121,11 +121,11 @@
     "defaultMessage": "How BlankDAO uses Aragon",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 138,
+      "line": 143,
       "column": 20
     },
     "end": {
-      "line": 141,
+      "line": 146,
       "column": 22
     }
   },
@@ -134,11 +134,11 @@
     "defaultMessage": "USE CASE",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 151,
+      "line": 156,
       "column": 20
     },
     "end": {
-      "line": 154,
+      "line": 159,
       "column": 22
     }
   },
@@ -147,11 +147,11 @@
     "defaultMessage": "Melon: Disintermediating asset management",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 157,
+      "line": 162,
       "column": 20
     },
     "end": {
-      "line": 160,
+      "line": 165,
       "column": 22
     }
   },
@@ -160,11 +160,11 @@
     "defaultMessage": "See how Aragon is used to manage council membership, contract upgrades, ENS subdomains, and network parameters for an on-chain asset management protocol.",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 166,
+      "line": 171,
       "column": 20
     },
     "end": {
-      "line": 169,
+      "line": 174,
       "column": 22
     }
   },
@@ -173,11 +173,11 @@
     "defaultMessage": "Go to Melon Council",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 176,
+      "line": 182,
       "column": 22
     },
     "end": {
-      "line": 179,
+      "line": 185,
       "column": 24
     }
   },
@@ -186,11 +186,11 @@
     "defaultMessage": "How Melon Council uses Aragon",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 187,
+      "line": 194,
       "column": 20
     },
     "end": {
-      "line": 190,
+      "line": 197,
       "column": 22
     }
   },
@@ -199,11 +199,11 @@
     "defaultMessage": "USE CASE",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 200,
+      "line": 207,
       "column": 20
     },
     "end": {
-      "line": 203,
+      "line": 210,
       "column": 22
     }
   },
@@ -212,11 +212,11 @@
     "defaultMessage": "Pool Together: A lottery you can’t lose",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 206,
+      "line": 213,
       "column": 20
     },
     "end": {
-      "line": 209,
+      "line": 216,
       "column": 22
     }
   },
@@ -225,11 +225,11 @@
     "defaultMessage": "See how Aragon is used to transparently manage group funds among a dapp development team.",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 215,
+      "line": 222,
       "column": 20
     },
     "end": {
-      "line": 218,
+      "line": 225,
       "column": 22
     }
   },
@@ -238,11 +238,11 @@
     "defaultMessage": "Go to Pool TogetherE",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 225,
+      "line": 233,
       "column": 22
     },
     "end": {
-      "line": 228,
+      "line": 236,
       "column": 24
     }
   },
@@ -251,11 +251,11 @@
     "defaultMessage": "How Pool Together uses Aragon",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 236,
+      "line": 245,
       "column": 20
     },
     "end": {
-      "line": 239,
+      "line": 248,
       "column": 22
     }
   },
@@ -264,30 +264,17 @@
     "defaultMessage": "USE CASE",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 249,
+      "line": 258,
       "column": 20
     },
     "end": {
-      "line": 252,
+      "line": 261,
       "column": 22
     }
   },
   {
     "id": "home.usecases.1hive.title",
     "defaultMessage": "1Hive: Growing open source commons",
-    "file": "src/components/Home/UseCases.js",
-    "start": {
-      "line": 255,
-      "column": 20
-    },
-    "end": {
-      "line": 258,
-      "column": 22
-    }
-  },
-  {
-    "id": "home.usecases.1hive.description",
-    "defaultMessage": "See how Aragon helps to coordinate and reward maintainers and contributors in an open source community.",
     "file": "src/components/Home/UseCases.js",
     "start": {
       "line": 264,
@@ -299,15 +286,28 @@
     }
   },
   {
+    "id": "home.usecases.1hive.description",
+    "defaultMessage": "See how Aragon helps to coordinate and reward maintainers and contributors in an open source community.",
+    "file": "src/components/Home/UseCases.js",
+    "start": {
+      "line": 273,
+      "column": 20
+    },
+    "end": {
+      "line": 276,
+      "column": 22
+    }
+  },
+  {
     "id": "home.usecases.1hive.link1",
     "defaultMessage": "Go to 1Hive",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 274,
+      "line": 284,
       "column": 22
     },
     "end": {
-      "line": 277,
+      "line": 287,
       "column": 24
     }
   },
@@ -316,11 +316,11 @@
     "defaultMessage": "How 1Hive uses Aragon",
     "file": "src/components/Home/UseCases.js",
     "start": {
-      "line": 284,
+      "line": 295,
       "column": 20
     },
     "end": {
-      "line": 287,
+      "line": 298,
       "column": 22
     }
   }

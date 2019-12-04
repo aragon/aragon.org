@@ -30,11 +30,11 @@
     "defaultMessage": "About ANT",
     "file": "src/components/Governance/About.js",
     "start": {
-      "line": 33,
+      "line": 34,
       "column": 14
     },
     "end": {
-      "line": 36,
+      "line": 37,
       "column": 16
     }
   },
@@ -43,11 +43,11 @@
     "defaultMessage": "What is an AGP?",
     "file": "src/components/Governance/About.js",
     "start": {
-      "line": 50,
+      "line": 51,
       "column": 12
     },
     "end": {
-      "line": 53,
+      "line": 54,
       "column": 14
     }
   },
@@ -56,11 +56,11 @@
     "defaultMessage": "AGP stands for Aragon Governance Proposal, a document that proposes a change to the governance of the Aragon project. Community members create and review proposals following AGP-1: The Aragon Governance Proposal Process.",
     "file": "src/components/Governance/About.js",
     "start": {
-      "line": 56,
+      "line": 57,
       "column": 12
     },
     "end": {
-      "line": 59,
+      "line": 60,
       "column": 14
     }
   },
@@ -69,11 +69,11 @@
     "defaultMessage": "Read AGP-1",
     "file": "src/components/Governance/About.js",
     "start": {
-      "line": 65,
+      "line": 67,
       "column": 14
     },
     "end": {
-      "line": 68,
+      "line": 70,
       "column": 16
     }
   }

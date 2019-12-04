@@ -29,17 +29,16 @@ class Panel extends React.Component {
           onClose={() => this.setState({ opened: false })}
         >
           <Container>
-            {items.map(
-              (item, i) =>
-                item[0].startsWith('/') ? (
-                  <Link to={item[0]} key={i}>
-                    {item[1]}
-                  </Link>
-                ) : (
-                  <SafeLink href={item[0]} key={i}>
-                    {item[1]}
-                  </SafeLink>
-                )
+            {items.map((item, i) =>
+              item[0].startsWith('/') ? (
+                <Link to={item[0]} key={i}>
+                  {item[1]}
+                </Link>
+              ) : (
+                <SafeLink href={item[0]} key={i}>
+                  {item[1]}
+                </SafeLink>
+              )
             )}
           </Container>
         </SidePanel>
@@ -58,20 +57,21 @@ const Container = styled.div`
     color: white;
   }
   a:hover {
-    color: #4A80E4;
+    color: #4a80e4;
   }
 `
 
 const Pannel = styled.div`
   button {
     padding: 0;
-    margin: 0!important;
+    margin: 0 !important;
   }
   img {
     top: 3px;
     position: relative;
   }
-  button img, div img {
+  button img,
+  div img {
     padding: 0;
     margin: 0;
   }

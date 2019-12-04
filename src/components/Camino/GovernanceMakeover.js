@@ -1,13 +1,13 @@
-import React from 'react';
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
-import styled from 'styled-components';
-import {breakpoint, BreakPoint} from '@aragon/ui';
-import Section from '../General/Section';
-import Card from '../General/Card';
-import Label from './Label';
-import label from './assets/label-ds.svg';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import React from 'react'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import styled from 'styled-components'
+import { breakpoint, BreakPoint } from '@aragon/ui'
+import Section from '../General/Section'
+import Card from '../General/Card'
+import Label from './Label'
+import label from './assets/label-ds.svg'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const mudule1Content = (
   <p>
@@ -16,7 +16,7 @@ const mudule1Content = (
       defaultMessage="Simplified permissions management that makes it easy to understand at a glance who has the authority in your organization."
     />
   </p>
-);
+)
 const mudule2Content = (
   <span>
     <p>
@@ -31,7 +31,7 @@ const mudule2Content = (
       </a>
     </div>
   </span>
-);
+)
 
 const GovernanceMakeover = () => (
   <StyledSection>
@@ -64,11 +64,11 @@ const GovernanceMakeover = () => (
       />
     </Container>
   </StyledSection>
-);
+)
 
 const StyledSection = styled(Section)`
   background: #f9fafc;
-`;
+`
 
 const StyledCard = styled(Card)`
   background: white;
@@ -96,7 +96,7 @@ const StyledCard = styled(Card)`
     color: #212b36;
     font-family: 'FontMedium', sans-serif;
   }
-`;
+`
 
 const Container = styled.div`
   display: grid;
@@ -133,6 +133,6 @@ const Container = styled.div`
     ${medium('margin-left: -15px; width: calc(100% + 15px);')};
     ${large('margin-left: -60px; width: calc(100% + 60px);')};
   }
-`;
+`
 
-export default GovernanceMakeover;
+export default GovernanceMakeover

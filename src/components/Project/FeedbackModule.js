@@ -1,11 +1,11 @@
-import React from 'react';
-import Section from '../General/Section';
-import LongCard from '../General/LongCard';
-import styled from 'styled-components';
-import {breakpoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
-import speech from './assets/feedback.svg';
+import React from 'react'
+import Section from '../General/Section'
+import LongCard from '../General/LongCard'
+import styled from 'styled-components'
+import { breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
+import speech from './assets/feedback.svg'
 
 const FeedbackModule = () => (
   <StyledSection>
@@ -26,7 +26,8 @@ const FeedbackModule = () => (
               <a
                 className="action-button"
                 href="https://forum.aragon.org"
-                target="_blank">
+                target="_blank"
+              >
                 <span>
                   Join the Aragon forum{' '}
                   <img src={require(`../General/assets/arrow.svg`)} alt=">" />
@@ -38,11 +39,11 @@ const FeedbackModule = () => (
       </Feedback>
     </Container>
   </StyledSection>
-);
+)
 
 const StyledSection = styled(Section)`
   padding: 100px 15px;
-`;
+`
 const Container = styled.div`
   display: grid;
   grid-template-columns: 100%;
@@ -56,7 +57,7 @@ const Container = styled.div`
     grid-template-rows: auto
   `
   )}
-`;
+`
 
 const Feedback = styled.div`
   border-radius: 12px;
@@ -104,9 +105,9 @@ const Feedback = styled.div`
     ${medium('font-size: 46px;')};
   }
   a {
-    margin-top: 0!important;
+    margin-top: 0 !important;
   }
-`;
+`
 const ImageContainer = styled.div`
   width: 100%;
   display: flex;
@@ -118,6 +119,6 @@ const ImageContainer = styled.div`
     height: auto;
     margin: 15px 0;
   }
-`;
+`
 
-export default FeedbackModule;
+export default FeedbackModule

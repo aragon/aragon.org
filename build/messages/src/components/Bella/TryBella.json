@@ -30,11 +30,11 @@
     "defaultMessage": "Try Bella now",
     "file": "src/components/Bella/TryBella.js",
     "start": {
-      "line": 38,
+      "line": 39,
       "column": 12
     },
     "end": {
-      "line": 41,
+      "line": 42,
       "column": 14
     }
   }

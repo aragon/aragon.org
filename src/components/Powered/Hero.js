@@ -1,19 +1,19 @@
-import React from 'react';
-import styled from 'styled-components';
-import background from './assets/hero-bg.svg';
-import backgroundMobile from './assets/hero-mobile.svg';
-import Navbar from './Navbar';
+import React from 'react'
+import styled from 'styled-components'
+import background from './assets/hero-bg.svg'
+import backgroundMobile from './assets/hero-mobile.svg'
+import Navbar from './Navbar'
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Hero = () => (
   <HeroSection>
     <Navbar />
     <Container />
   </HeroSection>
-);
+)
 
 const HeroSection = styled.section`
   min-height: 600px;
@@ -32,7 +32,7 @@ const HeroSection = styled.section`
   height: auto;
   ${medium('height: 47vw; background-size: contain;')};
   margin-bottom: -3px;
-`;
+`
 
 const Container = styled.div`
   width: 80%;
@@ -41,5 +41,5 @@ const Container = styled.div`
   padding-top: 50px;
 
   ${medium('padding-top: 200px;')};
-`;
-export default Hero;
+`
+export default Hero

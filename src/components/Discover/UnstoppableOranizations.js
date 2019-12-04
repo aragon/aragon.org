@@ -1,13 +1,13 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import Section from '../General/Section';
-import image from './assets/unstoppable.png';
-import AlmostFullSection from '../General/AlmostFullSection';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import Section from '../General/Section'
+import image from './assets/unstoppable.png'
+import AlmostFullSection from '../General/AlmostFullSection'
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
 const UnstoppableOrganizations = () => (
   <AlmostFullSection backgroundColor="#FF8979" image={image} imageLeft={true}>
@@ -32,7 +32,7 @@ const UnstoppableOrganizations = () => (
       </Link>
     </AlmostFullSectionBox>
   </AlmostFullSection>
-);
+)
 
 const AlmostFullSectionBox = styled.div`
   h3 {
@@ -57,6 +57,6 @@ const AlmostFullSectionBox = styled.div`
     letter-spacing: 0.315px;
     color: #ffffff;
   }
-`;
+`
 
-export default UnstoppableOrganizations;
+export default UnstoppableOrganizations

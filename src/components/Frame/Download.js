@@ -1,9 +1,9 @@
-import React from 'react';
-import Section from '../General/Section';
-import styled from 'styled-components';
-import {breakpoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import React from 'react'
+import Section from '../General/Section'
+import styled from 'styled-components'
+import { breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const About = () => {
   var userAgent = window.navigator.userAgent,
@@ -14,29 +14,34 @@ const About = () => {
     os = 'linux',
     osLink = 'https://frame.sh/',
     browser = 'firefox',
-    browserLink = 'https://addons.mozilla.org/en-US/firefox/addon/frame-extension';
+    browserLink =
+      'https://addons.mozilla.org/en-US/firefox/addon/frame-extension'
 
+  var isChromium = window.chrome
+  var winNav = window.navigator
 
-  var isChromium = window.chrome;
-  var winNav = window.navigator;
-
-  if ((winNav.userAgent.match("CriOS")) || (
-    isChromium !== null &&
-    typeof isChromium !== "undefined" &&
-    winNav.vendor === "Google Inc." &&
-    (typeof window.opr !== "undefined") === false &&
-    (winNav.userAgent.indexOf("Edge") > -1) === false
-  )) {
-    browser = 'chrome',
-    browserLink = 'https://chrome.google.com/webstore/detail/frame/ldcoohedfbjoobcadoglnnmmfbdlmmhf';
+  if (
+    winNav.userAgent.match('CriOS') ||
+    (isChromium !== null &&
+      typeof isChromium !== 'undefined' &&
+      winNav.vendor === 'Google Inc.' &&
+      (typeof window.opr !== 'undefined') === false &&
+      winNav.userAgent.indexOf('Edge') > -1 === false)
+  ) {
+    ;(browser = 'chrome'),
+      (browserLink =
+        'https://chrome.google.com/webstore/detail/frame/ldcoohedfbjoobcadoglnnmmfbdlmmhf')
   }
 
-  if ((macosPlatforms.indexOf(platform) !== -1) || (iosPlatforms.indexOf(platform) !== -1)) {
-    os = 'mac';
-    osLink = 'https://frame.sh/';
+  if (
+    macosPlatforms.indexOf(platform) !== -1 ||
+    iosPlatforms.indexOf(platform) !== -1
+  ) {
+    os = 'mac'
+    osLink = 'https://frame.sh/'
   } else if (windowsPlatforms.indexOf(platform) !== -1) {
-    os = 'windows';
-    osLink = 'https://frame.sh/';
+    os = 'windows'
+    osLink = 'https://frame.sh/'
   }
 
   return (
@@ -48,22 +53,26 @@ const About = () => {
       <Container>
         <Box>
           <h4>Step 1</h4>
-          <div><img src={require(`./assets/${browser}.svg`)}/></div>
+          <div>
+            <img src={require(`./assets/${browser}.svg`)} />
+          </div>
           <a className="principal-button centered" href={browserLink}>
             1 - Download browser extension
           </a>
         </Box>
         <Box>
-        <h4>Step 2</h4>
-        <div><img src={require(`./assets/${os}.svg`)}/></div>
-        <a className="principal-button centered" href={osLink}>
-          2 - Download Frame
-        </a>
+          <h4>Step 2</h4>
+          <div>
+            <img src={require(`./assets/${os}.svg`)} />
+          </div>
+          <a className="principal-button centered" href={osLink}>
+            2 - Download Frame
+          </a>
         </Box>
       </Container>
     </StyledSection>
-  );
-};
+  )
+}
 
 const StyledSection = styled(Section)`
   padding-bottom: 90px;
@@ -82,7 +91,7 @@ const StyledSection = styled(Section)`
     font-family: 'FontMedium', sans-serif;
     margin-bottom: 90px;
   }
-`;
+`
 const Container = styled.div`
   display: grid;
   ${medium(
@@ -92,7 +101,7 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-`;
+`
 const Box = styled.div`
   background: #f9fafc;
   border-radius: 12px;
@@ -102,7 +111,7 @@ const Box = styled.div`
     line-height: 56px;
     text-align: center;
     letter-spacing: -0.447059px;
-    color: #212B36;
+    color: #212b36;
   }
   a {
     width: 100%;
@@ -113,6 +122,6 @@ const Box = styled.div`
     text-align: center;
     padding: 40px 0 50px 0;
   }
-`;
+`
 
-export default About;
+export default About

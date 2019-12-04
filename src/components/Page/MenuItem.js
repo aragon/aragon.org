@@ -30,14 +30,10 @@ const StyledMenuItem = styled.div`
     white-space: nowrap;
     color: white;
 
-    ${props =>
-      props.color == 'black' &&
-      'color: #6D7693;'}
+    ${props => props.color == 'black' && 'color: #6D7693;'}
     &:hover {
       color: black;
-      ${props =>
-        props.color != 'black' &&
-        'color: #ffffffb3;'}
+      ${props => props.color != 'black' && 'color: #ffffffb3;'}
     }
     &:focus {
       outline: 0;
@@ -55,7 +51,7 @@ const StyledMenuItem = styled.div`
     }
   }
   &.active a {
-    color: #4A80E4;
+    color: #4a80e4;
   }
 `
 

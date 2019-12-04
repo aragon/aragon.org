@@ -1,9 +1,9 @@
-import React from 'react';
-import Section from '../General/Section';
-import Entry from './Entry';
-import styled from 'styled-components';
-import {breakpoint, Badge} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import React from 'react'
+import Section from '../General/Section'
+import Entry from './Entry'
+import styled from 'styled-components'
+import { breakpoint, Badge } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
 const AragonNetwork = () => (
   <RoadmapSection>
@@ -127,7 +127,7 @@ const AragonNetwork = () => (
       </RoadmapContainer>
     </Container>
   </RoadmapSection>
-);
+)
 
 const EnhancedBadge = styled(Badge)`
   background: #d5e8ff80;
@@ -137,12 +137,12 @@ const EnhancedBadge = styled(Badge)`
     background: #ffca7280;
     color: #e4971a;
   }
-`;
+`
 const AragonBlackBadge = styled(Badge)`
   background: #00000030;
   color: black;
   margin-left: 10px;
-`;
+`
 
 const RoadmapContainer = styled.div`
   margin-top: 50px;
@@ -168,32 +168,32 @@ const RoadmapContainer = styled.div`
     display: table;
     clear: both;
   }
-`;
+`
 
 const AragonOneBadge = styled(Badge)`
   background: #f7837140;
   color: #b2565d;
   margin-left: 10px;
-`;
+`
 
 const AutarkBadge = styled(Badge)`
   background: #f7837140;
   color: #b2565d;
   margin-right: 10px;
-`;
+`
 
 const RoadmapSection = styled(Section)`
   background: #f9fafc;
   margin-top: -25px;
   z-index: -1;
-`;
+`
 const Container = styled.div`
   width: 100%;
   margin: 0;
   padding: 50px 0;
   text-align: center;
   ${medium('padding: 50px 8.5%;')};
-`;
+`
 
 const Title = styled.h1`
   line-height: 26px;
@@ -202,14 +202,14 @@ const Title = styled.h1`
   margin: 0;
   margin-bottom: 10px;
   font-weight: 600;
-`;
+`
 
 const Subtitle = styled.h6`
   line-height: 28px;
   font-size: 14px;
   color: #60809c;
   max-width: 350px;
-`;
+`
 
 const Module = styled.div`
   background: #ffffff;
@@ -244,6 +244,6 @@ const Module = styled.div`
     justify-content: flex-start;
     ${medium('text-align: right; display: inherit; min-height: auto;')}
   }
-`;
+`
 
-export default AragonNetwork;
+export default AragonNetwork

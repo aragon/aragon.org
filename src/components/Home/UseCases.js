@@ -1,41 +1,41 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Badge} from '@aragon/ui';
-import {FormattedMessage} from 'react-intl';
-import Carousel from 'react-bootstrap/Carousel';
-import Section from '../General/Section';
-import blankDAO from './home-assets/usecases/blankDAO.png';
-import aragonNetwork from './home-assets/usecases/aragon-network.png';
-import melon from './home-assets/usecases/melon.png';
-import pool from './home-assets/usecases/pool.png';
-import hive from './home-assets/usecases/1hive.png';
-import prev from './home-assets/arrow-carousel-prev.svg';
-import next from './home-assets/arrow-carousel-next.svg';
+import React from 'react'
+import styled from 'styled-components'
+import { Badge } from '@aragon/ui'
+import { FormattedMessage } from 'react-intl'
+import Carousel from 'react-bootstrap/Carousel'
+import Section from '../General/Section'
+import blankDAO from './home-assets/usecases/blankDAO.png'
+import aragonNetwork from './home-assets/usecases/aragon-network.png'
+import melon from './home-assets/usecases/melon.png'
+import pool from './home-assets/usecases/pool.png'
+import hive from './home-assets/usecases/1hive.png'
+import prev from './home-assets/arrow-carousel-prev.svg'
+import next from './home-assets/arrow-carousel-next.svg'
 
-import {breakpoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 class UseCases extends React.Component {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.handleSelect = this.handleSelect.bind(this);
+    this.handleSelect = this.handleSelect.bind(this)
 
     this.state = {
       index: 0,
       direction: null,
-    };
+    }
   }
 
   handleSelect(selectedIndex, e) {
     this.setState({
       index: selectedIndex,
       direction: e.direction,
-    });
+    })
   }
   render() {
-    const {index, direction} = this.state;
+    const { index, direction } = this.state
     return (
       <UseCasesSection>
         <Container>
@@ -44,7 +44,8 @@ class UseCases extends React.Component {
             direction={direction}
             nextIcon={<img src={next} />}
             prevIcon={<img src={prev} />}
-            onSelect={this.handleSelect}>
+            onSelect={this.handleSelect}
+          >
             <Carousel.Item>
               <UseCase>
                 <img src={aragonNetwork} />
@@ -73,7 +74,8 @@ class UseCases extends React.Component {
                     <a
                       target="_blank"
                       className="action-button"
-                      href="https://mainnet.aragon.org/#/governance.aragonproject.eth/">
+                      href="https://mainnet.aragon.org/#/governance.aragonproject.eth/"
+                    >
                       {' '}
                       <FormattedMessage
                         id="home.usecases.aragonnetwork.link"
@@ -85,7 +87,8 @@ class UseCases extends React.Component {
                   <a
                     className="secondary-button"
                     target="_blank"
-                    href="https://github.com/aragon/AGPs/blob/master/AGPs/AGP-1.md">
+                    href="https://github.com/aragon/AGPs/blob/master/AGPs/AGP-1.md"
+                  >
                     <FormattedMessage
                       id="home.usecases.aragonnetwork.link2"
                       defaultMessage="How the Aragon Network uses Aragon"
@@ -122,7 +125,8 @@ class UseCases extends React.Component {
                     <a
                       target="_blank"
                       className="action-button"
-                      href="https://mainnet.aragon.org/#/blankdao.aragonid.eth/">
+                      href="https://mainnet.aragon.org/#/blankdao.aragonid.eth/"
+                    >
                       {' '}
                       <FormattedMessage
                         id="home.usecases.blankdao.link1"
@@ -134,7 +138,8 @@ class UseCases extends React.Component {
                   <a
                     className="secondary-button"
                     target="_blank"
-                    href="https://docs.google.com/document/d/1mAGAZ5TAbJoTJoNCAwMUKLhEHD-WW-tzc0dHhbsl1gU/edit">
+                    href="https://docs.google.com/document/d/1mAGAZ5TAbJoTJoNCAwMUKLhEHD-WW-tzc0dHhbsl1gU/edit"
+                  >
                     <FormattedMessage
                       id="home.usecases.blankdao.link2"
                       defaultMessage="How BlankDAO uses Aragon"
@@ -171,7 +176,8 @@ class UseCases extends React.Component {
                     <a
                       target="_blank"
                       className="action-button"
-                      href="https://aragon.mainnet.aragonpm.com/#/0xfe1f2de598f42ce67bb9aad5ad473f0272d09b74/0x3d5f4417b7fb63aaf3b2aa23fc227e3ddebb951b">
+                      href="https://aragon.mainnet.aragonpm.com/#/0xfe1f2de598f42ce67bb9aad5ad473f0272d09b74/0x3d5f4417b7fb63aaf3b2aa23fc227e3ddebb951b"
+                    >
                       {' '}
                       <FormattedMessage
                         id="home.usecases.melon.link1"
@@ -183,7 +189,8 @@ class UseCases extends React.Component {
                   <a
                     className="secondary-button"
                     target="_blank"
-                    href="https://medium.com/melonprotocol/launching-the-melon-council-dao-on-aragonos-42147c86582">
+                    href="https://medium.com/melonprotocol/launching-the-melon-council-dao-on-aragonos-42147c86582"
+                  >
                     <FormattedMessage
                       id="home.usecases.melon.link2"
                       defaultMessage="How Melon Council uses Aragon"
@@ -220,7 +227,8 @@ class UseCases extends React.Component {
                     <a
                       target="_blank"
                       className="action-button"
-                      href="https://mainnet.aragon.org/#/pooltogether/0x7e3797a24114afcfd09e953cda490d81863ec32f">
+                      href="https://mainnet.aragon.org/#/pooltogether/0x7e3797a24114afcfd09e953cda490d81863ec32f"
+                    >
                       {' '}
                       <FormattedMessage
                         id="home.usecases.pool.link1"
@@ -232,7 +240,8 @@ class UseCases extends React.Component {
                   <a
                     className="secondary-button"
                     target="_blank"
-                    href="https://twitter.com/PoolTogether_/status/1143129765047656448">
+                    href="https://twitter.com/PoolTogether_/status/1143129765047656448"
+                  >
                     <FormattedMessage
                       id="home.usecases.pool.link2"
                       defaultMessage="How Pool Together uses Aragon"
@@ -269,7 +278,8 @@ class UseCases extends React.Component {
                     <a
                       target="_blank"
                       className="action-button"
-                      href="https://rinkeby.aragon.org/#/0xe520428C232F6Da6f694b121181f907931fD2211/0xc2555abaed3797b52248e814172d2bea6728e542">
+                      href="https://rinkeby.aragon.org/#/0xe520428C232F6Da6f694b121181f907931fD2211/0xc2555abaed3797b52248e814172d2bea6728e542"
+                    >
                       {' '}
                       <FormattedMessage
                         id="home.usecases.1hive.link1"
@@ -280,7 +290,8 @@ class UseCases extends React.Component {
                   <a
                     className="secondary-button"
                     target="_blank"
-                    href="https://1hive.org/contribute/membership">
+                    href="https://1hive.org/contribute/membership"
+                  >
                     <FormattedMessage
                       id="home.usecases.1hive.link2"
                       defaultMessage="How 1Hive uses Aragon"
@@ -292,7 +303,7 @@ class UseCases extends React.Component {
           </Carousel>
         </Container>
       </UseCasesSection>
-    );
+    )
   }
 }
 const UseCasesBadge = styled(Badge)`
@@ -301,14 +312,14 @@ const UseCasesBadge = styled(Badge)`
   padding: 1px 15px 0 !important;
   line-height: 2 !important;
   margin-bottom: 30px;
-`;
+`
 const UseCasesSection = styled(Section)`
   background-color: white;
   padding: 100px 15px 30px 15px;
   .container {
     padding: 0;
   }
-`;
+`
 const Container = styled.div`
   img {
     max-width: 100%;
@@ -338,7 +349,7 @@ const Container = styled.div`
   .carousel-indicators {
     display: none;
   }
-`;
+`
 const UseCase = styled.div`
   background: #f9fafc;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0726053);
@@ -386,5 +397,5 @@ const UseCase = styled.div`
     line-height: 1.5;
     text-align: center;
   }
-`;
-export default UseCases;
+`
+export default UseCases

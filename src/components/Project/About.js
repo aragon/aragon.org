@@ -1,16 +1,16 @@
-import React from 'react';
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import {breakpoint} from '@aragon/ui';
-import Section from '../General/Section';
-import LongCard from '../General/LongCard';
-import Card from '../General/Card';
-import AlmostFullSection from '../General/AlmostFullSection';
-import image from './assets/project-governance.png';
-import history from './assets/history.svg';
+import React from 'react'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import { breakpoint } from '@aragon/ui'
+import Section from '../General/Section'
+import LongCard from '../General/LongCard'
+import Card from '../General/Card'
+import AlmostFullSection from '../General/AlmostFullSection'
+import image from './assets/project-governance.png'
+import history from './assets/history.svg'
 
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 const mudule1Content = (
   <span>
@@ -32,7 +32,7 @@ const mudule1Content = (
       </Link>
     </p>
   </span>
-);
+)
 const mudule2Content = (
   <span>
     <p>
@@ -53,7 +53,7 @@ const mudule2Content = (
       </Link>
     </p>
   </span>
-);
+)
 
 const About = () => (
   <div>
@@ -141,7 +141,7 @@ const About = () => (
       </Container>
     </AboutSection>
   </div>
-);
+)
 
 const AlmostFullSectionBox = styled.div`
   h3 {
@@ -166,7 +166,7 @@ const AlmostFullSectionBox = styled.div`
     letter-spacing: 0.315px;
     color: #ffffff;
   }
-`;
+`
 const History = styled.div`
   display: flex;
   flex-direction: column;
@@ -195,7 +195,7 @@ const History = styled.div`
     margin: 30px 0;
     ${medium('margin: 0; width: auto;')};
   }
-`;
+`
 
 const Container = styled.div`
   display: grid;
@@ -206,7 +206,7 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-`;
+`
 
 const AboutSection = styled(Section)`
   padding: 90px 15px;
@@ -214,5 +214,5 @@ const AboutSection = styled(Section)`
     margin-bottom: 0;
     width: auto;
   }
-`;
-export default About;
+`
+export default About

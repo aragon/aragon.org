@@ -17,11 +17,11 @@
     "defaultMessage": "Good first issues",
     "file": "src/components/Project/ContributeContent.js",
     "start": {
-      "line": 28,
+      "line": 29,
       "column": 10
     },
     "end": {
-      "line": 31,
+      "line": 32,
       "column": 12
     }
   },
@@ -30,11 +30,11 @@
     "defaultMessage": "We are looking for great people to expand the project. If you want to apply for a job, there are different positions open across multiple Aragon teams.",
     "file": "src/components/Project/ContributeContent.js",
     "start": {
-      "line": 41,
+      "line": 42,
       "column": 6
     },
     "end": {
-      "line": 44,
+      "line": 45,
       "column": 8
     }
   },
@@ -43,11 +43,11 @@
     "defaultMessage": "Apply",
     "file": "src/components/Project/ContributeContent.js",
     "start": {
-      "line": 52,
+      "line": 54,
       "column": 10
     },
     "end": {
-      "line": 55,
+      "line": 57,
       "column": 12
     }
   },
@@ -56,11 +56,11 @@
     "defaultMessage": "A thriving ecosystem",
     "file": "src/components/Project/ContributeContent.js",
     "start": {
-      "line": 67,
+      "line": 69,
       "column": 8
     },
     "end": {
-      "line": 70,
+      "line": 72,
       "column": 10
     }
   },
@@ -69,11 +69,11 @@
     "defaultMessage": "Our vision is to decentralize Aragon’s development. There are different teams working on many parts of the project, but all aligned towards the same mission. The current teams are Aragon Black, Aragon One, and Autark.",
     "file": "src/components/Project/ContributeContent.js",
     "start": {
-      "line": 73,
+      "line": 75,
       "column": 8
     },
     "end": {
-      "line": 76,
+      "line": 78,
       "column": 10
     }
   },
@@ -82,11 +82,11 @@
     "defaultMessage": "Website",
     "file": "src/components/Project/ContributeContent.js",
     "start": {
-      "line": 85,
+      "line": 87,
       "column": 12
     },
     "end": {
-      "line": 88,
+      "line": 90,
       "column": 14
     }
   },
@@ -95,11 +95,11 @@
     "defaultMessage": "Website",
     "file": "src/components/Project/ContributeContent.js",
     "start": {
-      "line": 98,
+      "line": 100,
       "column": 12
     },
     "end": {
-      "line": 101,
+      "line": 103,
       "column": 14
     }
   },
@@ -108,11 +108,11 @@
     "defaultMessage": "Website",
     "file": "src/components/Project/ContributeContent.js",
     "start": {
-      "line": 111,
+      "line": 113,
       "column": 12
     },
     "end": {
-      "line": 114,
+      "line": 116,
       "column": 14
     }
   },
@@ -121,11 +121,11 @@
     "defaultMessage": "Help with open issues",
     "file": "src/components/Project/ContributeContent.js",
     "start": {
-      "line": 125,
+      "line": 127,
       "column": 10
     },
     "end": {
-      "line": 128,
+      "line": 130,
       "column": 12
     }
   },
@@ -134,11 +134,11 @@
     "defaultMessage": "Aragon teams are hiring",
     "file": "src/components/Project/ContributeContent.js",
     "start": {
-      "line": 137,
+      "line": 139,
       "column": 10
     },
     "end": {
-      "line": 140,
+      "line": 142,
       "column": 12
     }
   }

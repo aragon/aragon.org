@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import Section from '../General/Section';
-import {Link} from 'react-static';
-import {breakpoint} from '@aragon/ui';
-import {FormattedMessage} from 'react-intl';
+import React from 'react'
+import styled from 'styled-components'
+import Section from '../General/Section'
+import { Link } from 'react-static'
+import { breakpoint } from '@aragon/ui'
+import { FormattedMessage } from 'react-intl'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Hero = () => (
   <HeroSection>
@@ -36,7 +36,8 @@ const Hero = () => (
       <a
         className="principal-button centered"
         mode="strong"
-        href="https://app.aragon.org">
+        href="https://app.aragon.org"
+      >
         <FormattedMessage
           id="home.hero.action1"
           defaultMessage="Try the product"
@@ -50,7 +51,7 @@ const Hero = () => (
       </Link>
     </ButtonContainer>
   </HeroSection>
-);
+)
 
 const HeroSection = styled(Section)`
   position: relative;
@@ -67,7 +68,7 @@ const HeroSection = styled(Section)`
     margin-top: 50px;
     ${medium('margin-top: 112px;')}
   }
-`;
+`
 const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
@@ -80,7 +81,7 @@ const ButtonContainer = styled.div`
     min-width: 186px;
     ${medium('min-width: auto; margin: 0 10px;')};
   }
-`;
+`
 const TextContainer = styled.div`
   width: 100%;
   text-align: center;
@@ -130,5 +131,5 @@ const TextContainer = styled.div`
     max-width: 632px !important;
     margin: 20px auto 30px auto !important;
   }
-`;
-export default Hero;
+`
+export default Hero

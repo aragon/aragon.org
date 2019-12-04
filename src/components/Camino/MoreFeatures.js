@@ -1,19 +1,19 @@
-import React from 'react';
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
-import styled from 'styled-components';
-import {breakpoint} from '@aragon/ui';
-import Section from '../General/Section';
-import Label from './Label';
-import Feature from '../General/DividedSection';
-import image5 from './assets/image5b.png';
-import image6 from './assets/image6.png';
-import image7 from './assets/notifications.svg';
-import label1 from './assets/label-voting.svg';
-import label2 from './assets/label-finance.svg';
-import label3 from './assets/label-notifications.svg';
+import React from 'react'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import styled from 'styled-components'
+import { breakpoint } from '@aragon/ui'
+import Section from '../General/Section'
+import Label from './Label'
+import Feature from '../General/DividedSection'
+import image5 from './assets/image5b.png'
+import image6 from './assets/image6.png'
+import image7 from './assets/notifications.svg'
+import label1 from './assets/label-voting.svg'
+import label2 from './assets/label-finance.svg'
+import label3 from './assets/label-notifications.svg'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('medium', css)
 
 const MoreFeatures = () => (
   <Container>
@@ -50,7 +50,8 @@ const MoreFeatures = () => (
     <Feature
       image={image7}
       imageLeft={true}
-      sectionClass="feature notifications">
+      sectionClass="feature notifications"
+    >
       <h3 className="mailing">
         <FormattedHTMLMessage
           id="camino.more-features.feature3.title"
@@ -66,7 +67,7 @@ const MoreFeatures = () => (
       <Label title="notifications" image={label3} />
     </Feature>
   </Container>
-);
+)
 
 const Container = styled.div`
   .divided-section-image {
@@ -98,5 +99,5 @@ const Container = styled.div`
   h3.mailing {
     max-width: 369px;
   }
-`;
-export default MoreFeatures;
+`
+export default MoreFeatures

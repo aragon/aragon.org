@@ -212,11 +212,11 @@
     "defaultMessage": "Subscribe to our newsletter",
     "file": "src/components/Page/Footer.js",
     "start": {
-      "line": 137,
+      "line": 138,
       "column": 10
     },
     "end": {
-      "line": 140,
+      "line": 141,
       "column": 12
     }
   },
@@ -225,11 +225,11 @@
     "defaultMessage": "Subscribe",
     "file": "src/components/Page/Footer.js",
     "start": {
-      "line": 170,
+      "line": 174,
       "column": 14
     },
     "end": {
-      "line": 173,
+      "line": 177,
       "column": 16
     }
   }

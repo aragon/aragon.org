@@ -43,11 +43,11 @@
     "defaultMessage": "Manifesto",
     "file": "src/components/Governance/Hero.js",
     "start": {
-      "line": 33,
+      "line": 34,
       "column": 10
     },
     "end": {
-      "line": 36,
+      "line": 37,
       "column": 12
     }
   }

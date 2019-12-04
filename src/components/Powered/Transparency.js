@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import transparency from './assets/transparency.svg';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import styled from 'styled-components'
+import transparency from './assets/transparency.svg'
+import Fade from 'react-reveal/Fade'
 
-import {breakpoint, BreakPoint, Button} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint, BreakPoint, Button } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Transparency = () => (
   <TransparencySection>
@@ -23,7 +23,7 @@ const Transparency = () => (
       </Fade>
     </TextBox>
   </TransparencySection>
-);
+)
 
 const ImageContainer = styled.div`
   background: #f0c46f;
@@ -35,7 +35,7 @@ const ImageContainer = styled.div`
   justify-content: center;
   height: auto;
   ${medium('height: 720px;')};
-`;
+`
 
 const TransparencySection = styled.section`
   background-color: white;
@@ -45,7 +45,7 @@ const TransparencySection = styled.section`
   align-items: center;
   flex-direction: column;
   ${medium('flex-direction: row;')};
-`;
+`
 
 const TextBox = styled.div`
   width: 100%;
@@ -72,6 +72,6 @@ const TextBox = styled.div`
     color: #030304;
     max-width: 422px;
   }
-`;
+`
 
-export default Transparency;
+export default Transparency

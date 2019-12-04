@@ -30,11 +30,11 @@
     "defaultMessage": "Try it out",
     "file": "src/components/Discover/Hero.js",
     "start": {
-      "line": 31,
+      "line": 32,
       "column": 10
     },
     "end": {
-      "line": 34,
+      "line": 35,
       "column": 12
     }
   }

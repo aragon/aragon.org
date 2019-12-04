@@ -1,10 +1,10 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import {theme, breakpoint} from '@aragon/ui';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import { theme, breakpoint } from '@aragon/ui'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const EntryBox = styled.div`
   clear: both;
@@ -49,14 +49,15 @@ const EntryBox = styled.div`
     color: #2d4051;
     text-transform: uppercase;
   }
-`;
+`
 
-const Entry = ({...props}) => (
+const Entry = ({ ...props }) => (
   <EntryBox>
     <div
       className={
         props.className ? props.className + ' description' : 'description'
-      }>
+      }
+    >
       <p>
         <FormattedMessage
           id="project.governance.timeline.stage"
@@ -67,6 +68,6 @@ const Entry = ({...props}) => (
       {props.children}
     </div>
   </EntryBox>
-);
+)
 
-export default Entry;
+export default Entry

@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import {FormattedMessage} from 'react-intl';
-import Section from '../General/Section';
-import background from './assets/governance-cover.svg';
+import React from 'react'
+import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
+import Section from '../General/Section'
+import background from './assets/governance-cover.svg'
 
 const Hero = () => (
   <HeroSection>
@@ -29,7 +29,8 @@ const Hero = () => (
         <a
           className="principal-button"
           href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/"
-          target="_blank">
+          target="_blank"
+        >
           <FormattedMessage
             id="project.governance.hero.action"
             defaultMessage="Manifesto"
@@ -38,7 +39,7 @@ const Hero = () => (
       </div>
     </Container>
   </HeroSection>
-);
+)
 
 const HeroSection = styled(Section)`
   height: 550px;
@@ -51,7 +52,7 @@ const HeroSection = styled(Section)`
   justify-content: center;
   overflow: hidden;
   padding-top: 64px;
-`;
+`
 
 const Container = styled.div`
   height: 100%;
@@ -60,6 +61,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-`;
+`
 
-export default Hero;
+export default Hero

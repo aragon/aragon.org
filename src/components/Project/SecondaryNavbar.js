@@ -1,22 +1,22 @@
-import React from 'react';
-import styled from 'styled-components';
-import {FormattedMessage} from 'react-intl';
-import {breakpoint, SafeLink, BreakPoint, DropDown} from '@aragon/ui';
-import {Link} from 'react-static';
-import {Redirect} from 'react-router';
-import governance from './assets/secondary-navbar/governance.svg';
-import governanceActive from './assets/secondary-navbar/governanceActive.svg';
-import grants from './assets/secondary-navbar/grants.svg';
-import grantsActive from './assets/secondary-navbar/grantsActive.svg';
-import roadmap from './assets/secondary-navbar/roadmap.svg';
-import roadmapActive from './assets/secondary-navbar/roadmapActive.svg';
-import contribute from './assets/secondary-navbar/contribute.svg';
-import contributeActive from './assets/secondary-navbar/contributeActive.svg';
-import blog from './assets/secondary-navbar/blog.svg';
-import events from './assets/secondary-navbar/events.svg';
-import wiki from './assets/secondary-navbar/wiki.svg';
+import React from 'react'
+import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
+import { breakpoint, SafeLink, BreakPoint, DropDown } from '@aragon/ui'
+import { Link } from 'react-static'
+import { Redirect } from 'react-router'
+import governance from './assets/secondary-navbar/governance.svg'
+import governanceActive from './assets/secondary-navbar/governanceActive.svg'
+import grants from './assets/secondary-navbar/grants.svg'
+import grantsActive from './assets/secondary-navbar/grantsActive.svg'
+import roadmap from './assets/secondary-navbar/roadmap.svg'
+import roadmapActive from './assets/secondary-navbar/roadmapActive.svg'
+import contribute from './assets/secondary-navbar/contribute.svg'
+import contributeActive from './assets/secondary-navbar/contributeActive.svg'
+import blog from './assets/secondary-navbar/blog.svg'
+import events from './assets/secondary-navbar/events.svg'
+import wiki from './assets/secondary-navbar/wiki.svg'
 
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 const dropdownItems = [
   <span className="dropdown-span">Explore...</span>,
@@ -85,7 +85,7 @@ const dropdownItems = [
       defaultMessage="Wiki"
     />
   </span>,
-];
+]
 const dropdownNames = [
   'explore',
   'governance',
@@ -95,7 +95,7 @@ const dropdownNames = [
   'roadmap',
   'events',
   'wiki',
-];
+]
 const dropdownLinks = [
   '/project',
   '/project/governance',
@@ -105,19 +105,19 @@ const dropdownLinks = [
   '/project/roadmap',
   'https://aracon.one',
   'https://wiki.aragon.org',
-];
+]
 
 class SecondaryNavbar extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.state = {activeItem: dropdownNames.indexOf(this.props.page)};
-    this.handleChange = this.handleChange.bind(this);
+    this.state = { activeItem: dropdownNames.indexOf(this.props.page) }
+    this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(index) {
     if (index != 0) {
-      this.setState({activeItem: index});
+      this.setState({ activeItem: index })
     }
   }
   render() {
@@ -126,9 +126,9 @@ class SecondaryNavbar extends React.Component {
         dropdownLinks[this.state.activeItem].includes('https://') ||
         dropdownLinks[this.state.activeItem].includes('http://')
       ) {
-        window.location.href = dropdownLinks[this.state.activeItem];
+        window.location.href = dropdownLinks[this.state.activeItem]
       } else {
-        return <Redirect to={dropdownLinks[this.state.activeItem]} />;
+        return <Redirect to={dropdownLinks[this.state.activeItem]} />
       }
     }
     return (
@@ -142,7 +142,8 @@ class SecondaryNavbar extends React.Component {
                   this.props.page === 'governance' &&
                   'governance active'
                 }
-                to="/project/governance">
+                to="/project/governance"
+              >
                 {this.props.page === 'governance' ? (
                   <img src={governanceActive} />
                 ) : (
@@ -161,7 +162,8 @@ class SecondaryNavbar extends React.Component {
                   this.props.page === 'grants' &&
                   'grants active'
                 }
-                to="/project/grants">
+                to="/project/grants"
+              >
                 {this.props.page === 'grants' ? (
                   <img src={grantsActive} />
                 ) : (
@@ -180,7 +182,8 @@ class SecondaryNavbar extends React.Component {
                   this.props.page === 'contribute' &&
                   'contribute active'
                 }
-                to="/project/contribute">
+                to="/project/contribute"
+              >
                 {this.props.page === 'contribute' ? (
                   <img src={contributeActive} />
                 ) : (
@@ -208,7 +211,8 @@ class SecondaryNavbar extends React.Component {
                     ? 'roadmap active roadmap-item'
                     : 'roadmap-item'
                 }
-                to="/project/roadmap">
+                to="/project/roadmap"
+              >
                 {this.props.page === 'roadmap' ? (
                   <img src={roadmapActive} />
                 ) : (
@@ -254,7 +258,7 @@ class SecondaryNavbar extends React.Component {
           </DropDownContainer>
         </BreakPoint>
       </div>
-    );
+    )
   }
 }
 
@@ -279,14 +283,14 @@ const DropDownContainer = styled.div`
     width: 40px;
     text-align: left;
   }
-`;
+`
 
 const Navbar = styled.nav`
   height: 131px;
   ${medium('height: 171px;')};
   background-color: white;
   padding-top: 32px;
-`;
+`
 const Container = styled.nav`
   display: flex;
   justify-content: space-around;
@@ -331,7 +335,7 @@ const Container = styled.nav`
   .roadmap.active {
     background: linear-gradient(134.26deg, #658499 -12.72%, #9fc5c8 96.2%);
   }
-`;
+`
 const Item = styled(SafeLink)`
   text-align: center;
   cursor: pointer;
@@ -346,7 +350,7 @@ const Item = styled(SafeLink)`
   &:hover {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.17);
   }
-`;
+`
 const InternalItem = styled(Link)`
   text-align: center;
   cursor: pointer;
@@ -361,6 +365,6 @@ const InternalItem = styled(Link)`
   &:hover {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.17);
   }
-`;
+`
 
-export default SecondaryNavbar;
+export default SecondaryNavbar

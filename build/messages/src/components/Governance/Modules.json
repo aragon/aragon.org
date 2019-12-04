@@ -30,11 +30,11 @@
     "defaultMessage": "Create Proposal",
     "file": "src/components/Governance/Modules.js",
     "start": {
-      "line": 37,
+      "line": 38,
       "column": 16
     },
     "end": {
-      "line": 40,
+      "line": 41,
       "column": 18
     }
   },
@@ -43,11 +43,11 @@
     "defaultMessage": "<span>Learn about <br />ANT</span>",
     "file": "src/components/Governance/Modules.js",
     "start": {
-      "line": 49,
+      "line": 50,
       "column": 10
     },
     "end": {
-      "line": 52,
+      "line": 53,
       "column": 12
     }
   },
@@ -56,11 +56,11 @@
     "defaultMessage": "The Aragon Network Token (ANT) is used to govern the Aragon Network. The quickest way to acquire ANT is to buy some on an exchange.",
     "file": "src/components/Governance/Modules.js",
     "start": {
-      "line": 57,
+      "line": 58,
       "column": 14
     },
     "end": {
-      "line": 60,
+      "line": 61,
       "column": 16
     }
   },
@@ -69,11 +69,11 @@
     "defaultMessage": "Learn More",
     "file": "src/components/Governance/Modules.js",
     "start": {
-      "line": 67,
+      "line": 69,
       "column": 16
     },
     "end": {
-      "line": 70,
+      "line": 72,
       "column": 18
     }
   }

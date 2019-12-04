@@ -17,11 +17,11 @@
     "defaultMessage": "Watch the video now",
     "file": "src/components/Bella/Video.js",
     "start": {
-      "line": 48,
+      "line": 49,
       "column": 18
     },
     "end": {
-      "line": 51,
+      "line": 52,
       "column": 20
     }
   },
@@ -30,11 +30,11 @@
     "defaultMessage": "Watch the video now",
     "file": "src/components/Bella/Video.js",
     "start": {
-      "line": 58,
+      "line": 59,
       "column": 16
     },
     "end": {
-      "line": 61,
+      "line": 62,
       "column": 18
     }
   }

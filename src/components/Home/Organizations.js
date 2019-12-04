@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
-import aragonImage from './home-assets/compu_home.png';
-import Section from '../General/Section';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import aragonImage from './home-assets/compu_home.png'
+import Section from '../General/Section'
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
 const Organizations = () => (
   <Organization>
@@ -39,7 +39,7 @@ const Organizations = () => (
       </ImageContainer>
     </Box>
   </Organization>
-);
+)
 
 const Organization = styled(Section)`
   background-color: white;
@@ -49,14 +49,14 @@ const Organization = styled(Section)`
   align-items: center;
   justify-content: center;
   ${medium('padding: 120px;')}
-`;
+`
 const Box = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
   ${medium('flex-direction: row;')}
-`;
+`
 const Container = styled.div`
   width: 100%;
   ${medium('width: 60%;')}
@@ -92,17 +92,17 @@ const Container = styled.div`
     font-family: 'FontMedium', sans-serif;
     max-width: 333px;
   }
-`;
+`
 const Image = styled.img`
   max-width: 100%;
   margin-top: 30px;
   ${medium('max-width: calc(100% + 413px); margin-top: 0;')}
-`;
+`
 
 const ImageContainer = styled.div`
   width: 100%;
   text-align: center;
   margin: auto;
-`;
+`
 
-export default Organizations;
+export default Organizations
