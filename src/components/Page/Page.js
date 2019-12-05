@@ -61,7 +61,12 @@ class Page extends React.Component {
                       <Dropdown.Item
                         onClick={() => {
                           localStorage.setItem('locale', 'en')
-                          window.location.reload(false)
+                          if (window.location.href.indexOf('/es/') >= 0) {
+                            let url = window.location.href.split('/es/')
+                            window.location.href = url[0] + '/en/' + url[1]
+                          } else {
+                            window.location.reload(false)
+                          }
                         }}
                       >
                         <img src={en} /> English
@@ -69,7 +74,12 @@ class Page extends React.Component {
                       <Dropdown.Item
                         onClick={() => {
                           localStorage.setItem('locale', 'es')
-                          window.location.reload(false)
+                          if (window.location.href.indexOf('/en/') >= 0) {
+                            let url = window.location.href.split('/en/')
+                            window.location.href = url[0] + '/es/' + url[1]
+                          } else {
+                            window.location.reload(false)
+                          }
                         }}
                       >
                         <img src={es} /> Español

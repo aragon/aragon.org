@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-static'
+import { injectIntl, intlShape } from 'react-intl'
 import { Text, breakpoint, BreakPoint, SafeLink } from '@aragon/ui'
 import MenuItem from './MenuItem'
 import MenuPanel from './MenuPanel'
@@ -8,9 +9,9 @@ import { Spring, animated } from 'react-spring'
 const medium = css => breakpoint('medium', css)
 import logo from './assets/logo.svg'
 
-const renderMenuItemLink = ({ url, children }) =>
+const renderMenuItemLink = ({ url, children, locale }) =>
   url.startsWith('/') ? (
-    <Link to={url}>{children}</Link>
+    <Link to={locale ? '/' + locale + url : url}>{children}</Link>
   ) : (
     <SafeLink href={url}>{children}</SafeLink>
   )
@@ -31,6 +32,10 @@ class Navbar extends React.Component {
       image: 44,
       opacity: 0,
     }
+  }
+
+  static propTypes = {
+    intl: intlShape.isRequired,
   }
 
   componentDidMount() {
@@ -72,7 +77,7 @@ class Navbar extends React.Component {
   }
 
   render() {
-    const { menuItems, path, color } = this.props
+    const { menuItems, path, color, intl } = this.props
     let background = 'rgba(28, 36, 46, '
     if (color && color == 'black') {
       background = 'rgba(254, 254, 254, '
@@ -85,13 +90,23 @@ class Navbar extends React.Component {
         menuItems={menuItems}
         path={path}
         color={color}
+        locale={intl.locale}
         background={background}
       />
     )
   }
 }
 
-const Inside = ({ x, h, opacity, menuItems, path, background, color }) => (
+const Inside = ({
+  x,
+  h,
+  opacity,
+  menuItems,
+  path,
+  background,
+  color,
+  locale,
+}) => (
   <AragonNavbar
     style={{
       height: h,
@@ -122,7 +137,7 @@ const Inside = ({ x, h, opacity, menuItems, path, background, color }) => (
         </ul>
         <ul>
           <li className="logo">
-            <LogoLink to="/">
+            <LogoLink to={locale ? '/' + locale + '/' : '/'}>
               <img src={logo} />
             </LogoLink>
           </li>
@@ -154,7 +169,7 @@ const Inside = ({ x, h, opacity, menuItems, path, background, color }) => (
           renderLink={renderMenuItemLink}
           color={color}
         />
-        <Link to={'/'}>
+        <Link to={locale ? '/' + locale + '/' : '/'}>
           <span>
             <MobileLogo src={logo} />
           </span>
@@ -254,4 +269,4 @@ const MobileLogo = styled.img`
   height: 62%;
 `
 
-export default Navbar
+export default injectIntl(Navbar)

@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, breakpoint, SafeLink } from '@aragon/ui'
 import { Link } from 'react-static'
 import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import Section from '../General/Section'
 import backgroundImage from './assets/prefooter.png'
 import logo from './assets/logo-footer.svg'
@@ -39,7 +39,14 @@ const Footer = ({ ...props }) => (
             defaultMessage="Try the product"
           />
         </a>
-        <Link to="/discover" className="secondary-button centered">
+        <Link
+          to={
+            props.intl.locale
+              ? '/' + props.intl.locale + '/discover'
+              : '/discover'
+          }
+          className="secondary-button centered"
+        >
           <FormattedMessage
             id="page.footer.link2"
             defaultMessage="Discover Aragon"
@@ -49,24 +56,42 @@ const Footer = ({ ...props }) => (
     </PreFooter>
     <Container>
       <Item className="mobile-full">
-        <Link to="/">
+        <Link to={props.intl.locale ? '/' + props.intl.locale + '/' : '/'}>
           <LogoImg src={logo} />
         </Link>
       </Item>
       <Item>
-        <Link to="/">
+        <Link to={props.intl.locale ? '/' + props.intl.locale + '/' : '/'}>
           <FormattedMessage id="page.footer.home" defaultMessage="Home" />
         </Link>
-        <Link to="/discover">
+        <Link
+          to={
+            props.intl.locale
+              ? '/' + props.intl.locale + '/discover'
+              : '/discover'
+          }
+        >
           <FormattedMessage
             id="page.footer.discover"
             defaultMessage="Discover"
           />
         </Link>
-        <Link to="/project">
+        <Link
+          to={
+            props.intl.locale
+              ? '/' + props.intl.locale + '/project'
+              : '/project'
+          }
+        >
           <FormattedMessage id="page.footer.project" defaultMessage="Project" />
         </Link>
-        <Link to="/network">
+        <Link
+          to={
+            props.intl.locale
+              ? '/' + props.intl.locale + '/network'
+              : '/network'
+          }
+        >
           <FormattedMessage id="page.footer.network" defaultMessage="Network" />
         </Link>
       </Item>
@@ -83,10 +108,22 @@ const Footer = ({ ...props }) => (
             defaultMessage="Security"
           />
         </a>
-        <Link to="/project/grants">
+        <Link
+          to={
+            props.intl.locale
+              ? '/' + props.intl.locale + '/project/grants'
+              : '/project/grants'
+          }
+        >
           <FormattedMessage id="page.footer.grants" defaultMessage="Grants" />
         </Link>
-        <Link to="/project/governance">
+        <Link
+          to={
+            props.intl.locale
+              ? '/' + props.intl.locale + '/project/governance'
+              : '/project/governance'
+          }
+        >
           <FormattedMessage
             id="page.footer.governance"
             defaultMessage="Governance"
@@ -94,7 +131,13 @@ const Footer = ({ ...props }) => (
         </Link>
       </Item>
       <Item>
-        <Link to="/project/contribute">
+        <Link
+          to={
+            props.intl.locale
+              ? '/' + props.intl.locale + '/project/contribute'
+              : '/project/contribute'
+          }
+        >
           <FormattedMessage
             id="page.footer.contribute"
             defaultMessage="Contribute"
@@ -182,6 +225,10 @@ const Footer = ({ ...props }) => (
     </Container>
   </FooterSection>
 )
+
+const propTypes = {
+  intl: intlShape.isRequired,
+}
 
 const FooterSection = styled(Section)`
   background-color: #f9fafc;
@@ -345,4 +392,4 @@ const LogoImg = styled.img`
   height: 50px;
 `
 
-export default Footer
+export default injectIntl(Footer)

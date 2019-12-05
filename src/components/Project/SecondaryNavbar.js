@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import { breakpoint, SafeLink, BreakPoint, DropDown } from '@aragon/ui'
 import { Link } from 'react-static'
 import { Redirect } from 'react-router'
@@ -142,7 +142,11 @@ class SecondaryNavbar extends React.Component {
                   this.props.page === 'governance' &&
                   'governance active'
                 }
-                to="/project/governance"
+                to={
+                  this.props.intl.locale
+                    ? '/' + this.props.intl.locale + '/project/governance'
+                    : '/project/governance'
+                }
               >
                 {this.props.page === 'governance' ? (
                   <img src={governanceActive} />
@@ -162,7 +166,11 @@ class SecondaryNavbar extends React.Component {
                   this.props.page === 'grants' &&
                   'grants active'
                 }
-                to="/project/grants"
+                to={
+                  this.props.intl.locale
+                    ? '/' + this.props.intl.locale + '/project/grants'
+                    : '/project/grants'
+                }
               >
                 {this.props.page === 'grants' ? (
                   <img src={grantsActive} />
@@ -182,7 +190,11 @@ class SecondaryNavbar extends React.Component {
                   this.props.page === 'contribute' &&
                   'contribute active'
                 }
-                to="/project/contribute"
+                to={
+                  this.props.intl.locale
+                    ? '/' + this.props.intl.locale + '/project/contribute'
+                    : '/project/contribute'
+                }
               >
                 {this.props.page === 'contribute' ? (
                   <img src={contributeActive} />
@@ -211,7 +223,11 @@ class SecondaryNavbar extends React.Component {
                     ? 'roadmap active roadmap-item'
                     : 'roadmap-item'
                 }
-                to="/project/roadmap"
+                to={
+                  this.props.intl.locale
+                    ? '/' + this.props.intl.locale + '/project/roadmap'
+                    : '/project/roadmap'
+                }
               >
                 {this.props.page === 'roadmap' ? (
                   <img src={roadmapActive} />
@@ -367,4 +383,8 @@ const InternalItem = styled(Link)`
   }
 `
 
-export default SecondaryNavbar
+const propTypes = {
+  intl: intlShape.isRequired,
+}
+
+export default injectIntl(SecondaryNavbar)

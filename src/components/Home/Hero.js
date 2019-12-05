@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import Section from '../General/Section'
 import { Link } from 'react-static'
 import { breakpoint } from '@aragon/ui'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 const medium = css => breakpoint('medium', css)
 const large = css => breakpoint('large', css)
 
-const Hero = () => (
+const Hero = ({ ...props }) => (
   <HeroSection>
     <TextContainer>
       <h1>
@@ -43,7 +43,14 @@ const Hero = () => (
           defaultMessage="Try the product"
         />
       </a>
-      <Link className="secondary-button centered" to="discover">
+      <Link
+        className="secondary-button centered"
+        to={
+          props.intl.locale
+            ? '/' + props.intl.locale + '/discover'
+            : '/discover'
+        }
+      >
         <FormattedMessage
           id="home.hero.action2"
           defaultMessage="Discover Aragon"
@@ -132,4 +139,8 @@ const TextContainer = styled.div`
     margin: 20px auto 30px auto !important;
   }
 `
-export default Hero
+const propTypes = {
+  intl: intlShape.isRequired,
+}
+
+export default injectIntl(Hero)

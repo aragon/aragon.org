@@ -1,5 +1,10 @@
 import React from 'react'
-import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import {
+  FormattedMessage,
+  FormattedHTMLMessage,
+  injectIntl,
+  intlShape,
+} from 'react-intl'
 import styled from 'styled-components'
 import { Link } from 'react-static'
 import { breakpoint } from '@aragon/ui'
@@ -12,50 +17,7 @@ import history from './assets/history.svg'
 
 const medium = css => breakpoint('medium', css)
 
-const mudule1Content = (
-  <span>
-    <p>
-      <FormattedMessage
-        id="project.home.about.module1.content"
-        defaultMessage="Aragon is creating a whole stack of decentralized technologies that merge seamlessly with people’s everyday work. Aragon Nest helps bring it to reality."
-      />
-    </p>
-    <p>
-      <Link className="action-button" to="/project/grants">
-        <span>
-          <FormattedMessage
-            id="project.home.about.module1.action"
-            defaultMessage="Discover Nest"
-          />
-          <img src={require(`../General/assets/arrow.svg`)} />
-        </span>
-      </Link>
-    </p>
-  </span>
-)
-const mudule2Content = (
-  <span>
-    <p>
-      <FormattedMessage
-        id="project.home.about.module2.content"
-        defaultMessage="Our community is always looking for individuals who want to help our fight for freedom. Check out how to contribute or check open positions."
-      />
-    </p>
-    <p>
-      <Link className="action-button" to="/project/contribute">
-        <span>
-          <FormattedMessage
-            id="project.home.about.module2.action"
-            defaultMessage="Contribute"
-          />
-          <img src={require(`../General/assets/arrow.svg`)} />
-        </span>
-      </Link>
-    </p>
-  </span>
-)
-
-const About = () => (
+const About = ({ ...props }) => (
   <div>
     <Section>
       <History>
@@ -78,7 +40,14 @@ const About = () => (
               defaultMessage="The project was originally started by Luis Cuende and Jorge Izquierdo in November 2016."
             />
           </p>
-          <Link className="action-button" to="/project/roadmap">
+          <Link
+            className="action-button"
+            to={
+              props.intl.locale
+                ? '/' + props.intl.locale + '/project/roadmap'
+                : '/project/roadmap'
+            }
+          >
             <span>
               <FormattedMessage
                 id="project.home.about.history.action"
@@ -106,12 +75,18 @@ const About = () => (
             defaultMessage="The Aragon project has a strong commitment to decentralize its own existence. The community now has control over its own future."
           />
         </p>
-        <a href="https://aragon.org/project/governance">
+        <Link
+          to={
+            props.intl.locale
+              ? '/' + props.intl.locale + '/project/governance'
+              : '/project/governance'
+          }
+        >
           <FormattedMessage
             id="project.home.about.governance.action"
             defaultMessage="About Aragon governance"
           />
-        </a>
+        </Link>
       </AlmostFullSectionBox>
     </AlmostFullSection>
     <AboutSection>
@@ -125,7 +100,34 @@ const About = () => (
               defaultMessage="Nest, our grants program"
             />
           }
-          content={mudule1Content}
+          content={
+            <span>
+              <p>
+                <FormattedMessage
+                  id="project.home.about.module1.content"
+                  defaultMessage="Aragon is creating a whole stack of decentralized technologies that merge seamlessly with people’s everyday work. Aragon Nest helps bring it to reality."
+                />
+              </p>
+              <p>
+                <Link
+                  className="action-button"
+                  to={
+                    props.intl.locale
+                      ? '/' + props.intl.locale + '/project/grants'
+                      : '/project/grants'
+                  }
+                >
+                  <span>
+                    <FormattedMessage
+                      id="project.home.about.module1.action"
+                      defaultMessage="Discover Nest"
+                    />
+                    <img src={require(`../General/assets/arrow.svg`)} />
+                  </span>
+                </Link>
+              </p>
+            </span>
+          }
         />
         <Card
           linkTo="/project/contribute"
@@ -136,12 +138,43 @@ const About = () => (
               defaultMessage="<span>Join<br /> the fight</span>"
             />
           }
-          content={mudule2Content}
+          content={
+            <span>
+              <p>
+                <FormattedMessage
+                  id="project.home.about.module2.content"
+                  defaultMessage="Our community is always looking for individuals who want to help our fight for freedom. Check out how to contribute or check open positions."
+                />
+              </p>
+              <p>
+                <Link
+                  className="action-button"
+                  to={
+                    props.intl.locale
+                      ? '/' + props.intl.locale + '/project/contribute'
+                      : '/project/contribute'
+                  }
+                >
+                  <span>
+                    <FormattedMessage
+                      id="project.home.about.module2.action"
+                      defaultMessage="Contribute"
+                    />
+                    <img src={require(`../General/assets/arrow.svg`)} />
+                  </span>
+                </Link>
+              </p>
+            </span>
+          }
         />
       </Container>
     </AboutSection>
   </div>
 )
+
+const propTypes = {
+  intl: intlShape.isRequired,
+}
 
 const AlmostFullSectionBox = styled.div`
   h3 {
@@ -215,4 +248,5 @@ const AboutSection = styled(Section)`
     width: auto;
   }
 `
-export default About
+
+export default injectIntl(About)

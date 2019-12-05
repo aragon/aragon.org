@@ -29,6 +29,12 @@ if (typeof window !== 'undefined') {
   if (!localStorage.getItem('locale')) {
     localStorage.setItem('locale', language)
   }
+  if (window.location.href.indexOf('/en/') >= 0) {
+    localStorage.setItem('locale', 'en')
+  }
+  if (window.location.href.indexOf('/es/') >= 0) {
+    localStorage.setItem('locale', 'es')
+  }
 }
 
 // Render your app

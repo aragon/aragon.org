@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import styled from 'styled-components'
 import { Link } from 'react-static'
 import Section from '../General/Section'
@@ -9,7 +9,7 @@ import AlmostFullSection from '../General/AlmostFullSection'
 import { breakpoint, BreakPoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
 
-const UnstoppableOrganizations = () => (
+const UnstoppableOrganizations = ({ ...props }) => (
   <AlmostFullSection backgroundColor="#FF8979" image={image} imageLeft={true}>
     <AlmostFullSectionBox>
       <h3>
@@ -24,7 +24,11 @@ const UnstoppableOrganizations = () => (
           defaultMessage="Aragon provides new tools for human collaboration. Aragon organizations are difficult to shut down, escaping the boundaries of oppression and censorship."
         />
       </p>
-      <Link to="/project">
+      <Link
+        to={
+          props.intl.locale ? '/' + props.intl.locale + '/project' : '/project'
+        }
+      >
         <FormattedMessage
           id="discover.unstoppable-organizations.action"
           defaultMessage="About the project"
@@ -59,4 +63,8 @@ const AlmostFullSectionBox = styled.div`
   }
 `
 
-export default UnstoppableOrganizations
+const propTypes = {
+  intl: intlShape.isRequired,
+}
+
+export default injectIntl(UnstoppableOrganizations)

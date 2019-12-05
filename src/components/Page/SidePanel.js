@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-static'
+import { injectIntl, intlShape } from 'react-intl'
 import { Spring, animated } from 'react-spring'
 import { Text, SafeLink } from '@aragon/ui'
 import logo from './assets/logo.svg'
 import close from './assets/close.svg'
-import { Link } from 'react-static'
 
 class SidePanel extends React.PureComponent {
   componentDidMount() {
@@ -29,7 +30,8 @@ class SidePanel extends React.PureComponent {
   }
 
   render() {
-    const { opened, children } = this.props
+    const { opened, intl, children } = this.props
+    let home = intl.locale ? '/' + (intl.locale || '') + '/' : '/'
     return (
       <Spring
         config={{ tension: 50, friction: 10 }}
@@ -55,7 +57,7 @@ class SidePanel extends React.PureComponent {
             >
               <PanelHeader>
                 <h1>
-                  <Link to="/">
+                  <Link to={home}>
                     <LogoImg src={logo} />
                   </Link>
                 </h1>
@@ -81,6 +83,7 @@ SidePanel.propTypes = {
   blocking: PropTypes.bool,
   onClose: PropTypes.func,
   onTransitionEnd: PropTypes.func,
+  intl: intlShape.isRequired,
 }
 
 SidePanel.defaultProps = {
@@ -169,4 +172,4 @@ const LogoImg = styled.img`
   width: 50px;
 `
 
-export default SidePanel
+export default injectIntl(SidePanel)
