@@ -43,7 +43,7 @@ const mudule2Content = (
     <p>
       <a
         className="action-button"
-        href="https://coinmarketcap.com/currencies/aragon/"
+        href="https://wiki.aragon.org/network/aragon_network_token/#trade-ant"
         target="_blank"
       >
         <span>
