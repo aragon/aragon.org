@@ -1,81 +1,86 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import {Text, breakpoint, BreakPoint, SafeLink} from '@aragon/ui';
-import MenuItem from './MenuItem';
-import MenuPanel from './MenuPanel';
-import {Spring, animated} from 'react-spring';
-const medium = css => breakpoint('medium', css);
-import logo from './assets/logo.svg';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import { injectIntl, intlShape } from 'react-intl'
+import { Text, breakpoint, BreakPoint, SafeLink } from '@aragon/ui'
+import MenuItem from './MenuItem'
+import MenuPanel from './MenuPanel'
+import { Spring, animated } from 'react-spring'
+const medium = css => breakpoint('medium', css)
+import logo from './assets/logo.svg'
 
-const renderMenuItemLink = ({url, children}) =>
+const renderMenuItemLink = ({ url, children, locale }) =>
   url.startsWith('/') ? (
-    <Link to={url}>{children}</Link>
+    <Link to={locale ? '/' + locale + url : url}>{children}</Link>
   ) : (
     <SafeLink href={url}>{children}</SafeLink>
-  );
+  )
 
 class Navbar extends React.Component {
   constructor(props) {
-    super(props);
-    let scroll = 1;
+    super(props)
+    let scroll = 1
     if (
       typeof window !== `undefined` &&
       window.location.href.indexOf('bella') >= 0
     ) {
-      scroll = 0;
+      scroll = 0
     }
     this.state = {
       scroll: scroll,
       height: 64,
       image: 44,
       opacity: 0,
-    };
+    }
+  }
+
+  static propTypes = {
+    intl: intlShape.isRequired,
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.onScroll);
+    window.addEventListener('scroll', this.onScroll)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('scroll', this.onScroll)
   }
 
   onScroll = event => {
-    let scroll = 1 - (document.scrollingElement.scrollTop * 2) / 1000;
+    let scroll = 1 - (document.scrollingElement.scrollTop * 2) / 1000
 
-    let opacity = 0.009 * document.scrollingElement.scrollTop;
+    let opacity = 0.009 * document.scrollingElement.scrollTop
     if (opacity > 0.9) {
-      opacity = 0.9;
+      opacity = 0.9
     }
 
     if (scroll < 0.8) {
-      scroll = 0.8;
+      scroll = 0.8
     }
     if (
       window.location.href.indexOf('bella') >= 0 &&
       document.scrollingElement.scrollTop == 0
     ) {
-      scroll = 0;
+      scroll = 0
     }
-    let height = 1 - (document.scrollingElement.scrollTop * 2) / 1000;
+    let height = 1 - (document.scrollingElement.scrollTop * 2) / 1000
 
     if (height < 0.68) {
-      height = 0.68;
+      height = 0.68
     }
 
     this.setState({
       scroll: scroll,
       height: height * 64,
       opacity: opacity,
-    });
-  };
+    })
+  }
 
   render() {
-    const {menuItems, path, color} = this.props;
-    let background = 'rgba(28, 36, 46, ';
+    const { menuItems, path, color, intl } = this.props
+    let background = 'rgba(28, 36, 46, '
     if (color && color == 'black') {
-      background = 'rgba(254, 254, 254, ';
+      background = 'rgba(254, 254, 254, '
     }
     return (
       <Inside
@@ -85,18 +90,29 @@ class Navbar extends React.Component {
         menuItems={menuItems}
         path={path}
         color={color}
+        locale={intl.locale}
         background={background}
       />
-    );
+    )
   }
 }
 
-const Inside = ({x, h, opacity, menuItems, path, background, color}) => (
+const Inside = ({
+  x,
+  h,
+  opacity,
+  menuItems,
+  path,
+  background,
+  color,
+  locale,
+}) => (
   <AragonNavbar
     style={{
       height: h,
       background: background + opacity + ')',
-    }}>
+    }}
+  >
     <Center>
       <BreakPoint from="medium">
         <ul className="left">
@@ -121,7 +137,7 @@ const Inside = ({x, h, opacity, menuItems, path, background, color}) => (
         </ul>
         <ul>
           <li className="logo">
-            <LogoLink to="/">
+            <LogoLink to={locale ? '/' + locale + '/' : '/'}>
               <img src={logo} />
             </LogoLink>
           </li>
@@ -148,19 +164,23 @@ const Inside = ({x, h, opacity, menuItems, path, background, color}) => (
         </ul>
       </BreakPoint>
       <BreakPoint to="medium">
-        <MenuPanel items={menuItems} renderLink={renderMenuItemLink}  color={color}/>
-        <Link to={'/'}>
+        <MenuPanel
+          items={menuItems}
+          renderLink={renderMenuItemLink}
+          color={color}
+        />
+        <Link to={locale ? '/' + locale + '/' : '/'}>
           <span>
             <MobileLogo src={logo} />
           </span>
         </Link>
-        <div style={{width: '30px'}}>
+        <div style={{ width: '30px' }}>
           <span />
         </div>
       </BreakPoint>
     </Center>
   </AragonNavbar>
-);
+)
 
 const AragonNavbar = styled.div`
   width: 100%;
@@ -199,7 +219,7 @@ const AragonNavbar = styled.div`
       right: 0;
     }
   `)};
-`;
+`
 
 const Center = styled.div`
   ul {
@@ -228,7 +248,7 @@ const Center = styled.div`
   align-items: center;
   justify-content: space-between;
   ${medium('width: auto; height: 100%; display: inherit;')};
-`;
+`
 
 const LogoLink = styled(Link)`
   display: flex;
@@ -240,13 +260,13 @@ const LogoLink = styled(Link)`
     height: 62%;
     margin-bottom: 2px;
   }
-`;
+`
 
 const MobileLogo = styled.img`
   margin: 0 !important;
   position: relative;
   top: 19%;
   height: 62%;
-`;
+`
 
-export default Navbar;
+export default injectIntl(Navbar)

@@ -1,32 +1,32 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import {breakpoint} from '@aragon/ui';
-import styled from 'styled-components';
-import {Page} from '../components';
-import About from '../components/Project/About';
-import SecondaryNavbar from '../components/Project/SecondaryNavbar';
-import Association from '../components/Project/Association';
-import backgroundImage from '../components/Project/assets/project-cover.svg';
-import Section from '../components/General/Section';
-import VideoModal from '../components/General/VideoModal';
-import videothumbnail from '../components/Project/assets/project-video.png';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import { breakpoint } from '@aragon/ui'
+import styled from 'styled-components'
+import { Page } from '../components'
+import About from '../components/Project/About'
+import SecondaryNavbar from '../components/Project/SecondaryNavbar'
+import Association from '../components/Project/Association'
+import backgroundImage from '../components/Project/assets/project-cover.svg'
+import Section from '../components/General/Section'
+import VideoModal from '../components/General/VideoModal'
+import videothumbnail from '../components/Project/assets/project-video.png'
 
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 class Project extends React.Component {
   constructor(props) {
-    super(props);
-    this.videoModal = React.createRef();
-    this.handleOpen = this.handleOpen.bind(this);
+    super(props)
+    this.videoModal = React.createRef()
+    this.handleOpen = this.handleOpen.bind(this)
     if (typeof window !== `undefined`) {
       window.YTConfig = {
         host: 'https://www.youtube.com',
-      };
+      }
     }
   }
 
   handleOpen() {
-    this.videoModal.current.handleOpen();
+    this.videoModal.current.handleOpen()
   }
 
   render() {
@@ -51,7 +51,8 @@ class Project extends React.Component {
                 <a
                   className="principal-button"
                   href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/"
-                  target="_blank">
+                  target="_blank"
+                >
                   <FormattedMessage
                     id="project.hero.action"
                     defaultMessage="Manifesto"
@@ -69,7 +70,7 @@ class Project extends React.Component {
         <About />
         <Association />
       </Page>
-    );
+    )
   }
 }
 
@@ -81,7 +82,7 @@ const VideoContainer = styled.div`
     ${medium('margin: 40px auto 100px auto;')};
     width: 95%;
   }
-`;
+`
 
 const HeroSection = styled(Section)`
   height: auto;
@@ -104,14 +105,14 @@ const HeroSection = styled(Section)`
   -webkit-animation: HeroAnimation 7s ease infinite;
   -moz-animation: HeroAnimation 7s ease infinite;
   animation: HeroAnimation 7s ease infinite;
-`;
+`
 const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   ${medium('flex-direction: row;')};
-`;
+`
 const Container = styled.div`
   width: 100%;
   text-align: center;
@@ -124,6 +125,6 @@ const Container = styled.div`
     max-width: 663px;
     margin: auto;
   }
-`;
+`
 
-export default Project;
+export default Project

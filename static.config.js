@@ -19,133 +19,81 @@ export default {
   getSiteData: () => ({
     title: 'Aragon',
   }),
-  getRoutes: () => [
-    {
-      path: '/',
-      component: 'src/pages/Home',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/discover',
-      component: 'src/pages/Discover',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/project',
-      component: 'src/pages/Project',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/project/governance',
-      component: 'src/pages/Governance',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/project/grants',
-      component: 'src/pages/Grants',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/project/contribute',
-      component: 'src/pages/Contribute',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/project/roadmap',
-      component: 'src/pages/Roadmap',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/network',
-      component: 'src/pages/Network',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/bella',
-      component: 'src/pages/Bella',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/camino',
-      component: 'src/pages/Camino',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/powered-by',
-      component: 'src/pages/PoweredByAragon',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/agent',
-      component: 'src/pages/Frame',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/',
-      component: 'src/pages/Home',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/discover',
-      component: 'src/pages/Discover',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/project',
-      component: 'src/pages/Project',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/project/governance',
-      component: 'src/pages/Governance',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/project/grants',
-      component: 'src/pages/Grants',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/project/contribute',
-      component: 'src/pages/Contribute',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/project/roadmap',
-      component: 'src/pages/Roadmap',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/network',
-      component: 'src/pages/Network',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/bella',
-      component: 'src/pages/Bella',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/camino',
-      component: 'src/pages/Camino',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/powered-by',
-      component: 'src/pages/PoweredByAragon',
-      getData: () => ({title: ''}),
-    },
-    {
-      path: '/:locale/agent',
-      component: 'src/pages/Frame',
-      getData: () => ({title: ''}),
-    },
-    {
-      is404: true,
-      component: 'src/pages/NotFound',
-      getData: () => ({title: 'Page Not Found'}),
-    },
-  ],
+  getRoutes: () => {
+    let locales = ['', 'es', 'en'];
+    let routes = [
+      {
+        path: '/discover',
+        component: 'src/pages/Discover',
+        getData: () => ({title: ''}),
+      },
+      {
+        path: '/project',
+        component: 'src/pages/Project',
+        getData: () => ({title: ''}),
+      },
+      {
+        path: '/project/governance',
+        component: 'src/pages/Governance',
+        getData: () => ({title: ''}),
+      },
+      {
+        path: '/project/grants',
+        component: 'src/pages/Grants',
+        getData: () => ({title: ''}),
+      },
+      {
+        path: '/project/contribute',
+        component: 'src/pages/Contribute',
+        getData: () => ({title: ''}),
+      },
+      {
+        path: '/project/roadmap',
+        component: 'src/pages/Roadmap',
+        getData: () => ({title: ''}),
+      },
+      {
+        path: '/network',
+        component: 'src/pages/Network',
+        getData: () => ({title: ''}),
+      },
+      {
+        path: '/bella',
+        component: 'src/pages/Bella',
+        getData: () => ({title: ''}),
+      },
+      {
+        path: '/camino',
+        component: 'src/pages/Camino',
+        getData: () => ({title: ''}),
+      },
+      {
+        path: '/powered-by',
+        component: 'src/pages/PoweredByAragon',
+        getData: () => ({title: ''}),
+      },
+      {
+        path: '/agent',
+        component: 'src/pages/Frame',
+        getData: () => ({title: ''}),
+      },
+    ];
+
+    var localizedRoutes = locales
+      .map(locale => ({
+        path: `/${locale}`,
+        component: 'src/pages/Home',
+        children: routes,
+      }))
+      .concat([
+        {
+          is404: true,
+          component: 'src/pages/NotFound',
+        },
+      ]);
+
+    return localizedRoutes;
+  },
   paths: REACT_STATIC_PATHS,
   webpack: (conf, {defaultLoaders}) => {
     conf.resolve = Object.assign({}, conf.resolve || {}, {

@@ -1,19 +1,19 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Page} from '../components';
-import SecondaryNavbar from '../components/Project/SecondaryNavbar';
-import AragonClient from '../components/Project/AragonClient';
-import AragonNetwork from '../components/Project/AragonNetwork';
-import FeedbackModule from '../components/Project/FeedbackModule';
-import Section from '../components/General/Section';
-import backgroundImage from '../components/Project/assets/roadmap.svg';
-import {Button} from '@aragon/ui';
+import React from 'react'
+import styled from 'styled-components'
+import { Page } from '../components'
+import SecondaryNavbar from '../components/Project/SecondaryNavbar'
+import AragonClient from '../components/Project/AragonClient'
+import AragonNetwork from '../components/Project/AragonNetwork'
+import FeedbackModule from '../components/Project/FeedbackModule'
+import Section from '../components/General/Section'
+import backgroundImage from '../components/Project/assets/roadmap.svg'
+import { Button } from '@aragon/ui'
 
 class Roadmap extends React.Component {
-  state = {active: 'left'};
+  state = { active: 'left' }
 
   render() {
-    const {active} = this.state;
+    const { active } = this.state
     return (
       <Page path="/project/roadmap">
         <Hero>
@@ -32,19 +32,21 @@ class Roadmap extends React.Component {
         <Tabs>
           <div
             className={active !== 'left' ? 'left' : 'active left'}
-            onClick={() => this.setState({active: 'left'})}>
+            onClick={() => this.setState({ active: 'left' })}
+          >
             Aragon Client
           </div>
           <div
             className={active == 'left' ? 'right' : 'active right'}
-            onClick={() => this.setState({active: 'right'})}>
+            onClick={() => this.setState({ active: 'right' })}
+          >
             Aragon Network
           </div>
         </Tabs>
         <div>{active === 'left' ? <AragonClient /> : <AragonNetwork />}</div>
         <FeedbackModule />
       </Page>
-    );
+    )
   }
 }
 const TabsSeparator = styled.div`
@@ -66,10 +68,10 @@ const Tabs = styled.div`
   z-index: 2;
 
   div {
-    background: #F9FAFC;
+    background: #f9fafc;
     font-size: 18px;
     font-family: 'FontMedium', sans-serif;
-    color: #1C242D;
+    color: #1c242d;
     text-align: center;
     width: 50%;
     cursor: pointer;
@@ -92,7 +94,7 @@ const Tabs = styled.div`
     border-left: 1px solid rgba(151, 151, 151, 0.16103);
     border-radius: 0 12px 12px 0;
   }
-`;
+`
 
 const Hero = styled(Section)`
   height: 550px;
@@ -104,8 +106,8 @@ const Hero = styled(Section)`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top:64px;
-`;
+  padding-top: 64px;
+`
 
 const Container = styled.div`
   height: 100%;
@@ -115,6 +117,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-`;
+`
 
-export default Roadmap;
+export default Roadmap

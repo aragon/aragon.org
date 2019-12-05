@@ -1,31 +1,31 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import Zoom from 'react-reveal/Zoom';
-import YouTube from 'react-youtube';
-import {Link} from 'react-static';
-import Section from '../General/Section';
-import backgroundImage from './assets/video-background.png';
-import play from './assets/play.svg';
-import VideoModal from '../General/VideoModal';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import Zoom from 'react-reveal/Zoom'
+import YouTube from 'react-youtube'
+import { Link } from 'react-static'
+import Section from '../General/Section'
+import backgroundImage from './assets/video-background.png'
+import play from './assets/play.svg'
+import VideoModal from '../General/VideoModal'
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
 class Video extends React.Component {
   constructor(props) {
-    super(props);
-    this.videoModal = React.createRef();
-    this.handleOpen = this.handleOpen.bind(this);
+    super(props)
+    this.videoModal = React.createRef()
+    this.handleOpen = this.handleOpen.bind(this)
     if (typeof window !== `undefined`) {
       window.YTConfig = {
         host: 'https://www.youtube.com',
-      };
+      }
     }
   }
 
   handleOpen() {
-    this.videoModal.current.handleOpen();
+    this.videoModal.current.handleOpen()
   }
 
   render() {
@@ -42,7 +42,8 @@ class Video extends React.Component {
             <BreakPoint to="medium">
               <a
                 target="blank"
-                href="https://www.youtube.com/watch?v=_F1LyWkIil4">
+                href="https://www.youtube.com/watch?v=_F1LyWkIil4"
+              >
                 <h4>
                   <img src={play} />
                   <FormattedMessage
@@ -67,7 +68,7 @@ class Video extends React.Component {
           <VideoModal ref={this.videoModal} videoId="_F1LyWkIil4" />
         </BreakPoint>
       </VideoeSection>
-    );
+    )
   }
 }
 const VideoeSection = styled(Section)`
@@ -78,14 +79,14 @@ const VideoeSection = styled(Section)`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   ${medium('flex-direction: row;')};
-`;
+`
 const Container = styled.div`
   width: 100%;
   text-align: center;
@@ -111,10 +112,10 @@ const Container = styled.div`
       padding-right: 7px;
     }
   }
-`;
+`
 const Image = styled.img`
   max-width: 100%;
-`;
+`
 
 const Modal = styled.div`
   position: fixed;
@@ -182,6 +183,6 @@ const Modal = styled.div`
       height: 30vw;
     }
   }
-`;
+`
 
-export default Video;
+export default Video

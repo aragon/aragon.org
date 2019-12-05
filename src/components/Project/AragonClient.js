@@ -1,24 +1,24 @@
-import React from 'react';
-import Section from '../General/Section';
-import Entry from './Entry';
-import styled from 'styled-components';
-import {breakpoint, Badge, DropDown, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-import done from './assets/done.svg';
+import React from 'react'
+import Section from '../General/Section'
+import Entry from './Entry'
+import styled from 'styled-components'
+import { breakpoint, Badge, DropDown, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+import done from './assets/done.svg'
 
 class AragonClient extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {active: 0};
-    this.handleChange = this.handleChange.bind(this);
+    super(props)
+    this.state = { active: 0 }
+    this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(index) {
-    this.setState({active: index});
+    this.setState({ active: index })
   }
 
   render() {
-    const {active} = this.state;
+    const { active } = this.state
     return (
       <RoadmapSection>
         <Container>
@@ -548,8 +548,8 @@ class AragonClient extends React.Component {
                   <h3>Contextual Discussions</h3>
                   <h4>
                     Develop a design pattern and component for contextual
-                    discussions within Aragon, and implement it on one application
-                    to showcase the feature, such as the Voting app.
+                    discussions within Aragon, and implement it on one
+                    application to showcase the feature, such as the Voting app.
                   </h4>
                 </Module>
               </Entry>
@@ -592,7 +592,7 @@ class AragonClient extends React.Component {
           </RoadmapContainer>
         </Container>
       </RoadmapSection>
-    );
+    )
   }
 }
 
@@ -626,7 +626,7 @@ const DropdownContainer = styled.div`
     text-align: left;
     ${medium('width: calc(100% - 207px);')};
   }
-`;
+`
 const RoadmapContainer = styled.div`
   margin-top: 50px;
   width: 100%;
@@ -651,7 +651,7 @@ const RoadmapContainer = styled.div`
     display: table;
     clear: both;
   }
-`;
+`
 
 const DoneBadge = styled(Badge)`
   background: rgba(0, 219, 140, 0.1);
@@ -664,19 +664,19 @@ const DoneBadge = styled(Badge)`
   img {
     ${medium('padding-right: 5px;')}
   }
-`;
+`
 
 const AragonOneBadge = styled(Badge)`
   background: #f7837140;
   color: #b2565d;
   margin-left: 10px;
-`;
+`
 
 const AragonBlackBadge = styled(Badge)`
   background: #00000030;
   color: black;
   margin-left: 10px;
-`;
+`
 
 const StyledBadge = styled(Badge)`
   &.blue {
@@ -711,24 +711,24 @@ const StyledBadge = styled(Badge)`
     background: #ffca7280;
     color: #e4971a;
   }
-`;
+`
 
 const AutarkBadge = styled(Badge)`
   background: #f5a62340;
   color: #af7e2e;
-`;
+`
 
 const RoadmapSection = styled(Section)`
   background: #f9fafc;
   margin-top: -25px;
-`;
+`
 const Container = styled.div`
   width: 100%;
   margin: 0;
   padding: 50px 0;
   text-align: center;
   ${medium('padding: 50px 8.5%;')}
-`;
+`
 
 const Title = styled.h1`
   line-height: 26px;
@@ -737,14 +737,14 @@ const Title = styled.h1`
   margin: 0;
   margin-bottom: 10px;
   font-weight: 600;
-`;
+`
 
 const Subtitle = styled.h6`
   line-height: 28px;
   font-size: 14px;
   color: #60809c;
   max-width: 350px;
-`;
+`
 
 const Module = styled.div`
   background: #ffffff;
@@ -776,6 +776,6 @@ const Module = styled.div`
     padding-top: 10px;
     ${medium('text-align: right; height: auto;')}
   }
-`;
+`
 
-export default AragonClient;
+export default AragonClient

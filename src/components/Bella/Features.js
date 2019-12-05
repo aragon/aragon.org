@@ -1,14 +1,14 @@
-import React from 'react';
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
-import {Link} from 'react-static';
-import Fade from 'react-reveal/Fade';
-import styled from 'styled-components';
-import Section from '../General/Section';
-import LongCard from '../General/LongCard';
-import Card from '../General/Card';
+import React from 'react'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import { Link } from 'react-static'
+import Fade from 'react-reveal/Fade'
+import styled from 'styled-components'
+import Section from '../General/Section'
+import LongCard from '../General/LongCard'
+import Card from '../General/Card'
 
-import {breakpoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import { breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
 const feature1 = (
   <span>
@@ -19,7 +19,7 @@ const feature1 = (
       />
     </p>
   </span>
-);
+)
 const feature2 = (
   <span>
     <p>
@@ -29,7 +29,7 @@ const feature2 = (
       />
     </p>
   </span>
-);
+)
 const feature3 = (
   <span>
     <p>
@@ -39,7 +39,7 @@ const feature3 = (
       />
     </p>
   </span>
-);
+)
 
 const Features = () => (
   <Section id="features">
@@ -88,7 +88,7 @@ const Features = () => (
       />
     </Container>
   </Section>
-);
+)
 
 const Container = styled.div`
   display: grid;
@@ -121,6 +121,6 @@ const Container = styled.div`
       margin-top: 2px;
     }
   }
-`;
+`
 
-export default Features;
+export default Features

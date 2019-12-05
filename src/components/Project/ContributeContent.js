@@ -1,15 +1,15 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import {breakpoint} from '@aragon/ui';
-import Section from '../General/Section';
-import LongCard from '../General/LongCard';
-import Card from '../General/Card';
-import aragonBlack from './assets/aragon-black.svg';
-import aragonOne from './assets/aragon-one.svg';
-import autark from './assets/autark.svg';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import { breakpoint } from '@aragon/ui'
+import Section from '../General/Section'
+import LongCard from '../General/LongCard'
+import Card from '../General/Card'
+import aragonBlack from './assets/aragon-black.svg'
+import aragonOne from './assets/aragon-one.svg'
+import autark from './assets/autark.svg'
 
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 const mudule1Content = (
   <span>
@@ -23,7 +23,8 @@ const mudule1Content = (
       <a
         className="action-button"
         href="https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+archived%3Afalse+label%3A%22good+first+issue%22+user%3Aaragon+"
-        target="_blank">
+        target="_blank"
+      >
         <span>
           <FormattedMessage
             id="project.contribute.module1.action"
@@ -34,7 +35,7 @@ const mudule1Content = (
       </a>
     </p>
   </span>
-);
+)
 const mudule2Content = (
   <span>
     <p>
@@ -47,7 +48,8 @@ const mudule2Content = (
       <a
         className="action-button"
         href="https://wiki.aragon.org/jobs"
-        target="_blank">
+        target="_blank"
+      >
         <span>
           <FormattedMessage
             id="project.contribute.module2.action"
@@ -58,7 +60,7 @@ const mudule2Content = (
       </a>
     </p>
   </span>
-);
+)
 
 const ContributeContent = () => (
   <ContributeSection>
@@ -144,11 +146,11 @@ const ContributeContent = () => (
       />
     </Container>
   </ContributeSection>
-);
+)
 
 const ContributeSection = styled(Section)`
   padding: 30px 15px 90px 15px;
-`;
+`
 const Hero = styled.div`
   margin-top: 40px;
 
@@ -165,7 +167,7 @@ const Hero = styled.div`
     color: #212b36;
     font-family: 'FontLight', sans-serif;
   }
-`;
+`
 const Decentralized = styled.div`
   display: grid;
   ${medium(
@@ -196,7 +198,7 @@ const Decentralized = styled.div`
     letter-spacing: 0.315px;
     color: #4a80e4;
   }
-`;
+`
 
 const Container = styled.div`
   display: grid;
@@ -228,6 +230,6 @@ const Container = styled.div`
     width: 238px;
     height: auto;
   }
-`;
+`
 
-export default ContributeContent;
+export default ContributeContent

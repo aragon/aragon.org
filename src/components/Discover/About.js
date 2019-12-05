@@ -1,12 +1,12 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import {breakpoint} from '@aragon/ui';
-import Section from '../General/Section';
-import LongCard from '../General/LongCard';
-import Card from '../General/Card';
-const medium = css => breakpoint('medium', css);
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import { breakpoint } from '@aragon/ui'
+import Section from '../General/Section'
+import LongCard from '../General/LongCard'
+import Card from '../General/Card'
+const medium = css => breakpoint('medium', css)
 
 const mudule1Content = (
   <p>
@@ -15,7 +15,7 @@ const mudule1Content = (
       defaultMessage="Aragon organizations are digital natives. They live on Ethereum, a ledger secured by incentives and cryptography. Transactions are transparent and immutable."
     />
   </p>
-);
+)
 const mudule2Content = (
   <p>
     <FormattedMessage
@@ -23,7 +23,7 @@ const mudule2Content = (
       defaultMessage="Aragon leverages smart contracts. They are like traditional contracts, but written in computer code and enforced by the blockchain. As efficient and automatic as it gets."
     />
   </p>
-);
+)
 
 const About = () => (
   <Section>
@@ -51,7 +51,7 @@ const About = () => (
       />
     </Container>
   </Section>
-);
+)
 
 const Container = styled.div`
   display: grid;
@@ -67,6 +67,6 @@ const Container = styled.div`
   }
   padding-top: 65px;
   padding-bottom: 65px;
-`;
+`
 
-export default About;
+export default About

@@ -1,14 +1,14 @@
-import React from 'react';
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
-import {breakpoint} from '@aragon/ui';
-import styled from 'styled-components';
-import Section from '../General/Section';
-import Card from '../General/Card';
-import buy from './assets/learn-about-ant.svg';
-import proposal from './assets/proposal.svg';
+import React from 'react'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import { breakpoint } from '@aragon/ui'
+import styled from 'styled-components'
+import Section from '../General/Section'
+import Card from '../General/Card'
+import buy from './assets/learn-about-ant.svg'
+import proposal from './assets/proposal.svg'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const About = () => (
   <ModulesSection>
@@ -33,7 +33,8 @@ const About = () => (
               <a
                 className="principal-button"
                 href="https://forum.aragon.org/t/how-to-create-an-aragon-governance-proposal/374"
-                target="_blank">
+                target="_blank"
+              >
                 <FormattedMessage
                   id="project.governance.module1.action"
                   defaultMessage="Create Proposal"
@@ -63,7 +64,8 @@ const About = () => (
               <a
                 className="principal-button"
                 href="https://wiki.aragon.org/documentation/aragon_network_token/#trade-ant"
-                target="_blank">
+                target="_blank"
+              >
                 <FormattedMessage
                   id="project.governance.module2.action"
                   defaultMessage="Learn More"
@@ -75,11 +77,11 @@ const About = () => (
       />
     </Container>
   </ModulesSection>
-);
+)
 
 const ModulesSection = styled(Section)`
   padding: 90px 15px;
-`;
+`
 
 const Container = styled.div`
   display: grid;
@@ -90,7 +92,7 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-`;
+`
 
 const Box = styled.div`
   border-radius: 12px;
@@ -134,6 +136,6 @@ const Box = styled.div`
   &:hover {
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.07);
   }
-`;
+`
 
-export default About;
+export default About

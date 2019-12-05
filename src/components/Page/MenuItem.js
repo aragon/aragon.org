@@ -1,13 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { injectIntl, intlShape } from 'react-intl'
 import { theme, SafeLink } from '@aragon/ui'
 
-const MenuItem = ({ url, label, active, renderLink, color }) => (
-  <StyledMenuItem className={active ? 'active' : undefined} color={color}>
-    <span>{renderLink({ url, children: label })}</span>
-  </StyledMenuItem>
-)
+const MenuItem = ({ url, label, active, renderLink, color, intl }) => {
+  const locale = intl.locale
+  return (
+    <StyledMenuItem className={active ? 'active' : undefined} color={color}>
+      <span>{renderLink({ url, locale, children: label })}</span>
+    </StyledMenuItem>
+  )
+}
 
 const StyledMenuItem = styled.div`
   display: flex;
@@ -30,14 +34,10 @@ const StyledMenuItem = styled.div`
     white-space: nowrap;
     color: white;
 
-    ${props =>
-      props.color == 'black' &&
-      'color: #6D7693;'}
+    ${props => props.color == 'black' && 'color: #6D7693;'}
     &:hover {
       color: black;
-      ${props =>
-        props.color != 'black' &&
-        'color: #ffffffb3;'}
+      ${props => props.color != 'black' && 'color: #ffffffb3;'}
     }
     &:focus {
       outline: 0;
@@ -55,15 +55,16 @@ const StyledMenuItem = styled.div`
     }
   }
   &.active a {
-    color: #4A80E4;
+    color: #4a80e4;
   }
 `
 
 MenuItem.propTypes = {
   url: PropTypes.string,
-  label: PropTypes.string,
+  label: PropTypes.object,
   active: PropTypes.bool,
   renderLink: PropTypes.func,
+  intl: intlShape.isRequired,
 }
 
 MenuItem.defaultProps = {
@@ -71,4 +72,4 @@ MenuItem.defaultProps = {
   renderLink: ({ url, children }) => <SafeLink href={url}>{children}</SafeLink>,
 }
 
-export default MenuItem
+export default injectIntl(MenuItem)

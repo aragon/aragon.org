@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import governance from './assets/governance.svg';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import styled from 'styled-components'
+import governance from './assets/governance.svg'
+import Fade from 'react-reveal/Fade'
 
-import {breakpoint, BreakPoint, Button} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint, BreakPoint, Button } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Governance = () => (
   <GovernanceSection>
@@ -20,9 +20,7 @@ const Governance = () => (
       <Fade bottom distance="50px">
         <div className="content">
           <h3>Governance</h3>
-          <h2>
-            Stakeholders can help decide the future of the organization
-          </h2>
+          <h2>Stakeholders can help decide the future of the organization</h2>
         </div>
       </Fade>
     </TextBox>
@@ -35,7 +33,7 @@ const Governance = () => (
       </ImageContainer>
     </BreakPoint>
   </GovernanceSection>
-);
+)
 
 const ImageContainer = styled.div`
   background: #019fe3;
@@ -47,7 +45,7 @@ const ImageContainer = styled.div`
   justify-content: center;
   height: auto;
   ${medium('height: 720px;')};
-`;
+`
 
 const GovernanceSection = styled.section`
   background-color: white;
@@ -57,7 +55,7 @@ const GovernanceSection = styled.section`
   align-items: center;
   flex-direction: column;
   ${medium('flex-direction: row;')};
-`;
+`
 
 const TextBox = styled.div`
   width: 100%;
@@ -88,6 +86,6 @@ const TextBox = styled.div`
     text-align: left;
     ${medium('text-align: right;')};
   }
-`;
+`
 
-export default Governance;
+export default Governance

@@ -1,15 +1,15 @@
-import React from 'react';
-import {Link, SiteData, RouteData, Head} from 'react-static';
-import styled from 'styled-components';
-import {AppBar, BaseStyles, PublicUrl, breakpoint} from '@aragon/ui';
-import Dropdown from 'react-bootstrap/Dropdown';
-import {FormattedMessage} from 'react-intl';
-import Navbar from './Navbar';
-import Footer from './Footer.js';
-import en from './assets/en.svg';
-import es from './assets/es.svg';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import React from 'react'
+import { Link, SiteData, RouteData, Head } from 'react-static'
+import styled from 'styled-components'
+import { AppBar, BaseStyles, PublicUrl, breakpoint } from '@aragon/ui'
+import Dropdown from 'react-bootstrap/Dropdown'
+import { FormattedMessage } from 'react-intl'
+import Navbar from './Navbar'
+import Footer from './Footer.js'
+import en from './assets/en.svg'
+import es from './assets/es.svg'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const menuItems = [
   [
@@ -31,17 +31,17 @@ const menuItems = [
     '/network',
     <FormattedMessage id="page.navbar.network" defaultMessage="Network" />,
   ],
-];
+]
 
 class Page extends React.Component {
   render() {
-    const {contentColor, children, path, color} = this.props;
-    const items = menuItems.map(item => [...item, item[0] === path]);
+    const { contentColor, children, path, color } = this.props
+    const items = menuItems.map(item => [...item, item[0] === path])
     return (
       <SiteData
-        render={({title: siteTitle}) => (
+        render={({ title: siteTitle }) => (
           <RouteData
-            render={({title}) => (
+            render={({ title }) => (
               <PublicUrl.Provider url="/aragon-ui/">
                 <BaseStyles enableLegacyFonts />
                 <Head>
@@ -60,16 +60,28 @@ class Page extends React.Component {
                     <Dropdown.Menu>
                       <Dropdown.Item
                         onClick={() => {
-                          localStorage.setItem('locale', 'en');
-                          window.location.reload(false);
-                        }}>
+                          localStorage.setItem('locale', 'en')
+                          if (window.location.href.indexOf('/es/') >= 0) {
+                            let url = window.location.href.split('/es/')
+                            window.location.href = url[0] + '/en/' + url[1]
+                          } else {
+                            window.location.reload(false)
+                          }
+                        }}
+                      >
                         <img src={en} /> English
                       </Dropdown.Item>
                       <Dropdown.Item
                         onClick={() => {
-                          localStorage.setItem('locale', 'es');
-                          window.location.reload(false);
-                        }}>
+                          localStorage.setItem('locale', 'es')
+                          if (window.location.href.indexOf('/en/') >= 0) {
+                            let url = window.location.href.split('/en/')
+                            window.location.href = url[0] + '/es/' + url[1]
+                          } else {
+                            window.location.reload(false)
+                          }
+                        }}
+                      >
                         <img src={es} /> Español
                       </Dropdown.Item>
                     </Dropdown.Menu>
@@ -82,7 +94,7 @@ class Page extends React.Component {
           />
         )}
       />
-    );
+    )
   }
 }
 const Intl = styled.div`
@@ -110,7 +122,7 @@ const Intl = styled.div`
     outline: none;
     box-shadow: none;
   }
-`;
+`
 const Content = styled.div`
   min-height: calc(100vh - 116px) !important;
   ${p => p.contentColor && 'background-color: ' + p.contentColor}
@@ -225,7 +237,7 @@ const Content = styled.div`
     justify-content: flex-start;
   }
   .;
-`;
+`
 
 const AGPBanner = styled.div`
   position: fixed;
@@ -247,6 +259,6 @@ const AGPBanner = styled.div`
   a {
     font-weight: 700;
   }
-`;
+`
 
-export default Page;
+export default Page

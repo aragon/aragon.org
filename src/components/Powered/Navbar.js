@@ -1,74 +1,75 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import {Text, breakpoint, BreakPoint, SafeLink} from '@aragon/ui';
-import MenuItem from './MenuItem';
-import MenuPanel from './MenuPanel';
-import {Spring, animated} from 'react-spring';
-const medium = css => breakpoint('medium', css);
-import logo from './assets/logo.svg';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import { Text, breakpoint, BreakPoint, SafeLink } from '@aragon/ui'
+import MenuItem from './MenuItem'
+import MenuPanel from './MenuPanel'
+import { Spring, animated } from 'react-spring'
+const medium = css => breakpoint('medium', css)
+import logo from './assets/logo.svg'
 
-const renderMenuItemLink = ({url, children}) =>
+const renderMenuItemLink = ({ url, children }) =>
   url.startsWith('/') ? (
     <Link to={url}>{children}</Link>
   ) : (
     <SafeLink href={url}>{children}</SafeLink>
-  );
+  )
 
 class Navbar extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       scroll: 0,
       height: 64,
       image: 44,
-    };
+    }
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.onScroll);
+    window.addEventListener('scroll', this.onScroll)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('scroll', this.onScroll)
   }
 
   onScroll = event => {
-    let scroll = 1 - (document.scrollingElement.scrollTop * 2) / 1000;
-    let image = 1 - (document.scrollingElement.scrollTop * 2) / 1000;
+    let scroll = 1 - (document.scrollingElement.scrollTop * 2) / 1000
+    let image = 1 - (document.scrollingElement.scrollTop * 2) / 1000
 
     if (scroll < 0.8) {
-      scroll = 0.8;
-      image = 0.8;
+      scroll = 0.8
+      image = 0.8
     }
     if (document.scrollingElement.scrollTop == 0) {
-      scroll = 0;
+      scroll = 0
     }
-    let height = 1 - (document.scrollingElement.scrollTop * 2) / 1000;
+    let height = 1 - (document.scrollingElement.scrollTop * 2) / 1000
 
     if (height < 0.68) {
-      height = 0.68;
+      height = 0.68
     }
 
     this.setState({
       scroll: scroll,
       height: height * 64,
       image: image * 44,
-    });
-  };
-  renderIn = ({x, h, i}) => {
+    })
+  }
+  renderIn = ({ x, h, i }) => {
     const menuItems = [
       ['/discover', 'Discover'],
       ['https://hack.aragon.org/', 'Developers'],
       ['/project', 'Project'],
       ['/network', 'Network'],
-    ];
+    ]
     return (
       <AragonNavbar
         style={{
           background: x.interpolate(v => `rgba(28, 29, 35, ${v})`),
           height: h.interpolate(v => `${v}px`),
-        }}>
+        }}
+      >
         <Center>
           <BreakPoint from="medium">
             <ul className="left">
@@ -118,23 +119,24 @@ class Navbar extends React.Component {
                 <MobileLogo src={logo} />
               </span>
             </Link>
-            <div style={{width: '30px'}}>
+            <div style={{ width: '30px' }}>
               <span />
             </div>
           </BreakPoint>
         </Center>
       </AragonNavbar>
-    );
-  };
+    )
+  }
   render() {
     return (
       <Spring
-        from={{x: 0, h: 64, i: 44}}
-        to={{x: this.state.scroll, h: this.state.height, i: this.state.image}}
-        native>
+        from={{ x: 0, h: 64, i: 44 }}
+        to={{ x: this.state.scroll, h: this.state.height, i: this.state.image }}
+        native
+      >
         {this.renderIn}
       </Spring>
-    );
+    )
   }
 }
 
@@ -176,7 +178,7 @@ const AragonNavbar = styled(animated.div)`
       right: 0;
     }
   `)};
-`;
+`
 
 const Center = styled.div`
   ul {
@@ -208,7 +210,7 @@ const Center = styled.div`
   align-items: center;
   justify-content: space-between;
   ${medium('width: auto; height: 100%; display: inherit;')};
-`;
+`
 
 const LogoLink = styled(Link)`
   display: flex;
@@ -219,7 +221,7 @@ const LogoLink = styled(Link)`
   img {
     height: 62%;
   }
-`;
+`
 
 const MobileLogo = styled.img`
   margin: 0 !important;
@@ -228,6 +230,6 @@ const MobileLogo = styled.img`
   height: 62%;
   padding: 0 !important;
   max-width: 100% !important;
-`;
+`
 
-export default Navbar;
+export default Navbar

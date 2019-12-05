@@ -1,13 +1,13 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import {breakpoint} from '@aragon/ui';
-import CountUp from 'react-countup';
-import Section from '../General/Section';
-import LongCard from '../General/LongCard';
-import Card from '../General/Card';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import { breakpoint } from '@aragon/ui'
+import CountUp from 'react-countup'
+import Section from '../General/Section'
+import LongCard from '../General/LongCard'
+import Card from '../General/Card'
 
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 const mudule1Content = (
   <span>
@@ -21,7 +21,8 @@ const mudule1Content = (
       <a
         className="action-button"
         href="https://github.com/aragon/nest"
-        target="_blank">
+        target="_blank"
+      >
         <span>
           <FormattedMessage
             id="project.grants.module1.action"
@@ -32,7 +33,7 @@ const mudule1Content = (
       </a>
     </p>
   </span>
-);
+)
 const mudule2Content = (
   <span>
     <p>
@@ -45,7 +46,8 @@ const mudule2Content = (
       <a
         className="action-button"
         href="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant"
-        target="_blank">
+        target="_blank"
+      >
         <span>
           <FormattedMessage
             id="project.grants.module2.action"
@@ -56,41 +58,41 @@ const mudule2Content = (
       </a>
     </p>
   </span>
-);
+)
 
 class GrantsContent extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {one: '', two: '', three: '', four: ''};
+    super(props)
+    this.state = { one: '', two: '', three: '', four: '' }
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.listenToScroll);
+    window.addEventListener('scroll', this.listenToScroll)
 
-    var element = document.getElementById('numbersAnimation');
+    var element = document.getElementById('numbersAnimation')
     var elem =
-      element.getBoundingClientRect().top + document.documentElement.scrollTop;
+      element.getBoundingClientRect().top + document.documentElement.scrollTop
     if (elem - window.innerHeight - 24 <= 0) {
       this.setState({
         one: <CountUp end={1.5} duration={2} decimals={1} />,
         two: <CountUp end={15} duration={2} />,
         three: <CountUp end={60} duration={2} />,
         four: <CountUp end={120} duration={2} />,
-      });
+      })
     }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.listenToScroll);
+    window.removeEventListener('scroll', this.listenToScroll)
   }
 
   listenToScroll = () => {
     const scrolled =
-      document.body.scrollTop || document.documentElement.scrollTop;
+      document.body.scrollTop || document.documentElement.scrollTop
 
-    var element = document.getElementById('numbersAnimation');
+    var element = document.getElementById('numbersAnimation')
     var elem =
-      element.getBoundingClientRect().top + document.documentElement.scrollTop;
+      element.getBoundingClientRect().top + document.documentElement.scrollTop
 
     if (scrolled >= elem - window.innerHeight - 24) {
       this.setState({
@@ -98,12 +100,12 @@ class GrantsContent extends React.Component {
         two: <CountUp end={15} duration={2} />,
         three: <CountUp end={60} duration={2} />,
         four: <CountUp end={120} duration={2} />,
-      });
+      })
     }
-  };
+  }
 
   render() {
-    const {four} = this.state;
+    const { four } = this.state
     return (
       <ModulesSection>
         <Container>
@@ -117,7 +119,8 @@ class GrantsContent extends React.Component {
                 defaultMessage="A thriving ecosystem"
               />
             }
-            className="numbers">
+            className="numbers"
+          >
             <LongCardContainer>
               <div>
                 <h5 className="one">${this.state.one}</h5>
@@ -183,13 +186,13 @@ class GrantsContent extends React.Component {
           />
         </Container>
       </ModulesSection>
-    );
+    )
   }
 }
 
 const ModulesSection = styled(Section)`
   padding: 30px 15px 90px 15px;
-`;
+`
 
 const Container = styled.div`
   display: grid;
@@ -211,7 +214,7 @@ const Container = styled.div`
     background: white;
     box-shadow: 0 0 rgb(255, 255, 255);
   }
-`;
+`
 
 const LongCardContainer = styled.div`
   display: flex;
@@ -260,6 +263,6 @@ const LongCardContainer = styled.div`
   h5.four {
     background-image: -webkit-linear-gradient(119deg, #ffbb70, #ff4e78);
   }
-`;
+`
 
-export default GrantsContent;
+export default GrantsContent
