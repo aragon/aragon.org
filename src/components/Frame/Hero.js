@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import Section from '../General/Section';
-import background from './assets/background-hero.png';
-import robot from './assets/robot.svg';
-import Slide from 'react-reveal/Slide';
+import React from 'react'
+import styled from 'styled-components'
+import Section from '../General/Section'
+import background from './assets/background-hero.png'
+import robot from './assets/robot.svg'
+import Slide from 'react-reveal/Slide'
 
-import {breakpoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import { breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
 const Hero = () => (
   <HeroSection>
@@ -22,11 +22,11 @@ const Hero = () => (
       </Slide>
     </Container>
   </HeroSection>
-);
+)
 
 const HeroSection = styled(Section)`
   height: 550px;
-  background: #141E27;
+  background: #141e27;
   background-image: url(${background});
   background-size: cover;
   background-position: center;
@@ -35,7 +35,7 @@ const HeroSection = styled(Section)`
   justify-content: center;
   overflow: visible;
   padding-top: 64px;
-`;
+`
 
 const Container = styled.div`
   height: 100%;
@@ -83,6 +83,6 @@ const Container = styled.div`
 
     animation: shine 4s linear infinite;
   }
-`;
+`
 
-export default Hero;
+export default Hero

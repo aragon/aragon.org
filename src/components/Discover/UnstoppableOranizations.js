@@ -1,15 +1,15 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import Section from '../General/Section';
-import image from './assets/unstoppable.png';
-import AlmostFullSection from '../General/AlmostFullSection';
+import React from 'react'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import Section from '../General/Section'
+import image from './assets/unstoppable.png'
+import AlmostFullSection from '../General/AlmostFullSection'
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
-const UnstoppableOrganizations = () => (
+const UnstoppableOrganizations = ({ ...props }) => (
   <AlmostFullSection backgroundColor="#FF8979" image={image} imageLeft={true}>
     <AlmostFullSectionBox>
       <h3>
@@ -24,7 +24,11 @@ const UnstoppableOrganizations = () => (
           defaultMessage="Aragon provides new tools for human collaboration. Aragon organizations are difficult to shut down, escaping the boundaries of oppression and censorship."
         />
       </p>
-      <Link to="/project">
+      <Link
+        to={
+          props.intl.locale ? '/' + props.intl.locale + '/project' : '/project'
+        }
+      >
         <FormattedMessage
           id="discover.unstoppable-organizations.action"
           defaultMessage="About the project"
@@ -32,7 +36,7 @@ const UnstoppableOrganizations = () => (
       </Link>
     </AlmostFullSectionBox>
   </AlmostFullSection>
-);
+)
 
 const AlmostFullSectionBox = styled.div`
   h3 {
@@ -57,6 +61,10 @@ const AlmostFullSectionBox = styled.div`
     letter-spacing: 0.315px;
     color: #ffffff;
   }
-`;
+`
 
-export default UnstoppableOrganizations;
+const propTypes = {
+  intl: intlShape.isRequired,
+}
+
+export default injectIntl(UnstoppableOrganizations)

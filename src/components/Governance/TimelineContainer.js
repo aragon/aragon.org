@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { theme, breakpoint } from '@aragon/ui'
 import styled from 'styled-components'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const TimelineContainer = styled.div`
   margin-top: 50px;
@@ -25,14 +25,14 @@ const TimelineContainer = styled.div`
     bottom: 0px;
     height: calc(100% + 8px);
     width: 1px;
-    background: #D8D8D8;
+    background: #d8d8d8;
   }
   .timeline:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
-`;
+`
 
 const Timeline = ({ className, ...props }) => {
   const containerProps = { className }
@@ -43,11 +43,11 @@ const Timeline = ({ className, ...props }) => {
         <div {...props} />
       </div>
     </TimelineContainer>
-  );
-};
+  )
+}
 
 Timeline.propTypes = {
   className: PropTypes.string,
-};
+}
 
 export default Timeline

@@ -1,11 +1,11 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import {breakpoint} from '@aragon/ui';
-import AlmostFullSection from '../General/AlmostFullSection';
-const medium = css => breakpoint('medium', css);
-import image from './assets/maria.png';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import { breakpoint } from '@aragon/ui'
+import AlmostFullSection from '../General/AlmostFullSection'
+const medium = css => breakpoint('medium', css)
+import image from './assets/maria.png'
 
 const BlogPost = () => (
   <AlmostFullSection backgroundColor="#639CF5" image={image}>
@@ -30,7 +30,7 @@ const BlogPost = () => (
       </a>
     </AlmostFullSectionBox>
   </AlmostFullSection>
-);
+)
 
 const AlmostFullSectionBox = styled.div`
   h3 {
@@ -55,6 +55,6 @@ const AlmostFullSectionBox = styled.div`
     letter-spacing: 0.315px;
     color: #ffffff;
   }
-`;
+`
 
-export default BlogPost;
+export default BlogPost

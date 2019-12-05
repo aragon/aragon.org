@@ -1,7 +1,7 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import background from './assets/protocols.png';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import background from './assets/protocols.png'
 
 const Community = () => (
   <Section>
@@ -15,12 +15,12 @@ const Community = () => (
       <h4>
         <FormattedMessage
           id="network.community.subtitle"
-          defaultMessage="The Aragon Network earns revenues by running for-profit protocols"
+          defaultMessage="The Aragon Network provides essential services to DAOs via decentralized protocols"
         />
       </h4>
     </div>
   </Section>
-);
+)
 
 const Section = styled.div`
   background-image: url(${background});
@@ -36,5 +36,5 @@ const Section = styled.div`
     max-width: 515px;
     margin: auto;
   }
-`;
-export default Community;
+`
+export default Community

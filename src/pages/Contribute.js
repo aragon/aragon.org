@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import {FormattedMessage} from 'react-intl';
-import {Page} from '../components';
-import SecondaryNavbar from '../components/Project/SecondaryNavbar';
-import ContributeeContent from '../components/Project/ContributeContent';
-import Section from '../components/General/Section';
-import backgroundImage from '../components/Project/assets/contribute-cover.svg';
+import React from 'react'
+import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
+import { Page } from '../components'
+import SecondaryNavbar from '../components/Project/SecondaryNavbar'
+import ContributeeContent from '../components/Project/ContributeContent'
+import Section from '../components/General/Section'
+import backgroundImage from '../components/Project/assets/contribute-cover.svg'
 
 const Contribute = () => (
   <Page path="/project/contribute">
@@ -27,7 +27,8 @@ const Contribute = () => (
           <a
             className="principal-button"
             href="https://blog.aragon.org/decentralizing-aragons-development-5062fd6d135d"
-            target="_blank">
+            target="_blank"
+          >
             <FormattedMessage
               id="project.contribute.hero.action"
               defaultMessage="Read more"
@@ -39,7 +40,7 @@ const Contribute = () => (
     <SecondaryNavbar page="contribute" />
     <ContributeeContent />
   </Page>
-);
+)
 
 const ContributeSection = styled(Section)`
   height: 550px;
@@ -55,7 +56,7 @@ const ContributeSection = styled(Section)`
   h4 {
     max-width: 584px;
   }
-`;
+`
 
 const Container = styled.div`
   height: 100%;
@@ -65,6 +66,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-`;
+`
 
-export default Contribute;
+export default Contribute

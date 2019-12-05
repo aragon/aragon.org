@@ -1,71 +1,75 @@
-import React from 'react';
-import styled from 'styled-components';
-import Zoom from 'react-reveal/Zoom';
-import YouTube from 'react-youtube';
+import React from 'react'
+import styled from 'styled-components'
+import Zoom from 'react-reveal/Zoom'
+import YouTube from 'react-youtube'
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
 class Video extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       modal: false,
       player: null,
-    };
-    this.handleOpen = this.handleOpen.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.onReady = this.onReady.bind(this);
+    }
+    this.handleOpen = this.handleOpen.bind(this)
+    this.handleClose = this.handleClose.bind(this)
+    this.onReady = this.onReady.bind(this)
   }
 
   handleClose() {
-    let show = this.state.modal;
-    let self = this;
-    var element = document.getElementById('modalContent');
-    var modalBackground = document.getElementById('videoModal');
-    modalBackground.classList.add('background-out');
-    element.style.removeProperty('animation-name');
-    element.classList.add('content-out');
-    this.state.player.pauseVideo();
+    let show = this.state.modal
+    let self = this
+    var element = document.getElementById('modalContent')
+    var modalBackground = document.getElementById('videoModal')
+    modalBackground.classList.add('background-out')
+    element.style.removeProperty('animation-name')
+    element.classList.add('content-out')
+    this.state.player.pauseVideo()
     setTimeout(function() {
-      self.setState({modal: !show});
-    }, 500);
+      self.setState({ modal: !show })
+    }, 500)
   }
 
   handleOpen() {
-    var modalBackground = document.getElementById('videoModal');
-    modalBackground.classList.add('display-block');
-    let show = this.state.modal;
-    this.setState({modal: !show});
+    var modalBackground = document.getElementById('videoModal')
+    modalBackground.classList.add('display-block')
+    let show = this.state.modal
+    this.setState({ modal: !show })
   }
 
   onReady(event) {
     this.setState({
       player: event.target,
-    });
+    })
   }
 
   render() {
     return (
       <Modal
         id="videoModal"
-        className={this.state.modal ? 'display-block background-in' : 'background-out'}
-        onClick={this.handleClose}>
+        className={
+          this.state.modal ? 'display-block background-in' : 'background-out'
+        }
+        onClick={this.handleClose}
+      >
         <Zoom duration={500} spy={this.state.modal}>
           <div
             id="modalContent"
             className={
               this.state.modal ? 'modal-content' : 'modal-content content-out'
-            }>
+            }
+          >
             <YouTube
               videoId={this.props.videoId}
-              opts={{playerVars: {rel: 0, showinfo: 0, ecver: 2}}}
+              opts={{ playerVars: { rel: 0, showinfo: 0, ecver: 2 } }}
               onReady={this.onReady}
             />
           </div>
         </Zoom>
       </Modal>
-    );
+    )
   }
 }
 
@@ -78,7 +82,7 @@ const Modal = styled.div`
   height: 100vh;
   overflow: hidden;
   display: none;
-  padding:44px;
+  padding: 44px;
 
   &.display-block {
     display: flex;
@@ -135,6 +139,6 @@ const Modal = styled.div`
       height: 30vw;
     }
   }
-`;
+`
 
-export default Video;
+export default Video

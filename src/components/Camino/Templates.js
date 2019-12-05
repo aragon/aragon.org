@@ -1,14 +1,14 @@
-import React from 'react';
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
-import {breakpoint} from '@aragon/ui';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import Section from '../General/Section';
-import company from './assets/company.svg';
-import reputation from './assets/reputation.svg';
-import membership from './assets/membership.svg';
+import React from 'react'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import { breakpoint } from '@aragon/ui'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import Section from '../General/Section'
+import company from './assets/company.svg'
+import reputation from './assets/reputation.svg'
+import membership from './assets/membership.svg'
 
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 const Templates = () => (
   <TemplatesSection>
@@ -72,7 +72,7 @@ const Templates = () => (
       </Box>
     </Container>
   </TemplatesSection>
-);
+)
 
 const Box = styled.div`
   p {
@@ -109,7 +109,7 @@ const Box = styled.div`
   &.green {
     background: linear-gradient(126.21deg, #9affd8 -49.19%, #68dfb1 59.11%);
   }
-`;
+`
 
 const TemplatesSection = styled(Section)`
   padding: 0 15px 30px 15px;
@@ -128,7 +128,7 @@ const TemplatesSection = styled(Section)`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-`;
+`
 const Container = styled.div`
   display: grid;
   margin-top: 50px;
@@ -147,6 +147,6 @@ const Container = styled.div`
     ${medium('margin-bottom: 35px;')};
     color: #ffffff;
   }
-`;
+`
 
-export default Templates;
+export default Templates

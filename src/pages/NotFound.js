@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import Navbar from '../components/Page/Navbar';
-import Footer from '../components/Page/Footer';
-import notFound from '../components/General/assets/not-found.svg';
+import React from 'react'
+import styled from 'styled-components'
+import Navbar from '../components/Page/Navbar'
+import Footer from '../components/Page/Footer'
+import notFound from '../components/General/assets/not-found.svg'
 import { Link } from 'react-static'
 
 class NotFoundComponent extends React.Component {
@@ -12,19 +12,21 @@ class NotFoundComponent extends React.Component {
       ['https://hack.aragon.org/', 'Developers'],
       ['/project', 'Project'],
       ['/network', 'Network'],
-    ];
+    ]
     return (
       <div>
-        <Navbar menuItems={items} path={' '} color='black' />
+        <Navbar menuItems={items} path={' '} color="black" />
         <Container>
-          <img src={notFound}/>
+          <img src={notFound} />
           <h1>Not found</h1>
           <p>Sorry, the page you are looking for isn't here!</p>
-          <Link className="principal-button centered" to="/">Go home</Link>
+          <Link className="principal-button centered" to="/">
+            Go home
+          </Link>
         </Container>
         <Footer />
       </div>
-    );
+    )
   }
 }
 
@@ -78,6 +80,6 @@ const Container = styled.div`
     opacity: 0.95;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.150249);
   }
-`;
+`
 
-export default NotFoundComponent;
+export default NotFoundComponent

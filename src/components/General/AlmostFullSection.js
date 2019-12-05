@@ -1,14 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
-const AlmostFullSection = ({...props}) => (
+const AlmostFullSection = ({ ...props }) => (
   <Section
     backgroundColor={props.backgroundColor ? props.backgroundColor : ''}
-    className={props.sectionClass}>
+    className={props.sectionClass}
+  >
     <Box>
       {props.imageLeft && (
         <ImageContainer className="image-left">
@@ -17,7 +18,8 @@ const AlmostFullSection = ({...props}) => (
       )}
       <Container
         imageLeft={props.imageLeft}
-        className="divided-section-container">
+        className="divided-section-container"
+      >
         {props.children}
       </Container>
       {!props.imageLeft && (
@@ -27,7 +29,7 @@ const AlmostFullSection = ({...props}) => (
       )}
     </Box>
   </Section>
-);
+)
 
 const Section = styled.div`
   ${props =>
@@ -40,7 +42,7 @@ const Section = styled.div`
   justify-content: center;
   padding: 50px 15px;
   ${large('padding: 50px 120px;')};
-`;
+`
 const Box = styled.div`
   display: flex;
   justify-content: center;
@@ -50,7 +52,7 @@ const Box = styled.div`
   max-width: 1100px;
   margin: auto;
   ${large('flex-direction: row;')};
-`;
+`
 const Container = styled.div`
   ${large('width: 56%;')};
   ${p => (p.imageLeft ? 'padding-top' : 'padding-bottom')}: 30px;
@@ -86,15 +88,15 @@ const Container = styled.div`
     color: #212b36;
     font-family: 'FontRegular', sans-serif;
   }
-`;
+`
 const Image = styled.img`
   max-width: 100%;
-`;
+`
 
 const ImageContainer = styled.div`
   max-width: 427px;
   text-align: center;
   margin: auto;
-`;
+`
 
-export default AlmostFullSection;
+export default AlmostFullSection

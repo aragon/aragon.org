@@ -1,27 +1,27 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Badge} from '@aragon/ui';
-import Carousel from 'react-bootstrap/Carousel';
+import React from 'react'
+import styled from 'styled-components'
+import { Badge } from '@aragon/ui'
+import Carousel from 'react-bootstrap/Carousel'
 
-import {breakpoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
-const CarouselItem = ({image, children}) => (
+const CarouselItem = ({ image, children }) => (
   <Carousel.Item>
     <Item>
       <img src={image} />
       <div>{children}</div>
     </Item>
   </Carousel.Item>
-);
+)
 
 const UseCasesBadge = styled(Badge)`
   background: #c4e5df80 !important;
   color: #459d85 !important;
   padding: 1px 15px 0 !important;
   line-height: 2 !important;
-`;
+`
 
 const Item = styled.div`
   background: #f9fafc;
@@ -62,6 +62,6 @@ const Item = styled.div`
     color: #6d7693;
     margin-bottom: 65px;
   }
-`;
+`
 
-export default CarouselItem;
+export default CarouselItem

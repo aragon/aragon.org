@@ -1,26 +1,26 @@
 @font-face {
- font-family: 'FontRegular';
- src: url('./fonts/HKGrotesk-Regular.ttf') format('opentype');
+  font-family: 'FontRegular';
+  src: url('./fonts/HKGrotesk-Regular.ttf') format('opentype');
 }
 @font-face {
- font-family: 'FontMedium';
- src: url('./fonts/HKGrotesk-Medium.ttf') format('opentype');
+  font-family: 'FontMedium';
+  src: url('./fonts/HKGrotesk-Medium.ttf') format('opentype');
 }
 @font-face {
- font-family: 'FontLight';
- src: url('./fonts/HKGrotesk-Light.ttf') format('opentype');
+  font-family: 'FontLight';
+  src: url('./fonts/HKGrotesk-Light.ttf') format('opentype');
 }
 @font-face {
- font-family: 'FontSemiBold';
- src: url('./fonts/HKGrotesk-SemiBold.ttf') format('opentype');
+  font-family: 'FontSemiBold';
+  src: url('./fonts/HKGrotesk-SemiBold.ttf') format('opentype');
 }
 @font-face {
- font-family: 'FontBold';
- src: url('./fonts/HKGrotesk-Bold.ttf') format('opentype');
+  font-family: 'FontBold';
+  src: url('./fonts/HKGrotesk-Bold.ttf') format('opentype');
 }
 @font-face {
- font-family: 'FontSemiBold';
- src: url('./fonts/HKGrotesk-SemiBold.ttf') format('opentype');
+  font-family: 'FontSemiBold';
+  src: url('./fonts/HKGrotesk-SemiBold.ttf') format('opentype');
 }
 
 body {
@@ -29,28 +29,48 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  background: white!important;
+  background: white !important;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 }
 
-a, a span, button {
+a,
+a span,
+button {
   outline: none;
   transition: all 0.25s ease-in-out;
 }
 
 @-webkit-keyframes HeroAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @-moz-keyframes HeroAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @keyframes HeroAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

@@ -1,12 +1,12 @@
-import React from 'react';
-import Section from '../General/Section';
-import styled from 'styled-components';
-import darkModeTitle from './assets/dark-mode-title.svg';
-import darkModeImage from './assets/darkmodeimage.png';
+import React from 'react'
+import Section from '../General/Section'
+import styled from 'styled-components'
+import darkModeTitle from './assets/dark-mode-title.svg'
+import darkModeImage from './assets/darkmodeimage.png'
 
-import {breakpoint, BreakPoint, Button} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint, BreakPoint, Button } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const DarkMode = () => (
   <DarkModeSection>
@@ -14,9 +14,9 @@ const DarkMode = () => (
       Work late with <img src={darkModeTitle} />
     </h3>
     <p>See your organization in a whole new light</p>
-    <img src={darkModeImage}/>
+    <img src={darkModeImage} />
   </DarkModeSection>
-);
+)
 
 const DarkModeSection = styled(Section)`
   background-color: #141926;
@@ -50,6 +50,6 @@ const DarkModeSection = styled(Section)`
   img {
     max-width: 100%;
   }
-`;
+`
 
-export default DarkMode;
+export default DarkMode

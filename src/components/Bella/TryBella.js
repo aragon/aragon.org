@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
-import Section from '../General/Section';
-import video from './assets/promo-video.mp4';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import Section from '../General/Section'
+import video from './assets/promo-video.mp4'
 
-import {breakpoint, BreakPoint, Button} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint, BreakPoint, Button } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Video = () => (
   <VideoeSection>
@@ -34,7 +34,8 @@ const Video = () => (
           <a
             className="principal-button"
             href="https://mainnet.aragon.org/"
-            target="_blank">
+            target="_blank"
+          >
             <FormattedMessage
               id="bella.try-bella.action"
               defaultMessage="Try Bella now"
@@ -49,7 +50,7 @@ const Video = () => (
       </BreakPoint>
     </Box>
   </VideoeSection>
-);
+)
 
 const VideoeSection = styled(Section)`
   background-color: #95bbce;
@@ -64,7 +65,7 @@ const VideoeSection = styled(Section)`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 const Box = styled.div`
   display: flex;
   align-items: center;
@@ -78,7 +79,7 @@ const Box = styled.div`
     ${medium('margin-top: 30px; max-width: 70%;')};
     ${large('max-width: 56%;')};
   }
-`;
+`
 const Container = styled.div`
   width: 100%;
   text-align: center;
@@ -93,9 +94,9 @@ const Container = styled.div`
     text-align: center;
     ${large('text-align: left;')};
   }
-`;
+`
 const Image = styled.img`
   max-width: 100%;
-`;
+`
 
-export default Video;
+export default Video

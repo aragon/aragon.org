@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import pando from './assets/pando.svg';
-import althea from './assets/althea.svg';
-import dapp from './assets/dapp.svg';
-import melonport from './assets/melon.svg';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import styled from 'styled-components'
+import pando from './assets/pando.svg'
+import althea from './assets/althea.svg'
+import dapp from './assets/dapp.svg'
+import melonport from './assets/melon.svg'
+import Fade from 'react-reveal/Fade'
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Projects = () => (
   <ProjectsSection>
@@ -35,18 +35,18 @@ const Projects = () => (
       </Fade>
     </Container>
   </ProjectsSection>
-);
+)
 
 const ProjectsSection = styled.section`
   height: auto;
   background-color: #019fe3;
   padding: 100px 0 0 0;
   margin-bottom: -3px;
-`;
+`
 
 const Melon = styled.img`
   width: 46%;
-`;
+`
 
 const Container = styled.div`
   width: 80%;
@@ -62,5 +62,5 @@ const Container = styled.div`
     padding: 30px 0 !important;
     ${medium('max-width: 90%!important;')};
   }
-`;
-export default Projects;
+`
+export default Projects

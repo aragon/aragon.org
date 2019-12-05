@@ -1,21 +1,24 @@
-import React from 'react';
-import styled from 'styled-components';
-import Section from '../General/Section';
-import {Link} from 'react-static';
-import background from './home-assets/camino.png';
-import camino from './home-assets/camino-title.png';
+import React from 'react'
+import styled from 'styled-components'
+import { injectIntl, intlShape } from 'react-intl'
+import { Link } from 'react-static'
+import Section from '../General/Section'
+import background from './home-assets/camino.png'
+import camino from './home-assets/camino-title.png'
 
-import {breakpoint, BreakPoint, Button} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint, BreakPoint, Button } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
-const Camino = () => (
-  <Link to="camino">
+const Camino = ({ ...props }) => (
+  <Link
+    to={props.intl.locale ? '/' + props.intl.locale + '/camino' : '/camino'}
+  >
     <CaminoSection>
       <img src={camino} />
     </CaminoSection>
   </Link>
-);
+)
 
 const CaminoSection = styled(Section)`
   background-image: url(${background});
@@ -38,6 +41,10 @@ const CaminoSection = styled(Section)`
     ${medium('max-width: 750px;')}
     margin-bottom: 25px;
   }
-`;
+`
 
-export default Camino;
+const propTypes = {
+  intl: intlShape.isRequired,
+}
+
+export default injectIntl(Camino)

@@ -1,30 +1,30 @@
-import React from 'react';
-import {Text, breakpoint, SafeLink} from '@aragon/ui';
-import {Link} from 'react-static';
-import styled from 'styled-components';
-import logo from './assets/logo-footer.svg';
-import twitter from './assets/twitter.svg';
-import ghost from './assets/ghost.svg';
-import forum from './assets/forum.png';
-import rocket from './assets/rocket.svg';
-import youtube from './assets/youtube.svg';
+import React from 'react'
+import { Text, breakpoint, SafeLink } from '@aragon/ui'
+import { Link } from 'react-static'
+import styled from 'styled-components'
+import logo from './assets/logo-footer.svg'
+import twitter from './assets/twitter.svg'
+import ghost from './assets/ghost.svg'
+import forum from './assets/forum.png'
+import rocket from './assets/rocket.svg'
+import youtube from './assets/youtube.svg'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
-const Footer = ({...props}) => (
+const Footer = ({ ...props }) => (
   <FooterSection>
     <Container>
       <Item className="mobile-full">
-          <a href="https://aragon.org" target="_blank">
+        <a href="https://aragon.org" target="_blank">
           <LogoImg src={logo} />
         </a>
       </Item>
       <Item>
-          <Link to="/">Home</Link>
-          <Link to="/discover">Discover</Link>
-          <Link to="/project">Project</Link>
-          <Link to="/network">Network</Link>
+        <Link to="/">Home</Link>
+        <Link to="/discover">Discover</Link>
+        <Link to="/project">Project</Link>
+        <Link to="/network">Network</Link>
       </Item>
       <Item>
         <a href="https://hack.aragon.org/" target="_blank">
@@ -60,7 +60,8 @@ const Footer = ({...props}) => (
           </a>
           <a
             href="https://www.youtube.com/channel/UCODiU_-FWhr4SVOoBlm-qaQ"
-            target="_blank">
+            target="_blank"
+          >
             <Youtube src={youtube} />
           </a>
         </Box>
@@ -70,7 +71,8 @@ const Footer = ({...props}) => (
           method="post"
           name="mc-embedded-subscribe-form"
           target="_blank"
-          noValidate>
+          noValidate
+        >
           <div className="email-field">
             <input
               type="email"
@@ -81,7 +83,8 @@ const Footer = ({...props}) => (
             />
             <div
               aria-hidden="true"
-              style={{position: 'absolute', left: '-5000px'}}>
+              style={{ position: 'absolute', left: '-5000px' }}
+            >
               <input
                 type="text"
                 name="b_a590aa3843a54b079d48e6e18_e81a44c4bd"
@@ -92,7 +95,8 @@ const Footer = ({...props}) => (
               type="submit"
               name="subscribe"
               id="mc-embedded-subscribe"
-              className="button">
+              className="button"
+            >
               Subscribe
             </button>
           </div>
@@ -100,13 +104,12 @@ const Footer = ({...props}) => (
       </Item>
     </Container>
   </FooterSection>
-);
+)
 
 const FooterSection = styled.section`
-  background-color: #28548B;
+  background-color: #28548b;
   padding: 60px 15px;
-
-`;
+`
 
 const Container = styled.div`
   display: grid;
@@ -119,7 +122,7 @@ const Container = styled.div`
   max-width: 1100px;
   margin auto;
   width: 95%;
-`;
+`
 
 const Item = styled.div`
   a {
@@ -148,7 +151,7 @@ const Item = styled.div`
     button {
       margin-left: 15px;
       border-radius: 3px;
-      background-color: #3B84F8;
+      background-color: #3b84f8;
       color: white;
       border: solid 0px transparent;
       padding: 0 30px;
@@ -162,13 +165,13 @@ const Item = styled.div`
     input {
       line-height: 2;
       border: solid 0px transparent;
-      border-bottom: solid 1px #84A5CD;
+      border-bottom: solid 1px #84a5cd;
       background: transparent;
       outline: none;
       color: white;
     }
     input::placeholder {
-      color: #84A5CD;
+      color: #84a5cd;
     }
   }
   &.mobile-full {
@@ -176,7 +179,7 @@ const Item = styled.div`
     ${medium('grid-column-end: inherit; grid-column-start: inherit;')};
     grid-column-end: 4;
   }
-`;
+`
 const Box = styled.div`
   margin: 0 -15px;
   a {
@@ -185,22 +188,22 @@ const Box = styled.div`
     text-decoration: none;
   }
   img {
-    padding: 0!important;
+    padding: 0 !important;
   }
-`;
+`
 
 const Forum = styled.img`
   height: 19px;
   width: 19px;
-  padding: 0!important;
-`;
+  padding: 0 !important;
+`
 const Youtube = styled.img`
   margin-bottom: 1px;
-  padding: 0!important;
-`;
+  padding: 0 !important;
+`
 const LogoImg = styled.img`
   height: 50px;
-  padding: 0!important;
-`;
+  padding: 0 !important;
+`
 
-export default Footer;
+export default Footer

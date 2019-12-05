@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import {FormattedMessage} from 'react-intl';
-import {Page} from '../components';
-import SecondaryNavbar from '../components/Project/SecondaryNavbar';
-import backgroundImage from '../components/Project/assets/grants-background.svg';
-import GrantseContent from '../components/Project/GrantsContent';
-import GrantsQuotes from '../components/Project/GrantsQuotes';
-import Section from '../components/General/Section';
+import React from 'react'
+import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
+import { Page } from '../components'
+import SecondaryNavbar from '../components/Project/SecondaryNavbar'
+import backgroundImage from '../components/Project/assets/grants-background.svg'
+import GrantseContent from '../components/Project/GrantsContent'
+import GrantsQuotes from '../components/Project/GrantsQuotes'
+import Section from '../components/General/Section'
 
 const Grants = () => (
   <Page path="/project/grants">
@@ -28,7 +28,8 @@ const Grants = () => (
           <a
             className="principal-button"
             href="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant"
-            target="_blank">
+            target="_blank"
+          >
             <FormattedMessage
               id="project.grants.hero.action"
               defaultMessage="Apply"
@@ -41,7 +42,7 @@ const Grants = () => (
     <GrantseContent />
     <GrantsQuotes />
   </Page>
-);
+)
 
 const GrantsSection = styled(Section)`
   height: 550px;
@@ -53,7 +54,7 @@ const GrantsSection = styled(Section)`
   justify-content: center;
   overflow: hidden;
   padding-top:64px;
-`;
+`
 
 const Container = styled.div`
   height: 100%;
@@ -62,6 +63,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-`;
+`
 
-export default Grants;
+export default Grants
