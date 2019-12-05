@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
-import {breakpoint} from '@aragon/ui';
-import {Link} from 'react-static';
-import Section from '../General/Section';
+import React from 'react'
+import styled from 'styled-components'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import { breakpoint } from '@aragon/ui'
+import { Link } from 'react-static'
+import Section from '../General/Section'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Hero = () => (
   <HeroSection>
@@ -27,7 +27,8 @@ const Hero = () => (
         <a
           className="principal-button"
           href="https://mainnet.aragon.org"
-          target="_blank">
+          target="_blank"
+        >
           <FormattedMessage
             id="discover.hero.action"
             defaultMessage="Try it out"
@@ -36,7 +37,7 @@ const Hero = () => (
       </div>
     </TextContainer>
   </HeroSection>
-);
+)
 
 const HeroSection = styled(Section)`
   background: linear-gradient(270deg, #95bbce, #e7e4f6);
@@ -53,7 +54,7 @@ const HeroSection = styled(Section)`
   justify-content: center;
   position: relative;
   overflow: hidden;
-`;
+`
 
 const TextContainer = styled.div`
   width: 100%;
@@ -66,5 +67,5 @@ const TextContainer = styled.div`
   h4 {
     color: #6d7693;
   }
-`;
-export default Hero;
+`
+export default Hero

@@ -1,11 +1,11 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import {breakpoint} from '@aragon/ui';
-import styled from 'styled-components';
-import Section from '../General/Section';
-import Card from '../General/Card';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import { breakpoint } from '@aragon/ui'
+import styled from 'styled-components'
+import Section from '../General/Section'
+import Card from '../General/Card'
 
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 const mudule1Content = (
   <span>
@@ -19,7 +19,8 @@ const mudule1Content = (
       <a
         className="action-button"
         href="https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/"
-        target="_blank">
+        target="_blank"
+      >
         <span>
           <FormattedMessage
             id="network.about.module1.action"
@@ -30,7 +31,7 @@ const mudule1Content = (
       </a>
     </p>
   </span>
-);
+)
 const mudule2Content = (
   <span>
     <p>
@@ -43,7 +44,8 @@ const mudule2Content = (
       <a
         className="action-button"
         href="https://coinmarketcap.com/currencies/aragon/"
-        target="_blank">
+        target="_blank"
+      >
         <span>
           <FormattedMessage
             id="network.about.module.action"
@@ -54,7 +56,7 @@ const mudule2Content = (
       </a>
     </p>
   </span>
-);
+)
 const About = () => (
   <AboutSection>
     <Container>
@@ -84,11 +86,11 @@ const About = () => (
       />
     </Container>
   </AboutSection>
-);
+)
 
 const AboutSection = styled(Section)`
   padding: 30px 15px 90px 15px;
-`;
+`
 
 const Container = styled.div`
   display: grid;
@@ -119,5 +121,5 @@ const Container = styled.div`
     width: 187px;
     height: auto;
   }
-`;
-export default About;
+`
+export default About

@@ -1,39 +1,38 @@
-import React from 'react';
-import Section from '../General/Section';
-import styled from 'styled-components';
-import backgroundImage from './assets/background2.png';
-import parallaxImage from './assets/imageparallax.png';
-import fase1 from './assets/fase1.png';
-import fase2 from './assets/fase2.png';
-import fase3 from './assets/fase3.png';
-import fase4 from './assets/fase4.png';
-import title from './assets/camino-title.png';
-import blur from './assets/blur.png';
-import {Parallax, ParallaxLayer} from 'react-spring/addons.cjs.js';
+import React from 'react'
+import Section from '../General/Section'
+import styled from 'styled-components'
+import backgroundImage from './assets/background2.png'
+import parallaxImage from './assets/imageparallax.png'
+import fase1 from './assets/fase1.png'
+import fase2 from './assets/fase2.png'
+import fase3 from './assets/fase3.png'
+import fase4 from './assets/fase4.png'
+import title from './assets/camino-title.png'
+import blur from './assets/blur.png'
+import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs.js'
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
 class ParallaxComponent extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       active: 0,
-      imageLoaded: false
-    };
-    this.handleImageLoaded = this.handleImageLoaded.bind(this);
+      imageLoaded: false,
+    }
+    this.handleImageLoaded = this.handleImageLoaded.bind(this)
   }
 
   handleImageLoaded(index) {
-    this.setState({imageLoaded: true});
-    setTimeout(function(){
-      var element = document.getElementById("blur-parallax");
-      element.classList.add("remove-img");
-    }, 750);
+    this.setState({ imageLoaded: true })
+    setTimeout(function() {
+      var element = document.getElementById('blur-parallax')
+      element.classList.add('remove-img')
+    }, 750)
   }
 
   render() {
-
     return (
       <Box>
         <BreakPoint to="medium">
@@ -42,7 +41,11 @@ class ParallaxComponent extends React.Component {
           </StaticSection>
         </BreakPoint>
         <BreakPoint from="medium">
-          <img id="blur-parallax" src={blur} className={this.state.imageLoaded ? "blur fade" : "blur"} />
+          <img
+            id="blur-parallax"
+            src={blur}
+            className={this.state.imageLoaded ? 'blur fade' : 'blur'}
+          />
           <ParallaxSection>
             <Parallax pages={1.45} scrolling={true}>
               <ParallaxLayer offset={-0.1} speed={0}>
@@ -70,7 +73,7 @@ class ParallaxComponent extends React.Component {
           </ParallaxSection>
         </BreakPoint>
       </Box>
-    );
+    )
   }
 }
 
@@ -78,7 +81,7 @@ const CaminoTitle = styled.img`
   max-width: 90%;
   margin: 60% auto;
   ${medium(`margin: auto; max-width: 750px!important;`)}
-`;
+`
 const StaticSection = styled.div`
   height: 1200px;
   background-color: #0d5c76;
@@ -95,7 +98,7 @@ const StaticSection = styled.div`
   &.large {
     height: 2700px;
   }
-`;
+`
 const ParallaxSection = styled.div`
   background-color: #062132;
   min-height: 70vh;
@@ -129,7 +132,7 @@ const ParallaxSection = styled.div`
   .sky-mobile {
     margin-top: 17%;
   }
-`;
+`
 
 const Box = styled.div`
   max-width: 3000px;
@@ -156,6 +159,6 @@ const Box = styled.div`
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
   }
-`;
+`
 
-export default ParallaxComponent;
+export default ParallaxComponent

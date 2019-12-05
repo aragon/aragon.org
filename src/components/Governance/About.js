@@ -1,12 +1,12 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import {breakpoint, BreakPoint} from '@aragon/ui';
-import Section from '../General/Section';
-import about from './assets/about.svg';
-import what from './assets/what.svg';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import { breakpoint, BreakPoint } from '@aragon/ui'
+import Section from '../General/Section'
+import about from './assets/about.svg'
+import what from './assets/what.svg'
 
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 const About = () => (
   <div>
@@ -28,7 +28,8 @@ const About = () => (
           </h4>
           <a
             target="_blank"
-            href="https://wiki.aragon.org/documentation/aragon_network_token/">
+            href="https://wiki.aragon.org/documentation/aragon_network_token/"
+          >
             <span>
               <FormattedMessage
                 id="project.governance.about.module1.action"
@@ -60,7 +61,8 @@ const About = () => (
           </h4>
           <a
             target="_blank"
-            href="https://github.com/aragon/AGPs/blob/master/AGPs/AGP-1.md">
+            href="https://github.com/aragon/AGPs/blob/master/AGPs/AGP-1.md"
+          >
             <span>
               <FormattedMessage
                 id="project.governance.about.module2.action"
@@ -76,11 +78,11 @@ const About = () => (
       </Container>
     </StyledSection>
   </div>
-);
+)
 
 const StyledSection = styled(Section)`
   border-bottom: 2px solid #f9fafc;
-`;
+`
 
 const Container = styled.div`
   display: flex;
@@ -124,6 +126,6 @@ const Container = styled.div`
     text-align: center;
     color: #4a80e4;
   }
-`;
+`
 
-export default About;
+export default About

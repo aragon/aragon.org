@@ -12,12 +12,11 @@ import Modules from '../components/Governance/Modules'
 const Governance = () => (
   <Page path="/project/governance" contentColor="#f9fafc">
     <Hero />
-    <SecondaryNavbar page="governance"/>
+    <SecondaryNavbar page="governance" />
     <About />
     <Timeline />
-    <Modules/>
+    <Modules />
   </Page>
 )
-
 
 export default Governance

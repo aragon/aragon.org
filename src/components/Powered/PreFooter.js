@@ -1,24 +1,32 @@
-import React from 'react';
-import styled from 'styled-components';
-import background from './assets/pre-footer.svg';
-import logo from './assets/aragon-pre-footer.svg';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import styled from 'styled-components'
+import background from './assets/pre-footer.svg'
+import logo from './assets/aragon-pre-footer.svg'
+import Fade from 'react-reveal/Fade'
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const PreFooter = () => (
   <PreFooterSection>
     <Fade bottom distance="50px">
-    <Container>
-      <img src={logo}/>
-      <h2>Transparency, governance, and security are what it means to be Powered by Aragon</h2>
-      <a href="https://wiki.aragon.org/design/powered_by_aragon/" target="_blank">Learn more</a>
-    </Container>
+      <Container>
+        <img src={logo} />
+        <h2>
+          Transparency, governance, and security are what it means to be Powered
+          by Aragon
+        </h2>
+        <a
+          href="https://wiki.aragon.org/design/powered_by_aragon/"
+          target="_blank"
+        >
+          Learn more
+        </a>
+      </Container>
     </Fade>
   </PreFooterSection>
-);
+)
 
 const PreFooterSection = styled.section`
   min-height: 600px;
@@ -27,7 +35,7 @@ const PreFooterSection = styled.section`
   background-size: cover;
   height: 1106px;
   margin-bottom: -3px;
-`;
+`
 
 const Container = styled.div`
   width: 80%;
@@ -41,9 +49,9 @@ const Container = styled.div`
     font-size: 38px;
     line-height: 1.54;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: auto;
-    margin-top: 60px!important;
+    margin-top: 60px !important;
     ${medium('font-size: 48px;')};
     max-width: 918px;
   }
@@ -53,7 +61,7 @@ const Container = styled.div`
     line-height: 74px;
     text-align: center;
     margin: auto;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
   }
   a:hover {
@@ -61,5 +69,5 @@ const Container = styled.div`
   }
 
   ${medium('padding-top: 100px;')};
-`;
-export default PreFooter;
+`
+export default PreFooter

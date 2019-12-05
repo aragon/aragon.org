@@ -1,13 +1,13 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import {breakpoint} from '@aragon/ui';
-import Section from '../General/Section';
-import background from './assets/network-cover.svg';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import { breakpoint } from '@aragon/ui'
+import Section from '../General/Section'
+import background from './assets/network-cover.svg'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Hero = () => (
   <HeroSection>
@@ -29,7 +29,8 @@ const Hero = () => (
           <a
             className="principal-button"
             href="https://github.com/aragon/whitepaper"
-            target="_blank">
+            target="_blank"
+          >
             <FormattedMessage
               id="network.hero.action"
               defaultMessage="Whitepaper"
@@ -39,7 +40,7 @@ const Hero = () => (
       </TextContainer>
     </HeroMask>
   </HeroSection>
-);
+)
 
 const HeroSection = styled.div`
   background: linear-gradient(270deg, #32fff5, #01bfe3);
@@ -54,7 +55,7 @@ const HeroSection = styled.div`
   justify-content: center;
   position: relative;
   overflow: hidden;
-`;
+`
 
 const HeroMask = styled.div`
   background-image: url(${background});
@@ -68,7 +69,7 @@ const HeroMask = styled.div`
   align-items: center;
   justify-content: center;
   ${medium('height: 550px;')};
-`;
+`
 
 const TextContainer = styled.div`
   width: 100%;
@@ -81,5 +82,5 @@ const TextContainer = styled.div`
   h4 {
     color: #ffffff;
   }
-`;
-export default Hero;
+`
+export default Hero

@@ -1,16 +1,16 @@
-import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import {breakpoint} from '@aragon/ui';
-import styled from 'styled-components';
-import TimelineContainer from './TimelineContainer';
-import Entry from './Entry';
-import stage1 from './assets/stage1.svg';
-import stage2 from './assets/stage2.svg';
-import stage3 from './assets/stage3.svg';
-import stage4 from './assets/stage4.svg';
-import stage5 from './assets/stage5.svg';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import { breakpoint } from '@aragon/ui'
+import styled from 'styled-components'
+import TimelineContainer from './TimelineContainer'
+import Entry from './Entry'
+import stage1 from './assets/stage1.svg'
+import stage2 from './assets/stage2.svg'
+import stage3 from './assets/stage3.svg'
+import stage4 from './assets/stage4.svg'
+import stage5 from './assets/stage5.svg'
 
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 const Timeline = () => (
   <TimelineBox>
@@ -33,7 +33,8 @@ const Timeline = () => (
             </h5>
             <a
               target="_blank"
-              href="https://github.com/aragon/AGPs/blob/master/AGPs/AGP-1.md">
+              href="https://github.com/aragon/AGPs/blob/master/AGPs/AGP-1.md"
+            >
               <span>
                 <FormattedMessage
                   id="project.governance.timeline.stage1.action"
@@ -147,7 +148,8 @@ const Timeline = () => (
             </h5>
             <a
               target="_blank"
-              href="https://github.com/aragon/AGPs/blob/master/aa_board_review.md">
+              href="https://github.com/aragon/AGPs/blob/master/aa_board_review.md"
+            >
               <span>
                 <FormattedMessage
                   id="project.governance.timeline.stage5.action"
@@ -179,7 +181,8 @@ const Timeline = () => (
             </h5>
             <a
               target="_blank"
-              href="https://blog.aragon.org/tag/governance-proposals/">
+              href="https://blog.aragon.org/tag/governance-proposals/"
+            >
               <span>
                 <FormattedMessage
                   id="project.governance.timeline.stage6.action"
@@ -193,7 +196,7 @@ const Timeline = () => (
       </Entry>
     </LastContainer>
   </TimelineBox>
-);
+)
 
 const LastContainer = styled.div`
   width: 100%;
@@ -201,7 +204,7 @@ const LastContainer = styled.div`
   margin: auto;
   padding: 0;
   ${medium('padding: 5px 50px;')};
-`;
+`
 const TimelineBox = styled.div`
   width: 100%;
   margin: 0;
@@ -209,10 +212,10 @@ const TimelineBox = styled.div`
   ${medium('padding: 50px 8.5%;')};
   background: #f9fafc;
   text-align: center;
-`;
+`
 const StageImg = styled.img`
   height: 158px;
-`;
+`
 
 const Box = styled.div`
   background: #ffffff;
@@ -248,6 +251,6 @@ const Box = styled.div`
     text-align: center;
     color: #007bff !important;
   }
-`;
+`
 
-export default Timeline;
+export default Timeline

@@ -15,19 +15,19 @@ const large = css => breakpoint('large', css)
 
 const Discover = () => (
   <Page path="/discover" color="black">
-    <Hero/>
-    <About/>
-    <UnstoppableOranizations/>
+    <Hero />
+    <About />
+    <UnstoppableOranizations />
     <Features />
-    <Product/>
-    <BlogPost/>
+    <Product />
+    <BlogPost />
   </Page>
 )
 
 const HeroSection = styled(Section)`
   height: auto;
   ${medium('height: 600px;')};
-  
+
   background: linear-gradient(304deg, #95bbce, #c5d0e6, #e7e4f6);
   background-size: 400% 400%;
   -webkit-animation: HeroAnimation 7s ease infinite;
@@ -49,16 +49,15 @@ const HeroSection = styled(Section)`
       display: block;
       height: 300px;
       margin-left: 10px;
-
     }
     @media (min-width: 1071px) and (max-width: 1176px) {
       display: block;
       height: 430px;
-          margin-left: -20px;
+      margin-left: -20px;
     }
     @media (min-width: 1176px) and (max-width: 1330px) {
       display: block;
-      height: 500px!important;
+      height: 500px !important;
       margin-left: -60px;
     }
     @media (min-width: 1330px) {
@@ -67,21 +66,23 @@ const HeroSection = styled(Section)`
       margin-left: -30px;
     }
   }
-`;
+`
 const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   ${medium('flex-direction: row;')};
-`;
+`
 const Container = styled.div`
   width: 100%;
-  h2, h4, a {
+  h2,
+  h4,
+  a {
     text-align: left;
     margin-left: 0px;
     ${medium('margin-left: 60px;')};
   }
-`;
+`
 
 export default Discover

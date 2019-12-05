@@ -1,11 +1,11 @@
-import React from 'react';
-import Section from '../General/Section';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import video from './assets/agent-video.mp4';
+import React from 'react'
+import Section from '../General/Section'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import video from './assets/agent-video.mp4'
 
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
 const About = () => (
   <Organization>
@@ -16,23 +16,26 @@ const About = () => (
           <span className="blue">a desktop-native Ethereum provider</span>
         </h3>
         <p>
-          Use a hardware wallet or hot wallet with Frame. Supports native
-          Agent integration, so your Aragon organization can easily interact
-          with any Ethereum app.
+          Use a hardware wallet or hot wallet with Frame. Supports native Agent
+          integration, so your Aragon organization can easily interact with any
+          Ethereum app.
         </p>
-        <a className="action-button" href="https://help.aragon.org/article/37-agent" target="_blank">
+        <a
+          className="action-button"
+          href="https://help.aragon.org/article/37-agent"
+          target="_blank"
+        >
           <span>
             Learn more <img src={require(`../General/assets/arrow.svg`)} />
           </span>
         </a>
-
       </Container>
       <VideoContainer>
         <Video playsInline autoPlay muted loop src={video} />
       </VideoContainer>
     </Box>
   </Organization>
-);
+)
 
 const Organization = styled(Section)`
   background-color: white;
@@ -42,14 +45,14 @@ const Organization = styled(Section)`
   align-items: center;
   justify-content: center;
   ${medium('padding: 30px 120px 100px 120px;')}
-`;
+`
 const Box = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
   ${medium('flex-direction: row;')}
-`;
+`
 const Container = styled.div`
   width: 100%;
   ${medium('width: 60%;')}
@@ -60,7 +63,7 @@ const Container = styled.div`
   align-items: center;
   ${medium('text-align: left; margin: inherit; align-items: flex-start;')};
   .blue {
-    background: -webkit-linear-gradient(69deg, #6590FF, #5D21D4);
+    background: -webkit-linear-gradient(69deg, #6590ff, #5d21d4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: block;
@@ -86,18 +89,18 @@ const Container = styled.div`
     font-family: 'FontMedium', sans-serif;
     max-width: 346px;
   }
-`;
+`
 const Video = styled.video`
   max-width: 100%;
   margin-top: 30px;
   border-radius: 12px;
   ${medium('max-width: 66%; margin-top: 0;')}
-`;
+`
 
 const VideoContainer = styled.div`
   width: 100%;
   text-align: right;
   margin: auto;
-`;
+`
 
-export default About;
+export default About

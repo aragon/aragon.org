@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import {FormattedMessage} from 'react-intl';
-import {breakpoint} from '@aragon/ui';
-import Section from '../General/Section';
-import SmallCard from '../General/SmallCard';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import { FormattedMessage } from 'react-intl'
+import { breakpoint } from '@aragon/ui'
+import Section from '../General/Section'
+import SmallCard from '../General/SmallCard'
 
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 const About = () => (
   <AboutSection>
@@ -67,13 +67,13 @@ const About = () => (
       />
     </Container>
   </AboutSection>
-);
+)
 
 const AboutSection = styled(Section)`
   padding: 0 15px 30px 15px;
   ${medium('margin-top: -207px;')};
   z-index: 3;
-`;
+`
 const Container = styled.div`
   display: grid;
   ${medium(
@@ -97,6 +97,6 @@ const Container = styled.div`
   h1 {
     font-family: 'FontLight';
   }
-`;
+`
 
-export default About;
+export default About

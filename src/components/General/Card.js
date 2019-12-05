@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Section from '../General/Section';
-import styled from 'styled-components';
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
-import {Link} from 'react-static';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Section from '../General/Section'
+import styled from 'styled-components'
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
+import { Link } from 'react-static'
+import Fade from 'react-reveal/Fade'
 
-const SCard = ({...props}) => (
+const SCard = ({ ...props }) => (
   <SmallCard
     target="_blank"
     colorWhite={props.colorWhite}
@@ -18,11 +18,15 @@ const SCard = ({...props}) => (
     imageBig={props.imageBig ? props.imageBig : ''}
     cardHeight={props.cardHeight ? props.cardHeight : false}
     className={props.className}
-    >
-    {props.imageUrl.includes('.png') ?
-    <img className="principal-image" src={require(`../${props.imageUrl}`)} />
-  :
-    <img className="principal-image" src={require(`../${props.imageUrl}.svg`)} />}
+  >
+    {props.imageUrl.includes('.png') ? (
+      <img className="principal-image" src={require(`../${props.imageUrl}`)} />
+    ) : (
+      <img
+        className="principal-image"
+        src={require(`../${props.imageUrl}.svg`)}
+      />
+    )}
     {props.label && (
       <div className="label">
         <p>{props.label}</p>
@@ -31,9 +35,9 @@ const SCard = ({...props}) => (
     <h1>{props.title}</h1>
     <div className="content">{props.content}</div>
   </SmallCard>
-);
+)
 
-const Card = ({...props}) => (
+const Card = ({ ...props }) => (
   <React.Fragment>
     <BreakPoint to="medium">
       <SCard {...props} />
@@ -44,15 +48,14 @@ const Card = ({...props}) => (
       </Fade>
     </BreakPoint>
   </React.Fragment>
-);
+)
 
 const SmallCard = styled.div`
   border-radius: 12px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.07);
   background-color: #f9fafc;
   ${props =>
-    props.background &&
-    'background-image: url(' + props.background + ');'}
+    props.background && 'background-image: url(' + props.background + ');'}
   ${props =>
     props.gradient &&
     'background-image:' + props.gradient + ';'}
@@ -99,6 +102,6 @@ const SmallCard = styled.div`
   &:hover {
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.07);
   }
-`;
+`
 
-export default Card;
+export default Card

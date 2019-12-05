@@ -1,16 +1,16 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Link} from 'react-static';
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
-import {breakpoint} from '@aragon/ui';
-import Section from '../General/Section';
-import LongCard from '../General/LongCard';
-import Card from '../General/Card';
-import DividedSection from '../General/DividedSection';
-import universe from './assets/universe-of-apps.svg';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-static'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import { breakpoint } from '@aragon/ui'
+import Section from '../General/Section'
+import LongCard from '../General/LongCard'
+import Card from '../General/Card'
+import DividedSection from '../General/DividedSection'
+import universe from './assets/universe-of-apps.svg'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const mudule1Content = (
   <p>
@@ -19,7 +19,7 @@ const mudule1Content = (
       defaultMessage="Creating a democratic organization is as easy as selecting the Membership template. Votes are secure and tamper-proof. You can now empower entire communities."
     />
   </p>
-);
+)
 const mudule2Content = (
   <p>
     <FormattedMessage
@@ -27,7 +27,7 @@ const mudule2Content = (
       defaultMessage="No need to go through a huge stack of paper to figure out what’s going on. With Aragon, people in your organization can easily view the finances and other important data."
     />
   </p>
-);
+)
 
 const About = () => (
   <ProductFeatures>
@@ -72,7 +72,8 @@ const About = () => (
       <a
         className="action-button"
         href="https://hack.aragon.org/"
-        target="_blank">
+        target="_blank"
+      >
         <span>
           <FormattedMessage
             id="discover.product.module3.action"
@@ -83,7 +84,7 @@ const About = () => (
       </a>
     </DividedSection>
   </ProductFeatures>
-);
+)
 
 const Container = styled.div`
   display: grid;
@@ -98,7 +99,7 @@ const Container = styled.div`
     height: auto;
     width: 159px;
   }
-`;
+`
 
 const ProductFeatures = styled.div`
   .divided-section-container {
@@ -121,5 +122,5 @@ const ProductFeatures = styled.div`
   .universe img.divided-section-image {
     ${medium('padding-left: 120px;')};
   }
-`;
-export default About;
+`
+export default About

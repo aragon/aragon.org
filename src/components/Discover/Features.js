@@ -1,16 +1,16 @@
-import React from 'react';
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
-import styled from 'styled-components';
-import {breakpoint, BreakPoint} from '@aragon/ui';
-import Section from '../General/Section';
-import DividedSection from '../General/DividedSection';
-import AlmostFullSection from '../General/AlmostFullSection';
-import image1 from './assets/tokens.svg';
-import image2 from './assets/fully-customizable.svg';
-import image2Mobile from './assets/fully_customizable.svg';
+import React from 'react'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import styled from 'styled-components'
+import { breakpoint, BreakPoint } from '@aragon/ui'
+import Section from '../General/Section'
+import DividedSection from '../General/DividedSection'
+import AlmostFullSection from '../General/AlmostFullSection'
+import image1 from './assets/tokens.svg'
+import image2 from './assets/fully-customizable.svg'
+import image2Mobile from './assets/fully_customizable.svg'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Features = () => {
   const content = (
@@ -28,7 +28,7 @@ const Features = () => {
         />
       </p>
     </div>
-  );
+  )
   return (
     <Container>
       <DividedSection sectionClass="global" image={image1}>
@@ -49,7 +49,8 @@ const Features = () => {
         <DividedSection
           image={image2}
           imageLeft={true}
-          sectionClass="customizable">
+          sectionClass="customizable"
+        >
           {content}
         </DividedSection>
       </BreakPoint>
@@ -57,13 +58,14 @@ const Features = () => {
         <DividedSection
           image={image2Mobile}
           imageLeft={true}
-          sectionClass="customizable">
+          sectionClass="customizable"
+        >
           {content}
         </DividedSection>
       </BreakPoint>
     </Container>
-  );
-};
+  )
+}
 
 const Container = styled.div`
   .red {
@@ -99,5 +101,5 @@ const Container = styled.div`
     width: 80%;
     margin-left: 20%;
   }
-`;
-export default Features;
+`
+export default Features

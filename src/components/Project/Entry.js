@@ -1,17 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-import {theme, breakpoint} from '@aragon/ui';
+import React from 'react'
+import styled from 'styled-components'
+import { theme, breakpoint } from '@aragon/ui'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
-const Entry = ({children, entrypoint, lastpoint}) => (
+const Entry = ({ children, entrypoint, lastpoint }) => (
   <EntryBox>
     {entrypoint && <div className="entry-point" />}
     {lastpoint && <div className="last-point" />}
     <div className="content">{children}</div>
   </EntryBox>
-);
+)
 
 const EntryBox = styled.div`
   clear: both;
@@ -64,6 +64,6 @@ const EntryBox = styled.div`
     ${medium('left: -34px;')};
     background: #d8d8d8;
   }
-`;
+`
 
-export default Entry;
+export default Entry

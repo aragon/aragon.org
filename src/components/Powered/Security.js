@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import security from './assets/security.svg';
-import Fade from 'react-reveal/Fade';
+import React from 'react'
+import styled from 'styled-components'
+import security from './assets/security.svg'
+import Fade from 'react-reveal/Fade'
 
-import {breakpoint, BreakPoint, Button} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+import { breakpoint, BreakPoint, Button } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Security = () => (
   <SecuritySection>
@@ -29,7 +29,7 @@ const Security = () => (
       </Fade>
     </TextBox>
   </SecuritySection>
-);
+)
 
 const ImageContainer = styled.div`
   background: #70d5be;
@@ -41,7 +41,7 @@ const ImageContainer = styled.div`
   justify-content: center;
   height: auto;
   ${medium('height: 720px;')};
-`;
+`
 
 const SecuritySection = styled.section`
   background-color: white;
@@ -51,7 +51,7 @@ const SecuritySection = styled.section`
   align-items: center;
   flex-direction: column;
   ${medium('flex-direction: row;')};
-`;
+`
 
 const TextBox = styled.div`
   width: 100%;
@@ -90,5 +90,5 @@ const TextBox = styled.div`
     color: #030304;
     max-width: 499px;
   }
-`;
-export default Security;
+`
+export default Security

@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import {breakpoint, BreakPoint} from '@aragon/ui';
-const medium = css => breakpoint('medium', css);
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { breakpoint, BreakPoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
 class Quote extends React.Component {
   render() {
@@ -13,10 +13,11 @@ class Quote extends React.Component {
       background,
       imageRight,
       children,
-    } = this.props;
+    } = this.props
     return (
       <QuoteContainer
-        background={background ? require(`../${background}`) : ''}>
+        background={background ? require(`../${background}`) : ''}
+      >
         <Box>
           <BreakPoint from="medium">
             {image && !imageRight && <img src={require(`../${image}`)} />}
@@ -33,16 +34,16 @@ class Quote extends React.Component {
           </BreakPoint>
         </Box>
       </QuoteContainer>
-    );
+    )
   }
 }
 
 const QuoteContainer = styled.div`
   ${props =>
     props.background && 'background-image: url(' + props.background + ');'}
-    padding: 0 15px;
-    ${medium('padding: 0;')};
-`;
+  padding: 0 15px;
+  ${medium('padding: 0;')};
+`
 const Box = styled.div`
   max-width: 1100px;
   margin auto;
@@ -78,6 +79,6 @@ const Box = styled.div`
     bottom: 0;
     margin-top: 30px;
   }
-`;
+`
 
-export default Quote;
+export default Quote

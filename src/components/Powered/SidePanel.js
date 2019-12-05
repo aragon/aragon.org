@@ -1,35 +1,35 @@
-import PropTypes from "prop-types";
-import React from "react";
-import styled from "styled-components";
-import { Spring, animated } from "react-spring";
-import { Text, SafeLink } from "@aragon/ui";
-import logo from "./assets/logo.svg";
-import close from "./assets/close.svg";
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
+import { Spring, animated } from 'react-spring'
+import { Text, SafeLink } from '@aragon/ui'
+import logo from './assets/logo.svg'
+import close from './assets/close.svg'
 import { Link } from 'react-static'
 
 class SidePanel extends React.PureComponent {
   componentDidMount() {
-    document.addEventListener("keydown", this.handleEscape, false);
+    document.addEventListener('keydown', this.handleEscape, false)
   }
   componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleEscape, false);
+    document.removeEventListener('keydown', this.handleEscape, false)
   }
   handleClose = () => {
     if (!this.props.blocking) {
-      this.props.onClose();
+      this.props.onClose()
     }
-  };
+  }
   handleEscape = event => {
     if (event.keyCode === 27 && this.props.opened) {
-      this.handleClose();
+      this.handleClose()
     }
-  };
+  }
   handleTransitionRest = () => {
-    this.props.onTransitionEnd(this.props.opened);
-  };
+    this.props.onTransitionEnd(this.props.opened)
+  }
 
   render() {
-    const { opened, children } = this.props;
+    const { opened, children } = this.props
     return (
       <Spring
         config={{ tension: 50, friction: 10 }}
@@ -42,7 +42,7 @@ class SidePanel extends React.PureComponent {
             <Overlay
               style={{
                 opacity: overlay,
-                pointerEvents: opened ? "auto" : "none"
+                pointerEvents: opened ? 'auto' : 'none',
               }}
               onClick={this.handleClose}
             />
@@ -50,7 +50,7 @@ class SidePanel extends React.PureComponent {
               style={{
                 transform: progress.interpolate(
                   t => `translate3d(${-t * 290}px, 0, 0)`
-                )
+                ),
               }}
             >
               <PanelHeader>
@@ -70,7 +70,7 @@ class SidePanel extends React.PureComponent {
           </Main>
         )}
       </Spring>
-    );
+    )
   }
 }
 
@@ -80,15 +80,15 @@ SidePanel.propTypes = {
   opened: PropTypes.bool,
   blocking: PropTypes.bool,
   onClose: PropTypes.func,
-  onTransitionEnd: PropTypes.func
-};
+  onTransitionEnd: PropTypes.func,
+}
 
 SidePanel.defaultProps = {
   opened: true,
   blocking: false,
   onClose: () => {},
-  onTransitionEnd: () => {}
-};
+  onTransitionEnd: () => {},
+}
 
 const Main = styled.div`
   position: fixed;
@@ -97,8 +97,8 @@ const Main = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  pointer-events: ${({ opened }) => (opened ? "auto" : "none")};
-`;
+  pointer-events: ${({ opened }) => (opened ? 'auto' : 'none')};
+`
 
 const Overlay = styled(animated.div)`
   position: absolute;
@@ -107,7 +107,7 @@ const Overlay = styled(animated.div)`
   right: 0;
   bottom: 0;
   background: rgba(68, 81, 89, 0.65);
-`;
+`
 
 const Panel = styled(animated.aside)`
   position: absolute;
@@ -120,7 +120,7 @@ const Panel = styled(animated.aside)`
   height: 100vh;
   padding-left: 10px;
   box-shadow: -2px 0 36px rgba(0, 0, 0, 0.2);
-`;
+`
 
 const PanelHeader = styled.header`
   position: relative;
@@ -129,12 +129,12 @@ const PanelHeader = styled.header`
   padding-right: 20px;
   padding-bottom: 15px;
   flex-shrink: 0;
-`;
+`
 
 const PanelScrollView = styled.div`
   overflow-y: auto;
   height: 100%;
-`;
+`
 
 const PanelContent = styled.div`
   padding: 0 26px 26px;
@@ -142,7 +142,7 @@ const PanelContent = styled.div`
     padding: 15px 0;
     font-size: 20px;
   }
-`;
+`
 
 const PanelCloseButton = styled.button`
   img {
@@ -162,11 +162,11 @@ const PanelCloseButton = styled.button`
       border: 0;
     }
   }
-`;
+`
 
 const LogoImg = styled.img`
-  margin: 0 0 20px 0!important;
+  margin: 0 0 20px 0 !important;
   width: 50px;
-`;
+`
 
-export default SidePanel;
+export default SidePanel

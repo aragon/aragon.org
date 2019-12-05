@@ -1,18 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Page} from '../components';
-import Section from '../components/General/Section';
-import backgroundImage from '../components/Bella/assets/hero-background.jpg';
-import title from '../components/Bella/assets/hero-title.svg';
-import arrow from '../components/Bella/assets/arrow.svg';
+import React from 'react'
+import styled from 'styled-components'
+import { Page } from '../components'
+import Section from '../components/General/Section'
+import backgroundImage from '../components/Bella/assets/hero-background.jpg'
+import title from '../components/Bella/assets/hero-title.svg'
+import arrow from '../components/Bella/assets/arrow.svg'
 
-import Features from '../components/Bella/Features';
-import MoreFeatures from '../components/Bella/MoreFeatures';
-import LastFeatures from '../components/Bella/LastFeatures';
-import Video from '../components/Bella/Video';
-import TryBella from '../components/Bella/TryBella';
-import Zoom from 'react-reveal/Fade';
-import Pulse from 'react-reveal/Pulse';
+import Features from '../components/Bella/Features'
+import MoreFeatures from '../components/Bella/MoreFeatures'
+import LastFeatures from '../components/Bella/LastFeatures'
+import Video from '../components/Bella/Video'
+import TryBella from '../components/Bella/TryBella'
+import Zoom from 'react-reveal/Fade'
+import Pulse from 'react-reveal/Pulse'
 import { BreakPoint } from '@aragon/ui'
 import { Link } from 'react-static'
 
@@ -46,7 +46,7 @@ class Bella extends React.Component {
         <LastFeatures />
         <TryBella />
       </Page>
-    );
+    )
   }
 }
 
@@ -64,7 +64,7 @@ const Hero = styled(Section)`
   img {
     max-width: 90%;
   }
-`;
+`
 const Discover = styled.a`
   position: absolute;
   bottom: 30px;
@@ -83,8 +83,7 @@ const Discover = styled.a`
     width: 100%;
     text-align: center;
   }
-
-`;
+`
 
 const Container = styled.div`
   height: 100%;
@@ -94,6 +93,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-`;
+`
 
-export default Bella;
+export default Bella

@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {FormattedMessage} from 'react-intl';
-import styled from 'styled-components';
-import {breakpoint} from '@aragon/ui';
-import Section from '../General/Section';
-import juror from './assets/juror.svg';
-import ant from './assets/ant.png';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { FormattedMessage } from 'react-intl'
+import styled from 'styled-components'
+import { breakpoint } from '@aragon/ui'
+import Section from '../General/Section'
+import juror from './assets/juror.svg'
+import ant from './assets/ant.png'
 
-const medium = css => breakpoint('medium', css);
-const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const mudule1Content = (
   <React.Fragment>
@@ -32,7 +32,8 @@ const mudule1Content = (
             <a
               className="action-button"
               href="https://anj.aragon.org/"
-              target="_blank">
+              target="_blank"
+            >
               <span>
                 <FormattedMessage
                   id="network.network-content.module1.action"
@@ -46,7 +47,7 @@ const mudule1Content = (
       </div>
     </div>
   </React.Fragment>
-);
+)
 const mudule2Content = (
   <React.Fragment>
     <img className="principal-image" src={ant} />
@@ -69,7 +70,8 @@ const mudule2Content = (
             <a
               className="action-button"
               href="https://blog.aragon.one/aragon-chain/"
-              target="_blank">
+              target="_blank"
+            >
               <span>
                 <FormattedMessage
                   id="network.network-content.module2.action"
@@ -83,7 +85,7 @@ const mudule2Content = (
       </div>
     </div>
   </React.Fragment>
-);
+)
 
 const About = () => (
   <AboutSection>
@@ -96,11 +98,11 @@ const About = () => (
       </div>
     </CardContainer>
   </AboutSection>
-);
+)
 
 const AboutSection = styled(Section)`
   padding: 30px 15px 35px 15px;
-`;
+`
 
 const CardContainer = styled.div`
   display: grid !important;
@@ -125,7 +127,7 @@ const CardContainer = styled.div`
   .juror p.content {
     margin-top: 5px;
   }
-`;
+`
 
 const Card = styled.div`
   border-radius: 12px;
@@ -159,5 +161,5 @@ const Card = styled.div`
   div.wrapper {
     padding: 30px;
   }
-`;
-export default About;
+`
+export default About
