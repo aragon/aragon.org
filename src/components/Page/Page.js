@@ -47,6 +47,24 @@ class Page extends React.Component {
                 <Head>
                   <title>{title || siteTitle}</title>
                 </Head>
+                <AGPBanner>
+                  <p>
+                    <FormattedMessage
+                      id="page.banner"
+                      defaultMessage="Aragon Network Vote #4 is happening now!"
+                    />{' '}
+                    <a
+                      target="_blank"
+                      href="https://blog.aragon.org/final-details-for-aragon-network-vote-5/"
+                    >
+                      <FormattedMessage
+                        id="page.banner.action"
+                        defaultMessage="Read more"
+                      />
+                    </a>
+                    .
+                  </p>
+                </AGPBanner>
                 <Navbar menuItems={items} path={path} color={color} />
                 <Intl>
                   <Dropdown>
@@ -100,6 +118,8 @@ class Page extends React.Component {
 const Intl = styled.div`
   position: absolute;
   top: 10px;
+  top: 74px;
+  ${medium('top: 44px;')}
   right: 10px;
   z-index: 9999999;
   .dropdown-menu {

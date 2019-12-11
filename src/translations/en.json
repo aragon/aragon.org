@@ -60,6 +60,8 @@
   "page.navbar.developers": "Developers",
   "page.navbar.project": "Project",
   "page.navbar.network": "Network",
+  "page.banner": "Aragon Network Vote #5 is happening now!",
+  "page.banner.action": "Read more",
   "discover.about.module1.content": "Aragon organizations are digital natives. They live on Ethereum, a ledger secured by incentives and cryptography. Transactions are transparent and immutable.",
   "discover.about.module2.content": "Aragon leverages smart contracts. They are like traditional contracts, but written in computer code and enforced by the blockchain. As efficient and automatic as it gets.",
   "discover.about.module1.title": "21st century organizations",
