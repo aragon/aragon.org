@@ -1584,7 +1584,7 @@ babel-code-frame@6.26.0, babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
-babel-core@^6.26.0, babel-core@^6.26.3:
+babel-core@^6.26.0:
   version "6.26.3"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.26.3.tgz#b2e2f09e342d0f0c88e2f02e067794125e75c207"
   integrity sha512-6jyFLuDmeidKmUEb3NM+/yawG0M2bDZ9Z1qbZP59cyHLz8kYGKYwpJP0UwUKKUiTRNvxfLesJnTedqczP7cTDA==
@@ -1831,7 +1831,7 @@ babel-plugin-macros@2.4.2:
     cosmiconfig "^5.0.5"
     resolve "^1.8.1"
 
-babel-plugin-react-intl@2.x, babel-plugin-react-intl@^2.3.1:
+babel-plugin-react-intl@2.x:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-react-intl/-/babel-plugin-react-intl-2.4.0.tgz#292fca8030603a9e0476973290836aa0c7da17e2"
   integrity sha512-r67nOQdpKxPtDFiJHquTt9dBG0xOlBk1u3rForULNrDXvTzg5RRHbB7RLqqMWOvqfP2znTo0C+e/PLnPKt+JXA==
@@ -5006,18 +5006,6 @@ extract-react-intl-messages@^2.3.3:
     sort-keys "^4.0.0"
     write-json-file "^4.1.1"
 
-extract-react-intl@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/extract-react-intl/-/extract-react-intl-0.7.1.tgz#68568f2f66948cec10028e25acff5a21498f6c51"
-  integrity sha512-flEGtpJJ48TfmNDgWP7R39AO54k+tF5eF5u3F8VAatYbSKWn+6IOVXuM+QdwrTKOGrHjEbNxmf9h/yrYWKx8/g==
-  dependencies:
-    babel-plugin-react-intl "^2.3.1"
-    glob "^7.1.3"
-    lodash.merge "^4.6.1"
-    lodash.mergewith "^4.6.1"
-    pify "^4.0.0"
-    read-babelrc-up "^0.3.0"
-
 extract-text-webpack-plugin@^3.0.1, extract-text-webpack-plugin@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.2.tgz#5f043eaa02f9750a9258b78c0a6e0dc1408fb2f7"
@@ -5265,13 +5253,6 @@ find-up@^2.0.0, find-up@^2.1.0:
   integrity sha1-RdG35QbHF93UgndaK3eSCjwMV6c=
   dependencies:
     locate-path "^2.0.0"
-
-find-up@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/find-up/-/find-up-3.0.0.tgz#49169f1d7993430646da61ecc5ae355c21c97b73"
-  integrity sha512-1yD6RmLI1XBfxugvORwlck6f75tYL+iR0jqwsOrOxMZyGYqUuDhJ0l4AXdO1iX/FTs9cBAMEk1gWSEx1kSbylg==
-  dependencies:
-    locate-path "^3.0.0"
 
 find-up@^4.0.0:
   version "4.1.0"
@@ -5606,7 +5587,7 @@ glob@^7.0.3, glob@^7.0.5, glob@^7.1.2:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.1.3, glob@^7.1.4:
+glob@^7.1.4:
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
   integrity sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
@@ -7081,14 +7062,6 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
-locate-path@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-3.0.0.tgz#dbec3b3ab759758071b58fe59fc41871af21400e"
-  integrity sha512-7AO748wWnIhNqAuaty2ZWHkQHRSNfPVIsPIfwEOWO22AmaoVrWavlOcMR5nzTLNYvp36X220/maaRsrec1G65A==
-  dependencies:
-    p-locate "^3.0.0"
-    path-exists "^3.0.0"
-
 locate-path@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-5.0.0.tgz#1afba396afd676a6d42504d0a67a3a7eb9f62aa0"
@@ -7116,12 +7089,12 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
 
-lodash.merge@^4.6.1, lodash.merge@^4.6.2:
+lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
-lodash.mergewith@^4.6.1, lodash.mergewith@^4.6.2:
+lodash.mergewith@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
   integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
@@ -8065,7 +8038,7 @@ p-limit@^1.0.0, p-limit@^1.1.0:
   dependencies:
     p-try "^1.0.0"
 
-p-limit@^2.0.0, p-limit@^2.2.0:
+p-limit@^2.2.0:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.2.1.tgz#aa07a788cc3151c939b5131f63570f0dd2009537"
   integrity sha512-85Tk+90UCVWvbDavCLKPOLC9vvY8OwEX/RtKF+/1OADJMVlFfEHOiMTPVyxg7mk/dKa+ipdHm0OUkTvCpMTuwg==
@@ -8078,13 +8051,6 @@ p-locate@^2.0.0:
   integrity sha1-IKAQOyIqcMj9OcwuWAaA893l7EM=
   dependencies:
     p-limit "^1.1.0"
-
-p-locate@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-3.0.0.tgz#322d69a05c0264b25997d9f40cd8a891ab0064a4"
-  integrity sha512-x+12w/To+4GFfgJhBEpiDcLozRJGegY+Ei7/z0tSLkMmxGZNybVMSfWj9aJn8Z5Fc7dBUNJOOVgPv2H7IwulSQ==
-  dependencies:
-    p-limit "^2.0.0"
 
 p-locate@^4.1.0:
   version "4.1.0"
@@ -8347,7 +8313,7 @@ pify@^3.0.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
   integrity sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
 
-pify@^4.0.0, pify@^4.0.1:
+pify@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
@@ -9346,14 +9312,6 @@ react@^16.7.0-alpha.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-
-read-babelrc-up@^0.3.0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/read-babelrc-up/-/read-babelrc-up-0.3.1.tgz#4903b773ce68c00ca9f2aec4cace3ef72f851eb7"
-  integrity sha512-DAFetxQZKpiIAmjpnbxTAJ5lohBaKhRTfcfexApDmkVBGgg8ScbXCFhzZ3KYlagTNK0Bja0xPvQwcGLer6ukxg==
-  dependencies:
-    find-up "^3.0.0"
-    json5 "^2.1.0"
 
 read-babelrc-up@^0.4.0:
   version "0.4.0"

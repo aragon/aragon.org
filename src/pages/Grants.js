@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
+import { FormattedHTMLMessage, FormattedMessage } from 'react-intl'
 import { Page } from '../components'
 import SecondaryNavbar from '../components/Project/SecondaryNavbar'
 import backgroundImage from '../components/Project/assets/grants-background.svg'
@@ -19,9 +19,9 @@ const Grants = () => (
           />
         </h2>
         <h4>
-          <FormattedMessage
+          <FormattedHTMLMessage
             id="project.grants.hero.content"
-            defaultMessage="Aragon is re-inventing the future of organizations. But we cannot do it alone. <br/>Nest was born to help the ecosystem flourish."
+            defaultMessage="Aragon is re-inventing the future of organizations. But we cannot do it alone. Nest was born to help the ecosystem flourish."
           />
         </h4>
         <div className="hero-button-container centered">
