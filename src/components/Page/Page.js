@@ -62,7 +62,6 @@ class Page extends React.Component {
                         defaultMessage="Stake ANT and become a juror today!"
                       />
                     </a>
-                    .
                   </p>
                 </AGPBanner>
                 <Navbar menuItems={items} path={path} color={color} />
