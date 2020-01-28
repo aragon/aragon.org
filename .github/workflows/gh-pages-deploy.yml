@@ -17,10 +17,7 @@ jobs:
     - name: yarn install, yarn build
       run: |
         yarn --frozen-lockfile
-        yarn build
-        echo 'aragon.org' > dist/CNAME
-      env:
-        NODE_ENV: 'production'
+        yarn build:production
     - name: push to gh-pages
       uses: peaceiris/actions-gh-pages@v2
       env:
