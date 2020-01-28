@@ -187,9 +187,9 @@ const Inside = ({
       <Dropdown>
         <Dropdown.Toggle id="dropdown-basic">
           {localStorage.getItem('locale') == 'es' ? (
-            <img src={es} />
+            <img src={es} alt="Idioma" />
           ) : (
-            <img src={en} />
+            <img src={en} alt="Language" />
           )}
         </Dropdown.Toggle>
         <Dropdown.Menu>
@@ -204,7 +204,7 @@ const Inside = ({
               }
             }}
           >
-            <img src={en} /> English
+            <img src={en} alt="" /> English
           </Dropdown.Item>
           <Dropdown.Item
             onClick={() => {
@@ -217,7 +217,7 @@ const Inside = ({
               }
             }}
           >
-            <img src={es} /> Español
+            <img src={es} alt="" /> Español
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
