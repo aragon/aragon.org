@@ -45,23 +45,20 @@ class Page extends React.Component {
                   <title>{title || siteTitle}</title>
                 </Head>
                 <Header>
-                  <AnnoucementBanner>
+                  <AnnouncementBanner>
                     <p>
                       <FormattedMessage
                         id="page.banner"
                         defaultMessage="Aragon Court is launching."
                       />{' '}
-                      <a
-                        target="_blank"
-                        href="https://anj.aragon.org/"
-                      >
+                      <a target="_blank" href="https://anj.aragon.org/">
                         <FormattedMessage
                           id="page.banner.action"
                           defaultMessage="Stake ANT and become a juror today!"
                         />
                       </a>
                     </p>
-                  </AnnoucementBanner>
+                  </AnnouncementBanner>
                   <Navbar menuItems={items} path={path} color={color} />
                 </Header>
                 <Content contentColor={contentColor}>{children}</Content>
@@ -195,21 +192,25 @@ const Header = styled.div`
   width: 100vw;
   z-index: 5;
 `
-const AnnoucementBanner = styled.div`
+const AnnouncementBanner = styled.div`
   padding: 10px 0;
   text-align: center;
-  background-image: linear-gradient(90deg, #2CF4E1, #2CB2E1);
+  background-image: linear-gradient(186deg, rgb(50, 255, 245) -100%, rgb(1, 191, 227) 80%);
   p {
-    line-height: 20px;
     padding: 0 30px;
+    line-height: 20px;
     text-align: center:;
-    color: black;
+    color: #FFF;
     overflow: hidden;
     max-width: 100%;
     max-height: 66px;
+    font-weight: 700;
   }
   a {
-    font-weight: 700;
+    color: #FFF;
+  }
+  a, span {
+    transition: none;
   }
 `
 
