@@ -225,7 +225,7 @@ const AnnouncementBanner = styled.a.attrs({ target: '_blank' })`
     overflow: hidden;
     max-width: 100%;
     max-height: 66px;
-    font-weight: 700;
+    font-weight: 600;
   }
 `
 
