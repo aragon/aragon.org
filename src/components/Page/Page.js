@@ -44,24 +44,26 @@ class Page extends React.Component {
                 <Head>
                   <title>{title || siteTitle}</title>
                 </Head>
-                <AGPBanner>
-                  <p>
-                    <FormattedMessage
-                      id="page.banner"
-                      defaultMessage="Aragon Court is launching."
-                    />{' '}
-                    <a
-                      target="_blank"
-                      href="https://anj.aragon.org/"
-                    >
+                <Header>
+                  <AnnoucementBanner>
+                    <p>
                       <FormattedMessage
-                        id="page.banner.action"
-                        defaultMessage="Stake ANT and become a juror today!"
-                      />
-                    </a>
-                  </p>
-                </AGPBanner>
-                <Navbar menuItems={items} path={path} color={color} />
+                        id="page.banner"
+                        defaultMessage="Aragon Court is launching."
+                      />{' '}
+                      <a
+                        target="_blank"
+                        href="https://anj.aragon.org/"
+                      >
+                        <FormattedMessage
+                          id="page.banner.action"
+                          defaultMessage="Stake ANT and become a juror today!"
+                        />
+                      </a>
+                    </p>
+                  </AnnoucementBanner>
+                  <Navbar menuItems={items} path={path} color={color} />
+                </Header>
                 <Content contentColor={contentColor}>{children}</Content>
                 <Footer path={path} />
               </PublicUrl.Provider>
@@ -188,16 +190,17 @@ const Content = styled.div`
   .;
 `
 
-const AGPBanner = styled.div`
+const Header = styled.div`
   position: fixed;
-  z-index: 5;
-  height: 66px;
-  ${medium('height: 33px;')};
   width: 100vw;
+  z-index: 5;
+`
+const AnnoucementBanner = styled.div`
+  padding: 10px 0;
   text-align: center;
   background-image: linear-gradient(90deg, #2CF4E1, #2CB2E1);
   p {
-    line-height: 35px;
+    line-height: 20px;
     padding: 0 30px;
     text-align: center:;
     color: black;

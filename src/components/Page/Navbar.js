@@ -178,7 +178,7 @@ const Inside = ({
             <MobileLogo src={logo} />
           </span>
         </Link>
-        <div style={{ width: '30px' }}>
+        <div style={{ width: '24px' }}>
           <span />
         </div>
       </BreakPoint>
@@ -226,17 +226,14 @@ const Inside = ({
 )
 
 const AragonNavbar = styled.div`
+  position: relative;
   width: 100%;
-  margin-top: 64px;
-  ${medium('margin-top: 33px;')};
   height: 64px;
   display: flex;
   justify-content: flex-start;
   ${medium('justify-content: center;')};
   align-items: center;
   padding: 0 20px;
-  position: fixed;
-  z-index: 5;
   .brand {
     display: flex;
   }

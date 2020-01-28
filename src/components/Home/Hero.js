@@ -72,8 +72,7 @@ const HeroSection = styled(Section)`
   overflow: hidden;
   padding-bottom: 0px;
   .container {
-    margin-top: 50px;
-    ${medium('margin-top: 112px;')}
+    margin-top: 112px;
   }
 `
 const ButtonContainer = styled.div`
