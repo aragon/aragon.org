@@ -232,7 +232,7 @@ class UseCases extends React.Component {
                       {' '}
                       <FormattedMessage
                         id="home.usecases.pool.link1"
-                        defaultMessage="Go to Pool TogetherE"
+                        defaultMessage="Go to Pool Together"
                       />
                     </a>
                   </p>
