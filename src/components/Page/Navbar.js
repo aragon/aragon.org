@@ -1,13 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-static'
+import Dropdown from 'react-bootstrap/Dropdown'
 import { injectIntl, intlShape } from 'react-intl'
+import { Spring, animated } from 'react-spring'
 import { Text, breakpoint, BreakPoint, SafeLink } from '@aragon/ui'
 import MenuItem from './MenuItem'
 import MenuPanel from './MenuPanel'
-import { Spring, animated } from 'react-spring'
-const medium = css => breakpoint('medium', css)
+import en from './assets/en.svg'
+import es from './assets/es.svg'
 import logo from './assets/logo.svg'
+
+const medium = css => breakpoint('medium', css)
 
 const renderMenuItemLink = ({ url, children, locale }) =>
   url.startsWith('/') ? (
@@ -179,6 +183,45 @@ const Inside = ({
         </div>
       </BreakPoint>
     </Center>
+    <Intl>
+      <Dropdown>
+        <Dropdown.Toggle id="dropdown-basic">
+          {localStorage.getItem('locale') == 'es' ? (
+            <img src={es} />
+          ) : (
+            <img src={en} />
+          )}
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item
+            onClick={() => {
+              localStorage.setItem('locale', 'en')
+              if (window.location.href.indexOf('/es/') >= 0) {
+                let url = window.location.href.split('/es/')
+                window.location.href = url[0] + '/en/' + url[1]
+              } else {
+                window.location.reload(false)
+              }
+            }}
+          >
+            <img src={en} /> English
+          </Dropdown.Item>
+          <Dropdown.Item
+            onClick={() => {
+              localStorage.setItem('locale', 'es')
+              if (window.location.href.indexOf('/en/') >= 0) {
+                let url = window.location.href.split('/en/')
+                window.location.href = url[0] + '/es/' + url[1]
+              } else {
+                window.location.reload(false)
+              }
+            }}
+          >
+            <img src={es} /> Español
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    </Intl>
   </AragonNavbar>
 )
 
@@ -250,6 +293,33 @@ const Center = styled.div`
   align-items: center;
   justify-content: space-between;
   ${medium('width: auto; height: 100%; display: inherit;')};
+`
+
+const Intl = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999999;
+  .dropdown-menu {
+    width: 30px;
+    left: auto !important;
+    right: 0px !important;
+    transform: translate3d(-6px, 39px, 0px) !important;
+  }
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .show > .btn-primary.dropdown-toggle {
+    color: black;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
 `
 
 const LogoLink = styled(Link)`
