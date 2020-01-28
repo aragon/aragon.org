@@ -2,12 +2,9 @@ import React from 'react'
 import { Link, SiteData, RouteData, Head } from 'react-static'
 import styled from 'styled-components'
 import { AppBar, BaseStyles, PublicUrl, breakpoint } from '@aragon/ui'
-import Dropdown from 'react-bootstrap/Dropdown'
 import { FormattedMessage } from 'react-intl'
 import Navbar from './Navbar'
 import Footer from './Footer.js'
-import en from './assets/en.svg'
-import es from './assets/es.svg'
 const medium = css => breakpoint('medium', css)
 const large = css => breakpoint('large', css)
 
@@ -47,63 +44,26 @@ class Page extends React.Component {
                 <Head>
                   <title>{title || siteTitle}</title>
                 </Head>
-                <AGPBanner>
-                  <p>
-                    <FormattedMessage
-                      id="page.banner"
-                      defaultMessage="Aragon Court is launching."
-                    />{' '}
-                    <a
-                      target="_blank"
-                      href="https://anj.aragon.org/"
-                    >
+                <Header>
+                  <AnnoucementBanner>
+                    <p>
                       <FormattedMessage
-                        id="page.banner.action"
-                        defaultMessage="Stake ANT and become a juror today!"
-                      />
-                    </a>
-                  </p>
-                </AGPBanner>
-                <Navbar menuItems={items} path={path} color={color} />
-                <Intl>
-                  <Dropdown>
-                    <Dropdown.Toggle id="dropdown-basic">
-                      {localStorage.getItem('locale') == 'es' ? (
-                        <img src={es} />
-                      ) : (
-                        <img src={en} />
-                      )}
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item
-                        onClick={() => {
-                          localStorage.setItem('locale', 'en')
-                          if (window.location.href.indexOf('/es/') >= 0) {
-                            let url = window.location.href.split('/es/')
-                            window.location.href = url[0] + '/en/' + url[1]
-                          } else {
-                            window.location.reload(false)
-                          }
-                        }}
+                        id="page.banner"
+                        defaultMessage="Aragon Court is launching."
+                      />{' '}
+                      <a
+                        target="_blank"
+                        href="https://anj.aragon.org/"
                       >
-                        <img src={en} /> English
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        onClick={() => {
-                          localStorage.setItem('locale', 'es')
-                          if (window.location.href.indexOf('/en/') >= 0) {
-                            let url = window.location.href.split('/en/')
-                            window.location.href = url[0] + '/es/' + url[1]
-                          } else {
-                            window.location.reload(false)
-                          }
-                        }}
-                      >
-                        <img src={es} /> Español
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Intl>
+                        <FormattedMessage
+                          id="page.banner.action"
+                          defaultMessage="Stake ANT and become a juror today!"
+                        />
+                      </a>
+                    </p>
+                  </AnnoucementBanner>
+                  <Navbar menuItems={items} path={path} color={color} />
+                </Header>
                 <Content contentColor={contentColor}>{children}</Content>
                 <Footer path={path} />
               </PublicUrl.Provider>
@@ -114,34 +74,6 @@ class Page extends React.Component {
     )
   }
 }
-const Intl = styled.div`
-  position: absolute;
-  top: 10px;
-  top: 74px;
-  ${medium('top: 44px;')}
-  right: 10px;
-  z-index: 9999999;
-  .dropdown-menu {
-    width: 30px;
-    left: auto !important;
-    right: 0px !important;
-    transform: translate3d(-6px, 39px, 0px) !important;
-  }
-  .btn-primary,
-  .btn-primary:hover,
-  .btn-primary:active,
-  .btn-primary:not(:disabled):not(.disabled).active,
-  .btn-primary:not(:disabled):not(.disabled):active,
-  .show > .btn-primary.dropdown-toggle {
-    color: black;
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    border-color: transparent;
-    outline: none;
-    box-shadow: none;
-  }
-`
 const Content = styled.div`
   min-height: calc(100vh - 116px) !important;
   ${p => p.contentColor && 'background-color: ' + p.contentColor}
@@ -258,16 +190,17 @@ const Content = styled.div`
   .;
 `
 
-const AGPBanner = styled.div`
+const Header = styled.div`
   position: fixed;
-  z-index: 5;
-  height: 66px;
-  ${medium('height: 33px;')};
   width: 100vw;
+  z-index: 5;
+`
+const AnnoucementBanner = styled.div`
+  padding: 10px 0;
   text-align: center;
   background-image: linear-gradient(90deg, #2CF4E1, #2CB2E1);
   p {
-    line-height: 35px;
+    line-height: 20px;
     padding: 0 30px;
     text-align: center:;
     color: black;
