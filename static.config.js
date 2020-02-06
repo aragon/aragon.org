@@ -23,6 +23,11 @@ export default {
     let locales = ['', 'es', 'en'];
     let routes = [
       {
+        path: '/court',
+        component: 'src/pages/Court',
+        getData: () => ({title: ''}),
+      },
+      {
         path: '/discover',
         component: 'src/pages/Discover',
         getData: () => ({title: ''}),
