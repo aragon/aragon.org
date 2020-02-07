@@ -24,14 +24,14 @@ const Hero = props => {
           <p>
             <FormattedHTMLMessage
               id="court.hero.description"
-              defaultMessage="Aragon Court handles subjective disputes that require the judgment of human jurors."
+              defaultMessage="Participate in the world’s first digital jurisdiction by<br/>becoming a juror for Aragon Court"
             />
           </p>
           <a className="action-button court-link" href="/court" target="_blank">
             <span>
               <FormattedMessage
-                id="home.organizations.action"
-                defaultMessage="Learn more"
+                id="court.hero.action"
+                defaultMessage="Try the court"
               />
               <img src={require(`../General/assets/arrow-white.svg`)} />
             </span>
