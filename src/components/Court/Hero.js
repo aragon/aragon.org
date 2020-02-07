@@ -1,20 +1,11 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
-import {
-  FormattedMessage,
-  FormattedHTMLMessage,
-  injectIntl,
-  intlShape,
-} from 'react-intl'
-import { Link } from 'react-static'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Section from '../General/Section'
 import Juror from '../Home/home-assets/juror.svg'
 import Video from './court-assets/video.png'
 
-import { breakpoint } from '@aragon/ui'
-const medium = css => breakpoint('medium', css)
-
-const Hero = props => {
+const Hero = () => {
   const videoRef = useRef()
   return (
     <CourtSection>

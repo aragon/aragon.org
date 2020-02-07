@@ -1,16 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FormattedMessage, FormattedHTMLMessage, injectIntl, intlShape } from 'react-intl'
 import background from './court-assets/subscribe-background.svg'
 
 const Subscribe = () => (
   <SubscribeSection id="subscribe">
     <Container>
       <div>
-        <h3>Want to use Aragon Court for your organization?</h3>
+        <h3>
+          <FormattedMessage
+            id="court.subscribe.title"
+            defaultMessage="Want to use Aragon Court for your organization?"
+          />
+        </h3>
         <p>
-          Prevent and resolve disputes more efficiently than traditional courts.
-          <br /> Leave your email and we'll be in touch!
-        </p>
+          <FormattedHTMLMessage id="court.subscribe.description" defaultMessage="Prevent and resolve disputes more efficiently than traditional courts. <br /> Leave your email and we'll be in touch!"
+          /></p>
         <form
           action="https://aragon.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&amp;id=9c51454655"
           method="post"

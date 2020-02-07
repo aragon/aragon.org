@@ -1,12 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  FormattedMessage,
-  FormattedHTMLMessage,
-  injectIntl,
-  intlShape,
-} from 'react-intl'
-import { Link } from 'react-static'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import Section from '../General/Section'
 import Laptop from './court-assets/laptop_court.png'
 import LaptopMobile from './court-assets/laptop_mobile.png'
@@ -19,12 +13,19 @@ const medium = css => breakpoint('medium', css)
 const About = () => (
   <AboutSection>
     <ContentContainer>
-      <LaptopImgMobile src={LaptopMobile} />
+      <LaptopImgMobile src={LaptopMobile} alt="Laptop with jurors dashboard" />
       <div>
-        <h2 className="pink">Judge disputes from anywhere</h2>
+        <h2 className="pink">
+          <FormattedMessage
+            id="court.about.title1"
+            defaultMessage="Solve real problems for real people"
+          />
+        </h2>
         <p>
-          The Juror Dashboard is your control room for managing disputes between
-          people and organizations from all over the world.
+          <FormattedMessage
+            id="court.about.description1"
+            defaultMessage="The Juror Dashboard is your control room for managing disputes between people and organizations from all over the world."
+          />
         </p>
         <a className="action-button about-link" href="/court" target="_blank">
           <span>
@@ -36,19 +37,30 @@ const About = () => (
           </span>
         </a>
       </div>
-      <LaptopImg src={Laptop} />
+      <LaptopImg
+        src={Laptop}
+        alt="Laptop with jurors dashboard, desktop view"
+      />
     </ContentContainer>
     <ContentContainer reversed>
-      <TokensImg src={Tokens} displayMobile displayDesktop />
+      <TokensImg
+        src={Tokens}
+        displayMobile
+        displayDesktop
+        alt="ANT and ANJ logo"
+      />
       <div>
-        <h2 className="pink">How to become a juror</h2>
+        <h2 className="pink">
+          <FormattedMessage
+            id="court.about.title2"
+            defaultMessage="Becoming a juror for Aragon Court"
+          />
+        </h2>
         <p>
-          Anyone will be able to participate as a juror to <br /> help
-          adjudicate disputes. To become a juror, you will have to acquire
-          Aragon Network Juror (ANJ) tokens, the native token of Aragon Court.
-          If you want to be first in line to get ANJ, there will be an initial
-          “pre-activation” period to onboard all jurors that want to join Aragon
-          Court early.
+          <FormattedMessage
+            id="court.about.description2"
+            defaultMessage="Anyone can participate as a juror to help adjudicate disputes. To become a juror, you will have to acquire Aragon Network Juror (ANJ) tokens, the native token of Aragon Court. This token will ensure you and the other jurors are properly aligned and maintain a well functioning Court."
+          />
         </p>
         <a
           className="action-button about-link"
@@ -56,32 +68,57 @@ const About = () => (
           target="_blank"
         >
           <span>
-            <FormattedMessage id="court.hero.become" defaultMessage="Get ANJ" />
+            <FormattedMessage id="court.about.anj" defaultMessage="Get ANJ" />
             <img src={require(`../General/assets/arrow.svg`)} />
           </span>
         </a>
       </div>
     </ContentContainer>
     <ContentContainer>
-      <DisputesImg src={Disputes} displayMobile />
+      <DisputesImg
+        src={Disputes}
+        displayMobile
+        alt="Example dispute notifications"
+      />
       <div>
-        <h2 className="pink">Manage and make decisions about disputes</h2>
+        <h2 className="pink">
+          <FormattedMessage
+            id="court.about.title3"
+            defaultMessage="Track disputes & inspect evidence"
+          />
+        </h2>
         <p>
-          Aragon Court is a dispute resolution protocol formed by jurors to
-          handle subjective disputes that cannot be resolved by smart contracts.
+          <FormattedMessage
+            id="court.about.description3"
+            defaultMessage="Explore disputes and manage them. You will always know what you need to do and when you need to do it."
+          />
         </p>
       </div>
-      <DisputesImg src={Disputes} displayDesktop />
+      <DisputesImg
+        src={Disputes}
+        displayDesktop
+        alt="Example dispute notifications, desktop"
+      />
     </ContentContainer>
     <ContentContainer reversed>
-      <RewardsImg src={Rewards} displayMobile displayDesktop />
+      <RewardsImg
+        src={Rewards}
+        displayMobile
+        displayDesktop
+        alt="Example rewards notification"
+      />
       <div>
-        <h2 className="pink">Earn Rewards!</h2>
+        <h2 className="pink">
+          <FormattedMessage
+            id="court.about.title4"
+            defaultMessage="Earn Rewards"
+          />
+        </h2>
         <p>
-          Earn Dispute Fees for successfully adjudicating disputes and monthy
-          Subscription Fees for simply being an Active juror, whether you are
-          drafted or not. Use the Rewards modules to track your earnings over
-          time.
+          <FormattedMessage
+            id="court.about.description4"
+            defaultMessage="Earn Dispute Fees for successfully adjudicating disputes and monthy Subscription Fees for simply being an Active juror, whether you are drafted or not."
+          />
         </p>
       </div>
     </ContentContainer>
