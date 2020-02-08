@@ -17,55 +17,56 @@ const Powered = props => (
       <FormattedHTMLMessage
         id="home.powered.title"
         defaultMessage={`
-      Aragon is powered by users,
+        Everyone’s organization is different,
       <br />`}
       />
       <span className="blue">
         <FormattedHTMLMessage
           id="home.powered.title2"
-          defaultMessage={` and users love Aragon`}
+          defaultMessage={`build yours with Aragon`}
         />
       </span>
     </h3>
     <CardsContainer>
       <Card imageUrl={require('./home-assets/blondeman.png')}>
-        <a className="discover" href="#">
-          Discover first-hand some incredible things that today are Powered by
-          Aragon
-        </a>
-        <h5>Thomas Clark - Coinbase</h5>
+        <div>
+          <h3 className="discover" href="#">
+            <FormattedMessage
+              id="home.powered.description1"
+              defaultMessage={`"I created a new organization with governance, ability to hold money, and I put it on mainnet in 30 minutes"`}
+            />
+          </h3>
+          <h5>Jesse Pollak - Coinbase</h5>
+        </div>
       </Card>
       <Card imageUrl={require('./home-assets/woman.png')}>
-        <a className="discover" href="#">
-          Discover first-hand some incredible things that today are Powered by
-          Aragon
-        </a>
-        <h5>Thomas Clark - Coinbase</h5>
+        <div>
+          <h3 className="discover" href="#">
+            <FormattedMessage
+              id="home.powered.description2"
+              defaultMessage={`"The first time we used the Agent app to upgrade our protocol's parameters it felt like magic"`}
+            />
+          </h3>
+          <h5>Jenna Zenk - Avantgarde Finance</h5>
+        </div>
       </Card>
       <Card imageUrl={require('./home-assets/man.png')}>
-        <a className="discover" href="#">
-          Discover first-hand some incredible things that today are Powered by
-          Aragon
-        </a>
-        <h5>Thomas Clark - Coinbase</h5>
+        <div>
+          <h3 className="discover" href="#">
+            <FormattedMessage
+              id="home.powered.description3"
+              defaultMessage={`"The first Aragon DAO we're launching is going to govern the $LAND smart contract"`}
+            />
+          </h3>
+          <h5>Esteban Ordano - Decentraland</h5>
+        </div>
       </Card>
     </CardsContainer>
-    <div className="centered">
-      <a className="action-button" href="./discover" target="_blank">
-        <span>
-          <FormattedMessage
-            id="home.powered.action"
-            defaultMessage="Check all the cases"
-          />
-          <img src={require(`../General/assets/arrow.svg`)} />
-        </span>
-      </a>
-    </div>
   </PoweredSection>
 )
 
 const PoweredSection = styled(Section)`
-  position: relative;
+  coinbaseposition: relative;
   z-index: 1;
   .blue {
     color: #639cf5;
@@ -112,10 +113,15 @@ const Card = styled.div`
   margin: 32px 16px;
   border-radius: 8px;
   text-align: left;
-  .discover {
+  div {
     position: absolute;
-    bottom: 15%;
-    left: 8%;
+    bottom: 5%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .discover {
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -127,9 +133,6 @@ const Card = styled.div`
   }
 
   h5 {
-    position: absolute;
-    bottom: 8%;
-    left: 8%;
     font-weight: 600;
     font-size: 16px;
     line-height: 154.7%;
