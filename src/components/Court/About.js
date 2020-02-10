@@ -27,7 +27,11 @@ const About = () => (
             defaultMessage="The Juror Dashboard is your control room for managing disputes between people and organizations from all over the world."
           />
         </p>
-        <a className="action-button about-link" href="/court" target="https://court.aragon.org/">
+        <a
+          className="action-button about-link"
+          href="https://court.aragon.org/"
+          target="_blank"
+        >
           <span>
             <FormattedMessage
               id="court.hero.action"
