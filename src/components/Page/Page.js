@@ -49,11 +49,11 @@ class Page extends React.Component {
                     <p>
                       <FormattedMessage
                         id="page.banner"
-                        defaultMessage="Aragon Court is launching."
+                        defaultMessage="The Aragon court has launched."
                       />{' '}
                       <FormattedMessage
                         id="page.banner.action"
-                        defaultMessage="Stake ANT and become a juror today!"
+                        defaultMessage="Jurors, your dashboard is now available!"
                       />
                     </p>
                   </AnnouncementBanner>
