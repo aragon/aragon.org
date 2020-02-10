@@ -34,6 +34,11 @@ class Page extends React.Component {
   render() {
     const { contentColor, children, path, color } = this.props
     const items = menuItems.map(item => [...item, item[0] === path])
+
+    const isBannerVisible =
+      typeof window !== 'undefined' &&
+      !/aragon-court/.test(window.location.href)
+
     return (
       <SiteData
         render={({ title: siteTitle }) => (
@@ -45,18 +50,20 @@ class Page extends React.Component {
                   <title>{title || siteTitle}</title>
                 </Head>
                 <Header>
-                  <AnnouncementBanner href="https://court.aragon.org/">
-                    <p>
-                      <FormattedMessage
-                        id="page.banner"
-                        defaultMessage="Aragon Court has launched."
-                      />{' '}
-                      <FormattedMessage
-                        id="page.banner.action"
-                        defaultMessage="Jurors, your dashboard is now available!"
-                      />
-                    </p>
-                  </AnnouncementBanner>
+                  {isBannerVisible && (
+                    <AnnouncementBanner href="https://court.aragon.org/">
+                      <p>
+                        <FormattedMessage
+                          id="page.banner"
+                          defaultMessage="Aragon Court has launched"
+                        />{' '}
+                        <FormattedMessage
+                          id="page.banner.action"
+                          defaultMessage="Jurors, your dashboard is now available!"
+                        />
+                      </p>
+                    </AnnouncementBanner>
+                  )}
                   <Navbar menuItems={items} path={path} color={color} />
                 </Header>
                 <Content contentColor={contentColor}>{children}</Content>
