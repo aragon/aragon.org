@@ -1,6 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage, FormattedHTMLMessage, injectIntl, intlShape } from 'react-intl'
+import {
+  FormattedMessage,
+  FormattedHTMLMessage,
+  injectIntl,
+  intlShape,
+} from 'react-intl'
 import background from './court-assets/subscribe-background.svg'
 
 const Subscribe = () => (
@@ -14,8 +19,11 @@ const Subscribe = () => (
           />
         </h3>
         <p>
-          <FormattedHTMLMessage id="court.subscribe.description" defaultMessage="Prevent and resolve disputes more efficiently than traditional courts. <br /> Leave your email and we'll be in touch!"
-          /></p>
+          <FormattedHTMLMessage
+            id="court.subscribe.description"
+            defaultMessage="Prevent and resolve disputes more efficiently than traditional courts. <br /> Leave your email and we'll be in touch!"
+          />
+        </p>
         <form
           action="https://aragon.us15.list-manage.com/subscribe/post?u=a590aa3843a54b079d48e6e18&amp;id=9c51454655"
           method="post"
@@ -86,7 +94,7 @@ const SubscribeSection = styled.section`
     max-height: 54px;
     width: 404px;
     max-width: calc(80vw - 160px);
-    padding: 12px 20px 5px 20px;
+    padding: 10px 20px 8px 20px;
     background: #ffffff;
     background-color: #ffffff;
     border-radius: 8px 0 0 8px;
@@ -104,13 +112,12 @@ const SubscribeSection = styled.section`
     justify-content: center;
     cursor: pointer;
     button {
-      padding: 12px 20px 5px 20px;
+      padding: 10px 20px 14px 20px;
       background: linear-gradient(
         207.23deg,
         rgba(255, 179, 109) 6.08%,
         rgba(255, 136, 136) 93.18%
       );
-      opacity: 0.4;
       border-radius: 8px;
       border: solid 0 transparent;
       color: white;
@@ -118,9 +125,7 @@ const SubscribeSection = styled.section`
       width: 140px;
       outline: none;
       font-size: 18px;
-    }
-    button:hover {
-      opacity: 1;
+      cursor: pointer;
     }
   }
 `
