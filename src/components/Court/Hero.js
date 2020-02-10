@@ -1,12 +1,15 @@
-import React, { useRef } from 'react'
+import React, { useCallback, useRef } from 'react'
 import styled from 'styled-components'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Section from '../General/Section'
 import Juror from '../Home/home-assets/juror.svg'
 import Video from './court-assets/video.png'
+import VideoModal from '../General/VideoModal'
 
 const Hero = () => {
   const videoRef = useRef()
+  const handleOpen = useCallback(() => videoRef.current.handleOpen())
+
   return (
     <CourtSection>
       <div className="hero-message">
@@ -18,20 +21,32 @@ const Hero = () => {
               defaultMessage="Participate in the world’s first digital jurisdiction by<br/>becoming a juror for Aragon Court"
             />
           </p>
-          <a className="action-button court-link" href="/court" target="https://court.aragon.org/">
+          <a
+            className="action-button court-link"
+            href="/court"
+            target="https://court.aragon.org/"
+          >
             <span>
               <FormattedMessage
                 id="court.hero.action"
                 defaultMessage="Try the court"
               />
-              <img src={require(`../General/assets/arrow-white.svg`)} />
+              <img
+                src={require(`../General/assets/arrow-white.svg`)}
+                alt="left arrow"
+              />
             </span>
           </a>
         </TextContainer>
         <JurorImage src={Juror} />
       </div>
       <div className="hero-video">
-        <VideoImg src={Video} />
+        <VideoImg
+          src={Video}
+          onClick={handleOpen}
+          alt="Juror thumbnail picture for video"
+        />
+        <VideoModal ref={videoRef} videoId="AqjIWmiAidw" />
       </div>
     </CourtSection>
   )
@@ -112,5 +127,6 @@ const VideoImg = styled.img`
   z-index: 2;
   max-width: 100%;
   height: auto;
+  cursor: pointer;
 `
 export default Hero

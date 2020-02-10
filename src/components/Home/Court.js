@@ -6,14 +6,13 @@ import {
   injectIntl,
   intlShape,
 } from 'react-intl'
-import { Link } from 'react-static'
 import Section from '../General/Section'
 import Juror from './home-assets/juror.svg'
 
 import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
 
-const Court = props => (
+const Court = () => (
   <CourtSection>
     <TextContainer>
       <h2>Aragon Court</h2>
@@ -23,7 +22,7 @@ const Court = props => (
           defaultMessage="Aragon Court handles subjective disputes that<br />require the judgment of human jurors."
         />
       </p>
-      <a className="action-button court-link" href="https://court.aragon.org/">
+      <a className="action-button court-link" href="/court">
         <span>
           <FormattedMessage
             id="home.organizations.action"
