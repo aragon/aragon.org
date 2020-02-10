@@ -4,7 +4,7 @@ import About from '../components/Court/About'
 import Hero from '../components/Court/Hero'
 import Subscribe from '../components/Court/Subscribe'
 const Court = () => (
-  <Page path="/court" color="black">
+  <Page path="/aragon-court" color="black">
     <Hero />
     <About />
     <Subscribe />

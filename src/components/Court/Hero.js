@@ -23,8 +23,8 @@ const Hero = () => {
           </p>
           <a
             className="action-button court-link"
-            href="/court"
-            target="https://court.aragon.org/"
+            href="/https://court.aragon.org"
+            target="_blank"
           >
             <span>
               <FormattedMessage

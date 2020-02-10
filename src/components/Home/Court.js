@@ -22,7 +22,7 @@ const Court = () => (
           defaultMessage="Aragon Court handles subjective disputes that<br />require the judgment of human jurors."
         />
       </p>
-      <a className="action-button court-link" href="/court">
+      <a className="action-button court-link" href="/aragon-court">
         <span>
           <FormattedMessage
             id="home.organizations.action"
