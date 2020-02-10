@@ -45,7 +45,7 @@ class Page extends React.Component {
                   <title>{title || siteTitle}</title>
                 </Head>
                 <Header>
-                  <AnnouncementBanner href="https://anj.aragon.org/">
+                  <AnnouncementBanner href="https://court.aragon.org/">
                     <p>
                       <FormattedMessage
                         id="page.banner"
