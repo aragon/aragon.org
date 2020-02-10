@@ -23,7 +23,7 @@ const Court = props => (
           defaultMessage="Aragon Court handles subjective disputes that<br />require the judgment of human jurors."
         />
       </p>
-      <a className="action-button court-link" href="./court">
+      <a className="action-button court-link" href="https://court.aragon.org/">
         <span>
           <FormattedMessage
             id="home.organizations.action"

@@ -18,7 +18,7 @@ const Hero = () => {
               defaultMessage="Participate in the world’s first digital jurisdiction by<br/>becoming a juror for Aragon Court"
             />
           </p>
-          <a className="action-button court-link" href="/court" target="_blank">
+          <a className="action-button court-link" href="/court" target="https://court.aragon.org/">
             <span>
               <FormattedMessage
                 id="court.hero.action"
