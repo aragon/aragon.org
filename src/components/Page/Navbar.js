@@ -86,6 +86,16 @@ class Navbar extends React.Component {
     if (color && color == 'black') {
       background = 'rgba(254, 254, 254, '
     }
+
+    // ugly hack to get the nav items white on /en/court
+    // FIXME
+    const itemColor =
+      typeof window !== 'undefined' &&
+      /court/.test(window.location.href) &&
+      this.state.scroll >= 0.95
+        ? '#ffffff'
+        : color
+
     return (
       <Inside
         x={this.state.scroll}
@@ -93,7 +103,7 @@ class Navbar extends React.Component {
         opacity={this.state.opacity}
         menuItems={menuItems}
         path={path}
-        color={color}
+        color={itemColor}
         locale={intl.locale}
         background={background}
       />

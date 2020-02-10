@@ -24,7 +24,6 @@ class Home extends React.Component {
         <Product />
         <About />
         <Court />
-        <Powered />
         <Organizations />
       </Page>
     )

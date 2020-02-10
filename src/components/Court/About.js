@@ -175,7 +175,7 @@ const ContentContainer = styled.div`
   margin-top: 256px;
   margin-bottom: 256px;
   div {
-    max-width: ${props => (props.reversed ? '480px' : '345px')};
+    max-width: ${props => (props.reversed ? '480px' : '370px')};
     height: auto;
     text-align: left;
     display: flex;
