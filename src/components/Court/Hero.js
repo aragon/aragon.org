@@ -23,7 +23,7 @@ const Hero = () => {
           </p>
           <a
             className="action-button court-link"
-            href="/https://court.aragon.org"
+            href="https://court.aragon.org"
             target="_blank"
           >
             <span>
