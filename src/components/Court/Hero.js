@@ -46,7 +46,7 @@ const Hero = () => {
           onClick={handleOpen}
           alt="Juror thumbnail picture for video"
         />
-        <VideoModal ref={videoRef} videoId="2E95ZoifaXc" />
+        <VideoModal ref={videoRef} videoId="p-nkDzvcNnY" />
       </div>
     </CourtSection>
   )
