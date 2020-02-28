@@ -12,7 +12,7 @@ const About = () => {
     windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
     iosPlatforms = ['iPhone', 'iPad', 'iPod'],
     os = 'linux',
-    osLink = 'https://frame.sh/',
+    osLink = 'https://github.com/floating/frame/releases',
     browser = 'firefox',
     browserLink =
       'https://addons.mozilla.org/en-US/firefox/addon/frame-extension'
@@ -38,10 +38,10 @@ const About = () => {
     iosPlatforms.indexOf(platform) !== -1
   ) {
     os = 'mac'
-    osLink = 'https://frame.sh/'
+    osLink = 'https://github.com/floating/frame/releases/download/v0.2.4/Frame-0.2.4.dmg'
   } else if (windowsPlatforms.indexOf(platform) !== -1) {
     os = 'windows'
-    osLink = 'https://frame.sh/'
+    osLink = 'https://github.com/floating/frame/releases/download/v0.2.4/Frame-Setup-0.2.4.exe'
   }
 
   return (
