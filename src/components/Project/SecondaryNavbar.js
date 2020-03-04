@@ -60,29 +60,11 @@ const dropdownItems = [
   </span>,
   <span className="dropdown-span">
     <div>
-      <img src={roadmap} />
-    </div>
-    <FormattedMessage
-      id="project.secondary-navbar.mobile.item5"
-      defaultMessage="Roadmap"
-    />
-  </span>,
-  <span className="dropdown-span">
-    <div>
       <img src={events} />
     </div>
     <FormattedMessage
       id="project.secondary-navbar.mobile.item6"
       defaultMessage="Events"
-    />
-  </span>,
-  <span className="dropdown-span">
-    <div>
-      <img src={wiki} />
-    </div>
-    <FormattedMessage
-      id="project.secondary-navbar.mobile.item7"
-      defaultMessage="Wiki"
     />
   </span>,
 ]
@@ -92,9 +74,7 @@ const dropdownNames = [
   'grants',
   'contribute',
   'blog',
-  'roadmap',
   'events',
-  'wiki',
 ]
 const dropdownLinks = [
   '/project',
@@ -102,9 +82,7 @@ const dropdownLinks = [
   '/project/grants',
   '/project/contribute',
   'https://blog.aragon.org',
-  '/project/roadmap',
   'https://aracon.one',
-  'https://wiki.aragon.org',
 ]
 
 class SecondaryNavbar extends React.Component {
@@ -217,45 +195,12 @@ class SecondaryNavbar extends React.Component {
                   />
                 </h6>
               </Item>
-              <InternalItem
-                className={
-                  this.props.page && this.props.page === 'roadmap'
-                    ? 'roadmap active roadmap-item'
-                    : 'roadmap-item'
-                }
-                to={
-                  this.props.intl.locale
-                    ? '/' + this.props.intl.locale + '/project/roadmap'
-                    : '/project/roadmap'
-                }
-              >
-                {this.props.page === 'roadmap' ? (
-                  <img src={roadmapActive} />
-                ) : (
-                  <img src={roadmap} />
-                )}
-                <h6>
-                  <FormattedMessage
-                    id="project.secondary-navbar.item5"
-                    defaultMessage="Roadmap"
-                  />
-                </h6>
-              </InternalItem>
               <Item href="https://aracon.one/" target="_blank">
                 <img src={events} />
                 <h6>
                   <FormattedMessage
                     id="project.secondary-navbar.item6"
                     defaultMessage="Events"
-                  />
-                </h6>
-              </Item>
-              <Item href="https://wiki.aragon.org/" target="_blank">
-                <img src={wiki} />
-                <h6>
-                  <FormattedMessage
-                    id="project.secondary-navbar.item7"
-                    defaultMessage="Wiki"
                   />
                 </h6>
               </Item>
