@@ -146,9 +146,6 @@ const Footer = ({ ...props }) => (
         <a href="https://blog.aragon.org/">
           <FormattedMessage id="page.footer.blog" defaultMessage="Blog" />
         </a>
-        <a href="https://wiki.aragon.org/" target="_blank">
-          <FormattedMessage id="page.footer.wiki" defaultMessage="Wiki" />
-        </a>
         <a href="https://aracon.one" target="_blank">
           AraCon
         </a>
