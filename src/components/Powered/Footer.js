@@ -39,9 +39,6 @@ const Footer = ({ ...props }) => (
       <Item>
         <Link to="/project/contribute">Contribute</Link>
         <a href="https://blog.aragon.org/">Blog</a>
-        <a href="https://wiki.aragon.org/" target="_blank">
-          Wiki
-        </a>
         <a href="https://aracon.one/" target="_blank">
           AraCon
         </a>

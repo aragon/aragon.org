@@ -61,34 +61,6 @@ const About = ({ ...props }) => (
       </History>
     </Section>
 
-    <AlmostFullSection backgroundColor="#639CF5" image={image} imageLeft={true}>
-      <AlmostFullSectionBox>
-        <h3>
-          <FormattedMessage
-            id="project.home.about.governance.title"
-            defaultMessage="Governed by the community"
-          />
-        </h3>
-        <p>
-          <FormattedMessage
-            id="project.home.about.governance.content"
-            defaultMessage="The Aragon project has a strong commitment to decentralize its own existence. The community now has control over its own future."
-          />
-        </p>
-        <Link
-          to={
-            props.intl.locale
-              ? '/' + props.intl.locale + '/project/governance'
-              : '/project/governance'
-          }
-        >
-          <FormattedMessage
-            id="project.home.about.governance.action"
-            defaultMessage="About Aragon governance"
-          />
-        </Link>
-      </AlmostFullSectionBox>
-    </AlmostFullSection>
     <AboutSection>
       <Container>
         <Card
