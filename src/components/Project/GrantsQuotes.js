@@ -44,26 +44,6 @@ class Quotes extends React.Component {
           >
             <Carousel.Item>
               <Item>
-                <img src={yalda} />
-                <div>
-                  <StyledBadge background="#AECAFF" foreground="#5770A0">
-                    <FormattedMessage
-                      id="project.grants.quotes.quote1.badge"
-                      defaultMessage="QUOTES"
-                    />
-                  </StyledBadge>
-                  <p>
-                    <FormattedMessage
-                      id="project.grants.quotes.quote1.content"
-                      defaultMessage="Every time I scroll through @AragonProject's github repo for Nest it makes me so inspired about the future. What is happening here is next level and it will become even more next level as more organizations cross-pollinate here. Stoked to be in the Nest."
-                    />
-                  </p>
-                  <p className="name">Yalda Mausavinia</p>
-                </div>
-              </Item>
-            </Carousel.Item>
-            <Carousel.Item>
-              <Item>
                 <img src={olivier} />
                 <div>
                   <StyledBadge background="#AECAFF" foreground="#5770A0">
