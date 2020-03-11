@@ -9,7 +9,8 @@ import logo from './assets/logo-footer.svg'
 import twitter from './assets/twitter.svg'
 import ghost from './assets/ghost.svg'
 import forum from './assets/forum.png'
-import rocket from './assets/rocket.svg'
+import discord from './assets/discord.svg'
+import spectrum from './assets/spectrum.svg'
 import youtube from './assets/youtube.svg'
 
 const medium = css => breakpoint('medium', css)
@@ -161,12 +162,15 @@ const Footer = ({ ...props }) => (
           <a href="https://twitter.com/aragonproject" target="_blank">
             <img src={twitter} />
           </a>
-          <a href="https://aragon.chat/" target="_blank">
-            <img src={rocket} />
+          <a href="https://discordapp.com/channels/672466989217873929/672466989767458861" target="_blank">
+            <Discord src={discord} />
           </a>
           <a href="https://forum.aragon.org/" target="_blank">
             <Forum src={forum} />
           </a>
+          <a href="https://spectrum.chat/aragon" target="_blank">
+            <Spectrum src={spectrum} />
+          </a>          
           <a
             href="https://www.youtube.com/channel/UCODiU_-FWhr4SVOoBlm-qaQ"
             target="_blank"
@@ -382,6 +386,18 @@ const Forum = styled.img`
   height: 19px;
   width: 19px;
 `
+
+const Discord = styled.img`
+  height: 19px;
+  width: 19px;
+`
+
+const Spectrum = styled.img`
+  height: 22px;
+  width: 22px;
+  margin-bottom: 5px;
+`
+
 const Youtube = styled.img`
   margin-bottom: 1px;
 `
