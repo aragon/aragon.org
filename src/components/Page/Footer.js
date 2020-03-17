@@ -117,18 +117,6 @@ const Footer = ({ ...props }) => (
         >
           <FormattedMessage id="page.footer.grants" defaultMessage="Grants" />
         </Link>
-        <Link
-          to={
-            props.intl.locale
-              ? '/' + props.intl.locale + '/project/governance'
-              : '/project/governance'
-          }
-        >
-          <FormattedMessage
-            id="page.footer.governance"
-            defaultMessage="Governance"
-          />
-        </Link>
       </Item>
       <Item>
         <Link

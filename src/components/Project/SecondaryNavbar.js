@@ -20,17 +20,6 @@ const medium = css => breakpoint('medium', css)
 
 const dropdownItems = [
   <span className="dropdown-span">Explore...</span>,
-  <a href="http://www.google.com">
-    <span className="dropdown-span">
-      <div>
-        <img src={governance} />
-      </div>
-      <FormattedMessage
-        id="project.secondary-navbar.mobile.item1"
-        defaultMessage="Governance"
-      />
-    </span>
-  </a>,
   <span className="dropdown-span">
     <div>
       <img src={grants} />
@@ -70,7 +59,6 @@ const dropdownItems = [
 ]
 const dropdownNames = [
   'explore',
-  'governance',
   'grants',
   'contribute',
   'blog',
@@ -78,7 +66,6 @@ const dropdownNames = [
 ]
 const dropdownLinks = [
   '/project',
-  '/project/governance',
   '/project/grants',
   '/project/contribute',
   'https://blog.aragon.org',
@@ -114,30 +101,6 @@ class SecondaryNavbar extends React.Component {
         <BreakPoint from="medium">
           <Navbar>
             <Container>
-              <InternalItem
-                className={
-                  this.props.page &&
-                  this.props.page === 'governance' &&
-                  'governance active'
-                }
-                to={
-                  this.props.intl.locale
-                    ? '/' + this.props.intl.locale + '/project/governance'
-                    : '/project/governance'
-                }
-              >
-                {this.props.page === 'governance' ? (
-                  <img src={governanceActive} />
-                ) : (
-                  <img src={governance} />
-                )}
-                <h6>
-                  <FormattedMessage
-                    id="project.secondary-navbar.item1"
-                    defaultMessage="Governance"
-                  />
-                </h6>
-              </InternalItem>
               <InternalItem
                 className={
                   this.props.page &&
