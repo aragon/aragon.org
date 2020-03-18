@@ -162,7 +162,7 @@ const Footer = ({ ...props }) => (
           <a href="https://twitter.com/aragonproject" target="_blank">
             <img src={twitter} />
           </a>
-          <a href="https://discordapp.com/channels/672466989217873929/672466989767458861" target="_blank">
+          <a href="https://discord.gg/ruBR6GN" target="_blank">
             <Discord src={discord} />
           </a>
           <a href="https://forum.aragon.org/" target="_blank">
