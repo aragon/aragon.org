@@ -62,6 +62,20 @@ const Powered = props => (
         </div>
       </Card>
     </CardsContainer>
+    <div>
+      <a
+        className="action-button powered-link centered"
+        href="https://poweredbyaragon.com"
+      >
+        <span>
+          <FormattedMessage
+            id="home.organizations.action"
+            defaultMessage="Learn more"
+          />
+        </span>
+        <img src={require(`../General/assets/arrow.svg`)} />
+      </a>
+    </div>
   </PoweredSection>
 )
 
