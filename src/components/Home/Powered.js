@@ -63,10 +63,7 @@ const Powered = props => (
       </Card>
     </CardsContainer>
     <div>
-      <a
-        className="action-button powered-link centered"
-        href="https://poweredbyaragon.com"
-      >
+      <a className="action-button centered" href="https://poweredbyaragon.com">
         <span>
           <FormattedMessage
             id="home.organizations.action"
