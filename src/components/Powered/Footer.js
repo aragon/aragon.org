@@ -36,7 +36,6 @@ const Footer = ({ ...props }) => (
           Bug bounty
         </a>
         <Link to="/project/grants">Grants</Link>
-        <Link to="/project/governance">Governance</Link>
       </Item>
       <Item>
         <Link to="/project/contribute">Contribute</Link>
