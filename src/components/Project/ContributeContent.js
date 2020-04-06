@@ -5,9 +5,8 @@ import { breakpoint } from '@aragon/ui'
 import Section from '../General/Section'
 import LongCard from '../General/LongCard'
 import Card from '../General/Card'
-import aragonBlack from './assets/aragon-black.svg'
 import aragonOne from './assets/aragon-one.svg'
-import autark from './assets/autark.svg'
+import onehive from './assets/1hive.svg'
 
 const medium = css => breakpoint('medium', css)
 
@@ -74,18 +73,18 @@ const ContributeContent = () => (
       <p>
         <FormattedMessage
           id="project.contribute.ecosystem.content"
-          defaultMessage="Our vision is to decentralize Aragon’s development. There are different teams working on many parts of the project, but all aligned towards the same mission. The current teams are Aragon Black, Aragon One, and Autark."
+          defaultMessage="Our vision is to decentralize Aragon’s development. There are different teams and communities working on many parts of the project, but all aligned towards the same mission."
         />
       </p>
     </Hero>
     <Decentralized>
       <div>
-        <img src={aragonBlack} />
-        <h3>Aragon Black</h3>
-        <a href="https://www.aragon.black/" target="_blank">
+        <img src={onehive} />
+        <h3>1Hive</h3>
+        <a href="https://1hive.org" target="_blank">
           <span>
             <FormattedMessage
-              id="project.contribute.ecosystem.action1"
+              id="project.contribute.ecosystem.action3"
               defaultMessage="Website"
             />{' '}
             <img src={require(`../General/assets/arrow.svg`)} />
@@ -99,19 +98,6 @@ const ContributeContent = () => (
           <span>
             <FormattedMessage
               id="project.contribute.ecosystem.action2"
-              defaultMessage="Website"
-            />{' '}
-            <img src={require(`../General/assets/arrow.svg`)} />
-          </span>
-        </a>
-      </div>
-      <div>
-        <img src={autark} />
-        <h3>Autark</h3>
-        <a href="https://www.autark.xyz/" target="_blank">
-          <span>
-            <FormattedMessage
-              id="project.contribute.ecosystem.action3"
               defaultMessage="Website"
             />{' '}
             <img src={require(`../General/assets/arrow.svg`)} />
@@ -133,7 +119,7 @@ const ContributeContent = () => (
         className="contribute1"
       />
       <Card
-        linkTo="https://wiki.aragon.org/jobs"
+        linkTo="https://aragon.one/#jobs"
         imageUrl={'Project/assets/contribute2'}
         title={
           <FormattedMessage
@@ -171,7 +157,7 @@ const Hero = styled.div`
 const Decentralized = styled.div`
   display: grid;
   ${medium(
-    'grid-template-columns: calc(33.33% - 15px) calc(33.33% - 15px) calc(33.33% - 15px); grid-template-rows: auto'
+    'grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: auto'
   )};
   grid-template-columns: 100%;
   grid-template-rows: auto;
@@ -197,6 +183,9 @@ const Decentralized = styled.div`
     text-align: center;
     letter-spacing: 0.315px;
     color: #4a80e4;
+  }
+  img {
+    max-height: 203.5px;
   }
 `
 

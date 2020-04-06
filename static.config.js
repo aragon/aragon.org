@@ -149,7 +149,7 @@ export default {
         _paq.push(['trackPageView'])
         _paq.push(['enableLinkTracking'])
         ;(function() {
-          var u = '//arastats.eu/'
+          var u = 'https://arastats.eth.aragon.network/'
           _paq.push(['setTrackerUrl', u + 'matomo.php'])
           _paq.push(['setSiteId', '3'])
           var d = document,

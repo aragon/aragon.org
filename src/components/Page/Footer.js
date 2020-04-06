@@ -9,7 +9,8 @@ import logo from './assets/logo-footer.svg'
 import twitter from './assets/twitter.svg'
 import ghost from './assets/ghost.svg'
 import forum from './assets/forum.png'
-import rocket from './assets/rocket.svg'
+import discord from './assets/discord.svg'
+import spectrum from './assets/spectrum.svg'
 import youtube from './assets/youtube.svg'
 
 const medium = css => breakpoint('medium', css)
@@ -117,18 +118,6 @@ const Footer = ({ ...props }) => (
         >
           <FormattedMessage id="page.footer.grants" defaultMessage="Grants" />
         </Link>
-        <Link
-          to={
-            props.intl.locale
-              ? '/' + props.intl.locale + '/project/governance'
-              : '/project/governance'
-          }
-        >
-          <FormattedMessage
-            id="page.footer.governance"
-            defaultMessage="Governance"
-          />
-        </Link>
       </Item>
       <Item>
         <Link
@@ -146,9 +135,6 @@ const Footer = ({ ...props }) => (
         <a href="https://blog.aragon.org/">
           <FormattedMessage id="page.footer.blog" defaultMessage="Blog" />
         </a>
-        <a href="https://wiki.aragon.org/" target="_blank">
-          <FormattedMessage id="page.footer.wiki" defaultMessage="Wiki" />
-        </a>
         <a href="https://aracon.one" target="_blank">
           AraCon
         </a>
@@ -164,12 +150,15 @@ const Footer = ({ ...props }) => (
           <a href="https://twitter.com/aragonproject" target="_blank">
             <img src={twitter} />
           </a>
-          <a href="https://aragon.chat/" target="_blank">
-            <img src={rocket} />
+          <a href="https://discord.gg/ruBR6GN" target="_blank">
+            <Discord src={discord} />
           </a>
           <a href="https://forum.aragon.org/" target="_blank">
             <Forum src={forum} />
           </a>
+          <a href="https://spectrum.chat/aragon" target="_blank">
+            <Spectrum src={spectrum} />
+          </a>          
           <a
             href="https://www.youtube.com/channel/UCODiU_-FWhr4SVOoBlm-qaQ"
             target="_blank"
@@ -385,6 +374,18 @@ const Forum = styled.img`
   height: 19px;
   width: 19px;
 `
+
+const Discord = styled.img`
+  height: 19px;
+  width: 19px;
+`
+
+const Spectrum = styled.img`
+  height: 22px;
+  width: 22px;
+  margin-bottom: 5px;
+`
+
 const Youtube = styled.img`
   margin-bottom: 1px;
 `
