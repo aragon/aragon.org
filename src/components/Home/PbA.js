@@ -44,7 +44,11 @@ const PbA = () => (
         />
       </PbACard>
     </Container>
-    <a className="action-button centered" href="">
+    <a
+      className="action-button centered"
+      href="https://poweredby.aragon.org/"
+      target="_blank"
+    >
       <span>
         <FormattedMessage
           id="home.pba.action"
