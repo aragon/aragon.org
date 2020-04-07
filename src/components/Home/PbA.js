@@ -28,7 +28,7 @@ const PbA = () => (
       <PbACard className="one">
         <FormattedMessage
           id="home.pba.card1"
-          defaultMessage="Jesse launched the Streaks DAO to incentivize internal daily usage ofCoinbase apps."
+          defaultMessage="Jesse launched the Streaks DAO to incentivize internal daily usage of Coinbase apps."
         />
       </PbACard>
       <PbACard className="two">
