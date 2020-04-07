@@ -123,6 +123,8 @@ const Content = styled.div`
     height: 12px;
     width: auto;
     margin: 0;
+    position: relative;
+    margin-top: 5px;
   }
   .action-button span {
     display: inline-flex;

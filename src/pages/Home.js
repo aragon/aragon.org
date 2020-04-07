@@ -4,6 +4,7 @@ import { Page } from '../components'
 import Hero from '../components/Home/Hero'
 import Camino from '../components/Home/Camino'
 import Court from '../components/Home/Court'
+import PbA from '../components/Home/PbA'
 import Product from '../components/Home/Product'
 import About from '../components/Home/About'
 import UseCases from '../components/Home/UseCases'
@@ -24,6 +25,7 @@ class Home extends React.Component {
         <Product />
         <About />
         <Court />
+        <PbA />
         <Organizations />
       </Page>
     )
