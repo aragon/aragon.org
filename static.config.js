@@ -144,23 +144,23 @@ export default {
     analyticsCode() {
       if (process.env.NODE_ENV !== 'production') return '';
       return `
-        var _paq = window._paq || []
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(['trackPageView'])
-        _paq.push(['enableLinkTracking'])
-        ;(function() {
-          var u = 'https://arastats.eth.aragon.network/'
-          _paq.push(['setTrackerUrl', u + 'matomo.php'])
-          _paq.push(['setSiteId', '3'])
-          var d = document,
-            g = d.createElement('script'),
-            s = d.getElementsByTagName('script')[0]
-          g.type = 'text/javascript'
-          g.async = true
-          g.defer = true
-          g.src = u + 'matomo.js'
-          s.parentNode.insertBefore(g, s)
-        })()
+        var Countly = Countly || {};
+        Countly.q = Countly.q || [];
+        //provide countly initialization parameters
+        Countly.app_key = 'd9f9d1913dbff98e5e24c6ed91fd84a765693d0c';
+        Countly.url = 'https://analytics.aragon.org/';
+        Countly.inactivity_time = 10;
+        Countly.q.push(['track_sessions']);
+        Countly.q.push(['track_pageview']);
+        Countly.q.push(['track_clicks']);
+        Countly.q.push(['track_errors']);
+        (function() {
+          var cly = document.createElement('script'); cly.type = 'text/javascript';
+          cly.async = true;
+          cly.src = 'https://analytics.aragon.org/sdk/web/countly.min.js';
+          cly.onload = function(){Countly.init()};
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
+        })();
       `;
     }
     render() {
