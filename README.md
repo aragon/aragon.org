@@ -1,3 +1,5 @@
+**Notice: The new Aragon website uses [Webflow](https://webflow.com), so this repo has been outphased**
+
 # aragon-website
 
 The website of the Aragon project.
